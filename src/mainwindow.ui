@@ -1357,6 +1357,7 @@
    <addaction name="menuFile"/>
    <addaction name="menu_Edit"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuApps"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExit">
