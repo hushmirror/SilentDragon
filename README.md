@@ -89,7 +89,6 @@ these four files in your Git repo:
 
 ```
     ln -s ../hush3/src/hushd
-    ln -s ../hush3/src/hush-cli
     ln -s ../hush3/src/komodod
     ln -s ../hush3/src/komodo-cli
 ```
