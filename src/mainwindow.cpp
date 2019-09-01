@@ -479,6 +479,12 @@ void MainWindow::setupSettingsModal() {
         // Auto shielding
         settings.chkAutoShield->setChecked(Settings::getInstance()->getAutoShield());
 
+        // Check for updates
+        settings.chkCheckUpdates->setChecked(Settings::getInstance()->getCheckForUpdates());
+
+        // Fetch prices
+        settings.chkFetchPrices->setChecked(Settings::getInstance()->getAllowFetchPrices());
+
         // Use Tor
         bool isUsingTor = false;
         if (rpc->getConnection() != nullptr) {
@@ -542,6 +548,12 @@ void MainWindow::setupSettingsModal() {
 
             // Auto shield
             Settings::getInstance()->setAutoShield(settings.chkAutoShield->isChecked());
+
+            // Check for updates
+            Settings::getInstance()->setCheckForUpdates(settings.chkCheckUpdates->isChecked());
+
+            // Allow fetching prices
+            Settings::getInstance()->setAllowFetchPrices(settings.chkFetchPrices->isChecked());
 
             if (!isUsingTor && settings.chkTor->isChecked()) {
                 // If "use tor" was previously unchecked and now checked
@@ -1344,6 +1356,7 @@ std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
 void MainWindow::setupReceiveTab() {
     auto addNewTAddr = [=] () {
         rpc->newTaddr([=] (json reply) {
+            qDebug() << "New addr button clicked";
             QString addr = QString::fromStdString(reply.get<json::string_t>());
             // Make sure the RPC class reloads the t-addrs for future use
             rpc->refreshAddresses();
@@ -1360,8 +1373,7 @@ void MainWindow::setupReceiveTab() {
 
     // Connect t-addr radio button
     QObject::connect(ui->rdioTAddr, &QRadioButton::toggled, [=] (bool checked) { 
-        // Whenever the t-address is selected, we generate a new address, because we don't
-        // want to reuse t-addrs
+        qDebug() << "taddr radio toggled";
         if (checked && this->rpc->getUTXOs() != nullptr) { 
             updateTAddrCombo(checked);
         } 
