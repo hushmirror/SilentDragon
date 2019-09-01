@@ -1344,8 +1344,6 @@
     <addaction name="actionConnect_Mobile_App"/>
     <addaction name="actionValidate_Address"/>
     <addaction name="separator"/>
-    <addaction name="actionz_board_net"/>
-    <addaction name="actionTurnstile_Migration"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -1357,6 +1355,7 @@
    <addaction name="menuFile"/>
    <addaction name="menu_Edit"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuApps"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExit">

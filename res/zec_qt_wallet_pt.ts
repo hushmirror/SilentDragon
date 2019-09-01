@@ -31,8 +31,8 @@
     <name>ConnectionDialog</name>
     <message>
         <location filename="../src/connection.ui" line="17"/>
-        <source>ZecWallet</source>
-        <translation>ZecWallet</translation>
+        <source>SilentDragon</source>
+        <translation>SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/connection.ui" line="58"/>
@@ -44,8 +44,8 @@
     <name>MainWindow</name>
     <message>
         <location filename="../src/mainwindow.ui" line="14"/>
-        <source>ZecWallet</source>
-        <translation>ZecWallet</translation>
+        <source>SilentDragon</source>
+        <translation>SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="29"/>
@@ -426,7 +426,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="541"/>
-        <source>Connection over Tor has been enabled. To use this feature, you need to restart ZecWallet.</source>
+        <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -436,13 +436,13 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="551"/>
-        <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart ZecWallet.</source>
+        <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="612"/>
-        <source>Thanks for supporting ZecWallet!</source>
-        <translation>Obrigado por apoiar a ZecWallet!</translation>
+        <source>Thanks for supporting SilentDragon!</source>
+        <translation>Obrigado por apoiar a SilentDragon!</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="614"/>
@@ -451,8 +451,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="614"/>
-        <source> to support ZecWallet</source>
-        <translation> para apoiar ZecWallet</translation>
+        <source> to support SilentDragon</source>
+        <translation> para apoiar SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="651"/>
@@ -482,12 +482,12 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="580"/>
-        <source>ZecWallet needs to restart to rescan/reindex. ZecWallet will now close, please restart ZecWallet to continue</source>
+        <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="582"/>
-        <source>Restart ZecWallet</source>
+        <source>Restart SilentDragon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -765,7 +765,7 @@ não se parece com um z-Address</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="84"/>
-        <source>Allow connections over the internet via ZecWallet wormhole</source>
+        <source>Allow connections over the internet via SilentDragon wormhole</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -827,12 +827,12 @@ não se parece com um z-Address</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="77"/>
-        <source>You have hushd set to start as a daemon, which can cause problems with ZecWallet
+        <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your zcash.conf and restart ZecWallet
+.Please remove the following line from your zcash.conf and restart SilentDragon
 daemon=1</source>
-        <translation>Você tem hushd configurado como daemon, o que pode causar problemas com a ZecWallet
- Por favor, remova a seguinte linha do seu zcash.conf e reinicie a ZecWallet:
+        <translation>Você tem hushd configurado como daemon, o que pode causar problemas com a SilentDragon
+ Por favor, remova a seguinte linha do seu zcash.conf e reinicie a SilentDragon:
 daemon=1</translation>
     </message>
     <message>
