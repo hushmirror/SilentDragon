@@ -1178,7 +1178,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     <message>
         <location filename="../src/rpc.cpp" line="706"/>
         <source>There was an error connecting to hushd. The error was</source>
-        <translation>При підключенні до Safecoind сталася помилка. Помилка</translation>
+        <translation>При підключенні до hushd сталася помилка. Помилка</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="662"/>
@@ -1251,7 +1251,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     <message>
         <location filename="../src/rpc.cpp" line="687"/>
         <source>hushd has no peer connections</source>
-        <translation>Safecoind не має з&apos;єднань з пірами</translation>
+        <translation>hushd не має з&apos;єднань з пірами</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1043"/>
