@@ -37,8 +37,8 @@
     </message>
     <message>
         <location filename="../src/connection.ui" line="58"/>
-        <source>The SilentDragon Awakens...</source>
-        <translation>SilentDragon Запускається...</translation>
+        <source>The Dragon Awakens...</source>
+        <translation>Dragon Запускається...</translation>
     </message>
 </context>
 <context>
@@ -218,8 +218,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="908"/>
-        <source>safecoind</source>
-        <translation>safecoind</translation>
+        <source>hushd</source>
+        <translation>hushd</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="2095"/>
@@ -355,7 +355,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="2057"/>
-        <source>&amp;Exit</source>
+        <source>E&amp;xit</source>
         <translation>&amp;Вихід</translation>
     </message>
     <message>
@@ -375,8 +375,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="2075"/>
-        <source>&amp;Donate</source>
-        <translation>&amp;Пожертвування</translation>
+        <source>&amp;Send Duke Feedback</source>
+        <translation>&amp;Пожертвування для Duke</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="2080"/>
@@ -390,7 +390,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="2090"/>
-        <source>&amp;Check github.com for updates</source>
+        <source>Check github.com for &amp;updates</source>
         <translation>&amp;Перевірити github.com на оновлення</translation>
     </message>
     <message>
@@ -405,7 +405,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="2110"/>
-        <source>&amp;Address book</source>
+        <source>Address &amp;book</source>
         <translation>&amp;Адресна книга</translation>
     </message>
     <message>
@@ -501,8 +501,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1113"/>
-        <source>The keys will be imported into your connected safecoind node</source>
-        <translation>Ключі будуть імпортовані в ваш підключений вузол safecoind</translation>
+        <source>The keys will be imported into your connected hushd node</source>
+        <translation>Ключі будуть імпортовані в ваш підключений вузол hushd</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1163"/>
@@ -526,8 +526,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1187"/>
-        <source>You need to back it up from the machine safecoind is running on</source>
-        <translation>Ви повинні зробити резервну копію з машини, на якій працює safecoind</translation>
+        <source>You need to back it up from the machine hushd is running on</source>
+        <translation>Ви повинні зробити резервну копію з машини, на якій працює hushd</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1191"/>
@@ -611,8 +611,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="303"/>
-        <source>safecoind is not yet ready. Please wait for the UI to load</source>
-        <translation>safecoind ще не готовий. Будь ласка, зачекайте, поки завантажиться інтерфейс</translation>
+        <source>hushd is not yet ready. Please wait for the UI to load</source>
+        <translation>hushd ще не готовий. Будь ласка, зачекайте, поки завантажиться інтерфейс</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="459"/>
@@ -626,18 +626,18 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="526"/>
-        <source>Tor configuration is available only when running an embedded safecoind.</source>
-        <translation>Конфігурація Tor доступна тільки при роботі з вбудованим safecoind.</translation>
+        <source>Tor configuration is available only when running an embedded hushd.</source>
+        <translation>Конфігурація Tor доступна тільки при роботі з вбудованим hushd.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="618"/>
-        <source>You&apos;re using an external safecoind. Please restart safecoind with -rescan</source>
-        <translation>Ви використовуєте зовнішній safecoind. Будь ласка, перезапустіть safecoind з -rescan</translation>
+        <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
+        <translation>Ви використовуєте зовнішній hushd. Будь ласка, перезапустіть hushd з -rescan</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="621"/>
-        <source>You&apos;re using an external safecoind. Please restart safecoind with -reindex</source>
-        <translation>Ви використовуєте зовнішній safecoind. Будь ласка, перезапустіть safecoind з -reindex</translation>
+        <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
+        <translation>Ви використовуєте зовнішній hushd. Будь ласка, перезапустіть hushd з -reindex</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="701"/>
@@ -1014,18 +1014,18 @@ doesn&apos;t look like a z-address</source>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="52"/>
-        <source>Starting embedded safecoind</source>
-        <translation>Запуск сервісу safecoind</translation>
+        <source>Starting embedded hushd</source>
+        <translation>Запуск сервісу hushd</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="62"/>
-        <source>safecoind is set to run as daemon</source>
-        <translation>safecoind налаштований на запуск в якості демона</translation>
+        <source>hushd is set to run as daemon</source>
+        <translation>hushd налаштований на запуск в якості демона</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="62"/>
-        <source>Waiting for safecoind</source>
-        <translation>Очікуємо safecoind</translation>
+        <source>Waiting for hushd</source>
+        <translation>Очікуємо hushd</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="146"/>
@@ -1059,40 +1059,40 @@ doesn&apos;t look like a z-address</source>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="77"/>
-        <source>You have safecoind set to start as a daemon, which can cause problems with SilentDragon
+        <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your safecoin.conf and restart SilentDragon
+.Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
-        <translation>Ви налаштували safecoind для запуску в якості демона, що може викликати проблеми з SilentDragon
+        <translation>Ви налаштували hushd для запуску в якості демона, що може викликати проблеми з SilentDragon
 
-. Видаліть наступний рядок з файлу safecoin.conf і перезапустіть SilentDragon.
+. Видаліть наступний рядок з файлу HUSH3.conf і перезапустіть SilentDragon.
 daemon=1</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="82"/>
-        <source>Couldn&apos;t start the embedded safecoind.
+        <location filename="../src/connection.cpp" line="85"/>
+        <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
 
-If you previously started safecoind with custom arguments, you might need to reset safecoin.conf.
+If you previously started hushd with custom arguments, you might need to  reset HUSH3.conf.
 
-If all else fails, please run safecoind manually.</source>
-        <translation>Не вдалося запустити вбудований safecoind.
+If all else fails, please run hushd manually.</source>
+        <translation>Не вдалося запустити вбудований hushd.
 
 Будь ласка, спробуйте перезапустити.
 
-Якщо ви раніше запустили safecoind до призначених для користувача аргументами, вам може знадобитися скинути safecoin.conf.
+Якщо ви раніше запустили hushd до призначених для користувача аргументами, вам може знадобитися скинути HUSH3.conf.
 
-Якщо нічого не допомагає, запустіть safecoind вручну.</translation>
+Якщо нічого не допомагає, запустіть hushd вручну.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="93"/>
-        <source>Couldn&apos;t connect to safecoind configured in safecoin.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
-Not starting embedded safecoind because --no-embedded was passed</source>
-        <translation>Помилка з&apos;єднання із safecoind, налаштованому в safecoin.conf.
+Not starting embedded hushd because --no-embedded was passed</source>
+        <translation>Помилка з&apos;єднання із hushd, налаштованому в HUSH3.conf.
 
-Чи не запускається вбудований safecoind, тому що --no-embedded був пропущений</translation>
+Чи не запускається вбудований hushd, тому що --no-embedded був пропущений</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="297"/>
@@ -1118,27 +1118,27 @@ Not starting embedded safecoind because --no-embedded was passed</source>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="335"/>
-        <source>safecoind error</source>
-        <translation>помилка safecoind</translation>
+        <source>hushd error</source>
+        <translation>помилка hushd</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="414"/>
-        <source>Could not connect to safecoind configured in settings.
+        <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
-        <translation>Помилка з&apos;єднання із safecoind конфігуроване в налаштуваннях.
+        <translation>Помилка з&apos;єднання із hushd конфігуроване в налаштуваннях.
 
 Будь ласка, встановіть host / port і user / password в меню змінити-&gt; Налаштування.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="475"/>
-        <source>Authentication failed. The username / password you specified was not accepted by safecoind. Try changing it in the Edit-&gt;Settings menu</source>
-        <translation>Аутентифікація не вдалася. username / password, які ви вказали, не були прийняті safecoind. Спробуйте змінити його в меню Редагувати-&gt; Налаштування</translation>
+        <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
+        <translation>Аутентифікація не вдалася. username / password, які ви вказали, не були прийняті hushd. Спробуйте змінити його в меню Редагувати-&gt; Налаштування</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="490"/>
-        <source>Your safecoind is starting up. Please wait.</source>
-        <translation>Ваш safecoind запускається. Будь ласка зачекайте.</translation>
+        <source>Your hushd is starting up. Please wait.</source>
+        <translation>Ваш hushd запускається. Будь ласка зачекайте.</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="652"/>
@@ -1172,13 +1172,13 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="684"/>
-        <source>Connected to safecoind</source>
-        <translation>Під&apos;єднано до safecoind</translation>
+        <source>Connected to hushd</source>
+        <translation>Під&apos;єднано до hushd</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="706"/>
-        <source>There was an error connecting to safecoind. The error was</source>
-        <translation>При підключенні до Safecoind сталася помилка. Помилка</translation>
+        <source>There was an error connecting to hushd. The error was</source>
+        <translation>При підключенні до hushd сталася помилка. Помилка</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="662"/>
@@ -1250,8 +1250,8 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="687"/>
-        <source>safecoind has no peer connections</source>
-        <translation>Safecoind не має з&apos;єднань з пірами</translation>
+        <source>hushd has no peer connections</source>
+        <translation>hushd не має з&apos;єднань з пірами</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1043"/>
@@ -1289,8 +1289,8 @@ Would you like to visit the releases page?</source>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1194"/>
-        <source>Waiting for safecoind to exit</source>
-        <translation>Очікування зупинки safecoind</translation>
+        <source>Waiting for hushd to exit</source>
+        <translation>Очікування зупинки hushd</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="311"/>
@@ -1793,8 +1793,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
     <message>
         <location filename="../src/settings.ui" line="33"/>
-        <source>safecoind connection</source>
-        <translation>З&apos;єднання safecoind</translation>
+        <source>hushd connection</source>
+        <translation>З&apos;єднання hushd</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="62"/>
@@ -2196,8 +2196,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
     <message>
         <location filename="../src/confirm.ui" line="183"/>
-        <source>safecoind doesn&apos;t seem to have any peers. You might not be connected to the internet, so this transaction might not work.</source>
-        <translation>safecoind, здається, не має будь-яких з&apos;єднань. Можливо, ви не підключені до Інтернету, тому транзакції можуть не працювати.</translation>
+        <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this transaction might not work.</source>
+        <translation>hushd, здається, не має будь-яких з&apos;єднань. Можливо, ви не підключені до Інтернету, тому транзакції можуть не працювати.</translation>
     </message>
     <message>
         <location filename="../src/confirm.ui" line="196"/>
@@ -2224,8 +2224,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
-        <source>Configure safecoin.conf</source>
-        <translation>Конфігурація safecoin.conf</translation>
+        <source>Configure HUSH3.conf</source>
+        <translation>Конфігурація HUSH3.conf</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="20"/>
