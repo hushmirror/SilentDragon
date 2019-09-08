@@ -301,7 +301,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1052"/>
         <source>Sapling &amp;turnstile</source>
-        <translation>Saplig Fidan turnike</translation>
+        <translation>Sapling Fidan turnike</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1055"/>
