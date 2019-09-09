@@ -214,7 +214,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="740"/>
         <source>View All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>查看所有地址</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="758"/>
@@ -878,7 +878,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/privkey.ui" line="14"/>
         <source>Private Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>私钥</translation>
     </message>
 </context>
 <context>
