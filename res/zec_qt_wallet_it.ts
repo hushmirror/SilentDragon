@@ -6,12 +6,12 @@
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
         <source>Label</source>
-        <translation type="unfinished">Etichetta</translation>
+        <translation>Etichetta</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
         <source>Address</source>
-        <translation type="unfinished">Indirizzo</translation>
+        <translation>Indirizzo</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../src/connection.ui" line="58"/>
         <source>The Dragon Awakens...</source>
-        <translation type="unfinished"></translation>
+        <translation>Il drago si sveglia ...</translation>
     </message>
     <message>
         <source>Starting Up</source>
@@ -147,7 +147,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="487"/>
         <source>Upload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Caricare un file</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
@@ -165,17 +165,17 @@
     <message>
         <location filename="../src/mainwindow.ui" line="592"/>
         <source>Recurring payment</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagamento ricorrente</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="599"/>
         <source>Every month, starting 12-May-2012, for 6 payments</source>
-        <translation type="unfinished"></translation>
+        <translation>Ogni mese, a partire dal 12 maggio 2012, per 6 pagamenti</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="606"/>
         <source>Edit Schedule</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica programma</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="636"/>
@@ -206,44 +206,44 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1381"/>
         <source>&amp;Send Duke Feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Invia feedback Duke</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1386"/>
         <source>&amp;Hush Discord</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hush Discord</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1391"/>
         <source>&amp;Hush Website</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hush Sito web</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1445"/>
         <source>Pay HUSH &amp;URI...</source>
-        <translation type="unfinished"></translation>
+        <translation>Paga HUSH &amp;URI...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1458"/>
         <source>Request HUSH...</source>
-        <translation type="unfinished"></translation>
+        <translation>Richiedi HUSH ...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1463"/>
         <source>Validate Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Convalida indirizzo</translation>
     </message>
     <message>
         <source>z-Addr(Sapling)</source>
-        <translation type="vanished">z-Addr(Sapling)</translation>
+        <translation type="vanished">z-Addresses (Sapling)</translation>
     </message>
     <message>
         <source>t-Addr</source>
-        <translation type="vanished">t-Addr (Trasparente)</translation>
+        <translation type="vanished">t-Addresses (Trasparente)</translation>
     </message>
     <message>
         <source>z-Addr(Sprout)</source>
-        <translation type="vanished">z-Addr(Legacy Sprout)</translation>
+        <translation type="vanished">z-Addresses (Legacy Sprout)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="774"/>
@@ -253,7 +253,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="781"/>
         <source>View All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza tutti gli indirizzi</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="799"/>
@@ -268,7 +268,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="820"/>
         <source>Address balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Saldo dell'indirizzo</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="830"/>
@@ -323,52 +323,52 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1006"/>
         <source>Notarized Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Hash notarile</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1028"/>
         <source>Notarized txid</source>
-        <translation type="unfinished"></translation>
+        <translation>Txid notarile</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1050"/>
         <source>Notarized Lag</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag notarile</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1072"/>
         <source>KMD Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione KMD</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1095"/>
         <source>Protocol Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione protocollo</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1118"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Versione</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1140"/>
         <source>P2P Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Porta P2P</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1163"/>
         <source>RPC Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Porta RPC</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1185"/>
         <source>Client Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome del cliente</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1207"/>
         <source>Next Halving</source>
-        <translation type="unfinished"></translation>
+        <translation>Prossima diminuzione</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1236"/>
@@ -401,12 +401,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="737"/>
         <source>Shielded Address (Private, Anonymous)</source>
-        <translation type="unfinished"></translation>
+        <translation>Indirizzo protetto (privato, anonimo)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="750"/>
         <source>Transparent Address (Public, Metadata-Leaking)</source>
-        <translation type="unfinished"></translation>
+        <translation>Indirizzo trasparente (pubblico, con perdite di metadati)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1317"/>
@@ -507,17 +507,17 @@
         <location filename="../src/mainwindow.ui" line="1440"/>
         <location filename="../src/mainwindow.cpp" line="963"/>
         <source>Export transactions</source>
-        <translation type="unfinished"></translation>
+        <translation>Transazioni di esportazione</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1450"/>
         <source>Connect mobile &amp;app</source>
-        <translation type="unfinished"></translation>
+        <translation>Connetti &amp;applicazione mobile</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1453"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <source>Thanks for supporting SilentDragon!</source>
@@ -559,47 +559,47 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="491"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
-        <translation type="unfinished"></translation>
+        <translation>La configurazione Tor è disponibile solo quando si esegue un hushd incorporato.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="529"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai usando un hushd esterno. Si prega di riavviare hushd con -rescan</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="532"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai usando un hushd esterno. Si prega di riavviare hushd con -reindex</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="551"/>
         <source>Enable Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Abilita Tor</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="552"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
-        <translation type="unfinished"></translation>
+        <translation>La connessione tramite Tor è stata abilitata. Per utilizzare questa funzione, è necessario riavviare SilentDragon.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="561"/>
         <source>Disable Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Disabilita Tor</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="562"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
-        <translation type="unfinished"></translation>
+        <translation>La connessione tramite Tor è stata disabilitata. Per disconnettersi completamente da Tor, è necessario riavviare SilentDragon.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="591"/>
         <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon deve essere riavviato per ripetere la scansione / reindicizzazione. SilentDragon ora si chiuderà, riavviare SilentDragon per continuare</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="593"/>
         <source>Restart SilentDragon</source>
-        <translation type="unfinished"></translation>
+        <translation>Riavvia SilentDragon</translation>
     </message>
     <message>
         <source>Please paste your private keys (z-Addr or t-Addr) here, one per line</source>
@@ -613,67 +613,67 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="630"/>
         <source>Some feedback about SilentDragon or Hush...</source>
-        <translation type="unfinished"></translation>
+        <translation>Alcuni feedback su SilentDragon o Hush ...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="632"/>
         <source>Send Duke some private and shielded feedback about </source>
-        <translation type="unfinished"></translation>
+        <translation>Invia a Duke un feedback privato e schermato</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="632"/>
         <source> or SilentDragon</source>
-        <translation type="unfinished"></translation>
+        <translation>o SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="648"/>
         <source>Enter Address to validate</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci un indirizzo per convalidare</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="649"/>
         <source>Transparent or Shielded Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Indirizzo trasparente o schermato:</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="870"/>
         <source>Paste HUSH URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Incolla URI HUSH</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="882"/>
         <source>Error paying pirate URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel pagamento dell&apos;URI Hush</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="883"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished"></translation>
+        <translation>L'URI dovrebbe essere nella forma &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="918"/>
         <source>Please paste your private keys here, one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Incolla qui le tue chiavi private, una per riga</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="919"/>
         <source>The keys will be imported into your connected Hush node</source>
-        <translation type="unfinished"></translation>
+        <translation>Le chiavi verranno importate nel nodo Hush collegato</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="950"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation type="unfinished"></translation>
+        <translation>Le chiavi sono state importate! Potrebbero essere necessari alcuni minuti per ripetere la scansione della blockchain. Fino ad allora, la funzionalità potrebbe essere limitata</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="969"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="970"/>
         <source>Error exporting transactions, file was not saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore durante l&apos;esportazione delle transazioni, il file non è stato salvato</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="992"/>
@@ -762,12 +762,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1172"/>
         <source>Address Asset Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Addresses Asset Viewer</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1178"/>
         <source>Convert Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Converti indirizzo</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1187"/>
@@ -782,7 +782,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1253"/>
         <source>View Payment Request</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizza richiesta di pagamento</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1260"/>
@@ -792,7 +792,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1274"/>
         <source>Reply to </source>
-        <translation type="unfinished"></translation>
+        <translation>Rispondi a</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1356"/>
@@ -802,17 +802,17 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1406"/>
         <source>Copy Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Copia indirizzo</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1472"/>
         <source>Address has been previously used</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;indirizzo è stato precedentemente utilizzato</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1474"/>
         <source>Address is unused</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;indirizzo non è utilizzato</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="209"/>
@@ -823,7 +823,7 @@
         <location filename="../src/sendtab.cpp" line="282"/>
         <location filename="../src/sendtab.cpp" line="334"/>
         <source>File Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Upload di file</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="325"/>
@@ -833,22 +833,22 @@
     <message>
         <location filename="../src/sendtab.cpp" line="345"/>
         <source>File size too large</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensione del file troppo grande</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>The file size </source>
-        <translation type="unfinished"></translation>
+        <translation>La dimensione del file </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source> bytes is greater than </source>
-        <translation type="unfinished"></translation>
+        <translation> byte è maggiore di </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>byte</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="361"/>
@@ -876,12 +876,12 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/sendtab.cpp" line="677"/>
         <source>Current balance      : </source>
-        <translation type="unfinished"></translation>
+        <translation>Bilancio corrente      :</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="679"/>
         <source>Balance after this Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation>Equilibrio dopo questo Tx:</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="700"/>
@@ -907,7 +907,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/sendtab.cpp" line="744"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;importo &apos;%1&apos; non è valido!</translation>
     </message>
 </context>
 <context>
@@ -921,7 +921,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/memodialog.ui" line="52"/>
         <source>Include Reply Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Includi indirizzo di risposta</translation>
     </message>
 </context>
 <context>
@@ -929,7 +929,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/memoedit.cpp" line="51"/>
         <source>Reply to</source>
-        <translation type="unfinished"></translation>
+        <translation>Rispondi a</translation>
     </message>
 </context>
 <context>
@@ -937,53 +937,53 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/mobileappconnector.ui" line="14"/>
         <source>Connect Mobile App</source>
-        <translation type="unfinished"></translation>
+        <translation>Connetti applicazione mobile</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="43"/>
         <source>QR Code</source>
-        <translation type="unfinished"></translation>
+        <translation>QR Code</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="49"/>
         <source>Connection String</source>
-        <translation type="unfinished"></translation>
+        <translation>Connessione</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="84"/>
         <source>Allow connections over the internet via SilentDragon wormhole</source>
-        <translation type="unfinished"></translation>
+        <translation>Consentire le connessioni su Internet tramite wormhole SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
-        <translation type="unfinished"></translation>
+        <translation>Scansiona questo QRCode dalla tua app SilentDragon per connettere il tuo telefono</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragon Companion App</source>
-        <translation type="unfinished"></translation>
+        <translation>Silent Dragon Companion Application</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Disconnect</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="126"/>
         <location filename="../src/mobileappconnector.ui" line="160"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etichetta di testo</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="136"/>
         <source>Last seen:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima visualizzazione:</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="153"/>
         <source>Connection type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipo di connessione:</translation>
     </message>
 </context>
 <context>
@@ -995,7 +995,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/privkey.ui" line="14"/>
         <source>Private Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiavi private</translation>
     </message>
 </context>
 <context>
@@ -1054,17 +1054,17 @@ Non è stato avviato hushd integrato perché è stato passato il comando --no-em
     <message>
         <location filename="../src/connection.cpp" line="149"/>
         <source>Hide Advanced Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Nascondi configurazione avanzata</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="149"/>
         <source>Show Advanced Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra configurazione avanzata</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="162"/>
         <source>Choose data directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli la directory dei dati</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="241"/>
@@ -1088,7 +1088,10 @@ Non è stato avviato hushd integrato perché è stato passato il comando --no-em
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai impostato hushd come avvio come demone, che può causare problemi con SilentDragon
+
+        Rimuovere la seguente riga dal proprio HUSH3.conf e riavviare SilentDragon
+        daemon=1</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="85"/>
@@ -1099,19 +1102,27 @@ Please try restarting.
 If you previously started hushd with custom arguments, you might need to  reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile avviare il hushd incorporato.
+
+        Prova a riavviare.
+        
+        Se in precedenza hai avviato hushd con argomenti personalizzati, potresti dover ripristinare HUSH3.conf.
+        
+        Se tutto il resto fallisce, eseguire hushd manualmente.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="96"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile connettersi a hushd configurato in HUSH3.conf.
+
+        Non avviare hushd incorporato perché --no-embedded è stato passato</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="183"/>
         <source>Could not create HUSH3.conf.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossibile creare HUSH3.conf.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="290"/>
@@ -1137,12 +1148,12 @@ Not starting embedded hushd because --no-embedded was passed</source>
     <message>
         <location filename="../src/connection.cpp" line="509"/>
         <source>This may take several hours, grab some popcorn</source>
-        <translation type="unfinished"></translation>
+        <translation>Potrebbero essere necessarie alcune ore, prendi dei popcorn</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="769"/>
         <source>There was an error! : </source>
-        <translation type="unfinished"></translation>
+        <translation>C&apos;era un errore! :</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="693"/>
@@ -1210,7 +1221,7 @@ Not starting embedded hushd because --no-embedded was passed</source>
     <message>
         <location filename="../src/rpc.cpp" line="717"/>
         <source>hushd has no peer connections! Network issues?</source>
-        <translation type="unfinished"></translation>
+        <translation>hushd non ha connessioni peer! Problemi di rete?</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1031"/>
@@ -1220,24 +1231,26 @@ Not starting embedded hushd because --no-embedded was passed</source>
     <message>
         <location filename="../src/rpc.cpp" line="1080"/>
         <source>Update Available</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiornamento disponibile</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1081"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
-        <translation type="unfinished"></translation>
+        <translation>È disponibile una nuova versione v%1! Hai v%2.
+
+        Vuoi visitare la pagina dei rilasci?</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1093"/>
         <source>No updates available</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun aggiornamento disponibile</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1094"/>
         <source>You already have the latest release v%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hai già l&apos;ultima versione v%1</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1187"/>
@@ -1315,17 +1328,17 @@ Impostare host/porta e utente/password nel menu Modifica-&gt; Impostazioni.</tra
     <message>
         <location filename="../src/addressbook.cpp" line="110"/>
         <source>Pick</source>
-        <translation type="unfinished"></translation>
+        <translation>scegliere</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="128"/>
         <source>Address or Label Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore indirizzo o etichetta</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="129"/>
         <source>Address or Label cannot be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>L'indirizzo o l'etichetta non possono essere vuoti</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="134"/>
@@ -1339,37 +1352,37 @@ Impostare host/porta e utente/password nel menu Modifica-&gt; Impostazioni.</tra
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
         <source>%1 doesn&apos;t seem to be a valid Zcash address.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 non sembra essere un indirizzo Hush valido.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="143"/>
         <source>Label Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore etichetta></translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="144"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;etichetta &apos;%1&apos; esiste già. Rimuovi l&apos;etichetta esistente.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="156"/>
         <source>Import Address Book</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa rubrica</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="163"/>
         <source>Unable to open file</source>
-        <translation type="unfinished">Impossibile aprire il file</translation>
+        <translation>Impossibile aprire il file</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="183"/>
         <source>Address Book Import Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Importazione rubrica effettuata</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="184"/>
         <source>Imported %1 new Address book entries</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 nuove voci della rubrica importate</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="224"/>
@@ -1431,22 +1444,22 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/websockets.cpp" line="356"/>
         <source>Connected directly</source>
-        <translation type="unfinished"></translation>
+        <translation>Connesso direttamente</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="359"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
-        <translation type="unfinished"></translation>
+        <translation>Connesso via Internet tramite il servizio wormhole SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="652"/>
         <source>Node is still syncing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il nodo è ancora in fase di sincronizzazione.</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="676"/>
         <source>No sapling or transparent addresses with enough balance to spend.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun sapling o indirizzi trasparenti con abbastanza equilibrio da spendere.</translation>
     </message>
 </context>
 <context>
@@ -1454,22 +1467,22 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/recurringdialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogo</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="25"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Inserisci</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="32"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificare</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="39"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina</translation>
     </message>
 </context>
 <context>
@@ -1477,92 +1490,92 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/requestdialog.ui" line="14"/>
         <source>Payment Request</source>
-        <translation type="unfinished"></translation>
+        <translation>Richiesta di pagamento</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="38"/>
         <source>AddressBook</source>
-        <translation type="unfinished"></translation>
+        <translation>Rubrica</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="54"/>
         <source>Request From</source>
-        <translation type="unfinished"></translation>
+        <translation>Richiesta da</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="61"/>
         <source>My Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Il mio indirizzo</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="78"/>
         <source>Amount in </source>
-        <translation type="unfinished"></translation>
+        <translation>Importo in</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="118"/>
         <source>z address</source>
-        <translation type="unfinished"></translation>
+        <translation>z-addresses</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="145"/>
         <source>Amount</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantità</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="159"/>
         <source>The recipient will see this address in the &quot;to&quot; field when they pay your request.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il destinatario vedrà questo indirizzo nel campo &quot;a&quot; quando paga la richiesta.</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="179"/>
         <source>Amount USD</source>
-        <translation type="unfinished"></translation>
+        <translation>Importo USD</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="202"/>
         <source>Memo</source>
-        <translation type="unfinished">Memo</translation>
+        <translation>Memo</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="209"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etichetta di testo</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="219"/>
         <source>Request payment from a Sapling address. You&apos;ll send a HUSH 0.0001 transaction to the address with a HUSH payment URI. The memo will be included in the transaction when the address pays you.</source>
-        <translation type="unfinished"></translation>
+        <translation>Richiedi il pagamento da un indirizzo Alberello. Invierai una transazione HUSH 0.0001 all&apos;indirizzo con un URI di pagamento HUSH. Il promemoria verrà incluso nella transazione quando l&apos;indirizzo ti paga.</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="50"/>
         <source>Error paying HUSH URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Errore nel pagamento dell'URI HUSH</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="51"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished"></translation>
+        <translation>L'URI dovrebbe essere nella forma &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="65"/>
         <source>Pay To</source>
-        <translation type="unfinished"></translation>
+        <translation>Paga a</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="78"/>
         <source>Pay</source>
-        <translation type="unfinished"></translation>
+        <translation>pagare</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="80"/>
         <source>You are paying a payment request. Your address will not be visible to the person requesting this payment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Stai pagando una richiesta di pagamento. Il tuo indirizzo non sarà visibile alla persona che richiede questo pagamento.</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="99"/>
         <source>Can only request from Sapling addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Può richiedere solo dagli indirizzi Alberello</translation>
     </message>
 </context>
 <context>
@@ -1605,7 +1618,7 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/settings.ui" line="151"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
-        <translation type="unfinished"></translation>
+        <translation>Connettiti alla rete Tor tramite proxy SOCKS in esecuzione su 127.0.0.1:9050. Nota che dovrai installare ed eseguire il servizio Tor esternamente.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="168"/>
@@ -1615,32 +1628,32 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/settings.ui" line="259"/>
         <source>Connect via Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Connetti via Tor</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="274"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>Risoluzione dei problemi</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="280"/>
         <source>Reindex</source>
-        <translation type="unfinished"></translation>
+        <translation>Reindex</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="287"/>
         <source>Rescan the blockchain for any missing wallet transactions and to correct your wallet balance. This may take several hours. You need to restart SilentDragon for this to take effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Riesegui la scansione della blockchain per eventuali transazioni di portafoglio mancanti e per correggere il saldo del tuo portafoglio. Questa operazione potrebbe richiedere diverse ore. È necessario riavviare SilentDragon affinché questo abbia effetto</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="297"/>
         <source>Rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>Rescan</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="331"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Ricostruisci l&apos;intera blockchain dal blocco genesi, eseguendo nuovamente la scansione di tutti i file di blocco. Questo potrebbe richiedere diverse ore o giorni, a seconda dell&apos;hardware. È necessario riavviare SilentDragon affinché questo abbia effetto</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="161"/>
@@ -1757,17 +1770,17 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/validateaddress.ui" line="14"/>
         <source>Validate Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Convalida indirizzo</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.ui" line="20"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etichetta di testo</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.ui" line="27"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Indirizzo:</translation>
     </message>
 </context>
 <context>
@@ -1775,12 +1788,12 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/validateaddress.cpp" line="6"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Proprietà</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.cpp" line="6"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Prezzo</translation>
     </message>
 </context>
 <context>
@@ -1788,12 +1801,12 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/viewalladdresses.ui" line="14"/>
         <source>All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutti gli indirizzi</translation>
     </message>
     <message>
         <location filename="../src/viewalladdresses.ui" line="30"/>
         <source>Export All Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Esporta tutte le chiavi</translation>
     </message>
 </context>
 <context>
@@ -1801,12 +1814,12 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Address</source>
-        <translation type="unfinished">Indirizzo</translation>
+        <translation>Indirizzo</translation>
     </message>
     <message>
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Balance (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Saldo (%1)</translation>
     </message>
 </context>
 <context>
@@ -1847,7 +1860,7 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/addressbook.ui" line="95"/>
         <source>Import Address Book</source>
-        <translation type="unfinished"></translation>
+        <translation>Importa rubrica</translation>
     </message>
 </context>
 <context>
@@ -1870,7 +1883,7 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/confirm.ui" line="155"/>
         <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this Transaction might not work.</source>
-        <translation type="unfinished"></translation>
+        <translation>hushd non sembra avere pari. Potresti non essere connesso a Internet, quindi questa transazione potrebbe non funzionare.</translation>
     </message>
     <message>
         <location filename="../src/confirm.ui" line="168"/>
@@ -1888,42 +1901,42 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>
-        <translation type="unfinished"></translation>
+        <translation>Configura HUSH3.conf</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="61"/>
         <source>Show Advanced Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra configurazione avanzata</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="86"/>
         <source>Your Hush node will be configured for you automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Il nodo Hush verrà configurato automaticamente per te</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="102"/>
         <source>Use custom datadir</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa datadir personalizzato</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="109"/>
         <source>Please choose a directory to store your wallet.dat and blockchain</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli una directory per archiviare wallet.dat e blockchain</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="118"/>
         <source>Choose directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Scegli la directory</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="154"/>
         <source>Connect over Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Connetti tramite Tor</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="161"/>
         <source>Please note that you&apos;ll need to already have a Tor service configured on port 9050</source>
-        <translation type="unfinished"></translation>
+        <translation>Si noti che è necessario disporre già di un servizio Tor configurato sulla porta 9050</translation>
     </message>
 </context>
 <context>
@@ -1931,52 +1944,52 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     <message>
         <location filename="../src/newrecurring.ui" line="14"/>
         <source>Edit Schedule</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica programma</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="50"/>
         <source>Schedule</source>
-        <translation type="unfinished"></translation>
+        <translation>Programma</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="57"/>
         <source>Payment Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Descrizione del pagamento</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="64"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etichetta di testo</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="111"/>
         <source>From</source>
-        <translation type="unfinished"></translation>
+        <translation>A partire dal</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="118"/>
         <source>Number of payments</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di pagamenti</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="125"/>
         <source>Amount</source>
-        <translation type="unfinished"></translation>
+        <translation>Quantità</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="168"/>
         <source>Next Payment</source>
-        <translation type="unfinished"></translation>
+        <translation>Prossimo pagamento</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="178"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>a</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="188"/>
         <source>Memo</source>
-        <translation type="unfinished">Memo</translation>
+        <translation>Memo</translation>
     </message>
 </context>
 <context>
