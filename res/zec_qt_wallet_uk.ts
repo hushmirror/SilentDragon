@@ -903,39 +903,6 @@ doesn&apos;t look like a z-address</source>
     </message>
 </context>
 <context>
-    <name>MigrationDialog</name>
-    <message>
-        <location filename="../src/migration.ui" line="14"/>
-        <source>Migration Turnstile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/migration.ui" line="30"/>
-        <source>Migration History</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/migration.ui" line="36"/>
-        <source>Migrated Amount</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/migration.ui" line="50"/>
-        <source>Unmigrated Amount</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/migration.ui" line="74"/>
-        <source>Sprout -&gt; Sapling migration enabled</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/migration.ui" line="81"/>
-        <source>If enabled, zcashd will slowly migrate your Sprout shielded funds to your Sapling address. </source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MigrationTxns</name>
     <message>
         <location filename="../src/turnstile.cpp" line="440"/>
@@ -948,53 +915,53 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/mobileappconnector.ui" line="14"/>
         <source>Connect Mobile App</source>
-        <translation type="unfinished"></translation>
+        <translation>Підключіть мобільний додаток</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
-        <source>Scan this QRCode from your ZecWallet companion app to connect your phone</source>
-        <translation type="unfinished"></translation>
+        <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
+        <translation>Скануйте цей QR-код із додатка-супутника SilentDragon, щоб підключити телефон</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="43"/>
         <source>QR Code</source>
-        <translation type="unfinished"></translation>
+        <translation>QR-код</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="49"/>
         <source>Connection String</source>
-        <translation type="unfinished"></translation>
+        <translation>Рядок підключення</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="84"/>
-        <source>Allow connections over the internet via ZecWallet wormhole</source>
-        <translation type="unfinished"></translation>
+        <source>Allow connections over the internet via SilentDragon wormhole</source>
+        <translation>Дозволити підключення через Інтернет через червоточну систему SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
-        <source>ZecWallet Companion App</source>
-        <translation type="unfinished"></translation>
+        <source>SilentDragon Companion App</source>
+        <translation>Програма SilentDragon Companion</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Відключити</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="126"/>
         <location filename="../src/mobileappconnector.ui" line="160"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Текстова мітка</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="136"/>
         <source>Last seen:</source>
-        <translation type="unfinished"></translation>
+        <translation>Востаннє бачились:</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="153"/>
         <source>Connection type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип з'єднання:</translation>
     </message>
 </context>
 <context>
@@ -2003,12 +1970,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/turnstile.ui" line="44"/>
         <source>Migrate over</source>
-        <translation type="unfinished"></translation>
+        <translation>Перемістіть над</translation>
     </message>
     <message>
         <location filename="../src/turnstile.ui" line="57"/>
         <source>From</source>
-        <translation type="unfinished">Откуда</translation>
+        <translation>від</translation>
     </message>
     <message>
         <location filename="../src/turnstile.ui" line="90"/>
@@ -2326,32 +2293,32 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/zboard.ui" line="14"/>
         <source>Post to z-board.net</source>
-        <translation type="unfinished"></translation>
+        <translation>Опублікувати на z-board.net</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="20"/>
         <source>Total Fee</source>
-        <translation type="unfinished">Общая комиссия</translation>
+        <translation>Общая комиссия</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="57"/>
         <source>Memo</source>
-        <translation type="unfinished">Заметка</translation>
+        <translation>Заметка</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="64"/>
         <source>(optional)</source>
-        <translation type="unfinished"></translation>
+        <translation>(необов’язково)</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="71"/>
         <source>Send From</source>
-        <translation type="unfinished"></translation>
+        <translation>надіслати з</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="78"/>
         <source>Post As:</source>
-        <translation type="unfinished"></translation>
+        <translation>Опублікувати як:</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="85"/>
@@ -2361,12 +2328,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/zboard.ui" line="107"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Увага</translation>
     </message>
     <message>
         <location filename="../src/zboard.ui" line="124"/>
         <source>Posting to Board</source>
-        <translation type="unfinished"></translation>
+        <translation>Опублікування до Ради</translation>
     </message>
 </context>
 </TS>

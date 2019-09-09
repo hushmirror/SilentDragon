@@ -37,11 +37,11 @@
     <message>
         <location filename="../src/connection.ui" line="58"/>
         <source>The Dragon Awakens...</source>
-        <translation type="unfinished"></translation>
+        <translation>Le dragon se réveille...</translation>
     </message>
     <message>
         <source>Starting Up</source>
-        <translation type="vanished">Démarrage</translation>
+        <translation>Démarrage</translation>
     </message>
 </context>
 <context>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="487"/>
         <source>Upload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Télécharger un fichier</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
@@ -166,7 +166,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="599"/>
         <source>Every month, starting 12-May-2012, for 6 payments</source>
-        <translation type="unfinished"></translation>
+        <translation>Chaque mois, à partir du 12 mai 2012, pour 6 paiements</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="606"/>
@@ -203,39 +203,39 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1381"/>
         <source>&amp;Send Duke Feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Envoyer des commentaires à Duke</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1386"/>
         <source>&amp;Hush Discord</source>
-        <translation type="unfinished"></translation>
+        <translation>Discord Hush</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1391"/>
         <source>&amp;Hush Website</source>
-        <translation type="unfinished"></translation>
+        <translation>Site internet de Hush</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1445"/>
         <source>Pay HUSH &amp;URI...</source>
-        <translation type="unfinished"></translation>
+        <translation>Payer HUSH &amp;URI ...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1463"/>
         <source>Validate Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Valider l'adresse</translation>
     </message>
     <message>
         <source>z-Addr(Sapling)</source>
-        <translation type="vanished">Adresse-z(Sapling)</translation>
+        <translation>Adresse-z(Sapling)</translation>
     </message>
     <message>
         <source>t-Addr</source>
-        <translation type="vanished">t-Adresse</translation>
+        <translation>t-Adresse</translation>
     </message>
     <message>
         <source>z-Addr(Sprout)</source>
-        <translation type="vanished">z-Adresse(Sprout)</translation>
+        <translation>z-Adresse(Sprout)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="774"/>
@@ -344,67 +344,67 @@
     <message>
         <location filename="../src/mainwindow.ui" line="737"/>
         <source>Shielded Address (Private, Anonymous)</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse privée (privée, anonyme)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="750"/>
         <source>Transparent Address (Public, Metadata-Leaking)</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse transparente (publique, fuites de métadonnées)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="781"/>
         <source>View All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir toutes les adresses</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1006"/>
         <source>Notarized Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Hachage notarisé</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1028"/>
         <source>Notarized txid</source>
-        <translation type="unfinished"></translation>
+        <translation>txid Notarisé</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1050"/>
         <source>Notarized Lag</source>
-        <translation type="unfinished"></translation>
+        <translation>Lag notarisé</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1072"/>
         <source>KMD Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version KMD</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1095"/>
         <source>Protocol Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version du protocole</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1118"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1140"/>
         <source>P2P Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Port P2P</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1163"/>
         <source>RPC Port</source>
-        <translation type="unfinished"></translation>
+        <translation>Port RPC</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1185"/>
         <source>Client Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nopm du client</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1207"/>
         <source>Next Halving</source>
-        <translation type="unfinished"></translation>
+        <translation>Prochaine réduction</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1317"/>
@@ -640,47 +640,47 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="630"/>
         <source>Some feedback about SilentDragon or Hush...</source>
-        <translation type="unfinished"></translation>
+        <translation>Quelques commentaires sur SilentDragon ou Hush ...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="632"/>
         <source>Send Duke some private and shielded feedback about </source>
-        <translation type="unfinished"></translation>
+        <translation>Envoyez à Duke des commentaires privés et protégés sur</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="632"/>
         <source> or SilentDragon</source>
-        <translation type="unfinished"></translation>
+        <translation> ou SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="648"/>
         <source>Enter Address to validate</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrez l&apos;adresse pour valider</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="649"/>
         <source>Transparent or Shielded Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse transparente ou privée:</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="882"/>
         <source>Error paying pirate URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur lors du paiement de l&apos;URI</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="918"/>
         <source>Please paste your private keys here, one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez coller vos clés privées ici, une par ligne</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="919"/>
         <source>The keys will be imported into your connected Hush node</source>
-        <translation type="unfinished"></translation>
+        <translation>Les clés seront importées dans votre nœud Hush connecté.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="950"/>
-        <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation type="unfinished"></translation>
+        <source>Les clés ont été importées! Une nouvelle analyse de la blockchain peut prendre plusieurs minutes. Jusque-là, les fonctionnalités peuvent être limitées</source>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="969"/>
@@ -779,12 +779,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1172"/>
         <source>Address Asset Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Addresse Asset Viewer</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1178"/>
         <source>Convert Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse convertie</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1187"/>
@@ -819,7 +819,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1406"/>
         <source>Copy Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier l&apos;adresse</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1472"/>
@@ -840,7 +840,7 @@
         <location filename="../src/sendtab.cpp" line="282"/>
         <location filename="../src/sendtab.cpp" line="334"/>
         <source>File Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier téléchargé</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="325"/>
@@ -850,22 +850,22 @@
     <message>
         <location filename="../src/sendtab.cpp" line="345"/>
         <source>File size too large</source>
-        <translation type="unfinished"></translation>
+        <translation>La taille du fichier est trop grande</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>The file size </source>
-        <translation type="unfinished"></translation>
+        <translation>La taille du fichier </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source> bytes is greater than </source>
-        <translation type="unfinished"></translation>
+        <translation>octets est supérieur à</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>octets</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="361"/>
@@ -968,22 +968,22 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/mobileappconnector.ui" line="49"/>
         <source>Connection String</source>
-        <translation type="unfinished"></translation>
+        <translation>Connection String</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="84"/>
         <source>Allow connections over the internet via SilentDragon wormhole</source>
-        <translation type="unfinished"></translation>
+        <translation>Autoriser les connexions sur Internet via SilentDragon wormhole</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
-        <translation type="unfinished"></translation>
+        <translation>Scannez ce code QR à partir de votre application SilentDragon mobile pour connecter votre téléphone.</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragon Companion App</source>
-        <translation type="unfinished"></translation>
+        <translation>Application SilentDragon mobile</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
@@ -994,7 +994,7 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
         <location filename="../src/mobileappconnector.ui" line="126"/>
         <location filename="../src/mobileappconnector.ui" line="160"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>TextLabel</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="136"/>
@@ -1016,7 +1016,7 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/privkey.ui" line="14"/>
         <source>Private Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Clés privées</translation>
     </message>
 </context>
 <context>
@@ -1109,7 +1109,10 @@ Not starting embedded hushd because --no-embedded was passed</source>
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hushd est configuré pour démarrer en tant que démon, ce qui peut entraîner des problèmes avec SilentDragon
+
+        .Veuillez supprimer la ligne suivante de votre fichier HUSH3.conf et redémarrer SilentDragon
+        démon = 1</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="85"/>
@@ -1120,19 +1123,27 @@ Please try restarting.
 If you previously started hushd with custom arguments, you might need to  reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de démarrer le hushd intégré.
+
+        S&apos;il vous plaît essayez de redémarrer.
+        
+        Si vous avez déjà démarré hushd avec des arguments personnalisés, vous devrez peut-être réinitialiser le fichier HUSH3.conf.
+        
+        Si tout échoue, veuillez exécuter hushd manuellement.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="96"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de se connecter à hushd configuré dans HUSH3.conf.
+
+        Ne démarre pas hushd intégré car --no-embedded a été transmis</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="183"/>
         <source>Could not create HUSH3.conf.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de créer le fichier HUSH3.conf.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="290"/>
@@ -1158,12 +1169,12 @@ Not starting embedded hushd because --no-embedded was passed</source>
     <message>
         <location filename="../src/connection.cpp" line="509"/>
         <source>This may take several hours, grab some popcorn</source>
-        <translation type="unfinished"></translation>
+        <translation>Cela peut prendre plusieurs heures. Prenez du pop-corn</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="769"/>
         <source>There was an error! : </source>
-        <translation type="unfinished"></translation>
+        <translation>Il y avait une erreur! :</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="693"/>
@@ -1235,7 +1246,7 @@ Not starting embedded hushd because --no-embedded was passed</source>
     <message>
         <location filename="../src/rpc.cpp" line="717"/>
         <source>hushd has no peer connections! Network issues?</source>
-        <translation type="unfinished"></translation>
+        <translation>hushd n&apos;a pas de connexion entre pairs! Problèmes de réseau?</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1031"/>
@@ -1344,12 +1355,12 @@ Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu E
     <message>
         <location filename="../src/addressbook.cpp" line="128"/>
         <source>Address or Label Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;adresse ou d&apos;étiquette</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="129"/>
         <source>Address or Label cannot be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;adresse ou l&apos;étiquette ne peut pas être vide</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="134"/>
@@ -1362,18 +1373,18 @@ Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu E
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
-        <source>%1 doesn&apos;t seem to be a valid Zcash address.</source>
-        <translation type="unfinished"></translation>
+        <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
+        <translation>%1 ne semble pas être une adresse Hush valide.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="143"/>
         <source>Label Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;étiquette</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="144"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le label %1 existe déjà. Veuillez supprimer l&apos;étiquette existante.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="156"/>
@@ -1465,7 +1476,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/websockets.cpp" line="652"/>
         <source>Node is still syncing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le nœud est toujours en cours de synchronisation.</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="676"/>
@@ -1551,7 +1562,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/requestdialog.ui" line="209"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte du label</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="219"/>
@@ -1561,12 +1572,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/requestdialog.cpp" line="50"/>
         <source>Error paying HUSH URI</source>
-        <translation type="unfinished">Erreur lors du payement du URI HUSH</translation>
+        <translation>Erreur lors du paiement de l&apos;URI</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="51"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished">Le format URI doit être comme suit: &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
+        <translation>Le format URI doit être comme suit: &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="65"/>
@@ -1779,17 +1790,17 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/validateaddress.ui" line="14"/>
         <source>Validate Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Valider l&apos;adresse</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.ui" line="20"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte du label</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.ui" line="27"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresse:</translation>
     </message>
 </context>
 <context>
@@ -1797,12 +1808,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/validateaddress.cpp" line="6"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriété</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.cpp" line="6"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur</translation>
     </message>
 </context>
 <context>
@@ -1810,12 +1821,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/viewalladdresses.ui" line="14"/>
         <source>All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Toutes les adresses</translation>
     </message>
     <message>
         <location filename="../src/viewalladdresses.ui" line="30"/>
         <source>Export All Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporter toutes les clés</translation>
     </message>
 </context>
 <context>
@@ -1823,12 +1834,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Address</source>
-        <translation type="unfinished">Adresse</translation>
+        <translation>Adresse</translation>
     </message>
     <message>
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Balance (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Solde (%1)</translation>
     </message>
 </context>
 <context>
@@ -1968,12 +1979,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/newrecurring.ui" line="64"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte du label</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="111"/>
         <source>From</source>
-        <translation type="unfinished">De</translation>
+        <translation>De</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="118"/>
