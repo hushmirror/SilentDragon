@@ -301,7 +301,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1052"/>
         <source>Sapling &amp;turnstile</source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>Sapling Fidan turnike</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1055"/>
@@ -472,7 +472,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="834"/>
         <source>Shield balance to Sapling</source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>sapling&apos;e kalkan dengesi</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="839"/>
@@ -532,7 +532,7 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/sendtab.cpp" line="417"/>
         <source>Change from </source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>Den değiştir </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="569"/>
@@ -547,12 +547,12 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/sendtab.cpp" line="601"/>
         <source>Recipient Address </source>
-        <translation type="unfinished">Alıcı Adresi </translation>
+        <translation>Alıcı Adresi </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="601"/>
         <source> is Invalid</source>
-        <translation type="unfinished"> geçersizdir</translation>
+        <translation> geçersizdir</translation>
     </message>
 </context>
 <context>
@@ -660,12 +660,12 @@ Not starting embedded zcashd because --no-embedded was passed</source>
     <message>
         <location filename="../src/connection.cpp" line="233"/>
         <source>MB of </source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>MB </translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="233"/>
         <source>MB at </source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>MB</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="575"/>
@@ -936,7 +936,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/settings.ui" line="235"/>
         <source>Shield change from t-Addresses to your sapling address</source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>T adreslerinden sapling adresinize kalkan değişikliği</translation>
     </message>
 </context>
 <context>
@@ -960,7 +960,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/turnstile.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funds from Sprout z-Addresses (which start with &amp;quot;zc&amp;quot;) need to be moved to the upgraded Sapling z-Addresses (which start with &amp;quot;zs&amp;quot;). The funds cannot be moved directly, but need to be sent through intermediate &amp;quot;transparent&amp;quot; addresses in privacy-preserving way.&lt;/p&gt;&lt;p&gt;This migration can be done automatically for you.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">YOUR_TRANSLATION_HERE</translation>
+        <translation>YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
         <location filename="../src/turnstile.ui" line="106"/>
