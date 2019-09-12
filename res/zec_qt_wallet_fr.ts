@@ -664,7 +664,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="882"/>
-        <source>Error paying pirate URI</source>
+        <source>Error paying Hush URI</source>
         <translation>Erreur lors du paiement de l&apos;URI</translation>
     </message>
     <message>
