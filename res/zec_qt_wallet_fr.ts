@@ -1044,11 +1044,11 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your zcash.conf and restart SilentDragon
+.Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
         <translation type="vanished">vous avez hushd configuré pour démarrer en tant que démon ce qui peut causer des problèmes avec SilentDragon
 
- Veuillez enlever la ligne suivante de votre fichier &quot;zcash.conf&quot; et redémarrer SilentDragon:
+ Veuillez enlever la ligne suivante de votre fichier &quot;HUSH3.conf&quot; et redémarrer SilentDragon:
 daemon=1</translation>
     </message>
     <message>
@@ -1056,19 +1056,19 @@ daemon=1</translation>
 
 Please try restarting.
 
-If you previously started hushd with custom arguments, you might need to reset zcash.conf.
+If you previously started hushd with custom arguments, you might need to reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
         <translation type="vanished">Impossible de démarrer le hushd intégré.
 
 Veuillez essayer de redémarrer.
 
-Si vous avez précédemment démarré hushd avec des arguments, vous devrez peut-être réinitialiser le fichier zcash.conf.
+Si vous avez précédemment démarré hushd avec des arguments, vous devrez peut-être réinitialiser le fichier HUSH3.conf.
 
 Si tout échoue, exécutez hushd manuellement.</translation>
     </message>
     <message>
-        <source>Couldn&apos;t connect to hushd configured in zcash.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
         <translation type="vanished">Le démarrage de hushd n&apos;a pas eu lieu car l&apos;argument --no-embedded a été utilisé au lancement</translation>
