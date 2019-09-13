@@ -346,7 +346,7 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     auto hushdProgram = appPath.absoluteFilePath("hushd");
 #elif defined(Q_OS_WIN64)
     // we use the CLI directly
-    auto hushdProgram = appPath.absoluteFilePath("komodod");
+    auto hushdProgram = appPath.absoluteFilePath("komodod.exe");
 #else
     main->logger->write("Unknown OS!");
     auto hushdProgram = appPath.absoluteFilePath("komodod");
