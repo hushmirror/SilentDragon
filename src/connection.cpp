@@ -582,7 +582,7 @@ QString ConnectionLoader::zcashParamsDir() {
         QDir().mkpath(paramsLocation.absolutePath());
     }
 
-    main->logger->write("Found Zcash params directory at " + paramsLocation.absolutePath());
+    main->logger->write("Found Hush params directory at " + paramsLocation.absolutePath());
     return paramsLocation.absolutePath();
 }
 

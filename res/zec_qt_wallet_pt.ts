@@ -6,12 +6,12 @@
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
         <source>Label</source>
-        <translation type="unfinished">Etiqueta</translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
         <source>Address</source>
-        <translation type="unfinished">Endereço</translation>
+        <translation>Endereço</translation>
     </message>
 </context>
 <context>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../src/connection.ui" line="58"/>
         <source>The Dragon Awakens...</source>
-        <translation type="unfinished"></translation>
+        <translation>O Dragão Desperta...</translation>
     </message>
     <message>
         <source>Starting Up</source>
@@ -1015,10 +1015,10 @@ não se parece com um z-Address</translation>
     <message>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your zcash.conf and restart SilentDragon
+.Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
         <translation type="vanished">Você tem hushd configurado como daemon, o que pode causar problemas com a SilentDragon
- Por favor, remova a seguinte linha do seu zcash.conf e reinicie a SilentDragon:
+ Por favor, remova a seguinte linha do seu HUSH3.conf e reinicie a SilentDragon:
 daemon=1</translation>
     </message>
     <message>
@@ -1026,20 +1026,20 @@ daemon=1</translation>
 
 Please try restarting.
 
-If you previously started hushd with custom arguments, you might need to reset zcash.conf.
+If you previously started hushd with custom arguments, you might need to reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
         <translation type="vanished">Não foi possível iniciar o hushd acoplado.
 Por favor, tenta reiniciar.
-Se você iniciou hushd anteriormente com parâmetros customizados você pode precisar resetar seu zcash.conf.
+Se você iniciou hushd anteriormente com parâmetros customizados você pode precisar resetar seu HUSH3.conf.
 
 Se ainda assim não der certo, por favor rode hushd manualmente.</translation>
     </message>
     <message>
-        <source>Couldn&apos;t connect to hushd configured in zcash.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
-        <translation type="vanished">Não foi possível conectar ao hushd configurado em zcash.conf.
+        <translation type="vanished">Não foi possível conectar ao hushd configurado em HUSH3.conf.
 
 Não iniciando hushd acoplado porque nenhum foi passado como parâmetro</translation>
     </message>
@@ -1328,7 +1328,7 @@ Por favor, coloque o host/porta e usuário/senha no menu Editar&gt;Preferências
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
-        <source>%1 doesn&apos;t seem to be a valid Zcash address.</source>
+        <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
