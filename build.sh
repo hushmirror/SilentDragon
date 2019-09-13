@@ -15,4 +15,11 @@ fi
 
 echo "Compiling with $JOBS threads..."
 
-qmake silentdragon.pro CONFIG+=debug; make -j$JOBS
+if [ "$1" == "clean" ]; then
+   make clean
+elif [ "$1" == "cleanbuild" ]; then
+   make clean
+   qmake silentdragon.pro CONFIG+=debug; make -j$JOBS
+else
+   qmake silentdragon.pro CONFIG+=debug; make -j$JOBS
+fi
