@@ -354,8 +354,10 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     
     if (!QFile(hushdProgram).exists()) {
         qDebug() << "Can't find hushd at " << hushdProgram;
-        main->logger->write("Can't find hushd at " + hushdProgram); 
+        main->logger->write("Can't find hushd at " + hushdProgram);
         return false;
+    } else {
+        main->logger->write("Found hushd at " + hushdProgram);
     }
 
     ezcashd = std::shared_ptr<QProcess>(new QProcess(main));
