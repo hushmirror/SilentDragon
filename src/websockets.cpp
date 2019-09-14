@@ -118,15 +118,22 @@ void WormholeClient::connect() {
 }
 
 void WormholeClient::retryConnect() {    
-    QTimer::singleShot(5 * 1000 * pow(2, retryCount), [=]() {
-        if (retryCount < 10) {
-            this->retryCount++;
-            qDebug() << "Retrying websocket connection, retrycount=" << this->retryCount;
-            connect();
-        } else {
-            qDebug() << "Retry count of " << retryCount << " exceeded, will not attempt retry any more";
-        }
-    });
+	int max_retries = 10;
+	qDebug() << "Websocket retryConnect, retryCount=" << retryCount;
+
+	if (retryCount>=0 && retryCount<=max_retries) {
+        QTimer::singleShot(5 * 1000 * pow(2, retryCount), [=]() {
+            if (retryCount < max_retries) {
+                this->retryCount++;
+                qDebug() << "Retrying websocket connection, retrycount=" << this->retryCount;
+                connect();
+            } else {
+                qDebug() << "Retry count of " << retryCount << " exceeded, will not attempt retry any more";
+            }
+        });
+    } else {
+        qDebug() << "Invalid retryCount=" << retryCount << " detected!";
+    }
 }
 
 // Called when the websocket is closed. If this was closed without our explicitly closing it, 
@@ -157,11 +164,9 @@ void WormholeClient::onConnected()
     timer = new QTimer(parent);
     QObject::connect(timer, &QTimer::timeout, [=]() {
         if (!shuttingDown && m_webSocket->isValid()) {
-            auto payload = QJsonDocument(QJsonObject {
-                {"ping", "ping"}
-            }).toJson();
-	    qDebug() << "Sending Ping";
-            m_webSocket->sendTextMessage(payload);
+            auto payload = QJsonDocument(QJsonObject { {"ping", "ping"} }).toJson();
+            qint64 bytes = m_webSocket->sendTextMessage(payload);
+	        qDebug() << "Sent ping, " << bytes << " bytes";
         }
     });
     qDebug() << "Starting timer";
@@ -647,6 +652,7 @@ void AppDataServer::processDecryptedMessage(QString message, MainWindow* mainWin
 
 // "sendTx" command. This method will actually send money, so be careful with everything
 void AppDataServer::processSendTx(QJsonObject sendTx, MainWindow* mainwindow, std::shared_ptr<ClientWebSocket> pClient) {
+    qDebug() << "processSendTx";
     auto error = [=](QString reason) {
         auto r = QJsonDocument(QJsonObject{
            {"errorCode", -1},
@@ -682,7 +688,7 @@ void AppDataServer::processSendTx(QJsonObject sendTx, MainWindow* mainwindow, st
     }
 
     if (bals.isEmpty()) {
-        error(QObject::tr("No sapling or transparent addresses with enough balance to spend."));
+        error(QObject::tr("No addresses with enough balance to spend! Try sweeping funds into one address"));
         return;
     }
 
@@ -782,6 +788,7 @@ void AppDataServer::processGetInfo(QJsonObject jobj, MainWindow* mainWindow, std
 void AppDataServer::processGetTransactions(MainWindow* mainWindow, std::shared_ptr<ClientWebSocket> pClient) {
     QJsonArray txns;
     auto model = mainWindow->getRPC()->getTransactionsModel();
+    qDebug() << "processGetTransactions";
 
     // Manually add pending ops, so that computing transactions will also show up
     auto wtxns = mainWindow->getRPC()->getWatchingTxns();
