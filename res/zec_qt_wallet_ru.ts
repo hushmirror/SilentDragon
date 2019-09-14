@@ -5,7 +5,6 @@
     <name>AddressBookModel</name>
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
-        <location filename="../src/mainwindow.cpp" line="1719"/>
         <source>Label</source>
         <translation>Метка</translation>
     </message>
@@ -44,29 +43,24 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/mainwindow.cpp" line="591"/>
         <source>Settings are being read from </source>
-        <translation>Настройки читаются из </translation>
+        <translation type="vanished">Настройки читаются из </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1642"/>
         <source>Add Label</source>
-        <translation>Добавить метку</translation>
+        <translation type="vanished">Добавить метку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1675"/>
         <source>Removed Label </source>
-        <translation>Удалена метка </translation>
+        <translation type="vanished">Удалена метка </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1679"/>
         <source>Updated Label </source>
-        <translation>Обновлена метка </translation>
+        <translation type="vanished">Обновлена метка </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1683"/>
         <source>Added Label </source>
-        <translation>Добавлена метка </translation>
+        <translation type="vanished">Добавлена метка </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="14"/>
@@ -99,783 +93,949 @@
         <translation>Всего</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="189"/>
+        <location filename="../src/mainwindow.ui" line="217"/>
         <source>Some transactions are not yet confirmed</source>
         <translation>Некоторые транзакции еще не подтверждены</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="207"/>
+        <location filename="../src/mainwindow.ui" line="235"/>
         <source>Address Balances</source>
         <translation>Балансы по адресам</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="256"/>
-        <location filename="../src/mainwindow.ui" line="648"/>
+        <location filename="../src/mainwindow.ui" line="284"/>
+        <location filename="../src/mainwindow.ui" line="689"/>
         <source>Send</source>
         <translation>Отправить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="265"/>
+        <location filename="../src/mainwindow.ui" line="293"/>
         <source>From</source>
         <translation>Откуда</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="283"/>
+        <location filename="../src/mainwindow.ui" line="311"/>
         <source>Address Balance</source>
         <translation>Баланс адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="331"/>
+        <location filename="../src/mainwindow.ui" line="359"/>
         <source>Send To</source>
         <translation>Куда</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="370"/>
+        <location filename="../src/mainwindow.ui" line="398"/>
         <source>Recipient</source>
         <translation>Получатель</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="378"/>
-        <location filename="../src/mainwindow.ui" line="385"/>
-        <location filename="../src/mainwindow.ui" line="833"/>
-        <location filename="../src/sendtab.cpp" line="248"/>
-        <location filename="../src/sendtab.cpp" line="253"/>
+        <location filename="../src/mainwindow.ui" line="406"/>
+        <location filename="../src/mainwindow.ui" line="413"/>
+        <location filename="../src/mainwindow.ui" line="874"/>
+        <location filename="../src/sendtab.cpp" line="218"/>
+        <location filename="../src/sendtab.cpp" line="223"/>
         <source>Address</source>
         <translation>Адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="392"/>
-        <location filename="../src/sendtab.cpp" line="263"/>
+        <location filename="../src/mainwindow.ui" line="420"/>
+        <location filename="../src/sendtab.cpp" line="233"/>
         <source>Address Book</source>
         <translation>Адресная книга</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="403"/>
-        <location filename="../src/mainwindow.ui" line="419"/>
-        <location filename="../src/sendtab.cpp" line="276"/>
-        <location filename="../src/sendtab.cpp" line="280"/>
+        <location filename="../src/mainwindow.ui" line="431"/>
+        <location filename="../src/mainwindow.ui" line="447"/>
+        <location filename="../src/sendtab.cpp" line="246"/>
+        <location filename="../src/sendtab.cpp" line="250"/>
         <source>Amount</source>
         <translation>Количество</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="433"/>
+        <location filename="../src/mainwindow.ui" line="461"/>
         <source>Max Available</source>
         <translation>Максимальное количество</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="459"/>
-        <location filename="../src/mainwindow.cpp" line="1414"/>
-        <location filename="../src/mainwindow.cpp" line="1462"/>
-        <location filename="../src/sendtab.cpp" line="302"/>
+        <location filename="../src/mainwindow.ui" line="487"/>
+        <source>Upload File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="500"/>
+        <location filename="../src/mainwindow.cpp" line="1219"/>
+        <location filename="../src/mainwindow.cpp" line="1273"/>
+        <location filename="../src/sendtab.cpp" line="272"/>
         <source>Memo</source>
         <translation>Метка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="507"/>
+        <location filename="../src/mainwindow.ui" line="548"/>
         <source>Add Recipient</source>
         <translation>Добавить получателя</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="551"/>
+        <location filename="../src/mainwindow.ui" line="592"/>
         <source>Recurring payment</source>
         <translation>Периодический платеж</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="558"/>
+        <location filename="../src/mainwindow.ui" line="599"/>
         <source>Every month, starting 12-May-2012, for 6 payments</source>
         <translation>Каждый месяц, начиная с 12-Май-2012, 6 платежей</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="565"/>
+        <location filename="../src/mainwindow.ui" line="606"/>
         <source>Edit Schedule</source>
         <translation>Изменить расписание</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="595"/>
-        <location filename="../src/sendtab.cpp" line="677"/>
+        <location filename="../src/mainwindow.ui" line="636"/>
+        <location filename="../src/sendtab.cpp" line="642"/>
         <source>Miner Fee</source>
         <translation>Комиссия майнерам</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="608"/>
+        <location filename="../src/mainwindow.ui" line="649"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="664"/>
+        <location filename="../src/mainwindow.ui" line="705"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="674"/>
+        <location filename="../src/mainwindow.ui" line="715"/>
         <source>Receive</source>
         <translation>Получить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="682"/>
+        <location filename="../src/mainwindow.ui" line="723"/>
         <source>Address Type</source>
         <translation>Тип адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="908"/>
+        <location filename="../src/mainwindow.ui" line="941"/>
         <source>hushd</source>
         <translation>hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2095"/>
         <source>&amp;SafeNodes</source>
-        <translation>&amp;SafeNodes</translation>
+        <translation type="vanished">&amp;SafeNodes</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2128"/>
         <source>Pay safecoin &amp;URI...</source>
-        <translation>Оплатить safecoin &amp;URI...</translation>
+        <translation type="vanished">Оплатить safecoin &amp;URI...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1237"/>
         <source>Request safecoin...</source>
-        <translation>Запрос safecoin...</translation>
+        <translation type="vanished">Запрос safecoin...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1247"/>
+        <location filename="../src/mainwindow.ui" line="1507"/>
         <source>Validate Address</source>
         <translation>Проверить адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="696"/>
+        <location filename="../src/mainwindow.ui" line="737"/>
         <source>Shielded Address (Private, Anonymous)</source>
         <translation>Экранированный адрес (приватный, анонимный)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="709"/>
+        <location filename="../src/mainwindow.ui" line="750"/>
         <source>Transparent Address (Public, Metadata-Leaking)</source>
         <translation>Прозрачный адрес (общедоступный, утечка метаданных)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="733"/>
+        <location filename="../src/mainwindow.ui" line="774"/>
         <source>New Address</source>
         <translation>Новый адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="758"/>
+        <location filename="../src/mainwindow.ui" line="799"/>
         <source>Label</source>
         <translation>Метка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="765"/>
-        <location filename="../src/mainwindow.cpp" line="1672"/>
+        <location filename="../src/mainwindow.ui" line="806"/>
         <source>Update Label</source>
         <translation>Обновить метку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="779"/>
+        <location filename="../src/mainwindow.ui" line="820"/>
         <source>Address balance</source>
         <translation>Баланс адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="789"/>
+        <location filename="../src/mainwindow.ui" line="830"/>
         <source>Optional</source>
         <translation>Необязательно</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="811"/>
-        <location filename="../src/mainwindow.cpp" line="1608"/>
+        <location filename="../src/mainwindow.ui" line="852"/>
+        <location filename="../src/mainwindow.cpp" line="1412"/>
         <source>Export Private Key</source>
         <translation>Экспорт приватного ключа</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="170"/>
-        <location filename="../src/mainwindow.ui" line="848"/>
         <source>Your node is still syncing, balances may not be updated</source>
-        <translation>Ваш узел все еще синхронизируется, баланс не может быть обновлен</translation>
+        <translation type="vanished">Ваш узел все еще синхронизируется, баланс не может быть обновлен</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="740"/>
+        <location filename="../src/mainwindow.ui" line="781"/>
         <source>View All Addresses</source>
         <translation>Показать все адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="891"/>
+        <location filename="../src/mainwindow.ui" line="922"/>
         <source>Transactions</source>
         <translation>Транзакции</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="938"/>
+        <location filename="../src/mainwindow.ui" line="971"/>
         <source>You are currently not mining</source>
         <translation>Майнинг отключен</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="958"/>
-        <location filename="../src/mainwindow.ui" line="972"/>
-        <location filename="../src/mainwindow.ui" line="993"/>
+        <location filename="../src/mainwindow.ui" line="991"/>
+        <location filename="../src/mainwindow.ui" line="1013"/>
+        <location filename="../src/mainwindow.ui" line="1035"/>
+        <location filename="../src/mainwindow.ui" line="1057"/>
+        <location filename="../src/mainwindow.ui" line="1079"/>
+        <location filename="../src/mainwindow.ui" line="1102"/>
+        <location filename="../src/mainwindow.ui" line="1125"/>
+        <location filename="../src/mainwindow.ui" line="1147"/>
+        <location filename="../src/mainwindow.ui" line="1170"/>
+        <location filename="../src/mainwindow.ui" line="1192"/>
+        <location filename="../src/mainwindow.ui" line="1214"/>
+        <location filename="../src/mainwindow.ui" line="1236"/>
+        <location filename="../src/mainwindow.ui" line="1258"/>
+        <location filename="../src/mainwindow.ui" line="1273"/>
+        <location filename="../src/mainwindow.ui" line="1294"/>
+        <location filename="../src/mainwindow.cpp" line="1037"/>
         <source>Loading...</source>
         <translation>Загрузка...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="965"/>
+        <location filename="../src/mainwindow.ui" line="998"/>
         <source>Block height</source>
         <translation>Высота блока</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="979"/>
+        <location filename="../src/mainwindow.ui" line="1280"/>
         <source>Network solution rate</source>
         <translation>Скорость сети</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="986"/>
+        <location filename="../src/mainwindow.ui" line="1287"/>
         <source>Connections</source>
         <translation>Подключений</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1020"/>
-        <location filename="../src/mainwindow.ui" line="1027"/>
-        <location filename="../src/mainwindow.ui" line="1034"/>
+        <location filename="../src/mainwindow.ui" line="1042"/>
+        <location filename="../src/mainwindow.ui" line="1064"/>
+        <location filename="../src/mainwindow.ui" line="1086"/>
+        <location filename="../src/mainwindow.ui" line="1109"/>
+        <location filename="../src/mainwindow.ui" line="1132"/>
+        <location filename="../src/mainwindow.ui" line="1154"/>
+        <location filename="../src/mainwindow.ui" line="1177"/>
+        <location filename="../src/mainwindow.ui" line="1199"/>
+        <location filename="../src/mainwindow.ui" line="1221"/>
+        <location filename="../src/mainwindow.ui" line="1243"/>
+        <location filename="../src/mainwindow.ui" line="1265"/>
+        <location filename="../src/mainwindow.ui" line="1321"/>
+        <location filename="../src/mainwindow.ui" line="1328"/>
+        <location filename="../src/mainwindow.ui" line="1335"/>
         <source>|</source>
         <translation>|</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2009"/>
+        <location filename="../src/mainwindow.ui" line="1006"/>
+        <source>Notarized Hash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1028"/>
+        <source>Notarized txid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1050"/>
+        <source>Notarized Lag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1072"/>
+        <source>KMD Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1095"/>
+        <source>Protocol Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1118"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1140"/>
+        <source>P2P Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1163"/>
+        <source>RPC Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1185"/>
+        <source>Client Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1207"/>
+        <source>Next Halving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1229"/>
+        <source>Local Services</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1251"/>
+        <source>Longest Chain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1361"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2024"/>
+        <location filename="../src/mainwindow.ui" line="1376"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2035"/>
+        <location filename="../src/mainwindow.ui" line="1386"/>
         <source>&amp;Apps</source>
         <translation>&amp;Дополнения</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2043"/>
+        <location filename="../src/mainwindow.ui" line="1394"/>
         <source>&amp;Edit</source>
         <translation>&amp;Редактировать</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2057"/>
+        <location filename="../src/mainwindow.ui" line="1407"/>
         <source>E&amp;xit</source>
         <translation>&amp;Выход</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2062"/>
+        <location filename="../src/mainwindow.ui" line="1412"/>
         <source>&amp;About</source>
         <translation>&amp;О кошельке</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2067"/>
+        <location filename="../src/mainwindow.ui" line="1417"/>
         <source>&amp;Settings</source>
         <translation>&amp;Настройки</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2070"/>
+        <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2075"/>
+        <location filename="../src/mainwindow.ui" line="1425"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Пожертвование для Duke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2080"/>
+        <location filename="../src/mainwindow.ui" line="1430"/>
         <source>&amp;Hush Discord</source>
         <translation>&amp;Hush Discord</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2085"/>
+        <location filename="../src/mainwindow.ui" line="1435"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Сайт Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2090"/>
+        <location filename="../src/mainwindow.ui" line="1440"/>
         <source>Check github.com for &amp;updates</source>
         <translation>&amp;Проверить github.com на обновления</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2100"/>
+        <location filename="../src/mainwindow.ui" line="1445"/>
+        <source>Sapling &amp;turnstile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1448"/>
+        <source>Ctrl+A, Ctrl+T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1453"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Импорт приватного ключа</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2105"/>
+        <location filename="../src/mainwindow.ui" line="1458"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Экспорт всех приватных ключей</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2110"/>
+        <location filename="../src/mainwindow.ui" line="1463"/>
+        <source>&amp;z-board.net</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1466"/>
+        <source>Ctrl+A, Ctrl+Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1471"/>
         <source>Address &amp;book</source>
         <translation>&amp;Адресная книга</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2113"/>
+        <location filename="../src/mainwindow.ui" line="1474"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2118"/>
+        <location filename="../src/mainwindow.ui" line="1479"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Сохранить wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="2123"/>
-        <location filename="../src/mainwindow.cpp" line="1188"/>
+        <location filename="../src/mainwindow.ui" line="1484"/>
+        <location filename="../src/mainwindow.cpp" line="975"/>
         <source>Export transactions</source>
         <translation>Экспорт транзакций</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1232"/>
+        <location filename="../src/mainwindow.ui" line="1489"/>
+        <source>Pay HUSH &amp;URI...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1494"/>
+        <source>Connect mobile &amp;app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1497"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1502"/>
+        <source>Request HUSH...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&amp;Recurring Payments</source>
-        <translation>&amp;Регулярные платежи</translation>
+        <translation type="vanished">&amp;Регулярные платежи</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1242"/>
         <source>File a bug...</source>
-        <translation>Сообщить об ошибке...</translation>
+        <translation type="vanished">Сообщить об ошибке...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="646"/>
+        <location filename="../src/mainwindow.cpp" line="563"/>
         <source>Enable Tor</source>
         <translation>Включить Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="647"/>
+        <location filename="../src/mainwindow.cpp" line="564"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Соединение через Tor было включено. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="656"/>
+        <location filename="../src/mainwindow.cpp" line="573"/>
         <source>Disable Tor</source>
         <translation>Отключить Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="657"/>
+        <location filename="../src/mainwindow.cpp" line="574"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Соединение через Tor было отключено. Чтобы полностью отключиться от Tor, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="915"/>
+        <location filename="../src/mainwindow.cpp" line="642"/>
+        <source>Some feedback about SilentDragon or Hush...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="644"/>
+        <source>Send Duke some private and shielded feedback about </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="723"/>
         <source>You are on testnet, your post won&apos;t actually appear on z-board.net</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="971"/>
+        <location filename="../src/mainwindow.cpp" line="779"/>
         <source>You need a sapling address with available balance to post</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="774"/>
+        <location filename="../src/mainwindow.cpp" line="793"/>
+        <location filename="../src/sendtab.cpp" line="714"/>
         <source>Computing Tx: </source>
         <translation>Вычисление Tx: </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1144"/>
         <source>The keys were imported. It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation>Ключи были импортированы. Повторное сканирование блокчейна может занять несколько минут. До тех пор функциональность может быть ограничена</translation>
+        <translation type="vanished">Ключи были импортированы. Повторное сканирование блокчейна может занять несколько минут. До тех пор функциональность может быть ограничена</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="996"/>
+        <location filename="../src/mainwindow.cpp" line="817"/>
         <source>Private key import rescan finished</source>
         <translation>Повторное сканирование приватного ключа завершено</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="789"/>
+        <location filename="../src/mainwindow.cpp" line="603"/>
         <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation>SilentDragon необходимо перезапустить для повторного сканирования/переиндексации. Перезапустите SilentDragon, чтобы продолжить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="791"/>
+        <location filename="../src/mainwindow.cpp" line="605"/>
         <source>Restart SilentDragon</source>
         <translation>Перезапуск SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="303"/>
         <source>Not yet ready</source>
-        <translation>Еще не готов</translation>
+        <translation type="vanished">Еще не готов</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1112"/>
         <source>Please paste your private keys (z-Addr or t-Addr) here, one per line</source>
-        <translation>Пожалуйста, вставьте здесь свои приватные ключи (z-Addr или t-Addr), по одному в строке</translation>
+        <translation type="vanished">Пожалуйста, вставьте здесь свои приватные ключи (z-Addr или t-Addr), по одному в строке</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1113"/>
         <source>The keys will be imported into your connected hushd node</source>
-        <translation>Ключи будут импортированы в ваш подключенный узел hushd</translation>
+        <translation type="vanished">Ключи будут импортированы в ваш подключенный узел hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1163"/>
+        <location filename="../src/mainwindow.cpp" line="882"/>
+        <source>Paste HUSH URI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="894"/>
+        <source>Error paying Hush URI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="895"/>
+        <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="930"/>
+        <source>Please paste your private keys here, one per line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="931"/>
+        <source>The keys will be imported into your connected Hush node</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="962"/>
+        <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="981"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1164"/>
+        <location filename="../src/mainwindow.cpp" line="982"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>Ошибка экспорта транзакций, файл не был сохранен</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1186"/>
+        <location filename="../src/mainwindow.cpp" line="1004"/>
         <source>No wallet.dat</source>
         <translation>Нет wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1186"/>
+        <location filename="../src/mainwindow.cpp" line="1004"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Не удалось найти wallet.dat на этом компьютере</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1187"/>
+        <location filename="../src/mainwindow.cpp" line="1005"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Вы должны сделать резервную копию с машины, на которой работает hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1191"/>
+        <location filename="../src/mainwindow.cpp" line="1009"/>
         <source>Backup wallet.dat</source>
         <translation>Сохранить wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1196"/>
+        <location filename="../src/mainwindow.cpp" line="1014"/>
         <source>Couldn&apos;t backup</source>
         <translation>Не удалось сохранить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1196"/>
+        <location filename="../src/mainwindow.cpp" line="1014"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>Не удалось сохранить файл wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1197"/>
+        <location filename="../src/mainwindow.cpp" line="1015"/>
         <source>You need to back it up manually.</source>
         <translation>Вам нужно сделать резервную копию вручную.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1224"/>
+        <location filename="../src/mainwindow.cpp" line="1042"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Это все приватные ключи для всех адресов в вашем кошельке</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1226"/>
+        <location filename="../src/mainwindow.cpp" line="1044"/>
         <source>Private key for </source>
         <translation>Приватный ключ для </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1234"/>
+        <location filename="../src/mainwindow.cpp" line="1052"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1238"/>
+        <location filename="../src/mainwindow.cpp" line="1056"/>
         <source>Unable to open file</source>
         <translation>Невозможно открыть файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1335"/>
-        <location filename="../src/mainwindow.cpp" line="1415"/>
+        <location filename="../src/mainwindow.cpp" line="1151"/>
+        <location filename="../src/mainwindow.cpp" line="1247"/>
         <source>Copy address</source>
         <translation>Скопировать адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1338"/>
-        <location filename="../src/mainwindow.cpp" line="1411"/>
-        <location filename="../src/mainwindow.cpp" line="1417"/>
+        <location filename="../src/mainwindow.cpp" line="1154"/>
+        <location filename="../src/mainwindow.cpp" line="1243"/>
+        <location filename="../src/mainwindow.cpp" line="1249"/>
         <source>Copied to clipboard</source>
         <translation>Скопировано в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1341"/>
+        <location filename="../src/mainwindow.cpp" line="1157"/>
         <source>Get private key</source>
         <translation>Получить приватный ключ</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1352"/>
+        <location filename="../src/mainwindow.cpp" line="1168"/>
         <source>Shield balance to Sapling</source>
         <translation>Shield balance to Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1357"/>
-        <location filename="../src/mainwindow.cpp" line="1421"/>
+        <location filename="../src/mainwindow.cpp" line="1173"/>
+        <location filename="../src/mainwindow.cpp" line="1253"/>
         <source>View on block explorer</source>
         <translation>Посмотреть в проводнике блоков</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1363"/>
+        <location filename="../src/mainwindow.cpp" line="1184"/>
+        <source>Address Asset Viewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1190"/>
+        <source>Convert Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1199"/>
         <source>Migrate to Sapling</source>
         <translation>Migrate to Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="456"/>
-        <location filename="../src/mainwindow.cpp" line="1409"/>
+        <location filename="../src/mainwindow.cpp" line="1241"/>
         <source>Copy txid</source>
         <translation>Скопировать txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="303"/>
         <source>hushd is not yet ready. Please wait for the UI to load</source>
-        <translation>hushd еще не готов. Пожалуйста, подождите, пока загрузится интерфейс</translation>
+        <translation type="vanished">hushd еще не готов. Пожалуйста, подождите, пока загрузится интерфейс</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="459"/>
         <source>View tx on block explorer</source>
-        <translation>Посмотреть  tx на проводнике блоков</translation>
+        <translation type="vanished">Посмотреть  tx на проводнике блоков</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="464"/>
         <source>Refresh</source>
-        <translation>Обновить</translation>
+        <translation type="vanished">Обновить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="526"/>
+        <location filename="../src/mainwindow.cpp" line="497"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Конфигурация Tor доступна только при работе со встроенным hushd.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="618"/>
+        <location filename="../src/mainwindow.cpp" line="535"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Вы используете внешний hushd. Пожалуйста, перезапустите hushd с -rescan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="621"/>
+        <location filename="../src/mainwindow.cpp" line="538"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Вы используете внешний hushd. Пожалуйста, перезапустите hushd с  -reindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="701"/>
         <source>Enable Addressindex</source>
-        <translation>Включить Addressindex</translation>
+        <translation type="vanished">Включить Addressindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="702"/>
         <source>Addressindex enabled. To use this feature, you need to restart SilentDragon.</source>
-        <translation>Addressindex включен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
+        <translation type="vanished">Addressindex включен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="712"/>
         <source>Disable Addressindex</source>
-        <translation>Отключить Addressindex</translation>
+        <translation type="vanished">Отключить Addressindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="713"/>
         <source>Addressindex disabled. To fully disabled Addressindex, you need to restart SilentDragon.</source>
-        <translation>Addressindex отключен. Чтобы полностью отключить Addressindex, вам нужно перезапустить Hush Wallet.</translation>
+        <translation type="vanished">Addressindex отключен. Чтобы полностью отключить Addressindex, вам нужно перезапустить Hush Wallet.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="725"/>
         <source>Enable Timestampindex</source>
-        <translation>Включить Timestampindex</translation>
+        <translation type="vanished">Включить Timestampindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="726"/>
         <source>Timestampindex enabled. To use this feature, you need to restart SilentDragon.</source>
-        <translation>Timestampindex включен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
+        <translation type="vanished">Timestampindex включен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="735"/>
         <source>Disable Timestampindex</source>
-        <translation>Отключить  Timestampindex</translation>
+        <translation type="vanished">Отключить  Timestampindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="736"/>
         <source>Timestampindex disabled. To fully disabled Timestampindex, you need to restart SilentDragon.</source>
-        <translation>Timestampindex отключен. Чтобы полностью отключить индекс отметки времени, вам необходимо перезапустить Hush Wallet.</translation>
+        <translation type="vanished">Timestampindex отключен. Чтобы полностью отключить индекс отметки времени, вам необходимо перезапустить Hush Wallet.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="747"/>
         <source>Enable Spentindex</source>
-        <translation>Включить Spentindex</translation>
+        <translation type="vanished">Включить Spentindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="748"/>
         <source>Spentindex enabled. To use this feature, you need to restart SilentDragon.</source>
-        <translation>Spentindex включен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
+        <translation type="vanished">Spentindex включен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="757"/>
         <source>Disable Spentindex</source>
-        <translation>Отключить  Spentindex</translation>
+        <translation type="vanished">Отключить  Spentindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="758"/>
         <source>Spentindex disabled. To fully disabled Spentindex, you need to restart SilentDragon.</source>
-        <translation>Spentindex отключен. Чтобы полностью отключить Spentindex, вам нужно перезапустить Hush Wallet.</translation>
+        <translation type="vanished">Spentindex отключен. Чтобы полностью отключить Spentindex, вам нужно перезапустить Hush Wallet.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="674"/>
         <source>SafeNode Configured</source>
-        <translation>Конфигурация SafeNode</translation>
+        <translation type="vanished">Конфигурация SafeNode</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="675"/>
         <source>SafeNode Configured. To use this feature, you need to restart SilentDragon.</source>
-        <translation>SafeNode настроен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
+        <translation type="vanished">SafeNode настроен. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="688"/>
         <source>Disable SafeNode Configuration</source>
-        <translation>Отключить конфигурацию  SafeNode</translation>
+        <translation type="vanished">Отключить конфигурацию  SafeNode</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="689"/>
         <source>Configuration SafeNode disabled. To fully disabled SafeNode Configuration, you need to restart SilentDragon.</source>
-        <translation>Конфигурация SafeNode отключена. Чтобы полностью отключить настройку SafeNod, вам необходимо перезапустить Hush Wallet.</translation>
+        <translation type="vanished">Конфигурация SafeNode отключена. Чтобы полностью отключить настройку SafeNod, вам необходимо перезапустить Hush Wallet.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="834"/>
         <source>Some feedback about SilentDragon or Hush...!</source>
-        <translation>Некоторая благодарность за SilentDragon или Hush ...!</translation>
+        <translation type="vanished">Некоторая благодарность за SilentDragon или Hush ...!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="836"/>
         <source>Send OleksandrBlack feedback about </source>
-        <translation>Отправить для  OleksandrBlack благодарность за </translation>
+        <translation type="vanished">Отправить для  OleksandrBlack благодарность за </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="836"/>
+        <location filename="../src/mainwindow.cpp" line="644"/>
         <source> or SilentDragon</source>
         <translation> или  SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="852"/>
+        <location filename="../src/mainwindow.cpp" line="660"/>
         <source>Enter Address to validate</source>
         <translation>Введите адрес для проверки</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="853"/>
+        <location filename="../src/mainwindow.cpp" line="661"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Прозрачный или экранированный адрес:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1063"/>
         <source>Paste Hush URI</source>
-        <translation>Вставить Hush URI</translation>
+        <translation type="vanished">Вставить Hush URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1075"/>
         <source>Error paying safecoin URI</source>
-        <translation>Ошибка при оплате safecoin URI</translation>
+        <translation type="vanished">Ошибка при оплате safecoin URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1076"/>
         <source>URI should be of the form &apos;safecoin:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation>URI должен иметь вид &apos;safecoin:&lt;addr&gt;?amt=x&amp;memo=y</translation>
+        <translation type="vanished">URI должен иметь вид &apos;safecoin:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1219"/>
         <source>This might take several minutes. Loading...</source>
-        <translation>Это может занять несколько минут. Загрузка...</translation>
+        <translation type="vanished">Это может занять несколько минут. Загрузка...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1427"/>
+        <location filename="../src/mainwindow.cpp" line="1265"/>
         <source>View Payment Request</source>
         <translation>Посмотреть запрос на оплату</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1434"/>
+        <location filename="../src/mainwindow.cpp" line="1272"/>
         <source>View Memo</source>
         <translation>Посмотреть метку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1448"/>
+        <location filename="../src/mainwindow.cpp" line="1286"/>
         <source>Reply to </source>
         <translation>Ответить на </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1537"/>
+        <location filename="../src/mainwindow.cpp" line="1369"/>
         <source>Created new t-Addr</source>
         <translation>Создать новый  t-Addr (R)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1587"/>
+        <location filename="../src/mainwindow.cpp" line="1418"/>
         <source>Copy Address</source>
         <translation>Копировать адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1653"/>
+        <location filename="../src/mainwindow.cpp" line="1484"/>
         <source>Address has been previously used</source>
         <translation>Адрес был ранее использован</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1655"/>
+        <location filename="../src/mainwindow.cpp" line="1486"/>
         <source>Address is unused</source>
         <translation>Адрес не используется</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="128"/>
         <source>Cannot support multiple addresses</source>
-        <translation>Нет поддержки несскольких адресатов</translation>
+        <translation type="vanished">Нет поддержки несскольких адресатов</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="129"/>
         <source>Recurring payments doesn&apos;t currently support multiple addresses</source>
-        <translation>Регулярные платежи в настоящее время не поддерживают несскольких адресатов</translation>
+        <translation type="vanished">Регулярные платежи в настоящее время не поддерживают несскольких адресатов</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="239"/>
+        <location filename="../src/sendtab.cpp" line="209"/>
         <source>Recipient </source>
         <translation>Получатель </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="360"/>
+        <location filename="../src/sendtab.cpp" line="282"/>
+        <location filename="../src/sendtab.cpp" line="334"/>
+        <source>File Upload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="325"/>
         <source>Only z-addresses can have memos</source>
         <translation>Только z-адреса могут иметь заметки</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="368"/>
+        <location filename="../src/sendtab.cpp" line="345"/>
+        <source>File size too large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="346"/>
+        <source>The file size </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="346"/>
+        <source> bytes is greater than </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="346"/>
+        <source>bytes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="361"/>
         <source>Memos can only be used with z-addresses</source>
         <translation>Заметки могут использоваться только с z-адресами</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="369"/>
+        <location filename="../src/sendtab.cpp" line="362"/>
         <source>The memo field can only be used with a z-address.
 </source>
         <translation>Поле заметки можно использовать только с z-адресом.
 </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="369"/>
+        <location filename="../src/sendtab.cpp" line="362"/>
         <source>
 doesn&apos;t look like a z-address</source>
         <translation>
 не похоже на z-адрес</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="552"/>
+        <location filename="../src/sendtab.cpp" line="536"/>
         <source>Change from </source>
         <translation>Изменить с </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="726"/>
+        <location filename="../src/sendtab.cpp" line="677"/>
         <source>Current balance      : </source>
         <translation>Текущий баланс      : </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="728"/>
+        <location filename="../src/sendtab.cpp" line="679"/>
         <source>Balance after this Tx: </source>
         <translation>Баланс после этой Tx: </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="745"/>
-        <location filename="../src/sendtab.cpp" line="801"/>
+        <location filename="../src/sendtab.cpp" line="700"/>
         <source>Transaction Error</source>
         <translation>Ошибка транзакции</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="808"/>
+        <location filename="../src/sendtab.cpp" line="733"/>
         <source>From Address is Invalid</source>
         <translation>От адреса неверно</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="813"/>
+        <location filename="../src/sendtab.cpp" line="738"/>
         <source>Recipient Address </source>
         <translation>Адрес получателя </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="813"/>
+        <location filename="../src/sendtab.cpp" line="738"/>
         <source> is Invalid</source>
         <translation> является недействительным</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="819"/>
+        <location filename="../src/sendtab.cpp" line="744"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Количество &apos;%1&apos; является недействительным!</translation>
     </message>
@@ -903,14 +1063,6 @@ doesn&apos;t look like a z-address</source>
     </message>
 </context>
 <context>
-    <name>MigrationTxns</name>
-    <message>
-        <location filename="../src/turnstile.cpp" line="440"/>
-        <source>Migration Txids</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MobileAppConnector</name>
     <message>
         <location filename="../src/mobileappconnector.ui" line="14"/>
@@ -918,9 +1070,8 @@ doesn&apos;t look like a z-address</source>
         <translation>Подключите мобильное приложение</translation>
     </message>
     <message>
-        <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
-        <translation>Отсканируйте этот QRCode из сопутствующего приложения SilentDragon, чтобы подключить телефон</translation>
+        <translation type="vanished">Отсканируйте этот QRCode из сопутствующего приложения SilentDragon, чтобы подключить телефон</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="43"/>
@@ -938,9 +1089,18 @@ doesn&apos;t look like a z-address</source>
         <translation>Разрешить подключения через Интернет через червоточину SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragon Companion App</source>
-        <translation>Приложение Silent Dragon Companion</translation>
+        <translation type="vanished">Приложение Silent Dragon Companion</translation>
+    </message>
+    <message>
+        <location filename="../src/mobileappconnector.ui" line="36"/>
+        <source>Scan this QRCode in SilentDragonAndroid to connect your device</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mobileappconnector.ui" line="94"/>
+        <source>SilentDragonAndroid</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
@@ -975,57 +1135,57 @@ doesn&apos;t look like a z-address</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/connection.cpp" line="43"/>
+        <location filename="../src/connection.cpp" line="46"/>
         <source>Attempting autoconnect</source>
         <translation>Попытка автоподключения</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="52"/>
+        <location filename="../src/connection.cpp" line="55"/>
         <source>Starting embedded hushd</source>
         <translation>Запуск сервиса hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="62"/>
+        <location filename="../src/connection.cpp" line="65"/>
         <source>hushd is set to run as daemon</source>
         <translation>hushd настроен на запуск в качестве демона</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="62"/>
+        <location filename="../src/connection.cpp" line="65"/>
         <source>Waiting for hushd</source>
         <translation>Ожидаем hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="146"/>
+        <location filename="../src/connection.cpp" line="149"/>
         <source>Hide Advanced Config</source>
         <translation>Скрыть расширенную конфигурацию</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="146"/>
+        <location filename="../src/connection.cpp" line="149"/>
         <source>Show Advanced Config</source>
         <translation>Показать расширенную конфигурацию</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="159"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Choose data directory</source>
         <translation>Выберите каталог</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="248"/>
+        <location filename="../src/connection.cpp" line="241"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Все загрузки успешно завершены!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="271"/>
+        <location filename="../src/connection.cpp" line="264"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Не удалось загрузить параметры. Пожалуйста, проверьте сайт справки для получения дополнительной информации.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="85"/>
+        <location filename="../src/connection.cpp" line="88"/>
         <source>The process returned</source>
         <translation>Процесс вернулся</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="77"/>
+        <location filename="../src/connection.cpp" line="80"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1053,7 +1213,7 @@ If all else fails, please run hushd manually.</source>
 Если ничего не помогает, запустите hushd вручную.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="93"/>
+        <location filename="../src/connection.cpp" line="96"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1062,34 +1222,38 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Не запускается встроенный  hushd, потому что --no-embedded был пропущен</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="297"/>
-        <location filename="../src/connection.cpp" line="312"/>
-        <location filename="../src/connection.cpp" line="313"/>
+        <location filename="../src/connection.cpp" line="183"/>
+        <source>Could not create HUSH3.conf.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/connection.cpp" line="290"/>
+        <location filename="../src/connection.cpp" line="306"/>
         <source>Downloading </source>
         <translation>Загрузка </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="295"/>
+        <location filename="../src/connection.cpp" line="290"/>
         <source> more remaining )</source>
         <translation> осталось )</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="296"/>
+        <location filename="../src/connection.cpp" line="291"/>
         <source>MB of </source>
         <translation>MB из </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="296"/>
+        <location filename="../src/connection.cpp" line="291"/>
         <source>MB at </source>
         <translation>MB в </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="335"/>
+        <location filename="../src/connection.cpp" line="330"/>
         <source>hushd error</source>
         <translation>ошибка hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="429"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1098,140 +1262,125 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Пожалуйста, установите host/port и user/password в меню Изменить-&gt; Настройки.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="475"/>
+        <location filename="../src/connection.cpp" line="492"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Аутентификация не удалась. username / password, которые вы указали, не были приняты hushd. Попробуйте изменить его в меню Редактировать-&gt; Настройки</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="490"/>
+        <location filename="../src/connection.cpp" line="507"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Ваш hushd запускается. Пожалуйста, подождите.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="652"/>
+        <location filename="../src/connection.cpp" line="524"/>
+        <source>This may take several hours, grab some popcorn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/connection.cpp" line="784"/>
+        <source>There was an error! : </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rpc.cpp" line="697"/>
         <source>Downloading blocks</source>
         <translation>Загрузка блоков</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="92"/>
         <source>Ready! Thank you for helping secure the Hush network by running a full node.</source>
-        <translation>Готово! Благодарим Вас за помощь в защите сети Hush, запустив полный узел.</translation>
+        <translation type="vanished">Готово! Благодарим Вас за помощь в защите сети Hush, запустив полный узел.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="663"/>
+        <location filename="../src/rpc.cpp" line="700"/>
         <source>Block height</source>
         <translation>Высота блоков</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="669"/>
+        <location filename="../src/rpc.cpp" line="705"/>
         <source>Syncing</source>
         <translation>Синхронизация</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="669"/>
+        <location filename="../src/rpc.cpp" line="705"/>
         <source>Connected</source>
         <translation>Подключено</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="671"/>
+        <location filename="../src/rpc.cpp" line="707"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="684"/>
+        <location filename="../src/rpc.cpp" line="718"/>
         <source>Connected to hushd</source>
         <translation>Подключен к hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="706"/>
+        <location filename="../src/rpc.cpp" line="721"/>
+        <source>hushd has no peer connections! Network issues?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rpc.cpp" line="740"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>При подключении к hushd произошла ошибка. Ошибка </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="662"/>
-		<location filename="../src/rpc.cpp" line="663"/>
-		<location filename="../src/rpc.cpp" line="664"/>
-		<location filename="../src/rpc.cpp" line="665"/>
-		<location filename="../src/rpc.cpp" line="666"/>
-		<location filename="../src/rpc.cpp" line="667"/>
-		<location filename="../src/rpc.cpp" line="730"/>
-		<location filename="../src/rpc.cpp" line="731"/>
-		<location filename="../src/rpc.cpp" line="732"/>
-		<location filename="../src/rpc.cpp" line="733"/>
-		<location filename="../src/rpc.cpp" line="734"/>
         <source>addressindex not enabled</source>
-        <translation>addressindex не включено</translation>
+        <translation type="vanished">addressindex не включено</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="789"/>
-		<location filename="../src/rpc.cpp" line="790"/>
-		<location filename="../src/rpc.cpp" line="791"/>
-		<location filename="../src/rpc.cpp" line="792"/>
-		<location filename="../src/rpc.cpp" line="793"/>
-		<location filename="../src/rpc.cpp" line="794"/>
-		<location filename="../src/rpc.cpp" line="795"/>
-		<location filename="../src/rpc.cpp" line="796"/>
-		<location filename="../src/rpc.cpp" line="797"/>
-		<location filename="../src/rpc.cpp" line="798"/>
-		<location filename="../src/rpc.cpp" line="799"/>
-		<location filename="../src/rpc.cpp" line="800"/>
-		<location filename="../src/rpc.cpp" line="801"/>
         <source>not configured</source>
-        <translation>не настроено</translation>
+        <translation type="vanished">не настроено</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="774"/>
-        <location filename="../src/rpc.cpp" line="775"/>
         <source>not valid</source>
-        <translation>не подтверждено</translation>
+        <translation type="vanished">не подтверждено</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1012"/>
-        <location filename="../src/sendtab.cpp" line="786"/>
-        <location filename="../src/turnstile.cpp" line="374"/>
+        <location filename="../src/mainwindow.cpp" line="802"/>
+        <location filename="../src/sendtab.cpp" line="723"/>
+        <location filename="../src/turnstile.cpp" line="367"/>
         <source>The transaction with id </source>
         <translation>Транзакция с id </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1012"/>
-        <location filename="../src/sendtab.cpp" line="786"/>
-        <location filename="../src/turnstile.cpp" line="374"/>
+        <location filename="../src/mainwindow.cpp" line="802"/>
+        <location filename="../src/sendtab.cpp" line="723"/>
+        <location filename="../src/turnstile.cpp" line="367"/>
         <source> failed. The error was</source>
         <translation>не удалось. Ошибка </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1009"/>
-        <location filename="../src/recurring.cpp" line="525"/>
-        <location filename="../src/sendtab.cpp" line="783"/>
-        <location filename="../src/turnstile.cpp" line="371"/>
+        <location filename="../src/mainwindow.cpp" line="799"/>
+        <location filename="../src/sendtab.cpp" line="720"/>
+        <location filename="../src/turnstile.cpp" line="364"/>
         <source> failed</source>
         <translation> ошибка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1009"/>
-        <location filename="../src/recurring.cpp" line="525"/>
-        <location filename="../src/sendtab.cpp" line="783"/>
-        <location filename="../src/turnstile.cpp" line="371"/>
+        <location filename="../src/mainwindow.cpp" line="799"/>
+        <location filename="../src/sendtab.cpp" line="720"/>
+        <location filename="../src/turnstile.cpp" line="364"/>
         <source> Tx </source>
         <translation> Tx </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="687"/>
         <source>hushd has no peer connections</source>
-        <translation>hushd не имеет соединений с пирами</translation>
+        <translation type="vanished">hushd не имеет соединений с пирами</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1043"/>
+        <location filename="../src/rpc.cpp" line="1035"/>
         <source> tx computing. This can take several minutes.</source>
         <translation> tx вычисляется. Это может занять несколько минут.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1092"/>
+        <location filename="../src/rpc.cpp" line="1084"/>
         <source>Update Available</source>
         <translation>Доступно обновление</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1093"/>
+        <location filename="../src/rpc.cpp" line="1085"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1240,32 +1389,32 @@ Would you like to visit the releases page?</source>
 Хотели бы вы посетить страницу релизов?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1105"/>
+        <location filename="../src/rpc.cpp" line="1097"/>
         <source>No updates available</source>
         <translation>Нет доступных обновлений</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1106"/>
+        <location filename="../src/rpc.cpp" line="1098"/>
         <source>You already have the latest release v%1</source>
         <translation>У вас уже есть последняя версия v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1193"/>
+        <location filename="../src/rpc.cpp" line="1191"/>
         <source>Please wait for SilentDragon to exit</source>
         <translation>Пожалуйста, дождитесь закрытия SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1194"/>
+        <location filename="../src/rpc.cpp" line="1192"/>
         <source>Waiting for hushd to exit</source>
         <translation>Ожидание остановки hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="311"/>
+        <location filename="../src/connection.cpp" line="306"/>
         <source> failed. Please check the help site for more info</source>
         <translation>не удалось. Пожалуйста, проверьте сайт справки для получения дополнительной информации</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="402"/>
+        <location filename="../src/connection.cpp" line="417"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1274,32 +1423,30 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Пожалуйста, установите  host/port и  user/password в меню Редактировать-&gt; Настройки.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="507"/>
         <source>This may take several hours</source>
-        <translation>Это может занять несколько часов</translation>
+        <translation type="vanished">Это может занять несколько часов</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="524"/>
-        <location filename="../src/rpc.cpp" line="706"/>
+        <location filename="../src/connection.cpp" line="541"/>
+        <location filename="../src/rpc.cpp" line="740"/>
         <source>Connection Error</source>
         <translation>Ошибка соединения</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="753"/>
-        <location filename="../src/mainwindow.cpp" line="1014"/>
-        <location filename="../src/sendtab.cpp" line="795"/>
-        <location filename="../src/turnstile.cpp" line="376"/>
+        <location filename="../src/connection.cpp" line="784"/>
+        <location filename="../src/mainwindow.cpp" line="804"/>
+        <location filename="../src/sendtab.cpp" line="725"/>
+        <location filename="../src/turnstile.cpp" line="369"/>
         <source>Transaction Error</source>
-        <translation">Ошибка транзакции</translation>
+        <translation>&quot;&gt;Ошибка транзакции</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="753"/>
         <source>There was an error sending the transaction. The error was:</source>
-        <translation>Произошла ошибка при отправке транзакции. Ошибка была:</translation>
+        <translation type="vanished">Произошла ошибка при отправке транзакции. Ошибка была:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="399"/>
-        <location filename="../src/rpc.cpp" line="401"/>
+        <location filename="../src/rpc.cpp" line="411"/>
+        <location filename="../src/rpc.cpp" line="413"/>
         <source>No Connection</source>
         <translation>Нет соединения</translation>
     </message>
@@ -1374,24 +1521,24 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation>Удалить метку</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="244"/>
+        <location filename="../src/settings.cpp" line="217"/>
         <source>Tx submitted (right click to copy) txid:</source>
         <translation>Tx представлен (кликните правой кнопкой мыши, чтобы скопировать) txid:</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.cpp" line="121"/>
+        <location filename="../src/turnstile.cpp" line="119"/>
         <source>Locked funds</source>
         <translation>Закрытые средства</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.cpp" line="122"/>
+        <location filename="../src/turnstile.cpp" line="120"/>
         <source>Could not initiate migration.
 You either have unconfirmed funds or the balance is too low for an automatic migration.</source>
         <translation>Could not initiate migration.
 You either have unconfirmed funds or the balance is too low for an automatic migration.</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.cpp" line="364"/>
+        <location filename="../src/turnstile.cpp" line="357"/>
         <source>Computing Tx: </source>
         <translation>Вычисленый Tx: </translation>
     </message>
@@ -1416,27 +1563,26 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Количество</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
         <source>Confirmations</source>
-        <translation>Подтверждений</translation>
+        <translation type="vanished">Подтверждений</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="356"/>
+        <location filename="../src/websockets.cpp" line="357"/>
         <source>Connected directly</source>
         <translation>Прямое подключение</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="359"/>
+        <location filename="../src/websockets.cpp" line="360"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>Подключение через Интернет с помощью сервиса wormhol SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="652"/>
+        <location filename="../src/websockets.cpp" line="653"/>
         <source>Node is still syncing.</source>
         <translation>Узел все еще синхронизируется.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="676"/>
+        <location filename="../src/websockets.cpp" line="677"/>
         <source>No sapling or transparent addresses with enough balance to spend.</source>
         <translation>Нет sapling или прозрачных адресов с достаточным балансом, чтобы тратить.</translation>
     </message>
@@ -1445,41 +1591,28 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="obsolete">Цена HUSH для конвертации в USD недоступна</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="469"/>
-        <source>No HUSH price was available to convert from USD</source>
-        <translation>Цена HUSH не доступна для конвертации в USD</translation>
-    </message>
-    <message>
-        <location filename="../src/recurring.cpp" line="518"/>
         <source>Computing Recurring Tx: </source>
-        <translation>Вычеслен повторяющий Tx: </translation>
+        <translation type="vanished">Вычеслен повторяющий Tx: </translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="575"/>
-        <location filename="../src/turnstile.cpp" line="409"/>
         <source>View on block explorer</source>
-        <translation>Посмотреть в проводнике блоков</translation>
+        <translation type="vanished">Посмотреть в проводнике блоков</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="588"/>
         <source>View Error</source>
-        <translation>Ошибка просмотра</translation>
+        <translation type="vanished">Ошибка просмотра</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="589"/>
         <source>Reported Error</source>
-        <translation>Ошибка отчета</translation>
+        <translation type="vanished">Ошибка отчета</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="626"/>
-        <location filename="../src/recurring.cpp" line="627"/>
         <source>Are you sure you want to delete the recurring payment?</source>
-        <translation>Вы уверены, что хотите удалить повторяющийся платеж?</translation>
+        <translation type="vanished">Вы уверены, что хотите удалить повторяющийся платеж?</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="628"/>
         <source>All future payments will be cancelled.</source>
-        <translation>Все будущие платежи будут отменены.</translation>
+        <translation type="vanished">Все будущие платежи будут отменены.</translation>
     </message>
 </context>
 <context>
@@ -1490,12 +1623,21 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Диалог</translation>
     </message>
     <message>
-        <location filename="../src/recurringdialog.ui" line="35"/>
-        <source>View</source>
-        <translation>Показать</translation>
+        <location filename="../src/recurringdialog.ui" line="25"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/recurringdialog.ui" line="42"/>
+        <location filename="../src/recurringdialog.ui" line="32"/>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View</source>
+        <translation type="vanished">Показать</translation>
+    </message>
+    <message>
+        <location filename="../src/recurringdialog.ui" line="39"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
@@ -1503,159 +1645,129 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
 <context>
     <name>RecurringListViewModel</name>
     <message>
-        <location filename="../src/recurring.cpp" line="650"/>
         <source>Amount</source>
-        <translation>Количество</translation>
+        <translation type="vanished">Количество</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="650"/>
         <source>Schedule</source>
-        <translation>График</translation>
+        <translation type="vanished">График</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="650"/>
         <source>Payments Left</source>
-        <translation>Осталось платежей</translation>
+        <translation type="vanished">Осталось платежей</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="651"/>
         <source>Next Payment</source>
-        <translation>Следующий платеж</translation>
+        <translation type="vanished">Следующий платеж</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="651"/>
         <source>To</source>
-        <translation>Для</translation>
+        <translation type="vanished">Для</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="668"/>
         <source>Every </source>
-        <translation>Каждый </translation>
+        <translation type="vanished">Каждый </translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="672"/>
         <source>None</source>
-        <translation>None</translation>
+        <translation type="vanished">None</translation>
     </message>
 </context>
 <context>
     <name>RecurringPayments</name>
     <message>
-        <location filename="../src/recurringpayments.ui" line="14"/>
         <source>Payments</source>
-        <translation>Платежи</translation>
+        <translation type="vanished">Платежи</translation>
     </message>
 </context>
 <context>
     <name>RecurringPaymentsListViewModel</name>
     <message>
-        <location filename="../src/recurring.cpp" line="701"/>
         <source>Date</source>
-        <translation>Дата</translation>
+        <translation type="vanished">Дата</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="701"/>
         <source>Status</source>
-        <translation>Статус</translation>
+        <translation type="vanished">Статус</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="701"/>
         <source>Txid</source>
-        <translation>Txid</translation>
+        <translation type="vanished">Txid</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="721"/>
         <source>Not due yet</source>
-        <translation>Еще не связано</translation>
+        <translation type="vanished">Еще не связано</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="722"/>
         <source>Pending</source>
-        <translation>В ожидании</translation>
+        <translation type="vanished">В ожидании</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="723"/>
         <source>Skipped</source>
-        <translation>Пропущено</translation>
+        <translation type="vanished">Пропущено</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="724"/>
         <source>Paid</source>
-        <translation>Оплачено</translation>
+        <translation type="vanished">Оплачено</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="725"/>
         <source>Error</source>
-        <translation>Ошибка</translation>
+        <translation type="vanished">Ошибка</translation>
     </message>
     <message>
-        <location filename="../src/recurring.cpp" line="726"/>
-        <location filename="../src/recurring.cpp" line="727"/>
         <source>Unknown</source>
-        <translation>Неизвестно</translation>
+        <translation type="vanished">Неизвестно</translation>
     </message>
 </context>
 <context>
     <name>RecurringPending</name>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Диалог</translation>
+        <translation type="vanished">Диалог</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="20"/>
         <source>No payments will be processed. You can manually pay them from the Recurring Payments Dialog box</source>
-        <translation>Платежи не будут обработаны. Вы можете оплатить их вручную из диалогового окна «Повторяющиеся платежи»</translation>
+        <translation type="vanished">Платежи не будут обработаны. Вы можете оплатить их вручную из диалогового окна «Повторяющиеся платежи»</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="37"/>
         <source>Schedule</source>
-        <translation>График</translation>
+        <translation type="vanished">График</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="44"/>
         <source>How should ZecWallet proceed?</source>
-        <translation>Как должен действовать SilentDragon?</translation>
+        <translation type="vanished">Как должен действовать SilentDragon?</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="51"/>
         <source>Pay All in 1 Tx</source>
-        <translation>Оплатить все в 1 Tx</translation>
+        <translation type="vanished">Оплатить все в 1 Tx</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="58"/>
         <source>Only the latest pending payment will be processed. All previous pending payments will be skipped</source>
-        <translation>Будет обработан только последний ожидающий платеж. Все предыдущие ожидающие платежи будут пропущены</translation>
+        <translation type="vanished">Будет обработан только последний ожидающий платеж. Все предыдущие ожидающие платежи будут пропущены</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="68"/>
         <source>Pay Latest Only</source>
-        <translation>Оплатить только последний</translation>
+        <translation type="vanished">Оплатить только последний</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="75"/>
         <source>Pay None</source>
-        <translation>Не платить</translation>
+        <translation type="vanished">Не платить</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="96"/>
         <source>All pending payments collected, added up and paid in a single transaction</source>
-        <translation>Все ожидающие платежи собраны, сложены и оплачены за одну транзакцию</translation>
+        <translation type="vanished">Все ожидающие платежи собраны, сложены и оплачены за одну транзакцию</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="116"/>
         <source>Description</source>
-        <translation>Описание</translation>
+        <translation type="vanished">Описание</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="123"/>
         <source>To</source>
-        <translation>Для</translation>
+        <translation type="vanished">Для</translation>
     </message>
     <message>
-        <location filename="../src/recurringmultiple.ui" line="137"/>
         <source>The following recurring payment has multiple payments pending</source>
-        <translation>В следующем периодическом платеже есть несколько ожидающих платежей</translation>
+        <translation type="vanished">В следующем периодическом платеже есть несколько ожидающих платежей</translation>
     </message>
 </context>
 <context>
@@ -1726,9 +1838,13 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Ошибка при оплате HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="51"/>
         <source>URI should be of the form &apos;HUSH:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation>URI должен иметь вид &apos;HUSH:&lt;addr&gt;?amt=x&amp;memo=y</translation>
+        <translation type="vanished">URI должен иметь вид &apos;HUSH:&lt;addr&gt;?amt=x&amp;memo=y</translation>
+    </message>
+    <message>
+        <location filename="../src/requestdialog.cpp" line="51"/>
+        <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="65"/>
@@ -1809,84 +1925,68 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Получить цены HUSH/USD</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="373"/>
         <source>SafeNodes</source>
-        <translation>SafeNodes</translation>
+        <translation type="vanished">SafeNodes</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="401"/>
         <source>SafeNode Configure</source>
-        <translation>Конфигурация SafeNode</translation>
+        <translation type="vanished">Конфигурация SafeNode</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="431"/>
         <source>SafeHeight</source>
-        <translation>SafeHeight</translation>
+        <translation type="vanished">SafeHeight</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="455"/>
         <source>ParentKey</source>
-        <translation>ParentKey</translation>
+        <translation type="vanished">ParentKey</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="462"/>
         <source>0333b9796526ef8de88712a649d618689a1de1ed1adf9fb5ec415f31e560b1f9a3</source>
-        <translation>0333b9796526ef8de88712a649d618689a1de1ed1adf9fb5ec415f31e560b1f9a3</translation>
+        <translation type="vanished">0333b9796526ef8de88712a649d618689a1de1ed1adf9fb5ec415f31e560b1f9a3</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="493"/>
         <source>SafeKey</source>
-        <translation>SafeKey</translation>
+        <translation type="vanished">SafeKey</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="553"/>
         <source>Spentindex</source>
-        <translation>Spentindex</translation>
+        <translation type="vanished">Spentindex</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="560"/>
         <source>Timestampindex</source>
-        <translation>Timestampindex</translation>
+        <translation type="vanished">Timestampindex</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="567"/>
         <source>Addressindex</source>
-        <translation>Addressindex</translation>
+        <translation type="vanished">Addressindex</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="574"/>
         <source>Txindex</source>
-        <translation>Txindex</translation>
+        <translation type="vanished">Txindex</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="583"/>
         <source>Can be randomonly generated.</source>
-        <translation>Может быть случайным образом сгенерировано.</translation>
+        <translation type="vanished">Может быть случайным образом сгенерировано.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="537"/>
         <source>Block height at which all steps are completed and chain is synced with balance of roughly 1 HUSH.</source>
-        <translation>Высота блока, на которой все этапы выполнены, и цепь синхронизирована с балансом примерно 1 HUSH.</translation>
+        <translation type="vanished">Высота блока, на которой все этапы выполнены, и цепь синхронизирована с балансом примерно 1 HUSH.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="590"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Chosen at &lt;a href=&quot;https://safenodes.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Берется &lt;a href=&quot;https://safenodes.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;здесь&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Берется &lt;a href=&quot;https://safenodes.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;здесь&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="632"/>
         <source>Optional</source>
-        <translation>Необязательно</translation>
+        <translation type="vanished">Необязательно</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="656"/>
         <source>SafePass</source>
-        <translation>SafePass</translation>
+        <translation type="vanished">SafePass</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="670"/>
         <source>Default, is:    0333b9796526ef8de88712a649d618689a1de1ed1adf9fb5ec415f31e560b1f9a3</source>
-        <translation>Стандартно, это: 0333b9796526ef8de88712a649d618689a1de1ed1adf9fb5ec415f31e560b1f9a3</translation>
+        <translation type="vanished">Стандартно, это: 0333b9796526ef8de88712a649d618689a1de1ed1adf9fb5ec415f31e560b1f9a3</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="232"/>
@@ -2152,27 +2252,25 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Куда</translation>
     </message>
     <message>
-        <location filename="../src/confirm.ui" line="151"/>
+        <location filename="../src/confirm.ui" line="155"/>
+        <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this Transaction might not work.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Recurring Payment</source>
-        <translation>Периодический платеж</translation>
+        <translation type="vanished">Периодический платеж</translation>
     </message>
     <message>
-        <location filename="../src/confirm.ui" line="157"/>
-        <source>TextLabel</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../src/confirm.ui" line="183"/>
         <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this transaction might not work.</source>
-        <translation>hushd, кажется, не имеет каких-либо соединений. Возможно, вы не подключены к Интернету, поэтому транзакции могут не работать.</translation>
+        <translation type="vanished">hushd, кажется, не имеет каких-либо соединений. Возможно, вы не подключены к Интернету, поэтому транзакции могут не работать.</translation>
     </message>
     <message>
-        <location filename="../src/confirm.ui" line="196"/>
+        <location filename="../src/confirm.ui" line="168"/>
         <source>You are sending a transaction while your node is still syncing. This may not work.</source>
         <translation>Вы отправляете транзакцию, пока ваш узел все еще синхронизируется. Это может не сработать.</translation>
     </message>
     <message>
-        <location filename="../src/confirm.ui" line="209"/>
+        <location filename="../src/confirm.ui" line="181"/>
         <source>You are using a custom fee. Since fees are transparent, you are giving up some privacy. Please use this only if you know what you are doing!</source>
         <translation>Вы используете собственную комиссию. Поскольку комиссия прозрачна, вы теряеете часть приватности. Пожалуйста, используйте это, только если вы знаете, что делаете!</translation>
     </message>
@@ -2180,14 +2278,13 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
 <context>
     <name>createZcashConf</name>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="42"/>
+        <location filename="../src/createzcashconfdialog.ui" line="61"/>
         <source>Show Advanced Configuration</source>
         <translation>Показать расширенную конфигурацию</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="30"/>
         <source>Enable Fast Sync</source>
-        <translation>Включить Fast Sync</translation>
+        <translation type="vanished">Включить Fast Sync</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
@@ -2195,47 +2292,48 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Конфигурация  HUSH3.conf</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="20"/>
         <source>Your safecoin node will be configured for you automatically</source>
-        <translation>Ваш узел safecoin будет настроен для вас автоматически</translation>
+        <translation type="vanished">Ваш узел safecoin будет настроен для вас автоматически</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="112"/>
         <source>Allow connections to the internet to check for updates, get HUSH/USD prices etc...</source>
-        <translation>Разрешить подключения к Интернету, для проверки обновлений и получения рыночных котировок HUSH и т.д.</translation>
+        <translation type="vanished">Разрешить подключения к Интернету, для проверки обновлений и получения рыночных котировок HUSH и т.д.</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="119"/>
+        <location filename="../src/createzcashconfdialog.ui" line="102"/>
         <source>Use custom datadir</source>
         <translation>Указать каталог для хранения данных</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="164"/>
         <source>Connect to the internet for updates and price feeds</source>
-        <translation>Подключаться к Интернету для получения обновлений и котировок</translation>
+        <translation type="vanished">Подключаться к Интернету для получения обновлений и котировок</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="174"/>
+        <location filename="../src/createzcashconfdialog.ui" line="109"/>
         <source>Please choose a directory to store your wallet.dat and blockchain</source>
         <translation>Пожалуйста, выберите каталог для хранения wallet.dat и цепочки блоков</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="205"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Skips the most expensive checks during the initial block download. &lt;a href=&quot;https://docs.zecwallet.co/using-zecwallet/#fastsync&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn More&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пропускаеть ресурсоёмкие проверки при начальной загрузке блоков. &lt;a href=&quot;https://docs.zecwallet.co/using-zecwallet/#fastsync&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Узнать больше&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Пропускаеть ресурсоёмкие проверки при начальной загрузке блоков. &lt;a href=&quot;https://docs.zecwallet.co/using-zecwallet/#fastsync&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Узнать больше&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="128"/>
+        <location filename="../src/createzcashconfdialog.ui" line="86"/>
+        <source>Your Hush node will be configured for you automatically</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/createzcashconfdialog.ui" line="118"/>
         <source>Choose directory</source>
         <translation>Выбрать каталог</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="181"/>
+        <location filename="../src/createzcashconfdialog.ui" line="154"/>
         <source>Connect over Tor</source>
         <translation>Подключение через Tor</translation>
     </message>
     <message>
-        <location filename="../src/createzcashconfdialog.ui" line="157"/>
+        <location filename="../src/createzcashconfdialog.ui" line="161"/>
         <source>Please note that you&apos;ll need to already have a Tor service configured on port 9050</source>
         <translation>Обратите внимание, что предварительно вам нужно настроить службу Tor на порт 9050</translation>
     </message>
@@ -2248,42 +2346,47 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Изменить расписание</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="54"/>
+        <location filename="../src/newrecurring.ui" line="50"/>
         <source>Schedule</source>
         <translation>График</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="20"/>
+        <location filename="../src/newrecurring.ui" line="57"/>
         <source>Payment Description</source>
         <translation>Описание оплаты</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="142"/>
+        <location filename="../src/newrecurring.ui" line="64"/>
+        <source>TextLabel</source>
+        <translation type="unfinished">TextLabel</translation>
+    </message>
+    <message>
+        <location filename="../src/newrecurring.ui" line="111"/>
         <source>From</source>
         <translation>Откуда</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="166"/>
+        <location filename="../src/newrecurring.ui" line="118"/>
         <source>Number of payments</source>
         <translation>Количество платежей</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="75"/>
+        <location filename="../src/newrecurring.ui" line="125"/>
         <source>Amount</source>
         <translation>Количество</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="68"/>
+        <location filename="../src/newrecurring.ui" line="168"/>
         <source>Next Payment</source>
         <translation>Следующий платеж</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="135"/>
+        <location filename="../src/newrecurring.ui" line="178"/>
         <source>To</source>
         <translation>Куда</translation>
     </message>
     <message>
-        <location filename="../src/newrecurring.ui" line="121"/>
+        <location filename="../src/newrecurring.ui" line="188"/>
         <source>Memo</source>
         <translation>Метка</translation>
     </message>
