@@ -585,6 +585,7 @@ void RPC::getInfoThenRefresh(bool force) {
 
         static int lastBlock    = 0;
         int curBlock            = reply["blocks"].get<json::number_integer_t>();
+        int longestchain        = reply["longestchain"].get<json::number_integer_t>();
         int version             = reply["version"].get<json::number_integer_t>();
         int p2pport             = reply["p2pport"].get<json::number_integer_t>();
         int rpcport             = reply["rpcport"].get<json::number_integer_t>();
@@ -600,6 +601,7 @@ void RPC::getInfoThenRefresh(bool force) {
 
         Settings::getInstance()->setZcashdVersion(version);
 
+	ui->longestchain->setText(QString::number(longestchain));
         ui->notarizedhashvalue->setText( ntzhash );
         ui->notarizedtxidvalue->setText( ntztxid );
         ui->lagvalue->setText( QString::number(lag) );
