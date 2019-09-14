@@ -120,12 +120,11 @@ void WormholeClient::connect() {
 void WormholeClient::retryConnect() {    
     QTimer::singleShot(5 * 1000 * pow(2, retryCount), [=]() {
         if (retryCount < 10) {
-            qDebug() << "Retrying websocket connection";
             this->retryCount++;
+            qDebug() << "Retrying websocket connection, retrycount=" << this->retryCount;
             connect();
-        }
-        else {
-            qDebug() << "Retry count exceeded, will not attempt retry any more";
+        } else {
+            qDebug() << "Retry count of " << retryCount << " exceeded, will not attempt retry any more";
         }
     });
 }
@@ -133,6 +132,7 @@ void WormholeClient::retryConnect() {
 // Called when the websocket is closed. If this was closed without our explicitly closing it, 
 // then we need to try and reconnect
 void WormholeClient::closed() {
+    qDebug() << "Closing websocket";
     if (!shuttingDown) {
        retryConnect();
     }
@@ -160,14 +160,17 @@ void WormholeClient::onConnected()
             auto payload = QJsonDocument(QJsonObject {
                 {"ping", "ping"}
             }).toJson();
+	    qDebug() << "Sending Ping";
             m_webSocket->sendTextMessage(payload);
         }
     });
+    qDebug() << "Starting timer";
     timer->start(4 * 60 * 1000); // 4 minutes
 }
 
 void WormholeClient::onTextMessageReceived(QString message)
 {
+    qDebug() << "Websocket received msg: " << message;
     AppDataServer::getInstance()->processMessage(message, parent, std::make_shared<ClientWebSocket>(m_webSocket), AppConnectionType::INTERNET);
 }
 
@@ -198,6 +201,7 @@ QString AppDataServer::getWormholeCode(QString secretHex) {
     delete[] out1;
     delete[] secret;
 
+	qDebug() << "Created wormhole secretHex";
     return wmcodehex;
 }
 
@@ -322,6 +326,7 @@ void AppDataServer::updateUIWithNewQRCode(MainWindow* mainwindow) {
         return;
     
     QString uri = "ws://" + ipv4Addr + ":8777";
+	qDebug() << "Websocket URI: " << uri;
 
     // Get a new secret
     unsigned char* secretBin = new unsigned char[crypto_secretbox_KEYBYTES];
@@ -343,13 +348,16 @@ void AppDataServer::updateUIWithNewQRCode(MainWindow* mainwindow) {
 }
 
 void AppDataServer::registerNewTempSecret(QString tmpSecretHex, bool allowInternet, MainWindow* main) {
+	qDebug() << "Registering new tempSecret, allowInternet=" << allowInternet;	
     tempSecret = tmpSecretHex;
 
     delete tempWormholeClient;
     tempWormholeClient = nullptr;
 
-    if (allowInternet)
+    if (allowInternet) {
         tempWormholeClient = new WormholeClient(main, getWormholeCode(tempSecret));
+		qDebug() << "Created new wormhole client";
+	}
 }
 
 QString AppDataServer::connDesc(AppConnectionType t) {
