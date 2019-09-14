@@ -1251,7 +1251,7 @@ Por favor, especificar el host/puerta y usario/contraseña en el menú Editar-&g
     <message>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your zcash.conf and restart SilentDragon
+.Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
         <translation type="vanished">Has configurado hushd para ejecutar como demonio, lo que puede causar problemas con SilentDragon.
 Por favor, eliminar la siguente linea de hushd.conf y reinicia SilentDragon
@@ -1262,7 +1262,7 @@ daemon=1</translation>
 
 Please try restarting.
 
-If you previously started hushd with custom arguments, you might need to reset zcash.conf.
+If you previously started hushd with custom arguments, you might need to reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
         <translation type="vanished">No se pudo iniciar hushd incorporado.
@@ -1278,7 +1278,7 @@ Si todo falla, por favor ejecutar hushd manualmente.
         <translation>El proceso devuelto</translation>
     </message>
     <message>
-        <source>Couldn&apos;t connect to hushd configured in zcash.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
         <translation type="vanished">No se pudo conectar con hushd configurado en hushd.conf.
@@ -1384,7 +1384,7 @@ El saldo es insuficiente para una migración automática.
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
-        <source>%1 doesn&apos;t seem to be a valid Zcash address.</source>
+        <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation>%1 no parece ser una dirección válida de Hush.</translation>
     </message>
     <message>

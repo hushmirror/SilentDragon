@@ -18,8 +18,8 @@
     <name>ConnectionDialog</name>
     <message>
         <location filename="../src/connection.ui" line="17"/>
-        <source>zec-qt-wallet</source>
-        <translation>ZecWallet</translation>
+        <source>SilentDragon</source>
+        <translation>SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/connection.ui" line="58"/>
@@ -31,8 +31,8 @@
     <name>MainWindow</name>
     <message>
         <location filename="../src/mainwindow.ui" line="14"/>
-        <source>zec-qt-wallet</source>
-        <translation>ZecWallet</translation>
+        <source>SilentDragon</source>
+        <translation>SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="29"/>
@@ -210,8 +210,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="834"/>
-        <source>zcashd</source>
-        <translation>zcashd</translation>
+        <source>hushd</source>
+        <translation>hushd</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="864"/>
@@ -345,8 +345,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="471"/>
-        <source>Thanks for supporting zec-qt-wallet!</source>
-        <translation>ZecWallet&apos;i desteklediğiniz için teşekkür ederiz!</translation>
+        <source>Thanks for supporting SilentDragon!</source>
+        <translation>SilentDragon&apos;i desteklediğiniz için teşekkür ederiz!</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="473"/>
@@ -355,9 +355,9 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="473"/>
-        <source> to support zec-qt-wallet</source>
+        <source> to support SilentDragon</source>
         <translatorcomment>0.01 Bağış yap yazısının devamı</translatorcomment>
-        <translation>ve ZecWallet&apos;i destekle</translation>
+        <translation>ve SilentDragon&apos;i destekle</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="509"/>
@@ -392,8 +392,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="631"/>
-        <source>The keys will be imported into your connected zcashd node</source>
-        <translatorcomment>Anahtarlar bağlı zcashd düğümünüze aktarılacak</translatorcomment>
+        <source>The keys will be imported into your connected hushd node</source>
+        <translatorcomment>Anahtarlar bağlı hushd düğümünüze aktarılacak</translatorcomment>
         <translation>YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
@@ -408,8 +408,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="671"/>
-        <source>You need to back it up from the machine zcashd is running on</source>
-        <translation>zcashd&apos;ın çalıştığı makineden yedeklemeniz gerekiyor</translation>
+        <source>You need to back it up from the machine hushd is running on</source>
+        <translation>hushd&apos;ın çalıştığı makineden yedeklemeniz gerekiyor</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="675"/>
@@ -581,55 +581,55 @@ z-adres&apos;i gibi görünmüyor</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="50"/>
-        <source>Starting embedded zcashd</source>
-        <translation>Gömülü zcashd başlatılıyor</translation>
+        <source>Starting embedded hushd</source>
+        <translation>Gömülü hushd başlatılıyor</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="60"/>
-        <source>zcashd is set to run as daemon</source>
-        <translation>zcashd daemon olarak çalışacak şekilde ayarlandı</translation>
+        <source>hushd is set to run as daemon</source>
+        <translation>hushd daemon olarak çalışacak şekilde ayarlandı</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="60"/>
-        <source>Waiting for zcashd</source>
-        <translation>zcashd bekleniyor</translation>
+        <source>Waiting for hushd</source>
+        <translation>hushd bekleniyor</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="75"/>
-        <source>You have zcashd set to start as a daemon, which can cause problems with zec-qt-wallet
+        <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your zcash.conf and restart zec-qt-wallet
+.Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
-        <translation>zcashd, zec-qt-wallet ile sorunlara neden olan bir daemon olarak başlayacak şekilde ayarladınız.
+        <translation>hushd, SilentDragon ile sorunlara neden olan bir daemon olarak başlayacak şekilde ayarladınız.
 
-.Lütfen aşağıdaki satırı zcash.conf dosyanızdan kaldırın ve ZecWallet&apos;ı yeniden başlatın
+.Lütfen aşağıdaki satırı HUSH3.conf dosyanızdan kaldırın ve SilentDragon&apos;ı yeniden başlatın
 daemon=1</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="80"/>
-        <source>Couldn&apos;t start the embedded zcashd.
+        <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
 
-If you previously started zcashd with custom arguments, you might need to reset zcash.conf.
+If you previously started hushd with custom arguments, you might need to reset HUSH3.conf.
 
-If all else fails, please run zcashd manually.</source>
-        <translation>Gömülü zcashd başlatılamadı.
+If all else fails, please run hushd manually.</source>
+        <translation>Gömülü hushd başlatılamadı.
 
 Lütfen yeniden başlatmayı deneyin.
 
-Daha önce zcashd&apos;yi özel argümanlarla başlattıysanız, zcash.conf dosyasını sıfırlamanız gerekebilir.
+Daha önce hushd&apos;yi özel argümanlarla başlattıysanız, HUSH3.conf dosyasını sıfırlamanız gerekebilir.
 
-Hepsi başarısız olursa, lütfen zcashd&apos;yi manuel olarak çalıştırın.</translation>
+Hepsi başarısız olursa, lütfen hushd&apos;yi manuel olarak çalıştırın.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="91"/>
-        <source>Couldn&apos;t connect to zcashd configured in zcash.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
-Not starting embedded zcashd because --no-embedded was passed</source>
-        <translation>zcash.conf ile yapılandırılmış zcashd&apos;ye bağlanılamadı.
+Not starting embedded hushd because --no-embedded was passed</source>
+        <translation>HUSH3.conf ile yapılandırılmış hushd&apos;ye bağlanılamadı.
 
---no-embedded iletildiğinden gömülü zcashd başlatılmıyor</translation>
+--no-embedded iletildiğinden gömülü hushd başlatılmıyor</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="183"/>
@@ -694,13 +694,13 @@ Not starting embedded zcashd because --no-embedded was passed</source>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="593"/>
-        <source>Connected to zcashd</source>
-        <translation>Zcashd&apos;ye bağlanıldı</translation>
+        <source>Connected to huhsd</source>
+        <translation>hushd&apos;ye bağlanıldı</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="609"/>
-        <source>There was an error connecting to zcashd. The error was</source>
-        <translation>zcashd ile bağlantı kurulurken bir hata oluştu. Hata</translation>
+        <source>There was an error connecting to hushd. The error was</source>
+        <translation>hushd ile bağlantı kurulurken bir hata oluştu. Hata</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="848"/>
@@ -729,13 +729,13 @@ Not starting embedded zcashd because --no-embedded was passed</source>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="953"/>
-        <source>Please wait for zec-qt-wallet to exit</source>
-        <translation>Lütfen çıkmak için ZecWallet&apos;ı bekleyin</translation>
+        <source>Please wait for SilentDragon to exit</source>
+        <translation>Lütfen çıkmak için SilentDragon&apos;ı bekleyin</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="954"/>
-        <source>Waiting for zcashd to exit</source>
-        <translation>Çıkmak için zcashd bekleniyor</translation>
+        <source>Waiting for hushd to exit</source>
+        <translation>Çıkmak için hushd bekleniyor</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="248"/>
@@ -744,8 +744,8 @@ Not starting embedded zcashd because --no-embedded was passed</source>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="272"/>
-        <source>zcashd error</source>
-        <translation>zcashd hatası</translation>
+        <source>hushd error</source>
+        <translation>hushd hatası</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="339"/>
@@ -758,22 +758,22 @@ Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktasını ve kullan
     </message>
     <message>
         <location filename="../src/connection.cpp" line="351"/>
-        <source>Could not connect to zcashd configured in settings.
+        <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
-        <translation>Ayarlarda yapılandırılmış zcashd&apos;ye bağlanılamadı.
+        <translation>Ayarlarda yapılandırılmış hushd&apos;ye bağlanılamadı.
 
 Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıcı adı/şifreyi ayarlayın.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="411"/>
-        <source>Authentication failed. The username / password you specified was not accepted by zcashd. Try changing it in the Edit-&gt;Settings menu</source>
-        <translation>Kimlik doğrulama başarısız oldu. Belirttiğiniz kullanıcı adı/şifre zcashd tarafından kabul edilmedi. Düzenle-&gt; Ayarlar menüsünde değiştirmeyi deneyin</translation>
+        <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
+        <translation>Kimlik doğrulama başarısız oldu. Belirttiğiniz kullanıcı adı/şifre hushd tarafından kabul edilmedi. Düzenle-&gt; Ayarlar menüsünde değiştirmeyi deneyin</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="426"/>
-        <source>Your zcashd is starting up. Please wait.</source>
-        <translation>Zcashd&apos;niz başlıyor. Lütfen bekle.</translation>
+        <source>Your hushd is starting up. Please wait.</source>
+        <translation>hushd&apos;niz başlıyor. Lütfen bekle.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="447"/>
@@ -805,8 +805,8 @@ Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıc
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="127"/>
-        <source> doesn&apos;t seem to be a valid Zcash address.</source>
-        <translation> geçerli bir Zcash adresi gibi görünmüyor.</translation>
+        <source> doesn&apos;t seem to be a valid Hush address.</source>
+        <translation> geçerli bir Hush adresi gibi görünmüyor.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="171"/>
@@ -875,8 +875,8 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     </message>
     <message>
         <location filename="../src/settings.ui" line="33"/>
-        <source>zcashd connection</source>
-        <translation>zcashd bağlantısı</translation>
+        <source>hushd connection</source>
+        <translation>hushd bağlantısı</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="62"/>

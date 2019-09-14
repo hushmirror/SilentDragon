@@ -1024,7 +1024,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
-.Please remove the following line from your zcash.conf and restart SilentDragon
+.Please remove the following line from your HUSH3.conf and restart SilentDragon
 daemon=1</source>
         <translatorcomment>Hai hushd impostato per l&apos;avvio come daemon, che può causare problemi con SilentDragon</translatorcomment>
         <translation type="vanished">YOUR_TRANSLATION_HERE</translation>
@@ -1034,21 +1034,21 @@ daemon=1</source>
 
 Please try restarting.
 
-If you previously started hushd with custom arguments, you might need to reset zcash.conf.
+If you previously started hushd with custom arguments, you might need to reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
         <translatorcomment>check</translatorcomment>
         <translation type="vanished">Impossibile avviare hushd integrato
 Per favore prova a riavviare.
-Se hai precedentemente avviato hushd con parametri personalizzati, potresti dover reimpostare lo zcash.conf
+Se hai precedentemente avviato hushd con parametri personalizzati, potresti dover reimpostare lo HUSH3.conf
 Se tutto il resto fallisce, si prega di eseguire manualmente hushd.</translation>
     </message>
     <message>
-        <source>Couldn&apos;t connect to hushd configured in zcash.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
         <translatorcomment>Check</translatorcomment>
-        <translation type="vanished">Impossibile connettersi a hushd come configurato nello zcash.conf.
+        <translation type="vanished">Impossibile connettersi a hushd come configurato nello HUSH3.conf.
 Non è stato avviato hushd integrato perché è stato passato il comando --no-embedded</translation>
     </message>
     <message>
@@ -1351,7 +1351,7 @@ Impostare host/porta e utente/password nel menu Modifica-&gt; Impostazioni.</tra
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
-        <source>%1 doesn&apos;t seem to be a valid Zcash address.</source>
+        <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation>%1 non sembra essere un indirizzo Hush valido.</translation>
     </message>
     <message>

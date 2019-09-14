@@ -511,7 +511,7 @@
         <translation>Exportiere Transaktionen</translation>
     </message>
     <message>
-        <source>Pay zcash &amp;URI...</source>
+        <source>Pay HUSH &amp;URI...</source>
         <translation type="vanished">Bezahl HUSH &amp;URI...</translation>
     </message>
     <message>
@@ -525,7 +525,7 @@
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <source>Request zcash...</source>
+        <source>Request HUSH...</source>
         <translation type="vanished">Fordere Hush an...</translation>
     </message>
     <message>
@@ -1079,7 +1079,7 @@ Das sieht nicht wie eine sichere Adresse aus</translation>
     <message>
         <source>You have hushd set to start as a daemon, which can cause problems with ZecWallet
 
-.Please remove the following line from your zcash.conf and restart ZecWallet
+.Please remove the following line from your HUSH3.conf and restart ZecWallet
 daemon=1</source>
         <translation type="vanished">Sie haben hushd im Hintergrund gestartet, was zu Problemen führen kann. Bitte löschen Sie folgende Zeile aus Ihrer Hush3.conf: daemon=1</translation>
     </message>
@@ -1088,13 +1088,13 @@ daemon=1</source>
 
 Please try restarting.
 
-If you previously started hushd with custom arguments, you might need to reset zcash.conf.
+If you previously started hushd with custom arguments, you might need to reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
         <translation type="vanished">Ich konnte den intergrierten hushd nicht starten. Wenn Sie hushd mit anderen Argumenten gestartet haben, müssen Sie die Hush3.conf resetten. Wenn dies nicht funktioniert, starten Sie hushd manuell</translation>
     </message>
     <message>
-        <source>Couldn&apos;t connect to hushd configured in zcash.conf.
+        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
         <translation type="vanished">Starte den internen hushd Node nicht --no-embedded wurde eingestellt.</translation>
@@ -1388,7 +1388,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
-        <source>%1 doesn&apos;t seem to be a valid Zcash address.</source>
+        <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation>%1 das scheint keine gültige Hush Adresse zu sein.</translation>
     </message>
     <message>
