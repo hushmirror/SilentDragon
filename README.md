@@ -41,13 +41,12 @@ hushd, or compile hushd as well.
 
 ### Building on Linux
 
+
 ```
-sudo apt-get install qt5-default qt5-qmake libqt5websockets5-dev
+sudo apt-get install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
 git clone https://github.com/MyHush/SilentDragon.git
 cd SilentDragon
-qmake silentdragon.pro CONFIG+=debug
-make -j$(nproc)
-
+./build.sh
 ./silentdragon
 ```
 
@@ -70,7 +69,9 @@ c:\Qt5\bin\qmake.exe silentdragon.pro -tp vc CONFIG+=debug
 ```
 
 ### Building on macOS
+
 You need to install the Xcode app or the Xcode command line tools first, and then install Qt. 
+
 
 ```
 git clone https://github.com/MyHush/SilentDragon.git
@@ -89,7 +90,6 @@ these four files in your Git repo:
 
 ```
     ln -s ../hush3/src/hushd
-    ln -s ../hush3/src/hush-cli
     ln -s ../hush3/src/komodod
     ln -s ../hush3/src/komodo-cli
 ```

@@ -33,7 +33,7 @@
       </sizepolicy>
      </property>
      <property name="text">
-      <string>Scan this QRCode from your SilentDragon companion app to connect your phone</string>
+      <string>Scan this QRCode in SilentDragonAndroid to connect your device</string>
      </property>
     </widget>
    </item>
@@ -91,7 +91,7 @@
    <item row="1" column="2" rowspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>SilentDragon Companion App</string>
+      <string>SilentDragonAndroid</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="5" column="0">
