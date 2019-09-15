@@ -13,13 +13,26 @@ else
     JOBS=1
 fi
 
-echo "Compiling with $JOBS threads..."
+VERSION=$(cat src/version.h |cut -d\" -f2)
+echo "Compiling SilentDragon $VERSION with $JOBS threads..."
+CONF=silentdragon.pro
+
+set -e
+qbuild () {
+   qmake $CONF CONFIG+=debug
+   lupdate $CONF
+   lrelease $CONF
+   make -j$JOBS
+}
 
 if [ "$1" == "clean" ]; then
    make clean
+elif [ "$1" == "linguist" ]; then
+    lupdate $CONF
+    lrelease $CONF
 elif [ "$1" == "cleanbuild" ]; then
    make clean
-   qmake silentdragon.pro CONFIG+=debug; make -j$JOBS
+   qbuild
 else
-   qmake silentdragon.pro CONFIG+=debug; make -j$JOBS
+   qbuild
 fi
