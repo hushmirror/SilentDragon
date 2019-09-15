@@ -1032,7 +1032,7 @@ Das sieht nicht wie eine sichere Adresse aus</translation>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragonAndroid</source>
-        <translation>SilentDrago Android</translation>
+        <translation>SilentDragon Android</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
