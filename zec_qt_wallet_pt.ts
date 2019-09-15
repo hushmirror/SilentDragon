@@ -966,14 +966,17 @@ não se parece com um z-Address</translation>
         <translation>Conexão</translation>
     </message>
     <message>
-        <location filename="../src/mobileappconnector.ui" line="36"/>
-        <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
-        <translation>Digitalize este QRCode no seu aplicativo complementar SilentDragon para conectar seu telefone</translation>
-    </message>
-    <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragonAndroid</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
+        <translation type="vanished">Digitalize este QRCode no seu aplicativo complementar SilentDragon para conectar seu telefone</translation>
+    </message>
+    <message>
+        <source>SilentDragon Companion App</source>
+        <translation type="vanished">SilentDragon Companion App</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
@@ -1095,19 +1098,6 @@ Não iniciando hushd acoplado porque nenhum foi passado como parâmetro</transla
         <translation>O processo retornou</translation>
     </message>
     <message>
-
-        <location filename="../src/connection.cpp" line="80"/>
-        <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
-
-.Please remove the following line from your HUSH3.conf and restart SilentDragon
-daemon=1</source>
-        <translation>Você definiu o hushd para iniciar como um daemon, o que pode causar problemas com o SilentDragon
-
-        . Remova a seguinte linha do seu HUSH3.conf e reinicie o SilentDragon
-        daemon=1</translation>
-    </message>
-    <message>
-
         <location filename="../src/connection.cpp" line="85"/>
         <source>Couldn&apos;t start the embedded hushd.
 
@@ -1123,16 +1113,6 @@ Por favor, tente reiniciar.
 Se você iniciou anteriormente o hushd com argumentos personalizados, pode ser necessário redefinir o HUSH3.conf.
 
 Se tudo mais falhar, execute o hushd manualmente.</translation>
-    </message>
-    <message>
-
-        <location filename="../src/connection.cpp" line="96"/>
-        <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
-
-Not starting embedded hushd because --no-embedded was passed</source>
-        <translation>Não foi possível conectar ao hushd configurado no HUSH3.conf.
-
-        Não iniciando o hushd incorporado porque --no-embedded foi passado</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="183"/>
@@ -1376,7 +1356,7 @@ Por favor, coloque o host/porta e usuário/senha no menu Editar&gt;Preferências
     <message>
         <location filename="../src/addressbook.cpp" line="144"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
-        <translation>O rótulo '%1' já existe. Por favor, remova a etiqueta existente.</translation>
+        <translation>O rótulo &apos;%1&apos; já existe. Por favor, remova a etiqueta existente.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="156"/>
@@ -1529,7 +1509,7 @@ Você possui fundos não confirmados ou o saldo é muito baixo para uma migraç�
     <message>
         <location filename="../src/requestdialog.ui" line="118"/>
         <source>z address</source>
-        <translation>"z-Address"></translation>
+        <translation>&quot;z-Address&quot;&gt;</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="145"/>
@@ -1650,10 +1630,6 @@ Você possui fundos não confirmados ou o saldo é muito baixo para uma migraç�
         <translation>Conectar via Tor</translation>
     </message>
     <message>
-
-        <location filename="../src/settings.ui" line="274"/>
-        <source>Troubleshooting</source>
-        <translation>Solução de problemas</translation>
         <location filename="../src/settings.ui" line="266"/>
         <source>Connect to github on startup to check for updates</source>
         <translation type="unfinished"></translation>
@@ -1671,7 +1647,7 @@ Você possui fundos não confirmados ou o saldo é muito baixo para uma migraç�
     <message>
         <location filename="../src/settings.ui" line="288"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>Solução de problemas</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="294"/>
