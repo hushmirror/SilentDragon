@@ -37,7 +37,7 @@
     <message>
         <location filename="../src/connection.ui" line="58"/>
         <source>The Dragon Awakens...</source>
-        <translation></translation>
+        <translation>Ejderha Uyanıyor...</translation>
     </message>
     <message>
         <source>Starting Up</source>
@@ -143,7 +143,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="487"/>
         <source>Upload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Yükle</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
@@ -161,17 +161,17 @@
     <message>
         <location filename="../src/mainwindow.ui" line="592"/>
         <source>Recurring payment</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenli ödeme</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="599"/>
         <source>Every month, starting 12-May-2012, for 6 payments</source>
-        <translation type="unfinished"></translation>
+        <translation>Her ay, 12-May-2012&apos;den itibaren, 6 ödeme için</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="606"/>
         <source>Edit Schedule</source>
-        <translation type="unfinished"></translation>
+        <translation>Programı Düzenle</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="636"/>
@@ -202,48 +202,48 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1425"/>
         <source>&amp;Send Duke Feedback</source>
-        <translation type="unfinished"></translation>
+        <translation>Duke&apos;ye Geri Bildirim Gönder</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1430"/>
         <source>&amp;Hush Discord</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hush Discord</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1435"/>
         <source>&amp;Hush Website</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hush Website</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1484"/>
         <location filename="../src/mainwindow.cpp" line="973"/>
         <source>Export transactions</source>
-        <translation type="unfinished"></translation>
+        <translation>İşlemleri dışa aktar</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1489"/>
         <source>Pay HUSH &amp;URI...</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH URI&apos;yi öde...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1494"/>
         <source>Connect mobile &amp;app</source>
-        <translation type="unfinished"></translation>
+        <translation>Mobil uygulamayı bağla</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1497"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1502"/>
         <source>Request HUSH...</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH iste...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1507"/>
         <source>Validate Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Doğrula</translation>
     </message>
     <message>
         <source>z-Addr(Sapling)</source>
@@ -265,7 +265,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="781"/>
         <source>View All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Adresleri Görüntüle</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="799"/>
@@ -280,7 +280,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="820"/>
         <source>Address balance</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres bakiyesi</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="830"/>
@@ -336,62 +336,62 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1006"/>
         <source>Notarized Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Noter Onaylı Hash</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1028"/>
         <source>Notarized txid</source>
-        <translation type="unfinished"></translation>
+        <translation>Noter Onaylı İşlem id</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1050"/>
         <source>Notarized Lag</source>
-        <translation type="unfinished"></translation>
+        <translation>Noter Onaylı Lag</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1072"/>
         <source>KMD Version</source>
-        <translation type="unfinished"></translation>
+        <translation>KMD Sürümü</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1095"/>
         <source>Protocol Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Protokol Sürümü</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1118"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Sürüm</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1140"/>
         <source>P2P Port</source>
-        <translation type="unfinished"></translation>
+        <translation>P2P Bağlantı Noktası</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1163"/>
         <source>RPC Port</source>
-        <translation type="unfinished"></translation>
+        <translation>RPC Bağlantı Noktası</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1185"/>
         <source>Client Name</source>
-        <translation type="unfinished"></translation>
+        <translation>İstemci Adı</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1207"/>
         <source>Next Halving</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonraki Yarılanma</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1229"/>
         <source>Local Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerel Hizmetler</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1251"/>
         <source>Longest Chain</source>
-        <translation type="unfinished"></translation>
+        <translation>En Uzun Zincir</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1280"/>
@@ -425,12 +425,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="737"/>
         <source>Shielded Address (Private, Anonymous)</source>
-        <translation type="unfinished"></translation>
+        <translation>Korumalı Adres (Özel, Anonim)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="750"/>
         <source>Transparent Address (Public, Metadata-Leaking)</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparan Adres (Halka Açık, Meta Veri Sızdıran)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1361"/>
@@ -576,112 +576,112 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="495"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor konfigürasyonu yalnızca gömülü bir hushd çalışırken kullanılabilir.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="533"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>Harici bir hushd kullanıyorsun. Lütfen hushd&apos;yi -rescan ile yeniden başlat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="536"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
-        <translation type="unfinished"></translation>
+        <translation>Harici bir hushd kullanıyorsun. Lütfen hushd&apos;yi -reindex ile yeniden başlat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="561"/>
         <source>Enable Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor&apos;u etkinleştir</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="562"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor üzerinden bağlantı etkin. Bu özelliği kullanmak için, SilentDragon&apos;u yeniden başlatmanız gerekir.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="571"/>
         <source>Disable Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor&apos;u devre dışı bırak</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="572"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor üzerinden bağlantı devre dışı bırakıldı. Tor ile bağlantıyı tamamen kesmek için SilentDragon&apos;u yeniden başlatmanız gerekir.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="601"/>
         <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon yeniden tarama/yeniden indeksleme için yeniden başlatılması gerekiyor. SilentDragon şimdi kapanacak, lütfen devam etmek için SilentDragon&apos;u yeniden başlatın</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="603"/>
         <source>Restart SilentDragon</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon&apos;u yeniden başlat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="640"/>
         <source>Some feedback about SilentDragon or Hush...</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon veya Hush hakkında bazı görüşler...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="642"/>
         <source>Send Duke some private and shielded feedback about </source>
-        <translation type="unfinished"></translation>
+        <translation>Duke&apos;ye özel ve korumalı geri bildirim gönder </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="642"/>
         <source> or SilentDragon</source>
-        <translation type="unfinished"></translation>
+        <translation> veya SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="658"/>
         <source>Enter Address to validate</source>
-        <translation type="unfinished"></translation>
+        <translation>Doğrulamak için adres girin</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="659"/>
         <source>Transparent or Shielded Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparan veya Korumalı Adres:</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="880"/>
         <source>Paste HUSH URI</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH URI&apos;sini yapıştır</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="892"/>
         <source>Error paying Hush URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Hush URI ödeme hatası</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="893"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished"></translation>
+        <translation>URI bu şekilde olmalıdır: &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="928"/>
         <source>Please paste your private keys here, one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen özel anahtarlarınızı buraya, her satıra bir tane olacak şekilde yapıştırın</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="929"/>
         <source>The keys will be imported into your connected Hush node</source>
-        <translation type="unfinished"></translation>
+        <translation>Anahtarlar bağlı Hush düğümünüze aktarılacak</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="960"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation type="unfinished"></translation>
+        <translation>Anahtarlar içeri aktarıldı. Blockchain&apos;i yeniden taramak birkaç dakika sürebilir. O zamana kadar, işlevsellik sınırlı olabilir</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="979"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="980"/>
         <source>Error exporting transactions, file was not saved</source>
-        <translation type="unfinished"></translation>
+        <translation>İşlemler dışa aktarılırken hata oluştu, dosya kaydedilmedi</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1002"/>
@@ -770,12 +770,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1182"/>
         <source>Address Asset Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Varlığı Görüntüleyicisi</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1188"/>
         <source>Convert Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresi Dönüştür</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1197"/>
@@ -790,7 +790,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1263"/>
         <source>View Payment Request</source>
-        <translation type="unfinished"></translation>
+        <translation>Ödeme Talebini Görüntüle</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1270"/>
@@ -810,17 +810,17 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1416"/>
         <source>Copy Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adresi Kopyala</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1482"/>
         <source>Address has been previously used</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres daha önce kullanılmış</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1484"/>
         <source>Address is unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres kullanılmamış</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="209"/>
@@ -831,7 +831,7 @@
         <location filename="../src/sendtab.cpp" line="282"/>
         <location filename="../src/sendtab.cpp" line="334"/>
         <source>File Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Yükleme</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="325"/>
@@ -841,12 +841,12 @@
     <message>
         <location filename="../src/sendtab.cpp" line="345"/>
         <source>File size too large</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya boyutu çok büyük</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>The file size </source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya boyutu </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
@@ -856,7 +856,7 @@
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>baytlar</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="361"/>
@@ -885,12 +885,12 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/sendtab.cpp" line="677"/>
         <source>Current balance      : </source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut bakiye      : </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="679"/>
         <source>Balance after this Tx: </source>
-        <translation type="unfinished"></translation>
+        <translation>Bu işlemden sonra bakiye: </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="700"/>
@@ -915,7 +915,7 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/sendtab.cpp" line="744"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; miktarı geçersiz!</translation>
     </message>
 </context>
 <context>
@@ -929,7 +929,7 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/memodialog.ui" line="52"/>
         <source>Include Reply Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Yanıt Adresini Dahil Et</translation>
     </message>
 </context>
 <context>
@@ -945,53 +945,53 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/mobileappconnector.ui" line="14"/>
         <source>Connect Mobile App</source>
-        <translation type="unfinished"></translation>
+        <translation>Mobil Uygulamaya Bağlan</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode in SilentDragonAndroid to connect your device</source>
-        <translation type="unfinished"></translation>
+        <translation>Telefonunuzu bağlamak için bu QR Kodu&apos;nu SilentDragonAndroid uygulamasından tarayın</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="43"/>
         <source>QR Code</source>
-        <translation type="unfinished"></translation>
+        <translation>QR Kodu</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="49"/>
         <source>Connection String</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı Dizisi</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="84"/>
         <source>Allow connections over the internet via SilentDragon wormhole</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon solucan deliği aracılığıyla internet üzerinden bağlantıya izin ver</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragonAndroid</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragonAndroid</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
         <source>Disconnect</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantıyı Kes</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="126"/>
         <location filename="../src/mobileappconnector.ui" line="160"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin Etiketi</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="136"/>
         <source>Last seen:</source>
-        <translation type="unfinished"></translation>
+        <translation>Son görülen:</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="153"/>
         <source>Connection type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağlantı tipi:</translation>
     </message>
 </context>
 <context>
@@ -1003,7 +1003,7 @@ z-adres&apos;i gibi görünmüyor</translation>
     <message>
         <location filename="../src/privkey.ui" line="14"/>
         <source>Private Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel Anahtarlar</translation>
     </message>
 </context>
 <context>
@@ -1088,27 +1088,33 @@ Please try restarting.
 If you previously started hushd with custom arguments, you might need to  reset HUSH3.conf.
 
 If all else fails, please run hushd manually.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gömülü hushd başlatılamadı.
+
+Lütfen yeniden başlatmayı deneyin.
+
+Daha önce hushd&apos;yi özel argümanlarla başlattıysanız, HUSH3.conf dosyasını sıfırlamanız gerekebilir.
+
+Hepsi başarısız olursa, lütfen hushd&apos;i manuel olarak çalıştırın.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="149"/>
         <source>Hide Advanced Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş Konfigürasyonu Gizle</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="149"/>
         <source>Show Advanced Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş Konfigürasyonu Göster</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="162"/>
         <source>Choose data directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Veri dizini seç</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="183"/>
         <source>Could not create HUSH3.conf.</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH3.conf oluşturulamadı.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="290"/>
@@ -1124,17 +1130,17 @@ If all else fails, please run hushd manually.</source>
     <message>
         <location filename="../src/connection.cpp" line="291"/>
         <source>MB of </source>
-        <translation>MB </translation>
+        <translation>MB /</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="291"/>
         <source>MB at </source>
-        <translation>MB</translation>
+        <translation>MB saniyede </translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="783"/>
         <source>There was an error! : </source>
-        <translation type="unfinished"></translation>
+        <translation>Bir hata oluştu! : </translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="697"/>
@@ -1164,12 +1170,12 @@ If all else fails, please run hushd manually.</source>
     <message>
         <location filename="../src/rpc.cpp" line="718"/>
         <source>Connected to hushd</source>
-        <translation type="unfinished"></translation>
+        <translation>hushd&apos;ye bağlanıldı</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="721"/>
         <source>hushd has no peer connections! Network issues?</source>
-        <translation type="unfinished"></translation>
+        <translation>hushd&apos;nin eş bağlantısı yok Ağ sorunları?</translation>
     </message>
     <message>
         <source>Connected to huhsd</source>
@@ -1216,24 +1222,26 @@ If all else fails, please run hushd manually.</source>
     <message>
         <location filename="../src/rpc.cpp" line="1084"/>
         <source>Update Available</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncelleme Mevcut</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1085"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni bir sürüm olan v%1 mevcut! Sizin sürümünüz: v%2.
+
+Yayınlanan sürümler sayfasını ziyaret etmek ister misiniz?</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1097"/>
         <source>No updates available</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncelleme yok</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1098"/>
         <source>You already have the latest release v%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaten en son sürüme (v%1) sahipsiniz</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1191"/>
@@ -1286,7 +1294,7 @@ Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıc
     <message>
         <location filename="../src/connection.cpp" line="524"/>
         <source>This may take several hours, grab some popcorn</source>
-        <translation type="unfinished"></translation>
+        <translation>Bu birkaç saat sürebilir, biraz patlamış mısır kapın</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="541"/>
@@ -1324,52 +1332,52 @@ Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıc
     <message>
         <location filename="../src/addressbook.cpp" line="110"/>
         <source>Pick</source>
-        <translation type="unfinished"></translation>
+        <translation>Seç</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="128"/>
         <source>Address or Label Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres veya Etiket Hatası</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="129"/>
         <source>Address or Label cannot be empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres veya Etiket boş olamaz</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="135"/>
         <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 geçerli bir Hush adresi gibi gözükmüyor.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="143"/>
         <source>Label Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiket Hatası</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="144"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;%1&apos; etiketi zaten var. Lütfen mevcut etiketi kaldırın.</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="156"/>
         <source>Import Address Book</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Defterini İçe Aktar</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="163"/>
         <source>Unable to open file</source>
-        <translation type="unfinished">Dosya açılamıyor</translation>
+        <translation>Dosya açılamıyor</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="183"/>
         <source>Address Book Import Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Defteri İçe Aktarma İşlemi Yapıldı</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="184"/>
         <source>Imported %1 new Address book entries</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 yeni Adres defteri girişi içeri aktarıldı</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="224"/>
@@ -1431,22 +1439,22 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/websockets.cpp" line="370"/>
         <source>Connected directly</source>
-        <translation type="unfinished"></translation>
+        <translation>Doğrudan bağlandı</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="373"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon&apos;un solucan deliği servisi aracılığıyla internet üzerinden bağlandı</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="667"/>
         <source>Node is still syncing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Düğüm hala senkronize oluyor.</translation>
     </message>
     <message>
         <location filename="../src/websockets.cpp" line="691"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
-        <translation type="unfinished"></translation>
+        <translation>Harcamaya yeterli bakiyeye sahip adres yok! Fonlarınızı tek bir adrese süpürmeyi deneyin</translation>
     </message>
 </context>
 <context>
@@ -1454,22 +1462,22 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/recurringdialog.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Diyalog</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="25"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ekle</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="32"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Düzenle</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="39"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Sil</translation>
     </message>
 </context>
 <context>
@@ -1477,72 +1485,72 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/requestdialog.ui" line="14"/>
         <source>Payment Request</source>
-        <translation type="unfinished"></translation>
+        <translation>Ödeme Talebi</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="38"/>
         <source>AddressBook</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Defteri</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="54"/>
         <source>Request From</source>
-        <translation type="unfinished"></translation>
+        <translation>İstek Adresi</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="61"/>
         <source>My Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Benim Adresim</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="78"/>
         <source>Amount in </source>
-        <translation type="unfinished"></translation>
+        <translation>Miktar: </translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="118"/>
         <source>z address</source>
-        <translation type="unfinished"></translation>
+        <translation>z adres</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="145"/>
         <source>Amount</source>
-        <translation type="unfinished">Miktar</translation>
+        <translation>Miktar</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="159"/>
         <source>The recipient will see this address in the &quot;to&quot; field when they pay your request.</source>
-        <translation type="unfinished"></translation>
+        <translation>Alıcı, isteğinizi ödediğinde bu adresi &quot;alıcı&quot; alanında görecektir.</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="179"/>
         <source>Amount USD</source>
-        <translation type="unfinished"></translation>
+        <translation>USD Miktarı</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="202"/>
         <source>Memo</source>
-        <translation type="unfinished">Memo</translation>
+        <translation>Memo</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="209"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin Etiketi</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="219"/>
         <source>Request payment from a Sapling address. You&apos;ll send a HUSH 0.0001 transaction to the address with a HUSH payment URI. The memo will be included in the transaction when the address pays you.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir Sapling adresinden ödeme talep edin. Bir HUSH ödeme URI&apos;si olan bir adrese HUSH 0.0001 işlemi gönderirsiniz. Adres size ödeme yaptığında Memo işleme dahil edilecektir.</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="50"/>
         <source>Error paying HUSH URI</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH URI ödeme hatası</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="51"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished"></translation>
+        <translation>URI bu şekilde olmalıdır: &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="65"/>
@@ -1552,17 +1560,17 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/requestdialog.cpp" line="78"/>
         <source>Pay</source>
-        <translation type="unfinished"></translation>
+        <translation>Öde</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="80"/>
         <source>You are paying a payment request. Your address will not be visible to the person requesting this payment.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bir ödeme isteği ödüyorsunuz. Adresiniz bu ödemeyi isteyen kişiye görünmez.</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="99"/>
         <source>Can only request from Sapling addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Sadece Sapling adreslerinden talep edebilir</translation>
     </message>
 </context>
 <context>
@@ -1605,12 +1613,12 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/settings.ui" line="177"/>
         <source>Connect via Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor ile bağlan</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="184"/>
         <source>Check github for updates at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Başlangıçta güncellemeler için github&apos;u kontrol et</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="232"/>
@@ -1620,47 +1628,47 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/settings.ui" line="256"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor ağına 127.0.0.1:9050&apos;de çalışan SOCKS proxy üzerinden bağlanın. Lütfen Tor servisini harici olarak kurmanız ve çalıştırmanız gerektiğini lütfen unutmayın.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="266"/>
         <source>Connect to github on startup to check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncellemeleri denetlemek için başlangıçta github&apos;a bağlanır</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="273"/>
         <source>Connect to the internet to fetch HUSH prices</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH fiyatlarını çekmek için internete bağlanır</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="280"/>
         <source>Fetch HUSH / USD prices</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH / USD fiyatlarını çek</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="288"/>
         <source>Troubleshooting</source>
-        <translation type="unfinished"></translation>
+        <translation>Sorun giderme</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="294"/>
         <source>Reindex</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden indeksle</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="301"/>
         <source>Rescan the blockchain for any missing wallet transactions and to correct your wallet balance. This may take several hours. You need to restart SilentDragon for this to take effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Eksik cüzdan işlemleri ve cüzdan bakiyenizi düzeltmek için blok zincirini yeniden tarayın. Bu birkaç saat sürebilir. Bunun gerçekleşmesi için SilentDragon&apos;u yeniden başlatmanız gerekir</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="311"/>
         <source>Rescan</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden tara</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="345"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm blok dosyalarını yeniden tarayarak blok zincirini genesis bloğundan yeniden oluşturun. Bu, donanımınıza bağlı olarak birkaç saat ila günler sürebilir. Bunun gerçekleşmesi için SilentDragon’u yeniden başlatmanız gerekir</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="225"/>
@@ -1775,17 +1783,17 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/validateaddress.ui" line="14"/>
         <source>Validate Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Doğrulama</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.ui" line="20"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin Etiketi</translation>
     </message>
     <message>
         <location filename="../src/validateaddress.ui" line="27"/>
         <source>Address:</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres:</translation>
     </message>
 </context>
 <context>
@@ -1798,7 +1806,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/validateaddress.cpp" line="6"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Değer</translation>
     </message>
 </context>
 <context>
@@ -1806,12 +1814,12 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/viewalladdresses.ui" line="14"/>
         <source>All Addresses</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Adresler</translation>
     </message>
     <message>
         <location filename="../src/viewalladdresses.ui" line="30"/>
         <source>Export All Keys</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Anahtarları Dışa Aktar</translation>
     </message>
 </context>
 <context>
@@ -1819,12 +1827,12 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Address</source>
-        <translation type="unfinished">Adres</translation>
+        <translation>Adres</translation>
     </message>
     <message>
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Balance (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bakiye (%1)</translation>
     </message>
 </context>
 <context>
@@ -1865,7 +1873,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/addressbook.ui" line="95"/>
         <source>Import Address Book</source>
-        <translation type="unfinished"></translation>
+        <translation>Adres Defterini İçe Aktar</translation>
     </message>
 </context>
 <context>
@@ -1888,7 +1896,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/confirm.ui" line="155"/>
         <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this Transaction might not work.</source>
-        <translation type="unfinished"></translation>
+        <translation>hushd&apos;nin düğümleri yok gibi görünüyor. İnternete bağlı olmadığınız için bu işlem çalışmayabilir.</translation>
     </message>
     <message>
         <location filename="../src/confirm.ui" line="168"/>
@@ -1906,42 +1914,42 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>
-        <translation type="unfinished"></translation>
+        <translation>HUSH3.conf dosyasını yapılandırma</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="61"/>
         <source>Show Advanced Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Gelişmiş Yapılandırmayı Göster</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="86"/>
         <source>Your Hush node will be configured for you automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Hush düğümünüz sizin için otomatik olarak yapılandırılacak</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="102"/>
         <source>Use custom datadir</source>
-        <translation type="unfinished"></translation>
+        <translation>Özel datadir (veri dizini) kullan</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="109"/>
         <source>Please choose a directory to store your wallet.dat and blockchain</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen wallet.dat ve blok zinciri&apos;nizi saklamak için bir dizin seçin</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="118"/>
         <source>Choose directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Dizin seç</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="154"/>
         <source>Connect over Tor</source>
-        <translation type="unfinished"></translation>
+        <translation>Tor üzerinden bağlan</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="161"/>
         <source>Please note that you&apos;ll need to already have a Tor service configured on port 9050</source>
-        <translation type="unfinished"></translation>
+        <translation>Lütfen 9050 numaralı bağlantı noktasında yapılandırılmış bir Tor servisine ihtiyacınız olduğunu unutmayın</translation>
     </message>
 </context>
 <context>
@@ -1949,22 +1957,22 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/newrecurring.ui" line="14"/>
         <source>Edit Schedule</source>
-        <translation type="unfinished"></translation>
+        <translation>Program düzenleme</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="50"/>
         <source>Schedule</source>
-        <translation type="unfinished"></translation>
+        <translation>Program</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="57"/>
         <source>Payment Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Ödeme Açıklaması</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="64"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Metin Etiketi</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="111"/>
@@ -1974,7 +1982,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/newrecurring.ui" line="118"/>
         <source>Number of payments</source>
-        <translation type="unfinished"></translation>
+        <translation>Ödeme sayısı</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="125"/>
@@ -1984,7 +1992,7 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     <message>
         <location filename="../src/newrecurring.ui" line="168"/>
         <source>Next Payment</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonraki Ödeme</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="178"/>
