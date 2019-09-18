@@ -337,18 +337,10 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     }
 
     QDir appPath(QCoreApplication::applicationDirPath());
-#ifdef Q_OS_LINUX
-    auto hushdProgram = appPath.absoluteFilePath("hushd");
-    if (!QFile(hushdProgram).exists()) {
-        hushdProgram = appPath.absoluteFilePath("hushd");
-    }
-#elif defined(Q_OS_DARWIN)
-    auto hushdProgram = appPath.absoluteFilePath("hushd");
-#elif defined(Q_OS_WIN64)
-    // we use the CLI directly
+
+#ifdef Q_OS_WIN64
     auto hushdProgram = appPath.absoluteFilePath("komodod.exe");
 #else
-    main->logger->write("Unknown OS!");
     auto hushdProgram = appPath.absoluteFilePath("komodod");
 #endif
     
@@ -389,22 +381,22 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     // Finally, actually start the full node
 
 #ifdef Q_OS_LINUX
-    main->logger->write("Starting on Linux");
-    ezcashd->start(hushdProgram);
+    qDebug() << "Starting on Linux: " + hushdProgram + " " + params;
+    ezcashd->start(hushdProgram, arguments);
 #elif defined(Q_OS_DARWIN)
-    main->logger->write("Starting on Darwin");
-    ezcashd->start(hushdProgram);
+    qDebug() << "Starting on Darwin" + hushdProgram + " " + params;
+    ezcashd->start(hushdProgram, arguments);
 #elif defined(Q_OS_WIN64)
-    main->logger->write("Starting on Win64 with params " + params);
+    qDebug() << "Starting on Win64: " + hushdProgram + " " + params;
     ezcashd->setWorkingDirectory(appPath.absolutePath());
     ezcashd->start(hushdProgram, arguments);
 #else
-    main->logger->write("Starting on Unknown OS with params " + params);
+    qDebug() << "Starting on Unknown OS(!): " + hushdProgram + " " + params;
     ezcashd->setWorkingDirectory(appPath.absolutePath());
     ezcashd->start(hushdProgram, arguments);
 #endif // Q_OS_LINUX
 
-
+    main->logger->write("Started via " + hushdProgram + " " + params);
     return true;
 }
 
