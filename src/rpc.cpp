@@ -601,7 +601,7 @@ void RPC::getInfoThenRefresh(bool force) {
 
         Settings::getInstance()->setZcashdVersion(version);
 
-	ui->longestchain->setText(QString::number(longestchain));
+        ui->longestchain->setText(QString::number(longestchain));
         ui->notarizedhashvalue->setText( ntzhash );
         ui->notarizedtxidvalue->setText( ntztxid );
         ui->lagvalue->setText( QString::number(lag) );
@@ -659,7 +659,18 @@ void RPC::getInfoThenRefresh(bool force) {
             QString localservices = QString::fromStdString( reply["localservices"].get<json::string_t>() );
 
             ui->clientname->setText(clientname);
-	    ui->localservices->setText(localservices);
+            ui->localservices->setText(localservices);
+        });
+
+        payload = {
+            {"jsonrpc", "1.0"},
+            {"id", "someid"},
+            {"method", "getwalletinfo"}
+        };
+
+        conn->doRPCIgnoreError(payload, [=](const json& reply) {
+            int  txcount = reply["txcount"].get<json::number_integer_t>();
+            ui->txcount->setText(QString::number(txcount));
         });
 
         // Call to see if the blockchain is syncing. 
