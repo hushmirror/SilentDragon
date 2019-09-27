@@ -354,7 +354,7 @@ bool ConnectionLoader::startEmbeddedZcashd() {
 
     ezcashd = std::shared_ptr<QProcess>(new QProcess(main));
     QObject::connect(ezcashd.get(), &QProcess::started, [=] () {
-        qDebug() << "Embedded hushd started via " + hushdProgram;
+        qDebug() << "Embedded hushd started via " << hushdProgram;
     });
 
     QObject::connect(ezcashd.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
@@ -363,7 +363,7 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     });
 
     QObject::connect(ezcashd.get(), &QProcess::errorOccurred, [&] (QProcess::ProcessError error) {
-        qDebug() << "Couldn't start hushd at " + hushdProgram << error;
+        qDebug() << "Couldn't start hushd at " << hushdProgram << ":" << error;
     });
 
     std::weak_ptr<QProcess> weak_obj(ezcashd);
