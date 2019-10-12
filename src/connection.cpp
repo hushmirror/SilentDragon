@@ -41,7 +41,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
         return;
     }
 
-    // Priority 2: Try to connect to detect zcash.conf and connect to it.
+    // Priority 2: Try to connect to detect HUSH3.conf and connect to it.
     auto config = autoDetectZcashConf();
     main->logger->write(QObject::tr("Attempting autoconnect"));
 
@@ -54,7 +54,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                 if (tryEzcashdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
                     if (this->startEmbeddedZcashd()) {
-                        // Embedded zcashd started up. Wait a second and then refresh the connection
+                        // Embedded hushd started up. Wait a second and then refresh the connection
                         main->logger->write("Embedded hushd started up, trying autoconnect in 1 sec");
                         QTimer::singleShot(1000, [=]() { doAutoConnect(); } );
                     } else {
