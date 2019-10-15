@@ -18,7 +18,7 @@ in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.or
 
 # Installation
 
-Head over to the releases page and grab the latest installers or binary. https://github.com/MyHush/SilentDragon/releases
+Go to the releases page and grab the latest installers or binary. https://github.com/MyHush/SilentDragon/releases
 
 ## hushd
 
