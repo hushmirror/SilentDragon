@@ -720,7 +720,7 @@ void Connection::doRPC(const json& payload, const std::function<void(json)>& cb,
         return;
     }
 
-    qDebug() << "RPC: " << QString::fromStdString(payload["method"]) << " " << QString::fromStdString(payload.dump());
+    qDebug() << "RPC:" << QString::fromStdString(payload["method"]) << QString::fromStdString(payload.dump());
 
     QNetworkReply *reply = restclient->post(*request, QByteArray::fromStdString(payload.dump()));
 
