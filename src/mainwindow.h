@@ -82,6 +82,7 @@ private:
     void setupBalancesTab();
     void setupZcashdTab();
 
+    void slot_change_theme(const QString& themeName);
     void setupTurnstileDialog();
     void setupSettingsModal();
     void setupStatusBar();
