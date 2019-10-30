@@ -1,3 +1,4 @@
+// Copyright 2019 The Hush Developers
 #include "mainwindow.h"
 #include "addressbook.h"
 #include "viewalladdresses.h"
@@ -29,6 +30,18 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    // Include css
+    QString theme_name;
+    try
+    {
+       theme_name = Settings::getInstance()->get_theme_name();
+    } catch (...)
+    {
+        theme_name = "default";
+    }
+
+    this->slot_change_theme(theme_name);
+
     ui->setupUi(this);
     logger = new Logger(this, QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("SilentDragon.log"));
 
@@ -59,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent) :
         RequestDialog::showRequestZcash(this);
     });
 
-    // Pay Zcash URI
+    // Pay Hush URI
     QObject::connect(ui->actionPay_URI, &QAction::triggered, [=] () {
         payZcashURI();
     });
@@ -469,6 +482,16 @@ void MainWindow::setupSettingsModal() {
             }
         });
 
+        int theme_index = settings.comboBoxTheme->findText(Settings::getInstance()->get_theme_name(), Qt::MatchExactly);
+        settings.comboBoxTheme->setCurrentIndex(theme_index);
+
+        QObject::connect(settings.comboBoxTheme, SIGNAL(currentIndexChanged(QString)), this, SLOT(slot_change_theme(QString)));
+        QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
+            this->slot_change_theme(theme_name);
+            // Tell the user to restart
+            QMessageBox::information(this, tr("Restart"), tr("Please restart SilentDragon to have the theme apply"), QMessageBox::Ok);
+        });
+
         // Save sent transactions
         settings.chkSaveTxs->setChecked(Settings::getInstance()->getSaveZtxs());
 
@@ -650,7 +673,7 @@ void MainWindow::website() {
 void MainWindow::donate() {
     removeExtraAddresses();
 
-    ui->Address1->setText(Settings::getDonationAddr(true));
+    ui->Address1->setText(Settings::getDonationAddr());
     ui->Address1->setCursorPosition(0);
     ui->Amount1->setText("0.00");
     ui->MemoTxt1->setText(tr("Some feedback about SilentDragon or Hush..."));
@@ -722,12 +745,12 @@ void MainWindow::postToZBoard() {
 
     QMap<QString, QString> topics;
     // Insert the main topic automatically
-    topics.insert("#Main_Area", Settings::getInstance()->isTestnet() ? Settings::getDonationAddr(true) : Settings::getZboardAddr());
+    topics.insert("#Main_Area", Settings::getInstance()->isTestnet() ? Settings::getDonationAddr() : Settings::getZboardAddr());
     zb.topicsList->addItem(topics.firstKey());
     // Then call the API to get topics, and if it returns successfully, then add the rest of the topics
     rpc->getZboardTopics([&](QMap<QString, QString> topicsMap) {
         for (auto t : topicsMap.keys()) {
-            topics.insert(t, Settings::getInstance()->isTestnet() ? Settings::getDonationAddr(true) : topicsMap[t]);
+            topics.insert(t, Settings::getInstance()->isTestnet() ? Settings::getDonationAddr() : topicsMap[t]);
             zb.topicsList->addItem(t);
         }
     });
@@ -1581,6 +1604,31 @@ void MainWindow::updateLabels() {
 
     // Update the autocomplete
     updateLabelsAutoComplete();
+}
+
+void MainWindow::slot_change_theme(const QString& theme_name)
+{
+    Settings::getInstance()->set_theme_name(theme_name);
+
+    // Include css
+    QString saved_theme_name;
+    try
+    {
+       saved_theme_name = Settings::getInstance()->get_theme_name();
+    }
+    catch (...)
+    {
+        saved_theme_name = "default";
+    }
+
+    QFile qFile(":/css/res/css/" + saved_theme_name +".css");
+    if (qFile.open(QFile::ReadOnly))
+    {
+      QString styleSheet = QLatin1String(qFile.readAll());
+      this->setStyleSheet(""); // reset styles
+      this->setStyleSheet(styleSheet);
+    }
+
 }
 
 MainWindow::~MainWindow()
