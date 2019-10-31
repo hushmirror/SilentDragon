@@ -124,7 +124,7 @@ bool Settings::isTAddress(QString addr) {
     if (!isValidAddress(addr))
         return false;
 
-    return addr.startsWith("t");
+    return addr.startsWith("R");
 }
 
 int Settings::getZcashdVersion() {
