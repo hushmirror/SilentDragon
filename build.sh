@@ -20,8 +20,8 @@ CONF=silentdragon.pro
 set -e
 qbuild () {
    qmake $CONF CONFIG+=debug
-   lupdate $CONF
-   lrelease $CONF
+   #lupdate $CONF
+   #lrelease $CONF
    make -j$JOBS
 }
 
