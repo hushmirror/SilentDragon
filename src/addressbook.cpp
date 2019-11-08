@@ -277,8 +277,8 @@ void AddressBook::readFromStorage() {
     // QList<QString> allAddresses;
     // std::transform(allLabels.begin(), allLabels.end(), 
     //     std::back_inserter(allAddresses), [=] (auto i) { return i.second; });
-    // if (!allAddresses.contains(Settings::getDonationAddr(true))) {
-    //     allLabels.append(QPair<QString, QString>("ZecWallet donation", Settings::getDonationAddr(true)));
+    // if (!allAddresses.contains(Settings::getDonationAddr())) {
+    //     allLabels.append(QPair<QString, QString>("ZecWallet donation", Settings::getDonationAddr()));
     // }
 }
 

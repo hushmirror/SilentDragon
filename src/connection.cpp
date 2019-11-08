@@ -41,7 +41,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
         return;
     }
 
-    // Priority 2: Try to connect to detect zcash.conf and connect to it.
+    // Priority 2: Try to connect to detect HUSH3.conf and connect to it.
     auto config = autoDetectZcashConf();
     main->logger->write(QObject::tr("Attempting autoconnect"));
 
@@ -54,7 +54,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                 if (tryEzcashdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
                     if (this->startEmbeddedZcashd()) {
-                        // Embedded zcashd started up. Wait a second and then refresh the connection
+                        // Embedded hushd started up. Wait a second and then refresh the connection
                         main->logger->write("Embedded hushd started up, trying autoconnect in 1 sec");
                         QTimer::singleShot(1000, [=]() { doAutoConnect(); } );
                     } else {
@@ -561,8 +561,13 @@ QString ConnectionLoader::zcashConfWritableLocation() {
 }
 
 QString ConnectionLoader::zcashParamsDir() {
-    #ifdef Q_OS_LINUX
+#ifdef Q_OS_LINUX
+    //TODO: If /usr/share/hush exists, use that. It should not be assumed writeable
     auto paramsLocation = QDir(QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".zcash-params"));
+    // Debian packages do not install into per-user dirs
+    if (!paramsLocation.exists()) {
+        paramsLocation = QDir(QDir("/").filePath("usr/share/hush"));
+    }
 #elif defined(Q_OS_DARWIN)
     auto paramsLocation = QDir(QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath("Library/Application Support/ZcashParams"));
 #else
@@ -720,7 +725,7 @@ void Connection::doRPC(const json& payload, const std::function<void(json)>& cb,
         return;
     }
 
-    qDebug() << "RPC: " << QString::fromStdString(payload["method"]) << " " << QString::fromStdString(payload.dump());
+    qDebug() << "RPC:" << QString::fromStdString(payload["method"]) << QString::fromStdString(payload.dump());
 
     QNetworkReply *reply = restclient->post(*request, QByteArray::fromStdString(payload.dump()));
 
