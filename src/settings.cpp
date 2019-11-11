@@ -124,7 +124,7 @@ bool Settings::isTAddress(QString addr) {
     if (!isValidAddress(addr))
         return false;
 
-    return addr.startsWith("t");
+    return addr.startsWith("R");
 }
 
 int Settings::getZcashdVersion() {
@@ -175,6 +175,15 @@ bool Settings::getAllowCustomFees() {
 
 void Settings::setAllowCustomFees(bool allow) {
     QSettings().setValue("options/customfees", allow);
+}
+
+QString Settings::get_theme_name() {
+    // Load from the QT Settings.
+    return QSettings().value("options/theme_name", false).toString();
+}
+
+void Settings::set_theme_name(QString theme_name) {
+    QSettings().setValue("options/theme_name", theme_name);
 }
 
 bool Settings::getSaveZtxs() {
@@ -243,7 +252,7 @@ QString Settings::getTokenName() {
     }
 }
 
-QString Settings::getDonationAddr(bool sapling) {
+QString Settings::getDonationAddr() {
     if (Settings::getInstance()->isTestnet())  {
 	    return "ztestsaplingXXX";
     }
@@ -307,7 +316,7 @@ double Settings::getZboardAmount() {
 
 QString Settings::getZboardAddr() {
     if (Settings::getInstance()->isTestnet()) {
-        return getDonationAddr(true);
+        return getDonationAddr();
     }
     else {
         return "zs10m00rvkhfm4f7n23e4sxsx275r7ptnggx39ygl0vy46j9mdll5c97gl6dxgpk0njuptg2mn9w5s";

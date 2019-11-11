@@ -81,6 +81,9 @@ public:
 
     bool    isSaplingActive();
 
+    QString get_theme_name();
+    void set_theme_name(QString theme_name);
+
     void    setUsingZcashConf(QString confLocation);
     const   QString& getZcashdConfLocation() { return _confLocation; }
 
@@ -108,7 +111,7 @@ public:
     static QString getZECUSDDisplayFormat(double bal);
 
     static QString getTokenName();
-    static QString getDonationAddr(bool sapling);
+    static QString getDonationAddr();
 
     static double  getMinerFee();
     static double  getZboardAmount();
