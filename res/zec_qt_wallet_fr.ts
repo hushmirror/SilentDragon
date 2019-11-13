@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
         <source>Label</source>
-        <translation>Etiquette</translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="11"/>
@@ -203,12 +203,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1229"/>
         <source>Local Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Service local</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1251"/>
         <source>Longest Chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Chaîne la plus longue</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1273"/>
@@ -223,17 +223,17 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1453"/>
         <source>&amp;Hush Discord</source>
-        <translation>Discord Hush</translation>
+        <translation>Discord</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1458"/>
         <source>&amp;Hush Website</source>
-        <translation>Site internet de Hush</translation>
+        <translation>Site internet</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1512"/>
         <source>Pay HUSH &amp;URI...</source>
-        <translation>Payer HUSH &amp;URI ...</translation>
+        <translation>Envoyer un paiement HUSH</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1530"/>
@@ -385,7 +385,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1028"/>
         <source>Notarized txid</source>
-        <translation>txid Notarisé</translation>
+        <translation>Txid Notarisé</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1050"/>
@@ -420,7 +420,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1185"/>
         <source>Client Name</source>
-        <translation>Nopm du client</translation>
+        <translation>Nom du client</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1207"/>
@@ -534,7 +534,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1517"/>
         <source>Connect mobile &amp;app</source>
-        <translation>Connection mobile &amp; application</translation>
+        <translation>Connection mobile &amp;application</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1520"/>
@@ -544,7 +544,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1525"/>
         <source>Request HUSH...</source>
-        <translation>Demander un paiement en HUSH</translation>
+        <translation>Demander un paiement HUSH</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="519"/>
@@ -640,7 +640,7 @@
     </message>
     <message>
         <source>Error paying HUSH URI</source>
-        <translation type="vanished">Erreur lors du payement du URI HUSH</translation>
+        <translation type="vanished">Erreur lors du paiement par URI HUSH</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="932"/>
@@ -711,7 +711,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="999"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation type="unfinished"></translation>
+        <translation>Les clés ont été importées! Une nouvelle analyse de la blockchain peut prendre plusieurs minutes. Durant ce temps, les fonctionnalités peuvent être limitées</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1018"/>
@@ -994,7 +994,7 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode in SilentDragonAndroid to connect your device</source>
-        <translation type="unfinished"></translation>
+        <translation>Scannez ce code QR depuis SilentDragonAndroid pour connecter votre appareil</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="43"/>
@@ -1004,7 +1004,7 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/mobileappconnector.ui" line="49"/>
         <source>Connection String</source>
-        <translation>Connection String</translation>
+        <translation>Chaîne de connexion :</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="84"/>
@@ -1014,11 +1014,11 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragonAndroid</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragonAndroid</translation>
     </message>
     <message>
         <source>Scan this QRCode from your SilentDragon companion app to connect your phone</source>
-        <translation type="vanished">Scannez ce code QR à partir de votre application SilentDragon mobile pour connecter votre téléphone.</translation>
+        <translation type="vanished">Scannez ce code QR à partir de votre application SilentDragon mobile pour connecter votre appareil.</translation>
     </message>
     <message>
         <source>SilentDragon Companion App</source>
@@ -1384,7 +1384,7 @@ Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu E
     <message>
         <location filename="../src/addressbook.cpp" line="128"/>
         <source>Address or Label Error</source>
-        <translation>Erreur d&apos;adresse ou d&apos;étiquette</translation>
+        <translation>Erreur d&apos;adresse ou de nom</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="129"/>
@@ -1408,7 +1408,7 @@ Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu E
     <message>
         <location filename="../src/addressbook.cpp" line="143"/>
         <source>Label Error</source>
-        <translation>Erreur d&apos;étiquette</translation>
+        <translation>Erreur de nom</translation>
     </message>
     <message>
         <location filename="../src/addressbook.cpp" line="144"/>
@@ -1510,7 +1510,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/websockets.cpp" line="691"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas d&apos;adresses avec assez de fonds à dépenser! Essayez de réunir des fonds en une seule adresse</translation>
     </message>
     <message>
         <source>No sapling or transparent addresses with enough balance to spend.</source>
@@ -1643,7 +1643,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="33"/>
         <source>hushd connection</source>
-        <translation>connection hushd</translation>
+        <translation>Connexion hushd</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="62"/>
@@ -1673,7 +1673,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="230"/>
         <source>Check github for updates at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Vérifiez les mises à jour sur Github au démarrage</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="302"/>
@@ -1718,42 +1718,42 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="312"/>
         <source>Connect to github on startup to check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Connection à github au démarrage pour vérifier les mises à jour</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="319"/>
         <source>Connect to the internet to fetch HUSH prices</source>
-        <translation type="unfinished"></translation>
+        <translation>Connection à Internet pour consulter les prix de HUSH</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="326"/>
         <source>Fetch HUSH / USD prices</source>
-        <translation type="unfinished"></translation>
+        <translation>Consulter les prix HUSH / USD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="334"/>
         <source>Explorer</source>
-        <translation type="unfinished"></translation>
+        <translation>Explorer</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="346"/>
         <source>Tx Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL Tx Explorer</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="385"/>
         <source>Address Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL Address Explorer</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="411"/>
         <source>Testnet Tx Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL Testnet Tx Explorer</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="437"/>
         <source>Testnet Address Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>URL Testnet Address Explorer</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="456"/>
@@ -1778,7 +1778,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="513"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
-        <translation>Reconstruisez l&apos;intégralité de la blockchain à partir du bloc genesis en analysant à nouveau tous les fichiers de bloc Cela peut prendre plusieurs heures à plusieurs jours, selon votre matériel. Vous devez redémarrer SilentDragon pour que cela prenne effet</translation>
+        <translation>Reconstruisez l&apos;intégralité de la blockchain à partir du bloc genesis en analysant à nouveau tous les fichiers de bloc. Cela peut prendre plusieurs heures à plusieurs jours selon votre matériel. Vous devez redémarrer SilentDragon pour que cela prenne effet</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="271"/>
@@ -1798,7 +1798,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="261"/>
         <source>Allow overriding the default fees when sending transactions. Enabling this option may compromise your privacy since fees are transparent. </source>
-        <translation>Permettre le changement des frais par défaut lors de l&apos;envoi de transactions. L&apos;activation de cette option peut compromettre votre confidentialité, car les frais sont transparents. </translation>
+        <translation>Permettre le changement des frais par défaut lors de l&apos;envoi de transactions. L&apos;activation de cette option peut compromettre votre confidentialité car les frais sont transparents. </translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="251"/>
@@ -1808,7 +1808,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="295"/>
         <source>Shield change from t-Addresses to your sapling address</source>
-        <translation>Rendre privé le changement de la t-Addresse vers la z-Addresse</translation>
+        <translation>Rendre privé le changement de la t-Adresse vers la z-Adresse</translation>
     </message>
 </context>
 <context>
