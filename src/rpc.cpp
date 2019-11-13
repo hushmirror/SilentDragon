@@ -1,9 +1,9 @@
+// Copyright 2019 The Hush Developers
 #include "rpc.h"
 
 #include "addressbook.h"
 #include "settings.h"
 #include "senttxstore.h"
-#include "turnstile.h"
 #include "version.h"
 #include "websockets.h"
 
@@ -17,8 +17,6 @@ RPC::RPC(MainWindow* main) {
 
     this->main = main;
     this->ui = main->ui;
-
-    this->turnstile = new Turnstile(this, main);
 
     // Setup balances table model
     balancesTableModel = new BalancesTableModel(main->ui->balancesTable);
@@ -62,7 +60,6 @@ RPC::~RPC() {
 
     delete transactionsTableModel;
     delete balancesTableModel;
-    delete turnstile;
 
     delete utxos;
     delete allBalances;
@@ -591,9 +588,6 @@ void RPC::getInfoThenRefresh(bool force) {
             // Something changed, so refresh everything.
             lastBlock = curBlock;
 
-            // See if the turnstile migration has any steps that need to be done.
-            turnstile->executeMigrationStep();
-
             refreshBalances();        
             refreshAddresses(); // This calls refreshZSentTransactions() and refreshReceivedZTrans()
             refreshTransactions();
@@ -691,9 +685,10 @@ void RPC::getInfoThenRefresh(bool force) {
                 QString::number(blockNumber) %
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
-                " Notarized: " % QString::number(notarized) %
-                " HUSH/USD=$" % QString::number( (double) Settings::getInstance()->getZECPrice() );
-            main->statusLabel->setText(statusText);   
+                " Lag: " % QString::number(blockNumber - notarized) %
+                " HUSH/USD=$" % QString::number( (double) Settings::getInstance()->getZECPrice() ) %
+                " " % QString::number( Settings::getInstance()->getBTCPrice() ) % "sat";
+            main->statusLabel->setText(statusText);
 
             auto zecPrice = Settings::getUSDFormat(1);
             QString tooltip;
@@ -1113,6 +1108,7 @@ void RPC::refreshZECPrice() {
                     qDebug() << reply->errorString();
                 }
                 Settings::getInstance()->setZECPrice(0);
+                Settings::getInstance()->setBTCPrice(0);
                 return;
             }
 
@@ -1121,6 +1117,7 @@ void RPC::refreshZECPrice() {
             auto parsed = json::parse(all, nullptr, false);
             if (parsed.is_discarded()) {
                 Settings::getInstance()->setZECPrice(0);
+                Settings::getInstance()->setBTCPrice(0);
                 return;
             }
 
@@ -1134,7 +1131,9 @@ void RPC::refreshZECPrice() {
                 // TODO: support BTC/EUR prices as well
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
                 qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
+                qDebug() << "HUSH = " << QString::number((double)hush["btc"]) << " sat ";
                 Settings::getInstance()->setZECPrice( hush["usd"] );
+                Settings::getInstance()->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 
                 return;
             } else {
@@ -1147,17 +1146,18 @@ void RPC::refreshZECPrice() {
 
         // If nothing, then set the price to 0;
         Settings::getInstance()->setZECPrice(0);
+        Settings::getInstance()->setBTCPrice(0);
     });
 }
 
 void RPC::shutdownZcashd() {
     // Shutdown embedded zcashd if it was started
     if (ezcashd == nullptr || ezcashd->processId() == 0 || conn == nullptr) {
-        // No zcashd running internally, just return
+        // No hushd running internally, just return
         return;
     }
 
-	std::string method = "stop";
+    std::string method = "stop";
     conn->doRPCWithDefaultErrorHandling(makePayload(method), [=](auto) {});
     conn->shutdown();
 
@@ -1202,60 +1202,6 @@ void RPC::shutdownZcashd() {
     }
 }
 
-
-// Fetch the Z-board topics list
-void RPC::getZboardTopics(std::function<void(QMap<QString, QString>)> cb) {
-    if (conn == nullptr)
-        return noConnection();
-
-    QUrl cmcURL("http://z-board.net/listTopics");
-
-    QNetworkRequest req;
-    req.setUrl(cmcURL);
-
-    QNetworkReply *reply = conn->restclient->get(req);
-
-    QObject::connect(reply, &QNetworkReply::finished, [=] {
-        reply->deleteLater();
-
-        try {
-            if (reply->error() != QNetworkReply::NoError) {
-                auto parsed = json::parse(reply->readAll(), nullptr, false);
-                if (!parsed.is_discarded() && !parsed["error"]["message"].is_null()) {
-                    qDebug() << QString::fromStdString(parsed["error"]["message"]);
-                }
-                else {
-                    qDebug() << reply->errorString();
-                }
-                return;
-            }
-
-            auto all = reply->readAll();
-
-            auto parsed = json::parse(all, nullptr, false);
-            if (parsed.is_discarded()) {
-                return;
-            }
-
-            QMap<QString, QString> topics;
-            for (const json& item : parsed["topics"].get<json::array_t>()) {
-                if (item.find("addr") == item.end() || item.find("topicName") == item.end())
-                    return;
-
-                QString addr  = QString::fromStdString(item["addr"].get<json::string_t>());
-                QString topic = QString::fromStdString(item["topicName"].get<json::string_t>());
-                
-                topics.insert(topic, addr);
-            }
-
-            cb(topics);
-        }
-        catch (...) {
-            // If anything at all goes wrong, just set the price to 0 and move on.
-            qDebug() << QString("Caught something nasty");
-        }
-    });
-}
 
 /** 
  * Get a Sapling address from the user's wallet

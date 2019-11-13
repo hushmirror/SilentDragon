@@ -1,3 +1,4 @@
+// Copyright 2019 The Hush developers
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
@@ -88,7 +89,9 @@ public:
     const   QString& getZcashdConfLocation() { return _confLocation; }
 
     void    setZECPrice(double p) { zecPrice = p; }
+    void    setBTCPrice(unsigned int p) { btcPrice = p; }
     double  getZECPrice();
+    unsigned int  getBTCPrice();
 
     void    setPeers(int peers);
     int     getPeers();
@@ -126,6 +129,7 @@ public:
 
     static const QString labelRegExp;
 
+    //TODO: add these as advanced options, with sane minimums
     static const int     updateSpeed         = 10 * 1000;        // 10 sec
     static const int     quickUpdateSpeed    = 3  * 1000;        // 3 sec
     static const int     priceRefreshSpeed   = 15 * 60 * 1000;   // 15 mins
@@ -148,6 +152,7 @@ private:
     int     _peerConnections  = 0;
 
     double  zecPrice          = 0.0;
+    unsigned int  btcPrice    = 0.0;
 };
 
 #endif // SETTINGS_H
