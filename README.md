@@ -18,7 +18,7 @@ in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.or
 
 # Installation
 
-Head over to the releases page and grab the latest installers or binary. https://github.com/MyHush/SilentDragon/releases
+Go to the releases page and grab the latest installers or binary. https://github.com/MyHush/SilentDragon/releases
 
 ## hushd
 
@@ -43,7 +43,7 @@ hushd, or compile hushd as well.
 
 
 ```
-sudo apt-get install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
+sudo apt-get -y install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
 git clone https://github.com/MyHush/SilentDragon.git
 cd SilentDragon
 ./build.sh
