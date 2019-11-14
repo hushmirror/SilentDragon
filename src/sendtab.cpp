@@ -1,3 +1,4 @@
+// Copyright 2019 The Hush developers
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "addressbook.h"
@@ -705,27 +706,28 @@ void MainWindow::sendButton() {
         // abort the Tx
         return;
     }
-    
+
     // Show a dialog to confirm the Tx
     if (confirmTx(tx)) {
         // And send the Tx
-        rpc->executeTransaction(tx, 
+        rpc->executeTransaction(tx,
             [=] (QString opid) {
-                ui->statusBar->showMessage(tr("Computing Tx: ") % opid);
+                ui->statusBar->showMessage(tr("Computing transaction: ") % opid);
+                qDebug() << "Computing opid: " << opid;
             },
             [=] (QString, QString txid) { 
                 ui->statusBar->showMessage(Settings::txidStatusMessage + " " + txid);
             },
             [=] (QString opid, QString errStr) {
-                ui->statusBar->showMessage(QObject::tr(" Tx ") % opid % QObject::tr(" failed"), 15 * 1000);
+                ui->statusBar->showMessage(QObject::tr(" Transaction ") % opid % QObject::tr(" failed"), 15 * 1000);
 
                 if (!opid.isEmpty())
                     errStr = QObject::tr("The transaction with id ") % opid % QObject::tr(" failed. The error was") + ":\n\n" + errStr; 
 
-                QMessageBox::critical(this, QObject::tr("Transaction Error"), errStr, QMessageBox::Ok);            
+                QMessageBox::critical(this, QObject::tr("Transaction Error"), errStr, QMessageBox::Ok);
             }
         );
-    }        
+    }
 }
 
 QString MainWindow::doSendTxValidations(Tx tx) {
