@@ -1,3 +1,4 @@
+// Copyright 2019 The Hush developers
 #include "websockets.h"
 
 #include "rpc.h"
@@ -5,7 +6,7 @@
 #include "ui_mobileappconnector.h"
 #include "version.h"
 
-// Weap the sendTextMessage to check if the connection is valid and that the parent WebServer didn't close this connection
+// Wrap the sendTextMessage to check if the connection is valid and that the parent WebServer didn't close this connection
 // for some reason.
 void ClientWebSocket::sendTextMessage(QString m) {
     if (client) {
@@ -101,23 +102,32 @@ WormholeClient::~WormholeClient() {
 
     if (timer)
         timer->stop();
-        
+
+    qDebug() << "Wormhole client destroyed";
     delete timer;
+}
+
+void ws_error() {
+    qDebug() << "websocket error!";
 }
 
 void WormholeClient::connect() {
     delete m_webSocket;
     m_webSocket = new QWebSocket();
+    QUrl wormhole = QUrl("wss://wormhole.myhush.org:443");
 
     QObject::connect(m_webSocket, &QWebSocket::connected, this, &WormholeClient::onConnected);
     QObject::connect(m_webSocket, &QWebSocket::disconnected, this, &WormholeClient::closed);
 
-    m_webSocket->open(QUrl("wss://wormhole.myhush.org:443"));
+    qDebug() << "Opening connection to the SilentDragonWormhole";
+    m_webSocket->open(wormhole);
+    qDebug() << "Opened connection to " << wormhole;
     //TODO: use env var to over-ride
     //m_webSocket->open(QUrl("ws://127.0.0.1:7070"));
 }
 
-void WormholeClient::retryConnect() {    
+
+void WormholeClient::retryConnect() {
 	int max_retries = 10;
 	qDebug() << "Websocket retryConnect, retryCount=" << retryCount;
 
@@ -153,11 +163,11 @@ void WormholeClient::onConnected()
     QObject::connect(m_webSocket, &QWebSocket::textMessageReceived,
                         this, &WormholeClient::onTextMessageReceived);
 
-    auto payload = QJsonDocument( QJsonObject {
-        {"register", code}
-    }).toJson();
+    auto payload = QJsonDocument( QJsonObject { {"register", code} }).toJson();
 
+    qDebug() << "Sending register";
     m_webSocket->sendTextMessage(payload);
+    qDebug() << "Sent registration message with code=" << code;
 
     // On connected, we'll also create a timer to ping it every 4 minutes, since the websocket 
     // will timeout after 5 minutes
@@ -284,14 +294,17 @@ void AppDataServer::connectAppDialog(MainWindow* parent) {
         if (state == Qt::Checked) {
 
         }
+        qDebug() << "Updating QR";
         updateUIWithNewQRCode(parent);
     });
 
     // If we're not listening for the app, then start the websockets
     if (!parent->isWebsocketListening()) {
         QString wormholecode = "";
-        if (getAllowInternetConnection())
+        if (getAllowInternetConnection()) {
             wormholecode = AppDataServer::getInstance()->getWormholeCode(AppDataServer::getInstance()->getSecretHex());
+            qDebug() << "Generated wormholecode=" << wormholecode;
+        }
 
         parent->createWebsocket(wormholecode);
     }
@@ -681,6 +694,7 @@ void AppDataServer::processSendTx(QJsonObject sendTx, MainWindow* mainwindow, st
         if (Settings::getInstance()->isSproutAddress(i))
             continue;
         // Filter out balances that don't have the requisite amount
+        // TODO: should this be amt+tx.fee?
         if (allBalances->value(i) < amt)
             continue;
 
