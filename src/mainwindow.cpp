@@ -122,6 +122,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setupZcashdTab();
 
     rpc = new RPC(this);
+    qDebug() << "Created RPC";
 
     restoreSavedStates();
 
@@ -132,6 +133,7 @@ MainWindow::MainWindow(QWidget *parent) :
         if (ads->getAllowInternetConnection())
             wormholecode = ads->getWormholeCode(ads->getSecretHex());
 
+        qDebug() << "MainWindow: createWebsocket with wormholcode=" << wormholecode;
         createWebsocket(wormholecode);
     }
 }
@@ -142,10 +144,11 @@ void MainWindow::createWebsocket(QString wormholecode) {
     // TODO: env var
     bool msgDebug = true;
     wsserver = new WSServer(wsport, msgDebug, this);
-    qDebug() << "Listening for app connections on port " << wsport;
+    qDebug() << "createWebsocket: Listening for app connections on port " << wsport;
 
     if (!wormholecode.isEmpty()) {
         // Connect to the wormhole service
+        qDebug() << "Creating WormholeClient";
         wormhole = new WormholeClient(this, wormholecode);
     }
 }
@@ -165,6 +168,7 @@ bool MainWindow::isWebsocketListening() {
 }
 
 void MainWindow::replaceWormholeClient(WormholeClient* newClient) {
+    qDebug() << "replacing WormholeClient";
     delete wormhole;
     wormhole = newClient;
 }

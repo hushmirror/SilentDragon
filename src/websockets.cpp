@@ -111,6 +111,13 @@ void ws_error() {
     qDebug() << "websocket error!";
 }
 
+void WormholeClient::sslerrors(const QList<QSslError> &)
+{
+    qDebug() << "SSL errors occurred!";
+    m_webSocket->ignoreSslErrors();
+
+}
+
 void WormholeClient::connect() {
     delete m_webSocket;
     m_webSocket = new QWebSocket();
@@ -118,6 +125,7 @@ void WormholeClient::connect() {
 
     QObject::connect(m_webSocket, &QWebSocket::connected, this, &WormholeClient::onConnected);
     QObject::connect(m_webSocket, &QWebSocket::disconnected, this, &WormholeClient::closed);
+    QObject::connect(m_webSocket, QOverload<const QList<QSslError>&>::of(&QWebSocket::sslErrors), this, &WormholeClient::sslerrors);
 
     qDebug() << "Opening connection to the SilentDragonWormhole";
     m_webSocket->open(wormhole);
@@ -127,6 +135,20 @@ void WormholeClient::connect() {
 }
 
 
+void WormholeClient::retryConnect() {
+    QTimer::singleShot(5 * 1000 * pow(2, retryCount), [=]() {
+        if (retryCount < 10) {
+            qDebug() << "Retrying websocket connection, count=" << this->retryCount;
+            this->retryCount++;
+            connect();
+        }
+        else {
+            qDebug() << "Retry count exceeded, will not attempt retry any more";
+        }
+    });
+}
+
+/*
 void WormholeClient::retryConnect() {
 	int max_retries = 10;
 	qDebug() << "Websocket retryConnect, retryCount=" << retryCount;
@@ -145,6 +167,7 @@ void WormholeClient::retryConnect() {
         qDebug() << "Invalid retryCount=" << retryCount << " detected!";
     }
 }
+*/
 
 // Called when the websocket is closed. If this was closed without our explicitly closing it, 
 // then we need to try and reconnect
@@ -193,11 +216,12 @@ void WormholeClient::onTextMessageReceived(QString message)
 // ==============================
 // AppDataServer
 // ==============================
-AppDataServer* AppDataServer::instance = nullptr; 
+AppDataServer* AppDataServer::instance = nullptr;
 
 QString AppDataServer::getWormholeCode(QString secretHex) {
+    qDebug() << "AppDataServer::getWormholeCode";
     unsigned char* secret = new unsigned char[crypto_secretbox_KEYBYTES];
-    sodium_hex2bin(secret, crypto_secretbox_KEYBYTES, secretHex.toStdString().c_str(), crypto_secretbox_KEYBYTES*2, 
+    sodium_hex2bin(secret, crypto_secretbox_KEYBYTES, secretHex.toStdString().c_str(), crypto_secretbox_KEYBYTES*2,
         NULL, NULL, NULL);
 
     unsigned char* out1 = new unsigned char[crypto_hash_sha256_BYTES];
@@ -207,7 +231,7 @@ QString AppDataServer::getWormholeCode(QString secretHex) {
     crypto_hash_sha256(out2, out1, crypto_hash_sha256_BYTES);
 
     char* wmcode = new char[crypto_hash_sha256_BYTES*2 + 1];
-    sodium_bin2hex(wmcode, crypto_hash_sha256_BYTES*2 + 1, out2, crypto_hash_sha256_BYTES);    
+    sodium_bin2hex(wmcode, crypto_hash_sha256_BYTES*2 + 1, out2, crypto_hash_sha256_BYTES);
 
     QString wmcodehex(wmcode);
 
@@ -216,7 +240,7 @@ QString AppDataServer::getWormholeCode(QString secretHex) {
     delete[] out1;
     delete[] secret;
 
-	qDebug() << "Created wormhole secretHex";
+    qDebug() << "Created wormhole secretHex=" << wmcodehex;
     return wmcodehex;
 }
 
@@ -275,17 +299,18 @@ void AppDataServer::connectAppDialog(MainWindow* parent) {
     ui = new Ui_MobileAppConnector();
     ui->setupUi(&d);
     Settings::saveRestore(&d);
+    qDebug() << "connectAppDialog";
 
     updateUIWithNewQRCode(parent);
     updateConnectedUI();
 
     QObject::connect(ui->btnDisconnect, &QPushButton::clicked, [=] () {
+        qDebug() << "Disconnecting";
         QSettings().setValue("mobileapp/connectedname", "");
         saveNewSecret("");
-
         updateConnectedUI();
     });
-    
+
     QObject::connect(ui->txtConnStr, &QLineEdit::cursorPositionChanged, [=](int, int) {
         ui->txtConnStr->selectAll();
     });
@@ -300,6 +325,7 @@ void AppDataServer::connectAppDialog(MainWindow* parent) {
 
     // If we're not listening for the app, then start the websockets
     if (!parent->isWebsocketListening()) {
+        qDebug() << "websocket not listening";
         QString wormholecode = "";
         if (getAllowInternetConnection()) {
             wormholecode = AppDataServer::getInstance()->getWormholeCode(AppDataServer::getInstance()->getSecretHex());
@@ -307,21 +333,22 @@ void AppDataServer::connectAppDialog(MainWindow* parent) {
         }
 
         parent->createWebsocket(wormholecode);
+    } else {
+        qDebug() << "no websocket not listening";
     }
 
     d.exec();
 
     // If there is nothing connected when the dialog exits, then shutdown the websockets
     if (!isAppConnected()) {
+        qDebug() << "no app connected, stopping websockets";
         parent->stopWebsocket();
     }
 
     // Cleanup
     tempSecret = "";
-    
     delete tempWormholeClient;
     tempWormholeClient = nullptr;
-
     delete ui;
     ui = nullptr;
 }

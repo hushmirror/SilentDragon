@@ -64,6 +64,7 @@ public:
 
     void connect();
     void retryConnect();
+    void sslerrors(const QList<QSslError> &);
 
 private:
     MainWindow* parent = nullptr;
