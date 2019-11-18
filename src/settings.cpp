@@ -1,3 +1,4 @@
+// Copyright 2019 The Hush developers
 #include "mainwindow.h"
 #include "settings.h"
 
