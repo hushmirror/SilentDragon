@@ -37,13 +37,15 @@ WSServer::WSServer(quint16 port, bool debug, QObject *parent) :
 
 WSServer::~WSServer()
 {
-    qDebug() << "Closing websocket";
+    qDebug() << "Closing websocket server";
     m_pWebSocketServer->close();
     qDeleteAll(m_clients.begin(), m_clients.end());
+    qDebug() << "Deleted all websocket clients";
 }
 
 void WSServer::onNewConnection()
 {
+    qDebug() << "Websocket server: new connection";
     QWebSocket *pSocket = m_pWebSocketServer->nextPendingConnection();
 
     connect(pSocket, &QWebSocket::textMessageReceived, this, &WSServer::processTextMessage);
@@ -91,20 +93,25 @@ WormholeClient::WormholeClient(MainWindow* p, QString wormholeCode) {
     this->parent = p;
     this->code = wormholeCode;
     connect();
+    qDebug() << "New wormhole client after connect()";
 }
 
 WormholeClient::~WormholeClient() {
     shuttingDown = true;
 
     if (m_webSocket->isValid()) {
+        qDebug() << "Wormhole closing!";
         m_webSocket->close();
     }
 
-    if (timer)
+    if (timer) {
+        qDebug() << "Wormhole timer stopping";
         timer->stop();
+    }
 
     qDebug() << "Wormhole client destroyed";
     delete timer;
+    qDebug() << "Wormhole timer deleted";
 }
 
 void ws_error() {
@@ -114,11 +121,13 @@ void ws_error() {
 void WormholeClient::sslerrors(const QList<QSslError> &)
 {
     qDebug() << "SSL errors occurred!";
-    m_webSocket->ignoreSslErrors();
+    //TODO: don't do this in prod
+    //m_webSocket->ignoreSslErrors();
 
 }
 
 void WormholeClient::connect() {
+    qDebug() << "Wormhole::connect";
     delete m_webSocket;
     m_webSocket = new QWebSocket();
     QUrl wormhole = QUrl("wss://wormhole.myhush.org:443");
@@ -180,11 +189,10 @@ void WormholeClient::closed() {
 
 void WormholeClient::onConnected()
 {
-    qDebug() << "WebSocket connected";
     retryCount = 0;
+    qDebug() << "WebSocket connected, retryCount=" << retryCount;
 
-    QObject::connect(m_webSocket, &QWebSocket::textMessageReceived,
-                        this, &WormholeClient::onTextMessageReceived);
+    QObject::connect(m_webSocket, &QWebSocket::textMessageReceived, this, &WormholeClient::onTextMessageReceived);
 
     auto payload = QJsonDocument( QJsonObject { {"register", code} }).toJson();
 
@@ -195,15 +203,18 @@ void WormholeClient::onConnected()
     // On connected, we'll also create a timer to ping it every 4 minutes, since the websocket 
     // will timeout after 5 minutes
     timer = new QTimer(parent);
+    qDebug() << "Created QTimer";
     QObject::connect(timer, &QTimer::timeout, [=]() {
-        if (!shuttingDown && m_webSocket->isValid()) {
+        qDebug() << "Timer timout!";
+        if (!shuttingDown && m_webSocket && m_webSocket->isValid()) {
             auto payload = QJsonDocument(QJsonObject { {"ping", "ping"} }).toJson();
             qint64 bytes = m_webSocket->sendTextMessage(payload);
-	        qDebug() << "Sent ping, " << bytes << " bytes";
+            qDebug() << "Sent ping, " << bytes << " bytes";
         }
     });
-    qDebug() << "Starting timer";
-    timer->start(4 * 60 * 1000); // 4 minutes
+    unsigned int interval = 4*60*1000;
+    timer->start(interval); // 4 minutes
+    qDebug() << "Started timer with interval=" << interval;
 }
 
 void WormholeClient::onTextMessageReceived(QString message)
@@ -351,6 +362,7 @@ void AppDataServer::connectAppDialog(MainWindow* parent) {
     tempWormholeClient = nullptr;
     delete ui;
     ui = nullptr;
+    qDebug() << "Destroyed tempWormholeClient and ui";
 }
 
 void AppDataServer::updateUIWithNewQRCode(MainWindow* mainwindow) {
@@ -369,9 +381,9 @@ void AppDataServer::updateUIWithNewQRCode(MainWindow* mainwindow) {
 
     if (ipv4Addr.isEmpty())
         return;
-    
+
     QString uri = "ws://" + ipv4Addr + ":8777";
-	qDebug() << "Websocket URI: " << uri;
+    qDebug() << "Websocket URI: " << uri;
 
     // Get a new secret
     unsigned char* secretBin = new unsigned char[crypto_secretbox_KEYBYTES];
@@ -390,10 +402,11 @@ void AppDataServer::updateUIWithNewQRCode(MainWindow* mainwindow) {
 
     ui->qrcode->setQrcodeString(codeStr);
     ui->txtConnStr->setText(codeStr);
+    qDebug() << "New QR="<<codeStr;
 }
 
 void AppDataServer::registerNewTempSecret(QString tmpSecretHex, bool allowInternet, MainWindow* main) {
-	qDebug() << "Registering new tempSecret, allowInternet=" << allowInternet;	
+    qDebug() << "Registering new tempSecret, allowInternet=" << allowInternet;	
     tempSecret = tmpSecretHex;
 
     delete tempWormholeClient;
@@ -401,8 +414,8 @@ void AppDataServer::registerNewTempSecret(QString tmpSecretHex, bool allowIntern
 
     if (allowInternet) {
         tempWormholeClient = new WormholeClient(main, getWormholeCode(tempSecret));
-		qDebug() << "Created new wormhole client";
-	}
+        qDebug() << "Created new wormhole client";
+    }
 }
 
 QString AppDataServer::connDesc(AppConnectionType t) {
@@ -455,6 +468,7 @@ void AppDataServer::saveNonceHex(NonceType nt, QString noncehex) {
 
 // Encrypt an outgoing message with the stored secret key.
 QString AppDataServer::encryptOutgoing(QString msg) {
+    qDebug() << "Encrypting msg";
     if (msg.length() % 256 > 0) {
         msg = msg + QString(" ").repeated(256 - (msg.length() % 256));
     }
@@ -494,7 +508,6 @@ QString AppDataServer::encryptOutgoing(QString msg) {
             {"payload", QString(encryptedHex)},
             {"to", getWormholeCode(getSecretHex())}
         });
-    
     delete[] noncebin;
     delete[] newLocalNonce;
     delete[] secret;
@@ -510,6 +523,7 @@ QString AppDataServer::encryptOutgoing(QString msg) {
   unless the skipNonceCheck = true, which is used when attempting decrtption with a temp secret key.
 */
 QString AppDataServer::decryptMessage(QJsonDocument msg, QString secretHex, QString lastRemoteNonceHex) {
+    qDebug() << "Decrypting message";
     // Decrypt and then process
     QString noncehex = msg.object().value("nonce").toString();
     QString encryptedhex = msg.object().value("payload").toString();
@@ -571,12 +585,15 @@ QString AppDataServer::decryptMessage(QJsonDocument msg, QString secretHex, QStr
     delete[] noncebin;
     delete[] encrypted;
     delete[] decrypted;
-    
+
+    qDebug() << "Returning decrypted payload="<<payload;
     return payload;
 }
 
 // Process an incoming text message. The message has to be encrypted with the secret key (or the temporary secret key)
 void AppDataServer::processMessage(QString message, MainWindow* mainWindow, std::shared_ptr<ClientWebSocket> pClient, AppConnectionType connType) {
+    qDebug() << "processMessage message";
+    //qDebug() << "processMessage message=" << message; // this can log sensitive info
     auto replyWithError = [=]() {
         auto r = QJsonDocument(QJsonObject{
                     {"error", "Encryption error"},
@@ -660,6 +677,7 @@ void AppDataServer::processMessage(QString message, MainWindow* mainWindow, std:
 
 // Decrypted method will be executed here. 
 void AppDataServer::processDecryptedMessage(QString message, MainWindow* mainWindow, std::shared_ptr<ClientWebSocket> pClient) {
+    //qDebug() << "processDecryptedMessage message=" << message;
     // First, extract the command from the message
     auto msg = QJsonDocument::fromJson(message.toUtf8());
 
@@ -692,7 +710,7 @@ void AppDataServer::processDecryptedMessage(QString message, MainWindow* mainWin
 
 // "sendTx" command. This method will actually send money, so be careful with everything
 void AppDataServer::processSendTx(QJsonObject sendTx, MainWindow* mainwindow, std::shared_ptr<ClientWebSocket> pClient) {
-    qDebug() << "processSendTx";
+    qDebug() << "processSendTx with to=" << sendTx["to"].toString();
     auto error = [=](QString reason) {
         auto r = QJsonDocument(QJsonObject{
            {"errorCode", -1},
