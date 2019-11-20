@@ -1,9 +1,9 @@
+// Copyright 2019 The Hush Developers
 #include "rpc.h"
 
 #include "addressbook.h"
 #include "settings.h"
 #include "senttxstore.h"
-#include "turnstile.h"
 #include "version.h"
 #include "websockets.h"
 
@@ -17,8 +17,6 @@ RPC::RPC(MainWindow* main) {
 
     this->main = main;
     this->ui = main->ui;
-
-    this->turnstile = new Turnstile(this, main);
 
     // Setup balances table model
     balancesTableModel = new BalancesTableModel(main->ui->balancesTable);
@@ -62,7 +60,6 @@ RPC::~RPC() {
 
     delete transactionsTableModel;
     delete balancesTableModel;
-    delete turnstile;
 
     delete utxos;
     delete allBalances;
@@ -104,25 +101,34 @@ void RPC::setConnection(Connection* c) {
     refresh(true);
 }
 
-void RPC::getTAddresses(const std::function<void(json)>& cb) {
+json RPC::makePayload(std::string method, std::string params) {
     json payload = {
         {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "getaddressesbyaccount"},
-        {"params", {""}}
+        {"id", "42" },
+        {"method", method },
+        {"params", {params}}
     };
+	return payload;
+}
 
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+json RPC::makePayload(std::string method) {
+    json payload = {
+        {"jsonrpc", "1.0"},
+        {"id", "42" },
+        {"method", method },
+    };
+	return payload;
+}
+
+void RPC::getTAddresses(const std::function<void(json)>& cb) {
+    std::string method = "getaddressesbyaccount";
+    std::string params = "";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method, std::string("")), cb);
 }
 
 void RPC::getZAddresses(const std::function<void(json)>& cb) {
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "z_listaddresses"},
-    };
-
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+    std::string method = "z_listaddresses";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
 }
 
 void RPC::getTransparentUnspent(const std::function<void(json)>& cb) {
@@ -159,35 +165,19 @@ void RPC::newZaddr(bool sapling, const std::function<void(json)>& cb) {
 }
 
 void RPC::newTaddr(const std::function<void(json)>& cb) {
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "getnewaddress"},
-    };
 
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+	std::string method = "getnewaddress";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
 }
 
 void RPC::getZPrivKey(QString addr, const std::function<void(json)>& cb) {
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "z_exportkey"},
-        {"params", { addr.toStdString() }},
-    };
-    
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+	std::string method = "z_exportkey";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method, addr.toStdString()), cb);
 }
 
 void RPC::getTPrivKey(QString addr, const std::function<void(json)>& cb) {
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "dumpprivkey"},
-        {"params", { addr.toStdString() }},
-    };
-    
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+	std::string method = "dumpprivkey";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method, addr.toStdString()), cb);
 }
 
 void RPC::importZPrivKey(QString privkey, bool rescan, const std::function<void(json)>& cb) {
@@ -232,15 +222,7 @@ void RPC::importTPrivKey(QString privkey, bool rescan, const std::function<void(
 
 void RPC::validateAddress(QString address, const std::function<void(json)>& cb) {
     QString method = address.startsWith("z") ? "z_validateaddress" : "validateaddress";
-
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", method.toStdString() },
-        {"params", { address.toStdString() } },
-    };
-    
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+    conn->doRPCWithDefaultErrorHandling(makePayload(method.toStdString(), address.toStdString()), cb);
 }
 
 void RPC::getBalance(const std::function<void(json)>& cb) {
@@ -255,13 +237,8 @@ void RPC::getBalance(const std::function<void(json)>& cb) {
 }
 
 void RPC::getTransactions(const std::function<void(json)>& cb) {
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "listtransactions"}
-    };
-
-    conn->doRPCWithDefaultErrorHandling(payload, cb);
+	std::string method = "listtransactions";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
 }
 
 void RPC::sendZTransaction(json params, const std::function<void(json)>& cb, 
@@ -565,14 +542,9 @@ void RPC::getInfoThenRefresh(bool force) {
     if  (conn == nullptr) 
         return noConnection();
 
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "getinfo"}
-    };
-
     static bool prevCallSucceeded = false;
-    conn->doRPC(payload, [=] (const json& reply) {   
+	std::string method = "getinfo";
+    conn->doRPC(makePayload(method), [=] (const json& reply) {   
         prevCallSucceeded = true;
         // Testnet?
         if (!reply["testnet"].is_null()) {
@@ -601,7 +573,7 @@ void RPC::getInfoThenRefresh(bool force) {
 
         Settings::getInstance()->setZcashdVersion(version);
 
-	ui->longestchain->setText(QString::number(longestchain));
+        ui->longestchain->setText(QString::number(longestchain));
         ui->notarizedhashvalue->setText( ntzhash );
         ui->notarizedtxidvalue->setText( ntztxid );
         ui->lagvalue->setText( QString::number(lag) );
@@ -615,9 +587,6 @@ void RPC::getInfoThenRefresh(bool force) {
         if ( force || (curBlock != lastBlock) ) {
             // Something changed, so refresh everything.
             lastBlock = curBlock;
-
-            // See if the turnstile migration has any steps that need to be done.
-            turnstile->executeMigrationStep();
 
             refreshBalances();        
             refreshAddresses(); // This calls refreshZSentTransactions() and refreshReceivedZTrans()
@@ -640,7 +609,8 @@ void RPC::getInfoThenRefresh(bool force) {
             {"method", "getnetworksolps"}
         };
 
-        conn->doRPCIgnoreError(payload, [=](const json& reply) {
+        std::string method = "getnetworksolps";
+        conn->doRPCIgnoreError(makePayload(method), [=](const json& reply) {
             qint64 solrate = reply.get<json::number_unsigned_t>();
 
             ui->numconnections->setText(QString::number(connections));
@@ -659,7 +629,14 @@ void RPC::getInfoThenRefresh(bool force) {
             QString localservices = QString::fromStdString( reply["localservices"].get<json::string_t>() );
 
             ui->clientname->setText(clientname);
-	    ui->localservices->setText(localservices);
+            ui->localservices->setText(localservices);
+        });
+
+
+		std::string method2 = "getwalletinfo";
+        conn->doRPCIgnoreError(makePayload(method2), [=](const json& reply) {
+            int  txcount = reply["txcount"].get<json::number_integer_t>();
+            ui->txcount->setText(QString::number(txcount));
         });
 
         // Call to see if the blockchain is syncing. 
@@ -708,9 +685,10 @@ void RPC::getInfoThenRefresh(bool force) {
                 QString::number(blockNumber) %
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
-                " Notarized: " % QString::number(notarized) %
-                " HUSH/USD=$" % QString::number( (double) Settings::getInstance()->getZECPrice() );
-            main->statusLabel->setText(statusText);   
+                " Lag: " % QString::number(blockNumber - notarized) %
+                " HUSH/USD=$" % QString::number( (double) Settings::getInstance()->getZECPrice() ) %
+                " " % QString::number( Settings::getInstance()->getBTCPrice() ) % "sat";
+            main->statusLabel->setText(statusText);
 
             auto zecPrice = Settings::getUSDFormat(1);
             QString tooltip;
@@ -1130,6 +1108,7 @@ void RPC::refreshZECPrice() {
                     qDebug() << reply->errorString();
                 }
                 Settings::getInstance()->setZECPrice(0);
+                Settings::getInstance()->setBTCPrice(0);
                 return;
             }
 
@@ -1138,6 +1117,7 @@ void RPC::refreshZECPrice() {
             auto parsed = json::parse(all, nullptr, false);
             if (parsed.is_discarded()) {
                 Settings::getInstance()->setZECPrice(0);
+                Settings::getInstance()->setBTCPrice(0);
                 return;
             }
 
@@ -1151,7 +1131,9 @@ void RPC::refreshZECPrice() {
                 // TODO: support BTC/EUR prices as well
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
                 qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
+                qDebug() << "HUSH = " << QString::number((double)hush["btc"]) << " sat ";
                 Settings::getInstance()->setZECPrice( hush["usd"] );
+                Settings::getInstance()->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 
                 return;
             } else {
@@ -1164,23 +1146,19 @@ void RPC::refreshZECPrice() {
 
         // If nothing, then set the price to 0;
         Settings::getInstance()->setZECPrice(0);
+        Settings::getInstance()->setBTCPrice(0);
     });
 }
 
 void RPC::shutdownZcashd() {
     // Shutdown embedded zcashd if it was started
     if (ezcashd == nullptr || ezcashd->processId() == 0 || conn == nullptr) {
-        // No zcashd running internally, just return
+        // No hushd running internally, just return
         return;
     }
 
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "stop"}
-    };
-    
-    conn->doRPCWithDefaultErrorHandling(payload, [=](auto) {});
+    std::string method = "stop";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), [=](auto) {});
     conn->shutdown();
 
     QDialog d(main);
@@ -1188,8 +1166,8 @@ void RPC::shutdownZcashd() {
     Ui_ConnectionDialog connD;
     connD.setupUi(&d);
     connD.topIcon->setBasePixmap(QIcon(":/icons/res/icon.ico").pixmap(256, 256));
-    connD.status->setText(QObject::tr("Please wait for SilentDragon to exit"));
-    connD.statusDetail->setText(QObject::tr("Waiting for hushd to exit"));
+    connD.status->setText(QObject::tr("Please enhance your calm and wait for SilentDragon to exit"));
+    connD.statusDetail->setText(QObject::tr("Waiting for hushd to exit, y'all"));
 
     QTimer waiter(main);
 
@@ -1224,60 +1202,6 @@ void RPC::shutdownZcashd() {
     }
 }
 
-
-// Fetch the Z-board topics list
-void RPC::getZboardTopics(std::function<void(QMap<QString, QString>)> cb) {
-    if (conn == nullptr)
-        return noConnection();
-
-    QUrl cmcURL("http://z-board.net/listTopics");
-
-    QNetworkRequest req;
-    req.setUrl(cmcURL);
-
-    QNetworkReply *reply = conn->restclient->get(req);
-
-    QObject::connect(reply, &QNetworkReply::finished, [=] {
-        reply->deleteLater();
-
-        try {
-            if (reply->error() != QNetworkReply::NoError) {
-                auto parsed = json::parse(reply->readAll(), nullptr, false);
-                if (!parsed.is_discarded() && !parsed["error"]["message"].is_null()) {
-                    qDebug() << QString::fromStdString(parsed["error"]["message"]);
-                }
-                else {
-                    qDebug() << reply->errorString();
-                }
-                return;
-            }
-
-            auto all = reply->readAll();
-
-            auto parsed = json::parse(all, nullptr, false);
-            if (parsed.is_discarded()) {
-                return;
-            }
-
-            QMap<QString, QString> topics;
-            for (const json& item : parsed["topics"].get<json::array_t>()) {
-                if (item.find("addr") == item.end() || item.find("topicName") == item.end())
-                    return;
-
-                QString addr  = QString::fromStdString(item["addr"].get<json::string_t>());
-                QString topic = QString::fromStdString(item["topicName"].get<json::string_t>());
-                
-                topics.insert(topic, addr);
-            }
-
-            cb(topics);
-        }
-        catch (...) {
-            // If anything at all goes wrong, just set the price to 0 and move on.
-            qDebug() << QString("Caught something nasty");
-        }
-    });
-}
 
 /** 
  * Get a Sapling address from the user's wallet

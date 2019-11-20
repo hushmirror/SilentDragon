@@ -41,7 +41,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
         return;
     }
 
-    // Priority 2: Try to connect to detect zcash.conf and connect to it.
+    // Priority 2: Try to connect to detect HUSH3.conf and connect to it.
     auto config = autoDetectZcashConf();
     main->logger->write(QObject::tr("Attempting autoconnect"));
 
@@ -54,7 +54,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                 if (tryEzcashdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
                     if (this->startEmbeddedZcashd()) {
-                        // Embedded zcashd started up. Wait a second and then refresh the connection
+                        // Embedded hushd started up. Wait a second and then refresh the connection
                         main->logger->write("Embedded hushd started up, trying autoconnect in 1 sec");
                         QTimer::singleShot(1000, [=]() { doAutoConnect(); } );
                     } else {
@@ -337,18 +337,10 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     }
 
     QDir appPath(QCoreApplication::applicationDirPath());
-#ifdef Q_OS_LINUX
-    auto hushdProgram = appPath.absoluteFilePath("hushd");
-    if (!QFile(hushdProgram).exists()) {
-        hushdProgram = appPath.absoluteFilePath("hushd");
-    }
-#elif defined(Q_OS_DARWIN)
-    auto hushdProgram = appPath.absoluteFilePath("hushd");
-#elif defined(Q_OS_WIN64)
-    // we use the CLI directly
+
+#ifdef Q_OS_WIN64
     auto hushdProgram = appPath.absoluteFilePath("komodod.exe");
 #else
-    main->logger->write("Unknown OS!");
     auto hushdProgram = appPath.absoluteFilePath("komodod");
 #endif
     
@@ -362,7 +354,7 @@ bool ConnectionLoader::startEmbeddedZcashd() {
 
     ezcashd = std::shared_ptr<QProcess>(new QProcess(main));
     QObject::connect(ezcashd.get(), &QProcess::started, [=] () {
-        qDebug() << "Embedded hushd started via " + hushdProgram;
+        qDebug() << "Embedded hushd started via " << hushdProgram;
     });
 
     QObject::connect(ezcashd.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
@@ -371,7 +363,7 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     });
 
     QObject::connect(ezcashd.get(), &QProcess::errorOccurred, [&] (QProcess::ProcessError error) {
-        qDebug() << "Couldn't start hushd at " + hushdProgram << error;
+        qDebug() << "Couldn't start hushd at " << hushdProgram << ":" << error;
     });
 
     std::weak_ptr<QProcess> weak_obj(ezcashd);
@@ -384,27 +376,27 @@ bool ConnectionLoader::startEmbeddedZcashd() {
 
 
     // This string should be the exact arg list seperated by single spaces
-    QString params = "-ac_name=HUSH3 -ac_sapling=1 -ac_reward=0,1125000000,562500000 -ac_halving=129,340000,840000 -ac_end=128,340000,5422111 -ac_eras=3 -ac_blocktime=150 -ac_cc=2 -ac_ccenable=228,234,235,236,241 -ac_founders=1 -ac_supply=6178674 -ac_perc=11111111 -clientname=GoldenSandtrout -addnode=188.165.212.101 -addnode=136.243.227.142 -addnode=5.9.224.250 -ac_cclib=hush3 -ac_script=76a9145eb10cf64f2bab1b457f1f25e658526155928fac88ac";
+    QString params = "-ac_name=HUSH3 -ac_sapling=1 -ac_reward=0,1125000000,562500000 -ac_halving=129,340000,840000 -ac_end=128,340000,5422111 -ac_eras=3 -ac_blocktime=150 -ac_cc=2 -ac_ccenable=228,234,235,236,241 -ac_founders=1 -ac_supply=6178674 -ac_perc=11111111 -clientname=GoldenSandtrout -addnode=188.165.212.101 -addnode=64.120.113.130 -addnode=209.58.144.205 -addnode=94.130.35.94 -ac_cclib=hush3 -ac_script=76a9145eb10cf64f2bab1b457f1f25e658526155928fac88ac";
     QStringList arguments = params.split(" ");
     // Finally, actually start the full node
 
 #ifdef Q_OS_LINUX
-    main->logger->write("Starting on Linux");
-    ezcashd->start(hushdProgram);
+    qDebug() << "Starting on Linux: " + hushdProgram + " " + params;
+    ezcashd->start(hushdProgram, arguments);
 #elif defined(Q_OS_DARWIN)
-    main->logger->write("Starting on Darwin");
-    ezcashd->start(hushdProgram);
+    qDebug() << "Starting on Darwin" + hushdProgram + " " + params;
+    ezcashd->start(hushdProgram, arguments);
 #elif defined(Q_OS_WIN64)
-    main->logger->write("Starting on Win64 with params " + params);
+    qDebug() << "Starting on Win64: " + hushdProgram + " " + params;
     ezcashd->setWorkingDirectory(appPath.absolutePath());
     ezcashd->start(hushdProgram, arguments);
 #else
-    main->logger->write("Starting on Unknown OS with params " + params);
+    qDebug() << "Starting on Unknown OS(!): " + hushdProgram + " " + params;
     ezcashd->setWorkingDirectory(appPath.absolutePath());
     ezcashd->start(hushdProgram, arguments);
 #endif // Q_OS_LINUX
 
-
+    main->logger->write("Started via " + hushdProgram + " " + params);
     return true;
 }
 
@@ -569,8 +561,13 @@ QString ConnectionLoader::zcashConfWritableLocation() {
 }
 
 QString ConnectionLoader::zcashParamsDir() {
-    #ifdef Q_OS_LINUX
+#ifdef Q_OS_LINUX
+    //TODO: If /usr/share/hush exists, use that. It should not be assumed writeable
     auto paramsLocation = QDir(QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".zcash-params"));
+    // Debian packages do not install into per-user dirs
+    if (!paramsLocation.exists()) {
+        paramsLocation = QDir(QDir("/").filePath("usr/share/hush"));
+    }
 #elif defined(Q_OS_DARWIN)
     auto paramsLocation = QDir(QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath("Library/Application Support/ZcashParams"));
 #else
@@ -728,7 +725,7 @@ void Connection::doRPC(const json& payload, const std::function<void(json)>& cb,
         return;
     }
 
-    qDebug() << "RPC: " << QString::fromStdString(payload["method"]) << " " << QString::fromStdString(payload.dump());
+    qDebug() << "RPC:" << QString::fromStdString(payload["method"]) << QString::fromStdString(payload.dump());
 
     QNetworkReply *reply = restclient->post(*request, QByteArray::fromStdString(payload.dump()));
 

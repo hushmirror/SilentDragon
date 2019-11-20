@@ -3,8 +3,8 @@
 
 Settings* Settings::instance = nullptr;
 
-Settings* Settings::init() {    
-    if (instance == nullptr) 
+Settings* Settings::init() {
+    if (instance == nullptr)
         instance = new Settings();
 
     return instance;
@@ -30,15 +30,34 @@ void Settings::setAllowFetchPrices(bool allow) {
      QSettings().setValue("options/allowfetchprices", allow);
 }
 
+Explorer Settings::getExplorer() {
+    // Load from the QT Settings.
+    QSettings s;
+
+    auto txExplorerUrl                = s.value("explorer/txExplorerUrl").toString();
+    auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl").toString();
+    auto testnetTxExplorerUrl         = s.value("explorer/testnetTxExplorerUrl").toString();
+    auto testnetAddressExplorerUrl    = s.value("explorer/testnetAddressExplorerUrl").toString();
+
+    return Explorer{txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl};
+}
+
+void Settings::saveExplorer(const QString& txExplorerUrl, const QString& addressExplorerUrl, const QString& testnetTxExplorerUrl, const QString& testnetAddressExplorerUrl) {
+    QSettings s;
+    s.setValue("explorer/txExplorerUrl", txExplorerUrl);
+    s.setValue("explorer/addressExplorerUrl", addressExplorerUrl);
+    s.setValue("explorer/testnetTxExplorerUrl", testnetTxExplorerUrl);
+    s.setValue("explorer/testnetAddressExplorerUrl", testnetAddressExplorerUrl);
+}
 
 Config Settings::getSettings() {
-    // Load from the QT Settings. 
+    // Load from the QT Settings.
     QSettings s;
-    
+
     auto host        = s.value("connection/host").toString();
     auto port        = s.value("connection/port").toString();
     auto username    = s.value("connection/rpcuser").toString();
-    auto password    = s.value("connection/rpcpassword").toString();    
+    auto password    = s.value("connection/rpcpassword").toString();
 
     return Config{host, port, username, password};
 }
@@ -90,22 +109,22 @@ bool Settings::isSaplingAddress(QString addr) {
 bool Settings::isSproutAddress(QString addr) {
     if (!isValidAddress(addr))
         return false;
-        
+
     return isZAddress(addr) && !isSaplingAddress(addr);
 }
 
 bool Settings::isZAddress(QString addr) {
     if (!isValidAddress(addr))
         return false;
-        
+
     return addr.startsWith("z");
 }
 
 bool Settings::isTAddress(QString addr) {
     if (!isValidAddress(addr))
         return false;
-        
-    return addr.startsWith("t");
+
+    return addr.startsWith("R");
 }
 
 int Settings::getZcashdVersion() {
@@ -136,8 +155,13 @@ bool Settings::isSaplingActive() {
     return  (isTestnet() && getBlockNumber() > 0) || (!isTestnet() && getBlockNumber() > 0);
 }
 
-double Settings::getZECPrice() { 
-    return zecPrice; 
+double Settings::getZECPrice() {
+    return zecPrice;
+}
+
+unsigned int Settings::getBTCPrice() {
+    // in satoshis
+    return btcPrice;
 }
 
 bool Settings::getAutoShield() {
@@ -150,7 +174,7 @@ void Settings::setAutoShield(bool allow) {
 }
 
 bool Settings::getAllowCustomFees() {
-    // Load from the QT Settings. 
+    // Load from the QT Settings.
     return QSettings().value("options/customfees", false).toBool();
 }
 
@@ -158,8 +182,17 @@ void Settings::setAllowCustomFees(bool allow) {
     QSettings().setValue("options/customfees", allow);
 }
 
+QString Settings::get_theme_name() {
+    // Load from the QT Settings.
+    return QSettings().value("options/theme_name", false).toString();
+}
+
+void Settings::set_theme_name(QString theme_name) {
+    QSettings().setValue("options/theme_name", theme_name);
+}
+
 bool Settings::getSaveZtxs() {
-    // Load from the QT Settings. 
+    // Load from the QT Settings.
     return QSettings().value("options/savesenttx", true).toBool();
 }
 
@@ -224,7 +257,7 @@ QString Settings::getTokenName() {
     }
 }
 
-QString Settings::getDonationAddr(bool sapling) {
+QString Settings::getDonationAddr() {
     if (Settings::getInstance()->isTestnet())  {
 	    return "ztestsaplingXXX";
     }
@@ -235,7 +268,7 @@ bool Settings::addToZcashConf(QString confLocation, QString line) {
     QFile file(confLocation);
     if (!file.open(QIODevice::ReadWrite | QIODevice::Append))
         return false;
-    
+
 
     QTextStream out(&file);
     out << line << "\n";
@@ -250,9 +283,9 @@ bool Settings::removeFromZcashConf(QString confLocation, QString option) {
 
     // To remove an option, we'll create a new file, and copy over everything but the option.
     QFile file(confLocation);
-    if (!file.open(QIODevice::ReadOnly)) 
+    if (!file.open(QIODevice::ReadOnly))
         return false;
-    
+
     QList<QString> lines;
     QTextStream in(&file);
     while (!in.atEnd()) {
@@ -262,9 +295,9 @@ bool Settings::removeFromZcashConf(QString confLocation, QString option) {
         if (name != option) {
             lines.append(line);
         }
-    }    
+    }
     file.close();
-    
+
     QFile newfile(confLocation);
     if (!newfile.open(QIODevice::ReadWrite | QIODevice::Truncate))
         return false;
@@ -280,19 +313,6 @@ bool Settings::removeFromZcashConf(QString confLocation, QString option) {
 
 double Settings::getMinerFee() {
     return 0.0001;
-}
-
-double Settings::getZboardAmount() {
-    return 0.0001;
-}
-
-QString Settings::getZboardAddr() {
-    if (Settings::getInstance()->isTestnet()) {
-        return getDonationAddr(true);
-    }
-    else {
-        return "zs10m00rvkhfm4f7n23e4sxsx275r7ptnggx39ygl0vy46j9mdll5c97gl6dxgpk0njuptg2mn9w5s";
-    }
 }
 
 bool Settings::isValidSaplingPrivateKey(QString pk) {
@@ -316,7 +336,7 @@ bool Settings::isValidAddress(QString addr) {
 
 // Get a pretty string representation of this Payment URI
 QString Settings::paymentURIPretty(PaymentURI uri) {
-    return QString() + "Payment Request\n" + "Pay: " + uri.addr + "\nAmount: " + getZECDisplayFormat(uri.amt.toDouble()) 
+    return QString() + "Payment Request\n" + "Pay: " + uri.addr + "\nAmount: " + getZECDisplayFormat(uri.amt.toDouble())
         + "\nMemo:" + QUrl::fromPercentEncoding(uri.memo.toUtf8());
 }
 
@@ -330,7 +350,7 @@ PaymentURI Settings::parseURI(QString uri) {
     }
 
     uri = uri.right(uri.length() - QString("hush:").length());
-    
+
     QRegExp re("([a-zA-Z0-9]+)");
     int pos;
     if ( (pos = re.indexIn(uri)) == -1 ) {
