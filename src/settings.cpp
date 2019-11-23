@@ -167,7 +167,7 @@ unsigned int Settings::getBTCPrice() {
 
 bool Settings::getAutoShield() {
     // Load from Qt settings
-    return QSettings().value("options/autoshield", false).toBool();
+    return QSettings().value("options/autoshield", true).toBool();
 }
 
 void Settings::setAutoShield(bool allow) {
@@ -176,7 +176,7 @@ void Settings::setAutoShield(bool allow) {
 
 bool Settings::getAllowCustomFees() {
     // Load from the QT Settings.
-    return QSettings().value("options/customfees", false).toBool();
+    return QSettings().value("options/customfees", true).toBool();
 }
 
 void Settings::setAllowCustomFees(bool allow) {
@@ -248,7 +248,7 @@ QString Settings::getZECUSDDisplayFormat(double bal) {
         return getZECDisplayFormat(bal);
 }
 
-const QString Settings::txidStatusMessage = QString(QObject::tr("Tx submitted (right click to copy) txid:"));
+const QString Settings::txidStatusMessage = QString(QObject::tr("Transaction submitted (right click to copy) txid:"));
 
 QString Settings::getTokenName() {
     if (Settings::getInstance()->isTestnet()) {
