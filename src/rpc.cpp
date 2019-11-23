@@ -108,7 +108,7 @@ json RPC::makePayload(std::string method, std::string params) {
         {"method", method },
         {"params", {params}}
     };
-	return payload;
+    return payload;
 }
 
 json RPC::makePayload(std::string method) {
@@ -117,7 +117,7 @@ json RPC::makePayload(std::string method) {
         {"id", "42" },
         {"method", method },
     };
-	return payload;
+    return payload;
 }
 
 void RPC::getTAddresses(const std::function<void(json)>& cb) {
@@ -961,35 +961,34 @@ void RPC::watchTxStatus() {
         return noConnection();
 
     // Make an RPC to load pending operation statues
-    json payload = {
-        {"jsonrpc", "1.0"},
-        {"id", "someid"},
-        {"method", "z_getoperationstatus"},
-    };
-
-    conn->doRPCIgnoreError(payload, [=] (const json& reply) {
+    conn->doRPCIgnoreError(makePayload("z_getoperationstatus"), [=] (const json& reply) {
+        // conn->doRPCIgnoreError(payload, [=] (const json& reply) {
         // There's an array for each item in the status
         for (auto& it : reply.get<json::array_t>()) {  
             // If we were watching this Tx and its status became "success", then we'll show a status bar alert
             QString id = QString::fromStdString(it["id"]);
             if (watchingOps.contains(id)) {
+                // log any txs we are watching
+                //   "creation_time": 1515969376,
+                // "execution_secs": 50.416337,
                 // And if it ended up successful
                 QString status = QString::fromStdString(it["status"]);
                 main->loadingLabel->setVisible(false);
 
                 if (status == "success") {
                     auto txid = QString::fromStdString(it["result"]["txid"]);
-                    
                     SentTxStore::addToSentTx(watchingOps[id].tx, txid);
 
                     auto wtx = watchingOps[id];
                     watchingOps.remove(id);
                     wtx.completed(id, txid);
 
-                    // Refresh balances to show unconfirmed balances                    
+                    qDebug() << "opid "<< id << " started at "<<QString::number((unsigned int)it["creation_time"])<<" took " << QString::number((double)it["execution_secs"]) << " seconds";
+
+                    // Refresh balances to show unconfirmed balances
                     refresh(true);
                 } else if (status == "failed") {
-                    // If it failed, then we'll actually show a warning. 
+                    // If it failed, then we'll actually show a warning.
                     auto errorMsg = QString::fromStdString(it["error"]["message"]);
 
                     auto wtx = watchingOps[id];
@@ -1010,7 +1009,7 @@ void RPC::watchTxStatus() {
             main->loadingLabel->setVisible(false);
         } else {
             main->loadingLabel->setVisible(true);
-            main->loadingLabel->setToolTip(QString::number(watchingOps.size()) + QObject::tr(" tx computing. This can take several minutes."));
+            main->loadingLabel->setToolTip(QString::number(watchingOps.size()) + QObject::tr(" transaction computing."));
         }
     });
 }

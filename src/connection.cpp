@@ -1,3 +1,5 @@
+// Copyright 2019 The Hush developers
+// GPLv3
 #include "connection.h"
 #include "mainwindow.h"
 #include "settings.h"
@@ -217,12 +219,13 @@ void ConnectionLoader::downloadParams(std::function<void(void)> cb) {
     main->logger->write("Adding params to download queue");
     // Add all the files to the download queue
     downloadQueue = new QQueue<QUrl>();
-    client = new QNetworkAccessManager(main);   
+    client = new QNetworkAccessManager(main);
 
+    //TODO: we never execute this
     downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-output.params"));
     downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-spend.params"));
 
-    doNextDownload(cb);    
+    doNextDownload(cb);
 }
 
 void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
@@ -586,21 +589,31 @@ QString ConnectionLoader::zcashParamsDir() {
 bool ConnectionLoader::verifyParams() {
     QDir paramsDir(zcashParamsDir());
 
+    // TODO: better error reporting if only 1 file exists or is missing
+    // TODO: do a basic size check, to filter out partial downloads and corrupt
+    // files from full HD's and other weird stuff
     qDebug() << "Verifying sapling param files exist";
 
 
-    if( QFile( QDir(".").filePath("sapling-output.params") ).exists() && QFile( QDir(".").filePath("sapling-output.params") ).exists() ) {
+    // This list of locations to look must be kept in sync with the list in hushd
+    if( QFile( QDir(".").filePath("sapling-output.params") ).exists() && QFile( QDir(".").filePath("sapling-spend.params") ).exists() ) {
         qDebug() << "Found params in .";
         return true;
     }
 
-    if( QFile( QDir("..").filePath("sapling-output.params") ).exists() && QFile( QDir("..").filePath("sapling-output.params") ).exists() ) {
+    if( QFile( QDir("..").filePath("sapling-output.params") ).exists() && QFile( QDir("..").filePath("sapling-spend.params") ).exists() ) {
         qDebug() << "Found params in ..";
         return true;
     }
 
-    if( QFile( QDir("..").filePath("hush3/sapling-output.params") ).exists() && QFile( QDir("..").filePath("hush3/sapling-output.params") ).exists() ) {
+    if( QFile( QDir("..").filePath("hush3/sapling-output.params") ).exists() && QFile( QDir("..").filePath("hush3/sapling-spend.params") ).exists() ) {
         qDebug() << "Found params in ../hush3";
+        return true;
+    }
+
+    // this is to support hushd inside a .dmg file, where the binaries are not at the root directory, but they are executed from the root dir of the .dmg
+    if( QFile( QDir("..").filePath("Contents/MacOS/sapling-output.params") ).exists() && QFile( QDir("..").filePath("Contents/MacOS/hush3/sapling-spend.params") ).exists() ) {
+        qDebug() << "Found params in ../Contents/MacOS";
         return true;
     }
 
