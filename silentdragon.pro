@@ -112,6 +112,7 @@ TRANSLATIONS = res/zec_qt_wallet_de.ts \
                res/zec_qt_wallet_fr.ts \
                res/zec_qt_wallet_hr.ts \
                res/zec_qt_wallet_it.ts \
+               res/zec_qt_wallet_nl.ts \
                res/zec_qt_wallet_pt.ts \
                res/zec_qt_wallet_ru.ts \
                res/zec_qt_wallet_tr.ts \
