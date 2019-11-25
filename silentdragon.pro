@@ -106,16 +106,18 @@ FORMS += \
     src/requestdialog.ui
 
 
-TRANSLATIONS = res/zec_qt_wallet_es.ts \
+TRANSLATIONS = res/zec_qt_wallet_de.ts \
+               res/zec_qt_wallet_es.ts \
                res/zec_qt_wallet_fi.ts \
                res/zec_qt_wallet_fr.ts \
-               res/zec_qt_wallet_de.ts \
-               res/zec_qt_wallet_pt.ts \
+               res/zec_qt_wallet_hr.ts \
                res/zec_qt_wallet_it.ts \
-               res/zec_qt_wallet_zh.ts \
-               res/zec_qt_wallet_tr.ts \
+               res/zec_qt_wallet_nl.ts \
+               res/zec_qt_wallet_pt.ts \
                res/zec_qt_wallet_ru.ts \
-               res/zec_qt_wallet_uk.ts
+               res/zec_qt_wallet_tr.ts \
+               res/zec_qt_wallet_uk.ts \
+               res/zec_qt_wallet_zh.ts
 
 include(singleapplication/singleapplication.pri)
 DEFINES += QAPPLICATION_CLASS=QApplication

@@ -119,22 +119,22 @@
         <location filename="../src/mainwindow.ui" line="406"/>
         <location filename="../src/mainwindow.ui" line="413"/>
         <location filename="../src/mainwindow.ui" line="874"/>
-        <location filename="../src/sendtab.cpp" line="218"/>
-        <location filename="../src/sendtab.cpp" line="223"/>
+        <location filename="../src/sendtab.cpp" line="219"/>
+        <location filename="../src/sendtab.cpp" line="224"/>
         <source>Address</source>
         <translation>Osoite</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="420"/>
-        <location filename="../src/sendtab.cpp" line="233"/>
+        <location filename="../src/sendtab.cpp" line="234"/>
         <source>Address Book</source>
         <translation>Osoitekirja</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="431"/>
         <location filename="../src/mainwindow.ui" line="447"/>
-        <location filename="../src/sendtab.cpp" line="246"/>
-        <location filename="../src/sendtab.cpp" line="250"/>
+        <location filename="../src/sendtab.cpp" line="247"/>
+        <location filename="../src/sendtab.cpp" line="251"/>
         <source>Amount</source>
         <translation>Määrä</translation>
     </message>
@@ -150,9 +150,9 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
-        <location filename="../src/mainwindow.cpp" line="1219"/>
-        <location filename="../src/mainwindow.cpp" line="1273"/>
-        <location filename="../src/sendtab.cpp" line="272"/>
+        <location filename="../src/mainwindow.cpp" line="928"/>
+        <location filename="../src/mainwindow.cpp" line="983"/>
+        <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Viesti</translation>
     </message>
@@ -178,7 +178,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="636"/>
-        <location filename="../src/sendtab.cpp" line="642"/>
+        <location filename="../src/sendtab.cpp" line="643"/>
         <source>Miner Fee</source>
         <translation>Siirtomaksu</translation>
     </message>
@@ -213,48 +213,53 @@
         <translation>Pisin Ketju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1425"/>
+        <location filename="../src/mainwindow.ui" line="1273"/>
+        <source>Wallet Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1448"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Lähetä Dukelle Palautetta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1430"/>
+        <location filename="../src/mainwindow.ui" line="1453"/>
         <source>&amp;Hush Discord</source>
         <translation>&amp;Hush Discord</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1435"/>
+        <location filename="../src/mainwindow.ui" line="1458"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Hush Verkkosivusto</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1484"/>
-        <location filename="../src/mainwindow.cpp" line="975"/>
+        <location filename="../src/mainwindow.ui" line="1507"/>
+        <location filename="../src/mainwindow.cpp" line="690"/>
         <source>Export transactions</source>
         <translation>Vie tapahtumat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1489"/>
+        <location filename="../src/mainwindow.ui" line="1512"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation>Maksa Hush &amp;URI...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1494"/>
+        <location filename="../src/mainwindow.ui" line="1517"/>
         <source>Connect mobile &amp;app</source>
         <translation>Yhdistä Älypuhelin &amp;Sovellukseen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1497"/>
+        <location filename="../src/mainwindow.ui" line="1520"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1502"/>
+        <location filename="../src/mainwindow.ui" line="1525"/>
         <source>Request HUSH...</source>
         <translation>Pyydä Hush...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1507"/>
+        <location filename="../src/mainwindow.ui" line="1530"/>
         <source>Validate Address</source>
         <translation>Validoi Osoite</translation>
     </message>
@@ -302,7 +307,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="852"/>
-        <location filename="../src/mainwindow.cpp" line="1412"/>
+        <location filename="../src/mainwindow.cpp" line="1122"/>
         <source>Export Private Key</source>
         <translation>Vie Salainen Avain</translation>
     </message>
@@ -335,9 +340,10 @@
         <location filename="../src/mainwindow.ui" line="1214"/>
         <location filename="../src/mainwindow.ui" line="1236"/>
         <location filename="../src/mainwindow.ui" line="1258"/>
-        <location filename="../src/mainwindow.ui" line="1273"/>
-        <location filename="../src/mainwindow.ui" line="1294"/>
-        <location filename="../src/mainwindow.cpp" line="1037"/>
+        <location filename="../src/mainwindow.ui" line="1280"/>
+        <location filename="../src/mainwindow.ui" line="1296"/>
+        <location filename="../src/mainwindow.ui" line="1317"/>
+        <location filename="../src/mainwindow.cpp" line="752"/>
         <source>Loading...</source>
         <translation>Ladataan...</translation>
     </message>
@@ -397,12 +403,12 @@
         <translation>Seuraava Puoliintuminen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1280"/>
+        <location filename="../src/mainwindow.ui" line="1303"/>
         <source>Network solution rate</source>
         <translation>Verkon Louhintanopeus</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1310"/>
         <source>Connections</source>
         <translation>Yhteydet</translation>
     </message>
@@ -419,9 +425,10 @@
         <location filename="../src/mainwindow.ui" line="1221"/>
         <location filename="../src/mainwindow.ui" line="1243"/>
         <location filename="../src/mainwindow.ui" line="1265"/>
-        <location filename="../src/mainwindow.ui" line="1321"/>
-        <location filename="../src/mainwindow.ui" line="1328"/>
-        <location filename="../src/mainwindow.ui" line="1335"/>
+        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1344"/>
+        <location filename="../src/mainwindow.ui" line="1351"/>
+        <location filename="../src/mainwindow.ui" line="1358"/>
         <source>|</source>
         <translation>|</translation>
     </message>
@@ -441,42 +448,42 @@
         <translation>Suojaamaton Osoite (Kaikille Näkyvä, Metadataa-Vuotava)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1361"/>
+        <location filename="../src/mainwindow.ui" line="1384"/>
         <source>&amp;File</source>
         <translation>&amp;Tiedosto</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1376"/>
+        <location filename="../src/mainwindow.ui" line="1399"/>
         <source>&amp;Help</source>
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1386"/>
+        <location filename="../src/mainwindow.ui" line="1409"/>
         <source>&amp;Apps</source>
         <translation>&amp;Sovellukset</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1394"/>
+        <location filename="../src/mainwindow.ui" line="1417"/>
         <source>&amp;Edit</source>
         <translation>&amp;Muokkaa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1407"/>
+        <location filename="../src/mainwindow.ui" line="1430"/>
         <source>E&amp;xit</source>
         <translation>&amp;Poistu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1412"/>
+        <location filename="../src/mainwindow.ui" line="1435"/>
         <source>&amp;About</source>
         <translation>&amp;Tietoja</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1417"/>
+        <location filename="../src/mainwindow.ui" line="1440"/>
         <source>&amp;Settings</source>
         <translation>&amp;Asetukset</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1420"/>
+        <location filename="../src/mainwindow.ui" line="1443"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
@@ -485,52 +492,52 @@
         <translation type="obsolete">&amp;Lahjoita</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1440"/>
+        <location filename="../src/mainwindow.ui" line="1463"/>
         <source>Check github.com for &amp;updates</source>
         <translation>Tarkista github.com &amp;päivityksien varalta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1445"/>
+        <location filename="../src/mainwindow.ui" line="1468"/>
         <source>Sapling &amp;turnstile</source>
         <translation>Sapling &amp;turnstile</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1448"/>
+        <location filename="../src/mainwindow.ui" line="1471"/>
         <source>Ctrl+A, Ctrl+T</source>
         <translation>Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1453"/>
+        <location filename="../src/mainwindow.ui" line="1476"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Tuo salainen avain</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1458"/>
+        <location filename="../src/mainwindow.ui" line="1481"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Vie kaikki salaiset avaimet</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1463"/>
+        <location filename="../src/mainwindow.ui" line="1486"/>
         <source>&amp;z-board.net</source>
         <translation>&amp;z-board.net</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1466"/>
+        <location filename="../src/mainwindow.ui" line="1489"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1471"/>
+        <location filename="../src/mainwindow.ui" line="1494"/>
         <source>Address &amp;book</source>
         <translation>&amp;Osoitekirja</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1474"/>
+        <location filename="../src/mainwindow.ui" line="1497"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1479"/>
+        <location filename="../src/mainwindow.ui" line="1502"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Varmuuskopioi wallet.dat</translation>
     </message>
@@ -547,27 +554,23 @@
         <translation type="obsolete"> tukeaksesi silentdragonia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="723"/>
         <source>You are on testnet, your post won&apos;t actually appear on z-board.net</source>
-        <translation>Olet testiverkossa, viestisi ei näy z-board.netissä</translation>
+        <translation type="vanished">Olet testiverkossa, viestisi ei näy z-board.netissä</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="779"/>
         <source>You need a sapling address with available balance to post</source>
-        <translation>Tarvitset Suojatun osoitteen, jolla on käytettävissä oleva saldo lähettääksesi</translation>
+        <translation type="vanished">Tarvitset Suojatun osoitteen, jolla on käytettävissä oleva saldo lähettääksesi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="793"/>
-        <location filename="../src/sendtab.cpp" line="714"/>
         <source>Computing Tx: </source>
-        <translation>Käsittelee Tapahtumaa: </translation>
+        <translation type="vanished">Käsittelee Tapahtumaa: </translation>
     </message>
     <message>
         <source>The keys were imported. It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation type="obsolete">YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="817"/>
+        <location filename="../src/mainwindow.cpp" line="532"/>
         <source>Private key import rescan finished</source>
         <translation>Salaisen avaimen tuonnin uudelleenskannaus valmis</translation>
     </message>
@@ -580,346 +583,360 @@
         <translation type="obsolete">YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="497"/>
+        <location filename="../src/mainwindow.cpp" line="286"/>
+        <source>Restart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="286"/>
+        <source>Please restart SilentDragon to have the theme apply</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Tor-verkon konfigurointi on saatavilla vain kun integroitu hushd on käynnissä.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="535"/>
+        <location filename="../src/mainwindow.cpp" line="359"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Käytät ulkopuolista hushd:ia. Ole hyvä ja käynnistä hushd uudelleen -rescan:lla</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="538"/>
+        <location filename="../src/mainwindow.cpp" line="362"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Käytät ulkopuolista hushd:ia. Ole hyvä ja käynnistä hushd uudelleen -reindex:lla</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="563"/>
+        <location filename="../src/mainwindow.cpp" line="387"/>
         <source>Enable Tor</source>
         <translation>Ota Tor-verkko käyttöön</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="564"/>
+        <location filename="../src/mainwindow.cpp" line="388"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Yhteys Tor-verkon kautta on otettu käyttöön. Jotta voit käyttää tätä ominaisuutta, sinun on käynnistettävä SilentDragon uudelleen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="573"/>
+        <location filename="../src/mainwindow.cpp" line="397"/>
         <source>Disable Tor</source>
         <translation>Poista Tor-verkko käytöstä</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="574"/>
+        <location filename="../src/mainwindow.cpp" line="398"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Yhteys Tor-verkon kautta on poistettu käytöstä. Katkaistaksesi Tor-verkon kokonaan, sinun on käynnistettävä SilentDragon uudelleen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="603"/>
+        <location filename="../src/mainwindow.cpp" line="434"/>
         <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation>SilentDragon on käynnistettävä uudelleen, jotta voidaan uudelleenskannata/reindeksoida. SilentDragon sulkeutuu nyt, käynnistä SilentDragon uudelleen jatkaaksesi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="436"/>
         <source>Restart SilentDragon</source>
         <translation>Käynnistä SilentDragon uudelleen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="642"/>
+        <location filename="../src/mainwindow.cpp" line="473"/>
         <source>Some feedback about SilentDragon or Hush...</source>
         <translation>Palautetta SilentDragonista tai Hushista...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="644"/>
+        <location filename="../src/mainwindow.cpp" line="475"/>
         <source>Send Duke some private and shielded feedback about </source>
         <translation>Lähetä Dukelle anonyymiä ja yksityistä palautetta </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="644"/>
+        <location filename="../src/mainwindow.cpp" line="475"/>
         <source> or SilentDragon</source>
         <translation> tai SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="660"/>
+        <location filename="../src/mainwindow.cpp" line="491"/>
         <source>Enter Address to validate</source>
         <translation>Syötä Osoite vahvistaakesi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="661"/>
+        <location filename="../src/mainwindow.cpp" line="492"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Julkinen tai Suojattu Osoite:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="882"/>
+        <location filename="../src/mainwindow.cpp" line="597"/>
         <source>Paste HUSH URI</source>
         <translation>Liitä Hush URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="894"/>
+        <location filename="../src/mainwindow.cpp" line="609"/>
         <source>Error paying Hush URI</source>
         <translation>Virhe maksaessa Hush URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="895"/>
+        <location filename="../src/mainwindow.cpp" line="610"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI:n tulisi olla muodossa &apos;hush:&lt;osoite&gt;?määrä=x&amp;muistio=y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="930"/>
+        <location filename="../src/mainwindow.cpp" line="645"/>
         <source>Please paste your private keys here, one per line</source>
         <translation>Liitä Salaiset Avaimesi tähän, yksi per rivi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="931"/>
+        <location filename="../src/mainwindow.cpp" line="646"/>
         <source>The keys will be imported into your connected Hush node</source>
         <translation>Avaimet tuodaan sinun yhdistettyyn Hush nodeen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="962"/>
+        <location filename="../src/mainwindow.cpp" line="677"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation>Avaimet tuotiin! Lohkoketjun uudelleenskannaus voi kestää useita minuutteja. Siihen asti toiminnallisuus voi olla rajoitettu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="981"/>
+        <location filename="../src/mainwindow.cpp" line="696"/>
         <source>Error</source>
         <translation>Virhe</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="982"/>
+        <location filename="../src/mainwindow.cpp" line="697"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>Virhe tapahtumien viemisessä, tiedostoa ei tallennettu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1004"/>
+        <location filename="../src/mainwindow.cpp" line="719"/>
         <source>No wallet.dat</source>
         <translation>Ei wallet.dat tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1004"/>
+        <location filename="../src/mainwindow.cpp" line="719"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Tästä tietokoneesta ei löytynyt wallet.dat-tiedostoa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1005"/>
+        <location filename="../src/mainwindow.cpp" line="720"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Sinun on varmuuskopioitava se siitä koneesta, missä hushd on käynnissä</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1009"/>
+        <location filename="../src/mainwindow.cpp" line="724"/>
         <source>Backup wallet.dat</source>
         <translation>Varmuuskopioi wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1014"/>
+        <location filename="../src/mainwindow.cpp" line="729"/>
         <source>Couldn&apos;t backup</source>
         <translation>Varmuuskopiointi epäonnistui</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1014"/>
+        <location filename="../src/mainwindow.cpp" line="729"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>wallet.dat-tiedostoa ei voitu varmuuskopioida.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1015"/>
+        <location filename="../src/mainwindow.cpp" line="730"/>
         <source>You need to back it up manually.</source>
         <translation>Sinun on varmuuskopioitava se manuaalisesti.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1042"/>
+        <location filename="../src/mainwindow.cpp" line="757"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Tässä ovat kaikki lompakkosi osoitteiden salaiset avaimet</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1044"/>
+        <location filename="../src/mainwindow.cpp" line="759"/>
         <source>Private key for </source>
         <translation>Salainen avain </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1052"/>
+        <location filename="../src/mainwindow.cpp" line="767"/>
         <source>Save File</source>
         <translation>Tallenna Tiedosto</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1056"/>
+        <location filename="../src/mainwindow.cpp" line="771"/>
         <source>Unable to open file</source>
         <translation>Tiedostoa ei voitu avata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1151"/>
-        <location filename="../src/mainwindow.cpp" line="1247"/>
+        <location filename="../src/mainwindow.cpp" line="866"/>
+        <location filename="../src/mainwindow.cpp" line="956"/>
         <source>Copy address</source>
         <translation>Kopioi osoite</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1154"/>
-        <location filename="../src/mainwindow.cpp" line="1243"/>
-        <location filename="../src/mainwindow.cpp" line="1249"/>
+        <location filename="../src/mainwindow.cpp" line="869"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
+        <location filename="../src/mainwindow.cpp" line="958"/>
         <source>Copied to clipboard</source>
         <translation>Kopioitu leikepöydälle</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1157"/>
+        <location filename="../src/mainwindow.cpp" line="872"/>
         <source>Get private key</source>
         <translation>Näe Salainen avain</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1168"/>
+        <location filename="../src/mainwindow.cpp" line="883"/>
         <source>Shield balance to Sapling</source>
         <translation>Siirrä Saldo Suojattuun (Sapling) osoitteeseen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1173"/>
-        <location filename="../src/mainwindow.cpp" line="1253"/>
+        <location filename="../src/mainwindow.cpp" line="888"/>
+        <location filename="../src/mainwindow.cpp" line="962"/>
         <source>View on block explorer</source>
         <translation>Näytä lohkoketjussa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1184"/>
+        <location filename="../src/mainwindow.cpp" line="900"/>
         <source>Address Asset Viewer</source>
         <translation>Osoitteen Varojen Katselu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1190"/>
+        <location filename="../src/mainwindow.cpp" line="906"/>
         <source>Convert Address</source>
         <translation>Muunna Osoite</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1199"/>
         <source>Migrate to Sapling</source>
-        <translation>Siirrä Saplingiin</translation>
+        <translation type="vanished">Siirrä Saplingiin</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1241"/>
+        <location filename="../src/mainwindow.cpp" line="950"/>
         <source>Copy txid</source>
         <translation>Kopioi Tapahtuman ID</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1265"/>
+        <location filename="../src/mainwindow.cpp" line="975"/>
         <source>View Payment Request</source>
         <translation>Näytä Maksu Pyyntö</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1272"/>
+        <location filename="../src/mainwindow.cpp" line="982"/>
         <source>View Memo</source>
         <translation>Näytä Viesti</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1286"/>
+        <location filename="../src/mainwindow.cpp" line="996"/>
         <source>Reply to </source>
         <translation>Vastaa </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1369"/>
+        <location filename="../src/mainwindow.cpp" line="1079"/>
         <source>Created new t-Addr</source>
         <translation>Uusi Suojaamaton osoite luotu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1418"/>
+        <location filename="../src/mainwindow.cpp" line="1128"/>
         <source>Copy Address</source>
         <translation>Kopioi Osoite</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1484"/>
+        <location filename="../src/mainwindow.cpp" line="1194"/>
         <source>Address has been previously used</source>
         <translation>Osoitetta on käytetty aiemmin</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1486"/>
+        <location filename="../src/mainwindow.cpp" line="1196"/>
         <source>Address is unused</source>
         <translation>Osoite on käyttämätön</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="209"/>
+        <location filename="../src/sendtab.cpp" line="210"/>
         <source>Recipient </source>
         <translation>Vastaanottaja </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="282"/>
-        <location filename="../src/sendtab.cpp" line="334"/>
+        <location filename="../src/sendtab.cpp" line="283"/>
+        <location filename="../src/sendtab.cpp" line="335"/>
         <source>File Upload</source>
         <translation>Tiedoston Lataus</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="325"/>
+        <location filename="../src/sendtab.cpp" line="326"/>
         <source>Only z-addresses can have memos</source>
         <translation>Vain suojatut Zs-osoitteet voivat sisältää viestejä</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="345"/>
+        <location filename="../src/sendtab.cpp" line="346"/>
         <source>File size too large</source>
         <translation>Tiedoston koko on liian suuri</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>The file size </source>
         <translation>Tiedoston koko </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source> bytes is greater than </source>
         <translation> tavua on suurempi kuin </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>bytes</source>
         <translation>tavua</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="361"/>
+        <location filename="../src/sendtab.cpp" line="362"/>
         <source>Memos can only be used with z-addresses</source>
         <translation>Viestejä voidaan käyttää vain suojattujen Zs-osoitteiden kanssa</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>The memo field can only be used with a z-address.
 </source>
         <translation>Viestikenttää voidaan käyttää vain suojattujen Zs-osoitteiden kanssa.
 </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>
 doesn&apos;t look like a z-address</source>
         <translation>
 Ei näytä suojatulta Zs-osoitteelta</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="536"/>
+        <location filename="../src/sendtab.cpp" line="537"/>
         <source>Change from </source>
         <translation>Vaihda </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="677"/>
+        <location filename="../src/sendtab.cpp" line="678"/>
         <source>Current balance      : </source>
         <translation>Tämänhetkinen saldo      : </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="679"/>
+        <location filename="../src/sendtab.cpp" line="680"/>
         <source>Balance after this Tx: </source>
         <translation>Saldo tämän tapahtuman jälkeen: </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="700"/>
+        <location filename="../src/sendtab.cpp" line="701"/>
         <source>Transaction Error</source>
         <translation>Tapahtumavirhe</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="733"/>
+        <location filename="../src/sendtab.cpp" line="715"/>
+        <source>Computing transaction: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="735"/>
         <source>From Address is Invalid</source>
         <translation>Lähettäjän Osoite on Virheellinen</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="738"/>
+        <location filename="../src/sendtab.cpp" line="740"/>
         <source>Recipient Address </source>
         <translation>Vastaanottajan Osoite </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="738"/>
+        <location filename="../src/sendtab.cpp" line="740"/>
         <source> is Invalid</source>
         <translation> on Virheellinen</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="744"/>
+        <location filename="../src/sendtab.cpp" line="746"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Määrä &apos;%1&apos; on virheellinen!</translation>
     </message>
@@ -1015,22 +1032,22 @@ Ei näytä suojatulta Zs-osoitteelta</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/connection.cpp" line="46"/>
+        <location filename="../src/connection.cpp" line="48"/>
         <source>Attempting autoconnect</source>
         <translation>Yritetään automaattista yhteyttä</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="55"/>
+        <location filename="../src/connection.cpp" line="57"/>
         <source>Starting embedded hushd</source>
         <translation>Käynnistetään integroitu hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="65"/>
+        <location filename="../src/connection.cpp" line="67"/>
         <source>hushd is set to run as daemon</source>
         <translation>hushd on asetettu toimimaan palveluprosessina</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="65"/>
+        <location filename="../src/connection.cpp" line="67"/>
         <source>Waiting for hushd</source>
         <translation>Odotetaan hushd:ia</translation>
     </message>
@@ -1058,22 +1075,22 @@ Not starting embedded hushd because --no-embedded was passed</source>
         <translation type="obsolete">YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="241"/>
+        <location filename="../src/connection.cpp" line="244"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Kaikki Lataukset Onnistui!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="264"/>
+        <location filename="../src/connection.cpp" line="267"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Paramereja ei voitu ladata. Tarkista lisätietoja ohjesivulta.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="88"/>
+        <location filename="../src/connection.cpp" line="90"/>
         <source>The process returned</source>
         <translation>Prosessi palasi</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="82"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1084,7 +1101,7 @@ daemon=1</source>
 daemon=1</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="85"/>
+        <location filename="../src/connection.cpp" line="87"/>
         <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
@@ -1101,7 +1118,7 @@ Jos aloitit hushd:n aiemmin mukautetuilla argumenteilla, saatat joutua nollaamaa
 Jos kaikki muu ei auta, suorita hushd manuaalisesti.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="96"/>
+        <location filename="../src/connection.cpp" line="98"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1110,98 +1127,103 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Integroitua hushdia ei käynnistetä, koska --ei-integroitu ohitettiin</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="149"/>
+        <location filename="../src/connection.cpp" line="151"/>
         <source>Hide Advanced Config</source>
         <translation>Piilota Lisäasetukset</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="149"/>
+        <location filename="../src/connection.cpp" line="151"/>
         <source>Show Advanced Config</source>
         <translation>Näytä Lisäasetukset</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="162"/>
+        <location filename="../src/connection.cpp" line="164"/>
         <source>Choose data directory</source>
         <translation>Valitse tiedostohakemisto</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="183"/>
+        <location filename="../src/connection.cpp" line="185"/>
         <source>Could not create HUSH3.conf.</source>
         <translation>HUSH3.conf-tiedostoa ei voitu luoda.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="290"/>
-        <location filename="../src/connection.cpp" line="306"/>
+        <location filename="../src/connection.cpp" line="293"/>
+        <location filename="../src/connection.cpp" line="309"/>
         <source>Downloading </source>
         <translation>Ladataan </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="290"/>
+        <location filename="../src/connection.cpp" line="293"/>
         <source> more remaining )</source>
         <translation> vielä jäljellä )</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="291"/>
+        <location filename="../src/connection.cpp" line="294"/>
         <source>MB of </source>
         <translation>MT of </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="291"/>
+        <location filename="../src/connection.cpp" line="294"/>
         <source>MB at </source>
         <translation>MT at </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="784"/>
+        <location filename="../src/connection.cpp" line="791"/>
         <source>There was an error! : </source>
         <translation>Tapahtui virhe! : </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="697"/>
+        <location filename="../src/rpc.cpp" line="674"/>
         <source>Downloading blocks</source>
         <translation>Lataa lohkoja</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="700"/>
+        <location filename="../src/rpc.cpp" line="677"/>
         <source>Block height</source>
         <translation>Lohkokorkeus</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="705"/>
+        <location filename="../src/rpc.cpp" line="682"/>
         <source>Syncing</source>
         <translation>Synkronoi</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="705"/>
+        <location filename="../src/rpc.cpp" line="682"/>
         <source>Connected</source>
         <translation>Yhdistetty</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="707"/>
+        <location filename="../src/rpc.cpp" line="684"/>
         <source>testnet:</source>
         <translation>testiverkko:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="718"/>
+        <location filename="../src/rpc.cpp" line="696"/>
         <source>Connected to hushd</source>
         <translation>Yhdistetty hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="721"/>
+        <location filename="../src/rpc.cpp" line="699"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>hushd:lla ei ole vertaisverkko yhteyksiä! Verkko ongelmia?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="740"/>
+        <location filename="../src/rpc.cpp" line="718"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>Yhdistettäessä hushd:iin tapahtui virhe. Virhe oli</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1084"/>
+        <location filename="../src/rpc.cpp" line="1012"/>
+        <source> transaction computing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/rpc.cpp" line="1061"/>
         <source>Update Available</source>
         <translation>Päivitys Saatavilla</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1085"/>
+        <location filename="../src/rpc.cpp" line="1062"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1210,74 +1232,77 @@ Would you like to visit the releases page?</source>
 Haluaisitko vierailla lataus-sivulla?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1097"/>
+        <location filename="../src/rpc.cpp" line="1074"/>
         <source>No updates available</source>
         <translation>Päivityksiä ei ole saatavilla</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1098"/>
+        <location filename="../src/rpc.cpp" line="1075"/>
         <source>You already have the latest release v%1</source>
         <translation>Sinulla on jo uusin versio v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1191"/>
-        <source>Please wait for SilentDragon to exit</source>
-        <translation>Odotathan, että SilentDragon sulkeutuu</translation>
+        <location filename="../src/rpc.cpp" line="1168"/>
+        <source>Please enhance your calm and wait for SilentDragon to exit</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="802"/>
-        <location filename="../src/sendtab.cpp" line="723"/>
-        <location filename="../src/turnstile.cpp" line="367"/>
+        <location filename="../src/rpc.cpp" line="1169"/>
+        <source>Waiting for hushd to exit, y&apos;all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please wait for SilentDragon to exit</source>
+        <translation type="vanished">Odotathan, että SilentDragon sulkeutuu</translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="722"/>
+        <source> Transaction </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="725"/>
         <source>The transaction with id </source>
         <translation>Tapahtuma tunnuksella </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="802"/>
-        <location filename="../src/sendtab.cpp" line="723"/>
-        <location filename="../src/turnstile.cpp" line="367"/>
+        <location filename="../src/sendtab.cpp" line="725"/>
         <source> failed. The error was</source>
         <translation> epäonnistui. Virhe oli</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="799"/>
-        <location filename="../src/sendtab.cpp" line="720"/>
-        <location filename="../src/turnstile.cpp" line="364"/>
+        <location filename="../src/sendtab.cpp" line="722"/>
         <source> failed</source>
         <translation> epäonnistui</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="799"/>
-        <location filename="../src/sendtab.cpp" line="720"/>
-        <location filename="../src/turnstile.cpp" line="364"/>
         <source> Tx </source>
-        <translation> Tapahtuma </translation>
+        <translation type="vanished"> Tapahtuma </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1035"/>
         <source> tx computing. This can take several minutes.</source>
-        <translation> käsittelee tapahtumaa. Tässä voi mennä useampi minuutti.</translation>
+        <translation type="vanished"> käsittelee tapahtumaa. Tässä voi mennä useampi minuutti.</translation>
     </message>
     <message>
         <source>Please wait for silentdragon to exit</source>
         <translation type="obsolete">YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1192"/>
         <source>Waiting for hushd to exit</source>
-        <translation>Odotetaan hushd:n poistumista</translation>
+        <translation type="vanished">Odotetaan hushd:n poistumista</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="306"/>
+        <location filename="../src/connection.cpp" line="309"/>
         <source> failed. Please check the help site for more info</source>
         <translation> epäonnistui. Tarkista lisätietoja ohjesivulta</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="330"/>
+        <location filename="../src/connection.cpp" line="333"/>
         <source>hushd error</source>
         <translation>hushd virhe</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="417"/>
+        <location filename="../src/connection.cpp" line="412"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1286,7 +1311,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikossa.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="429"/>
+        <location filename="../src/connection.cpp" line="424"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1295,31 +1320,29 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikossa.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="492"/>
+        <location filename="../src/connection.cpp" line="487"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Todennus epäonnistui. Hushd ei hyväksynyt määrittämääsi käyttäjänimeä / salasanaa. Yritä muuttaa niitä Muokkaa-&gt; Asetukset-valikosta</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="507"/>
+        <location filename="../src/connection.cpp" line="502"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>hushd on käynnistymässä. Ole hyvä ja odota.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="524"/>
+        <location filename="../src/connection.cpp" line="519"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Tämä voi viedä useita tunteja, nappaa Fazerin sinistä</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="541"/>
-        <location filename="../src/rpc.cpp" line="740"/>
+        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/rpc.cpp" line="718"/>
         <source>Connection Error</source>
         <translation>Yhteysvirhe</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="784"/>
-        <location filename="../src/mainwindow.cpp" line="804"/>
-        <location filename="../src/sendtab.cpp" line="725"/>
-        <location filename="../src/turnstile.cpp" line="369"/>
+        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/sendtab.cpp" line="727"/>
         <source>Transaction Error</source>
         <translation>Tapahtumavirhe</translation>
     </message>
@@ -1328,8 +1351,8 @@ Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikos
         <translation type="obsolete">YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="411"/>
-        <location filename="../src/rpc.cpp" line="413"/>
+        <location filename="../src/rpc.cpp" line="388"/>
+        <location filename="../src/rpc.cpp" line="390"/>
         <source>No Connection</source>
         <translation>Ei Yhteyttä</translation>
     </message>
@@ -1408,26 +1431,23 @@ Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikos
         <translation>Poista nimi</translation>
     </message>
     <message>
-        <location filename="../src/settings.cpp" line="217"/>
+        <location filename="../src/settings.cpp" line="251"/>
         <source>Tx submitted (right click to copy) txid:</source>
         <translation>Tapahtuma lähetetty (kopioi hiiren oikealla painikkeella) txid:</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.cpp" line="119"/>
         <source>Locked funds</source>
-        <translation>Lukitut saldot</translation>
+        <translation type="vanished">Lukitut saldot</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.cpp" line="120"/>
         <source>Could not initiate migration.
 You either have unconfirmed funds or the balance is too low for an automatic migration.</source>
-        <translation>Siirtoa ei voitu aloittaa.
+        <translation type="vanished">Siirtoa ei voitu aloittaa.
 Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen siirtoon.</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.cpp" line="357"/>
         <source>Computing Tx: </source>
-        <translation>Käsitellään Tapahtumaa: </translation>
+        <translation type="vanished">Käsitellään Tapahtumaa: </translation>
     </message>
     <message>
         <location filename="../src/txtablemodel.cpp" line="7"/>
@@ -1450,24 +1470,28 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
         <translation>Määrä</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="357"/>
+        <location filename="../src/websockets.cpp" line="435"/>
         <source>Connected directly</source>
         <translation>Yhdistetty suoraan</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="360"/>
+        <location filename="../src/websockets.cpp" line="438"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>Yhdistetty internetin kautta SilentDragon-madonreikäpalveluun</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="653"/>
+        <location filename="../src/websockets.cpp" line="737"/>
         <source>Node is still syncing.</source>
         <translation>Nodea synkronoidaan edelleen.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="677"/>
+        <location filename="../src/websockets.cpp" line="762"/>
+        <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>No sapling or transparent addresses with enough balance to spend.</source>
-        <translation>Ei Sapling-suojattuja tai suojaamattomia osoitteita, joilla olisi tarpeeksi saldoa kulutettavana.</translation>
+        <translation type="vanished">Ei Sapling-suojattuja tai suojaamattomia osoitteita, joilla olisi tarpeeksi saldoa kulutettavana.</translation>
     </message>
 </context>
 <context>
@@ -1624,92 +1648,142 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
         <translation>Valinnat</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="184"/>
+        <location filename="../src/settings.ui" line="230"/>
         <source>Check github for updates at startup</source>
         <translation>Tarkista päivitykset githubista käynnistyksen yhteydessä</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="256"/>
+        <location filename="../src/settings.ui" line="302"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
         <translation>Yhdistä Tor-verkkoon SOCKS-välityspalvelimen kautta, joka toimii 127.0.0.1:9050. Huomaa, että sinun on asennettava ja suoritettava Tor-palvelu ulkoisesti.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="232"/>
+        <location filename="../src/settings.ui" line="278"/>
         <source>Shielded transactions are saved locally and shown in the transactions tab.  If you uncheck this, shielded transactions will not appear in the transactions tab.</source>
         <translation>Suojatut zs-tapahtumat tallennetaan paikallisesti ja ne näkyvät tapahtumat välilehdessä. Jos poistat tämän valinnan, suojatut tapahtumat eivät tule näkyviin Tapahtumat-välilehteen.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="177"/>
+        <location filename="../src/settings.ui" line="157"/>
+        <source>Theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="174"/>
+        <source>default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="179"/>
+        <source>blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="184"/>
+        <source>light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="189"/>
+        <source>dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="223"/>
         <source>Connect via Tor</source>
         <translation>Yhdistä Tor-verkon välityksellä</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="266"/>
+        <location filename="../src/settings.ui" line="312"/>
         <source>Connect to github on startup to check for updates</source>
         <translation>Yhdistä githubiin käynnistäessä tarkistaaksesi päivitykset</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="273"/>
+        <location filename="../src/settings.ui" line="319"/>
         <source>Connect to the internet to fetch HUSH prices</source>
         <translation>Yhdistä Internetiin hakeaksesi HUSH hinnat</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="280"/>
+        <location filename="../src/settings.ui" line="326"/>
         <source>Fetch HUSH / USD prices</source>
         <translation>Hae HUSH / USD hinnat</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="288"/>
+        <location filename="../src/settings.ui" line="334"/>
+        <source>Explorer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="346"/>
+        <source>Tx Explorer URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="385"/>
+        <source>Address Explorer URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="411"/>
+        <source>Testnet Tx Explorer URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="437"/>
+        <source>Testnet Address Explorer URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="456"/>
         <source>Troubleshooting</source>
         <translation>Vianetsintä</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="294"/>
+        <location filename="../src/settings.ui" line="462"/>
         <source>Reindex</source>
         <translation>Reindeksoi</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="301"/>
+        <location filename="../src/settings.ui" line="469"/>
         <source>Rescan the blockchain for any missing wallet transactions and to correct your wallet balance. This may take several hours. You need to restart SilentDragon for this to take effect</source>
         <translation>Uudelleenskannaa lohkoketju puuttuvien lompakkotapahtumien varalta ja lompakon saldon korjaamiseksi. Tämä voi viedä useita tunteja. Sinun on käynnistettävä SilentDragon uudelleen, jotta tämä muutos tulee voimaan</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="311"/>
+        <location filename="../src/settings.ui" line="479"/>
         <source>Rescan</source>
         <translation>Uudelleenskannaa</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="345"/>
+        <location filename="../src/settings.ui" line="513"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
         <translation>Rakenna koko lohkoketju uudelleen syntylohkosta alkaen skannaamalla kaikki lohkotiedostot. Tämä voi viedä useista tunneista päiviin laitteistosta riippuen. Sinun on käynnistettävä SilentDragon uudelleen, jotta tämä tulee voimaan</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="225"/>
+        <location filename="../src/settings.ui" line="271"/>
         <source>Clear History</source>
         <translation>Tyhjennä Historia</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="198"/>
+        <location filename="../src/settings.ui" line="244"/>
         <source>Remember shielded transactions</source>
         <translation>Muista suojatut tapahtumat</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="242"/>
+        <location filename="../src/settings.ui" line="288"/>
         <source>Allow custom fees</source>
         <translation>Salli mukautetut siirtomaksut</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="215"/>
+        <location filename="../src/settings.ui" line="261"/>
         <source>Allow overriding the default fees when sending transactions. Enabling this option may compromise your privacy since fees are transparent. </source>
         <translation>Salli oletusmaksujen muokkaaminen tapahtumia lähetettäessä. Tämän vaihtoehdon ottaminen käyttöön voi vaarantaa yksityisyytesi, koska siirtomaksut ovat suojaamattomia. </translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="205"/>
+        <location filename="../src/settings.ui" line="251"/>
         <source>Normally, change from t-Addresses goes to another t-Address. Checking this option will send the change to your shielded sapling address instead. Check this option to increase your privacy.</source>
         <translation>Normaalisti vaihtoraha siirtyy suojaamattomasta osoitteesta toiseen suojaamattomaan osoitteeseen. Jos valitset tämän vaihtoehdon, vaihtoraha lähetetään suojattuun Sapling-osoitteeseesi. Valitse tämä vaihtoehto lisätäksesi yksityisyyttäsi.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="249"/>
+        <location filename="../src/settings.ui" line="295"/>
         <source>Shield change from t-Addresses to your sapling address</source>
         <translation>Suojaa vaihtoraha suojaamattomasta osoitteesta suojattuun Sapling-osoitteeseen</translation>
     </message>
@@ -1717,78 +1791,63 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
 <context>
     <name>Turnstile</name>
     <message>
-        <location filename="../src/turnstile.ui" line="14"/>
-        <location filename="../src/turnstile.ui" line="20"/>
         <source>Turnstile Migration</source>
-        <translation>&quot;Turnstile&quot; Yhdistäminen</translation>
+        <translation type="vanished">&quot;Turnstile&quot; Yhdistäminen</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="44"/>
         <source>Migrate over</source>
-        <translation>Yhdistä</translation>
+        <translation type="vanished">Yhdistä</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="57"/>
         <source>From</source>
-        <translation>Minne</translation>
+        <translation type="vanished">Minne</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="90"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funds from Sprout z-Addresses (which start with &amp;quot;zc&amp;quot;) need to be moved to the upgraded Sapling z-Addresses (which start with &amp;quot;zs&amp;quot;). The funds cannot be moved directly, but need to be sent through intermediate &amp;quot;transparent&amp;quot; addresses in privacy-preserving way.&lt;/p&gt;&lt;p&gt;This migration can be done automatically for you.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saldot Sprout z-Osoitteista (jotka alkavat &amp;quot;zc&amp;quot;) täytyy siirtää päivitettyihin Sapling z-Osoitteisiin (jotka alkavat &amp;quot;zs&amp;quot;). Saldoa ei voi siirtää suoraan, vaan on lähetettävä välivaiheiden &amp;quot;suojaamattomien&amp;quot; osoitteiden kautta yksityisyyttä suojaavalla tavalla.&lt;/p&gt;&lt;p&gt;Tämä siirto voidaan tehdä automaattisesti puolestasi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saldot Sprout z-Osoitteista (jotka alkavat &amp;quot;zc&amp;quot;) täytyy siirtää päivitettyihin Sapling z-Osoitteisiin (jotka alkavat &amp;quot;zs&amp;quot;). Saldoa ei voi siirtää suoraan, vaan on lähetettävä välivaiheiden &amp;quot;suojaamattomien&amp;quot; osoitteiden kautta yksityisyyttä suojaavalla tavalla.&lt;/p&gt;&lt;p&gt;Tämä siirto voidaan tehdä automaattisesti puolestasi.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="106"/>
         <source>To</source>
-        <translation>Mistä</translation>
+        <translation type="vanished">Mistä</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="123"/>
         <source>Balance</source>
-        <translation>Saldo</translation>
+        <translation type="vanished">Saldo</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="149"/>
         <source>Miner Fees</source>
-        <translation>Siirtomaksut</translation>
+        <translation type="vanished">Siirtomaksut</translation>
     </message>
     <message>
-        <location filename="../src/turnstile.ui" line="172"/>
         <source>Total Balance</source>
-        <translation>Kokonaissaldo</translation>
+        <translation type="vanished">Kokonaissaldo</translation>
     </message>
 </context>
 <context>
     <name>TurnstileProgress</name>
     <message>
-        <location filename="../src/turnstileprogress.ui" line="14"/>
         <source>Turnstile Migration Progress</source>
-        <translation>&quot;Turnstile&quot; Yhdistäminen Menossa</translation>
+        <translation type="vanished">&quot;Turnstile&quot; Yhdistäminen Menossa</translation>
     </message>
     <message>
-        <location filename="../src/turnstileprogress.ui" line="20"/>
         <source>From</source>
-        <translation>Mistä</translation>
+        <translation type="vanished">Mistä</translation>
     </message>
     <message>
-        <location filename="../src/turnstileprogress.ui" line="27"/>
         <source>To</source>
-        <translation>Minne</translation>
+        <translation type="vanished">Minne</translation>
     </message>
     <message>
-        <location filename="../src/turnstileprogress.ui" line="57"/>
         <source>Please ensure you have your wallet.dat backed up!</source>
-        <translation>Varmistathan, että olet varmuuskopioinut wallet.dat tiedoston!</translation>
+        <translation type="vanished">Varmistathan, että olet varmuuskopioinut wallet.dat tiedoston!</translation>
     </message>
     <message>
-        <location filename="../src/turnstileprogress.ui" line="67"/>
         <source>Next Transaction in 4 hours</source>
-        <translation>Seuraava tapahtuma 4 tunnissa</translation>
+        <translation type="vanished">Seuraava tapahtuma 4 tunnissa</translation>
     </message>
     <message>
-        <location filename="../src/turnstileprogress.ui" line="88"/>
         <source>Migration Progress</source>
-        <translation>Yhdistämisen Eteneminen</translation>
+        <translation type="vanished">Yhdistämisen Eteneminen</translation>
     </message>
 </context>
 <context>
@@ -2021,49 +2080,40 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
 <context>
     <name>zboard</name>
     <message>
-        <location filename="../src/zboard.ui" line="14"/>
         <source>Post to z-board.net</source>
-        <translation>Lähetä z-board.netiin</translation>
+        <translation type="vanished">Lähetä z-board.netiin</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="20"/>
         <source>Total Fee</source>
-        <translation>Kokonaissiirtomaksu</translation>
+        <translation type="vanished">Kokonaissiirtomaksu</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="57"/>
         <source>Memo</source>
-        <translation>Viesti</translation>
+        <translation type="vanished">Viesti</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="64"/>
         <source>(optional)</source>
-        <translation>(vaihtoehtoinen)</translation>
+        <translation type="vanished">(vaihtoehtoinen)</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="71"/>
         <source>Send From</source>
-        <translation>Mistä</translation>
+        <translation type="vanished">Mistä</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="78"/>
         <source>Post As:</source>
-        <translation>Lähetä Nimellä:</translation>
+        <translation type="vanished">Lähetä Nimellä:</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="85"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZBoard: Fully anonymous and untraceable chat messages based on the ZCash blockchain. &lt;a href=&quot;http://www.z-board.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.z-board.net/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZBoard: Täysin anonyymejä ja jäljittämätömiä chat-viestejä, jotka perustuvat ZCash-lohkoketjuun. &lt;a href=&quot;http://www.z-board.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.z-board.net/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZBoard: Täysin anonyymejä ja jäljittämätömiä chat-viestejä, jotka perustuvat ZCash-lohkoketjuun. &lt;a href=&quot;http://www.z-board.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://www.z-board.net/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="107"/>
         <source>Warning</source>
-        <translation>Varoitus</translation>
+        <translation type="vanished">Varoitus</translation>
     </message>
     <message>
-        <location filename="../src/zboard.ui" line="124"/>
         <source>Posting to Board</source>
-        <translation>Lähetetään Aiheeseen</translation>
+        <translation type="vanished">Lähetetään Aiheeseen</translation>
     </message>
 </context>
 </TS>

@@ -215,13 +215,13 @@ void ConnectionLoader::createZcashConf() {
 }
 
 
-void ConnectionLoader::downloadParams(std::function<void(void)> cb) {    
+void ConnectionLoader::downloadParams(std::function<void(void)> cb) {
     main->logger->write("Adding params to download queue");
     // Add all the files to the download queue
     downloadQueue = new QQueue<QUrl>();
     client = new QNetworkAccessManager(main);
 
-    //TODO: we never execute this
+    //Currently we fallback to this in rare edgecases, it's not normally executed
     downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-output.params"));
     downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-spend.params"));
 
@@ -590,8 +590,6 @@ bool ConnectionLoader::verifyParams() {
     QDir paramsDir(zcashParamsDir());
 
     // TODO: better error reporting if only 1 file exists or is missing
-    // TODO: do a basic size check, to filter out partial downloads and corrupt
-    // files from full HD's and other weird stuff
     qDebug() << "Verifying sapling param files exist";
 
 
@@ -611,9 +609,15 @@ bool ConnectionLoader::verifyParams() {
         return true;
     }
 
-    // this is to support hushd inside a .dmg file, where the binaries are not at the root directory, but they are executed from the root dir of the .dmg
-    if( QFile( QDir("..").filePath("Contents/MacOS/sapling-output.params") ).exists() && QFile( QDir("..").filePath("Contents/MacOS/hush3/sapling-spend.params") ).exists() ) {
-        qDebug() << "Found params in ../Contents/MacOS";
+    // this is to support SD on mac in /Applications1
+    if( QFile( QDir("/Applications").filePath("silentdragon.app/Contents/MacOS/sapling-output.params") ).exists() && QFile( QDir("/Applications").filePath("./silentdragon.app/Contents/MacOS/sapling-spend.params") ).exists() ) {
+        qDebug() << "Found params in /Applications/silentdragon.app/Contents/MacOS";
+        return true;
+    }
+
+    // this is to support SD on mac inside a DMG
+    if( QFile( QDir("./").filePath("silentdragon.app/Contents/MacOS/sapling-output.params") ).exists() && QFile( QDir("./").filePath("./silentdragon.app/Contents/MacOS/sapling-spend.params") ).exists() ) {
+        qDebug() << "Found params in ./silentdragon.app/Contents/MacOS";
         return true;
     }
 

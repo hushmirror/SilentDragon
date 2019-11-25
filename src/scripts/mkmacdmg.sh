@@ -106,7 +106,6 @@ echo "[OK]"
 # xcrun stapler staple macOS-zecwallet-v0.8.0.dmg
 
 echo -n "Building dmg..........."
-<<<<<<< HEAD
 mv silentdragon.app silentdragon.app
 create-dmg --volname "silentdragon-v$APP_VERSION" --volicon "res/logo.icns" --window-pos 200 120 --icon "silentdragon.app" 200 190  --app-drop-link 600 185 --hide-extension "silentdragon.app"  --window-size 800 400 --hdiutil-quiet --background res/dmgbg.png  artifacts/macOS-silentdragon-v$APP_VERSION.dmg silentdragon.app >/dev/null 2>&1
 
