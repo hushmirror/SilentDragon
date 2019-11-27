@@ -13,18 +13,19 @@
         <file>res/logobig.gif</file>
     </qresource>
     <qresource prefix="/translations">
-        <file>res/zec_qt_wallet_de.qm</file>
-        <file>res/zec_qt_wallet_es.qm</file>
-        <file>res/zec_qt_wallet_fi.qm</file>
-        <file>res/zec_qt_wallet_fr.qm</file>
-        <file>res/zec_qt_wallet_hr.qm</file>
-        <file>res/zec_qt_wallet_it.qm</file>
-        <file>res/zec_qt_wallet_nl.qm</file>
-        <file>res/zec_qt_wallet_pt.qm</file>
-        <file>res/zec_qt_wallet_ru.qm</file>
-        <file>res/zec_qt_wallet_tr.qm</file>
-        <file>res/zec_qt_wallet_uk.qm</file>
-        <file>res/zec_qt_wallet_zh.qm</file>
+        <file>res/silentdragon_de.qm</file>
+        <file>res/silentdragon_es.qm</file>
+        <file>res/silentdragon_fi.qm</file>
+        <file>res/silentdragon_fr.qm</file>
+        <file>res/silentdragon_hr.qm</file>
+        <file>res/silentdragon_it.qm</file>
+        <file>res/silentdragon_nl.qm</file>
+        <file>res/silentdragon_pt.qm</file>
+        <file>res/silentdragon_ru.qm</file>
+        <file>res/silentdragon_sr.qm</file>
+        <file>res/silentdragon_tr.qm</file>
+        <file>res/silentdragon_uk.qm</file>
+        <file>res/silentdragon_zh.qm</file>
     </qresource>
     <qresource prefix="/css">
         <file>res/css/blue.css</file>

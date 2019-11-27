@@ -1357,7 +1357,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <source>There was an error! : </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1372,7 +1372,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation>连接错误</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <location filename="../src/sendtab.cpp" line="727"/>
         <source>Transaction Error</source>
         <translation>交易错误</translation>
