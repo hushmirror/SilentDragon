@@ -1193,7 +1193,7 @@ If all else fails, please run hushd manually.</source>
         <translation>Cela peut prendre plusieurs heures. Prenez du pop-corn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <source>There was an error! : </source>
         <translation>Il y avait une erreur! :</translation>
     </message>
@@ -1359,7 +1359,7 @@ Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu E
         <translation>Erreur de connection</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <location filename="../src/sendtab.cpp" line="727"/>
         <source>Transaction Error</source>
         <translation>Erreur de transaction</translation>

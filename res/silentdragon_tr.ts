@@ -1155,7 +1155,7 @@ Hepsi başarısız olursa, lütfen hushd&apos;i manuel olarak çalıştırın.</
         <translation>MB saniyede </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <source>There was an error! : </source>
         <translation>Bir hata oluştu! : </translation>
     </message>
@@ -1328,7 +1328,7 @@ Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıc
         <translation>Bağlantı Hatası</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <location filename="../src/sendtab.cpp" line="727"/>
         <source>Transaction Error</source>
         <translation>İşlem Hatası</translation>

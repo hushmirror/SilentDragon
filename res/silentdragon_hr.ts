@@ -1196,13 +1196,13 @@ Molimo postavite host/port i korisnčko ime/lozinku u Edit-&gt;Settings meniju.<
         <translation>Greška sa vezom</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <location filename="../src/sendtab.cpp" line="727"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="791"/>
+        <location filename="../src/connection.cpp" line="797"/>
         <source>There was an error! : </source>
         <translation>Dogodila se greška! : </translation>
     </message>
