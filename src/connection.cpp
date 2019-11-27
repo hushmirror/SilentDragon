@@ -1,3 +1,5 @@
+// Copyright 2019 The Hush developers
+// GPLv3
 #include "connection.h"
 #include "mainwindow.h"
 #include "settings.h"
@@ -213,16 +215,17 @@ void ConnectionLoader::createZcashConf() {
 }
 
 
-void ConnectionLoader::downloadParams(std::function<void(void)> cb) {    
+void ConnectionLoader::downloadParams(std::function<void(void)> cb) {
     main->logger->write("Adding params to download queue");
     // Add all the files to the download queue
     downloadQueue = new QQueue<QUrl>();
-    client = new QNetworkAccessManager(main);   
+    client = new QNetworkAccessManager(main);
 
+    //Currently we fallback to this in rare edgecases, it's not normally executed
     downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-output.params"));
     downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-spend.params"));
 
-    doNextDownload(cb);    
+    doNextDownload(cb);
 }
 
 void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
@@ -586,21 +589,35 @@ QString ConnectionLoader::zcashParamsDir() {
 bool ConnectionLoader::verifyParams() {
     QDir paramsDir(zcashParamsDir());
 
+    // TODO: better error reporting if only 1 file exists or is missing
     qDebug() << "Verifying sapling param files exist";
 
 
-    if( QFile( QDir(".").filePath("sapling-output.params") ).exists() && QFile( QDir(".").filePath("sapling-output.params") ).exists() ) {
+    // This list of locations to look must be kept in sync with the list in hushd
+    if( QFile( QDir(".").filePath("sapling-output.params") ).exists() && QFile( QDir(".").filePath("sapling-spend.params") ).exists() ) {
         qDebug() << "Found params in .";
         return true;
     }
 
-    if( QFile( QDir("..").filePath("sapling-output.params") ).exists() && QFile( QDir("..").filePath("sapling-output.params") ).exists() ) {
+    if( QFile( QDir("..").filePath("sapling-output.params") ).exists() && QFile( QDir("..").filePath("sapling-spend.params") ).exists() ) {
         qDebug() << "Found params in ..";
         return true;
     }
 
-    if( QFile( QDir("..").filePath("hush3/sapling-output.params") ).exists() && QFile( QDir("..").filePath("hush3/sapling-output.params") ).exists() ) {
+    if( QFile( QDir("..").filePath("hush3/sapling-output.params") ).exists() && QFile( QDir("..").filePath("hush3/sapling-spend.params") ).exists() ) {
         qDebug() << "Found params in ../hush3";
+        return true;
+    }
+
+    // this is to support SD on mac in /Applications1
+    if( QFile( QDir("/Applications").filePath("silentdragon.app/Contents/MacOS/sapling-output.params") ).exists() && QFile( QDir("/Applications").filePath("./silentdragon.app/Contents/MacOS/sapling-spend.params") ).exists() ) {
+        qDebug() << "Found params in /Applications/silentdragon.app/Contents/MacOS";
+        return true;
+    }
+
+    // this is to support SD on mac inside a DMG
+    if( QFile( QDir("./").filePath("silentdragon.app/Contents/MacOS/sapling-output.params") ).exists() && QFile( QDir("./").filePath("./silentdragon.app/Contents/MacOS/sapling-spend.params") ).exists() ) {
+        qDebug() << "Found params in ./silentdragon.app/Contents/MacOS";
         return true;
     }
 
