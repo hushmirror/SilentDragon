@@ -1090,7 +1090,8 @@ void RPC::refreshZECPrice() {
         return noConnection();
 
     // TODO: use/render all this data
-    QUrl cmcURL("https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true");
+    QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
+    QUrl cmcURL(price_feed);
     QNetworkRequest req;
     req.setUrl(cmcURL);
     QNetworkReply *reply = conn->restclient->get(req);
@@ -1130,7 +1131,9 @@ void RPC::refreshZECPrice() {
                 // TODO: support BTC/EUR prices as well
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
                 qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
-                qDebug() << "HUSH = " << QString::number((double)hush["btc"]) << " sat ";
+                qDebug() << "HUSH = " << QString::number((double)hush["eur"]) << " EUR";
+                qDebug() << "HUSH = " << QString::number((int) 100000000 * (double) hush["btc"]) << " sat ";
+                //TODO: based on current fiat selection, store that fiat price
                 Settings::getInstance()->setZECPrice( hush["usd"] );
                 Settings::getInstance()->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 

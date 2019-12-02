@@ -119,7 +119,8 @@ MainWindow::MainWindow(QWidget *parent) :
     setupTransactionsTab();
     setupReceiveTab();
     setupBalancesTab();
-    setupZcashdTab();
+    setupHushTab();
+    setupMarketTab();
 
     rpc = new RPC(this);
     qDebug() << "Created RPC";
@@ -914,8 +915,12 @@ void MainWindow::setupBalancesTab() {
     });
 }
 
-void MainWindow::setupZcashdTab() {
+void MainWindow::setupHushTab() {
     ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+}
+
+void MainWindow::setupMarketTab() {
+    qDebug() << "Setting up market tab";
 }
 
 void MainWindow::setupTransactionsTab() {

@@ -80,7 +80,8 @@ private:
     void setupTransactionsTab();
     void setupReceiveTab();
     void setupBalancesTab();
-    void setupZcashdTab();
+    void setupHushTab();
+    void setupMarketTab();
 
     void slot_change_theme(const QString& themeName);
     void setupTurnstileDialog();
