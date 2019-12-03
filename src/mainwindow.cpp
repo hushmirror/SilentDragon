@@ -1,4 +1,5 @@
 // Copyright 2019 The Hush Developers
+// Released under the GPLv3
 #include "mainwindow.h"
 #include "addressbook.h"
 #include "viewalladdresses.h"
@@ -266,6 +267,15 @@ void MainWindow::setupSettingsModal() {
             Settings::getInstance()->setSaveZtxs(checked);
         });
 
+        QString currency_name;
+        try {
+            currency_name = Settings::getInstance()->get_currency_name();
+        } catch (...) {
+            currency_name = "USD";
+        }
+
+        this->slot_change_currency(currency_name);
+
         // Setup clear button
         QObject::connect(settings.btnClearSaved, &QCheckBox::clicked, [=]() {
             if (QMessageBox::warning(this, "Clear saved history?",
@@ -283,8 +293,16 @@ void MainWindow::setupSettingsModal() {
         QObject::connect(settings.comboBoxTheme, SIGNAL(currentIndexChanged(QString)), this, SLOT(slot_change_theme(QString)));
         QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
             this->slot_change_theme(theme_name);
-            // Tell the user to restart
-            QMessageBox::information(this, tr("Restart"), tr("Please restart SilentDragon to have the theme apply"), QMessageBox::Ok);
+            QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+        });
+
+        // Get Currency Data
+        int currency_index = settings.comboBoxCurrency->findText(Settings::getInstance()->get_currency_name(), Qt::MatchExactly);
+        settings.comboBoxCurrency->setCurrentIndex(currency_index);
+        QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString currency_name) {
+            this->slot_change_currency(currency_name);
+            rpc->refresh(true);
+            QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
         // Save sent transactions
@@ -1284,18 +1302,30 @@ void MainWindow::updateLabels() {
     updateLabelsAutoComplete();
 }
 
+void MainWindow::slot_change_currency(const QString& currency_name)
+{
+    Settings::getInstance()->set_currency_name(currency_name);
+
+    // Include currency
+    QString saved_currency_name;
+    try {
+       saved_currency_name = Settings::getInstance()->get_currency_name();
+    } catch (const std::exception& e) {
+        qDebug() << QString("Ignoring currency change Exception! : ") << e.what();
+        saved_currency_name = "USD";
+    }
+}
+
 void MainWindow::slot_change_theme(const QString& theme_name)
 {
     Settings::getInstance()->set_theme_name(theme_name);
 
     // Include css
     QString saved_theme_name;
-    try
-    {
+    try {
        saved_theme_name = Settings::getInstance()->get_theme_name();
-    }
-    catch (...)
-    {
+    } catch (const std::exception& e) {
+        qDebug() << QString("Ignoring theme change Exception! : ") << e.what();
         saved_theme_name = "default";
     }
 

@@ -1,4 +1,5 @@
 // Copyright 2019 The Hush developers
+// Released under the GPLv3
 #include "mainwindow.h"
 #include "settings.h"
 
@@ -160,6 +161,15 @@ double Settings::getZECPrice() {
     return zecPrice;
 }
 
+double Settings::get_price(std::string currency) {
+    auto search = prices.find(currency);
+    if (search != prices.end()) {
+        return search->second;
+    } else {
+        return -1.0;
+    }
+}
+
 unsigned int Settings::getBTCPrice() {
     // in satoshis
     return btcPrice;
@@ -235,7 +245,7 @@ QString Settings::getDecimalString(double amt) {
     return f;
 }
 
-QString Settings::getZECDisplayFormat(double bal) {
+QString Settings::getDisplayFormat(double bal) {
     // This is idiotic. Why doesn't QString have a way to do this?
     return getDecimalString(bal) % " " % Settings::getTokenName();
 }
@@ -243,12 +253,12 @@ QString Settings::getZECDisplayFormat(double bal) {
 QString Settings::getZECUSDDisplayFormat(double bal) {
     auto usdFormat = getUSDFormat(bal);
     if (!usdFormat.isEmpty())
-        return getZECDisplayFormat(bal) % " (" % getUSDFormat(bal) % ")";
+        return getDisplayFormat(bal) % " (" % getUSDFormat(bal) % ")";
     else
-        return getZECDisplayFormat(bal);
+        return getDisplayFormat(bal);
 }
 
-const QString Settings::txidStatusMessage = QString(QObject::tr("Tx submitted (right click to copy) txid:"));
+const QString Settings::txidStatusMessage = QString(QObject::tr("Transaction submitted (right click to copy) txid:"));
 
 QString Settings::getTokenName() {
     if (Settings::getInstance()->isTestnet()) {
@@ -258,6 +268,7 @@ QString Settings::getTokenName() {
     }
 }
 
+//TODO: this isn't used for donations
 QString Settings::getDonationAddr() {
     if (Settings::getInstance()->isTestnet())  {
 	    return "ztestsaplingXXX";
@@ -276,6 +287,15 @@ bool Settings::addToZcashConf(QString confLocation, QString line) {
     file.close();
 
     return true;
+}
+
+QString Settings::get_currency_name() {
+    // Load from the QT Settings.
+    return QSettings().value("options/currency_name", false).toString();
+}
+
+void Settings::set_currency_name(QString currency_name) {
+    QSettings().setValue("options/currency_name", currency_name);
 }
 
 bool Settings::removeFromZcashConf(QString confLocation, QString option) {
@@ -337,7 +357,7 @@ bool Settings::isValidAddress(QString addr) {
 
 // Get a pretty string representation of this Payment URI
 QString Settings::paymentURIPretty(PaymentURI uri) {
-    return QString() + "Payment Request\n" + "Pay: " + uri.addr + "\nAmount: " + getZECDisplayFormat(uri.amt.toDouble())
+    return QString() + "Payment Request\n" + "Pay: " + uri.addr + "\nAmount: " + getDisplayFormat(uri.amt.toDouble())
         + "\nMemo:" + QUrl::fromPercentEncoding(uri.memo.toUtf8());
 }
 

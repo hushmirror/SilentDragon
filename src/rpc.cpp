@@ -801,9 +801,9 @@ void RPC::refreshBalances() {
 
         AppDataModel::getInstance()->setBalances(balT, balZ);
 
-        ui->balSheilded   ->setText(Settings::getZECDisplayFormat(balZ));
-        ui->balTransparent->setText(Settings::getZECDisplayFormat(balT));
-        ui->balTotal      ->setText(Settings::getZECDisplayFormat(balTotal));
+        ui->balSheilded   ->setText(Settings::getDisplayFormat(balZ));
+        ui->balTransparent->setText(Settings::getDisplayFormat(balT));
+        ui->balTotal      ->setText(Settings::getDisplayFormat(balTotal));
 
         ui->balSheilded   ->setToolTip(Settings::getUSDFormat(balZ));
         ui->balTransparent->setToolTip(Settings::getUSDFormat(balT));

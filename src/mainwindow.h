@@ -84,6 +84,7 @@ private:
     void setupMarketTab();
 
     void slot_change_theme(const QString& themeName);
+    void slot_change_currency(const QString& currencyName);
     void setupTurnstileDialog();
     void setupSettingsModal();
     void setupStatusBar();
