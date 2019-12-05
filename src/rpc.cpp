@@ -30,7 +30,7 @@ RPC::RPC(MainWindow* main) {
     // Set up timer to refresh Price
     priceTimer = new QTimer(main);
     QObject::connect(priceTimer, &QTimer::timeout, [=]() {
-        refreshZECPrice();
+        refreshPrice();
     });
     priceTimer->start(Settings::priceRefreshSpeed);  // Every hour
 
@@ -93,7 +93,7 @@ void RPC::setConnection(Connection* c) {
     Settings::removeFromZcashConf(zcashConfLocation, "reindex");
 
     // Refresh the UI
-    refreshZECPrice();
+    refreshPrice();
     checkForUpdate();
 
     // Force update, because this might be coming from a settings update
@@ -526,7 +526,7 @@ void RPC::refreshReceivedZTrans(QList<QString> zaddrs) {
     );
 } 
 
-/// This will refresh all the balance data from zcashd
+/// This will refresh all the balance data from hushd
 void RPC::refresh(bool force) {
     if  (conn == nullptr) 
         return noConnection();
@@ -536,9 +536,7 @@ void RPC::refresh(bool force) {
 
 
 void RPC::getInfoThenRefresh(bool force) {
-
     //qDebug() << "getinfo";
-
     if  (conn == nullptr) 
         return noConnection();
 
@@ -551,6 +549,7 @@ void RPC::getInfoThenRefresh(bool force) {
             Settings::getInstance()->setTestnet(reply["testnet"].get<json::boolean_t>());
         };
 
+        // TODO: checkmark only when getinfo.synced == true!
         // Connected, so display checkmark.
         QIcon i(":/icons/res/connected.gif");
         main->statusIcon->setPixmap(i.pixmap(16, 16));
@@ -648,7 +647,7 @@ void RPC::getInfoThenRefresh(bool force) {
 
         conn->doRPCIgnoreError(payload, [=](const json& reply) {
             auto progress    = reply["verificationprogress"].get<double>();
-	    // TODO: use getinfo.synced
+            // TODO: use getinfo.synced
             bool isSyncing   = progress < 0.9999; // 99.99%
             int  blockNumber = reply["blocks"].get<json::number_unsigned_t>();
 
@@ -657,10 +656,12 @@ void RPC::getInfoThenRefresh(bool force) {
                 estimatedheight = reply["estimatedheight"].get<json::number_unsigned_t>();
             }
 
-            Settings::getInstance()->setSyncing(isSyncing);
-            Settings::getInstance()->setBlockNumber(blockNumber);
+            auto s = Settings::getInstance();
+            s->setSyncing(isSyncing);
+            s->setBlockNumber(blockNumber);
+            std::string ticker = s->get_currency_name();
 
-            // Update zcashd tab if it exists
+            // Update hushd tab
             if (isSyncing) {
                 QString txt = QString::number(blockNumber);
                 if (estimatedheight > 0) {
@@ -677,17 +678,18 @@ void RPC::getInfoThenRefresh(bool force) {
                 ui->heightLabel->setText(QObject::tr("Block height"));
             }
 
+
             // Update the status bar
             QString statusText = QString() %
                 (isSyncing ? QObject::tr("Syncing") : QObject::tr("Connected")) %
                 " (" %
-                (Settings::getInstance()->isTestnet() ? QObject::tr("testnet:") : "") %
+                (s->isTestnet() ? QObject::tr("testnet:") : "") %
                 QString::number(blockNumber) %
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
                 " Lag: " % QString::number(blockNumber - notarized) %
-                " HUSH/USD=$" % QString::number( (double) Settings::getInstance()->getZECPrice() ) %
-                " " % QString::number( Settings::getInstance()->getBTCPrice() ) % "sat";
+                ", " % "HUSH" % "/" % QString::fromStdString(ticker) % "=" % QString::number( (double) s->get_price(ticker) ) % " " % QString::fromStdString(ticker) %
+                " " % QString::number( s->getBTCPrice() ) % "sat";
             main->statusLabel->setText(statusText);
 
             auto zecPrice = Settings::getUSDFormat(1);
@@ -698,7 +700,7 @@ void RPC::getInfoThenRefresh(bool force) {
             else {
                 tooltip = QObject::tr("hushd has no peer connections! Network issues?");
             }
-            tooltip = tooltip % "(v " % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
+            tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
 
             if (!zecPrice.isEmpty()) {
                 tooltip = "1 HUSH = " % zecPrice % "\n" % tooltip;
@@ -1085,7 +1087,7 @@ void RPC::checkForUpdate(bool silent) {
 }
 
 // Get the HUSH prices
-void RPC::refreshZECPrice() {
+void RPC::refreshPrice() {
     if  (conn == nullptr)
         return noConnection();
 
@@ -1095,6 +1097,7 @@ void RPC::refreshZECPrice() {
     QNetworkRequest req;
     req.setUrl(cmcURL);
     QNetworkReply *reply = conn->restclient->get(req);
+    auto s = Settings::getInstance();
 
     QObject::connect(reply, &QNetworkReply::finished, [=] {
         reply->deleteLater();
@@ -1107,8 +1110,8 @@ void RPC::refreshZECPrice() {
                 } else {
                     qDebug() << reply->errorString();
                 }
-                Settings::getInstance()->setZECPrice(0);
-                Settings::getInstance()->setBTCPrice(0);
+                s->setZECPrice(0);
+                s->setBTCPrice(0);
                 return;
             }
 
@@ -1116,8 +1119,8 @@ void RPC::refreshZECPrice() {
             auto all = reply->readAll();
             auto parsed = json::parse(all, nullptr, false);
             if (parsed.is_discarded()) {
-                Settings::getInstance()->setZECPrice(0);
-                Settings::getInstance()->setBTCPrice(0);
+                s->setZECPrice(0);
+                s->setBTCPrice(0);
                 return;
             }
 
@@ -1125,6 +1128,7 @@ void RPC::refreshZECPrice() {
 
             const json& item  = parsed.get<json::object_t>();
             const json& hush  = item["hush"].get<json::object_t>();
+            auto  ticker      = s->get_currency_name();
 
             if (hush["usd"] >= 0) {
                 qDebug() << "Found hush key in price json";
@@ -1134,8 +1138,12 @@ void RPC::refreshZECPrice() {
                 qDebug() << "HUSH = " << QString::number((double)hush["eur"]) << " EUR";
                 qDebug() << "HUSH = " << QString::number((int) 100000000 * (double) hush["btc"]) << " sat ";
                 //TODO: based on current fiat selection, store that fiat price
-                Settings::getInstance()->setZECPrice( hush["usd"] );
-                Settings::getInstance()->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
+                s->setZECPrice( hush["usd"] );
+                s->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
+
+                // convert ticker to upper case
+                //std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                s->set_price(ticker, hush[ticker]);
 
                 return;
             } else {
