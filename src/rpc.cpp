@@ -688,7 +688,7 @@ void RPC::getInfoThenRefresh(bool force) {
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
                 " Lag: " % QString::number(blockNumber - notarized) %
-                ", " % "HUSH" % "/" % QString::fromStdString(ticker) % "=" % QString::number( (double) s->get_price(ticker) ) % " " % QString::fromStdString(ticker) %
+                ", " % "HUSH" % "=" % QString::number( (double) s->get_price(ticker) ) % " " % QString::fromStdString(ticker) %
                 " " % QString::number( s->getBTCPrice() ) % "sat";
             main->statusLabel->setText(statusText);
 
@@ -1130,6 +1130,7 @@ void RPC::refreshPrice() {
             const json& hush  = item["hush"].get<json::object_t>();
             auto  ticker      = s->get_currency_name();
 
+            //TODO: better check for valid json response
             if (hush["usd"] >= 0) {
                 qDebug() << "Found hush key in price json";
                 // TODO: support BTC/EUR prices as well
@@ -1142,9 +1143,10 @@ void RPC::refreshPrice() {
                 s->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 
                 // convert ticker to upper case
-                //std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
+                qDebug() << "ticker=" << QString::fromStdString(ticker);
                 s->set_price(ticker, hush[ticker]);
-
+                refresh(true);
                 return;
             } else {
                 qDebug() << "No hush key found in JSON! API might be down or we are rate-limited\n";
