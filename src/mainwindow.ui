@@ -994,7 +994,7 @@
            <item row="14" column="0">
             <widget class="QLabel" name="volumeLabel">
              <property name="text">
-              <string>Volume on Exchanges</string>
+              <string>24H Volume</string>
              </property>
             </widget>
            </item>
@@ -1019,7 +1019,6 @@
              </property>
             </widget>
            </item>
-
 
        </layout>
       </widget>

@@ -1134,27 +1134,40 @@ void RPC::refreshPrice() {
             //TODO: better check for valid json response
             if (hush["usd"] >= 0) {
                 qDebug() << "Found hush key in price json";
-                // TODO: support BTC/EUR prices as well
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
                 qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
                 qDebug() << "HUSH = " << QString::number((double)hush["eur"]) << " EUR";
                 qDebug() << "HUSH = " << QString::number((int) 100000000 * (double) hush["btc"]) << " sat ";
-                //TODO: based on current fiat selection, store that fiat price
+
                 s->setZECPrice( hush["usd"] );
                 s->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 
-                // convert ticker to upper case
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
                 qDebug() << "ticker=" << QString::fromStdString(ticker);
                 // TODO: update all stats and prevent coredumps!
                 auto price = hush[ticker];
                 auto vol   = hush[ticker + "_24h_vol"];
                 auto mcap  = hush[ticker + "_market_cap"];
+
+                auto btcprice = hush["btc"];
+                auto btcvol   = hush["btc_24h_vol"];
+                auto btcmcap  = hush["btc_market_cap"];
                 s->set_price(ticker, price);
                 s->set_volume(ticker, vol);
-                //s->set_marketcap(ticker, mcap);
-                //ui->marketcap = QString::number(mcap);
-                ui->volume    = QString::number((double) vol);
+                s->set_volume("BTC", btcvol);
+                s->set_marketcap(ticker, mcap);
+
+                qDebug() << "Volume = " << (double) vol;
+                ui->volume->setText( QString::number((double) vol) + " HUSH" );
+                ui->volumeBTC->setText( QString::number((double) btcvol) + " BTC" );
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                ui->volumeLocal->setText( QString::number((double) vol * (double) price) + " " + QString::fromStdString(ticker) );
+
+                qDebug() << "Mcap = " << (double) mcap;
+                ui->marketcap->setText(  QString::number( (double) mcap) + " HUSH" );
+                ui->marketcapBTC->setText( QString::number((double) btcmcap) + " BTC" );
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                ui->marketcapLocal->setText( QString::number((double) mcap * (double) price) + " " + QString::fromStdString(ticker) );
 
                 refresh(true);
                 return;
