@@ -148,7 +148,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
         <location filename="../src/mainwindow.cpp" line="928"/>
-        <location filename="../src/mainwindow.cpp" line="983"/>
+        <location filename="../src/mainwindow.cpp" line="984"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Anexar recado</translation>
@@ -283,7 +283,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="852"/>
-        <location filename="../src/mainwindow.cpp" line="1122"/>
+        <location filename="../src/mainwindow.cpp" line="1124"/>
         <source>Export Private Key</source>
         <translation>Exportar Chave Privada</translation>
     </message>
@@ -751,14 +751,14 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="866"/>
-        <location filename="../src/mainwindow.cpp" line="956"/>
+        <location filename="../src/mainwindow.cpp" line="957"/>
         <source>Copy address</source>
         <translation>Copiar endereço</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="869"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
-        <location filename="../src/mainwindow.cpp" line="958"/>
+        <location filename="../src/mainwindow.cpp" line="953"/>
+        <location filename="../src/mainwindow.cpp" line="959"/>
         <source>Copied to clipboard</source>
         <translation>Copiado</translation>
     </message>
@@ -774,7 +774,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="962"/>
+        <location filename="../src/mainwindow.cpp" line="963"/>
         <source>View on block explorer</source>
         <translation>Ver no explorador de blocos</translation>
     </message>
@@ -793,42 +793,42 @@
         <translation type="vanished">Migrar para Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="950"/>
+        <location filename="../src/mainwindow.cpp" line="951"/>
         <source>Copy txid</source>
         <translation>Copiar txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="975"/>
+        <location filename="../src/mainwindow.cpp" line="976"/>
         <source>View Payment Request</source>
         <translation>Exibir solicitação de pagamento</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="982"/>
+        <location filename="../src/mainwindow.cpp" line="983"/>
         <source>View Memo</source>
         <translation>Ver Recado</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="996"/>
+        <location filename="../src/mainwindow.cpp" line="998"/>
         <source>Reply to </source>
         <translation>Responder a</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1079"/>
+        <location filename="../src/mainwindow.cpp" line="1081"/>
         <source>Created new t-Addr</source>
         <translation>Criar novo t-Addr</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1128"/>
+        <location filename="../src/mainwindow.cpp" line="1130"/>
         <source>Copy Address</source>
         <translation>Copiar endereço</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1194"/>
+        <location filename="../src/mainwindow.cpp" line="1196"/>
         <source>Address has been previously used</source>
         <translation>O endereço foi usado anteriormente</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1196"/>
+        <location filename="../src/mainwindow.cpp" line="1198"/>
         <source>Address is unused</source>
         <translation>Endereço não utilizado</translation>
     </message>

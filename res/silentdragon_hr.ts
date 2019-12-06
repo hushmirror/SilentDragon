@@ -144,7 +144,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
         <location filename="../src/mainwindow.cpp" line="928"/>
-        <location filename="../src/mainwindow.cpp" line="983"/>
+        <location filename="../src/mainwindow.cpp" line="984"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Poruka (memo)</translation>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="852"/>
-        <location filename="../src/mainwindow.cpp" line="1122"/>
+        <location filename="../src/mainwindow.cpp" line="1124"/>
         <source>Export Private Key</source>
         <translation>Izvoz privatnog ključa</translation>
     </message>
@@ -531,12 +531,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="359"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
-        <translation>Koristite vanjski hushd. Molim ponovo pokrenite hushd sa -rescan</translation>
+        <translation>Koristite vanjski hushd. Molimo ponovno pokrenite hushd sa -rescan</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="362"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
-        <translation>Koristite vanjski hushd. Molim ponovo pokrenite hushd sa -reindex</translation>
+        <translation>Koristite vanjski hushd. Molimo ponovno pokrenite hushd sa -reindex</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="387"/>
@@ -561,7 +561,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="434"/>
         <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
-        <translation>SilentDragon se mora ponovno pokrenuti za rescan/reindex. SilentDragon će se sada zatvoriti, molim ponovno pokrenite SilentDragon za nastavak</translation>
+        <translation>SilentDragon se mora ponovno pokrenuti za rescan/reindex. SilentDragon će se sada zatvoriti, molimo ponovno pokrenite SilentDragon za nastavak</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="436"/>
@@ -626,7 +626,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="677"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation>Ključevi su unešeni. Rescan blockchaina može pptrajati i do nekoliko minuta. Do tada su limitirane funkcionalnosti</translation>
+        <translation>Ključevi su unešeni. Rescan blockchaina može potrajati i do nekoliko minuta. Do tada su limitirane funkcionalnosti</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="696"/>
@@ -695,14 +695,14 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="866"/>
-        <location filename="../src/mainwindow.cpp" line="956"/>
+        <location filename="../src/mainwindow.cpp" line="957"/>
         <source>Copy address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="869"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
-        <location filename="../src/mainwindow.cpp" line="958"/>
+        <location filename="../src/mainwindow.cpp" line="953"/>
+        <location filename="../src/mainwindow.cpp" line="959"/>
         <source>Copied to clipboard</source>
         <translation>Kopirano u mađuspremnik</translation>
     </message>
@@ -718,7 +718,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="962"/>
+        <location filename="../src/mainwindow.cpp" line="963"/>
         <source>View on block explorer</source>
         <translation>Pogledaj na blok exploreru</translation>
     </message>
@@ -733,42 +733,42 @@
         <translation>Pretvorite adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="950"/>
+        <location filename="../src/mainwindow.cpp" line="951"/>
         <source>Copy txid</source>
         <translation>Kopitajte txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="975"/>
+        <location filename="../src/mainwindow.cpp" line="976"/>
         <source>View Payment Request</source>
         <translation>Pogledajte zahtjev o plaćanju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="982"/>
+        <location filename="../src/mainwindow.cpp" line="983"/>
         <source>View Memo</source>
         <translation>Pogledajte poruku (memo)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="996"/>
+        <location filename="../src/mainwindow.cpp" line="998"/>
         <source>Reply to </source>
         <translation>Odgovorite </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1079"/>
+        <location filename="../src/mainwindow.cpp" line="1081"/>
         <source>Created new t-Addr</source>
         <translation>Napravljena je nova transparentna adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1128"/>
+        <location filename="../src/mainwindow.cpp" line="1130"/>
         <source>Copy Address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1194"/>
+        <location filename="../src/mainwindow.cpp" line="1196"/>
         <source>Address has been previously used</source>
         <translation>Adresa je već korištena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1196"/>
+        <location filename="../src/mainwindow.cpp" line="1198"/>
         <source>Address is unused</source>
         <translation>Adresa nije korištena</translation>
     </message>
@@ -1163,7 +1163,7 @@ Ne pokrećem integrirani hushd jer --no-embedded nije prilagođen</translation>
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Zatražena je ručna postavka veze, ali postavke nisu konfigurirane.
 
-Molimo postavite host/port i korisnčko ime/lozinku u Edit-&gt;Settings meniju.</translation>
+Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="424"/>
@@ -1172,12 +1172,12 @@ Molimo postavite host/port i korisnčko ime/lozinku u Edit-&gt;Settings meniju.<
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Nije moguće spojiti se na hushd konfiguriran u postavkama.
 
-Molimo postavite host/port i korisnčko ime/lozinku u Edit-&gt;Settings meniju.</translation>
+Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="487"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
-        <translation>Autorizacija neuspješna. Hushd nije prihvatio korisničko ime / lozinku koju ste unijeli. Pokušajte to promijeniti u Edit-&gt;Settings meniju</translation>
+        <translation>Autorizacija neuspješna. Hushd nije prihvatio korisničko ime / lozinku koju ste unijeli. Pokušajte to promijeniti u Uredi-&gt;Postavke meniju</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="502"/>
@@ -1561,7 +1561,7 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.ui" line="251"/>
         <source>Normally, change from t-Addresses goes to another t-Address. Checking this option will send the change to your shielded sapling address instead. Check this option to increase your privacy.</source>
-        <translation>Uobičajeno, promjene se sa jedne t-adrese šalju na drugu t-adresu. Ako odaberete ovu opciju promjena će se poslati na vašu zaštićenu sapling adresu. Odaberite ovu opciju ako želite povećati privatnost.</translation>
+        <translation>Uobičajeno, razlike se sa jedne t-adrese šalju na drugu t-adresu. Ako odaberete ovu opciju razlika će se poslati na vašu zaštićenu sapling adresu. Odaberite ovu opciju ako želite povećati privatnost.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="261"/>
@@ -1591,12 +1591,12 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.ui" line="302"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
-        <translation>Spojite se na Tor mrežu putem SOCKS proxy na 127.0.0.1:9050. Molim vas uzmite u obzir ad ćete morati izvana instalirati Tor uslugu.</translation>
+        <translation>Spojite se na Tor mrežu putem SOCKS proxy na 127.0.0.1:9050. Molim vas uzmite u obzir da ćete morati izvana instalirati Tor uslugu.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="312"/>
         <source>Connect to github on startup to check for updates</source>
-        <translation>Prilikom pokretanja provjetite ažuriranja na githubu</translation>
+        <translation>Prilikom pokretanja provjerite ažuriranja na githubu</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="319"/>
@@ -1656,7 +1656,7 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.ui" line="513"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
-        <translation>Izgradite cijeli blockchain iz prvog (genesis) bloka sa rescanom svih datoteka. Ovo bi moglo potrajati nekoliko sati do nekoliko dana ovisno o jačini vašeg računala.  Kako bi imalo učinka morate ponovno poktenuti SilentDragon</translation>
+        <translation>Izgradite cijeli blockchain iz prvog (genesis) bloka sa rescanom svih datoteka. Ovo bi moglo potrajati nekoliko sati do nekoliko dana ovisno o jačini vašeg računala. Kako bi imalo učinka morate ponovno pokrenuti SilentDragon</translation>
     </message>
 </context>
 <context>
@@ -1777,7 +1777,7 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/confirm.ui" line="155"/>
         <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this Transaction might not work.</source>
-        <translation>Čini se da hushd nema točaka na istoj razini. Možad niste spojeni na Internet, pa je ova transakcija nevaljala.</translation>
+        <translation>Čini se da hushd nema točaka na istoj razini. Možda niste spojeni na Internet, pa je ova transakcija nevaljala.</translation>
     </message>
     <message>
         <location filename="../src/confirm.ui" line="168"/>

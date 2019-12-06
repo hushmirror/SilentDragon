@@ -144,7 +144,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
         <location filename="../src/mainwindow.cpp" line="928"/>
-        <location filename="../src/mainwindow.cpp" line="983"/>
+        <location filename="../src/mainwindow.cpp" line="984"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Poruka (memo)</translation>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="852"/>
-        <location filename="../src/mainwindow.cpp" line="1122"/>
+        <location filename="../src/mainwindow.cpp" line="1124"/>
         <source>Export Private Key</source>
         <translation>Izvoz privatnog ključa</translation>
     </message>
@@ -695,14 +695,14 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="866"/>
-        <location filename="../src/mainwindow.cpp" line="956"/>
+        <location filename="../src/mainwindow.cpp" line="957"/>
         <source>Copy address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="869"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
-        <location filename="../src/mainwindow.cpp" line="958"/>
+        <location filename="../src/mainwindow.cpp" line="953"/>
+        <location filename="../src/mainwindow.cpp" line="959"/>
         <source>Copied to clipboard</source>
         <translation>Kopirano u međuspremnik</translation>
     </message>
@@ -718,7 +718,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="962"/>
+        <location filename="../src/mainwindow.cpp" line="963"/>
         <source>View on block explorer</source>
         <translation>Pogledaj na blok exploreru</translation>
     </message>
@@ -733,42 +733,42 @@
         <translation>Pretvorite adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="950"/>
+        <location filename="../src/mainwindow.cpp" line="951"/>
         <source>Copy txid</source>
         <translation>Kopitajte txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="975"/>
+        <location filename="../src/mainwindow.cpp" line="976"/>
         <source>View Payment Request</source>
         <translation>Pogledajte zahtjev o plaćanju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="982"/>
+        <location filename="../src/mainwindow.cpp" line="983"/>
         <source>View Memo</source>
         <translation>Pogledajte poruku (memo)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="996"/>
+        <location filename="../src/mainwindow.cpp" line="998"/>
         <source>Reply to </source>
         <translation>Odgovorite </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1079"/>
+        <location filename="../src/mainwindow.cpp" line="1081"/>
         <source>Created new t-Addr</source>
         <translation>Napravljena je nova transparentna adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1128"/>
+        <location filename="../src/mainwindow.cpp" line="1130"/>
         <source>Copy Address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1194"/>
+        <location filename="../src/mainwindow.cpp" line="1196"/>
         <source>Address has been previously used</source>
         <translation>Adresa je već korištena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1196"/>
+        <location filename="../src/mainwindow.cpp" line="1198"/>
         <source>Address is unused</source>
         <translation>Adresa nije korištena</translation>
     </message>
