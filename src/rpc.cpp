@@ -1,4 +1,5 @@
 // Copyright 2019 The Hush Developers
+// Released under the GPLv3
 #include "rpc.h"
 
 #include "addressbook.h"
@@ -1145,7 +1146,16 @@ void RPC::refreshPrice() {
                 // convert ticker to upper case
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
                 qDebug() << "ticker=" << QString::fromStdString(ticker);
-                s->set_price(ticker, hush[ticker]);
+                // TODO: update all stats and prevent coredumps!
+                auto price = hush[ticker];
+                auto vol   = hush[ticker + "_24h_vol"];
+                auto mcap  = hush[ticker + "_market_cap"];
+                s->set_price(ticker, price);
+                s->set_volume(ticker, vol);
+                //s->set_marketcap(ticker, mcap);
+                //ui->marketcap = QString::number(mcap);
+                ui->volume    = QString::number((double) vol);
+
                 refresh(true);
                 return;
             } else {
