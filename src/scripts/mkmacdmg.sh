@@ -17,7 +17,17 @@ case $key in
     shift # past argument
     shift # past value
     ;;
-    -c|--certificate)
+    -u|--username)
+    APPLE_USERNAME="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -p|--password)
+    APPLE_PASSWORD="$2"
+    shift # past argument
+    shift # past value
+    ;;
+   -c|--certificate)
     CERTIFICATE="$2"
     shift # past argument
     shift # past value
@@ -99,26 +109,19 @@ codesign --deep --force --verify --verbose -s "$CERTIFICATE" --options runtime -
 echo "[OK]"
 
 # Code Signing Note:
-# On MacOS, you still need to run these 3 commands:
-# xcrun altool --notarize-app -t osx -f macOS-zecwallet-v0.8.0.dmg --primary-bundle-id="com.yourcompany.zecwallet" -u "apple developer id@email.com" -p "one time password" 
-# xcrun altool --notarization-info <output from pervious command> -u "apple developer id@email.com" -p "one time password" 
-#...wait for the notarization to finish...
-# xcrun stapler staple macOS-zecwallet-v0.8.0.dmg
+# On MacOS, you still need to run signbinaries.sh to staple.
+#
 
 echo -n "Building dmg..........."
 mv silentdragon.app silentdragon.app
 create-dmg --volname "silentdragon-v$APP_VERSION" --volicon "res/logo.icns" --window-pos 200 120 --icon "silentdragon.app" 200 190  --app-drop-link 600 185 --hide-extension "silentdragon.app"  --window-size 800 400 --hdiutil-quiet --background res/dmgbg.png  artifacts/macOS-silentdragon-v$APP_VERSION.dmg silentdragon.app >/dev/null 2>&1
-
-#mkdir bin/dmgbuild >/dev/null 2>&1
-#sed "s/RELEASE_VERSION/${APP_VERSION}/g" res/appdmg.json > bin/dmgbuild/appdmg.json
-#cp res/logo.icns bin/dmgbuild/
-#cp res/dmgbg.png bin/dmgbuild/
-
-#cp -r silentdragon.app bin/dmgbuild/
-
-#appdmg --quiet bin/dmgbuild/appdmg.json artifacts/macOS-silentdragon-v$APP_VERSION.dmg >/dev/null
 if [ ! -f artifacts/macOS-silentdragon-v$APP_VERSION.dmg ]; then
     echo "[ERROR]"
     exit 1
 fi
+echo  "[OK]"
+
+# Submit to Apple for notarization
+echo -n "Apple notarization....."
+xcrun altool --notarize-app -t osx -f artifacts/macOS-silentdragon-v$APP_VERSION.dmg --primary-bundle-id="com.myHush.silentdragon" -u "$APPLE_USERNAME" -p "$APPLE_PASSWORD"
 echo  "[OK]"
