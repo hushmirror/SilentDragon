@@ -55,6 +55,16 @@ if [ -z $HUSH_DIR ]; then
     exit 1;
 fi
 
+if [ -z "$APPLE_USERNAME" ]; then 
+    echo "APPLE_USERNAME is not set. Please set it the name of the MacOS developer login email to submit the binary for Apple for notarization"; 
+    exit 1; 
+fi
+
+if [ -z "$APPLE_PASSWORD" ]; then 
+    echo "APPLE_PASSWORD is not set. Please set it the name of the MacOS developer Application password to submit the binary for Apple for notarization"; 
+    exit 1; 
+fi
+
 if [ -z "$CERTIFICATE" ]; then 
     echo "CERTIFICATE is not set. Please set it the name of the MacOS developer certificate to sign the binary with"; 
     exit 1; 
