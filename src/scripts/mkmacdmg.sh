@@ -114,6 +114,8 @@ cp $HUSH_DIR/src/hushd silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/hush-cli silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/komodod silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/komodo-cli silentdragon.app/Contents/MacOS/
+cp $HUSH_DIR/sapling-output.params silentdragon.app/Contents/MacOS/
+cp $HUSH_DIR/sapling-spend.params silentdragon.app/Contents/MacOS/
 $QT_PATH/bin/macdeployqt silentdragon.app 
 codesign --deep --force --verify --verbose -s "$CERTIFICATE" --options runtime --timestamp silentdragon.app
 echo "[OK]"
@@ -123,7 +125,6 @@ echo "[OK]"
 #
 
 echo -n "Building dmg..........."
-mv silentdragon.app silentdragon.app
 create-dmg --volname "silentdragon-v$APP_VERSION" --volicon "res/logo.icns" --window-pos 200 120 --icon "silentdragon.app" 200 190  --app-drop-link 600 185 --hide-extension "silentdragon.app"  --window-size 800 400 --hdiutil-quiet --background res/dmgbg.png  artifacts/macOS-silentdragon-v$APP_VERSION.dmg silentdragon.app >/dev/null 2>&1
 if [ ! -f artifacts/macOS-silentdragon-v$APP_VERSION.dmg ]; then
     echo "[ERROR]"
