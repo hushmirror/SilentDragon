@@ -106,16 +106,19 @@ FORMS += \
     src/requestdialog.ui
 
 
-TRANSLATIONS = res/zec_qt_wallet_es.ts \
-               res/zec_qt_wallet_fi.ts \
-               res/zec_qt_wallet_fr.ts \
-               res/zec_qt_wallet_de.ts \
-               res/zec_qt_wallet_pt.ts \
-               res/zec_qt_wallet_it.ts \
-               res/zec_qt_wallet_zh.ts \
-               res/zec_qt_wallet_tr.ts \
-               res/zec_qt_wallet_ru.ts \
-               res/zec_qt_wallet_uk.ts
+TRANSLATIONS = res/silentdragon_de.ts \
+               res/silentdragon_es.ts \
+               res/silentdragon_fi.ts \
+               res/silentdragon_fr.ts \
+               res/silentdragon_hr.ts \
+               res/silentdragon_it.ts \
+               res/silentdragon_nl.ts \
+               res/silentdragon_pt.ts \
+               res/silentdragon_ru.ts \
+               res/silentdragon_sr.ts \
+               res/silentdragon_tr.ts \
+               res/silentdragon_uk.ts \
+               res/silentdragon_zh.ts
 
 include(singleapplication/singleapplication.pri)
 DEFINES += QAPPLICATION_CLASS=QApplication
