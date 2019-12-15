@@ -497,9 +497,6 @@ Tx MainWindow::createTxFromSendPage() {
         // Remove label if it exists
         addr = AddressBook::addressFromAddressLabel(addr);
         
-        // If address is sprout, then we can't send change to sapling, because of turnstile.
-        //sendChangeToSapling = sendChangeToSapling && !Settings::getInstance()->isSproutAddress(addr);
-
         double  amt  = ui->sendToWidgets->findChild<QLineEdit*>(QString("Amount")  % QString::number(i+1))->text().trimmed().toDouble();        
         totalAmt += amt;
         QString memo = ui->sendToWidgets->findChild<QLabel*>(QString("MemoTxt")  % QString::number(i+1))->text().trimmed();
@@ -732,7 +729,10 @@ void MainWindow::sendButton() {
 
 QString MainWindow::doSendTxValidations(Tx tx) {
     //TODO: Feedback fromAddr is empty for some reason
-    if (!Settings::isValidAddress(tx.fromAddr)) return QString(tr("From Address is Invalid"));    
+    if (!Settings::isValidAddress(tx.fromAddr)){
+		qDebug() << "address is invalid! " << tx.fromAddr;
+		return QString(tr("From Address is Invalid!"));
+	}
 
     for (auto toAddr : tx.toAddrs) {
         if (!Settings::isValidAddress(toAddr.addr)) {
