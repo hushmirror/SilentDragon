@@ -747,9 +747,6 @@ void AppDataServer::processSendTx(QJsonObject sendTx, MainWindow* mainwindow, st
     auto allBalances = mainwindow->getRPC()->getAllBalances();
     QList<QPair<QString, double>> bals;
     for (auto i : allBalances->keys()) {
-        // Filter out sprout addresses
-        if (Settings::getInstance()->isSproutAddress(i))
-            continue;
         // Filter out balances that don't have the requisite amount
         // TODO: should this be amt+tx.fee?
         if (allBalances->value(i) < amt)
