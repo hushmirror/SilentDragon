@@ -993,8 +993,7 @@ void MainWindow::setupTransactionsTab() {
             int lastPost     = memo.trimmed().lastIndexOf(QRegExp("[\r\n]+"));
             QString lastWord = memo.right(memo.length() - lastPost - 1);
 
-            if (Settings::getInstance()->isSaplingAddress(lastWord) ||
-                Settings::getInstance()->isSproutAddress(lastWord)) {
+            if (Settings::getInstance()->isSaplingAddress(lastWord)) {
                 menu.addAction(tr("Reply to ") + lastWord.left(25) + "...", [=]() {
                     // First, cancel any pending stuff in the send tab by pretending to click
                     // the cancel button
@@ -1020,26 +1019,24 @@ void MainWindow::setupTransactionsTab() {
     });
 }
 
-void MainWindow::addNewZaddr(bool sapling) {
-    rpc->newZaddr(sapling, [=] (json reply) {
+void MainWindow::addNewZaddr() {
+    rpc->newZaddr( [=] (json reply) {
         QString addr = QString::fromStdString(reply.get<json::string_t>());
         // Make sure the RPC class reloads the z-addrs for future use
         rpc->refreshAddresses();
 
         // Just double make sure the z-address is still checked
-        if ( sapling && ui->rdioZSAddr->isChecked() ) {
+        if ( ui->rdioZSAddr->isChecked() ) {
             ui->listReceiveAddresses->insertItem(0, addr);
             ui->listReceiveAddresses->setCurrentIndex(0);
 
-            ui->statusBar->showMessage(QString::fromStdString("Created new zAddr") %
-                                       (sapling ? "(Sapling)" : "(Sprout)"),
-                                       10 * 1000);
+            ui->statusBar->showMessage(QString::fromStdString("Created new Sapling zaddr"), 10 * 1000);
         }
     });
 }
 
 
-// Adds sapling or sprout z-addresses to the combo box. Technically, returns a
+// Adds z-addresses to the combo box. Technically, returns a
 // lambda, which can be connected to the appropriate signal
 std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
     return [=] (bool checked) {
@@ -1059,7 +1056,7 @@ std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
 
             // If z-addrs are empty, then create a new one.
             if (addrs->isEmpty()) {
-                addNewZaddr(sapling);
+                addNewZaddr();
             }
         }
     };
@@ -1144,7 +1141,7 @@ void MainWindow::setupReceiveTab() {
             return;
 
         if (ui->rdioZSAddr->isChecked()) {
-            addNewZaddr(true);
+            addNewZaddr();
         } else if (ui->rdioTAddr->isChecked()) {
             addNewTAddr();
         }
