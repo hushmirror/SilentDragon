@@ -1,4 +1,4 @@
-// Copyright 2019 The Hush Developers
+// Copyright 2019-2020 The Hush Developers
 // Released under the GPLv3
 #include "mainwindow.h"
 #include "addressbook.h"
@@ -227,13 +227,22 @@ void MainWindow::setupStatusBar() {
             menu.addAction("Copy txid", [=]() {
                 QGuiApplication::clipboard()->setText(txid);
             });
+            menu.addAction("Copy block explorer link", [=]() {
+                QString url;
+                auto explorer = Settings::getInstance()->getExplorer();
+                if (Settings::getInstance()->isTestnet()) {
+                    url = explorer.testnetTxExplorerUrl + txid;
+                } else {
+                    url = explorer.txExplorerUrl + txid;
+                }
+                QGuiApplication::clipboard()->setText(url);
+            });
             menu.addAction("View tx on block explorer", [=]() {
                 QString url;
                 auto explorer = Settings::getInstance()->getExplorer();
                 if (Settings::getInstance()->isTestnet()) {
                     url = explorer.testnetTxExplorerUrl + txid;
-                }
-                else {
+                } else {
                     url = explorer.txExplorerUrl + txid;
                 }
                 QDesktopServices::openUrl(QUrl(url));
@@ -462,7 +471,7 @@ void MainWindow::setupSettingsModal() {
 
 void MainWindow::addressBook() {
     // Check to see if there is a target.
-    QRegExp re("Address[0-9]+", Qt::CaseInsensitive);
+    QRegularExpression re("Address[0-9]+", QRegularExpression::CaseInsensitiveOption);
     for (auto target: ui->sendToWidgets->findChildren<QLineEdit *>(re)) {
         if (target->hasFocus()) {
             AddressBook::open(this, target);
@@ -909,12 +918,22 @@ void MainWindow::setupBalancesTab() {
                 QString url;
                 auto explorer = Settings::getInstance()->getExplorer();
                 if (Settings::getInstance()->isTestnet()) {
-                    //TODO
                     url = explorer.testnetAddressExplorerUrl + addr;
                 } else {
                     url = explorer.addressExplorerUrl + addr;
                 }
                 QDesktopServices::openUrl(QUrl(url));
+            });
+
+            menu.addAction("Copy explorer link", [=]() {
+                QString url;
+                auto explorer = Settings::getInstance()->getExplorer();
+                if (Settings::getInstance()->isTestnet()) {
+                    url = explorer.testnetAddressExplorerUrl + addr;
+                } else {
+                    url = explorer.addressExplorerUrl + addr;
+                }
+                QGuiApplication::clipboard()->setText(url);
             });
 
             menu.addAction(tr("Address Asset Viewer"), [=] () {
@@ -1001,6 +1020,17 @@ void MainWindow::setupTransactionsTab() {
             QDesktopServices::openUrl(QUrl(url));
         });
 
+        menu.addAction(tr("Copy block explorer link"), [=] () {
+            QString url;
+            auto explorer = Settings::getInstance()->getExplorer();
+            if (Settings::getInstance()->isTestnet()) {
+                url = explorer.testnetTxExplorerUrl + txid;
+            } else {
+                url = explorer.txExplorerUrl + txid;
+            }
+            QGuiApplication::clipboard()->setText(url);
+        });
+
         // Payment Request
         if (!memo.isEmpty() && memo.startsWith("hush:")) {
             menu.addAction(tr("View Payment Request"), [=] () {
@@ -1023,8 +1053,7 @@ void MainWindow::setupTransactionsTab() {
             int lastPost     = memo.trimmed().lastIndexOf(QRegExp("[\r\n]+"));
             QString lastWord = memo.right(memo.length() - lastPost - 1);
 
-            if (Settings::getInstance()->isSaplingAddress(lastWord) ||
-                Settings::getInstance()->isSproutAddress(lastWord)) {
+            if (Settings::getInstance()->isSaplingAddress(lastWord)) {
                 menu.addAction(tr("Reply to ") + lastWord.left(25) + "...", [=]() {
                     // First, cancel any pending stuff in the send tab by pretending to click
                     // the cancel button
@@ -1050,26 +1079,24 @@ void MainWindow::setupTransactionsTab() {
     });
 }
 
-void MainWindow::addNewZaddr(bool sapling) {
-    rpc->newZaddr(sapling, [=] (json reply) {
+void MainWindow::addNewZaddr() {
+    rpc->newZaddr( [=] (json reply) {
         QString addr = QString::fromStdString(reply.get<json::string_t>());
         // Make sure the RPC class reloads the z-addrs for future use
         rpc->refreshAddresses();
 
         // Just double make sure the z-address is still checked
-        if ( sapling && ui->rdioZSAddr->isChecked() ) {
+        if ( ui->rdioZSAddr->isChecked() ) {
             ui->listReceiveAddresses->insertItem(0, addr);
             ui->listReceiveAddresses->setCurrentIndex(0);
 
-            ui->statusBar->showMessage(QString::fromStdString("Created new zAddr") %
-                                       (sapling ? "(Sapling)" : "(Sprout)"),
-                                       10 * 1000);
+            ui->statusBar->showMessage(QString::fromStdString("Created new Sapling zaddr"), 10 * 1000);
         }
     });
 }
 
 
-// Adds sapling or sprout z-addresses to the combo box. Technically, returns a
+// Adds z-addresses to the combo box. Technically, returns a
 // lambda, which can be connected to the appropriate signal
 std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
     return [=] (bool checked) {
@@ -1089,7 +1116,7 @@ std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
 
             // If z-addrs are empty, then create a new one.
             if (addrs->isEmpty()) {
-                addNewZaddr(sapling);
+                addNewZaddr();
             }
         }
     };
@@ -1174,7 +1201,7 @@ void MainWindow::setupReceiveTab() {
             return;
 
         if (ui->rdioZSAddr->isChecked()) {
-            addNewZaddr(true);
+            addNewZaddr();
         } else if (ui->rdioTAddr->isChecked()) {
             addNewTAddr();
         }

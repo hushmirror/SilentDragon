@@ -17,7 +17,17 @@ case $key in
     shift # past argument
     shift # past value
     ;;
-    -c|--certificate)
+    -u|--username)
+    APPLE_USERNAME="$2"
+    shift # past argument
+    shift # past value
+    ;;
+    -p|--password)
+    APPLE_PASSWORD="$2"
+    shift # past argument
+    shift # past value
+    ;;
+   -c|--certificate)
     CERTIFICATE="$2"
     shift # past argument
     shift # past value
@@ -43,6 +53,16 @@ fi
 if [ -z $HUSH_DIR ]; then
     echo "HUSH_DIR is not set. Please set it to the base directory of a compiled hushd";
     exit 1;
+fi
+
+if [ -z "$APPLE_USERNAME" ]; then 
+    echo "APPLE_USERNAME is not set. Please set it the name of the MacOS developer login email to submit the binary for Apple for notarization"; 
+    exit 1; 
+fi
+
+if [ -z "$APPLE_PASSWORD" ]; then 
+    echo "APPLE_PASSWORD is not set. Please set it the name of the MacOS developer Application password to submit the binary for Apple for notarization"; 
+    exit 1; 
 fi
 
 if [ -z "$CERTIFICATE" ]; then 
@@ -94,31 +114,25 @@ cp $HUSH_DIR/src/hushd silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/hush-cli silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/komodod silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/komodo-cli silentdragon.app/Contents/MacOS/
+cp $HUSH_DIR/sapling-output.params silentdragon.app/Contents/MacOS/
+cp $HUSH_DIR/sapling-spend.params silentdragon.app/Contents/MacOS/
 $QT_PATH/bin/macdeployqt silentdragon.app 
 codesign --deep --force --verify --verbose -s "$CERTIFICATE" --options runtime --timestamp silentdragon.app
 echo "[OK]"
 
 # Code Signing Note:
-# On MacOS, you still need to run these 3 commands:
-# xcrun altool --notarize-app -t osx -f macOS-zecwallet-v0.8.0.dmg --primary-bundle-id="com.yourcompany.zecwallet" -u "apple developer id@email.com" -p "one time password" 
-# xcrun altool --notarization-info <output from pervious command> -u "apple developer id@email.com" -p "one time password" 
-#...wait for the notarization to finish...
-# xcrun stapler staple macOS-zecwallet-v0.8.0.dmg
+# On MacOS, you still need to run signbinaries.sh to staple.
+#
 
 echo -n "Building dmg..........."
-mv silentdragon.app silentdragon.app
 create-dmg --volname "silentdragon-v$APP_VERSION" --volicon "res/logo.icns" --window-pos 200 120 --icon "silentdragon.app" 200 190  --app-drop-link 600 185 --hide-extension "silentdragon.app"  --window-size 800 400 --hdiutil-quiet --background res/dmgbg.png  artifacts/macOS-silentdragon-v$APP_VERSION.dmg silentdragon.app >/dev/null 2>&1
-
-#mkdir bin/dmgbuild >/dev/null 2>&1
-#sed "s/RELEASE_VERSION/${APP_VERSION}/g" res/appdmg.json > bin/dmgbuild/appdmg.json
-#cp res/logo.icns bin/dmgbuild/
-#cp res/dmgbg.png bin/dmgbuild/
-
-#cp -r silentdragon.app bin/dmgbuild/
-
-#appdmg --quiet bin/dmgbuild/appdmg.json artifacts/macOS-silentdragon-v$APP_VERSION.dmg >/dev/null
 if [ ! -f artifacts/macOS-silentdragon-v$APP_VERSION.dmg ]; then
     echo "[ERROR]"
     exit 1
 fi
+echo  "[OK]"
+
+# Submit to Apple for notarization
+echo -n "Apple notarization....."
+xcrun altool --notarize-app -t osx -f artifacts/macOS-silentdragon-v$APP_VERSION.dmg --primary-bundle-id="com.myHush.silentdragon" -u "$APPLE_USERNAME" -p "$APPLE_PASSWORD"
 echo  "[OK]"

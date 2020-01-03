@@ -35,9 +35,11 @@ void Settings::setAllowFetchPrices(bool allow) {
 Explorer Settings::getExplorer() {
     // Load from the QT Settings.
     QSettings s;
+    //TODO: make it easy for people to use other explorers like komodod.com
+    QString explorer = "https://explorer.myhush.org";
 
-    auto txExplorerUrl                = s.value("explorer/txExplorerUrl").toString();
-    auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl").toString();
+    auto txExplorerUrl                = s.value("explorer/txExplorerUrl", explorer + "/tx/").toString();
+    auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl", explorer + "/address/").toString();
     auto testnetTxExplorerUrl         = s.value("explorer/testnetTxExplorerUrl").toString();
     auto testnetAddressExplorerUrl    = s.value("explorer/testnetAddressExplorerUrl").toString();
 
@@ -225,7 +227,7 @@ unsigned int Settings::getBTCPrice() {
 
 bool Settings::getAutoShield() {
     // Load from Qt settings
-    return QSettings().value("options/autoshield", false).toBool();
+    return QSettings().value("options/autoshield", true).toBool();
 }
 
 void Settings::setAutoShield(bool allow) {
@@ -234,7 +236,7 @@ void Settings::setAutoShield(bool allow) {
 
 bool Settings::getAllowCustomFees() {
     // Load from the QT Settings.
-    return QSettings().value("options/customfees", false).toBool();
+    return QSettings().value("options/customfees", true).toBool();
 }
 
 void Settings::setAllowCustomFees(bool allow) {
@@ -399,7 +401,7 @@ bool Settings::isValidAddress(QString addr) {
     QRegExp zsexp("^zs1[a-z0-9]{75}$",  Qt::CaseInsensitive);
     QRegExp ztsexp("^ztestsapling[a-z0-9]{76}", Qt::CaseInsensitive);
     QRegExp texp("^R[a-z0-9]{33}$", Qt::CaseInsensitive);
-    //qDebug() << "isValidAddress(" << addr << ")";
+    qDebug() << "isValidAddress(" << addr << ")";
 
     return  texp.exactMatch(addr) || ztsexp.exactMatch(addr) || zsexp.exactMatch(addr);
 }

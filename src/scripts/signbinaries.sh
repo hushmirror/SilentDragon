@@ -24,7 +24,12 @@ if [ -z $APP_VERSION ]; then echo "APP_VERSION is not set"; exit 1; fi
 
 # Store the hash and signatures here
 rm -rf release/signatures
-mkdir -p release/signatures 
+mkdir -p release/signatures
+
+# Staple the notarization
+xcrun stapler staple artifacts/macOS-silentdragon-v$APP_VERSION.dmg
+
+cd artifacts
 
 cd artifacts
 
