@@ -1,4 +1,5 @@
-// Copyright 2019 The Hush Developers
+// Copyright 2019-2020 The Hush Developers
+// Released under the GPLv3
 #include "mainwindow.h"
 #include "addressbook.h"
 #include "viewalladdresses.h"
@@ -225,13 +226,22 @@ void MainWindow::setupStatusBar() {
             menu.addAction("Copy txid", [=]() {
                 QGuiApplication::clipboard()->setText(txid);
             });
+            menu.addAction("Copy block explorer link", [=]() {
+                QString url;
+                auto explorer = Settings::getInstance()->getExplorer();
+                if (Settings::getInstance()->isTestnet()) {
+                    url = explorer.testnetTxExplorerUrl + txid;
+                } else {
+                    url = explorer.txExplorerUrl + txid;
+                }
+                QGuiApplication::clipboard()->setText(url);
+            });
             menu.addAction("View tx on block explorer", [=]() {
                 QString url;
                 auto explorer = Settings::getInstance()->getExplorer();
                 if (Settings::getInstance()->isTestnet()) {
                     url = explorer.testnetTxExplorerUrl + txid;
-                }
-                else {
+                } else {
                     url = explorer.txExplorerUrl + txid;
                 }
                 QDesktopServices::openUrl(QUrl(url));
@@ -889,12 +899,22 @@ void MainWindow::setupBalancesTab() {
                 QString url;
                 auto explorer = Settings::getInstance()->getExplorer();
                 if (Settings::getInstance()->isTestnet()) {
-                    //TODO
                     url = explorer.testnetAddressExplorerUrl + addr;
                 } else {
                     url = explorer.addressExplorerUrl + addr;
                 }
                 QDesktopServices::openUrl(QUrl(url));
+            });
+
+            menu.addAction("Copy explorer link", [=]() {
+                QString url;
+                auto explorer = Settings::getInstance()->getExplorer();
+                if (Settings::getInstance()->isTestnet()) {
+                    url = explorer.testnetAddressExplorerUrl + addr;
+                } else {
+                    url = explorer.addressExplorerUrl + addr;
+                }
+                QGuiApplication::clipboard()->setText(url);
             });
 
             menu.addAction(tr("Address Asset Viewer"), [=] () {
@@ -969,6 +989,17 @@ void MainWindow::setupTransactionsTab() {
                 url = explorer.txExplorerUrl + txid;
             }
             QDesktopServices::openUrl(QUrl(url));
+        });
+
+        menu.addAction(tr("Copy block explorer link"), [=] () {
+            QString url;
+            auto explorer = Settings::getInstance()->getExplorer();
+            if (Settings::getInstance()->isTestnet()) {
+                url = explorer.testnetTxExplorerUrl + txid;
+            } else {
+                url = explorer.txExplorerUrl + txid;
+            }
+            QGuiApplication::clipboard()->setText(url);
         });
 
         // Payment Request
