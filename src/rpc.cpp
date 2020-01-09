@@ -1129,17 +1129,20 @@ void RPC::refreshPrice() {
 
             const json& item  = parsed.get<json::object_t>();
             const json& hush  = item["hush"].get<json::object_t>();
-            auto  ticker      = s->get_currency_name();
+            std::string  ticker    = s->get_currency_name();
+            std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
+            fprintf(stderr,"ticker=%s\n", ticker.c_str());
+            //qDebug() << "Ticker = " + ticker;
 
             //TODO: better check for valid json response
-            if (hush["usd"] >= 0) {
+            if (hush[ticker] >= 0) {
                 qDebug() << "Found hush key in price json";
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
-                qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
+                qDebug() << "HUSH = $" << QString::number((double)hush["usd"]) << " USD";
                 qDebug() << "HUSH = " << QString::number((double)hush["eur"]) << " EUR";
                 qDebug() << "HUSH = " << QString::number((int) 100000000 * (double) hush["btc"]) << " sat ";
 
-                s->setZECPrice( hush["usd"] );
+                s->setZECPrice( hush[ticker] );
                 s->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
