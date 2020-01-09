@@ -227,6 +227,11 @@
        </item>
        <item>
         <property name="text">
+         <string>BRL</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>CAD</string>
         </property>
        </item>
@@ -237,7 +242,17 @@
        </item>
        <item>
         <property name="text">
+         <string>CLP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>CNY</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CZK</string>
         </property>
        </item>
        <item>
