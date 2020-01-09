@@ -282,6 +282,11 @@
        </item>
        <item>
         <property name="text">
+         <string>VND</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>XAG</string>
         </property>
        </item>
