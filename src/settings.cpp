@@ -323,6 +323,7 @@ QString Settings::getDonationAddr() {
     if (Settings::getInstance()->isTestnet())  {
 	    return "ztestsaplingXXX";
     }
+    // This is used for user feedback
     return "zs1aq4xnrkjlnxx0zesqye7jz3dfrf3rjh7q5z6u8l6mwyqqaam3gx3j2fkqakp33v93yavq46j83q";
 }
 
