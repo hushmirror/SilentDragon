@@ -1093,7 +1093,7 @@ void RPC::refreshPrice() {
         return noConnection();
 
     // TODO: use/render all this data
-    QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr%2Ckrw%2Cthb%2Cnzd%2Czar%2Cvef%2Cxau%2Chkd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
+    QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Cidr%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr%2Ckrw%2Cthb%2Cnzd%2Czar%2Cvef%2Cxau%2Chkd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
     QUrl cmcURL(price_feed);
     QNetworkRequest req;
     req.setUrl(cmcURL);
