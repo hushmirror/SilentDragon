@@ -257,6 +257,11 @@
        </item>
        <item>
         <property name="text">
+         <string>DKK</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>EUR</string>
         </property>
        </item>
@@ -272,7 +277,17 @@
        </item>
        <item>
         <property name="text">
+         <string>HUF</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>IDR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ILS</string>
         </property>
        </item>
        <item>
