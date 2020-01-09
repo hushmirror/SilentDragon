@@ -280,7 +280,8 @@ void Settings::saveRestore(QDialog* d) {
 }
 
 QString Settings::getUSDFormat(double bal) {
-    return "$" + QLocale(QLocale::English).toString(bal * Settings::getInstance()->getZECPrice(), 'f', 2);
+    //TODO: respect current locale!
+    return QLocale(QLocale::English).toString(bal * Settings::getInstance()->getZECPrice(), 'f', 4) + " " + QString::fromStdString(Settings::getInstance()->get_currency_name());
 }
 
 QString Settings::getDecimalString(double amt) {
@@ -323,6 +324,7 @@ QString Settings::getDonationAddr() {
     if (Settings::getInstance()->isTestnet())  {
 	    return "ztestsaplingXXX";
     }
+    // This is used for user feedback
     return "zs1aq4xnrkjlnxx0zesqye7jz3dfrf3rjh7q5z6u8l6mwyqqaam3gx3j2fkqakp33v93yavq46j83q";
 }
 

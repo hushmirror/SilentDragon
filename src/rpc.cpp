@@ -1,4 +1,4 @@
-// Copyright 2019 The Hush Developers
+// Copyright 2019-2020 The Hush Developers
 // Released under the GPLv3
 #include "rpc.h"
 
@@ -1093,7 +1093,7 @@ void RPC::refreshPrice() {
         return noConnection();
 
     // TODO: use/render all this data
-    QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
+    QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr%2Ckrw%2Cthb%2Cnzd%2Czar%2Cvef%2Cxau%2Chkd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
     QUrl cmcURL(price_feed);
     QNetworkRequest req;
     req.setUrl(cmcURL);
@@ -1129,17 +1129,20 @@ void RPC::refreshPrice() {
 
             const json& item  = parsed.get<json::object_t>();
             const json& hush  = item["hush"].get<json::object_t>();
-            auto  ticker      = s->get_currency_name();
+            std::string  ticker    = s->get_currency_name();
+            std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
+            fprintf(stderr,"ticker=%s\n", ticker.c_str());
+            //qDebug() << "Ticker = " + ticker;
 
             //TODO: better check for valid json response
-            if (hush["usd"] >= 0) {
+            if (hush[ticker] >= 0) {
                 qDebug() << "Found hush key in price json";
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
-                qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
+                qDebug() << "HUSH = $" << QString::number((double)hush["usd"]) << " USD";
                 qDebug() << "HUSH = " << QString::number((double)hush["eur"]) << " EUR";
                 qDebug() << "HUSH = " << QString::number((int) 100000000 * (double) hush["btc"]) << " sat ";
 
-                s->setZECPrice( hush["usd"] );
+                s->setZECPrice( hush[ticker] );
                 s->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
 
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
@@ -1158,16 +1161,18 @@ void RPC::refreshPrice() {
                 s->set_marketcap(ticker, mcap);
 
                 qDebug() << "Volume = " << (double) vol;
-                ui->volume->setText( QString::number((double) vol) + " HUSH" );
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                ui->volume->setText( QString::number((double) vol) + " " + QString::fromStdString(ticker) );
                 ui->volumeBTC->setText( QString::number((double) btcvol) + " BTC" );
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
-                ui->volumeLocal->setText( QString::number((double) vol * (double) price) + " " + QString::fromStdString(ticker) );
+                //TODO: we don't get an actual HUSH volume stat
+                if (price > 0)
+                    ui->volumeLocal->setText( QString::number((double) vol / (double) price) + " HUSH");
 
                 qDebug() << "Mcap = " << (double) mcap;
-                ui->marketcap->setText(  QString::number( (double) mcap) + " HUSH" );
+                ui->marketcap->setText(  QString::number( (unsigned int) mcap) + " " + QString::fromStdString(ticker) );
                 ui->marketcapBTC->setText( QString::number((double) btcmcap) + " BTC" );
-                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
-                ui->marketcapLocal->setText( QString::number((double) mcap * (double) price) + " " + QString::fromStdString(ticker) );
+                //ui->marketcapLocal->setText( QString::number((double) mcap * (double) price) + " " + QString::fromStdString(ticker) );
 
                 refresh(true);
                 return;
