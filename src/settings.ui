@@ -277,6 +277,11 @@
        </item>
        <item>
         <property name="text">
+         <string>TWD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>USD</string>
         </property>
        </item>
