@@ -307,6 +307,16 @@
        </item>
        <item>
         <property name="text">
+         <string>KWD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>LKR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>NZD</string>
         </property>
        </item>
