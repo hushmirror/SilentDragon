@@ -227,6 +227,11 @@
        </item>
        <item>
         <property name="text">
+         <string>HKD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>INR</string>
         </property>
        </item>
@@ -268,6 +273,11 @@
        <item>
         <property name="text">
          <string>VEF</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>XAU</string>
         </property>
        </item>
        <item>
