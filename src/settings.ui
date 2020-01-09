@@ -282,6 +282,11 @@
        </item>
        <item>
         <property name="text">
+         <string>XAG</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>XAU</string>
         </property>
        </item>
