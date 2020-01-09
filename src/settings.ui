@@ -212,6 +212,21 @@
        </item>
        <item>
         <property name="text">
+         <string>BDT</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BHD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BMD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>CAD</string>
         </property>
        </item>
