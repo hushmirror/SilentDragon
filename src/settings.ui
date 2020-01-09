@@ -317,6 +317,11 @@
        </item>
        <item>
         <property name="text">
+         <string>MXN</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>NZD</string>
         </property>
        </item>
@@ -343,6 +348,11 @@
        <item>
         <property name="text">
          <string>TWD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>UAH</string>
         </property>
        </item>
        <item>
