@@ -317,7 +317,17 @@
        </item>
        <item>
         <property name="text">
+         <string>PKR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>MXN</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NOK</string>
         </property>
        </item>
        <item>
