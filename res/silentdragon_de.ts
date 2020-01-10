@@ -222,7 +222,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="997"/>
         <source>24H Volume</source>
-        <translation>24 Stunded Volumen</translation>
+        <translation>24 Stunden Volumen</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1316"/>
