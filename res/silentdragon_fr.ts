@@ -1235,12 +1235,12 @@ If all else fails, please run hushd manually.</source>
         <translation>MB à </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Cela peut prendre plusieurs heures. Prenez du pop-corn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <source>There was an error! : </source>
         <translation>Il y avait une erreur! :</translation>
     </message>
@@ -1372,7 +1372,7 @@ Would you like to visit the releases page?</source>
         <translation>erreur hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="412"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1381,7 +1381,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu Edition-&gt;Préférences.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="424"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1390,23 +1390,23 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu Edition-&gt;Préférences.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="487"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Authentification échouée. Le nom d&apos;utilisateur / mot de passe que vous avez spécifié n&apos;a pas été accepté par hushd. Essayez de le changer dans le menu Edition-&gt; Préférences</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="502"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Votre hushd est en cours de démarrage. Veuillez patienter.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="726"/>
         <source>Connection Error</source>
         <translation>Erreur de connection</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <location filename="../src/sendtab.cpp" line="724"/>
         <source>Transaction Error</source>
         <translation>Erreur de transaction</translation>

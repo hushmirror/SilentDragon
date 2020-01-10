@@ -1215,7 +1215,7 @@ Integroitua hushdia ei käynnistetä, koska --ei-integroitu ohitettiin</translat
         <translation>MT at </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <source>There was an error! : </source>
         <translation>Tapahtui virhe! : </translation>
     </message>
@@ -1349,7 +1349,7 @@ Haluaisitko vierailla lataus-sivulla?</translation>
         <translation>hushd virhe</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="412"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1358,7 +1358,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikossa.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="424"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1367,28 +1367,28 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikossa.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="487"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Todennus epäonnistui. Hushd ei hyväksynyt määrittämääsi käyttäjänimeä / salasanaa. Yritä muuttaa niitä Muokkaa-&gt; Asetukset-valikosta</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="502"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>hushd on käynnistymässä. Ole hyvä ja odota.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Tämä voi viedä useita tunteja, nappaa Fazerin sinistä</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="726"/>
         <source>Connection Error</source>
         <translation>Yhteysvirhe</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <location filename="../src/sendtab.cpp" line="724"/>
         <source>Transaction Error</source>
         <translation>Tapahtumavirhe</translation>

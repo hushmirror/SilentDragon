@@ -1212,7 +1212,7 @@ Ne pokrećem integrirani hushd jer --no-embedded nije prilagođen</translation>
         <translation>hushd greška</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="412"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1221,7 +1221,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="424"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1230,34 +1230,34 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="487"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Autorizacija neuspešna. Hushd nije prihvatio korisničko ime / lozinku koju ste uneli. Pokušajte to promeniti u Uredi-&gt;Podešavanja meniju</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="502"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd se pokreće. Molimo pričekajte.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Ovo može potrajati nekoliko sati, donesite si kokice</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="726"/>
         <source>Connection Error</source>
         <translation>Greška sa vezom</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <location filename="../src/sendtab.cpp" line="724"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <source>There was an error! : </source>
         <translation>Dogodila se greška! : </translation>
     </message>

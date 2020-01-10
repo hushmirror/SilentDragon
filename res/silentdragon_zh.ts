@@ -1371,7 +1371,7 @@ Not starting embedded hushd because --no-embedded was passed</source>
         <translation>hushd 出错</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="412"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1380,7 +1380,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 请在编辑 - &gt;设置菜单中设置主机/端口和用户/密码。</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="424"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1389,22 +1389,22 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 请在编辑 - &gt;设置菜单中设置主机/端口和用户/密码。</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="487"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>验证失败。 hushd不接受您指定的用户名/密码。 请在编辑 - &gt;设置菜单中更改它</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="502"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>你的hushd正在启动。 请耐心等待。</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <source>There was an error! : </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1413,13 +1413,13 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">这可能需要几个小时</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="726"/>
         <source>Connection Error</source>
         <translation>连接错误</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <location filename="../src/sendtab.cpp" line="724"/>
         <source>Transaction Error</source>
         <translation>交易错误</translation>

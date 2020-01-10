@@ -1202,7 +1202,7 @@ Hepsi başarısız olursa, lütfen hushd&apos;i manuel olarak çalıştırın.</
         <translation>MB saniyede </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <source>There was an error! : </source>
         <translation>Bir hata oluştu! : </translation>
     </message>
@@ -1336,7 +1336,7 @@ Yayınlanan sürümler sayfasını ziyaret etmek ister misiniz?</translation>
         <translation>hushd hatası</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="412"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1345,7 +1345,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktasını ve kullanıcı adı/şifreyi ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="424"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1354,28 +1354,28 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıcı adı/şifreyi ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="487"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Kimlik doğrulama başarısız oldu. Belirttiğiniz kullanıcı adı/şifre hushd tarafından kabul edilmedi. Düzenle-&gt; Ayarlar menüsünde değiştirmeyi deneyin</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="502"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>hushd&apos;niz başlıyor. Lütfen bekle.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Bu birkaç saat sürebilir, biraz patlamış mısır kapın</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="726"/>
         <source>Connection Error</source>
         <translation>Bağlantı Hatası</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <location filename="../src/sendtab.cpp" line="724"/>
         <source>Transaction Error</source>
         <translation>İşlem Hatası</translation>

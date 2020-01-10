@@ -207,22 +207,22 @@
     <message>
         <location filename="../src/mainwindow.ui" line="940"/>
         <source>Market</source>
-        <translation type="unfinished"></translation>
+        <translation>Markt</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Markt Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="965"/>
         <source>Market Cap</source>
-        <translation type="unfinished"></translation>
+        <translation>Marktkapitalisierung</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="997"/>
         <source>24H Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>24 Stunded Volumen</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1316"/>
@@ -1254,12 +1254,12 @@ If all else fails, please run hushd manually.</source>
         <translation>MB bei </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Dies kann einige Stunden dauern, machen Sie sich einen Kaffee</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <source>There was an error! : </source>
         <translation>Es gab einen Fehler! : </translation>
     </message>
@@ -1391,26 +1391,26 @@ Would you like to visit the releases page?</source>
         <translation>Hushd fehler</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="412"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Eine manuelle Verbinung wurde angefragt, aber nicht konfiguriert. Bitte tragen Sie den Host/Port und Benutzer/Passwort im Einstellungsmenü ein.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="424"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Konnte keine Verbindung zum konfigurierten hushd aufbauen. Bitte tragen Sie den Host/Port und Benutzer/Passwort im Einstellungsmenü ein.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="487"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Authentifizierung fehlgeschlagen. Der Benutzername / Passwort wurde nicht akzeptiert. Versuche Sie die Daten im Einstellunsgmenü zu ändern.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="502"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd startet. Bitte warten</translation>
     </message>
@@ -1419,13 +1419,13 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">Dies kann einige Stunden dauern</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="726"/>
         <source>Connection Error</source>
         <translation>Verbindungsfehler</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="797"/>
+        <location filename="../src/connection.cpp" line="798"/>
         <location filename="../src/sendtab.cpp" line="724"/>
         <source>Transaction Error</source>
         <translation>Transaktionsfehler</translation>
