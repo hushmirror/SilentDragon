@@ -347,7 +347,8 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     auto hushdProgram = appPath.absoluteFilePath("komodod");
 #endif
     
-    if (!QFile(hushdProgram).exists()) {
+    //if (!QFile(hushdProgram).exists()) {
+    if (!QFile::exists(hushdProgram)) {
         qDebug() << "Can't find hushd at " << hushdProgram;
         main->logger->write("Can't find hushd at " + hushdProgram);
         return false;
