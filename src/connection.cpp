@@ -1,4 +1,4 @@
-// Copyright 2019 The Hush developers
+// Copyright 2019-2020 The Hush developers
 // GPLv3
 #include "connection.h"
 #include "mainwindow.h"
@@ -347,7 +347,8 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     auto hushdProgram = appPath.absoluteFilePath("komodod");
 #endif
     
-    if (!QFile(hushdProgram).exists()) {
+    //if (!QFile(hushdProgram).exists()) {
+    if (!QFile::exists(hushdProgram)) {
         qDebug() << "Can't find hushd at " << hushdProgram;
         main->logger->write("Can't find hushd at " + hushdProgram);
         return false;
@@ -387,7 +388,7 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     qDebug() << "Starting on Linux: " + hushdProgram + " " + params;
     ezcashd->start(hushdProgram, arguments);
 #elif defined(Q_OS_DARWIN)
-    qDebug() << "Starting on Darwin" + hushdProgram + " " + params;
+    qDebug() << "Starting on Darwin: " + hushdProgram + " " + params;
     ezcashd->start(hushdProgram, arguments);
 #elif defined(Q_OS_WIN64)
     qDebug() << "Starting on Win64: " + hushdProgram + " " + params;
