@@ -7,6 +7,7 @@ LIB="libsodium"
 DIR="$LIB-$VERSION"
 FILE="$DIR.tar.gz"
 URL=https://github.com/MyHush/libsodium/releases/download/${VERSION}/${FILE}
+SHA=6f504490b342a4f8a4c4a02fc9b866cbef8622d5df4e5452b46be121e46636c1
 
 # First thing to do is see if libsodium.a exists in the res folder. If it does, then there's nothing to do
 if [ -f res/${LIB}.a ]; then
@@ -19,6 +20,17 @@ echo "Building $LIB"
 cd res/$LIB
 if [ ! -f $FILE ]; then
     curl -LO $URL
+fi
+
+echo "$SHA  $FILE" | shasum -a 256 --check
+# TWO SPACES or sadness sometimes:
+# https://unix.stackexchange.com/questions/139891/why-does-verifying-sha256-checksum-with-sha256sum-fail-on-debian-and-work-on-u
+echo "$SHA  $FILE" | shasum -a 256 --check --status
+if [ $? -ne 0 ]; then
+    FOUNDSHA=$(shasum -a 256 $FILE)
+    echo "SHA256 mismatch on $FILE!"
+    echo "$FOUNDSHA did not match $SHA . Aborting..."
+    exit 1
 fi
 
 if [ ! -d $DIR ]; then
