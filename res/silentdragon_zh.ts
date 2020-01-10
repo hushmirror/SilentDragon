@@ -292,22 +292,22 @@
     <message>
         <location filename="../src/mainwindow.ui" line="940"/>
         <source>Market</source>
-        <translation type="unfinished"></translation>
+        <translation>市场</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush 市场信息&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="965"/>
         <source>Market Cap</source>
-        <translation type="unfinished"></translation>
+        <translation>市值</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="997"/>
         <source>24H Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>24小时交易量</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1085"/>
