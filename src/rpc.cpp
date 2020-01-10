@@ -633,10 +633,15 @@ void RPC::getInfoThenRefresh(bool force) {
         });
 
 
-		std::string method2 = "getwalletinfo";
-        conn->doRPCIgnoreError(makePayload(method2), [=](const json& reply) {
+        conn->doRPCIgnoreError(makePayload("getwalletinfo"), [=](const json& reply) {
             int  txcount = reply["txcount"].get<json::number_integer_t>();
             ui->txcount->setText(QString::number(txcount));
+        });
+
+        //TODO: If -zindex is enabled, show stats
+        conn->doRPCIgnoreError(makePayload("getchaintxstats"), [=](const json& reply) {
+            int  txcount = reply["txcount"].get<json::number_integer_t>();
+            ui->chaintxcount->setText(QString::number(txcount));
         });
 
         // Call to see if the blockchain is syncing. 
