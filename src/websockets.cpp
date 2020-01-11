@@ -480,10 +480,12 @@ void AppDataServer::saveNonceHex(NonceType nt, QString noncehex) {
 
 // Encrypt an outgoing message with the stored secret key.
 QString AppDataServer::encryptOutgoing(QString msg) {
-    qDebug() << "Encrypting msg";
-    if (msg.length() % 256 > 0) {
-        msg = msg + QString(" ").repeated(256 - (msg.length() % 256));
+    int padding = 256;
+    qDebug() << "Encrypt msg(pad="<<padding<<")  prepad len=" << msg.length();
+    if (msg.length() % padding > 0) {
+        msg = msg + QString(" ").repeated(padding - (msg.length() % padding));
     }
+    qDebug() << "Encrypt msg postpad len=" << msg.length();
 
     QString localNonceHex = getNonceHex(NonceType::LOCAL);
 
