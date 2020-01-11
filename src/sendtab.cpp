@@ -1,4 +1,4 @@
-// Copyright 2019 The Hush developers
+// Copyright 2019-2020 Hush developers
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "addressbook.h"
