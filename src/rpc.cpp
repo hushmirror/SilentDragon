@@ -685,7 +685,7 @@ void RPC::getInfoThenRefresh(bool force) {
             }
 
             QString extra = "";
-            if(ticker != "btc") {
+            if(ticker != "BTC") {
                 extra = QString::number( s->getBTCPrice() ) % "sat";
             }
 
