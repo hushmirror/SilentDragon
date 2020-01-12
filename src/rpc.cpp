@@ -684,6 +684,10 @@ void RPC::getInfoThenRefresh(bool force) {
                 ui->heightLabel->setText(QObject::tr("Block height"));
             }
 
+            QString extra = "";
+            if(ticker != "btc") {
+                extra = QString::number( s->getBTCPrice() ) % "sat";
+            }
 
             // Update the status bar
             QString statusText = QString() %
@@ -695,7 +699,7 @@ void RPC::getInfoThenRefresh(bool force) {
                 ") " %
                 " Lag: " % QString::number(blockNumber - notarized) %
                 ", " % "HUSH" % "=" % QString::number( (double) s->get_price(ticker) ) % " " % QString::fromStdString(ticker) %
-                " " % QString::number( s->getBTCPrice() ) % "sat";
+                " " % extra;
             main->statusLabel->setText(statusText);
 
             auto zecPrice = Settings::getUSDFormat(1);
