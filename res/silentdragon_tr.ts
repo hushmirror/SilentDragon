@@ -1953,8 +1953,8 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
-        <translation>HUSH / USD fiyatlarını çek</translation>
+        <source>Fetch HUSH prices</source>
+        <translation>HUSH fiyatlarını çek</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="581"/>

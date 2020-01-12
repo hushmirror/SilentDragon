@@ -1952,7 +1952,7 @@ Você possui fundos não confirmados ou o saldo é muito baixo para uma migraç�
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
+        <source>Fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

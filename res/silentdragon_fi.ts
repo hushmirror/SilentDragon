@@ -1970,8 +1970,8 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
-        <translation>Hae HUSH / USD hinnat</translation>
+        <source>Fetch HUSH prices</source>
+        <translation>Hae HUSH hinnat</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="581"/>

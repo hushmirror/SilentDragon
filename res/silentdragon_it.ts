@@ -1966,7 +1966,7 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
+        <source>Fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

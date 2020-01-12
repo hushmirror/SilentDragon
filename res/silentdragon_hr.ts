@@ -1879,8 +1879,8 @@ Would you like to visit the releases page?</source>
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
-        <translation>Dohvati HUSH / USD cijene</translation>
+        <source>Fetch HUSH prices</source>
+        <translation>Dohvati HUSH cijene</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="581"/>

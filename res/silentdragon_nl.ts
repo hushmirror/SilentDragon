@@ -2021,8 +2021,8 @@ Je hebt nog onbevestigde transacties of je saldo is te laag voor een automatisch
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
-        <translation>Haal  HUSH / USD prijzen op</translation>
+        <source>Fetch HUSH prices</source>
+        <translation>Haal  HUSH prijzen op</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="581"/>

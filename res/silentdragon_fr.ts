@@ -1988,8 +1988,8 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
-        <translation>Consulter les prix HUSH / USD</translation>
+        <source>Fetch HUSH prices</source>
+        <translation>Consulter les prix HUSH</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="581"/>

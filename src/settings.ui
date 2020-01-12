@@ -232,6 +232,11 @@
        </item>
        <item>
         <property name="text">
+         <string>BTC</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>CAD</string>
         </property>
        </item>
@@ -570,7 +575,7 @@
        <item row="11" column="0" colspan="2">
         <widget class="QCheckBox" name="chkFetchPrices">
          <property name="text">
-          <string>Fetch HUSH / USD prices</string>
+          <string>Fetch HUSH prices</string>
          </property>
         </widget>
        </item>

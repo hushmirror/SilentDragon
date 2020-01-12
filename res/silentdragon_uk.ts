@@ -1996,8 +1996,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
     <message>
         <location filename="../src/settings.ui" line="573"/>
-        <source>Fetch HUSH / USD prices</source>
-        <translation>Отріматі ціни HUSH / USD</translation>
+        <source>Fetch HUSH prices</source>
+        <translation>Отріматі ціни HUSH</translation>
     </message>
     <message>
         <source>SafeNodes</source>
