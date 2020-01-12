@@ -118,6 +118,7 @@ private:
     void donate();
     void website();
     void discord();
+    void reportbug();
     void addressBook();
     void postToZBoard();
     void importPrivKey();

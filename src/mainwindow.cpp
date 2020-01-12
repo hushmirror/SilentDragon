@@ -56,6 +56,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QObject::connect(ui->actionDiscord, &QAction::triggered, this, &MainWindow::discord);
 
+    QObject::connect(ui->actionReportBug, &QAction::triggered, this, &MainWindow::reportbug);
+
     QObject::connect(ui->actionWebsite, &QAction::triggered, this, &MainWindow::website);
 
     // Set up check for updates action
@@ -488,6 +490,11 @@ void MainWindow::addressBook() {
 
 void MainWindow::discord() {
     QString url = "https://myhush.org/discord/";
+    QDesktopServices::openUrl(QUrl(url));
+}
+
+void MainWindow::reportbug() {
+    QString url = "https://github.com/MyHush/SilentDragon/issues/new";
     QDesktopServices::openUrl(QUrl(url));
 }
 

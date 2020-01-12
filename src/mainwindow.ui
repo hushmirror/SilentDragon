@@ -1511,6 +1511,7 @@
     <addaction name="actionDiscord"/>
     <addaction name="actionWebsite"/>
     <addaction name="actionCheck_for_Updates"/>
+    <addaction name="actionReportBug"/>
     <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menuApps">
@@ -1542,6 +1543,11 @@
   <action name="actionAbout">
    <property name="text">
     <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="actionReportBug">
+   <property name="text">
+    <string>&amp;Report a bug on Github</string>
    </property>
   </action>
   <action name="actionSettings">
