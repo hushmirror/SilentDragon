@@ -678,11 +678,15 @@ void RPC::getInfoThenRefresh(bool force) {
                 ui->heightLabel->setText(QObject::tr("Block height"));
             }
 
+            auto ticker_price = s->get_price(ticker);
             QString extra = "";
-            if(ticker != "BTC") {
+            if(ticker_price > 0 && ticker != "BTC") {
                 extra = QString::number( s->getBTCPrice() ) % "sat";
             }
-            auto ticker_price = s->get_price(ticker);
+            QString price = "";
+            if (ticker_price > 0) {
+                price = QString(", ") % "HUSH" % "=" % QString::number( (double)ticker_price,'f',8) % " " % QString::fromStdString(ticker) % " " % extra;
+            }
 
             // Update the status bar
             QString statusText = QString() %
@@ -692,9 +696,7 @@ void RPC::getInfoThenRefresh(bool force) {
                 QString::number(blockNumber) %
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
-                " Lag: " % QString::number(blockNumber - notarized) %
-                ", " % "HUSH" % "=" % QString::number( (double)ticker_price,'f',8) % " " % QString::fromStdString(ticker) %
-                " " % extra;
+                " Lag: " % QString::number(blockNumber - notarized) % price;
             main->statusLabel->setText(statusText);
 
             auto hushPrice = Settings::getUSDFormat(1);
