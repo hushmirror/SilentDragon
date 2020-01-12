@@ -313,7 +313,7 @@ const QString Settings::txidStatusMessage = QString(QObject::tr("Transaction sub
 
 QString Settings::getTokenName() {
     if (Settings::getInstance()->isTestnet()) {
-        return "HUSHT";
+        return "TUSH";
     } else {
         return "HUSH";
     }
