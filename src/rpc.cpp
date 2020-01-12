@@ -645,13 +645,7 @@ void RPC::getInfoThenRefresh(bool force) {
         });
 
         // Call to see if the blockchain is syncing. 
-        payload = {
-            {"jsonrpc", "1.0"},
-            {"id", "someid"},
-            {"method", "getblockchaininfo"}
-        };
-
-        conn->doRPCIgnoreError(payload, [=](const json& reply) {
+        conn->doRPCIgnoreError(makePayload("getblockchaininfo"), [=](const json& reply) {
             auto progress    = reply["verificationprogress"].get<double>();
             // TODO: use getinfo.synced
             bool isSyncing   = progress < 0.9999; // 99.99%
@@ -688,6 +682,7 @@ void RPC::getInfoThenRefresh(bool force) {
             if(ticker != "BTC") {
                 extra = QString::number( s->getBTCPrice() ) % "sat";
             }
+            auto ticker_price = s->get_price(ticker);
 
             // Update the status bar
             QString statusText = QString() %
@@ -698,11 +693,11 @@ void RPC::getInfoThenRefresh(bool force) {
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
                 " Lag: " % QString::number(blockNumber - notarized) %
-                ", " % "HUSH" % "=" % QString::number( (double) s->get_price(ticker),'f',6) % " " % QString::fromStdString(ticker) %
+                ", " % "HUSH" % "=" % QString::number( (double)ticker_price,'f',8) % " " % QString::fromStdString(ticker) %
                 " " % extra;
             main->statusLabel->setText(statusText);
 
-            auto zecPrice = Settings::getUSDFormat(1);
+            auto hushPrice = Settings::getUSDFormat(1);
             QString tooltip;
             if (connections > 0) {
                 tooltip = QObject::tr("Connected to hushd");
@@ -712,8 +707,8 @@ void RPC::getInfoThenRefresh(bool force) {
             }
             tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
 
-            if (!zecPrice.isEmpty()) {
-                tooltip = "1 HUSH = " % zecPrice % "\n" % tooltip;
+            if (!hushPrice.isEmpty()) {
+                tooltip = "1 HUSH = " % hushPrice % "\n" % tooltip;
             }
             main->statusLabel->setToolTip(tooltip);
             main->statusIcon->setToolTip(tooltip);
@@ -1101,7 +1096,6 @@ void RPC::refreshPrice() {
     if  (conn == nullptr)
         return noConnection();
 
-    // TODO: use/render all this data
     QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Cidr%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr%2Ckrw%2Cthb%2Cnzd%2Czar%2Cvef%2Cxau%2Cxag%2Cvnd%2Csar%2Ctwd%2Caed%2Cars%2Cbdt%2Cbhd%2Cbmd%2Cbrl%2Cclp%2Cczk%2Cdkk%2Chuf%2Cils%2Ckwd%2Clkr%2Cpkr%2Cnok%2Ctry%2Csek%2Cmxn%2Cuah%2Chkd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
     QUrl cmcURL(price_feed);
     QNetworkRequest req;
@@ -1143,7 +1137,6 @@ void RPC::refreshPrice() {
             fprintf(stderr,"ticker=%s\n", ticker.c_str());
             //qDebug() << "Ticker = " + ticker;
 
-            //TODO: better check for valid json response
             if (hush[ticker] >= 0) {
                 qDebug() << "Found hush key in price json";
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
@@ -1156,7 +1149,7 @@ void RPC::refreshPrice() {
 
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
                 qDebug() << "ticker=" << QString::fromStdString(ticker);
-                // TODO: update all stats and prevent coredumps!
+                // TODO: work harder to prevent coredumps!
                 auto price = hush[ticker];
                 auto vol   = hush[ticker + "_24h_vol"];
                 auto mcap  = hush[ticker + "_market_cap"];
@@ -1174,7 +1167,7 @@ void RPC::refreshPrice() {
                 ui->volume->setText( QString::number((double) vol) + " " + QString::fromStdString(ticker) );
                 ui->volumeBTC->setText( QString::number((double) btcvol) + " BTC" );
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
-                //TODO: we don't get an actual HUSH volume stat
+                // We don't get an actual HUSH volume stat, so we calculate it
                 if (price > 0)
                     ui->volumeLocal->setText( QString::number((double) vol / (double) price) + " HUSH");
 
