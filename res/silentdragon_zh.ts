@@ -151,8 +151,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="500"/>
-        <location filename="../src/mainwindow.cpp" line="980"/>
-        <location filename="../src/mainwindow.cpp" line="1047"/>
+        <location filename="../src/mainwindow.cpp" line="984"/>
+        <location filename="../src/mainwindow.cpp" line="1051"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>备注</translation>
@@ -243,7 +243,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="852"/>
-        <location filename="../src/mainwindow.cpp" line="1184"/>
+        <location filename="../src/mainwindow.cpp" line="1188"/>
         <source>Export Private Key</source>
         <translation>导出私钥</translation>
     </message>
@@ -825,14 +825,14 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="898"/>
-        <location filename="../src/mainwindow.cpp" line="1009"/>
+        <location filename="../src/mainwindow.cpp" line="1013"/>
         <source>Copy address</source>
         <translation>复制成功</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="901"/>
-        <location filename="../src/mainwindow.cpp" line="1005"/>
-        <location filename="../src/mainwindow.cpp" line="1011"/>
+        <location filename="../src/mainwindow.cpp" line="1009"/>
+        <location filename="../src/mainwindow.cpp" line="1015"/>
         <source>Copied to clipboard</source>
         <translation>复制到剪贴板</translation>
     </message>
@@ -842,23 +842,23 @@
         <translation>获取私钥</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="915"/>
+        <location filename="../src/mainwindow.cpp" line="919"/>
         <source>Shield balance to Sapling</source>
         <translation>屏蔽余额到Sapling地址</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="920"/>
-        <location filename="../src/mainwindow.cpp" line="1015"/>
+        <location filename="../src/mainwindow.cpp" line="924"/>
+        <location filename="../src/mainwindow.cpp" line="1019"/>
         <source>View on block explorer</source>
         <translation>从区块浏览器中查看</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="942"/>
+        <location filename="../src/mainwindow.cpp" line="946"/>
         <source>Address Asset Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="948"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
         <source>Convert Address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -867,47 +867,47 @@
         <translation type="vanished">迁移到Sapling地址</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1003"/>
+        <location filename="../src/mainwindow.cpp" line="1007"/>
         <source>Copy txid</source>
         <translation>复制交易ID</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1026"/>
+        <location filename="../src/mainwindow.cpp" line="1030"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1039"/>
+        <location filename="../src/mainwindow.cpp" line="1043"/>
         <source>View Payment Request</source>
         <translation>查看付款申请</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1046"/>
+        <location filename="../src/mainwindow.cpp" line="1050"/>
         <source>View Memo</source>
         <translation>查看备注</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1060"/>
+        <location filename="../src/mainwindow.cpp" line="1064"/>
         <source>Reply to </source>
         <translation>回复给 </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1141"/>
+        <location filename="../src/mainwindow.cpp" line="1145"/>
         <source>Created new t-Addr</source>
         <translation>创建了新的t-Addr</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1190"/>
+        <location filename="../src/mainwindow.cpp" line="1194"/>
         <source>Copy Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1256"/>
+        <location filename="../src/mainwindow.cpp" line="1260"/>
         <source>Address has been previously used</source>
         <translation>该地址以前使用过</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1258"/>
+        <location filename="../src/mainwindow.cpp" line="1262"/>
         <source>Address is unused</source>
         <translation>地址未使用</translation>
     </message>
@@ -1414,7 +1414,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/connection.cpp" line="537"/>
-        <location filename="../src/rpc.cpp" line="726"/>
+        <location filename="../src/rpc.cpp" line="730"/>
         <source>Connection Error</source>
         <translation>连接错误</translation>
     </message>
@@ -1497,42 +1497,42 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation>区块高度</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="690"/>
+        <location filename="../src/rpc.cpp" line="694"/>
         <source>Syncing</source>
         <translation>同步中</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="690"/>
+        <location filename="../src/rpc.cpp" line="694"/>
         <source>Connected</source>
         <translation>已连接</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="692"/>
+        <location filename="../src/rpc.cpp" line="696"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="704"/>
+        <location filename="../src/rpc.cpp" line="708"/>
         <source>Connected to hushd</source>
         <translation>连接到hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="707"/>
+        <location filename="../src/rpc.cpp" line="711"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1020"/>
+        <location filename="../src/rpc.cpp" line="1024"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1214"/>
+        <location filename="../src/rpc.cpp" line="1218"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1215"/>
+        <location filename="../src/rpc.cpp" line="1219"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1541,7 +1541,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">hushd没有节点可连接</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="726"/>
+        <location filename="../src/rpc.cpp" line="730"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>连接到hushd时出错。 错误是</translation>
     </message>
@@ -1550,12 +1550,12 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished"> 交易计算中。 这可能需要几分钟。</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1069"/>
+        <location filename="../src/rpc.cpp" line="1073"/>
         <source>Update Available</source>
         <translation>可用更新</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1070"/>
+        <location filename="../src/rpc.cpp" line="1074"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1564,12 +1564,12 @@ Would you like to visit the releases page?</source>
 您想访问发布页面吗？</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1082"/>
+        <location filename="../src/rpc.cpp" line="1086"/>
         <source>No updates available</source>
         <translation>没有可用的更新</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1083"/>
+        <location filename="../src/rpc.cpp" line="1087"/>
         <source>You already have the latest release v%1</source>
         <translation>您已拥有最新版本 v%1</translation>
     </message>
@@ -1634,12 +1634,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="737"/>
+        <location filename="../src/websockets.cpp" line="743"/>
         <source>Node is still syncing.</source>
         <translation>节点仍在同步。</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="759"/>
+        <location filename="../src/websockets.cpp" line="765"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1962,296 +1962,301 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
     <message>
         <location filename="../src/settings.ui" line="235"/>
-        <source>CAD</source>
+        <source>BTC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="240"/>
-        <source>CHF</source>
+        <source>CAD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="245"/>
-        <source>CLP</source>
+        <source>CHF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="250"/>
-        <source>CNY</source>
+        <source>CLP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="255"/>
-        <source>CZK</source>
+        <source>CNY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="260"/>
-        <source>DKK</source>
+        <source>CZK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="265"/>
-        <source>EUR</source>
+        <source>DKK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="270"/>
-        <source>GBP</source>
+        <source>EUR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="275"/>
-        <source>HKD</source>
+        <source>GBP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="280"/>
-        <source>HUF</source>
+        <source>HKD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="285"/>
-        <source>IDR</source>
+        <source>HUF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="290"/>
-        <source>ILS</source>
+        <source>IDR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="295"/>
-        <source>INR</source>
+        <source>ILS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="300"/>
-        <source>JPY</source>
+        <source>INR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="305"/>
-        <source>KRW</source>
+        <source>JPY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="310"/>
-        <source>KWD</source>
+        <source>KRW</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="315"/>
-        <source>LKR</source>
+        <source>KWD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="320"/>
-        <source>PKR</source>
+        <source>LKR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="325"/>
-        <source>MXN</source>
+        <source>PKR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="330"/>
-        <source>NOK</source>
+        <source>MXN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="335"/>
-        <source>NZD</source>
+        <source>NOK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="340"/>
-        <source>RUB</source>
+        <source>NZD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="345"/>
-        <source>SAR</source>
+        <source>RUB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="350"/>
-        <source>SEK</source>
+        <source>SAR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="355"/>
-        <source>SGD</source>
+        <source>SEK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="360"/>
-        <source>THB</source>
+        <source>SGD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="365"/>
-        <source>TRY</source>
+        <source>THB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="370"/>
-        <source>TWD</source>
+        <source>TRY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="375"/>
-        <source>UAH</source>
+        <source>TWD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="380"/>
-        <source>USD</source>
+        <source>UAH</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="385"/>
-        <source>VEF</source>
+        <source>USD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="390"/>
-        <source>VND</source>
+        <source>VEF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="395"/>
-        <source>XAG</source>
+        <source>VND</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="400"/>
-        <source>XAU</source>
+        <source>XAG</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="405"/>
+        <source>XAU</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="410"/>
         <source>ZAR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="421"/>
+        <location filename="../src/settings.ui" line="426"/>
         <source>default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="426"/>
+        <location filename="../src/settings.ui" line="431"/>
         <source>blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="431"/>
+        <location filename="../src/settings.ui" line="436"/>
         <source>light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="436"/>
+        <location filename="../src/settings.ui" line="441"/>
         <source>dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="470"/>
+        <location filename="../src/settings.ui" line="475"/>
         <source>Connect via Tor</source>
         <translation>通过Tor连接</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="477"/>
+        <location filename="../src/settings.ui" line="482"/>
         <source>Check github for updates at startup</source>
         <translation>启动时检查github更新</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="491"/>
+        <location filename="../src/settings.ui" line="496"/>
         <source>Remember shielded transactions</source>
         <translation>记住隐蔽交易</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="498"/>
+        <location filename="../src/settings.ui" line="503"/>
         <source>Normally, change from t-Addresses goes to another t-Address. Checking this option will send the change to your shielded sapling address instead. Check this option to increase your privacy.</source>
         <translation>通常，从t-Addresses发送到另一个t-Address。 选中此选项会将更改发送到屏蔽的树苗地址。 选中此选项可增加隐私。</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="508"/>
+        <location filename="../src/settings.ui" line="513"/>
         <source>Allow overriding the default fees when sending transactions. Enabling this option may compromise your privacy since fees are transparent. </source>
         <translation>允许在发送交易时覆盖默认费用。由于费用是透明的，因此启用此选项可能会损害您的隐私。 </translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="518"/>
+        <location filename="../src/settings.ui" line="523"/>
         <source>Clear History</source>
         <translation>清空历史屏蔽交易</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="525"/>
+        <location filename="../src/settings.ui" line="530"/>
         <source>Shielded transactions are saved locally and shown in the transactions tab.  If you uncheck this, shielded transactions will not appear in the transactions tab.</source>
         <translation>屏蔽交易在本地保存并显示在交易“选项”卡中。 如果取消选中此项，屏蔽的交易将不会显示在“交易”选项卡中。</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="535"/>
+        <location filename="../src/settings.ui" line="540"/>
         <source>Allow custom fees</source>
         <translation>允许自定义费用</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="542"/>
+        <location filename="../src/settings.ui" line="547"/>
         <source>Shield change from t-Addresses to your sapling address</source>
         <translation>屏蔽改变从t-Addresses到您的树苗地址</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="549"/>
+        <location filename="../src/settings.ui" line="554"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
         <translation>通过运行在127.0.0.1:9050上的SOCKS代理连接到Tor网络。 请注意，您必须在外部安装和运行Tor服务。</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="559"/>
+        <location filename="../src/settings.ui" line="564"/>
         <source>Connect to github on startup to check for updates</source>
         <translation>在启动时连接到github以检查更新</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="566"/>
+        <location filename="../src/settings.ui" line="571"/>
         <source>Connect to the internet to fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="573"/>
+        <location filename="../src/settings.ui" line="578"/>
         <source>Fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="581"/>
+        <location filename="../src/settings.ui" line="586"/>
         <source>Explorer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="593"/>
+        <location filename="../src/settings.ui" line="598"/>
         <source>Tx Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="632"/>
+        <location filename="../src/settings.ui" line="637"/>
         <source>Address Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="658"/>
+        <location filename="../src/settings.ui" line="663"/>
         <source>Testnet Tx Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="684"/>
+        <location filename="../src/settings.ui" line="689"/>
         <source>Testnet Address Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="716"/>
+        <location filename="../src/settings.ui" line="721"/>
         <source>Rescan the blockchain for any missing wallet transactions and to correct your wallet balance. This may take several hours. You need to restart SilentDragon for this to take effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="760"/>
+        <location filename="../src/settings.ui" line="765"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2264,12 +2269,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="vanished">获取 ZEC/USD 价格</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="703"/>
+        <location filename="../src/settings.ui" line="708"/>
         <source>Troubleshooting</source>
         <translation>故障排除</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="709"/>
+        <location filename="../src/settings.ui" line="714"/>
         <source>Reindex</source>
         <translation>重建索引</translation>
     </message>
@@ -2278,7 +2283,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="vanished">重新扫描区块链以查找任何丢失的钱包交易并更正您的钱包余额。 这可能需要几个小时。 您需要重新启动SlientDragon才能使其生效</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="726"/>
+        <location filename="../src/settings.ui" line="731"/>
         <source>Rescan</source>
         <translation>重新扫描</translation>
     </message>
