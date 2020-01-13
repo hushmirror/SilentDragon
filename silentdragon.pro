@@ -26,6 +26,10 @@ DEFINES += \
 
 INCLUDEPATH  += src/3rdparty/
 
+mac: LIBS+= -Wl,-dead_strip
+mac: LIBS+= -Wl,-dead_strip_dylibs
+mac: LIBS+= -Wl,-bind_at_load
+
 RESOURCES     = application.qrc
 
 MOC_DIR = bin
