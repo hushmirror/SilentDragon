@@ -1,6 +1,8 @@
 #!/bin/bash
-# Copyright 2019 The Hush Developers
+# Copyright 2019-2020 The Hush Developers
+# Released under the GPLv3
 
+set -e
 UNAME=$(uname)
 
 if [ "$UNAME" == "Linux" ] ; then
@@ -17,11 +19,13 @@ VERSION=$(cat src/version.h |cut -d\" -f2)
 echo "Compiling SilentDragon $VERSION with $JOBS threads..."
 CONF=silentdragon.pro
 
-set -e
 qbuild () {
-   qmake $CONF CONFIG+=debug
-   #lupdate $CONF
-   #lrelease $CONF
+   qmake $CONF -spec linux-clang CONFIG+=debug
+   make -j$JOBS
+}
+
+qbuild_release () {
+   qmake $CONF -spec linux-clang CONFIG+=release
    make -j$JOBS
 }
 
@@ -33,6 +37,8 @@ elif [ "$1" == "linguist" ]; then
 elif [ "$1" == "cleanbuild" ]; then
    make clean
    qbuild
+elif [ "$1" == "release" ]; then
+   qbuild_release
 else
    qbuild
 fi
