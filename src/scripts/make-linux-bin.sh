@@ -2,15 +2,17 @@
 # Copyright (c) 2020 The Hush developers
 # Released under the GPLv3
 
-DEBLOG=deb.log.$$
 APP_VERSION=$(cat src/version.h | cut -d\" -f2)
 if [ -z $APP_VERSION ]; then echo "APP_VERSION is not set"; exit 1; fi
 
 # This assumes we already have a staticly compiled SD
 
-echo -n "Packaging.............."
-APP=SilentDragon-v$APP_VERSION-linux
+set -e
+OS=$(uname)
+ARCH=$(uname -i)
+APP=SilentDragon-v$APP_VERSION-$OS-$ARCH
 DIR=$APP
+echo -n "Making tarball for $APP..."
 mkdir $DIR
 strip silentdragon
 
@@ -23,6 +25,17 @@ cp hush-cli       $DIR
 cp hush-tx        $DIR
 cp README.md      $DIR
 cp LICENSE        $DIR
-#TODO: and param files?
 
+# We make tarballs without params for people who already have them installed
+tar czf $APP-noparams.tar.gz $DIR/
+
+cp sapling-output.params $DIR
+cp sapling-spend.params $DIR
+
+# By default we tell users to use the normal tarball with params, which will
+# be about 50MB larger but should cause less user support issues
 tar czf $APP.tar.gz $DIR/
+
+
+sha256sum $APP-noparams.tar.gz
+sha256sum $APP.tar.gz
