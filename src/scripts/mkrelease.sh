@@ -67,7 +67,7 @@ echo "[OK]"
 echo -n "Building..............."
 rm -rf bin/silentdragon* > /dev/null
 make clean > /dev/null
-./build.sh > /dev/null
+./build.sh release > /dev/null
 echo "[OK]"
 
 
