@@ -124,6 +124,7 @@ private:
     void importPrivKey();
     void exportAllKeys();
     void exportKeys(QString addr = "");
+    void getViewKey(QString addr = "");
     void backupWalletDat();
     void exportTransactions();
 
