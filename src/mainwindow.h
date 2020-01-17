@@ -81,6 +81,7 @@ private:
     void setupReceiveTab();
     void setupBalancesTab();
     void setupHushTab();
+    void setupChatTab();
     void setupMarketTab();
 
     void slot_change_theme(const QString& themeName);
