@@ -1171,8 +1171,8 @@ void RPC::refreshPrice() {
 
                 qDebug() << "Volume = " << (double) vol;
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
-                ui->volume->setText( QString::number((double) vol) + " " + QString::fromStdString(ticker) );
-                ui->volumeBTC->setText( QString::number((double) btcvol) + " BTC" );
+                ui->volume->setText( QString::number((double) vol, 'f', 2) + " " + QString::fromStdString(ticker) );
+                ui->volumeBTC->setText( QString::number((double) btcvol, 'f', 2) + " BTC" );
                 std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
                 // We don't get an actual HUSH volume stat, so we calculate it
                 if (price > 0)
@@ -1200,7 +1200,7 @@ void RPC::refreshPrice() {
 }
 
 void RPC::shutdownZcashd() {
-    // Shutdown embedded zcashd if it was started
+    // Shutdown embedded hushd if it was started
     if (ezcashd == nullptr || ezcashd->processId() == 0 || conn == nullptr) {
         // No hushd running internally, just return
         return;
@@ -1229,7 +1229,7 @@ void RPC::shutdownZcashd() {
         if ((ezcashd->atEnd() && ezcashd->processId() == 0) ||
             ezcashd->state() == QProcess::NotRunning ||
             waitCount > 30 ||
-            conn->config->zcashDaemon)  {   // If zcashd is daemon, then we don't have to do anything else
+            conn->config->zcashDaemon)  {   // If hushd is daemon, then we don't have to do anything else
             qDebug() << "Ended";
             waiter.stop();
             QTimer::singleShot(1000, [&]() { d.accept(); });
@@ -1239,7 +1239,7 @@ void RPC::shutdownZcashd() {
     });
     waiter.start(1000);
 
-    // Wait for the zcash process to exit.
+    // Wait for the hush process to exit.
     if (!Settings::getInstance()->isHeadless()) {
         d.exec(); 
     } else {
