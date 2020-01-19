@@ -810,7 +810,6 @@ void MainWindow::getViewKey(QString addr) {
         // TODO: Output in address, viewkey CSV format?
         out << vui.viewKeyTxt->toPlainText();
     });
-    // TODO: actually get the viewkey of zaddr
 
     auto isDialogAlive = std::make_shared<bool>(true);
 
@@ -1042,9 +1041,17 @@ void MainWindow::setupHushTab() {
 }
 
 void MainWindow::setupChatTab() {
+    qDebug() << __FUNCTION__;
+    QList<QPair<QString,QString>> addressLabels = AddressBook::getInstance()->getAllAddressLabels();
     QStringListModel *chatModel = new QStringListModel();
     QStringList contacts;
-    contacts << "Alice" << "Bob" << "Charlie" << "Eve";
+    //contacts << "Alice" << "Bob" << "Charlie" << "Eve";
+    for (int i = 0; i < addressLabels.size(); ++i) {
+        QPair<QString,QString> pair = addressLabels.at(i);
+        qDebug() << "Found contact " << pair.first << " " << pair.second;
+        contacts << pair.first;
+    }
+
     chatModel->setStringList(contacts);
 
     QStringListModel *conversationModel = new QStringListModel();
@@ -1052,7 +1059,14 @@ void MainWindow::setupChatTab() {
     conversations << "Bring home some milk" << "Markets look rough" << "How's the weather?" << "Is this on?";
     conversationModel->setStringList(conversations);
 
+
+    //Ui_addressBook ab;
+    //AddressBookModel model(ab.addresses);
+    //ab.addresses->setModel(&model);
+
     //TODO: ui->contactsView->setModel( model of address book );
+    //ui->contactsView->setModel(&model );
+
     ui->contactsView->setModel(chatModel);
     ui->chatView->setModel( conversationModel );
 }
