@@ -203,22 +203,22 @@
     <message>
         <location filename="../src/mainwindow.ui" line="940"/>
         <source>Market</source>
-        <translation type="unfinished"></translation>
+        <translation>Marché</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Informations sur le marché Hush&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="965"/>
         <source>Market Cap</source>
-        <translation type="unfinished"></translation>
+        <translation>Capitalisation boursière</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="997"/>
         <source>24H Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volume en 24h</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1316"/>
@@ -233,12 +233,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1360"/>
         <source>Wallet Transactions</source>
-        <translation type="unfinished"></translation>
+        <translation>Transactions sur portefeuille</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1382"/>
         <source>Chain Transactions</source>
-        <translation type="unfinished"></translation>
+        <translation>Transactions sur la chaîne</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1557"/>
@@ -689,18 +689,18 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="306"/>
         <source>Theme Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Changement de thème</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="306"/>
         <location filename="../src/mainwindow.cpp" line="317"/>
         <source>This change can take a few seconds.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce changement peut prendre quelques secondes.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="317"/>
         <source>Currency Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Changement de devise</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="505"/>
@@ -863,7 +863,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1030"/>
         <source>Copy block explorer link</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier le lien de l'explorateur de blocs</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1043"/>
@@ -958,7 +958,7 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/sendtab.cpp" line="734"/>
         <source>From Address is Invalid!</source>
-        <translation type="unfinished"></translation>
+        <translation>L'adresse de l'expéditeur n'est pas valide!</translation>
     </message>
     <message>
         <source>Reply to</source>
@@ -987,7 +987,7 @@ Cette adresse ne semble pas être de type z-Adresse</translation>
     <message>
         <location filename="../src/sendtab.cpp" line="712"/>
         <source>Computing transaction: </source>
-        <translation type="unfinished"></translation>
+        <translation>Transaction en cours :</translation>
     </message>
     <message>
         <source>From Address is Invalid</source>
@@ -1277,17 +1277,17 @@ If all else fails, please run hushd manually.</source>
     <message>
         <location filename="../src/rpc.cpp" line="1024"/>
         <source> transaction computing.</source>
-        <translation type="unfinished"></translation>
+        <translation> transaction en cours.</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1218"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez restez calme et attendre la fermeture de SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1219"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez atendre que hushd soit arrêté, vous tous</translation>
     </message>
     <message>
         <source>hushd has no peer connections</source>
@@ -1301,7 +1301,7 @@ If all else fails, please run hushd manually.</source>
     <message>
         <location filename="../src/sendtab.cpp" line="719"/>
         <source> Transaction </source>
-        <translation type="unfinished"></translation>
+        <translation> Transaction </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="722"/>
@@ -1560,7 +1560,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.cpp" line="312"/>
         <source>Transaction submitted (right click to copy) txid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Transaction soumise (clic droit pour copier) txid:</translation>
     </message>
 </context>
 <context>
@@ -1734,12 +1734,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="157"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Thème</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="174"/>
         <source>Local Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Devise locale</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="200"/>
@@ -1959,22 +1959,22 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="426"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>défaut</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="431"/>
         <source>blue</source>
-        <translation type="unfinished"></translation>
+        <translation>Bleu</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="436"/>
         <source>light</source>
-        <translation type="unfinished"></translation>
+        <translation>Calire</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="441"/>
         <source>dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Sombre</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="475"/>
@@ -2069,7 +2069,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="503"/>
         <source>Normally, change from t-Addresses goes to another t-Address. Checking this option will send the change to your shielded sapling address instead. Check this option to increase your privacy.</source>
-        <translation>Nornalement, le change d&apos;une adresse-t se fait à une autre adresse-t. Sélectionner cette option enverra le change à votre adresse privée Sapling à la place. Cochez cette option pour augmenter votre vie privée.</translation>
+        <translation>Normalement, le changement d&apos;une adresse-t se fait à une autre adresse-t. Sélectionnez cette option enverra le change à votre adresse privée Sapling à la place. Cochez cette option pour augmenter votre vie privée.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="547"/>
