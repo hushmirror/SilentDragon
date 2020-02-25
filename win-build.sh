@@ -1,6 +1,7 @@
 #!/bin/bash
 # Copyright 2019-2020 The Hush Developers
 # Released under the GPLv3
+# This script will cross-compile windoze binaries, hopefully!
 
 set -e
 UNAME=$(uname)
@@ -20,12 +21,13 @@ echo "Compiling SilentDragon $VERSION with $JOBS threads..."
 CONF=silentdragon.pro
 
 qbuild () {
-   qmake $CONF -spec linux-clang CONFIG+=debug
+   x86_64-w64-mingw32.static-qmake-qt5 $CONF CONFIG+=debug
    make -j$JOBS
 }
 
 qbuild_release () {
-   qmake $CONF -spec linux-clang CONFIG+=release
+   # This binary must be in your PATH!
+   x86_64-w64-mingw32.static-qmake-qt5 $CONF CONFIG+=release
    make -j$JOBS
 }
 

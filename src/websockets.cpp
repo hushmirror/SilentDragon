@@ -1,4 +1,4 @@
-// Copyright 2019 The Hush developers
+// Copyright 2019-2020 Hush developers
 #include "websockets.h"
 
 #include "rpc.h"
@@ -480,10 +480,16 @@ void AppDataServer::saveNonceHex(NonceType nt, QString noncehex) {
 
 // Encrypt an outgoing message with the stored secret key.
 QString AppDataServer::encryptOutgoing(QString msg) {
-    qDebug() << "Encrypting msg";
-    if (msg.length() % 256 > 0) {
-        msg = msg + QString(" ").repeated(256 - (msg.length() % 256));
+    // This padding size is ~50% larger than current largest
+    // message size and makes all current message types
+    // indistinguishable. If some new message type can
+    // be larger than this, the padding should probably be increased
+    int padding = 16*1024;
+    qDebug() << "Encrypt msg(pad="<<padding<<")  prepad len=" << msg.length();
+    if (msg.length() % padding > 0) {
+        msg = msg + QString(" ").repeated(padding - (msg.length() % padding));
     }
+    qDebug() << "Encrypt msg postpad len=" << msg.length();
 
     QString localNonceHex = getNonceHex(NonceType::LOCAL);
 
@@ -747,9 +753,6 @@ void AppDataServer::processSendTx(QJsonObject sendTx, MainWindow* mainwindow, st
     auto allBalances = mainwindow->getRPC()->getAllBalances();
     QList<QPair<QString, double>> bals;
     for (auto i : allBalances->keys()) {
-        // Filter out sprout addresses
-        if (Settings::getInstance()->isSproutAddress(i))
-            continue;
         // Filter out balances that don't have the requisite amount
         // TODO: should this be amt+tx.fee?
         if (allBalances->value(i) < amt)

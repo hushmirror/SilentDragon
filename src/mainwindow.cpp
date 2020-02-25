@@ -1,4 +1,5 @@
-// Copyright 2019 The Hush Developers
+// Copyright 2019-2020 The Hush Developers
+// Released under the GPLv3
 #include "mainwindow.h"
 #include "addressbook.h"
 #include "viewalladdresses.h"
@@ -7,6 +8,7 @@
 #include "ui_mobileappconnector.h"
 #include "ui_addressbook.h"
 #include "ui_privkey.h"
+#include "ui_viewkey.h"
 #include "ui_about.h"
 #include "ui_settings.h"
 #include "ui_viewalladdresses.h"
@@ -54,6 +56,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->actionDonate, &QAction::triggered, this, &MainWindow::donate);
 
     QObject::connect(ui->actionDiscord, &QAction::triggered, this, &MainWindow::discord);
+
+    QObject::connect(ui->actionReportBug, &QAction::triggered, this, &MainWindow::reportbug);
 
     QObject::connect(ui->actionWebsite, &QAction::triggered, this, &MainWindow::website);
 
@@ -119,7 +123,9 @@ MainWindow::MainWindow(QWidget *parent) :
     setupTransactionsTab();
     setupReceiveTab();
     setupBalancesTab();
-    setupZcashdTab();
+    setupMarketTab();
+    setupChatTab();
+    setupHushTab();
 
     rpc = new RPC(this);
     qDebug() << "Created RPC";
@@ -133,7 +139,7 @@ MainWindow::MainWindow(QWidget *parent) :
         if (ads->getAllowInternetConnection())
             wormholecode = ads->getWormholeCode(ads->getSecretHex());
 
-        qDebug() << "MainWindow: createWebsocket with wormholcode=" << wormholecode;
+        qDebug() << "MainWindow: createWebsocket with wormholecode=" << wormholecode;
         createWebsocket(wormholecode);
     }
 }
@@ -225,13 +231,22 @@ void MainWindow::setupStatusBar() {
             menu.addAction("Copy txid", [=]() {
                 QGuiApplication::clipboard()->setText(txid);
             });
+            menu.addAction("Copy block explorer link", [=]() {
+                QString url;
+                auto explorer = Settings::getInstance()->getExplorer();
+                if (Settings::getInstance()->isTestnet()) {
+                    url = explorer.testnetTxExplorerUrl + txid;
+                } else {
+                    url = explorer.txExplorerUrl + txid;
+                }
+                QGuiApplication::clipboard()->setText(url);
+            });
             menu.addAction("View tx on block explorer", [=]() {
                 QString url;
                 auto explorer = Settings::getInstance()->getExplorer();
                 if (Settings::getInstance()->isTestnet()) {
                     url = explorer.testnetTxExplorerUrl + txid;
-                }
-                else {
+                } else {
                     url = explorer.txExplorerUrl + txid;
                 }
                 QDesktopServices::openUrl(QUrl(url));
@@ -265,6 +280,16 @@ void MainWindow::setupSettingsModal() {
             Settings::getInstance()->setSaveZtxs(checked);
         });
 
+        std::string currency_name;
+        try {
+            currency_name = Settings::getInstance()->get_currency_name();
+        } catch (const std::exception& e) {
+            qDebug() << QString("Currency name exception! : ") << e.what();
+            currency_name = "USD";
+        }
+
+        this->slot_change_currency(currency_name);
+
         // Setup clear button
         QObject::connect(settings.btnClearSaved, &QCheckBox::clicked, [=]() {
             if (QMessageBox::warning(this, "Clear saved history?",
@@ -282,8 +307,18 @@ void MainWindow::setupSettingsModal() {
         QObject::connect(settings.comboBoxTheme, SIGNAL(currentIndexChanged(QString)), this, SLOT(slot_change_theme(QString)));
         QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
             this->slot_change_theme(theme_name);
-            // Tell the user to restart
-            QMessageBox::information(this, tr("Restart"), tr("Please restart SilentDragon to have the theme apply"), QMessageBox::Ok);
+            QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+        });
+
+        // Set local currency
+        QString ticker = QString::fromStdString( Settings::getInstance()->get_currency_name() );
+        int currency_index = settings.comboBoxCurrency->findText(ticker, Qt::MatchExactly);
+        settings.comboBoxCurrency->setCurrentIndex(currency_index);
+        QObject::connect(settings.comboBoxCurrency, SIGNAL(currentIndexChanged(QString)), this, SLOT(slot_change_currency(QString)));
+        QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString ticker) {
+            this->slot_change_currency(ticker.toStdString());
+            rpc->refresh(true);
+            QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
         // Save sent transactions
@@ -363,6 +398,7 @@ void MainWindow::setupSettingsModal() {
         }
 
         if (settingsDialog.exec() == QDialog::Accepted) {
+            qDebug() << "Setting dialog box accepted";
             // Custom fees
             bool customFees = settings.chkCustomFees->isChecked();
             Settings::getInstance()->setAllowCustomFees(customFees);
@@ -456,6 +492,11 @@ void MainWindow::addressBook() {
 
 void MainWindow::discord() {
     QString url = "https://myhush.org/discord/";
+    QDesktopServices::openUrl(QUrl(url));
+}
+
+void MainWindow::reportbug() {
+    QString url = "https://github.com/MyHush/SilentDragon/issues/new";
     QDesktopServices::openUrl(QUrl(url));
 }
 
@@ -581,7 +622,7 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event) {
 }
 
 
-// Pay the Zcash URI by showing a confirmation window. If the URI parameter is empty, the UI
+// Pay the Hush URI by showing a confirmation window. If the URI parameter is empty, the UI
 // will prompt for one. If the myAddr is empty, then the default from address is used to send
 // the transaction.
 void MainWindow::payZcashURI(QString uri, QString myAddr) {
@@ -735,6 +776,68 @@ void MainWindow::exportAllKeys() {
     exportKeys("");
 }
 
+void MainWindow::getViewKey(QString addr) {
+    QDialog d(this);
+    Ui_ViewKey vui;
+    vui.setupUi(&d);
+
+    // Make the window big by default
+    auto ps = this->geometry();
+    QMargins margin = QMargins() + 50;
+    d.setGeometry(ps.marginsRemoved(margin));
+
+    Settings::saveRestore(&d);
+
+    vui.viewKeyTxt->setPlainText(tr("Loading..."));
+    vui.viewKeyTxt->setReadOnly(true);
+    vui.viewKeyTxt->setLineWrapMode(QPlainTextEdit::LineWrapMode::NoWrap);
+
+    // Disable the save button until it finishes loading
+    vui.buttonBox->button(QDialogButtonBox::Save)->setEnabled(false);
+    vui.buttonBox->button(QDialogButtonBox::Ok)->setVisible(false);
+
+    bool allKeys = false; //addr.isEmpty() ? true : false;
+    // Wire up save button
+    QObject::connect(vui.buttonBox->button(QDialogButtonBox::Save), &QPushButton::clicked, [=] () {
+        QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
+                           allKeys ? "hush-all-viewkeys.txt" : "hush-viewkey.txt");
+        QFile file(fileName);
+        if (!file.open(QIODevice::WriteOnly)) {
+            QMessageBox::information(this, tr("Unable to open file"), file.errorString());
+            return;
+        }
+        QTextStream out(&file);
+        // TODO: Output in address, viewkey CSV format?
+        out << vui.viewKeyTxt->toPlainText();
+    });
+
+    auto isDialogAlive = std::make_shared<bool>(true);
+
+    auto fnUpdateUIWithKeys = [=](QList<QPair<QString, QString>> viewKeys) {
+        // Check to see if we are still showing.
+        if (! *(isDialogAlive.get()) ) return;
+
+        QString allKeysTxt;
+        for (auto keypair : viewKeys) {
+            allKeysTxt = allKeysTxt % keypair.second % " # addr=" % keypair.first % "\n";
+        }
+
+        vui.viewKeyTxt->setPlainText(allKeysTxt);
+        vui.buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
+    };
+
+    auto fnAddKey = [=](json key) {
+        QList<QPair<QString, QString>> singleAddrKey;
+        singleAddrKey.push_back(QPair<QString, QString>(addr, QString::fromStdString(key.get<json::string_t>())));
+        fnUpdateUIWithKeys(singleAddrKey);
+    };
+
+    rpc->getZViewKey(addr, fnAddKey);
+
+    d.exec();
+    *isDialogAlive = false;
+}
+
 void MainWindow::exportKeys(QString addr) {
     bool allKeys = addr.isEmpty() ? true : false;
 
@@ -803,8 +906,7 @@ void MainWindow::exportKeys(QString addr) {
 
         if (Settings::getInstance()->isZAddress(addr)) {
             rpc->getZPrivKey(addr, fnAddKey);
-        }
-        else {
+        } else {
             rpc->getTPrivKey(addr, fnAddKey);
         }
     }
@@ -873,8 +975,18 @@ void MainWindow::setupBalancesTab() {
             this->exportKeys(addr);
         });
 
+        if (addr.startsWith("zs1")) {
+            menu.addAction(tr("Get viewing key"), [=] () {
+                this->getViewKey(addr);
+            });
+        }
+
         menu.addAction("Send from " % addr.left(40) % (addr.size() > 40 ? "..." : ""), [=]() {
             fnDoSendFrom(addr);
+        });
+
+        menu.addAction("Send to " % addr.left(40) % (addr.size() > 40 ? "..." : ""), [=]() {
+            fnDoSendFrom("",addr);
         });
 
         if (addr.startsWith("R")) {
@@ -889,12 +1001,22 @@ void MainWindow::setupBalancesTab() {
                 QString url;
                 auto explorer = Settings::getInstance()->getExplorer();
                 if (Settings::getInstance()->isTestnet()) {
-                    //TODO
                     url = explorer.testnetAddressExplorerUrl + addr;
                 } else {
                     url = explorer.addressExplorerUrl + addr;
                 }
                 QDesktopServices::openUrl(QUrl(url));
+            });
+
+            menu.addAction("Copy explorer link", [=]() {
+                QString url;
+                auto explorer = Settings::getInstance()->getExplorer();
+                if (Settings::getInstance()->isTestnet()) {
+                    url = explorer.testnetAddressExplorerUrl + addr;
+                } else {
+                    url = explorer.addressExplorerUrl + addr;
+                }
+                QGuiApplication::clipboard()->setText(url);
             });
 
             menu.addAction(tr("Address Asset Viewer"), [=] () {
@@ -914,8 +1036,49 @@ void MainWindow::setupBalancesTab() {
     });
 }
 
-void MainWindow::setupZcashdTab() {
+void MainWindow::setupHushTab() {
     ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+}
+
+void MainWindow::setupChatTab() {
+    qDebug() << __FUNCTION__;
+    QList<QPair<QString,QString>> addressLabels = AddressBook::getInstance()->getAllAddressLabels();
+    QStringListModel *chatModel = new QStringListModel();
+    QStringList contacts;
+    //contacts << "Alice" << "Bob" << "Charlie" << "Eve";
+    for (int i = 0; i < addressLabels.size(); ++i) {
+        QPair<QString,QString> pair = addressLabels.at(i);
+        qDebug() << "Found contact " << pair.first << " " << pair.second;
+        contacts << pair.first;
+    }
+
+    chatModel->setStringList(contacts);
+
+    QStringListModel *conversationModel = new QStringListModel();
+    QStringList conversations;
+    conversations << "Bring home some milk" << "Markets look rough" << "How's the weather?" << "Is this on?";
+    conversationModel->setStringList(conversations);
+
+
+    //Ui_addressBook ab;
+    //AddressBookModel model(ab.addresses);
+    //ab.addresses->setModel(&model);
+
+    //TODO: ui->contactsView->setModel( model of address book );
+    //ui->contactsView->setModel(&model );
+
+    ui->contactsView->setModel(chatModel);
+    ui->chatView->setModel( conversationModel );
+}
+
+void MainWindow::setupMarketTab() {
+    qDebug() << "Setting up market tab";
+    auto s      = Settings::getInstance();
+    auto ticker = s->get_currency_name();
+
+    ui->volume->setText(QString::number((double)       s->get_volume("HUSH") ,'f',8) + " HUSH");
+    ui->volumeLocal->setText(QString::number((double)  s->get_volume(ticker) ,'f',8) + " " + QString::fromStdString(ticker));
+    ui->volumeBTC->setText(QString::number((double)    s->get_volume("BTC") ,'f',8) + " BTC");
 }
 
 void MainWindow::setupTransactionsTab() {
@@ -971,6 +1134,17 @@ void MainWindow::setupTransactionsTab() {
             QDesktopServices::openUrl(QUrl(url));
         });
 
+        menu.addAction(tr("Copy block explorer link"), [=] () {
+            QString url;
+            auto explorer = Settings::getInstance()->getExplorer();
+            if (Settings::getInstance()->isTestnet()) {
+                url = explorer.testnetTxExplorerUrl + txid;
+            } else {
+                url = explorer.txExplorerUrl + txid;
+            }
+            QGuiApplication::clipboard()->setText(url);
+        });
+
         // Payment Request
         if (!memo.isEmpty() && memo.startsWith("hush:")) {
             menu.addAction(tr("View Payment Request"), [=] () {
@@ -993,8 +1167,7 @@ void MainWindow::setupTransactionsTab() {
             int lastPost     = memo.trimmed().lastIndexOf(QRegExp("[\r\n]+"));
             QString lastWord = memo.right(memo.length() - lastPost - 1);
 
-            if (Settings::getInstance()->isSaplingAddress(lastWord) ||
-                Settings::getInstance()->isSproutAddress(lastWord)) {
+            if (Settings::getInstance()->isSaplingAddress(lastWord)) {
                 menu.addAction(tr("Reply to ") + lastWord.left(25) + "...", [=]() {
                     // First, cancel any pending stuff in the send tab by pretending to click
                     // the cancel button
@@ -1020,26 +1193,24 @@ void MainWindow::setupTransactionsTab() {
     });
 }
 
-void MainWindow::addNewZaddr(bool sapling) {
-    rpc->newZaddr(sapling, [=] (json reply) {
+void MainWindow::addNewZaddr() {
+    rpc->newZaddr( [=] (json reply) {
         QString addr = QString::fromStdString(reply.get<json::string_t>());
         // Make sure the RPC class reloads the z-addrs for future use
         rpc->refreshAddresses();
 
         // Just double make sure the z-address is still checked
-        if ( sapling && ui->rdioZSAddr->isChecked() ) {
+        if ( ui->rdioZSAddr->isChecked() ) {
             ui->listReceiveAddresses->insertItem(0, addr);
             ui->listReceiveAddresses->setCurrentIndex(0);
 
-            ui->statusBar->showMessage(QString::fromStdString("Created new zAddr") %
-                                       (sapling ? "(Sapling)" : "(Sprout)"),
-                                       10 * 1000);
+            ui->statusBar->showMessage(QString::fromStdString("Created new Sapling zaddr"), 10 * 1000);
         }
     });
 }
 
 
-// Adds sapling or sprout z-addresses to the combo box. Technically, returns a
+// Adds z-addresses to the combo box. Technically, returns a
 // lambda, which can be connected to the appropriate signal
 std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
     return [=] (bool checked) {
@@ -1059,7 +1230,7 @@ std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
 
             // If z-addrs are empty, then create a new one.
             if (addrs->isEmpty()) {
-                addNewZaddr(sapling);
+                addNewZaddr();
             }
         }
     };
@@ -1144,7 +1315,7 @@ void MainWindow::setupReceiveTab() {
             return;
 
         if (ui->rdioZSAddr->isChecked()) {
-            addNewZaddr(true);
+            addNewZaddr();
         } else if (ui->rdioTAddr->isChecked()) {
             addNewTAddr();
         }
@@ -1279,18 +1450,33 @@ void MainWindow::updateLabels() {
     updateLabelsAutoComplete();
 }
 
+void MainWindow::slot_change_currency(const std::string& currency_name)
+{
+    qDebug() << "slot_change_currency"; //<< ": " << currency_name;
+    Settings::getInstance()->set_currency_name(currency_name);
+    qDebug() << "Refreshing price stats after currency change";
+    rpc->refreshPrice();
+
+    // Include currency
+    std::string saved_currency_name;
+    try {
+       saved_currency_name = Settings::getInstance()->get_currency_name();
+    } catch (const std::exception& e) {
+        qDebug() << QString("Ignoring currency change Exception! : ") << e.what();
+        saved_currency_name = "USD";
+    }
+}
+
 void MainWindow::slot_change_theme(const QString& theme_name)
 {
     Settings::getInstance()->set_theme_name(theme_name);
 
     // Include css
     QString saved_theme_name;
-    try
-    {
+    try {
        saved_theme_name = Settings::getInstance()->get_theme_name();
-    }
-    catch (...)
-    {
+    } catch (const std::exception& e) {
+        qDebug() << QString("Ignoring theme change Exception! : ") << e.what();
         saved_theme_name = "default";
     }
 

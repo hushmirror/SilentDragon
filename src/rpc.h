@@ -46,7 +46,7 @@ public:
     void refreshAddresses();    
     
     void checkForUpdate(bool silent = true);
-    void refreshZECPrice();
+    void refreshPrice();
     void getZboardTopics(std::function<void(QMap<QString, QString>)> cb);
 
     void executeTransaction(Tx tx, 
@@ -68,10 +68,11 @@ public:
     const QMap<QString, double>*      getAllBalances()       { return allBalances; }
     const QMap<QString, bool>*        getUsedAddresses()     { return usedAddresses; }
 
-    void newZaddr(bool sapling, const std::function<void(json)>& cb);
+    void newZaddr(const std::function<void(json)>& cb);
     void newTaddr(const std::function<void(json)>& cb);
 
     void getZPrivKey(QString addr, const std::function<void(json)>& cb);
+    void getZViewKey(QString addr, const std::function<void(json)>& cb);
     void getTPrivKey(QString addr, const std::function<void(json)>& cb);
     void importZPrivKey(QString addr, bool rescan, const std::function<void(json)>& cb);
     void importTPrivKey(QString addr, bool rescan, const std::function<void(json)>& cb);

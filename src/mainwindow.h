@@ -80,9 +80,12 @@ private:
     void setupTransactionsTab();
     void setupReceiveTab();
     void setupBalancesTab();
-    void setupZcashdTab();
+    void setupHushTab();
+    void setupChatTab();
+    void setupMarketTab();
 
     void slot_change_theme(const QString& themeName);
+    void slot_change_currency(const std::string& currencyName);
     void setupTurnstileDialog();
     void setupSettingsModal();
     void setupStatusBar();
@@ -106,7 +109,7 @@ private:
     void addressChanged(int number, const QString& text);
     void amountChanged (int number, const QString& text);
 
-    void addNewZaddr(bool sapling);
+    void addNewZaddr();
     std::function<void(bool)> addZAddrsToComboList(bool sapling);
 
     void memoButtonClicked(int number, bool includeReplyTo = false);
@@ -116,11 +119,13 @@ private:
     void donate();
     void website();
     void discord();
+    void reportbug();
     void addressBook();
     void postToZBoard();
     void importPrivKey();
     void exportAllKeys();
     void exportKeys(QString addr = "");
+    void getViewKey(QString addr = "");
     void backupWalletDat();
     void exportTransactions();
 

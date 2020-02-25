@@ -1574,7 +1574,7 @@ Would you like to visit the releases page?</source>
     </message>
     <message>
         <location filename="../src/settings.ui" line="326"/>
-        <source>Fetch HUSH / USD prices</source>
+        <source>Fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

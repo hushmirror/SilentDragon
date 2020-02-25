@@ -1,4 +1,5 @@
-// Copyright 2019 The Hush developers
+// Copyright 2019-2020 Hush developers
+// Released under the GPLv3
 #include "mainwindow.h"
 #include "settings.h"
 
@@ -162,6 +163,63 @@ double Settings::getZECPrice() {
     return zecPrice;
 }
 
+double Settings::get_price(std::string currency) {
+    std::for_each(currency.begin(), currency.end(), [](char & c){ c = ::tolower(c); });
+    QString ticker = QString::fromStdString(currency);
+    auto search = prices.find(currency);
+    if (search != prices.end()) {
+        qDebug() << "Found price of " << ticker << " = " << search->second;
+        return search->second;
+    } else {
+        qDebug() << "Could not find price of" << ticker << "!!!";
+        return 0.0;
+    }
+}
+
+void Settings::set_price(std::string curr, double price) {
+    QString ticker = QString::fromStdString(curr);
+    qDebug() << "Setting price of " << ticker << "=" << QString::number(price);
+    prices.insert( std::make_pair(curr, price) );
+}
+
+void Settings::set_volume(std::string curr, double volume) {
+    QString ticker = QString::fromStdString(curr);
+    qDebug() << "Setting volume of " << ticker << "=" << QString::number(volume);
+    volumes.insert( std::make_pair(curr, volume) );
+}
+
+double Settings::get_volume(std::string currency) {
+    std::for_each(currency.begin(), currency.end(), [](char & c){ c = ::tolower(c); });
+    QString ticker = QString::fromStdString(currency);
+    auto search = volumes.find(currency);
+    if (search != volumes.end()) {
+        qDebug() << "Found volume of " << ticker << " = " << search->second;
+        return search->second;
+    } else {
+        qDebug() << "Could not find volume of" << ticker << "!!!";
+        return 0.0;
+    }
+}
+
+void Settings::set_marketcap(std::string curr, double marketcap) {
+    QString ticker = QString::fromStdString(curr);
+    qDebug() << "Setting marketcap of " << ticker << "=" << QString::number(marketcap);
+    marketcaps.insert( std::make_pair(curr, marketcap) );
+}
+
+double Settings::get_marketcap(std::string currency) {
+    std::for_each(currency.begin(), currency.end(), [](char & c){ c = ::tolower(c); });
+    QString ticker = QString::fromStdString(currency);
+    auto search = marketcaps.find(currency);
+    if (search != marketcaps.end()) {
+        qDebug() << "Found marketcap of " << ticker << " = " << search->second;
+        return search->second;
+    } else {
+        qDebug() << "Could not find marketcap of" << ticker << "!!!";
+        return -1.0;
+    }
+}
+
 unsigned int Settings::getBTCPrice() {
     // in satoshis
     return btcPrice;
@@ -222,7 +280,8 @@ void Settings::saveRestore(QDialog* d) {
 }
 
 QString Settings::getUSDFormat(double bal) {
-    return "$" + QLocale(QLocale::English).toString(bal * Settings::getInstance()->getZECPrice(), 'f', 2);
+    //TODO: respect current locale!
+    return QLocale(QLocale::English).toString(bal * Settings::getInstance()->getZECPrice(), 'f', 8) + " " + QString::fromStdString(Settings::getInstance()->get_currency_name());
 }
 
 QString Settings::getDecimalString(double amt) {
@@ -237,7 +296,7 @@ QString Settings::getDecimalString(double amt) {
     return f;
 }
 
-QString Settings::getZECDisplayFormat(double bal) {
+QString Settings::getDisplayFormat(double bal) {
     // This is idiotic. Why doesn't QString have a way to do this?
     return getDecimalString(bal) % " " % Settings::getTokenName();
 }
@@ -245,25 +304,27 @@ QString Settings::getZECDisplayFormat(double bal) {
 QString Settings::getZECUSDDisplayFormat(double bal) {
     auto usdFormat = getUSDFormat(bal);
     if (!usdFormat.isEmpty())
-        return getZECDisplayFormat(bal) % " (" % getUSDFormat(bal) % ")";
+        return getDisplayFormat(bal) % " (" % getUSDFormat(bal) % ")";
     else
-        return getZECDisplayFormat(bal);
+        return getDisplayFormat(bal);
 }
 
-const QString Settings::txidStatusMessage = QString(QObject::tr("Tx submitted (right click to copy) txid:"));
+const QString Settings::txidStatusMessage = QString(QObject::tr("Transaction submitted (right click to copy) txid:"));
 
 QString Settings::getTokenName() {
     if (Settings::getInstance()->isTestnet()) {
-        return "HUSHT";
+        return "TUSH";
     } else {
         return "HUSH";
     }
 }
 
+//TODO: this isn't used for donations
 QString Settings::getDonationAddr() {
     if (Settings::getInstance()->isTestnet())  {
 	    return "ztestsaplingXXX";
     }
+    // This is used for user feedback
     return "zs1aq4xnrkjlnxx0zesqye7jz3dfrf3rjh7q5z6u8l6mwyqqaam3gx3j2fkqakp33v93yavq46j83q";
 }
 
@@ -279,6 +340,16 @@ bool Settings::addToZcashConf(QString confLocation, QString line) {
 
     return true;
 }
+
+std::string Settings::get_currency_name() {
+    // Load from the QT Settings.
+    return QSettings().value("options/currency_name", "BTC").toString().toStdString();
+}
+
+void Settings::set_currency_name(std::string currency_name) {
+    QSettings().setValue("options/currency_name", QString::fromStdString(currency_name));
+}
+
 
 bool Settings::removeFromZcashConf(QString confLocation, QString option) {
     if (confLocation.isEmpty())
@@ -339,7 +410,7 @@ bool Settings::isValidAddress(QString addr) {
 
 // Get a pretty string representation of this Payment URI
 QString Settings::paymentURIPretty(PaymentURI uri) {
-    return QString() + "Payment Request\n" + "Pay: " + uri.addr + "\nAmount: " + getZECDisplayFormat(uri.amt.toDouble())
+    return QString() + "Payment Request\n" + "Pay: " + uri.addr + "\nAmount: " + getDisplayFormat(uri.amt.toDouble())
         + "\nMemo:" + QUrl::fromPercentEncoding(uri.memo.toUtf8());
 }
 

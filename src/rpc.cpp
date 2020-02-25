@@ -1,4 +1,5 @@
-// Copyright 2019 The Hush Developers
+// Copyright 2019-2020 The Hush Developers
+// Released under the GPLv3
 #include "rpc.h"
 
 #include "addressbook.h"
@@ -30,7 +31,7 @@ RPC::RPC(MainWindow* main) {
     // Set up timer to refresh Price
     priceTimer = new QTimer(main);
     QObject::connect(priceTimer, &QTimer::timeout, [=]() {
-        refreshZECPrice();
+        refreshPrice();
     });
     priceTimer->start(Settings::priceRefreshSpeed);  // Every hour
 
@@ -93,7 +94,7 @@ void RPC::setConnection(Connection* c) {
     Settings::removeFromZcashConf(zcashConfLocation, "reindex");
 
     // Refresh the UI
-    refreshZECPrice();
+    refreshPrice();
     checkForUpdate();
 
     // Force update, because this might be coming from a settings update
@@ -153,12 +154,12 @@ void RPC::getZUnspent(const std::function<void(json)>& cb) {
     conn->doRPCWithDefaultErrorHandling(payload, cb);
 }
 
-void RPC::newZaddr(bool sapling, const std::function<void(json)>& cb) {
+void RPC::newZaddr(const std::function<void(json)>& cb) {
     json payload = {
         {"jsonrpc", "1.0"},
         {"id", "someid"},
         {"method", "z_getnewaddress"},
-        {"params", { sapling ? "sapling" : "sprout" }},
+        {"params", { "sapling" }},
     };
     
     conn->doRPCWithDefaultErrorHandling(payload, cb);
@@ -168,6 +169,11 @@ void RPC::newTaddr(const std::function<void(json)>& cb) {
 
 	std::string method = "getnewaddress";
     conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
+}
+
+void RPC::getZViewKey(QString addr, const std::function<void(json)>& cb) {
+	std::string method = "z_exportviewingkey";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method, addr.toStdString()), cb);
 }
 
 void RPC::getZPrivKey(QString addr, const std::function<void(json)>& cb) {
@@ -526,7 +532,7 @@ void RPC::refreshReceivedZTrans(QList<QString> zaddrs) {
     );
 } 
 
-/// This will refresh all the balance data from zcashd
+/// This will refresh all the balance data from hushd
 void RPC::refresh(bool force) {
     if  (conn == nullptr) 
         return noConnection();
@@ -536,9 +542,7 @@ void RPC::refresh(bool force) {
 
 
 void RPC::getInfoThenRefresh(bool force) {
-
     //qDebug() << "getinfo";
-
     if  (conn == nullptr) 
         return noConnection();
 
@@ -551,6 +555,7 @@ void RPC::getInfoThenRefresh(bool force) {
             Settings::getInstance()->setTestnet(reply["testnet"].get<json::boolean_t>());
         };
 
+        // TODO: checkmark only when getinfo.synced == true!
         // Connected, so display checkmark.
         QIcon i(":/icons/res/connected.gif");
         main->statusIcon->setPixmap(i.pixmap(16, 16));
@@ -633,22 +638,21 @@ void RPC::getInfoThenRefresh(bool force) {
         });
 
 
-		std::string method2 = "getwalletinfo";
-        conn->doRPCIgnoreError(makePayload(method2), [=](const json& reply) {
+        conn->doRPCIgnoreError(makePayload("getwalletinfo"), [=](const json& reply) {
             int  txcount = reply["txcount"].get<json::number_integer_t>();
             ui->txcount->setText(QString::number(txcount));
         });
 
-        // Call to see if the blockchain is syncing. 
-        payload = {
-            {"jsonrpc", "1.0"},
-            {"id", "someid"},
-            {"method", "getblockchaininfo"}
-        };
+        //TODO: If -zindex is enabled, show stats
+        conn->doRPCIgnoreError(makePayload("getchaintxstats"), [=](const json& reply) {
+            int  txcount = reply["txcount"].get<json::number_integer_t>();
+            ui->chaintxcount->setText(QString::number(txcount));
+        });
 
-        conn->doRPCIgnoreError(payload, [=](const json& reply) {
+        // Call to see if the blockchain is syncing. 
+        conn->doRPCIgnoreError(makePayload("getblockchaininfo"), [=](const json& reply) {
             auto progress    = reply["verificationprogress"].get<double>();
-	    // TODO: use getinfo.synced
+            // TODO: use getinfo.synced
             bool isSyncing   = progress < 0.9999; // 99.99%
             int  blockNumber = reply["blocks"].get<json::number_unsigned_t>();
 
@@ -657,10 +661,12 @@ void RPC::getInfoThenRefresh(bool force) {
                 estimatedheight = reply["estimatedheight"].get<json::number_unsigned_t>();
             }
 
-            Settings::getInstance()->setSyncing(isSyncing);
-            Settings::getInstance()->setBlockNumber(blockNumber);
+            auto s = Settings::getInstance();
+            s->setSyncing(isSyncing);
+            s->setBlockNumber(blockNumber);
+            std::string ticker = s->get_currency_name();
 
-            // Update zcashd tab if it exists
+            // Update hushd tab
             if (isSyncing) {
                 QString txt = QString::number(blockNumber);
                 if (estimatedheight > 0) {
@@ -677,20 +683,28 @@ void RPC::getInfoThenRefresh(bool force) {
                 ui->heightLabel->setText(QObject::tr("Block height"));
             }
 
+            auto ticker_price = s->get_price(ticker);
+            QString extra = "";
+            if(ticker_price > 0 && ticker != "BTC") {
+                extra = QString::number( s->getBTCPrice() ) % "sat";
+            }
+            QString price = "";
+            if (ticker_price > 0) {
+                price = QString(", ") % "HUSH" % "=" % QString::number( (double)ticker_price,'f',8) % " " % QString::fromStdString(ticker) % " " % extra;
+            }
+
             // Update the status bar
             QString statusText = QString() %
                 (isSyncing ? QObject::tr("Syncing") : QObject::tr("Connected")) %
                 " (" %
-                (Settings::getInstance()->isTestnet() ? QObject::tr("testnet:") : "") %
+                (s->isTestnet() ? QObject::tr("testnet:") : "") %
                 QString::number(blockNumber) %
                 (isSyncing ? ("/" % QString::number(progress*100, 'f', 2) % "%") : QString()) %
                 ") " %
-                " Lag: " % QString::number(blockNumber - notarized) %
-                " HUSH/USD=$" % QString::number( (double) Settings::getInstance()->getZECPrice() ) %
-                " " % QString::number( Settings::getInstance()->getBTCPrice() ) % "sat";
+                " Lag: " % QString::number(blockNumber - notarized) % price;
             main->statusLabel->setText(statusText);
 
-            auto zecPrice = Settings::getUSDFormat(1);
+            auto hushPrice = Settings::getUSDFormat(1);
             QString tooltip;
             if (connections > 0) {
                 tooltip = QObject::tr("Connected to hushd");
@@ -698,10 +712,10 @@ void RPC::getInfoThenRefresh(bool force) {
             else {
                 tooltip = QObject::tr("hushd has no peer connections! Network issues?");
             }
-            tooltip = tooltip % "(v " % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
+            tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
 
-            if (!zecPrice.isEmpty()) {
-                tooltip = "1 HUSH = " % zecPrice % "\n" % tooltip;
+            if (!hushPrice.isEmpty()) {
+                tooltip = "1 HUSH = " % hushPrice % "\n" % tooltip;
             }
             main->statusLabel->setToolTip(tooltip);
             main->statusIcon->setToolTip(tooltip);
@@ -801,9 +815,9 @@ void RPC::refreshBalances() {
 
         AppDataModel::getInstance()->setBalances(balT, balZ);
 
-        ui->balSheilded   ->setText(Settings::getZECDisplayFormat(balZ));
-        ui->balTransparent->setText(Settings::getZECDisplayFormat(balT));
-        ui->balTotal      ->setText(Settings::getZECDisplayFormat(balTotal));
+        ui->balSheilded   ->setText(Settings::getDisplayFormat(balZ));
+        ui->balTransparent->setText(Settings::getDisplayFormat(balT));
+        ui->balTotal      ->setText(Settings::getDisplayFormat(balTotal));
 
         ui->balSheilded   ->setToolTip(Settings::getUSDFormat(balZ));
         ui->balTransparent->setToolTip(Settings::getUSDFormat(balT));
@@ -1085,15 +1099,16 @@ void RPC::checkForUpdate(bool silent) {
 }
 
 // Get the HUSH prices
-void RPC::refreshZECPrice() {
+void RPC::refreshPrice() {
     if  (conn == nullptr)
         return noConnection();
 
-    // TODO: use/render all this data
-    QUrl cmcURL("https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true");
+    QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Cidr%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr%2Ckrw%2Cthb%2Cnzd%2Czar%2Cvef%2Cxau%2Cxag%2Cvnd%2Csar%2Ctwd%2Caed%2Cars%2Cbdt%2Cbhd%2Cbmd%2Cbrl%2Cclp%2Cczk%2Cdkk%2Chuf%2Cils%2Ckwd%2Clkr%2Cpkr%2Cnok%2Ctry%2Csek%2Cmxn%2Cuah%2Chkd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
+    QUrl cmcURL(price_feed);
     QNetworkRequest req;
     req.setUrl(cmcURL);
     QNetworkReply *reply = conn->restclient->get(req);
+    auto s = Settings::getInstance();
 
     QObject::connect(reply, &QNetworkReply::finished, [=] {
         reply->deleteLater();
@@ -1106,8 +1121,8 @@ void RPC::refreshZECPrice() {
                 } else {
                     qDebug() << reply->errorString();
                 }
-                Settings::getInstance()->setZECPrice(0);
-                Settings::getInstance()->setBTCPrice(0);
+                s->setZECPrice(0);
+                s->setBTCPrice(0);
                 return;
             }
 
@@ -1115,8 +1130,8 @@ void RPC::refreshZECPrice() {
             auto all = reply->readAll();
             auto parsed = json::parse(all, nullptr, false);
             if (parsed.is_discarded()) {
-                Settings::getInstance()->setZECPrice(0);
-                Settings::getInstance()->setBTCPrice(0);
+                s->setZECPrice(0);
+                s->setBTCPrice(0);
                 return;
             }
 
@@ -1124,16 +1139,51 @@ void RPC::refreshZECPrice() {
 
             const json& item  = parsed.get<json::object_t>();
             const json& hush  = item["hush"].get<json::object_t>();
+            std::string  ticker    = s->get_currency_name();
+            std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
+            fprintf(stderr,"ticker=%s\n", ticker.c_str());
+            //qDebug() << "Ticker = " + ticker;
 
-            if (hush["usd"] >= 0) {
+            if (hush[ticker] >= 0) {
                 qDebug() << "Found hush key in price json";
-                // TODO: support BTC/EUR prices as well
                 //QString price = QString::fromStdString(hush["usd"].get<json::string_t>());
-                qDebug() << "HUSH = $" << QString::number((double)hush["usd"]);
-                qDebug() << "HUSH = " << QString::number((double)hush["btc"]) << " sat ";
-                Settings::getInstance()->setZECPrice( hush["usd"] );
-                Settings::getInstance()->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
+                qDebug() << "HUSH = $" << QString::number((double)hush["usd"]) << " USD";
+                qDebug() << "HUSH = " << QString::number((double)hush["eur"]) << " EUR";
+                qDebug() << "HUSH = " << QString::number((int) 100000000 * (double) hush["btc"]) << " sat ";
 
+                s->setZECPrice( hush[ticker] );
+                s->setBTCPrice( (unsigned int) 100000000 * (double)hush["btc"] );
+
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::tolower(c); });
+                qDebug() << "ticker=" << QString::fromStdString(ticker);
+                // TODO: work harder to prevent coredumps!
+                auto price = hush[ticker];
+                auto vol   = hush[ticker + "_24h_vol"];
+                auto mcap  = hush[ticker + "_market_cap"];
+
+                auto btcprice = hush["btc"];
+                auto btcvol   = hush["btc_24h_vol"];
+                auto btcmcap  = hush["btc_market_cap"];
+                s->set_price(ticker, price);
+                s->set_volume(ticker, vol);
+                s->set_volume("BTC", btcvol);
+                s->set_marketcap(ticker, mcap);
+
+                qDebug() << "Volume = " << (double) vol;
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                ui->volume->setText( QString::number((double) vol, 'f', 2) + " " + QString::fromStdString(ticker) );
+                ui->volumeBTC->setText( QString::number((double) btcvol, 'f', 2) + " BTC" );
+                std::for_each(ticker.begin(), ticker.end(), [](char & c){ c = ::toupper(c); });
+                // We don't get an actual HUSH volume stat, so we calculate it
+                if (price > 0)
+                    ui->volumeLocal->setText( QString::number((double) vol / (double) price) + " HUSH");
+
+                qDebug() << "Mcap = " << (double) mcap;
+                ui->marketcap->setText(  QString::number( (double) mcap, 'f', 2) + " " + QString::fromStdString(ticker) );
+                ui->marketcapBTC->setText( QString::number((double) btcmcap, 'f', 2) + " BTC" );
+                //ui->marketcapLocal->setText( QString::number((double) mcap * (double) price) + " " + QString::fromStdString(ticker) );
+
+                refresh(true);
                 return;
             } else {
                 qDebug() << "No hush key found in JSON! API might be down or we are rate-limited\n";
@@ -1150,7 +1200,7 @@ void RPC::refreshZECPrice() {
 }
 
 void RPC::shutdownZcashd() {
-    // Shutdown embedded zcashd if it was started
+    // Shutdown embedded hushd if it was started
     if (ezcashd == nullptr || ezcashd->processId() == 0 || conn == nullptr) {
         // No hushd running internally, just return
         return;
@@ -1179,7 +1229,7 @@ void RPC::shutdownZcashd() {
         if ((ezcashd->atEnd() && ezcashd->processId() == 0) ||
             ezcashd->state() == QProcess::NotRunning ||
             waitCount > 30 ||
-            conn->config->zcashDaemon)  {   // If zcashd is daemon, then we don't have to do anything else
+            conn->config->zcashDaemon)  {   // If hushd is daemon, then we don't have to do anything else
             qDebug() << "Ended";
             waiter.stop();
             QTimer::singleShot(1000, [&]() { d.accept(); });
@@ -1189,7 +1239,7 @@ void RPC::shutdownZcashd() {
     });
     waiter.start(1000);
 
-    // Wait for the zcash process to exit.
+    // Wait for the hush process to exit.
     if (!Settings::getInstance()->isHeadless()) {
         d.exec(); 
     } else {
