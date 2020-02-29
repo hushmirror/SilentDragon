@@ -124,7 +124,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setupReceiveTab();
     setupBalancesTab();
     setupMarketTab();
-    setupChatTab();
+    //setupChatTab();
     setupHushTab();
 
     rpc = new RPC(this);
@@ -1039,7 +1039,7 @@ void MainWindow::setupBalancesTab() {
 void MainWindow::setupHushTab() {
     ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
 }
-
+/*
 void MainWindow::setupChatTab() {
     qDebug() << __FUNCTION__;
     QList<QPair<QString,QString>> addressLabels = AddressBook::getInstance()->getAllAddressLabels();
@@ -1070,6 +1070,7 @@ void MainWindow::setupChatTab() {
     ui->contactsView->setModel(chatModel);
     ui->chatView->setModel( conversationModel );
 }
+*/
 
 void MainWindow::setupMarketTab() {
     qDebug() << "Setting up market tab";
