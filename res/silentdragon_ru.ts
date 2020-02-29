@@ -93,130 +93,130 @@
         <translation>Всего</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="217"/>
+        <location filename="../src/mainwindow.ui" line="215"/>
         <source>Some transactions are not yet confirmed</source>
         <translation>Некоторые транзакции еще не подтверждены</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="235"/>
+        <location filename="../src/mainwindow.ui" line="233"/>
         <source>Address Balances</source>
         <translation>Балансы по адресам</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="284"/>
-        <location filename="../src/mainwindow.ui" line="689"/>
+        <location filename="../src/mainwindow.ui" line="282"/>
+        <location filename="../src/mainwindow.ui" line="687"/>
         <source>Send</source>
         <translation>Отправить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="293"/>
+        <location filename="../src/mainwindow.ui" line="291"/>
         <source>From</source>
         <translation>Откуда</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="311"/>
+        <location filename="../src/mainwindow.ui" line="309"/>
         <source>Address Balance</source>
         <translation>Баланс адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="359"/>
+        <location filename="../src/mainwindow.ui" line="357"/>
         <source>Send To</source>
         <translation>Куда</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="398"/>
+        <location filename="../src/mainwindow.ui" line="396"/>
         <source>Recipient</source>
         <translation>Получатель</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="406"/>
-        <location filename="../src/mainwindow.ui" line="413"/>
-        <location filename="../src/mainwindow.ui" line="874"/>
+        <location filename="../src/mainwindow.ui" line="404"/>
+        <location filename="../src/mainwindow.ui" line="411"/>
+        <location filename="../src/mainwindow.ui" line="872"/>
         <location filename="../src/sendtab.cpp" line="219"/>
         <location filename="../src/sendtab.cpp" line="224"/>
         <source>Address</source>
         <translation>Адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="420"/>
+        <location filename="../src/mainwindow.ui" line="418"/>
         <location filename="../src/sendtab.cpp" line="234"/>
         <source>Address Book</source>
         <translation>Адресная книга</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="431"/>
-        <location filename="../src/mainwindow.ui" line="447"/>
+        <location filename="../src/mainwindow.ui" line="429"/>
+        <location filename="../src/mainwindow.ui" line="445"/>
         <location filename="../src/sendtab.cpp" line="247"/>
         <location filename="../src/sendtab.cpp" line="251"/>
         <source>Amount</source>
         <translation>Количество</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="461"/>
+        <location filename="../src/mainwindow.ui" line="459"/>
         <source>Max Available</source>
         <translation>Максимальное количество</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="487"/>
+        <location filename="../src/mainwindow.ui" line="485"/>
         <source>Upload File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="500"/>
-        <location filename="../src/mainwindow.cpp" line="991"/>
-        <location filename="../src/mainwindow.cpp" line="1058"/>
+        <location filename="../src/mainwindow.ui" line="498"/>
+        <location filename="../src/mainwindow.cpp" line="1092"/>
+        <location filename="../src/mainwindow.cpp" line="1159"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Метка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="548"/>
+        <location filename="../src/mainwindow.ui" line="546"/>
         <source>Add Recipient</source>
         <translation>Добавить получателя</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="592"/>
+        <location filename="../src/mainwindow.ui" line="590"/>
         <source>Recurring payment</source>
         <translation>Периодический платеж</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="599"/>
+        <location filename="../src/mainwindow.ui" line="597"/>
         <source>Every month, starting 12-May-2012, for 6 payments</source>
         <translation>Каждый месяц, начиная с 12-Май-2012, 6 платежей</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="606"/>
+        <location filename="../src/mainwindow.ui" line="604"/>
         <source>Edit Schedule</source>
         <translation>Изменить расписание</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="636"/>
+        <location filename="../src/mainwindow.ui" line="634"/>
         <location filename="../src/sendtab.cpp" line="640"/>
         <source>Miner Fee</source>
         <translation>Комиссия майнерам</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="649"/>
+        <location filename="../src/mainwindow.ui" line="647"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="705"/>
+        <location filename="../src/mainwindow.ui" line="703"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="715"/>
+        <location filename="../src/mainwindow.ui" line="713"/>
         <source>Receive</source>
         <translation>Получить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="723"/>
+        <location filename="../src/mainwindow.ui" line="721"/>
         <source>Address Type</source>
         <translation>Тип адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1028"/>
+        <location filename="../src/mainwindow.ui" line="1055"/>
         <source>hushd</source>
         <translation>hushd</translation>
     </message>
@@ -233,48 +233,48 @@
         <translation type="vanished">Запрос safecoin...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1645"/>
+        <location filename="../src/mainwindow.ui" line="1653"/>
         <source>Validate Address</source>
         <translation>Проверить адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="737"/>
+        <location filename="../src/mainwindow.ui" line="735"/>
         <source>Shielded Address (Private, Anonymous)</source>
         <translation>Экранированный адрес (приватный, анонимный)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="750"/>
+        <location filename="../src/mainwindow.ui" line="748"/>
         <source>Transparent Address (Public, Metadata-Leaking)</source>
         <translation>Прозрачный адрес (общедоступный, утечка метаданных)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="774"/>
+        <location filename="../src/mainwindow.ui" line="772"/>
         <source>New Address</source>
         <translation>Новый адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="799"/>
+        <location filename="../src/mainwindow.ui" line="797"/>
         <source>Label</source>
         <translation>Метка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="806"/>
+        <location filename="../src/mainwindow.ui" line="804"/>
         <source>Update Label</source>
         <translation>Обновить метку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="820"/>
+        <location filename="../src/mainwindow.ui" line="818"/>
         <source>Address balance</source>
         <translation>Баланс адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="830"/>
+        <location filename="../src/mainwindow.ui" line="828"/>
         <source>Optional</source>
         <translation>Необязательно</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="852"/>
-        <location filename="../src/mainwindow.cpp" line="1195"/>
+        <location filename="../src/mainwindow.ui" line="850"/>
+        <location filename="../src/mainwindow.cpp" line="1296"/>
         <source>Export Private Key</source>
         <translation>Экспорт приватного ключа</translation>
     </message>
@@ -283,306 +283,307 @@
         <translation type="vanished">Ваш узел все еще синхронизируется, баланс не может быть обновлен</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="781"/>
+        <location filename="../src/mainwindow.ui" line="779"/>
         <source>View All Addresses</source>
         <translation>Показать все адреса</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="922"/>
+        <location filename="../src/mainwindow.ui" line="920"/>
         <source>Transactions</source>
         <translation>Транзакции</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1058"/>
+        <location filename="../src/mainwindow.ui" line="1085"/>
         <source>You are currently not mining</source>
         <translation>Майнинг отключен</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="973"/>
-        <location filename="../src/mainwindow.ui" line="989"/>
+        <location filename="../src/mainwindow.ui" line="969"/>
+        <location filename="../src/mainwindow.ui" line="983"/>
+        <location filename="../src/mainwindow.ui" line="997"/>
         <location filename="../src/mainwindow.ui" line="1004"/>
         <location filename="../src/mainwindow.ui" line="1011"/>
-        <location filename="../src/mainwindow.ui" line="1018"/>
-        <location filename="../src/mainwindow.ui" line="1078"/>
-        <location filename="../src/mainwindow.ui" line="1100"/>
-        <location filename="../src/mainwindow.ui" line="1122"/>
-        <location filename="../src/mainwindow.ui" line="1144"/>
-        <location filename="../src/mainwindow.ui" line="1166"/>
+        <location filename="../src/mainwindow.ui" line="1105"/>
+        <location filename="../src/mainwindow.ui" line="1126"/>
+        <location filename="../src/mainwindow.ui" line="1147"/>
+        <location filename="../src/mainwindow.ui" line="1168"/>
         <location filename="../src/mainwindow.ui" line="1189"/>
-        <location filename="../src/mainwindow.ui" line="1212"/>
-        <location filename="../src/mainwindow.ui" line="1234"/>
-        <location filename="../src/mainwindow.ui" line="1257"/>
-        <location filename="../src/mainwindow.ui" line="1279"/>
-        <location filename="../src/mainwindow.ui" line="1301"/>
-        <location filename="../src/mainwindow.ui" line="1323"/>
-        <location filename="../src/mainwindow.ui" line="1345"/>
-        <location filename="../src/mainwindow.ui" line="1367"/>
-        <location filename="../src/mainwindow.ui" line="1389"/>
-        <location filename="../src/mainwindow.ui" line="1404"/>
-        <location filename="../src/mainwindow.ui" line="1425"/>
+        <location filename="../src/mainwindow.ui" line="1210"/>
+        <location filename="../src/mainwindow.ui" line="1231"/>
+        <location filename="../src/mainwindow.ui" line="1252"/>
+        <location filename="../src/mainwindow.ui" line="1273"/>
+        <location filename="../src/mainwindow.ui" line="1294"/>
+        <location filename="../src/mainwindow.ui" line="1315"/>
+        <location filename="../src/mainwindow.ui" line="1336"/>
+        <location filename="../src/mainwindow.ui" line="1357"/>
+        <location filename="../src/mainwindow.ui" line="1378"/>
+        <location filename="../src/mainwindow.ui" line="1399"/>
+        <location filename="../src/mainwindow.ui" line="1413"/>
+        <location filename="../src/mainwindow.ui" line="1434"/>
         <location filename="../src/mainwindow.cpp" line="791"/>
+        <location filename="../src/mainwindow.cpp" line="855"/>
         <source>Loading...</source>
         <translation>Загрузка...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1085"/>
+        <location filename="../src/mainwindow.ui" line="1112"/>
         <source>Block height</source>
         <translation>Высота блока</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1411"/>
+        <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Network solution rate</source>
         <translation>Скорость сети</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1418"/>
+        <location filename="../src/mainwindow.ui" line="1427"/>
         <source>Connections</source>
         <translation>Подключений</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1107"/>
-        <location filename="../src/mainwindow.ui" line="1129"/>
-        <location filename="../src/mainwindow.ui" line="1151"/>
-        <location filename="../src/mainwindow.ui" line="1173"/>
+        <location filename="../src/mainwindow.ui" line="1133"/>
+        <location filename="../src/mainwindow.ui" line="1154"/>
+        <location filename="../src/mainwindow.ui" line="1175"/>
         <location filename="../src/mainwindow.ui" line="1196"/>
-        <location filename="../src/mainwindow.ui" line="1219"/>
-        <location filename="../src/mainwindow.ui" line="1241"/>
-        <location filename="../src/mainwindow.ui" line="1264"/>
-        <location filename="../src/mainwindow.ui" line="1286"/>
-        <location filename="../src/mainwindow.ui" line="1308"/>
-        <location filename="../src/mainwindow.ui" line="1330"/>
-        <location filename="../src/mainwindow.ui" line="1352"/>
-        <location filename="../src/mainwindow.ui" line="1374"/>
-        <location filename="../src/mainwindow.ui" line="1396"/>
-        <location filename="../src/mainwindow.ui" line="1452"/>
-        <location filename="../src/mainwindow.ui" line="1459"/>
-        <location filename="../src/mainwindow.ui" line="1466"/>
+        <location filename="../src/mainwindow.ui" line="1217"/>
+        <location filename="../src/mainwindow.ui" line="1238"/>
+        <location filename="../src/mainwindow.ui" line="1259"/>
+        <location filename="../src/mainwindow.ui" line="1280"/>
+        <location filename="../src/mainwindow.ui" line="1301"/>
+        <location filename="../src/mainwindow.ui" line="1322"/>
+        <location filename="../src/mainwindow.ui" line="1343"/>
+        <location filename="../src/mainwindow.ui" line="1364"/>
+        <location filename="../src/mainwindow.ui" line="1385"/>
+        <location filename="../src/mainwindow.ui" line="1406"/>
+        <location filename="../src/mainwindow.ui" line="1461"/>
+        <location filename="../src/mainwindow.ui" line="1468"/>
+        <location filename="../src/mainwindow.ui" line="1475"/>
         <source>|</source>
         <translation>|</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="940"/>
+        <location filename="../src/mainwindow.ui" line="937"/>
         <source>Market</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="951"/>
+        <location filename="../src/mainwindow.ui" line="948"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="965"/>
+        <location filename="../src/mainwindow.ui" line="962"/>
         <source>Market Cap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="997"/>
+        <location filename="../src/mainwindow.ui" line="990"/>
         <source>24H Volume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1093"/>
+        <location filename="../src/mainwindow.ui" line="1119"/>
         <source>Notarized Hash</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1115"/>
+        <location filename="../src/mainwindow.ui" line="1140"/>
         <source>Notarized txid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1137"/>
+        <location filename="../src/mainwindow.ui" line="1161"/>
         <source>Notarized Lag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1159"/>
+        <location filename="../src/mainwindow.ui" line="1182"/>
         <source>KMD Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1182"/>
+        <location filename="../src/mainwindow.ui" line="1203"/>
         <source>Protocol Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1205"/>
+        <location filename="../src/mainwindow.ui" line="1224"/>
         <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1227"/>
+        <location filename="../src/mainwindow.ui" line="1245"/>
         <source>P2P Port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1250"/>
+        <location filename="../src/mainwindow.ui" line="1266"/>
         <source>RPC Port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1272"/>
+        <location filename="../src/mainwindow.ui" line="1287"/>
         <source>Client Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1294"/>
+        <location filename="../src/mainwindow.ui" line="1308"/>
         <source>Next Halving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1316"/>
+        <location filename="../src/mainwindow.ui" line="1329"/>
         <source>Local Services</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1338"/>
+        <location filename="../src/mainwindow.ui" line="1350"/>
         <source>Longest Chain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1360"/>
+        <location filename="../src/mainwindow.ui" line="1371"/>
         <source>Wallet Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1382"/>
+        <location filename="../src/mainwindow.ui" line="1392"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1493"/>
+        <location filename="../src/mainwindow.ui" line="1501"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1508"/>
+        <location filename="../src/mainwindow.ui" line="1516"/>
         <source>&amp;Help</source>
         <translation>&amp;Помощь</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1519"/>
+        <location filename="../src/mainwindow.ui" line="1527"/>
         <source>&amp;Apps</source>
         <translation>&amp;Дополнения</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1527"/>
+        <location filename="../src/mainwindow.ui" line="1535"/>
         <source>&amp;Edit</source>
         <translation>&amp;Редактировать</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1540"/>
+        <location filename="../src/mainwindow.ui" line="1548"/>
         <source>E&amp;xit</source>
         <translation>&amp;Выход</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1545"/>
+        <location filename="../src/mainwindow.ui" line="1553"/>
         <source>&amp;About</source>
         <translation>&amp;О кошельке</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1550"/>
+        <location filename="../src/mainwindow.ui" line="1558"/>
         <source>&amp;Report a bug on Github</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1555"/>
+        <location filename="../src/mainwindow.ui" line="1563"/>
         <source>&amp;Settings</source>
         <translation>&amp;Настройки</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1558"/>
+        <location filename="../src/mainwindow.ui" line="1566"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1563"/>
+        <location filename="../src/mainwindow.ui" line="1571"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Пожертвование для Duke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1568"/>
+        <location filename="../src/mainwindow.ui" line="1576"/>
         <source>&amp;Hush Discord</source>
         <translation>&amp;Hush Discord</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1573"/>
+        <location filename="../src/mainwindow.ui" line="1581"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Сайт Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1578"/>
+        <location filename="../src/mainwindow.ui" line="1586"/>
         <source>Check github.com for &amp;updates</source>
         <translation>&amp;Проверить github.com на обновления</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1583"/>
+        <location filename="../src/mainwindow.ui" line="1591"/>
         <source>Sapling &amp;turnstile</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1586"/>
+        <location filename="../src/mainwindow.ui" line="1594"/>
         <source>Ctrl+A, Ctrl+T</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1591"/>
+        <location filename="../src/mainwindow.ui" line="1599"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Импорт приватного ключа</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1596"/>
+        <location filename="../src/mainwindow.ui" line="1604"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Экспорт всех приватных ключей</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1601"/>
+        <location filename="../src/mainwindow.ui" line="1609"/>
         <source>&amp;z-board.net</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1604"/>
+        <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1609"/>
+        <location filename="../src/mainwindow.ui" line="1617"/>
         <source>Address &amp;book</source>
         <translation>&amp;Адресная книга</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1612"/>
+        <location filename="../src/mainwindow.ui" line="1620"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1617"/>
+        <location filename="../src/mainwindow.ui" line="1625"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Сохранить wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1622"/>
-        <location filename="../src/mainwindow.cpp" line="729"/>
+        <location filename="../src/mainwindow.ui" line="1630"/>
+        <location filename="../src/mainwindow.cpp" line="731"/>
         <source>Export transactions</source>
         <translation>Экспорт транзакций</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1627"/>
+        <location filename="../src/mainwindow.ui" line="1635"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1632"/>
+        <location filename="../src/mainwindow.ui" line="1640"/>
         <source>Connect mobile &amp;app</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1635"/>
+        <location filename="../src/mainwindow.ui" line="1643"/>
         <source>Ctrl+M</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1640"/>
+        <location filename="../src/mainwindow.ui" line="1648"/>
         <source>Request HUSH...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -595,32 +596,32 @@
         <translation type="vanished">Сообщить об ошибке...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="421"/>
+        <location filename="../src/mainwindow.cpp" line="423"/>
         <source>Enable Tor</source>
         <translation>Включить Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="422"/>
+        <location filename="../src/mainwindow.cpp" line="424"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Соединение через Tor было включено. Чтобы использовать эту функцию, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="431"/>
+        <location filename="../src/mainwindow.cpp" line="433"/>
         <source>Disable Tor</source>
         <translation>Отключить Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="432"/>
+        <location filename="../src/mainwindow.cpp" line="434"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Соединение через Tor было отключено. Чтобы полностью отключиться от Tor, вам нужно перезапустить SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="512"/>
+        <location filename="../src/mainwindow.cpp" line="514"/>
         <source>Some feedback about SilentDragon or Hush...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="514"/>
+        <location filename="../src/mainwindow.cpp" line="516"/>
         <source>Send Duke some private and shielded feedback about </source>
         <translation type="unfinished"></translation>
     </message>
@@ -633,17 +634,17 @@
         <translation type="vanished">Ключи были импортированы. Повторное сканирование блокчейна может занять несколько минут. До тех пор функциональность может быть ограничена</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="571"/>
+        <location filename="../src/mainwindow.cpp" line="573"/>
         <source>Private key import rescan finished</source>
         <translation>Повторное сканирование приватного ключа завершено</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="468"/>
+        <location filename="../src/mainwindow.cpp" line="470"/>
         <source>SilentDragon needs to restart to rescan/reindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation>SilentDragon необходимо перезапустить для повторного сканирования/переиндексации. Перезапустите SilentDragon, чтобы продолжить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="470"/>
+        <location filename="../src/mainwindow.cpp" line="472"/>
         <source>Restart SilentDragon</source>
         <translation>Перезапуск SilentDragon</translation>
     </message>
@@ -660,157 +661,164 @@
         <translation type="vanished">Ключи будут импортированы в ваш подключенный узел hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
+        <location filename="../src/mainwindow.cpp" line="310"/>
         <source>Theme Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
-        <location filename="../src/mainwindow.cpp" line="319"/>
+        <location filename="../src/mainwindow.cpp" line="310"/>
+        <location filename="../src/mainwindow.cpp" line="321"/>
         <source>This change can take a few seconds.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="319"/>
+        <location filename="../src/mainwindow.cpp" line="321"/>
         <source>Currency Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="636"/>
+        <location filename="../src/mainwindow.cpp" line="638"/>
         <source>Paste HUSH URI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="648"/>
+        <location filename="../src/mainwindow.cpp" line="650"/>
         <source>Error paying Hush URI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="649"/>
+        <location filename="../src/mainwindow.cpp" line="651"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="684"/>
+        <location filename="../src/mainwindow.cpp" line="686"/>
         <source>Please paste your private keys here, one per line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="685"/>
+        <location filename="../src/mainwindow.cpp" line="687"/>
         <source>The keys will be imported into your connected Hush node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="716"/>
+        <location filename="../src/mainwindow.cpp" line="718"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="735"/>
+        <location filename="../src/mainwindow.cpp" line="737"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="736"/>
+        <location filename="../src/mainwindow.cpp" line="738"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>Ошибка экспорта транзакций, файл не был сохранен</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="758"/>
+        <location filename="../src/mainwindow.cpp" line="760"/>
         <source>No wallet.dat</source>
         <translation>Нет wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="758"/>
+        <location filename="../src/mainwindow.cpp" line="760"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Не удалось найти wallet.dat на этом компьютере</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="759"/>
+        <location filename="../src/mainwindow.cpp" line="761"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Вы должны сделать резервную копию с машины, на которой работает hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="763"/>
+        <location filename="../src/mainwindow.cpp" line="765"/>
         <source>Backup wallet.dat</source>
         <translation>Сохранить wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="768"/>
+        <location filename="../src/mainwindow.cpp" line="770"/>
         <source>Couldn&apos;t backup</source>
         <translation>Не удалось сохранить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="768"/>
+        <location filename="../src/mainwindow.cpp" line="770"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>Не удалось сохранить файл wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="769"/>
+        <location filename="../src/mainwindow.cpp" line="771"/>
         <source>You need to back it up manually.</source>
         <translation>Вам нужно сделать резервную копию вручную.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="796"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Это все приватные ключи для всех адресов в вашем кошельке</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="798"/>
+        <location filename="../src/mainwindow.cpp" line="862"/>
         <source>Private key for </source>
         <translation>Приватный ключ для </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="806"/>
+        <location filename="../src/mainwindow.cpp" line="802"/>
+        <location filename="../src/mainwindow.cpp" line="870"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="810"/>
+        <location filename="../src/mainwindow.cpp" line="806"/>
+        <location filename="../src/mainwindow.cpp" line="874"/>
         <source>Unable to open file</source>
         <translation>Невозможно открыть файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="905"/>
-        <location filename="../src/mainwindow.cpp" line="1020"/>
+        <location filename="../src/mainwindow.cpp" line="968"/>
+        <location filename="../src/mainwindow.cpp" line="1121"/>
         <source>Copy address</source>
         <translation>Скопировать адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="908"/>
-        <location filename="../src/mainwindow.cpp" line="1016"/>
-        <location filename="../src/mainwindow.cpp" line="1022"/>
+        <location filename="../src/mainwindow.cpp" line="971"/>
+        <location filename="../src/mainwindow.cpp" line="1117"/>
+        <location filename="../src/mainwindow.cpp" line="1123"/>
         <source>Copied to clipboard</source>
         <translation>Скопировано в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="911"/>
+        <location filename="../src/mainwindow.cpp" line="974"/>
         <source>Get private key</source>
         <translation>Получить приватный ключ</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="926"/>
+        <location filename="../src/mainwindow.cpp" line="979"/>
+        <source>Get viewing key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="995"/>
         <source>Shield balance to Sapling</source>
         <translation>Shield balance to Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="931"/>
-        <location filename="../src/mainwindow.cpp" line="1026"/>
+        <location filename="../src/mainwindow.cpp" line="1000"/>
+        <location filename="../src/mainwindow.cpp" line="1127"/>
         <source>View on block explorer</source>
         <translation>Посмотреть в проводнике блоков</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="953"/>
+        <location filename="../src/mainwindow.cpp" line="1022"/>
         <source>Address Asset Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="959"/>
+        <location filename="../src/mainwindow.cpp" line="1028"/>
         <source>Convert Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1037"/>
+        <location filename="../src/mainwindow.cpp" line="1138"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
@@ -819,7 +827,7 @@
         <translation type="vanished">Migrate to Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1014"/>
+        <location filename="../src/mainwindow.cpp" line="1115"/>
         <source>Copy txid</source>
         <translation>Скопировать txid</translation>
     </message>
@@ -836,17 +844,17 @@
         <translation type="vanished">Обновить</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="346"/>
+        <location filename="../src/mainwindow.cpp" line="348"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Конфигурация Tor доступна только при работе со встроенным hushd.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="392"/>
+        <location filename="../src/mainwindow.cpp" line="394"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Вы используете внешний hushd. Пожалуйста, перезапустите hushd с -rescan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="395"/>
+        <location filename="../src/mainwindow.cpp" line="397"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Вы используете внешний hushd. Пожалуйста, перезапустите hushd с  -reindex</translation>
     </message>
@@ -923,17 +931,17 @@
         <translation type="vanished">Отправить для  OleksandrBlack благодарность за </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="514"/>
+        <location filename="../src/mainwindow.cpp" line="516"/>
         <source> or SilentDragon</source>
         <translation> или  SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="530"/>
+        <location filename="../src/mainwindow.cpp" line="532"/>
         <source>Enter Address to validate</source>
         <translation>Введите адрес для проверки</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="531"/>
+        <location filename="../src/mainwindow.cpp" line="533"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Прозрачный или экранированный адрес:</translation>
     </message>
@@ -954,37 +962,37 @@
         <translation type="vanished">Это может занять несколько минут. Загрузка...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1050"/>
+        <location filename="../src/mainwindow.cpp" line="1151"/>
         <source>View Payment Request</source>
         <translation>Посмотреть запрос на оплату</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1057"/>
+        <location filename="../src/mainwindow.cpp" line="1158"/>
         <source>View Memo</source>
         <translation>Посмотреть метку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1071"/>
+        <location filename="../src/mainwindow.cpp" line="1172"/>
         <source>Reply to </source>
         <translation>Ответить на </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1152"/>
+        <location filename="../src/mainwindow.cpp" line="1253"/>
         <source>Created new t-Addr</source>
         <translation>Создать новый  t-Addr (R)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1201"/>
+        <location filename="../src/mainwindow.cpp" line="1302"/>
         <source>Copy Address</source>
         <translation>Копировать адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1267"/>
+        <location filename="../src/mainwindow.cpp" line="1368"/>
         <source>Address has been previously used</source>
         <translation>Адрес был ранее использован</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1269"/>
+        <location filename="../src/mainwindow.cpp" line="1370"/>
         <source>Address is unused</source>
         <translation>Адрес не используется</translation>
     </message>
@@ -1072,12 +1080,27 @@ doesn&apos;t look like a z-address</source>
         <translation>Ошибка транзакции</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="712"/>
+        <location filename="../src/sendtab.cpp" line="717"/>
+        <source>Please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="718"/>
+        <source>Computing your transaction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="725"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="734"/>
+        <location filename="../src/sendtab.cpp" line="732"/>
+        <source>Done!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="763"/>
         <source>From Address is Invalid!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1086,17 +1109,17 @@ doesn&apos;t look like a z-address</source>
         <translation type="vanished">От адреса неверно</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="740"/>
+        <location filename="../src/sendtab.cpp" line="769"/>
         <source>Recipient Address </source>
         <translation>Адрес получателя </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="740"/>
+        <location filename="../src/sendtab.cpp" line="769"/>
         <source> is Invalid</source>
         <translation> является недействительным</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="746"/>
+        <location filename="../src/sendtab.cpp" line="775"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Количество &apos;%1&apos; является недействительным!</translation>
     </message>
@@ -1343,7 +1366,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="675"/>
+        <location filename="../src/rpc.cpp" line="680"/>
         <source>Downloading blocks</source>
         <translation>Загрузка блоков</translation>
     </message>
@@ -1352,52 +1375,52 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">Готово! Благодарим Вас за помощь в защите сети Hush, запустив полный узел.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="678"/>
+        <location filename="../src/rpc.cpp" line="683"/>
         <source>Block height</source>
         <translation>Высота блоков</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="698"/>
         <source>Syncing</source>
         <translation>Синхронизация</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="698"/>
         <source>Connected</source>
         <translation>Подключено</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="695"/>
+        <location filename="../src/rpc.cpp" line="700"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="705"/>
+        <location filename="../src/rpc.cpp" line="710"/>
         <source>Connected to hushd</source>
         <translation>Подключен к hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="708"/>
+        <location filename="../src/rpc.cpp" line="713"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="727"/>
+        <location filename="../src/rpc.cpp" line="732"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>При подключении к hushd произошла ошибка. Ошибка </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1021"/>
+        <location filename="../src/rpc.cpp" line="1026"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1213"/>
+        <location filename="../src/rpc.cpp" line="1218"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1214"/>
+        <location filename="../src/rpc.cpp" line="1219"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1414,22 +1437,22 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">не подтверждено</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="719"/>
+        <location filename="../src/sendtab.cpp" line="748"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="722"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source>The transaction with id </source>
         <translation>Транзакция с id </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="722"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> failed. The error was</source>
         <translation>не удалось. Ошибка </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="719"/>
+        <location filename="../src/sendtab.cpp" line="748"/>
         <source> failed</source>
         <translation> ошибка</translation>
     </message>
@@ -1446,12 +1469,12 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished"> tx вычисляется. Это может занять несколько минут.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1070"/>
+        <location filename="../src/rpc.cpp" line="1075"/>
         <source>Update Available</source>
         <translation>Доступно обновление</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1071"/>
+        <location filename="../src/rpc.cpp" line="1076"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1460,12 +1483,12 @@ Would you like to visit the releases page?</source>
 Хотели бы вы посетить страницу релизов?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1083"/>
+        <location filename="../src/rpc.cpp" line="1088"/>
         <source>No updates available</source>
         <translation>Нет доступных обновлений</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1084"/>
+        <location filename="../src/rpc.cpp" line="1089"/>
         <source>You already have the latest release v%1</source>
         <translation>У вас уже есть последняя версия v%1</translation>
     </message>
@@ -1497,13 +1520,13 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/connection.cpp" line="537"/>
-        <location filename="../src/rpc.cpp" line="727"/>
+        <location filename="../src/rpc.cpp" line="732"/>
         <source>Connection Error</source>
         <translation>Ошибка соединения</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="798"/>
-        <location filename="../src/sendtab.cpp" line="724"/>
+        <location filename="../src/sendtab.cpp" line="753"/>
         <source>Transaction Error</source>
         <translation>&quot;&gt;Ошибка транзакции</translation>
     </message>
@@ -1512,8 +1535,8 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">Произошла ошибка при отправке транзакции. Ошибка была:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="389"/>
-        <location filename="../src/rpc.cpp" line="391"/>
+        <location filename="../src/rpc.cpp" line="394"/>
+        <location filename="../src/rpc.cpp" line="396"/>
         <source>No Connection</source>
         <translation>Нет соединения</translation>
     </message>
@@ -2494,6 +2517,14 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <location filename="../src/viewalladdresses.cpp" line="6"/>
         <source>Balance (%1)</source>
         <translation>Баланс (%1)</translation>
+    </message>
+</context>
+<context>
+    <name>ViewKey</name>
+    <message>
+        <location filename="../src/viewkey.ui" line="14"/>
+        <source>Viewing Key</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
