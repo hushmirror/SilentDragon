@@ -1,3 +1,5 @@
+dist: trusty
+
 matrix:
   include:
     # works on Precise and Trusty
@@ -13,6 +15,7 @@ before_install:
  - sudo apt-get update -qq
  - sudo apt-get install qt59base qt59websockets 
  - source /opt/qt59/bin/qt59-env.sh
+ - chmod +x res/libsodium/buildlibsodium.sh
 
 script:
  - qmake -v
