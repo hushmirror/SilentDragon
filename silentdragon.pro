@@ -114,6 +114,7 @@ FORMS += \
 TRANSLATIONS = res/silentdragon_de.ts \
                res/silentdragon_es.ts \
                res/silentdragon_fi.ts \
+               res/silentdragon_fil.ts \
                res/silentdragon_fr.ts \
                res/silentdragon_hr.ts \
                res/silentdragon_id.ts \
