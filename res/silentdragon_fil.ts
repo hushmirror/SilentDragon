@@ -1434,12 +1434,12 @@ Would you like to visit the releases page?</source>
         <translation>Naka-konekta sa internet sa pamamagitan ng SilenDragon wormhole na serbisyo</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Ang node ay nagsi-sync pa.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Walang address na may sapat na balanse upang gastusin! Subukang ilagay ang mga pondo sa iisang address.</translation>
     </message>

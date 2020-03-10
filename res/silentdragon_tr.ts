@@ -1541,12 +1541,12 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
         <translation>SilentDragon&apos;un solucan deliği servisi aracılığıyla internet üzerinden bağlandı</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Düğüm hala senkronize oluyor.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Harcamaya yeterli bakiyeye sahip adres yok! Fonlarınızı tek bir adrese süpürmeyi deneyin</translation>
     </message>

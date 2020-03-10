@@ -1542,12 +1542,12 @@ El saldo es insuficiente para una migración automática.
         <translation>Conectado a través de Internet a través del servicio SilentDragon wormhole</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>El nodo aún se está sincronizando.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation type="unfinished"></translation>
     </message>

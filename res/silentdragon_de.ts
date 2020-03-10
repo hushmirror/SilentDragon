@@ -1591,12 +1591,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Über das Silentdragon Wurmloch zum Internet verbunden</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Ihr Node synchronisert noch</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1554,12 +1554,12 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
         <translation>Yhdistetty internetin kautta SilentDragon-madonreikäpalveluun</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Nodea synkronoidaan edelleen.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1437,12 +1437,12 @@ Would you like to visit the releases page?</source>
         <translation>Spojeno preko Interneta putem SilentDragon usluge crvotočine</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Čvor se još uvek sinhronizuje.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Ne možete trošiti jer nema adrese sa dovoljnim saldom. Pokušajte prebaciti sva sredstva na jednu adresu</translation>
     </message>

@@ -111,7 +111,8 @@ FORMS += \
     src/requestdialog.ui
 
 
-TRANSLATIONS = res/silentdragon_de.ts \
+TRANSLATIONS = res/silentdragon_bg.ts \
+               res/silentdragon_de.ts \
                res/silentdragon_es.ts \
                res/silentdragon_fi.ts \
                res/silentdragon_fil.ts \

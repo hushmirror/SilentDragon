@@ -1553,12 +1553,12 @@ Je hebt nog onbevestigde transacties of je saldo is te laag voor een automatisch
         <translation>Connectie via het internet via SilentDragon wormhole service</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Node is nog steeds aan het synchroniseren.</translation>
     </message>

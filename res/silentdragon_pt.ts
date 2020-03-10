@@ -1536,12 +1536,12 @@ Você possui fundos não confirmados ou o saldo é muito baixo para uma migraç�
         <translation>Conectado pela Internet através do serviço SilentDragon wormhole</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>O nó ainda está sincronizando.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation type="unfinished"></translation>
     </message>

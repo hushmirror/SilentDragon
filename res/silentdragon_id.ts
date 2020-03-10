@@ -1429,12 +1429,12 @@ Would you like to visit the releases page?</source>
         <translation>terhubung melalui internet melalui layanan SilentDragon Wormhole</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Masih menyikronkan node</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Tidak ada alamat dengan saldo yang cukup untuk dibelanjakan! Cobalah menyapu dana ke satu alamat</translation>
     </message>

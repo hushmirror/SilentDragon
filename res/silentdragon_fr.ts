@@ -1572,12 +1572,12 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
         <translation>Connecté sur Internet via le service SilentDragon Wormhole</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="743"/>
+        <location filename="../src/websockets.cpp" line="745"/>
         <source>Node is still syncing.</source>
         <translation>Le nœud est toujours en cours de synchronisation.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="765"/>
+        <location filename="../src/websockets.cpp" line="767"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Pas d&apos;adresses avec assez de fonds à dépenser! Essayez de réunir des fonds en une seule adresse</translation>
     </message>
