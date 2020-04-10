@@ -1366,12 +1366,12 @@ Would you like to visit the releases page?</source>
         <translation>Nasa iyo na ang pinakabagong release v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1218"/>
+        <location filename="../src/rpc.cpp" line="1221"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Mangyaring maging mas kalmado at hintayin ang SilentDragon na mag-exit</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1219"/>
+        <location filename="../src/rpc.cpp" line="1222"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Hinihintay ang hush na mag-exit, y&apos;all</translation>
     </message>

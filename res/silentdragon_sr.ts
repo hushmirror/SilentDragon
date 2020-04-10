@@ -1369,12 +1369,12 @@ Would you like to visit the releases page?</source>
         <translation>Već imate najnovije izdanje v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1218"/>
+        <location filename="../src/rpc.cpp" line="1221"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Molimo pokušajte se strpiti i pričekajte da se SilentDragon zatvori</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1219"/>
+        <location filename="../src/rpc.cpp" line="1222"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Pričekajte da hushd završi</translation>
     </message>

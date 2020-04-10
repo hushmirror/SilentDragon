@@ -1361,12 +1361,12 @@ Would you like to visit the releases page?</source>
         <translation>Anda telah menggunakan pembaruan terbaru v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1218"/>
+        <location filename="../src/rpc.cpp" line="1221"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Harap tingkatkan kesabaran dan tunggu SilentDragon keluar</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1219"/>
+        <location filename="../src/rpc.cpp" line="1222"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Menunggu Hushd Keluar</translation>
     </message>
