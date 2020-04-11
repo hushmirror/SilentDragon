@@ -129,7 +129,7 @@ TRANSLATIONS = res/silentdragon_bg.ts \
                res/silentdragon_zh.ts
 
 include(singleapplication/singleapplication.pri)
-DEFINES += QAPPLICATION_CLASS=QApplication
+DEFINES += QAPPLICATION_CLASS=QApplication _FORTIFY_SOURCE=2
 
 QMAKE_INFO_PLIST = res/Info.plist
 
