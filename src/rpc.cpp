@@ -1092,8 +1092,8 @@ void RPC::checkForUpdate(bool silent) {
                 } 
             }
         } catch (const std::exception& e) {
-            // If anything at all goes wrong, just set the price to 0 and move on.
-            qDebug() << QString("Caught something nasty: ") << e.what();
+            // If anything at all goes wrong, move on
+            qDebug() << QString("Exception checking for updates!");
         }
     });
 }
