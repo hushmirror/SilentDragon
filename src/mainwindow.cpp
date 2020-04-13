@@ -361,7 +361,6 @@ void MainWindow::setupSettingsModal() {
             settings.chkConso->setEnabled(false);      
         }
 
-
          //Use Deletetx
 
         bool isUsingDeletetx = false;
@@ -489,6 +488,7 @@ void MainWindow::setupSettingsModal() {
 
             // Check to see if rescan or reindex have been enabled
             bool showRestartInfo = false;
+            bool showReindexInfo = false;
             if (settings.chkRescan->isChecked()) {
                 Settings::addToZcashConf(zcashConfLocation, "rescan=1");
                 showRestartInfo = true;
@@ -531,7 +531,7 @@ void MainWindow::setupSettingsModal() {
                  if (settings.chkzindex->isChecked()) {
                  Settings::addToZcashConf(zcashConfLocation, "zindex=1");
                  Settings::addToZcashConf(zcashConfLocation, "reindex=1");
-                showRestartInfo = true;       
+                showReindexInfo = true;       
                 }
             }
 
@@ -539,12 +539,18 @@ void MainWindow::setupSettingsModal() {
                  if (settings.chkzindex->isChecked() == false) {
                  Settings::removeFromZcashConf(zcashConfLocation, "zindex");
                  Settings::addToZcashConf(zcashConfLocation, "reindex=1");
-                showRestartInfo = true;       
+                showReindexInfo = true;       
                  }
             }
         
             if (showRestartInfo) {
                 auto desc = tr("SilentDragon needs to restart to rescan,reindex,consolidation or deletetx. SilentDragon will now close, please restart SilentDragon to continue");
+
+                QMessageBox::information(this, tr("Restart SilentDragon"), desc, QMessageBox::Ok);
+                QTimer::singleShot(1, [=]() { this->close(); });
+            }
+            if (showReindexInfo) {
+                auto desc = tr("SilentDragon needs to reindex for zindex. SilentDragon will now close, please restart SilentDragon to continue");
 
                 QMessageBox::information(this, tr("Restart SilentDragon"), desc, QMessageBox::Ok);
                 QTimer::singleShot(1, [=]() { this->close(); });
