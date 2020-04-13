@@ -657,7 +657,6 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
     zcashconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
     zcashconf->zcashDaemon = false;
    
-
     Settings::getInstance()->setUsingZcashConf(confLocation);
 
     while (!in.atEnd()) {
@@ -716,12 +715,12 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::loadFromSettings() {
     auto host        = s.value("connection/host").toString();
     auto port        = s.value("connection/port").toString();
     auto username    = s.value("connection/rpcuser").toString();
-    auto password    = s.value("connection/rpcpassword").toString();  
+    auto password    = s.value("connection/rpcpassword").toString();
   
     if (username.isEmpty() || password.isEmpty())
         return nullptr;
 
-    auto uiConfig = new ConnectionConfig{ host, port, username, password, false, false,"","" "", "","","", ConnectionType::UISettingsZCashD};
+    auto uiConfig = new ConnectionConfig{ host, port, username, password, false, false,"","", "", "","", ConnectionType::UISettingsZCashD};
 
     return std::shared_ptr<ConnectionConfig>(uiConfig);
 }
