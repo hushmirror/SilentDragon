@@ -353,6 +353,15 @@ void MainWindow::setupSettingsModal() {
         //Use Consolidation
 
         bool isUsingConsolidation = false;
+        int size = 0;
+        QDir zcashdir(rpc->getConnection()->config->zcashDir);
+        QFile WalletSize(zcashdir.filePath("wallet.dat"));
+        if (WalletSize.open(QIODevice::ReadOnly)){
+        size = WalletSize.size() / 1000000;  //when file does open.
+        //QString size1 = QString::number(size) ;
+        settings.WalletSize->setText(QString::number(size));
+        WalletSize.close();
+        } 
         if (rpc->getConnection() != nullptr) {
             isUsingConsolidation = !rpc->getConnection()->config->consolidation.isEmpty() == true;
         }
