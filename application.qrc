@@ -13,12 +13,15 @@
         <file>res/logobig.gif</file>
     </qresource>
     <qresource prefix="/translations">
+        <file>res/silentdragon_bg.qm</file>
         <file>res/silentdragon_de.qm</file>
         <file>res/silentdragon_es.qm</file>
         <file>res/silentdragon_fi.qm</file>
+        <file>res/silentdragon_fil.qm</file>
         <file>res/silentdragon_fr.qm</file>
         <file>res/silentdragon_hr.qm</file>
         <file>res/silentdragon_it.qm</file>
+        <file>res/silentdragon_id.qm</file>
         <file>res/silentdragon_nl.qm</file>
         <file>res/silentdragon_pt.qm</file>
         <file>res/silentdragon_ru.qm</file>
