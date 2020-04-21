@@ -1218,6 +1218,10 @@ void RPC::shutdownZcashd() {
     Ui_ConnectionDialog connD;
     connD.setupUi(&d);
     //connD.topIcon->setBasePixmap(QIcon(":/icons/res/icon.ico").pixmap(256, 256));
+    QMovie *movie = new QMovie(":/img/res/silentdragon-animated.gif");
+    connD.topIcon->setMovie(movie);
+    movie->start();
+
     connD.status->setText(QObject::tr("Please enhance your calm and wait for SilentDragon to exit"));
     connD.statusDetail->setText(QObject::tr("Waiting for hushd to exit, y'all"));
 
