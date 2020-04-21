@@ -712,7 +712,7 @@ void MainWindow::sendButton() {
         auto connD = new Ui_ConnectionDialog();
         connD->setupUi(d);
         QPixmap logo(":/img/res/logobig.gif");
-        connD->topIcon->setBasePixmap(logo.scaled(256, 256, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        //connD->topIcon->setBasePixmap(logo.scaled(256, 256, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
         connD->status->setText(tr("Please wait..."));
         connD->statusDetail->setText(tr("Computing your transaction"));

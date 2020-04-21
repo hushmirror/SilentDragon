@@ -19,8 +19,10 @@ ConnectionLoader::ConnectionLoader(MainWindow* main, RPC* rpc) {
     d->setWindowFlags(d->windowFlags() & ~(Qt::WindowCloseButtonHint | Qt::WindowContextHelpButtonHint));
     connD = new Ui_ConnectionDialog();
     connD->setupUi(d);
-    QPixmap logo(":/img/res/logobig.gif");
-    connD->topIcon->setBasePixmap(logo.scaled(512, 512, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    QMovie *movie = new QMovie(":/img/res/silentdragon-animated.gif");
+    //QPixmap logo(":/img/res/silentdragon-animated.gif");
+    connD->topIcon->setMovie(movie);
+    movie->start();
     //main->logger->write("set topIcon");
 }
 

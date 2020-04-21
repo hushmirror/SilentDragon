@@ -1217,7 +1217,7 @@ void RPC::shutdownZcashd() {
     d.setWindowFlags(d.windowFlags() & ~(Qt::WindowCloseButtonHint | Qt::WindowContextHelpButtonHint));
     Ui_ConnectionDialog connD;
     connD.setupUi(&d);
-    connD.topIcon->setBasePixmap(QIcon(":/icons/res/icon.ico").pixmap(256, 256));
+    //connD.topIcon->setBasePixmap(QIcon(":/icons/res/icon.ico").pixmap(256, 256));
     connD.status->setText(QObject::tr("Please enhance your calm and wait for SilentDragon to exit"));
     connD.statusDetail->setText(QObject::tr("Waiting for hushd to exit, y'all"));
 
