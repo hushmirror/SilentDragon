@@ -19,8 +19,8 @@ ConnectionLoader::ConnectionLoader(MainWindow* main, RPC* rpc) {
     d->setWindowFlags(d->windowFlags() & ~(Qt::WindowCloseButtonHint | Qt::WindowContextHelpButtonHint));
     connD = new Ui_ConnectionDialog();
     connD->setupUi(d);
-    QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated.gif");;
-    QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
+    QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated-startup.gif");;
+    QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-startup-dark.gif");;
     auto theme = Settings::getInstance()->get_theme_name();
     if (theme == "dark") {
         movie2->setScaledSize(QSize(512,512));
