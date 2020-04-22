@@ -982,27 +982,27 @@ Lijkt niet op een z-adres</translation>
         <translation>Transactie Fout</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="717"/>
+        <location filename="../src/sendtab.cpp" line="730"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="718"/>
+        <location filename="../src/sendtab.cpp" line="731"/>
         <source>Computing your transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="725"/>
+        <location filename="../src/sendtab.cpp" line="738"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="732"/>
+        <location filename="../src/sendtab.cpp" line="745"/>
         <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="776"/>
         <source>From Address is Invalid!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1011,17 +1011,17 @@ Lijkt niet op een z-adres</translation>
         <translation type="vanished">Van Adres is Ongeldig</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="769"/>
+        <location filename="../src/sendtab.cpp" line="782"/>
         <source>Recipient Address </source>
         <translation>Ontvangers Adres </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="769"/>
+        <location filename="../src/sendtab.cpp" line="782"/>
         <source> is Invalid</source>
         <translation> is Ongeldig</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="775"/>
+        <location filename="../src/sendtab.cpp" line="788"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Bedrag &apos;%1&apos; is ongeldig!</translation>
     </message>
@@ -1125,27 +1125,27 @@ Lijkt niet op een z-adres</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/connection.cpp" line="48"/>
+        <location filename="../src/connection.cpp" line="61"/>
         <source>Attempting autoconnect</source>
         <translation>Probeerd verbinding te maken</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="57"/>
+        <location filename="../src/connection.cpp" line="70"/>
         <source>Starting embedded hushd</source>
         <translation>Starten van embedded hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="67"/>
+        <location filename="../src/connection.cpp" line="80"/>
         <source>hushd is set to run as daemon</source>
         <translation>hushd is ingesteld om als daemon te worden uitgevoerd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="67"/>
+        <location filename="../src/connection.cpp" line="80"/>
         <source>Waiting for hushd</source>
         <translation>Wachten op hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="82"/>
+        <location filename="../src/connection.cpp" line="95"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1170,7 +1170,7 @@ Se você iniciou hushd anteriormente com parâmetros customizados você pode pre
 Se ainda assim não der certo, por favor rode hushd manualmente.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="98"/>
+        <location filename="../src/connection.cpp" line="111"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1179,37 +1179,37 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Start embedded hushd niet omdat --no-embedded is doorgegeven</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="151"/>
+        <location filename="../src/connection.cpp" line="164"/>
         <source>Hide Advanced Config</source>
         <translation>Verberg geavanceerde configuratie</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="151"/>
+        <location filename="../src/connection.cpp" line="164"/>
         <source>Show Advanced Config</source>
         <translation>Geef geavanceerde configuratie weer</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="177"/>
         <source>Choose data directory</source>
         <translation>Kies gegevensmap</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="244"/>
+        <location filename="../src/connection.cpp" line="257"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Alle Downloads zijn succesvol afgerond!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="267"/>
+        <location filename="../src/connection.cpp" line="280"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Kan params niet downloaden. Raadpleeg de help-site voor meer info.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="90"/>
+        <location filename="../src/connection.cpp" line="103"/>
         <source>The process returned</source>
         <translation>Het proces keerde terug</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="87"/>
+        <location filename="../src/connection.cpp" line="100"/>
         <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
@@ -1226,38 +1226,38 @@ Als u eerder hushd met aangepaste argumenten bent gestart, moet u mogelijk HUSH3
 Als al het andere faalt, voer hushd dan handmatig uit.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="185"/>
+        <location filename="../src/connection.cpp" line="198"/>
         <source>Could not create HUSH3.conf.</source>
         <translation>Kon HUSH3.conf niet creëren.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="293"/>
-        <location filename="../src/connection.cpp" line="309"/>
+        <location filename="../src/connection.cpp" line="306"/>
+        <location filename="../src/connection.cpp" line="322"/>
         <source>Downloading </source>
         <translation>Downloaden </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="293"/>
+        <location filename="../src/connection.cpp" line="306"/>
         <source> more remaining )</source>
         <translation> Meer over )</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="294"/>
+        <location filename="../src/connection.cpp" line="307"/>
         <source>MB of </source>
         <translation>MB van </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="294"/>
+        <location filename="../src/connection.cpp" line="307"/>
         <source>MB at </source>
         <translation>MB om </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="520"/>
+        <location filename="../src/connection.cpp" line="533"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Dit kan enkele uren duren, pak wat popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="807"/>
+        <location filename="../src/connection.cpp" line="820"/>
         <source>There was an error! : </source>
         <translation>Er was een error! : </translation>
     </message>
@@ -1302,32 +1302,32 @@ Als al het andere faalt, voer hushd dan handmatig uit.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1221"/>
+        <location filename="../src/rpc.cpp" line="1235"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1222"/>
+        <location filename="../src/rpc.cpp" line="1236"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="748"/>
+        <location filename="../src/sendtab.cpp" line="761"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="751"/>
+        <location filename="../src/sendtab.cpp" line="764"/>
         <source>The transaction with id </source>
         <translation>De transactie met id </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="751"/>
+        <location filename="../src/sendtab.cpp" line="764"/>
         <source> failed. The error was</source>
         <translation> Mislukt. De fout was</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="748"/>
+        <location filename="../src/sendtab.cpp" line="761"/>
         <source> failed</source>
         <translation> Mislukt</translation>
     </message>
@@ -1377,17 +1377,17 @@ Wilt u de releasepagine bezoeken?</translation>
         <translation type="vanished">Wachtend op hushd om af te sluiten</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
+        <location filename="../src/connection.cpp" line="322"/>
         <source> failed. Please check the help site for more info</source>
         <translation> mislukt. Raadpleeg het help-tabblad voor meer info</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="333"/>
+        <location filename="../src/connection.cpp" line="346"/>
         <source>hushd error</source>
         <translation>Hushd fout</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="413"/>
+        <location filename="../src/connection.cpp" line="426"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1396,7 +1396,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Stel de host / poort en gebruiker / wachtwoord in het menu Bewerken-&gt; Instellingen in.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="425"/>
+        <location filename="../src/connection.cpp" line="438"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1405,24 +1405,24 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Stel de host / poort en gebruiker / wachtwoord in het menu Bewerken-&gt; Instellingen in.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="488"/>
+        <location filename="../src/connection.cpp" line="501"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Verificatie mislukt. De gebruikersnaam / wachtwoord dat u hebt opgegeven  is niet geaccepteerd door hushd. Probeer het te veranderen in het menu Bewerken-&gt; Instellingen</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="503"/>
+        <location filename="../src/connection.cpp" line="516"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>hushd is aan het opstarten. Even geduld AUB.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="537"/>
+        <location filename="../src/connection.cpp" line="550"/>
         <location filename="../src/rpc.cpp" line="732"/>
         <source>Connection Error</source>
         <translation>Connectie Fout</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="807"/>
-        <location filename="../src/sendtab.cpp" line="753"/>
+        <location filename="../src/connection.cpp" line="820"/>
+        <location filename="../src/sendtab.cpp" line="766"/>
         <source>Transaction Error</source>
         <translation>Transactie Fout</translation>
     </message>
