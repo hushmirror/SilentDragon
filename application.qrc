@@ -12,6 +12,7 @@
         <file>res/zcashdlogo.gif</file>
         <file>res/logobig.gif</file>
         <file>res/silentdragon-animated.gif</file>
+        <file>res/silentdragon-animated-dark.gif</file>
     </qresource>
     <qresource prefix="/translations">
         <file>res/silentdragon_bg.qm</file>

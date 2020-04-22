@@ -707,14 +707,23 @@ void MainWindow::sendButton() {
     // Show a dialog to confirm the Tx
     if (confirmTx(tx)) {
 
-          // Create a new Dialog to show that we are computing/sending the Tx
+        // Create a new Dialog to show that we are computing/sending the Tx
         auto d = new QDialog(this);
         auto connD = new Ui_ConnectionDialog();
         connD->setupUi(d);
-        QMovie *movie = new QMovie(":/img/res/silentdragon-animated.gif");
-        connD->topIcon->setMovie(movie);
-        movie->start();
 
+        QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated.gif");;
+        QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
+        auto theme = Settings::getInstance()->get_theme_name();
+        if (theme == "dark") {
+            movie2->setScaledSize(QSize(512,512));
+            connD->topIcon->setMovie(movie2);
+            movie2->start();
+        } else {
+            movie1->setScaledSize(QSize(512,512));
+            connD->topIcon->setMovie(movie1);
+            movie1->start();
+        }
 
         //connD->topIcon->setBasePixmap(logo.scaled(256, 256, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
