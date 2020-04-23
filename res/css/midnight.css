@@ -1,11 +1,12 @@
 /*
 Theme: Midnight Qt
-Version: 1.0.0
+Version: 1.0.1
+Reference: https://doc.qt.io/qt-5/stylesheet-reference.html
 
 Author: Charles Sharpe
 Date: Apr. 23, 2020
 Website: https://www.csharpe.me
-License: MIT license: http://opensource.org/licenses/MIT
+License: http://opensource.org/licenses/MIT
 */
 
 QWidget, QMainWindow, QMenuBar, QMenu, QDialog, QTabWidget, QTableView, QTableView::item, QScrollArea, QGroupBox, QPlainTextEdit, QLineEdit, QLabel, MainWindow
@@ -14,9 +15,39 @@ background-color: #111;
 color: #fff;
 }
 
+QPushButton {
+padding: 10px;
+}
+
+QPushButton:hover {
+background: #222;
+}
+
+QLineEdit, QRadioButton::indicator::unchecked, QCheckBox::indicator::unchecked {
+background: #333;
+border: 1px solid #000;
+border-radius: 3px;
+}
+
+QLineEdit {
+font-size: 12px;
+}
+
+QLineEdit:focus {
+border: 1px solid #9d8400;
+}
+
+QWidget QLabel {
+font-size: 11pt;
+}
+
+QWidget QCheckBox {
+font-weight: bold;
+}
+
 QTabWidget QTabBar::tab {
-min-height: 25px;
-padding: 15px 30px; /* TopBottom LeftRight */
+min-height: 15px;
+padding: 15px 25px; /* TopBottom LeftRight */
 border: 1px solid #222;
 background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, stop: 1 #111);
 }
