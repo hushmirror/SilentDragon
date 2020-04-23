@@ -6,7 +6,7 @@ Reference: https://doc.qt.io/qt-5/stylesheet-reference.html
 Author: Charles Sharpe
 Date: Apr. 23, 2020
 Website: https://www.csharpe.me
-License: http://opensource.org/licenses/MIT
+License: https://opensource.org/licenses/MIT
 */
 
 QWidget, QMainWindow, QMenuBar, QMenu, QDialog, QTabWidget, QTableView, QTableView::item, QScrollArea, QGroupBox, QPlainTextEdit, QLineEdit, QLabel, MainWindow
@@ -48,14 +48,16 @@ font-weight: bold;
 QTabWidget QTabBar::tab {
 min-height: 15px;
 padding: 15px 25px; /* TopBottom LeftRight */
-border: 1px solid #222;
+border: 1px ridge #222;
+left: 1px; /* Fix 1px alignment */
 background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, stop: 1 #111);
 }
 
 QTabWidget QTabBar::tab:selected {
 background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #555, stop: 1 #111);
 color:#fff;
-border: 1px ridge #000;
+border: 1px ridge #222;
+border-bottom: 0px; /* Overwrites border-bottom */
 }
 
 QTabWidget QTabBar::tab:hover {
@@ -72,14 +74,14 @@ background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, st
 color:#fff;
 min-height:25px;
 font-weight:bold;
-font-size:11px;
+font-size:12px;
 outline:0;
-border:1px solid #222;
+border:1px ridge #222;
 padding: 2px 5px; /* TopBottom LeftRight */
 }
 
 QHeaderView::section:last {
-border-right: 0px solid #222;
+border-right: 0px ridge #222;
 }
 
 QScrollArea {
