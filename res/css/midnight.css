@@ -1,0 +1,105 @@
+/*
+Theme: Midnight Qt
+Version: 1.0.0
+
+Author: Charles Sharpe
+Date: Apr. 23, 2020
+Website: https://www.csharpe.me
+License: MIT license: http://opensource.org/licenses/MIT
+*/
+
+QWidget, QMainWindow, QMenuBar, QMenu, QDialog, QTabWidget, QTableView, QTableView::item, QScrollArea, QGroupBox, QPlainTextEdit, QLineEdit, QLabel, MainWindow
+{
+background-color: #111;
+color: #fff;
+}
+
+QTabWidget QTabBar::tab {
+min-height: 25px;
+padding: 15px 30px; /* TopBottom LeftRight */
+border: 1px solid #222;
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, stop: 1 #111);
+}
+
+QTabWidget QTabBar::tab:selected {
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #555, stop: 1 #111);
+color:#fff;
+border: 1px ridge #000;
+}
+
+QTabWidget QTabBar::tab:hover {
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #555, stop: 1 #111);
+}
+
+QHeaderView { /* Table Header */
+background-color:#111;
+}
+
+QHeaderView::section { /* Table Header Sections */
+qproperty-alignment:center;
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, stop: 1 #111);
+color:#fff;
+min-height:25px;
+font-weight:bold;
+font-size:11px;
+outline:0;
+border:1px solid #222;
+padding: 2px 5px; /* TopBottom LeftRight */
+}
+
+QHeaderView::section:last {
+border-right: 0px solid #222;
+}
+
+QScrollArea {
+background:transparent;
+border:0px;
+}
+
+QTableView { /* Table - has to be selected as a class otherwise it throws off QCalendarWidget */
+background:#111;
+}
+
+QTableView::item { /* Table Item */
+background-color:#111;
+border:1px solid #222;
+font-size:12px;
+}
+
+QTableView::item:selected { /* Table Item Selected */
+background-color:#fff;
+color:#000;
+}
+
+QMenuBar {
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #222, stop: 1 #111);
+color: #fff;
+}
+
+QMenuBar::item {
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #222, stop: 1 #111);
+color: #fff;
+padding: 5px 7px;
+margin: 0px;
+}
+
+QMenuBar::item:selected {
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, stop: 1 #111);
+}
+
+QMenu {
+border:1px solid #222;
+}
+
+QMenu::item {
+padding: 7px 15px;
+}
+
+QMenu::item:selected {
+background: #222;
+}
+
+QMenu::separator {
+    height: 2px;
+    background: #222;
+}
