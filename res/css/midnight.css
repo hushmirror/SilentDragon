@@ -1,6 +1,6 @@
 /*
 Theme: Midnight Qt
-Version: 1.0.1
+Version: 1.0.2
 Reference: https://doc.qt.io/qt-5/stylesheet-reference.html
 
 Author: Charles Sharpe
@@ -16,7 +16,7 @@ color: #fff;
 }
 
 QPushButton {
-padding: 10px;
+padding: 10px 15px;
 }
 
 QPushButton:hover {
@@ -24,8 +24,8 @@ background: #222;
 }
 
 QLineEdit, QRadioButton::indicator::unchecked, QCheckBox::indicator::unchecked {
-background: #333;
-border: 1px solid #000;
+background: #222;
+border: 1px solid #333;
 border-radius: 3px;
 }
 
@@ -47,7 +47,7 @@ font-weight: bold;
 
 QTabWidget QTabBar::tab {
 min-height: 15px;
-padding: 15px 25px; /* TopBottom LeftRight */
+padding: 15px 25px;
 border: 1px ridge #222;
 left: 1px; /* Fix 1px alignment */
 background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #333, stop: 1 #111);
@@ -77,7 +77,7 @@ font-weight:bold;
 font-size:12px;
 outline:0;
 border:1px ridge #222;
-padding: 2px 5px; /* TopBottom LeftRight */
+padding: 2px 5px;
 }
 
 QHeaderView::section:last {
@@ -133,6 +133,7 @@ background: #222;
 }
 
 QMenu::separator {
-    height: 2px;
+    height: 1px;
+    margin: 3px 7px 3px 7px; /* space at ends of separator */
     background: #222;
 }
