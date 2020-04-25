@@ -18,13 +18,18 @@ if [ -z $HUSH_DIR ]; then
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/artifacts/komodod ]; then
-    echo "Couldn't find komodod in $HUSH_DIR/artifacts/. Please build komodod."
+if [ ! -f $HUSH_DIR/komodod ]; then
+    echo "Couldn't find komodod in $HUSH_DIR . Please build komodod."
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/artifacts/komodo-cli ]; then
-    echo "Couldn't find komodo-cli in $HUSH_DIR/artifacts/. Please build komodod."
+if [ ! -f $HUSH_DIR/komodo-cli ]; then
+    echo "Couldn't find komodo-cli in $HUSH_DIR . Please build komodo-cli."
+    exit 1;
+fi
+
+if [ ! -f $HUSH_DIR/komodo-tx ]; then
+    echo "Couldn't find komodo-tx in $HUSH_DIR . Please build komodo-tx."
     exit 1;
 fi
 
@@ -45,7 +50,7 @@ echo "[OK]"
 
 
 echo -n "Building..............."
-rm -rf bin/silentdragon* > /dev/null
+rm -rf silentdragon
 make clean > /dev/null
 ./build.sh release > /dev/null
 echo "[OK]"
