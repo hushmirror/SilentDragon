@@ -3,7 +3,6 @@
 # Thanks to Zecwallet for the original code
 # Released under the GPLv3
 
-#!/bin/bash
 if [ -z $QT_STATIC ]; then 
     echo "QT_STATIC is not set. Please set it to the base directory of a statically compiled Qt"; 
     exit 1; 
@@ -37,25 +36,6 @@ if [ ! -f $HUSH_DIR/komodo-tx ]; then
     exit 1;
 fi
 
-# Ensure that komodod is the right build
-#echo -n "komodod version........."
-#if grep -q "zqwMagicBean" $HUSH_DIR/artifacts/komodod && ! readelf -s $HUSH_DIR/artifacts/komodod | grep -q "GLIBC_2\.25"; then 
-#    echo "[OK]"
-#else
-#    echo "[ERROR]"
-##    echo "komodod doesn't seem to be a zqwMagicBean build or komodod is built with libc 2.25"
-#    exit 1
-#fi
-
-#echo -n "komodod.exe version....."
-#if grep -q "zqwMagicBean" $HUSH_DIR/artifacts/komodod.exe; then 
-#    echo "[OK]"
-#else
-#    echo "[ERROR]"
-#    echo "komodod doesn't seem to be a zqwMagicBean build"
-#    exit 1
-#fi
-
 #echo -n "Version files.........."
 ## Replace the version number in the .pro file so it gets picked up everywhere
 #sed -i "s/${PREV_VERSION}/${APP_VERSION}/g" silentdragon.pro > /dev/null
@@ -69,8 +49,6 @@ rm -rf bin/*
 #rm -rf artifacts/*
 make distclean >/dev/null 2>&1
 echo "[OK]"
-
-echo ""
 echo "[Building on" `lsb_release -r`"]"
 
 echo -n "Configuring............"
@@ -80,31 +58,30 @@ echo "[OK]"
 
 
 echo -n "Building..............."
-rm -rf bin/silentdragon* > /dev/null
+rm -rf bin/silentdragon* bin/SilentDragon* > /dev/null
 make clean > /dev/null
 PATH=$QT_STATIC/bin:$PATH ./build.sh release > /dev/null
 echo "[OK]"
 
-
 # Test for Qt
 echo -n "Static link............"
 if [[ $(ldd silentdragon | grep -i "Qt") ]]; then
-    echo "FOUND QT; ABORT"; 
+    echo "FOUND QT dynamicly linked in binary, aborting!";
     exit 1
 fi
 echo "[OK]"
-
-
 
 #TODO: support armv8
 OS=linux
 ARCH=x86_64
 RELEASEDIR=SilentDragon-v$APP_VERSION
-RELEASEFILE=$RELEASEDIR-$OS-$ARCH.tar.gz
+RELEASEFILE1=$RELEASEDIR-$OS-$ARCH-no-params.tar.gz
+RELEASEFILE2=$RELEASEDIR-$OS-$ARCH.tar.gz
 
 # this is equal to the number of files we package plus 1, for the directory
 # that is created
-NUM_FILES=10
+NUM_FILES1=10
+NUM_FILES2=12 # 2 additional param files
 
 echo "Packaging.............."
 mkdir bin/$RELEASEDIR
@@ -125,33 +102,69 @@ cp README.md                     bin/$RELEASEDIR > /dev/null
 cp LICENSE                       bin/$RELEASEDIR > /dev/null
 
 
-cd bin && tar czf $RELEASEFILE $RELEASEDIR/ #> /dev/null
-echo "Created $RELEASEFILE"
+cd bin && tar czf $RELEASEFILE1 $RELEASEDIR/ #> /dev/null
+#ls -la $RELEASEDIR/
+echo "Created $RELEASEFILE1   [OK]"
+cd ..
+
+# Now copy params in so we can make another zip with params
+# for first-time users
+#ls -la *.params
+# This assumes we have these 2 files symlinked to where they live in hush3.git
+# or copied to this dir
+cp -Lp sapling-*.params bin/$RELEASEDIR/
+if [ $? -eq 0 ]; then
+    echo "[OK] Copied Sapling params"
+else
+    echo "[ERROR] Failed to copy Sapling params!"
+    exit 1
+fi
+
+cd bin && tar czf $RELEASEFILE2 $RELEASEDIR/
+#ls -la $RELEASEDIR/
+echo "Created $RELEASEFILE2   [OK]"
 cd .. 
 
 #mkdir artifacts >/dev/null 2>&1
 #cp bin/linux-silentdragon-v$APP_VERSION.tar.gz ./artifacts/linux-binaries-silentdragon-v$APP_VERSION.tar.gz
-echo "[OK]"
 
-
-if [ -f bin/$RELEASEFILE ] ; then
-    echo -n "Package contents......."
+if [ -f bin/$RELEASEFILE1 ] ; then
+    echo -n "Package contents for $RELEASEFILE1 ......."
     # Test if the package is built OK
-    if tar tf "bin/$RELEASEFILE" | wc -l | grep -q "$NUM_FILES"; then
-        echo "[OK]"
+    if tar tf "bin/$RELEASEFILE1" | wc -l | grep -q "$NUM_FILES1"; then
+        echo "[OK] $RELEASEFILE1 has correct number of files"
     else
-        echo "[ERROR] Wrong number of files in release!"
+        echo "[ERROR] Wrong number of files in $RELEASEFILE1 ! Should be $NUM_FILES1"
         exit 1
-    fi    
+    fi
 else
-    echo "[ERROR]"
+    echo "[ERROR] bin/$RELEASEFILE1 does not exist!"
     exit 1
 fi
 
-echo "DONEZO! Created bin/$RELEASEFILE"
-sha256sum bin/$RELEASEFILE
+if [ -f bin/$RELEASEFILE2 ] ; then
+    echo -n "Package contents for $RELEASEFILE2 ......."
+    # Test if the package is built OK
+    if tar tf "bin/$RELEASEFILE2" | wc -l | grep -q "$NUM_FILES2"; then
+        echo "[OK] $RELEASEFILE2 has correct number of files"
+    else
+        echo "[ERROR] Wrong number of files in $RELEASEFILE2 ! Should be $NUM_FILES2"
+        exit 1
+    fi    
+else
+    echo "[ERROR] bin/$RELEASEFILE2 does not exist!"
+    exit 1
+fi
+
+cd bin
+echo "DONE! Checksums:"
+sha256sum $RELEASEFILE1
+sha256sum $RELEASEFILE2
+cd ..
+echo "Speak And Transact Freely!"
 
 exit
+
 echo "Skipping deb, use make-deb.sh instead"
 
 echo -n "Building deb..........."
