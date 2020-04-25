@@ -1,24 +1,39 @@
 #!/bin/bash
+# Copyright (c) 2019-2020 The Hush developers
+# Thanks to Zecwallet for the original code
+# Released under the GPLv3
+
+#!/bin/bash
 if [ -z $QT_STATIC ]; then 
     echo "QT_STATIC is not set. Please set it to the base directory of a statically compiled Qt"; 
     exit 1; 
 fi
 
 if [ -z $APP_VERSION ]; then echo "APP_VERSION is not set"; exit 1; fi
-if [ -z $PREV_VERSION ]; then echo "PREV_VERSION is not set"; exit 1; fi
+#if [ -z $PREV_VERSION ]; then echo "PREV_VERSION is not set"; exit 1; fi
 
 if [ -z $HUSH_DIR ]; then
-    echo "HUSH_DIR is not set. Please set it to the base directory of a Zcash project with built Zcash binaries."
+    echo "HUSH_DIR is not set. Please set it to the base directory of a Hush project with built Hush binaries."
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/artifacts/komodod ]; then
-    echo "Couldn't find komodod in $HUSH_DIR/artifacts/. Please build komodod."
+if [ -z $HUSH_DIR ]; then
+    echo "HUSH_DIR is not set. Please set it to the base directory of hush3.git"
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/artifacts/hush-cli ]; then
-    echo "Couldn't find hush-cli in $HUSH_DIR/artifacts/. Please build komodod."
+if [ ! -f $HUSH_DIR/komodod ]; then
+    echo "Couldn't find komodod in $HUSH_DIR . Please build komodod."
+    exit 1;
+fi
+
+if [ ! -f $HUSH_DIR/komodo-cli ]; then
+    echo "Couldn't find komodo-cli in $HUSH_DIR . Please build komodo-cli."
+    exit 1;
+fi
+
+if [ ! -f $HUSH_DIR/komodo-tx ]; then
+    echo "Couldn't find komodo-tx in $HUSH_DIR . Please build komodo-tx."
     exit 1;
 fi
 
@@ -41,17 +56,17 @@ fi
 #    exit 1
 #fi
 
-echo -n "Version files.........."
-# Replace the version number in the .pro file so it gets picked up everywhere
-sed -i "s/${PREV_VERSION}/${APP_VERSION}/g" silentdragon.pro > /dev/null
-
-# Also update it in the README.md
-sed -i "s/${PREV_VERSION}/${APP_VERSION}/g" README.md > /dev/null
-echo "[OK]"
+#echo -n "Version files.........."
+## Replace the version number in the .pro file so it gets picked up everywhere
+#sed -i "s/${PREV_VERSION}/${APP_VERSION}/g" silentdragon.pro > /dev/null
+#
+## Also update it in the README.md
+#sed -i "s/${PREV_VERSION}/${APP_VERSION}/g" README.md > /dev/null
+#echo "[OK]"
 
 echo -n "Cleaning..............."
 rm -rf bin/*
-rm -rf artifacts/*
+#rm -rf artifacts/*
 make distclean >/dev/null 2>&1
 echo "[OK]"
 
@@ -67,7 +82,7 @@ echo "[OK]"
 echo -n "Building..............."
 rm -rf bin/silentdragon* > /dev/null
 make clean > /dev/null
-./build.sh release > /dev/null
+PATH=$QT_STATIC/bin:$PATH ./build.sh release > /dev/null
 echo "[OK]"
 
 
@@ -80,41 +95,64 @@ fi
 echo "[OK]"
 
 
-echo -n "Packaging.............."
-mkdir bin/silentdragon-v$APP_VERSION > /dev/null
+
+#TODO: support armv8
+OS=linux
+ARCH=x86_64
+RELEASEDIR=SilentDragon-v$APP_VERSION
+RELEASEFILE=$RELEASEDIR-$OS-$ARCH.tar.gz
+
+# this is equal to the number of files we package plus 1, for the directory
+# that is created
+NUM_FILES=10
+
+echo "Packaging.............."
+mkdir bin/$RELEASEDIR
+echo "Created bin/$RELEASEDIR"
+ls -la silentdragon
+echo "Stripping............."
 strip silentdragon
+ls -la silentdragon
 
-cp silentdragon                  bin/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/komodod    bin/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/komodo-cli bin/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/komodo-tx bin/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/hushd    bin/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/hush-cli bin/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/hush-tx bin/silentdragon-v$APP_VERSION > /dev/null
-cp README.md                      bin/silentdragon-v$APP_VERSION > /dev/null
-cp LICENSE                        bin/silentdragon-v$APP_VERSION > /dev/null
+cp silentdragon                  bin/$RELEASEDIR > /dev/null
+cp $HUSH_DIR/komodod    	 bin/$RELEASEDIR > /dev/null
+cp $HUSH_DIR/komodo-cli          bin/$RELEASEDIR > /dev/null
+cp $HUSH_DIR/komodo-tx           bin/$RELEASEDIR > /dev/null
+cp $HUSH_DIR/hushd               bin/$RELEASEDIR > /dev/null
+cp $HUSH_DIR/hush-cli            bin/$RELEASEDIR > /dev/null
+cp $HUSH_DIR/hush-tx             bin/$RELEASEDIR > /dev/null
+cp README.md                     bin/$RELEASEDIR > /dev/null
+cp LICENSE                       bin/$RELEASEDIR > /dev/null
 
-cd bin && tar czf linux-silentdragon-v$APP_VERSION.tar.gz silentdragon-v$APP_VERSION/ > /dev/null
+
+cd bin && tar czf $RELEASEFILE $RELEASEDIR/ #> /dev/null
+echo "Created $RELEASEFILE"
 cd .. 
 
-mkdir artifacts >/dev/null 2>&1
-cp bin/linux-silentdragon-v$APP_VERSION.tar.gz ./artifacts/linux-binaries-silentdragon-v$APP_VERSION.tar.gz
+#mkdir artifacts >/dev/null 2>&1
+#cp bin/linux-silentdragon-v$APP_VERSION.tar.gz ./artifacts/linux-binaries-silentdragon-v$APP_VERSION.tar.gz
 echo "[OK]"
 
 
-if [ -f artifacts/linux-binaries-silentdragon-v$APP_VERSION.tar.gz ] ; then
+if [ -f bin/$RELEASEFILE ] ; then
     echo -n "Package contents......."
     # Test if the package is built OK
-    if tar tf "artifacts/linux-binaries-silentdragon-v$APP_VERSION.tar.gz" | wc -l | grep -q "6"; then 
+    if tar tf "bin/$RELEASEFILE" | wc -l | grep -q "$NUM_FILES"; then
         echo "[OK]"
     else
-        echo "[ERROR]"
+        echo "[ERROR] Wrong number of files in release!"
         exit 1
     fi    
 else
     echo "[ERROR]"
     exit 1
 fi
+
+echo "DONEZO! Created bin/$RELEASEFILE"
+sha256sum bin/$RELEASEFILE
+
+exit
+echo "Skipping deb, use make-deb.sh instead"
 
 echo -n "Building deb..........."
 debdir=bin/deb/silentdragon-v$APP_VERSION
@@ -139,6 +177,8 @@ cp $debdir.deb                 artifacts/linux-deb-silentdragon-v$APP_VERSION.de
 echo "[OK]"
 
 
+echo "Skipping windows"
+exit
 
 echo ""
 echo "[Windows]"
