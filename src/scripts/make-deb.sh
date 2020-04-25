@@ -1,5 +1,6 @@
 #!/bin/bash
 # Copyright (c) 2019-2020 The Hush developers
+# Thanks to Zecwallet for the original code
 # Released under the GPLv3
 
 DEBLOG=deb.log.$$
