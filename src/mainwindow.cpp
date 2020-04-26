@@ -304,7 +304,6 @@ void MainWindow::setupSettingsModal() {
         int theme_index = settings.comboBoxTheme->findText(Settings::getInstance()->get_theme_name(), Qt::MatchExactly);
         settings.comboBoxTheme->setCurrentIndex(theme_index);
 
-        QObject::connect(settings.comboBoxTheme, SIGNAL(currentIndexChanged(QString)), this, SLOT(slot_change_theme(QString)));
         QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
             this->slot_change_theme(theme_name);
             QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
@@ -314,7 +313,6 @@ void MainWindow::setupSettingsModal() {
         QString ticker = QString::fromStdString( Settings::getInstance()->get_currency_name() );
         int currency_index = settings.comboBoxCurrency->findText(ticker, Qt::MatchExactly);
         settings.comboBoxCurrency->setCurrentIndex(currency_index);
-        QObject::connect(settings.comboBoxCurrency, SIGNAL(currentIndexChanged(QString)), this, SLOT(slot_change_currency(QString)));
         QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString ticker) {
             this->slot_change_currency(ticker.toStdString());
             rpc->refresh(true);
@@ -367,7 +365,7 @@ void MainWindow::setupSettingsModal() {
         }
         settings.chkConso->setChecked(isUsingConsolidation);
         if (rpc->getEZcashD() == nullptr) {
-            settings.chkConso->setEnabled(false);      
+            settings.chkConso->setEnabled(false);
         }
 
          //Use Deletetx
@@ -378,7 +376,7 @@ void MainWindow::setupSettingsModal() {
         }
         settings.chkDeletetx->setChecked(isUsingDeletetx);
         if (rpc->getEZcashD() == nullptr) {
-            settings.chkDeletetx->setEnabled(false);      
+            settings.chkDeletetx->setEnabled(false);
         }
 
           //Use Zindex
@@ -532,7 +530,7 @@ void MainWindow::setupSettingsModal() {
              if (!rpc->getConnection()->config->deletetx.isEmpty()) {
                  if (settings.chkDeletetx->isChecked() == false) {
                  Settings::removeFromZcashConf(zcashConfLocation, "deletetx");
-                showRestartInfo = true;       
+                showRestartInfo = true;
                  }
             }
     
