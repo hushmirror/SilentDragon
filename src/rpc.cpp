@@ -1222,7 +1222,7 @@ void RPC::shutdownZcashd() {
     QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated.gif");;
     QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
     auto theme = Settings::getInstance()->get_theme_name();
-    if (theme == "dark" || "midnight") {
+    if (theme == "dark" || theme == "midnight") {
         movie2->setScaledSize(QSize(512,512));
         connD.topIcon->setMovie(movie2);
         movie2->start();
