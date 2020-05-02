@@ -1102,14 +1102,6 @@ doesn&apos;t look like a z-address</source>
         <source>Unmigrated Amount</source>
         <translation type="vanished">未迁移金额</translation>
     </message>
-    <message>
-        <source>Sprout -&gt; Sapling migration enabled</source>
-        <translation type="vanished">Sprout  -&gt;Sapling 启用迁移</translation>
-    </message>
-    <message>
-        <source>If enabled, hushd will slowly migrate your Sprout shielded funds to your Sapling address. </source>
-        <translation type="vanished">如果启用，hushd将慢慢将您的Sprout屏蔽资金迁移到您的Sapling地址。 </translation>
-    </message>
 </context>
 <context>
     <name>MigrationTxns</name>
@@ -2199,147 +2191,152 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="464"/>
+        <location filename="../src/settings.ui" line="435"/>
+        <source>midnight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="469"/>
         <source>Connect via Tor</source>
         <translation>通过Tor连接</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="471"/>
+        <location filename="../src/settings.ui" line="476"/>
         <source>Check github for updates at startup</source>
         <translation>启动时检查github更新</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="485"/>
+        <location filename="../src/settings.ui" line="490"/>
         <source>Remember shielded transactions</source>
         <translation>记住隐蔽交易</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="492"/>
+        <location filename="../src/settings.ui" line="497"/>
         <source>Normally, change from t-Addresses goes to another t-Address. Checking this option will send the change to your shielded sapling address instead. Check this option to increase your privacy.</source>
         <translation>通常，从t-Addresses发送到另一个t-Address。 选中此选项会将更改发送到屏蔽的树苗地址。 选中此选项可增加隐私。</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="502"/>
+        <location filename="../src/settings.ui" line="507"/>
         <source>Allow overriding the default fees when sending transactions. Enabling this option may compromise your privacy since fees are transparent. </source>
         <translation>允许在发送交易时覆盖默认费用。由于费用是透明的，因此启用此选项可能会损害您的隐私。 </translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="512"/>
+        <location filename="../src/settings.ui" line="517"/>
         <source>Clear History</source>
         <translation>清空历史屏蔽交易</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="519"/>
+        <location filename="../src/settings.ui" line="524"/>
         <source>Shielded transactions are saved locally and shown in the transactions tab.  If you uncheck this, shielded transactions will not appear in the transactions tab.</source>
         <translation>屏蔽交易在本地保存并显示在交易“选项”卡中。 如果取消选中此项，屏蔽的交易将不会显示在“交易”选项卡中。</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="529"/>
+        <location filename="../src/settings.ui" line="534"/>
         <source>Allow custom fees</source>
         <translation>允许自定义费用</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="536"/>
+        <location filename="../src/settings.ui" line="541"/>
         <source>Shield change from t-Addresses to your sapling address</source>
         <translation>屏蔽改变从t-Addresses到您的树苗地址</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="543"/>
+        <location filename="../src/settings.ui" line="548"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
         <translation>通过运行在127.0.0.1:9050上的SOCKS代理连接到Tor网络。 请注意，您必须在外部安装和运行Tor服务。</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="553"/>
+        <location filename="../src/settings.ui" line="558"/>
         <source>Connect to github on startup to check for updates</source>
         <translation>在启动时连接到github以检查更新</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="560"/>
+        <location filename="../src/settings.ui" line="565"/>
         <source>Connect to the internet to fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="567"/>
+        <location filename="../src/settings.ui" line="572"/>
         <source>Fetch HUSH prices</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="575"/>
+        <location filename="../src/settings.ui" line="580"/>
         <source>Explorer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="587"/>
+        <location filename="../src/settings.ui" line="592"/>
         <source>Tx Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="626"/>
+        <location filename="../src/settings.ui" line="631"/>
         <source>Address Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="652"/>
+        <location filename="../src/settings.ui" line="657"/>
         <source>Testnet Tx Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="678"/>
+        <location filename="../src/settings.ui" line="683"/>
         <source>Testnet Address Explorer URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="722"/>
+        <location filename="../src/settings.ui" line="727"/>
         <source>Rescan the blockchain for any missing wallet transactions and to correct your wallet balance. This may take several hours. You need to restart SilentDragon for this to take effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="777"/>
+        <location filename="../src/settings.ui" line="782"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="819"/>
+        <location filename="../src/settings.ui" line="824"/>
         <source>This code can greatly reduce the size of wallets and increase performance for service providers. It&apos;s designed mostly for exchanges and mining pools but anybody with a large wallet will benefit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="835"/>
+        <location filename="../src/settings.ui" line="840"/>
         <source>Enable Old Transaction Deletion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="864"/>
+        <location filename="../src/settings.ui" line="869"/>
         <source>Consolidation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="877"/>
+        <location filename="../src/settings.ui" line="882"/>
         <source>Deletetx</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="903"/>
+        <location filename="../src/settings.ui" line="908"/>
         <source>The new experimental Shielded Index (-zindex) which keeps track of many stats that can be seen via the new getchaintxstats RPC. These include shielded payments, anonymity set size and many other things.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="919"/>
+        <location filename="../src/settings.ui" line="924"/>
         <source>Zindex </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="932"/>
+        <location filename="../src/settings.ui" line="937"/>
         <source>100</source>
         <translation type="unfinished">100</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="945"/>
+        <location filename="../src/settings.ui" line="950"/>
         <source>Wallet.dat Size :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="958"/>
+        <location filename="../src/settings.ui" line="963"/>
         <source>MB</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2352,12 +2349,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="vanished">获取 ZEC/USD 价格</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="697"/>
+        <location filename="../src/settings.ui" line="702"/>
         <source>Troubleshooting</source>
         <translation>故障排除</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="709"/>
+        <location filename="../src/settings.ui" line="714"/>
         <source>Reindex</source>
         <translation>重建索引</translation>
     </message>
@@ -2366,7 +2363,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="vanished">重新扫描区块链以查找任何丢失的钱包交易并更正您的钱包余额。 这可能需要几个小时。 您需要重新启动SlientDragon才能使其生效</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="738"/>
+        <location filename="../src/settings.ui" line="743"/>
         <source>Rescan</source>
         <translation>重新扫描</translation>
     </message>
@@ -2388,10 +2385,6 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <source>From</source>
         <translation type="vanished">从</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funds from Sprout z-Addresses (which start with &amp;quot;zc&amp;quot;) need to be moved to the upgraded Sapling z-Addresses (which start with &amp;quot;zs&amp;quot;). The funds cannot be moved directly, but need to be sent through intermediate &amp;quot;transparent&amp;quot; addresses in privacy-preserving way.&lt;/p&gt;&lt;p&gt;This migration can be done automatically for you.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;来自Sprout z-Addresses（以“zc”开头）的资金需要被移动到升级的Sapling z-Addresses（以“zs”开头）。 资金不能直接转移，但需要以隐私保护的方式通过中间透明地址发送。&lt;/p&gt;&lt;p&gt;此迁移可以自动完成。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>To</source>
