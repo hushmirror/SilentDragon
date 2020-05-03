@@ -279,10 +279,6 @@
         <translation type="vanished">t-Adresse</translation>
     </message>
     <message>
-        <source>z-Addr(Sprout)</source>
-        <translation type="vanished">z-Adresse(Sprout)</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="772"/>
         <source>New Address</source>
         <translation>Nouvelle Adresse</translation>
@@ -1755,17 +1751,17 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="471"/>
+        <location filename="../src/settings.ui" line="476"/>
         <source>Check github for updates at startup</source>
         <translation>Vérifiez les mises à jour sur Github au démarrage</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="543"/>
+        <location filename="../src/settings.ui" line="548"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
         <translation>Se connecter au réseau Tor via le proxy SOCKS en cours d&apos;exécution sur 127.0.0.1:9050. Veuillez noter que vous devrez installer et exécuter le service Tor en externe.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="519"/>
+        <location filename="../src/settings.ui" line="524"/>
         <source>Shielded transactions are saved locally and shown in the transactions tab.  If you uncheck this, shielded transactions will not appear in the transactions tab.</source>
         <translation>Les transactions protégées sont enregistrées localement et affichées dans l&apos;onglet transactions. Si vous décochez cette case, les transactions protégées n&apos;apparaîtront pas dans l&apos;onglet des transactions.</translation>
     </message>
@@ -2015,147 +2011,152 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
         <translation>Sombre</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="464"/>
+        <location filename="../src/settings.ui" line="435"/>
+        <source>midnight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="469"/>
         <source>Connect via Tor</source>
         <translation>Se connecter via Tor</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="553"/>
+        <location filename="../src/settings.ui" line="558"/>
         <source>Connect to github on startup to check for updates</source>
         <translation>Connection à github au démarrage pour vérifier les mises à jour</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="560"/>
+        <location filename="../src/settings.ui" line="565"/>
         <source>Connect to the internet to fetch HUSH prices</source>
         <translation>Connection à Internet pour consulter les prix de HUSH</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="567"/>
+        <location filename="../src/settings.ui" line="572"/>
         <source>Fetch HUSH prices</source>
         <translation>Consulter les prix HUSH</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="575"/>
+        <location filename="../src/settings.ui" line="580"/>
         <source>Explorer</source>
         <translation>Explorer</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="587"/>
+        <location filename="../src/settings.ui" line="592"/>
         <source>Tx Explorer URL</source>
         <translation>URL Tx Explorer</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="626"/>
+        <location filename="../src/settings.ui" line="631"/>
         <source>Address Explorer URL</source>
         <translation>URL Address Explorer</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="652"/>
+        <location filename="../src/settings.ui" line="657"/>
         <source>Testnet Tx Explorer URL</source>
         <translation>URL Testnet Tx Explorer</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="678"/>
+        <location filename="../src/settings.ui" line="683"/>
         <source>Testnet Address Explorer URL</source>
         <translation>URL Testnet Address Explorer</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="697"/>
+        <location filename="../src/settings.ui" line="702"/>
         <source>Troubleshooting</source>
         <translation>Anomalies</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="709"/>
+        <location filename="../src/settings.ui" line="714"/>
         <source>Reindex</source>
         <translation>Reindex</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="722"/>
+        <location filename="../src/settings.ui" line="727"/>
         <source>Rescan the blockchain for any missing wallet transactions and to correct your wallet balance. This may take several hours. You need to restart SilentDragon for this to take effect</source>
         <translation>Rescanner la blockchain pour détecter toute transaction de portefeuille manquante et corriger le solde de votre portefeuille. Cela peut prendre plusieurs heures. Vous devez redémarrer SilentDragon pour que cela prenne effet</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="738"/>
+        <location filename="../src/settings.ui" line="743"/>
         <source>Rescan</source>
         <translation>Rescan</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="777"/>
+        <location filename="../src/settings.ui" line="782"/>
         <source>Rebuild the entire blockchain from the genesis block, by rescanning all the block files. This may take several hours to days, depending on your hardware. You need to restart SilentDragon for this to take effect</source>
         <translation>Reconstruisez l&apos;intégralité de la blockchain à partir du bloc genesis en analysant à nouveau tous les fichiers de bloc. Cela peut prendre plusieurs heures à plusieurs jours selon votre matériel. Vous devez redémarrer SilentDragon pour que cela prenne effet</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="819"/>
+        <location filename="../src/settings.ui" line="824"/>
         <source>This code can greatly reduce the size of wallets and increase performance for service providers. It&apos;s designed mostly for exchanges and mining pools but anybody with a large wallet will benefit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="835"/>
+        <location filename="../src/settings.ui" line="840"/>
         <source>Enable Old Transaction Deletion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="864"/>
+        <location filename="../src/settings.ui" line="869"/>
         <source>Consolidation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="877"/>
+        <location filename="../src/settings.ui" line="882"/>
         <source>Deletetx</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="903"/>
+        <location filename="../src/settings.ui" line="908"/>
         <source>The new experimental Shielded Index (-zindex) which keeps track of many stats that can be seen via the new getchaintxstats RPC. These include shielded payments, anonymity set size and many other things.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="919"/>
+        <location filename="../src/settings.ui" line="924"/>
         <source>Zindex </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="932"/>
+        <location filename="../src/settings.ui" line="937"/>
         <source>100</source>
         <translation type="unfinished">100</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="945"/>
+        <location filename="../src/settings.ui" line="950"/>
         <source>Wallet.dat Size :</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="958"/>
+        <location filename="../src/settings.ui" line="963"/>
         <source>MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="512"/>
+        <location filename="../src/settings.ui" line="517"/>
         <source>Clear History</source>
         <translation>Effacer l&apos;historique</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="485"/>
+        <location filename="../src/settings.ui" line="490"/>
         <source>Remember shielded transactions</source>
         <translation>Se souvenir des transactions privées</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="529"/>
+        <location filename="../src/settings.ui" line="534"/>
         <source>Allow custom fees</source>
         <translation>Permettre les frais personnalisés</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="502"/>
+        <location filename="../src/settings.ui" line="507"/>
         <source>Allow overriding the default fees when sending transactions. Enabling this option may compromise your privacy since fees are transparent. </source>
         <translation>Permettre le changement des frais par défaut lors de l&apos;envoi de transactions. L&apos;activation de cette option peut compromettre votre confidentialité car les frais sont transparents. </translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="492"/>
+        <location filename="../src/settings.ui" line="497"/>
         <source>Normally, change from t-Addresses goes to another t-Address. Checking this option will send the change to your shielded sapling address instead. Check this option to increase your privacy.</source>
         <translation>Normalement, le changement d&apos;une adresse-t se fait à une autre adresse-t. Sélectionnez cette option enverra le change à votre adresse privée Sapling à la place. Cochez cette option pour augmenter votre vie privée.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="536"/>
+        <location filename="../src/settings.ui" line="541"/>
         <source>Shield change from t-Addresses to your sapling address</source>
         <translation>Rendre privé le changement de la t-Adresse vers la z-Adresse</translation>
     </message>
@@ -2173,10 +2174,6 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <source>From</source>
         <translation type="vanished">De</translation>
-    </message>
-    <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Funds from Sprout z-Addresses (which start with &amp;quot;zc&amp;quot;) need to be moved to the upgraded Sapling z-Addresses (which start with &amp;quot;zs&amp;quot;). The funds cannot be moved directly, but need to be sent through intermediate &amp;quot;transparent&amp;quot; addresses in privacy-preserving way.&lt;/p&gt;&lt;p&gt;This migration can be done automatically for you.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Les fonds provenant des adresses-z de type Sprout (qui commencent par &quot;zc&quot;) doivent être transférés vers les adresses-z améliorées de type Sapling (qui commencent par &quot;zs&quot;). Les fonds ne peuvent pas être transférés directement, mais doivent être envoyés via des adresses-t transparentes intermédiaires tout cela en respectant votre vie privée.&lt;/p&gt;&lt;p&gt;Cette migration peut être faite automatiquement pour vous.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>To</source>
