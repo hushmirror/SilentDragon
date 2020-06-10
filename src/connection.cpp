@@ -215,6 +215,9 @@ void ConnectionLoader::createZcashConf() {
     out << "rpcworkqueue=256\n";
     out << "rpcallowip=127.0.0.1\n";
 
+    // Consolidation is now defaulted to ON for new wallets
+    out << "consolidation=1\n";
+
     if (!datadir.isEmpty()) {
         out << "datadir=" % datadir % "\n";
     }
