@@ -10,7 +10,6 @@
 #include "recurring.h"
 #include <QFileDialog>
 
-using json = nlohmann::json;
 
 void MainWindow::setupSendTab() {
     // Create the validator for send to/amount fields
