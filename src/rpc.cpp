@@ -1174,7 +1174,7 @@ void RPC::refreshPrice() {
                 auto vol   = hush[ticker + "_24h_vol"].toDouble();
                 auto mcap  = hush[ticker + "_market_cap"].toDouble();
 
-                auto btcprice = hush["btc"].toDouble();
+                //auto btcprice = hush["btc"].toDouble();
                 auto btcvol   = hush["btc_24h_vol"].toDouble();
                 auto btcmcap  = hush["btc_market_cap"].toDouble();
                 s->set_price(ticker, price);
