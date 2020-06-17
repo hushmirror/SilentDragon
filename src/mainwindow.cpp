@@ -22,7 +22,6 @@
 #include "requestdialog.h"
 #include "websockets.h"
 
-using json = nlohmann::json;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -280,7 +279,7 @@ void MainWindow::setupSettingsModal() {
             Settings::getInstance()->setSaveZtxs(checked);
         });
 
-        std::string currency_name;
+        QString currency_name;
         try {
             currency_name = Settings::getInstance()->get_currency_name();
         } catch (const std::exception& e) {
@@ -310,11 +309,11 @@ void MainWindow::setupSettingsModal() {
         });
 
         // Set local currency
-        QString ticker = QString::fromStdString( Settings::getInstance()->get_currency_name() );
+        QString ticker = Settings::getInstance()->get_currency_name();
         int currency_index = settings.comboBoxCurrency->findText(ticker, Qt::MatchExactly);
         settings.comboBoxCurrency->setCurrentIndex(currency_index);
         QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString ticker) {
-            this->slot_change_currency(ticker.toStdString());
+            this->slot_change_currency(ticker);
             rpc->refresh(true);
             QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
@@ -625,7 +624,7 @@ void MainWindow::validateAddress() {
     if (!ok)
         return;
 
-    getRPC()->validateAddress(address, [=] (json props) {
+    getRPC()->validateAddress(address, [=] (QJsonValue props) {
         QDialog d(this);
         Ui_ValidateAddress va;
         va.setupUi(&d);
@@ -636,11 +635,19 @@ void MainWindow::validateAddress() {
         va.lblAddress->setText(address);
 
         QList<QPair<QString, QString>> propsList;
-        for (auto it = props.begin(); it != props.end(); it++) {
+
+        for (QString property_name: props.toObject().keys()) {
+
+            QString property_value;
+
+            if (props.toObject()[property_name].isString())
+                property_value = props.toObject()[property_name].toString();
+            else
+                property_value = props.toObject()[property_name].toBool() ? "true" : "false" ;
 
             propsList.append(
-                QPair<QString, QString>(
-                    QString::fromStdString(it.key()), QString::fromStdString(it.value().dump()))
+                QPair<QString, QString>( property_name,
+                                         property_value )
             );
         }
 
@@ -916,9 +923,9 @@ void MainWindow::getViewKey(QString addr) {
         vui.buttonBox->button(QDialogButtonBox::Save)->setEnabled(true);
     };
 
-    auto fnAddKey = [=](json key) {
+    auto fnAddKey = [=](QJsonValue key) {
         QList<QPair<QString, QString>> singleAddrKey;
-        singleAddrKey.push_back(QPair<QString, QString>(addr, QString::fromStdString(key.get<json::string_t>())));
+        singleAddrKey.push_back(QPair<QString, QString>(addr, key.toString()));
         fnUpdateUIWithKeys(singleAddrKey);
     };
 
@@ -988,9 +995,9 @@ void MainWindow::exportKeys(QString addr) {
         rpc->getAllPrivKeys(fnUpdateUIWithKeys);
     }
     else {
-        auto fnAddKey = [=](json key) {
+        auto fnAddKey = [=](QJsonValue key) {
             QList<QPair<QString, QString>> singleAddrKey;
-            singleAddrKey.push_back(QPair<QString, QString>(addr, QString::fromStdString(key.get<json::string_t>())));
+            singleAddrKey.push_back(QPair<QString, QString>(addr, key.toString()));
             fnUpdateUIWithKeys(singleAddrKey);
         };
 
@@ -1168,7 +1175,7 @@ void MainWindow::setupMarketTab() {
     auto ticker = s->get_currency_name();
 
     ui->volume->setText(QString::number((double)       s->get_volume("HUSH") ,'f',8) + " HUSH");
-    ui->volumeLocal->setText(QString::number((double)  s->get_volume(ticker) ,'f',8) + " " + QString::fromStdString(ticker));
+    ui->volumeLocal->setText(QString::number((double)  s->get_volume(ticker) ,'f',8) + " " + ticker);
     ui->volumeBTC->setText(QString::number((double)    s->get_volume("BTC") ,'f',8) + " BTC");
 }
 
@@ -1285,8 +1292,8 @@ void MainWindow::setupTransactionsTab() {
 }
 
 void MainWindow::addNewZaddr() {
-    rpc->newZaddr( [=] (json reply) {
-        QString addr = QString::fromStdString(reply.get<json::string_t>());
+    rpc->newZaddr( [=] (QJsonValue reply) {
+        QString addr = reply.toString();
         // Make sure the RPC class reloads the z-addrs for future use
         rpc->refreshAddresses();
 
@@ -1329,9 +1336,9 @@ std::function<void(bool)> MainWindow::addZAddrsToComboList(bool sapling) {
 
 void MainWindow::setupReceiveTab() {
     auto addNewTAddr = [=] () {
-        rpc->newTaddr([=] (json reply) {
+        rpc->newTaddr([=] (QJsonValue reply) {
             qDebug() << "New addr button clicked";
-            QString addr = QString::fromStdString(reply.get<json::string_t>());
+            QString addr = reply.toString();
             // Make sure the RPC class reloads the t-addrs for future use
             rpc->refreshAddresses();
 
@@ -1541,7 +1548,7 @@ void MainWindow::updateLabels() {
     updateLabelsAutoComplete();
 }
 
-void MainWindow::slot_change_currency(const std::string& currency_name)
+void MainWindow::slot_change_currency(const QString& currency_name)
 {
     qDebug() << "slot_change_currency"; //<< ": " << currency_name;
     Settings::getInstance()->set_currency_name(currency_name);
@@ -1549,7 +1556,7 @@ void MainWindow::slot_change_currency(const std::string& currency_name)
     rpc->refreshPrice();
 
     // Include currency
-    std::string saved_currency_name;
+    QString saved_currency_name;
     try {
        saved_currency_name = Settings::getInstance()->get_currency_name();
     } catch (const std::exception& e) {
