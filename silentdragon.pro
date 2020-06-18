@@ -122,6 +122,7 @@ TRANSLATIONS = res/silentdragon_bg.ts \
                res/silentdragon_it.ts \
                res/silentdragon_nl.ts \
                res/silentdragon_pt.ts \
+               res/silentdragon_ro.ts \
                res/silentdragon_ru.ts \
                res/silentdragon_sr.ts \
                res/silentdragon_tr.ts \
