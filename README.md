@@ -1,6 +1,6 @@
 # SilentDragon
 
-SilentDragon desktop wallet for HUSH ($HUSH) runs on Linux, Windows and macOS.
+SilentDragon desktop wallet for HUSH runs on Linux, Windows and macOS.
 This is experimental software under active development!
 
 ![Screenshots](silentdragon.png?raw=true)
@@ -49,6 +49,7 @@ hushd, or compile hushd as well.
 sudo apt-get -y install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
 git clone https://github.com/MyHush/SilentDragon.git
 cd SilentDragon
+./build.sh linguist # compile translations
 ./build.sh
 ./silentdragon
 ```
