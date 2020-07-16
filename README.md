@@ -58,8 +58,8 @@ cd SilentDragon
 
 ```
 sudo pacman -S qt5-base qt5-tools qtcreator qt5-websockets rust
-git clone https://github.com/MyHush/SilentDragonLite.git
-cd SilentDragonLite
+git clone https://github.com/MyHush/SilentDragon.git
+cd SilentDragon
 ./build.sh linguist
 ./build.sh release
 ./silentdragon
