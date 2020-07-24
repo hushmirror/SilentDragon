@@ -24,7 +24,7 @@ Go to the releases page and grab the latest installers or binary. https://github
 
 ## hushd
 
-SilentDragon needs a Hush full node running hushd. If you already have a hushd node running, SilentDragon will connect to it.
+SilentDragon needs a Hush full node running [hushd](https://github.com/MyHush/hush3/). If you already have a hushd node running, SilentDragon will connect to it.
 
 If you don't have one, SilentDragon will start its embedded hushd node.
 
@@ -43,7 +43,7 @@ hushd, or compile hushd as well.
 
 ### Building on Linux
 
-#### Ubuntu 18.04:
+#### Ubuntu 18.04 and 20.04:
 
 ```
 sudo apt-get -y install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
@@ -58,9 +58,9 @@ cd SilentDragon
 
 ```
 sudo pacman -S qt5-base qt5-tools qtcreator qt5-websockets rust
-git clone https://github.com/MyHush/SilentDragonLite.git
-cd SilentDragonLite
-./build.sh linguist
+git clone https://github.com/MyHush/SilentDragon.git
+cd SilentDragon
+./build.sh linguist # compile translations
 ./build.sh release
 ./silentdragon
 ```
@@ -113,5 +113,5 @@ The above assumes silentdragon and hush3 git repos are in the same directory. Fi
 
 ### Support
 
-For support or other questions, Join [Discord](https://myhush.org/discord), or tweet at [@MyHushTeam](https://twitter.com/MyHushTeam) or [file an issue](https://github.com/MyHush/SilentDragon/issues).
+For support or other questions, Join [Discord](https://myhush.org/discord), or tweet at [@MyHushTeam](https://twitter.com/MyHushTeam) or [Telegram](http://myhush.org/telegram) or [file an issue](https://github.com/MyHush/SilentDragon/issues).
 
