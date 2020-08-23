@@ -1,4 +1,22 @@
 # SilentDragon
+[![GitHub license](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/MyHush/SilentDragon/blob/master/LICENSE)
+[![GitHub version](https://badge.fury.io/gh/MyHush%2FSilentDragon.svg)](https://badge.fury.io/gh/MyHush%2FSilentDragon)
+[![Github All Releases](https://img.shields.io/github/downloads/MyHush/SilentDragon/total.svg)](https://img.shields.io/github/downloads/MyHush/SilentDragon/total.svg)
+
+<p align="left">
+    <a href="https://twitter.com/MyHushTeam">
+        <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fmyhushteam"
+            alt="MyHushTeam's Twitter"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=MyHushTeam">
+        <img src="https://img.shields.io/twitter/follow/MyHushTeam?style=social&logo=twitter"
+            alt="follow on Twitter"></a>
+    <a href="https://fosstodon.org/@myhushteam">
+        <img src="https://img.shields.io/badge/Mastodon-MyHushTeam-blue"
+            alt="follow on Mastodon"></a>
+    <a href="https://www.reddit.com/r/Myhush/">
+        <img src="https://img.shields.io/reddit/subreddit-subscribers/Myhush?style=social"
+            alt="MyHushTeam's Reddit"></a>
+</p>
 
 SilentDragon desktop wallet for HUSH runs on Linux, Windows and macOS.
 This is experimental software under active development!
@@ -39,7 +57,6 @@ c++. It also depends on Qt5, which you can get from
 [here](https://www.qt.io/download). Note that if you are compiling from source,
 you won't get the embedded hushd by default. You can either run an external
 hushd, or compile hushd as well.
-
 
 ### Building on Linux
 
@@ -87,7 +104,6 @@ c:\Qt5\bin\qmake.exe silentdragon.pro -tp vc CONFIG+=debug
 
 You need to install the Xcode app or the Xcode command line tools first, and then install Qt. 
 
-
 ```
 git clone https://github.com/MyHush/SilentDragon.git
 cd SilentDragon
@@ -113,5 +129,5 @@ The above assumes silentdragon and hush3 git repos are in the same directory. Fi
 
 ### Support
 
-For support or other questions, Join [Discord](https://myhush.org/discord), or tweet at [@MyHushTeam](https://twitter.com/MyHushTeam) or [Telegram](http://myhush.org/telegram) or [file an issue](https://github.com/MyHush/SilentDragon/issues).
+For support or other questions, join us on [Discord](https://myhush.org/discord), or tweet at [@MyHushTeam](https://twitter.com/MyHushTeam), or toot at our [Mastodon](https://fosstodon.org/@myhushteam) or join [Telegram](http://myhush.org/telegram) or [file an issue](https://github.com/MyHush/SilentDragon/issues).
 
