@@ -1298,47 +1298,47 @@ If all else fails, please run hushd manually.</source>
         <translation>Es gab einen Fehler! : </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="683"/>
+        <location filename="../src/rpc.cpp" line="673"/>
         <source>Downloading blocks</source>
         <translation>Lade Blöcke herunter</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="686"/>
+        <location filename="../src/rpc.cpp" line="676"/>
         <source>Block height</source>
         <translation>Blockhöhe</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="701"/>
+        <location filename="../src/rpc.cpp" line="691"/>
         <source>Syncing</source>
         <translation>Synchronisiere</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="701"/>
+        <location filename="../src/rpc.cpp" line="691"/>
         <source>Connected</source>
         <translation>Verbunden</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="703"/>
+        <location filename="../src/rpc.cpp" line="693"/>
         <source>testnet:</source>
         <translation>Testnetz:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="713"/>
+        <location filename="../src/rpc.cpp" line="703"/>
         <source>Connected to hushd</source>
         <translation>Verbunden zu Hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1030"/>
+        <location filename="../src/rpc.cpp" line="1020"/>
         <source> transaction computing.</source>
         <translation>erzeuge Transaktion</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1247"/>
+        <location filename="../src/rpc.cpp" line="1237"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Bitte warten Sie, bis Silentdragon beendet ist</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1248"/>
+        <location filename="../src/rpc.cpp" line="1238"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Bitte warten Sie, bis Hushd beendet ist</translation>
     </message>
@@ -1347,7 +1347,7 @@ If all else fails, please run hushd manually.</source>
         <translation type="vanished">Hushd hat keine Verbindung zu anderen Teilnehmern</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="735"/>
+        <location filename="../src/rpc.cpp" line="725"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>Es gab einen Fehler bei dem versuch Hushd zu verbinden. Der Fehler war</translation>
     </message>
@@ -1376,7 +1376,7 @@ If all else fails, please run hushd manually.</source>
         <translation type="vanished"> Transaktion </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="716"/>
+        <location filename="../src/rpc.cpp" line="706"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>Hushd hat keine Verbindung zu anderen Teilnehmern! Haben Sie Netzwerkprobleme?</translation>
     </message>
@@ -1385,24 +1385,24 @@ If all else fails, please run hushd manually.</source>
         <translation type="vanished"> Erzeuge Transaktion. Dies kann einige Minuten dauern.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1079"/>
+        <location filename="../src/rpc.cpp" line="1069"/>
         <source>Update Available</source>
         <translation>Update verfügbar</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1080"/>
+        <location filename="../src/rpc.cpp" line="1070"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
         <translation>Eine neue Version v%1 ist verfügbar! Sie benutzen momentan v%2. Möchten Sie unsere Seite besuchen?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1092"/>
+        <location filename="../src/rpc.cpp" line="1082"/>
         <source>No updates available</source>
         <translation>Keine updates verfügbar</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1093"/>
+        <location filename="../src/rpc.cpp" line="1083"/>
         <source>You already have the latest release v%1</source>
         <translation>Sie haben bereits die aktuellste Version v%1</translation>
     </message>
@@ -1454,7 +1454,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="735"/>
+        <location filename="../src/rpc.cpp" line="725"/>
         <source>Connection Error</source>
         <translation>Verbindungsfehler</translation>
     </message>

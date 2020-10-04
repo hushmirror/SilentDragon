@@ -1284,7 +1284,7 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja men
     </message>
     <message>
         <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="735"/>
+        <location filename="../src/rpc.cpp" line="725"/>
         <source>Connection Error</source>
         <translation>Greška sa vezom</translation>
     </message>
@@ -1306,47 +1306,47 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja men
         <translation>Nema veze</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="683"/>
+        <location filename="../src/rpc.cpp" line="673"/>
         <source>Downloading blocks</source>
         <translation>Preuzimam blokove</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="686"/>
+        <location filename="../src/rpc.cpp" line="676"/>
         <source>Block height</source>
         <translation>Visina bloka</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="701"/>
+        <location filename="../src/rpc.cpp" line="691"/>
         <source>Syncing</source>
         <translation>Sinhronizacija</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="701"/>
+        <location filename="../src/rpc.cpp" line="691"/>
         <source>Connected</source>
         <translation>Spojeno</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="703"/>
+        <location filename="../src/rpc.cpp" line="693"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="713"/>
+        <location filename="../src/rpc.cpp" line="703"/>
         <source>Connected to hushd</source>
         <translation>Spojeno na hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="716"/>
+        <location filename="../src/rpc.cpp" line="706"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>hushd nema vezu sa točkama na istoj razini! Možda imate problem sa mrežom?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="735"/>
+        <location filename="../src/rpc.cpp" line="725"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>Pojavila se greška prilikom spajanja na hushd. Greška je</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1030"/>
+        <location filename="../src/rpc.cpp" line="1020"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1355,12 +1355,12 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja men
         <translation type="vanished"> tx proračun. Ovo može potrajati nekoliko minuta.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1079"/>
+        <location filename="../src/rpc.cpp" line="1069"/>
         <source>Update Available</source>
         <translation>Dostupno ažuriranje</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1080"/>
+        <location filename="../src/rpc.cpp" line="1070"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1369,22 +1369,22 @@ Would you like to visit the releases page?</source>
 Želite li posetiti stranicu sa izadnjima?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1092"/>
+        <location filename="../src/rpc.cpp" line="1082"/>
         <source>No updates available</source>
         <translation>Nema dostupnih ažuriranja</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1093"/>
+        <location filename="../src/rpc.cpp" line="1083"/>
         <source>You already have the latest release v%1</source>
         <translation>Već imate najnovije izdanje v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1247"/>
+        <location filename="../src/rpc.cpp" line="1237"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Molimo pokušajte se strpiti i pričekajte da se SilentDragon zatvori</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1248"/>
+        <location filename="../src/rpc.cpp" line="1238"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Pričekajte da hushd završi</translation>
     </message>
