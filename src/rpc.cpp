@@ -601,7 +601,10 @@ void RPC::getInfoThenRefresh(bool force) {
             refreshTransactions();
         }
 
-        int connections = reply["connections"].toInt();
+        int  connections   = reply["connections"].toInt();
+        bool hasTLS        = !reply["tls_connections"].isNull();
+        qDebug() << "Local node TLS support = " << hasTLS;
+        int tlsconnections = hasTLS ? reply["tls_connections"].toInt() : 0;
         Settings::getInstance()->setPeers(connections);
 
         if (connections == 0) {
@@ -611,35 +614,22 @@ void RPC::getInfoThenRefresh(bool force) {
         }
 
         // Get network sol/s
-        QJsonObject payload = {
-            {"jsonrpc", "1.0"},
-            {"id", "someid"},
-            {"method", "getnetworksolps"}
-        };
-
         QString method = "getnetworksolps";
         conn->doRPCIgnoreError(makePayload(method), [=](const QJsonValue& reply) {
             qint64 solrate = reply.toInt();
 
-            ui->numconnections->setText(QString::number(connections));
+            ui->numconnections->setText(QString::number(connections) + " (" + QString::number(tlsconnections) + " TLS)" );
             ui->solrate->setText(QString::number(solrate) % " Sol/s");
         });
 
         // Get network info
-        payload = {
-            {"jsonrpc", "1.0"},
-            {"id", "someid"},
-            {"method", "getnetworkinfo"}
-        };
-
-        conn->doRPCIgnoreError(payload, [=](const QJsonValue& reply) {
+        conn->doRPCIgnoreError(makePayload("getnetworkinfo"), [=](const QJsonValue& reply) {
             QString clientname    = reply["subversion"].toString();
             QString localservices = reply["localservices"].toString();
 
             ui->clientname->setText(clientname);
             ui->localservices->setText(localservices);
         });
-
 
         conn->doRPCIgnoreError(makePayload("getwalletinfo"), [=](const QJsonValue& reply) {
             int  txcount = reply["txcount"].toInt();
