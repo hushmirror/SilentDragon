@@ -855,7 +855,8 @@ void AppDataServer::processGetInfo(QJsonObject jobj, MainWindow* mainWindow, std
         {"maxspendable", maxSpendable},
         {"maxzspendable", maxZSpendable},
         {"tokenName", Settings::getTokenName()},
-        {"zecprice", Settings::getInstance()->getZECPrice()},
+        // changing this will break SDA
+        {"zecprice", Settings::getInstance()->getHUSHPrice()},
         {"serverversion", QString(APP_VERSION)}
     }).toJson();
     pClient->sendTextMessage(encryptOutgoing(r));

@@ -613,12 +613,14 @@ void RPC::getInfoThenRefresh(bool force) {
             main->statusIcon->setPixmap(i.pixmap(16, 16));
         }
 
+        ui->numconnections->setText(QString::number(connections) + " (" + QString::number(tlsconnections) + " TLS)" );
+        ui->tlssupport->setText(hasTLS ? "Yes" : "No");
+
         // Get network sol/s
         QString method = "getnetworksolps";
         conn->doRPCIgnoreError(makePayload(method), [=](const QJsonValue& reply) {
             qint64 solrate = reply.toInt();
 
-            ui->numconnections->setText(QString::number(connections) + " (" + QString::number(tlsconnections) + " TLS)" );
             ui->solrate->setText(QString::number(solrate) % " Sol/s");
         });
 
@@ -1125,7 +1127,7 @@ void RPC::refreshPrice() {
                 } else {
                     qDebug() << reply->errorString();
                 }
-                s->setZECPrice(0);
+                s->setHUSHPrice(0);
                 s->setBTCPrice(0);
                 return;
             }
@@ -1133,7 +1135,7 @@ void RPC::refreshPrice() {
             qDebug() << "No network errors";
 
             if (parsed.isEmpty()) {
-                s->setZECPrice(0);
+                s->setHUSHPrice(0);
                 s->setBTCPrice(0);
                 return;
             }
@@ -1154,7 +1156,7 @@ void RPC::refreshPrice() {
                 qDebug() << "HUSH = " << QString::number(hush["eur"].toDouble()) << " EUR";
                 qDebug() << "HUSH = " << QString::number((int) 100000000 * hush["btc"].toDouble()) << " sat ";
 
-                s->setZECPrice( hush[ticker].toDouble() );
+                s->setHUSHPrice( hush[ticker].toDouble() );
                 s->setBTCPrice( (unsigned int) 100000000 * hush["btc"].toDouble() );
 
                 ticker = ticker.toLower();
@@ -1199,7 +1201,7 @@ void RPC::refreshPrice() {
         }
 
         // If nothing, then set the price to 0;
-        Settings::getInstance()->setZECPrice(0);
+        Settings::getInstance()->setHUSHPrice(0);
         Settings::getInstance()->setBTCPrice(0);
     });
 }

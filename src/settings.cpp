@@ -159,8 +159,8 @@ bool Settings::isSaplingActive() {
     return  (isTestnet() && getBlockNumber() > 0) || (!isTestnet() && getBlockNumber() > 0);
 }
 
-double Settings::getZECPrice() {
-    return zecPrice;
+double Settings::getHUSHPrice() {
+    return hushPrice;
 }
 
 double Settings::get_price(QString currency) {
@@ -282,7 +282,7 @@ void Settings::saveRestore(QDialog* d) {
 
 QString Settings::getUSDFormat(double bal) {
     //TODO: respect current locale!
-    return QLocale(QLocale::English).toString(bal * Settings::getInstance()->getZECPrice(), 'f', 8) + " " +Settings::getInstance()->get_currency_name();
+    return QLocale(QLocale::English).toString(bal * Settings::getInstance()->getHUSHPrice(), 'f', 8) + " " +Settings::getInstance()->get_currency_name();
 }
 
 QString Settings::getDecimalString(double amt) {

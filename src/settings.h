@@ -91,10 +91,10 @@ public:
     void    setUsingZcashConf(QString confLocation);
     const   QString& getZcashdConfLocation() { return _confLocation; }
 
-    void    setZECPrice(double p)       { zecPrice = p;   }
+    void    setHUSHPrice(double p)       { hushPrice = p;   }
     void    set_fiat_price(double p)    { fiat_price = p; }
     void    setBTCPrice(unsigned int p) { btcPrice = p;   }
-    double  getZECPrice();
+    double  getHUSHPrice();
     double  get_fiat_price();
     unsigned int  getBTCPrice();
     double get_price(QString currency);
@@ -162,7 +162,7 @@ private:
     bool    _headless         = false;
     int     _peerConnections  = 0;
 
-    double  zecPrice          = 0.0;
+    double  hushPrice          = 0.0;
     double  fiat_price        = 0.0;
     unsigned int  btcPrice    = 0;
     std::map<QString, double> prices;
