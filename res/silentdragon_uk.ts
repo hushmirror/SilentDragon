@@ -233,7 +233,7 @@
         <translation type="vanished">Запит safecoin...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1653"/>
+        <location filename="../src/mainwindow.ui" line="1677"/>
         <source>Validate Address</source>
         <translation>Перевірити адресу</translation>
     </message>
@@ -317,9 +317,10 @@
         <location filename="../src/mainwindow.ui" line="1336"/>
         <location filename="../src/mainwindow.ui" line="1357"/>
         <location filename="../src/mainwindow.ui" line="1378"/>
-        <location filename="../src/mainwindow.ui" line="1399"/>
-        <location filename="../src/mainwindow.ui" line="1413"/>
-        <location filename="../src/mainwindow.ui" line="1434"/>
+        <location filename="../src/mainwindow.ui" line="1400"/>
+        <location filename="../src/mainwindow.ui" line="1422"/>
+        <location filename="../src/mainwindow.ui" line="1437"/>
+        <location filename="../src/mainwindow.ui" line="1458"/>
         <location filename="../src/mainwindow.cpp" line="888"/>
         <location filename="../src/mainwindow.cpp" line="952"/>
         <source>Loading...</source>
@@ -331,12 +332,12 @@
         <translation>Висота блоку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1420"/>
+        <location filename="../src/mainwindow.ui" line="1444"/>
         <source>Network solution rate</source>
         <translation>Швидкість мережі</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1427"/>
+        <location filename="../src/mainwindow.ui" line="1451"/>
         <source>Connections</source>
         <translation>Підключень</translation>
     </message>
@@ -354,10 +355,11 @@
         <location filename="../src/mainwindow.ui" line="1343"/>
         <location filename="../src/mainwindow.ui" line="1364"/>
         <location filename="../src/mainwindow.ui" line="1385"/>
-        <location filename="../src/mainwindow.ui" line="1406"/>
-        <location filename="../src/mainwindow.ui" line="1461"/>
-        <location filename="../src/mainwindow.ui" line="1468"/>
-        <location filename="../src/mainwindow.ui" line="1475"/>
+        <location filename="../src/mainwindow.ui" line="1407"/>
+        <location filename="../src/mainwindow.ui" line="1429"/>
+        <location filename="../src/mainwindow.ui" line="1485"/>
+        <location filename="../src/mainwindow.ui" line="1492"/>
+        <location filename="../src/mainwindow.ui" line="1499"/>
         <source>|</source>
         <translation>|</translation>
     </message>
@@ -447,143 +449,148 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1392"/>
+        <location filename="../src/mainwindow.ui" line="1393"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1501"/>
+        <location filename="../src/mainwindow.ui" line="1415"/>
+        <source>TLS Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1525"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1516"/>
+        <location filename="../src/mainwindow.ui" line="1540"/>
         <source>&amp;Help</source>
         <translation>&amp;Допомога</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1527"/>
+        <location filename="../src/mainwindow.ui" line="1551"/>
         <source>&amp;Apps</source>
         <translation>&amp;Додатки</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1535"/>
+        <location filename="../src/mainwindow.ui" line="1559"/>
         <source>&amp;Edit</source>
         <translation>&amp;Редагувати</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1548"/>
+        <location filename="../src/mainwindow.ui" line="1572"/>
         <source>E&amp;xit</source>
         <translation>&amp;Вихід</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1553"/>
+        <location filename="../src/mainwindow.ui" line="1577"/>
         <source>&amp;About</source>
         <translation>&amp;Про гаманець</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1558"/>
+        <location filename="../src/mainwindow.ui" line="1582"/>
         <source>&amp;Report a bug on Github</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1563"/>
+        <location filename="../src/mainwindow.ui" line="1587"/>
         <source>&amp;Settings</source>
         <translation>&amp;Налаштування</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1566"/>
+        <location filename="../src/mainwindow.ui" line="1590"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1571"/>
+        <location filename="../src/mainwindow.ui" line="1595"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Пожертвування для Duke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1576"/>
+        <location filename="../src/mainwindow.ui" line="1600"/>
         <source>&amp;Hush Discord</source>
         <translation>&amp;Hush Discord</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1581"/>
+        <location filename="../src/mainwindow.ui" line="1605"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Сайт Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1586"/>
+        <location filename="../src/mainwindow.ui" line="1610"/>
         <source>Check github.com for &amp;updates</source>
         <translation>&amp;Перевірити github.com на оновлення</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1591"/>
+        <location filename="../src/mainwindow.ui" line="1615"/>
         <source>Sapling &amp;turnstile</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1594"/>
+        <location filename="../src/mainwindow.ui" line="1618"/>
         <source>Ctrl+A, Ctrl+T</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1599"/>
+        <location filename="../src/mainwindow.ui" line="1623"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Імпорт приватного ключа</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1604"/>
+        <location filename="../src/mainwindow.ui" line="1628"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Експорт всіх приватних ключів</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1609"/>
+        <location filename="../src/mainwindow.ui" line="1633"/>
         <source>&amp;z-board.net</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1612"/>
+        <location filename="../src/mainwindow.ui" line="1636"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1617"/>
+        <location filename="../src/mainwindow.ui" line="1641"/>
         <source>Address &amp;book</source>
         <translation>&amp;Адресна книга</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1620"/>
+        <location filename="../src/mainwindow.ui" line="1644"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1625"/>
+        <location filename="../src/mainwindow.ui" line="1649"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Зберегти wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1630"/>
+        <location filename="../src/mainwindow.ui" line="1654"/>
         <location filename="../src/mainwindow.cpp" line="828"/>
         <source>Export transactions</source>
         <translation>Експорт транзакцій</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1635"/>
+        <location filename="../src/mainwindow.ui" line="1659"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1640"/>
+        <location filename="../src/mainwindow.ui" line="1664"/>
         <source>Connect mobile &amp;app</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1643"/>
+        <location filename="../src/mainwindow.ui" line="1667"/>
         <source>Ctrl+M</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1648"/>
+        <location filename="../src/mainwindow.ui" line="1672"/>
         <source>Request HUSH...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1376,7 +1383,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="673"/>
+        <location filename="../src/rpc.cpp" line="675"/>
         <source>Downloading blocks</source>
         <translation>Завантаження блоків</translation>
     </message>
@@ -1385,52 +1392,52 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">Готово! Дякуємо Вам за допомогу в захисті мережі Hush, запустивши повний вузол.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="676"/>
+        <location filename="../src/rpc.cpp" line="678"/>
         <source>Block height</source>
         <translation>Висота блоків</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="691"/>
+        <location filename="../src/rpc.cpp" line="693"/>
         <source>Syncing</source>
         <translation>Синхронізація</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="691"/>
+        <location filename="../src/rpc.cpp" line="693"/>
         <source>Connected</source>
         <translation>Підключено</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="695"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="703"/>
+        <location filename="../src/rpc.cpp" line="705"/>
         <source>Connected to hushd</source>
         <translation>Під&apos;єднано до hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="706"/>
+        <location filename="../src/rpc.cpp" line="708"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="725"/>
+        <location filename="../src/rpc.cpp" line="727"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>При підключенні до hushd сталася помилка. Помилка</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1020"/>
+        <location filename="../src/rpc.cpp" line="1022"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1237"/>
+        <location filename="../src/rpc.cpp" line="1239"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1238"/>
+        <location filename="../src/rpc.cpp" line="1240"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1479,12 +1486,12 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished"> tx обчислюється. Це може зайняти кілька хвилин.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1069"/>
+        <location filename="../src/rpc.cpp" line="1071"/>
         <source>Update Available</source>
         <translation>Доступно оновлення</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1070"/>
+        <location filename="../src/rpc.cpp" line="1072"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1493,12 +1500,12 @@ Would you like to visit the releases page?</source>
 Хотіли б ви відвідати сторінку релізів?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1082"/>
+        <location filename="../src/rpc.cpp" line="1084"/>
         <source>No updates available</source>
         <translation>Немає доступних оновлень</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1083"/>
+        <location filename="../src/rpc.cpp" line="1085"/>
         <source>You already have the latest release v%1</source>
         <translation>У вас вже є остання версія v%1</translation>
     </message>
@@ -1530,7 +1537,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="725"/>
+        <location filename="../src/rpc.cpp" line="727"/>
         <source>Connection Error</source>
         <translation>Помилка з&apos;єднання</translation>
     </message>
