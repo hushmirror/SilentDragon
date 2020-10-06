@@ -3,6 +3,7 @@
 
 #include "precompiled.h"
 #include "logger.h"
+#include <memory>
 
 // Forward declare to break circular dependency.
 class RPC;
