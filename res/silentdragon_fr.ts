@@ -1328,7 +1328,7 @@ If all else fails, please run hushd manually.</source>
     <message>
         <location filename="../src/rpc.cpp" line="1240"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
-        <translation>Veuillez atendre que hushd soit arrêté, vous tous</translation>
+        <translation>Veuillez attendre que hushd soit arrêté.</translation>
     </message>
     <message>
         <source>hushd has no peer connections</source>
@@ -2000,22 +2000,22 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation>défaut</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation>Bleu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation>Calire</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation>Sombre</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>
