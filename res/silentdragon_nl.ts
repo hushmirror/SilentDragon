@@ -2051,6 +2051,26 @@ Je hebt nog onbevestigde transacties of je saldo is te laag voor een automatisch
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/settings.ui" line="415"/>
+        <source>default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="420"/>
+        <source>blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="425"/>
+        <source>light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="430"/>
+        <source>dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/settings.ui" line="435"/>
         <source>midnight</source>
         <translation type="unfinished"></translation>

@@ -2019,22 +2019,22 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>

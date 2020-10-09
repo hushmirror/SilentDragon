@@ -1842,22 +1842,22 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation>Standar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation>Biru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation>Cerah</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation>Gelap</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>

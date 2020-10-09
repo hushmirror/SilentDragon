@@ -1847,22 +1847,22 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation>default</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation>asul</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation>liwanag</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation>madilim</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>
