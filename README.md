@@ -35,11 +35,11 @@ in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.or
 
 # Installation
 
-Go to the releases page and grab the latest installers or binary. https://github.com/MyHush/SilentDragon/releases
+Go to the releases page and grab the latest installers or binary. https://git.hush.is/hush/SilentDragon/releases
 
 ## hushd
 
-SilentDragon needs a Hush full node running [hushd](https://github.com/MyHush/hush3/). If you already have a hushd node running, SilentDragon will connect to it.
+SilentDragon needs a Hush full node running [hushd](https://git.hush.is/hush/hush3/). If you already have a hushd node running, SilentDragon will connect to it.
 
 If you don't have one, SilentDragon will start its embedded hushd node.
 
@@ -61,7 +61,7 @@ hushd, or compile hushd as well.
 
 ```
 sudo apt-get -y install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
-git clone https://github.com/MyHush/SilentDragon.git
+git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
 ./build.sh linguist # compile translations
 ./build.sh
@@ -72,7 +72,7 @@ cd SilentDragon
 
 ```
 sudo pacman -S qt5-base qt5-tools qtcreator qt5-websockets rust
-git clone https://github.com/MyHush/SilentDragon.git
+git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
 ./build.sh linguist # compile translations
 ./build.sh release
@@ -84,7 +84,7 @@ You need Visual Studio 2017 (The free C++ Community Edition works just fine).
 
 From the VS Tools command prompt
 ```
-git clone  https://github.com/MyHush/SilentDragon.git
+git clone  https://git.hush.is/hush/SilentDragon
 cd SilentDragon
 c:\Qt5\bin\qmake.exe silentdragon.pro -spec win32-msvc CONFIG+=debug
 nmake
@@ -102,7 +102,7 @@ c:\Qt5\bin\qmake.exe silentdragon.pro -tp vc CONFIG+=debug
 You need to install the Xcode app or the Xcode command line tools first, and then install Qt. 
 
 ```
-git clone https://github.com/MyHush/SilentDragon.git
+git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
 qmake silentdragon.pro CONFIG+=debug
 make
