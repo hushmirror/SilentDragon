@@ -129,5 +129,5 @@ The above assumes silentdragon and hush3 git repos are in the same directory. Fi
 
 ### Support
 
-For support or other questions, join us on [Discord](https://myhush.org/discord), or tweet at [@MyHushTeam](https://twitter.com/MyHushTeam), or toot at our [Mastodon](https://fosstodon.org/@myhushteam) or join [Telegram](http://myhush.org/telegram) or [file an issue](https://github.com/MyHush/SilentDragon/issues).
+For support or other questions, join us on [Telegram](https://hush.is/telegram), or tweet at [@MyHushTeam](https://twitter.com/MyHushTeam), or toot at our [Mastodon](https://fosstodon.org/@myhushteam) or join [Telegram Support](https://hush.is/telegram_support) or [file an issue](https://git.hush.is/hush/SilentDragon/issues).
 
