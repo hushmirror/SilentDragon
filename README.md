@@ -1,7 +1,4 @@
 # SilentDragon
-[![GitHub license](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/MyHush/SilentDragon/blob/master/LICENSE)
-[![GitHub version](https://badge.fury.io/gh/MyHush%2FSilentDragon.svg)](https://badge.fury.io/gh/MyHush%2FSilentDragon)
-[![Github All Releases](https://img.shields.io/github/downloads/MyHush/SilentDragon/total.svg)](https://img.shields.io/github/downloads/MyHush/SilentDragon/total.svg)
 
 <p align="left">
     <a href="https://twitter.com/MyHushTeam">
