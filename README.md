@@ -37,6 +37,8 @@ in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.or
 
 Go to the releases page and grab the latest installers or binary. https://git.hush.is/hush/SilentDragon/releases
 
+Go to the [releases page](https://github.com/MyHush/SilentDragonLite/releases)
+
 ## hushd
 
 SilentDragon needs a Hush full node running [hushd](https://git.hush.is/hush/hush3/). If you already have a hushd node running, SilentDragon will connect to it.
