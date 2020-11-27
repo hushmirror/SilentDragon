@@ -35,7 +35,7 @@ in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.or
 
 # Installation
 
-Go to the [releases page] and grab the latest installers or binary. (https://git.hush.is/hush/SilentDragon/releases)
+Go to the [releases page](https://git.hush.is/hush/SilentDragon/releases) and grab the latest installers or binary. 
 
 
 ## hushd
