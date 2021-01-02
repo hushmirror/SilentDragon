@@ -6,9 +6,7 @@
 #include "ui_connection.h"
 #include "ui_createzcashconfdialog.h"
 #include "rpc.h"
-
 #include "precompiled.h"
-
 
 ConnectionLoader::ConnectionLoader(MainWindow* main, RPC* rpc) {
     this->main = main;
@@ -52,7 +50,7 @@ void ConnectionLoader::loadConnection() {
 void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
     // Priority 1: Ensure all params are present.
     if (!verifyParams()) {
-        downloadParams([=]() { this->doAutoConnect(); });
+        qDebug() << "Cannot find sapling params!";
         return;
     }
 
@@ -230,10 +228,6 @@ void ConnectionLoader::createZcashConf() {
     this->doAutoConnect();
 }
 
-
-void ConnectionLoader::downloadParams(std::function<void(void)> cb) {
-    main->logger->write("Bad juju");
-}
 
 void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
     auto fnSaveFileName = [&] (QUrl url) {
