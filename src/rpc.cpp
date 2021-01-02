@@ -1,13 +1,11 @@
 // Copyright 2019-2021 The Hush Developers
 // Released under the GPLv3
 #include "rpc.h"
-
 #include "addressbook.h"
 #include "settings.h"
 #include "senttxstore.h"
 #include "version.h"
 #include "websockets.h"
-
 
 RPC::RPC(MainWindow* main) {
     auto cl = new ConnectionLoader(main, this);
@@ -94,7 +92,7 @@ void RPC::setConnection(Connection* c) {
 
     // Refresh the UI
     refreshPrice();
-    checkForUpdate();
+    //checkForUpdate();
 
     // Force update, because this might be coming from a settings update
     // where we need to immediately refresh
@@ -1025,12 +1023,15 @@ void RPC::watchTxStatus() {
 }
 
 void RPC::checkForUpdate(bool silent) {
+    // Disable update checks for now
+    // TODO: Use Gitea API
+    return;
     qDebug() << "checking for updates";
 
     if  (conn == nullptr) 
         return noConnection();
 
-    QUrl cmcURL("https://api.github.com/repos/MyHush/SilentDragon/releases");
+    QUrl cmcURL("https://fuck.github.com/repos/MyHush/SilentDragon/releases");
 
     QNetworkRequest req;
     req.setUrl(cmcURL);
