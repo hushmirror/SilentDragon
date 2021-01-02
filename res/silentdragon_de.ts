@@ -266,8 +266,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1600"/>
-        <source>&amp;Hush Discord</source>
-        <translation>Discord von &amp;Hush</translation>
+        <source>&amp;Hush Telegram</source>
+        <translation>Telegram von &amp;Hush</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1605"/>

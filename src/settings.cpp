@@ -35,8 +35,8 @@ void Settings::setAllowFetchPrices(bool allow) {
 Explorer Settings::getExplorer() {
     // Load from the QT Settings.
     QSettings s;
-    //TODO: make it easy for people to use other explorers like komodod.com
-    QString explorer = "https://explorer.myhush.org";
+    //TODO: make it easy for people to use other explorers
+    QString explorer = "https://explorer.hush.is";
 
     auto txExplorerUrl                = s.value("explorer/txExplorerUrl", explorer + "/tx/").toString();
     auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl", explorer + "/address/").toString();

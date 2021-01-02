@@ -48,16 +48,11 @@ MainWindow::MainWindow(QWidget *parent) :
     // Settings editor
     setupSettingsModal();
 
-    // Set up exit action
+    // Set up actions
     QObject::connect(ui->actionExit, &QAction::triggered, this, &MainWindow::close);
-
-    // Set up feedback action
     QObject::connect(ui->actionDonate, &QAction::triggered, this, &MainWindow::donate);
-
-    QObject::connect(ui->actionDiscord, &QAction::triggered, this, &MainWindow::discord);
-
+    QObject::connect(ui->actionTelegram, &QAction::triggered, this, &MainWindow::telegram);
     QObject::connect(ui->actionReportBug, &QAction::triggered, this, &MainWindow::reportbug);
-
     QObject::connect(ui->actionWebsite, &QAction::triggered, this, &MainWindow::website);
 
     // Set up check for updates action
@@ -579,18 +574,18 @@ void MainWindow::addressBook() {
     AddressBook::open(this);
 }
 
-void MainWindow::discord() {
-    QString url = "https://myhush.org/discord/";
+void MainWindow::telegram() {
+    QString url = "https://hush.is/tg";
     QDesktopServices::openUrl(QUrl(url));
 }
 
 void MainWindow::reportbug() {
-    QString url = "https://github.com/MyHush/SilentDragon/issues/new";
+    QString url = "https://git.hush.is/hush/SilentDragon/issues/new";
     QDesktopServices::openUrl(QUrl(url));
 }
 
 void MainWindow::website() {
-    QString url = "https://myhush.org";
+    QString url = "https://hush.is";
     QDesktopServices::openUrl(QUrl(url));
 }
 
@@ -608,9 +603,7 @@ void MainWindow::donate() {
     ui->tabWidget->setCurrentIndex(1);
 }
 
-/**
- * Validate an address
- */
+// Validate an address
 void MainWindow::validateAddress() {
     // Make sure everything is up and running
     if (!getRPC() || !getRPC()->getConnection())

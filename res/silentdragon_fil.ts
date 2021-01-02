@@ -470,8 +470,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1600"/>
-        <source>&amp;Hush Discord</source>
-        <translation>Discord ng Hush</translation>
+        <source>&amp;Hush Telegram</source>
+        <translation>Telegram ng Hush</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1605"/>

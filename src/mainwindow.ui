@@ -1540,7 +1540,7 @@
      <string>&amp;Help</string>
     </property>
     <addaction name="actionDonate"/>
-    <addaction name="actionDiscord"/>
+    <addaction name="actionTelegram"/>
     <addaction name="actionWebsite"/>
     <addaction name="actionCheck_for_Updates"/>
     <addaction name="actionReportBug"/>
@@ -1595,9 +1595,9 @@
     <string>&amp;Send Duke Feedback</string>
    </property>
   </action>
-  <action name="actionDiscord">
+  <action name="actionTelegram">
    <property name="text">
-    <string>&amp;Hush Discord</string>
+    <string>&amp;Hush Telegram</string>
    </property>
   </action>
   <action name="actionWebsite">

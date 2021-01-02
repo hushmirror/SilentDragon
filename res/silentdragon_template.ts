@@ -424,7 +424,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1453"/>
-        <source>&amp;Hush Discord</source>
+        <source>&amp;Hush Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

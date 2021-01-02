@@ -26,9 +26,9 @@ SilentDragon contacts a few different external websites to get various
 bits of data.
 
     * coingecko.com for price data API
-    * explorer.myhush.org for explorer links
+    * explorer.hush.is for explorer links
     * dexstats.info for address utilities
-    * wormhole.myhush.org for Wormhole services
+    * wormhole.hush.is for Wormhole services
 
 This means your IP address is known to these servers. Enable Tor setting
 in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.org/

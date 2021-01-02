@@ -615,7 +615,7 @@
         </rect>
        </property>
        <property name="text">
-        <string notr="true">https://explorer.myhush.org/tx/</string>
+        <string notr="true">https://explorer.hush.is/tx/</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_15">
@@ -641,7 +641,7 @@
         </rect>
        </property>
        <property name="text">
-        <string notr="true">https://explorer.myhush.org/address/</string>
+        <string notr="true">https://explorer.hush.is/address/</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_16">
@@ -693,7 +693,7 @@
         </rect>
        </property>
        <property name="text">
-        <string notr="true">https://explorer.testnet.myhush.org/address/</string>
+        <string notr="true">https://explorer.testnet.hush.is/address/</string>
        </property>
       </widget>
      </widget>

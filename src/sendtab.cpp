@@ -776,9 +776,10 @@ QString MainWindow::doSendTxValidations(Tx tx) {
 	}
 
     for (auto toAddr : tx.toAddrs) {
+        //TODO: diff errors for completely invalid vs transparent? Educate.
         if (!Settings::isValidAddress(toAddr.addr)) {
             QString addr = (toAddr.addr.length() > 100 ? toAddr.addr.left(100) + "..." : toAddr.addr);
-            return QString(tr("Recipient Address ")) % addr % tr(" is Invalid");
+            return QString(tr("Extreme Privacy! ")) % addr % tr(" is transparent. You must send to a zaddr.");
         }
 
         // This technically shouldn't be possible, but issue #62 seems to have discovered a bug
@@ -787,7 +788,6 @@ QString MainWindow::doSendTxValidations(Tx tx) {
             return QString(tr("Amount '%1' is invalid!").arg(toAddr.amount));
         }
     }
-
 
     return QString();
 }
