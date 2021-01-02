@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2019-2020 The Hush developers
+# Copyright (c) 2019-2021 The Hush developers
 # Thanks to Zecwallet for the original code
 # Released under the GPLv3
 

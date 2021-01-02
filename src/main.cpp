@@ -1,4 +1,4 @@
-// Copyright 2019-2020 The Hush developers
+// Copyright 2019-2021 The Hush developers
 // GPLv3
 #include <singleapplication.h>
 

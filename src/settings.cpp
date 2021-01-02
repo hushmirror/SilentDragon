@@ -1,4 +1,4 @@
-// Copyright 2019-2020 Hush developers
+// Copyright 2019-2021 Hush developers
 // Released under the GPLv3
 #include "mainwindow.h"
 #include "settings.h"
