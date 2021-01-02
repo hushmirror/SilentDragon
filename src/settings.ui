@@ -473,7 +473,7 @@
        <item row="9" column="0" colspan="2">
         <widget class="QCheckBox" name="chkCheckUpdates">
          <property name="text">
-          <string>Check github for updates at startup</string>
+          <string>Check git.hush.is for updates at startup</string>
          </property>
         </widget>
        </item>
@@ -555,7 +555,7 @@
        <item row="10" column="0" colspan="2">
         <widget class="QLabel" name="label_8">
          <property name="text">
-          <string>Connect to github on startup to check for updates</string>
+          <string>Connect to git.hush.is on startup to check for updates</string>
          </property>
         </widget>
        </item>
