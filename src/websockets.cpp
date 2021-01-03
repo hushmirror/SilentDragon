@@ -1,4 +1,5 @@
-// Copyright 2019-2021 Hush developers
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #include "websockets.h"
 #include "rpc.h"
 #include "settings.h"

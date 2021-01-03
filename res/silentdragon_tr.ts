@@ -235,11 +235,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>Duke&apos;ye Geri Bildirim Gönder</translation>
@@ -515,6 +510,11 @@
         <translation>Hakkında</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>Ayarlar</translation>
@@ -529,8 +529,8 @@
         <translation type="vanished">Bağış Yap</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">Güncellemeler için github.com adresini kontrol edin</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Güncellemeler için git adresini kontrol edin</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1254,7 +1254,7 @@ Hepsi başarısız olursa, lütfen hushd&apos;i manuel olarak çalıştırın.</
         <translation>MB saniyede </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>Bir hata oluştu! : </translation>
     </message>
@@ -1388,7 +1388,7 @@ Yayınlanan sürümler sayfasını ziyaret etmek ister misiniz?</translation>
         <translation>hushd hatası</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1397,7 +1397,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktasını ve kullanıcı adı/şifreyi ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1406,28 +1406,28 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Lütfen Düzenle-&gt;Ayarlar menüsünde sunucu/bağlantı noktası ve kullanıcı adı/şifreyi ayarlayın.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Kimlik doğrulama başarısız oldu. Belirttiğiniz kullanıcı adı/şifre hushd tarafından kabul edilmedi. Düzenle-&gt; Ayarlar menüsünde değiştirmeyi deneyin</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>hushd&apos;niz başlıyor. Lütfen bekle.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Bu birkaç saat sürebilir, biraz patlamış mısır kapın</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Bağlantı Hatası</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>İşlem Hatası</translation>
@@ -1994,8 +1994,8 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">Başlangıçta güncellemeler için github&apos;u kontrol et</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Başlangıçta güncellemeler için git&apos;u kontrol et</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="524"/>
@@ -2008,8 +2008,8 @@ Onaylanmamış fonunuz var veya otomatik geçiş için bakiye çok düşük.</tr
         <translation>Tor ağına 127.0.0.1:9050&apos;de çalışan SOCKS proxy üzerinden bağlanın. Lütfen Tor servisini harici olarak kurmanız ve çalıştırmanız gerektiğini lütfen unutmayın.</translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Güncellemeleri denetlemek için başlangıçta github&apos;a bağlanır</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Güncellemeleri denetlemek için başlangıçta git&apos;a bağlanır</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

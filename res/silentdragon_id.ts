@@ -287,6 +287,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Check git.hush.is for &amp;updates</source>
         <translation type="unfinished"></translation>
@@ -456,11 +461,6 @@
         <translation>&amp;Tentang</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Pengaturan</translation>
@@ -486,8 +486,8 @@
         <translation>&amp;Website Hush</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">Cek github.com untuk &amp;Perbarui</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Cek git untuk &amp;Perbarui</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1266,48 +1266,48 @@ Tidak dapat memulai menanam hushd karena tidak ada penanaman yang diteruskan</tr
         <translation>Kesalahan Hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Koneksi manual diminta, tetapi pengaturan tidak dikonfigurasi. Harap setel host / port dan pengguna / kata sandi di menu Edit- &gt; Pengaturan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Tidak dapat terhubung ke pengaturan yang diatur dalam Hushd. Harap setel host / port dan pengguna / kata sandi di menu Edit- &gt; Pengaturan.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Otentikasi gagal. Nama pengguna / kata sandi yang Anda tentukan tidak diterima oleh hushd. Coba ubah di menu Edit- &gt; Pengaturan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd telah memulai. Harap tunggu</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Inibmungkin memakan beberapa jam, ambil beberapa popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Kesalahan Koneksi</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Kesalahan Transaksi</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>Terjadi kesalahan!</translation>
     </message>
@@ -1891,8 +1891,8 @@ Would you like to visit the releases page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">Cek pembaruan github di memulai</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Cek pembaruan git di memulai</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>

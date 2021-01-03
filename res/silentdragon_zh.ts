@@ -397,11 +397,6 @@
         <translation>连接数</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation type="unfinished"></translation>
@@ -499,6 +494,11 @@
         <translation>&amp;关于</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;设置</translation>
@@ -513,8 +513,8 @@
         <translation type="vanished">&amp;捐赠</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">检查github.com获取和&amp;更新</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">检查git获取和&amp;更新</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1415,7 +1415,7 @@ Not starting embedded hushd because --no-embedded was passed</source>
         <translation>hushd 出错</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1424,7 +1424,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 请在编辑 - &gt;设置菜单中设置主机/端口和用户/密码。</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1433,22 +1433,22 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 请在编辑 - &gt;设置菜单中设置主机/端口和用户/密码。</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>验证失败。 hushd不接受您指定的用户名/密码。 请在编辑 - &gt;设置菜单中更改它</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>你的hushd正在启动。 请耐心等待。</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1457,13 +1457,13 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">这可能需要几个小时</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>连接错误</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>交易错误</translation>
@@ -2225,8 +2225,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">启动时检查github更新</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">启动时检查git更新</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -2269,8 +2269,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>通过运行在127.0.0.1:9050上的SOCKS代理连接到Tor网络。 请注意，您必须在外部安装和运行Tor服务。</translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">在启动时连接到github以检查更新</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">在启动时连接到git以检查更新</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

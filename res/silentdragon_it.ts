@@ -249,11 +249,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Invia feedback Duke</translation>
@@ -505,6 +500,11 @@
         <translation>&amp;About</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Impostazioni</translation>
@@ -519,7 +519,7 @@
         <translation type="vanished">&amp;Dona</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
+        <source>Check git for &amp;updates</source>
         <translation type="vanished">Controllo nuovi &amp;aggiornamenti</translation>
     </message>
     <message>
@@ -1266,12 +1266,12 @@ If all else fails, please run hushd manually.</source>
         <translation>MB a </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Potrebbero essere necessarie alcune ore, prendi dei popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>C&apos;era un errore! :</translation>
     </message>
@@ -1403,7 +1403,7 @@ Would you like to visit the releases page?</source>
         <translation>hushd errore</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1411,7 +1411,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Impostare host/porta e utente/password nel menu Modifica-&gt; Impostazioni.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1420,23 +1420,23 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Impostare host/porta e utente/password nel menu Modifica-&gt; Impostazioni.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Autenticazione fallita. Il nome utente/password che hai specificato non sono stati accettati da hushd. Prova a cambiarlo nel menu Modifica-&gt; Impostazioni</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Il tuo hushd si sta avviando. Attendere prego.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Errore di Connessione</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Errore di transazione</translation>

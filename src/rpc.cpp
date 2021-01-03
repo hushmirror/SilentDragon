@@ -69,9 +69,9 @@ RPC::~RPC() {
 }
 
 void RPC::setEZcashd(std::shared_ptr<QProcess> p) {
-    ezcashd = p;
+    ehushd = p;
 
-    if (ezcashd && ui->tabWidget->widget(4) == nullptr) {
+    if (ehushd && ui->tabWidget->widget(4) == nullptr) {
         ui->tabWidget->addTab(main->zcashdtab, "zcashd");
     }
 }
@@ -1212,7 +1212,7 @@ void RPC::refreshPrice() {
 
 void RPC::shutdownZcashd() {
     // Shutdown embedded hushd if it was started
-    if (ezcashd == nullptr || ezcashd->processId() == 0 || conn == nullptr) {
+    if (ehushd == nullptr || ehushd->processId() == 0 || conn == nullptr) {
         // No hushd running internally, just return
         return;
     }
@@ -1251,8 +1251,8 @@ void RPC::shutdownZcashd() {
     QObject::connect(&waiter, &QTimer::timeout, [&] () {
         waitCount++;
 
-        if ((ezcashd->atEnd() && ezcashd->processId() == 0) ||
-            ezcashd->state() == QProcess::NotRunning ||
+        if ((ehushd->atEnd() && ehushd->processId() == 0) ||
+            ehushd->state() == QProcess::NotRunning ||
             waitCount > 30 ||
             conn->config->zcashDaemon)  {   // If hushd is daemon, then we don't have to do anything else
             qDebug() << "Ended";

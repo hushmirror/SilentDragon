@@ -246,11 +246,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Envoyer des commentaires à Duke</translation>
@@ -503,6 +498,11 @@
         <translation>&amp;À propos</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Préférences</translation>
@@ -517,7 +517,7 @@
         <translation type="vanished">&amp;Faire un don</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
+        <source>Check git for &amp;updates</source>
         <translation type="vanished">Vérifier les mises à jour...</translation>
     </message>
     <message>
@@ -1287,12 +1287,12 @@ If all else fails, please run hushd manually.</source>
         <translation>MB à </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Cela peut prendre plusieurs heures. Prenez du pop-corn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>Il y avait une erreur! :</translation>
     </message>
@@ -1424,7 +1424,7 @@ Would you like to visit the releases page?</source>
         <translation>erreur hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1433,7 +1433,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu Edition-&gt;Préférences.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1442,23 +1442,23 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Veuillez configurer l&apos;hôte/port et utilisateur/mot de passe dans le menu Edition-&gt;Préférences.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Authentification échouée. Le nom d&apos;utilisateur / mot de passe que vous avez spécifié n&apos;a pas été accepté par hushd. Essayez de le changer dans le menu Edition-&gt; Préférences</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Votre hushd est en cours de démarrage. Veuillez patienter.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Erreur de connection</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Erreur de transaction</translation>
@@ -1769,7 +1769,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
         <translation>Options</translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
+        <source>Check git for updates at startup</source>
         <translation type="vanished">Vérifiez les mises à jour sur Github au démarrage</translation>
     </message>
     <message>
@@ -2043,8 +2043,8 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Connection à github au démarrage pour vérifier les mises à jour</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Connection à git au démarrage pour vérifier les mises à jour</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

@@ -1,3 +1,5 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef RPCCLIENT_H
 #define RPCCLIENT_H
 
@@ -37,7 +39,7 @@ public:
 
     void setConnection(Connection* c);
     void setEZcashd(std::shared_ptr<QProcess> p);
-    const QProcess* getEZcashD() { return ezcashd.get(); }
+    const QProcess* getEHushD() { return ehushd.get(); }
 
     void refresh(bool force = false);
 
@@ -78,7 +80,7 @@ public:
 
     void shutdownZcashd();
     void noConnection();
-    bool isEmbedded() { return ezcashd != nullptr; }
+    bool isEmbedded() { return ehushd != nullptr; }
 
     QString getDefaultSaplingAddress();
     QString getDefaultTAddress();
@@ -111,7 +113,7 @@ private:
     void getTAddresses          (const std::function<void(QJsonValue)>& cb);
 
     Connection*                 conn                        = nullptr;
-    std::shared_ptr<QProcess>   ezcashd                     = nullptr;
+    std::shared_ptr<QProcess>   ehushd                     = nullptr;
 
     QList<UnspentOutput>*       utxos                       = nullptr;
     QMap<QString, double>*      allBalances                 = nullptr;

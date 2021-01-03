@@ -214,6 +214,11 @@
         <translation>Langste Keten</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Verstuur Duke Feedback</translation>
@@ -498,11 +503,6 @@
         <translation>&amp;Over</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Instellingen</translation>
@@ -517,8 +517,8 @@
         <translation type="vanished">&amp;Doar</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">Check github.com voor &amp;updates</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Check git voor &amp;updates</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1266,12 +1266,12 @@ Als al het andere faalt, voer hushd dan handmatig uit.</translation>
         <translation>MB om </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Dit kan enkele uren duren, pak wat popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>Er was een error! : </translation>
     </message>
@@ -1401,7 +1401,7 @@ Wilt u de releasepagine bezoeken?</translation>
         <translation>Hushd fout</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1410,7 +1410,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Stel de host / poort en gebruiker / wachtwoord in het menu Bewerken-&gt; Instellingen in.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1419,23 +1419,23 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Stel de host / poort en gebruiker / wachtwoord in het menu Bewerken-&gt; Instellingen in.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Verificatie mislukt. De gebruikersnaam / wachtwoord dat u hebt opgegeven  is niet geaccepteerd door hushd. Probeer het te veranderen in het menu Bewerken-&gt; Instellingen</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>hushd is aan het opstarten. Even geduld AUB.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Connectie Fout</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Transactie Fout</translation>
@@ -1822,8 +1822,8 @@ Je hebt nog onbevestigde transacties of je saldo is te laag voor een automatisch
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">Check github voor updates bij opstarten</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Check git voor updates bij opstarten</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="157"/>
@@ -2076,8 +2076,8 @@ Je hebt nog onbevestigde transacties of je saldo is te laag voor een automatisch
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Verbind met github tijdens het opstarten om te checken voor updates</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Verbind met git tijdens het opstarten om te checken voor updates</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

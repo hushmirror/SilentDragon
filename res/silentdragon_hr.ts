@@ -257,6 +257,11 @@
         <translation>Trenutno ne rudarite</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Check git.hush.is for &amp;updates</source>
         <translation type="unfinished"></translation>
@@ -452,11 +457,6 @@
         <translation>&amp;O</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Postavke</translation>
@@ -482,8 +482,8 @@
         <translation>&amp;Hush Web stranica</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">Provjeri na github.com &amp;dopune</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Provjeri na git &amp;dopune</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1268,7 +1268,7 @@ Ne pokrećem integrirani hushd jer --no-embedded nije prilagođen</translation>
         <translation>hushd greška</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1277,7 +1277,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1286,34 +1286,34 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Autorizacija neuspješna. Hushd nije prihvatio korisničko ime / lozinku koju ste unijeli. Pokušajte to promijeniti u Uredi-&gt;Postavke meniju</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd se pokreće. Molimo pričekajte.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Ovo može potrajati nekoliko sati, donesite si kokice</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Greška sa vezom</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>Dogodila se greška! : </translation>
     </message>
@@ -1899,8 +1899,8 @@ Would you like to visit the releases page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">Prilikom pokretanja provjetite ažuriranja na githubu</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Prilikom pokretanja provjetite ažuriranja na gitu</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1943,8 +1943,8 @@ Would you like to visit the releases page?</source>
         <translation>Spojite se na Tor mrežu putem SOCKS proxy na 127.0.0.1:9050. Molim vas uzmite u obzir da ćete morati izvana instalirati Tor uslugu.</translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Prilikom pokretanja provjerite ažuriranja na githubu</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Prilikom pokretanja provjerite ažuriranja na gitu</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

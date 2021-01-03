@@ -1,3 +1,5 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #include "requestdialog.h"
 #include "ui_requestdialog.h"
 #include "settings.h"

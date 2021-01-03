@@ -1,12 +1,10 @@
 // Copyright 2019-2021 The Hush developers
-// GPLv3
+// Released under the GPLv3
 #include <singleapplication.h>
-
 #include "precompiled.h"
 #include "mainwindow.h"
 #include "rpc.h"
 #include "settings.h"
-
 #include "version.h"
 
 class SignalHandler 

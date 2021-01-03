@@ -257,6 +257,11 @@
         <translation>Kasalukuyan kang hindi nagmimina</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Check git.hush.is for &amp;updates</source>
         <translation type="unfinished"></translation>
@@ -452,11 +457,6 @@
         <translation>About</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>Mga Settings</translation>
@@ -483,8 +483,8 @@
         <translation>Website ng Hush</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">I-check ang github.com para sa mga update</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">I-check ang git para sa mga update</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1267,7 +1267,7 @@ Hindi magsisimula ang naka-embed na hushd dahil - walang naka-embedd na naipasa<
         <translation>may mali sa hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1276,7 +1276,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Mangyaring i-set ang host/port at user/password sa Edit-&gt;Settings na menu.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1285,34 +1285,34 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Mangyaring i-set ang host/port at user/password sa Edit-&gt;Settings na menu.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>May mali sa Authentication. Ang username / password na iyong nilagay ay hindi tinangap ng hushd. Subukang baguhin ito sa Edit-&gt;Settings na menu</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Ang iyong hushd ay nagsisimula na. Mangyaring maghintay.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Maaaring tumagal ito ng ilang oras, kumuha ka nalang ng popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>May Mali sa Koneksyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>May Mali sa Transaksyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>Mayroong Mali! : </translation>
     </message>
@@ -1896,8 +1896,8 @@ Would you like to visit the releases page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">I-check ang github para sa mga update tuwing pag-bukas</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">I-check ang git para sa mga update tuwing pag-bukas</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1940,8 +1940,8 @@ Would you like to visit the releases page?</source>
         <translation>Kumonekta sa network ng TOR sa pamamagitan ng SOCKS proxy na tumatakbo sa 127.0.0.1:9050. Paalala lang na dapat mong i-install at patakbuhin ang serbisyo ng Tor sa labas ng app.</translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Kumonekta sa github simula pagbukas para i-check ang mga update</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Kumonekta sa git simula pagbukas para i-check ang mga update</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

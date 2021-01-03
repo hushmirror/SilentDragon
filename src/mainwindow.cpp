@@ -334,7 +334,7 @@ void MainWindow::setupSettingsModal() {
             isUsingTor = !rpc->getConnection()->config->proxy.isEmpty();
         }
         settings.chkTor->setChecked(isUsingTor);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkTor->setEnabled(false);
             settings.lblTor->setEnabled(false);
             QString tooltip = tr("Tor configuration is available only when running an embedded hushd.");
@@ -358,7 +358,7 @@ void MainWindow::setupSettingsModal() {
             isUsingConsolidation = !rpc->getConnection()->config->consolidation.isEmpty() == true;
         }
         settings.chkConso->setChecked(isUsingConsolidation);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkConso->setEnabled(false);
         }
 
@@ -369,7 +369,7 @@ void MainWindow::setupSettingsModal() {
             isUsingDeletetx = !rpc->getConnection()->config->deletetx.isEmpty() == true;
         }
         settings.chkDeletetx->setChecked(isUsingDeletetx);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkDeletetx->setEnabled(false);
         }
 
@@ -380,7 +380,7 @@ void MainWindow::setupSettingsModal() {
             isUsingZindex = !rpc->getConnection()->config->zindex.isEmpty() == true;
         }
         settings.chkzindex->setChecked(isUsingZindex);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkzindex->setEnabled(false);      
         }
 

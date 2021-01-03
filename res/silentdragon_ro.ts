@@ -201,6 +201,11 @@
         <translation>Adresa Ecranata (Privata, Anonima)</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Check git.hush.is for &amp;updates</source>
         <translation type="unfinished"></translation>
@@ -456,11 +461,6 @@
         <translation>&amp;Despre</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Setari</translation>
@@ -486,8 +486,8 @@
         <translation>Hush Website</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">Verifica github.com pentru &amp;actualizari</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Verifica git pentru &amp;actualizari</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1265,7 +1265,7 @@ Hushd incorporat nu se porneste deoarece incorporarea nu a fost efectuata  </tra
         <translation>eroarea hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1273,7 +1273,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Rugam sa setati host/port si utilizator/parola in Editare-&gt; Meniu setari</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1281,34 +1281,34 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Rugam sa setati host/port si utilizator/parola in Editare-&gt; Meniu setari</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Autentificare a esuat. Utilizator/parola specificata nu a fost acceptata de hushd. Incercati sa shimbati in Editare-&gt; Meniu setari</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd se porneste. Asteptati</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Acesta poate dura citeva ore, gateste-ti popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Eroare la Conexiune</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Eroarea de Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation>A avut loc eroarea</translation>
     </message>
@@ -1893,8 +1893,8 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">Verificati actualizarile la pornire pe github</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Verificati actualizarile la pornire pe git</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1937,8 +1937,8 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation>Conectati la retea Tor prin SOCKS proxy functionind pe 127.0.0.1:9050. Rugam sa retineti ca va fi nevoie instalarea si executarea serviciului extern Tor.</translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Conectati github la pornire pentru verificarea actualizarilor</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Conectati git la pornire pentru verificarea actualizarilor</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

@@ -1,3 +1,5 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
@@ -8,9 +10,9 @@
 class RPC;
 
 enum ConnectionType {
-    DetectedConfExternalZcashD = 1,
+    DetectedConfExternalHushD = 1,
     UISettingsZCashD,
-    InternalZcashD
+    InternalHushD
 };
 
 struct ConnectionConfig {
@@ -65,7 +67,7 @@ private:
 
     void doRPCSetConnection(Connection* conn);
 
-    std::shared_ptr<QProcess> ezcashd;
+    std::shared_ptr<QProcess> ehushd;
 
     QDialog*                d;
     Ui_ConnectionDialog*    connD;

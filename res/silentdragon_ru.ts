@@ -221,6 +221,11 @@
         <translation>hushd</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1584"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Check git.hush.is for &amp;updates</source>
         <translation type="unfinished"></translation>
@@ -489,11 +494,6 @@
         <translation>&amp;О кошельке</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Настройки</translation>
@@ -519,8 +519,8 @@
         <translation>&amp;Сайт Hush</translation>
     </message>
     <message>
-        <source>Check github.com for &amp;updates</source>
-        <translation type="vanished">&amp;Проверить github.com на обновления</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">&amp;Проверить git на обновления</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
@@ -1361,7 +1361,7 @@ Not starting embedded hushd because --no-embedded was passed</source>
         <translation>ошибка hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="426"/>
+        <location filename="../src/connection.cpp" line="425"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1370,22 +1370,22 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Пожалуйста, установите host/port и user/password в меню Изменить-&gt; Настройки.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="489"/>
+        <location filename="../src/connection.cpp" line="488"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Аутентификация не удалась. username / password, которые вы указали, не были приняты hushd. Попробуйте изменить его в меню Редактировать-&gt; Настройки</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="503"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Ваш hushd запускается. Пожалуйста, подождите.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="521"/>
+        <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
         <translation type="unfinished"></translation>
     </message>
@@ -1530,7 +1530,7 @@ Would you like to visit the releases page?</source>
         <translation>не удалось. Пожалуйста, проверьте сайт справки для получения дополнительной информации</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="414"/>
+        <location filename="../src/connection.cpp" line="413"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1543,13 +1543,13 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">Это может занять несколько часов</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/connection.cpp" line="537"/>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Ошибка соединения</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="816"/>
+        <location filename="../src/connection.cpp" line="815"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>&quot;&gt;Ошибка транзакции</translation>
@@ -2024,8 +2024,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation>Опции</translation>
     </message>
     <message>
-        <source>Check github for updates at startup</source>
-        <translation type="vanished">Проверьте github на наличие обновлений при запуске</translation>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Проверьте git на наличие обновлений при запуске</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="548"/>
@@ -2372,8 +2372,8 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="vanished">Подключаться к github при запуске, чтобы проверить наличие обновлений</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Подключаться к git при запуске, чтобы проверить наличие обновлений</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="580"/>

@@ -1,9 +1,10 @@
+// Copyright (c) 2019-2021 The Hush developers
+// Released under the GPLv3
 
 #ifndef sodium_H
 #define sodium_H
 
 #include "sodium/version.h"
-
 #include "sodium/core.h"
 #include "sodium/crypto_aead_aes256gcm.h"
 #include "sodium/crypto_aead_chacha20poly1305.h"
