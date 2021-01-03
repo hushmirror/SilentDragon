@@ -379,12 +379,11 @@ bool ConnectionLoader::startEmbeddedZcashd() {
         processStdErrOutput.append(output);
     });
 
-
     // This string should be the exact arg list seperated by single spaces
-    QString params = "-ac_name=HUSH3 -ac_sapling=1 -ac_reward=0,1125000000,562500000 -ac_halving=129,340000,840000 -ac_end=128,340000,5422111 -ac_eras=3 -ac_blocktime=150 -ac_cc=2 -ac_ccenable=228,234,235,236,241 -ac_founders=1 -ac_supply=6178674 -ac_perc=11111111 -clientname=GoldenSandtrout -addnode=188.165.212.101 -addnode=64.120.113.130 -addnode=209.58.144.205 -addnode=94.130.35.94 -ac_cclib=hush3 -ac_script=76a9145eb10cf64f2bab1b457f1f25e658526155928fac88ac";
+    QString params = "-ac_name=HUSH3 -ac_sapling=1 -ac_reward=0,1125000000,562500000 -ac_halving=129,340000,840000 -ac_end=128,340000,5422111 -ac_eras=3 -ac_blocktime=150 -ac_cc=2 -ac_ccenable=228,234,235,236,241 -ac_founders=1 -ac_supply=6178674 -ac_perc=11111111 -clientname=GoldenSandtrout -addnode=node1.hush.is -addnode=node2.hush.is -addnode=node3.hush.is -addnode=node4.hush.is -addnode=node5.hush.is -addnode=node6.hush.is -addnode=node7.hush.is -addnode=node8.hush.is -ac_cclib=hush3 -tls=only -ac_script=76a9145eb10cf64f2bab1b457f1f25e658526155928fac88ac";
     QStringList arguments = params.split(" ");
-    // Finally, actually start the full node
 
+    // Finally, actually start the full node
 #ifdef Q_OS_LINUX
     qDebug() << "Starting on Linux: " + hushdProgram + " " + params;
     ezcashd->start(hushdProgram, arguments);
