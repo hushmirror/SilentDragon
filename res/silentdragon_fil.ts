@@ -143,8 +143,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1189"/>
-        <location filename="../src/mainwindow.cpp" line="1256"/>
+        <location filename="../src/mainwindow.cpp" line="1182"/>
+        <location filename="../src/mainwindow.cpp" line="1249"/>
         <location filename="../src/sendtab.cpp" line="272"/>
         <source>Memo</source>
         <translation>Memo</translation>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1393"/>
+        <location filename="../src/mainwindow.cpp" line="1386"/>
         <source>Export Private Key</source>
         <translation>I-export and mga pribadong susi</translation>
     </message>
@@ -257,6 +257,11 @@
         <translation>Kasalukuyan kang hindi nagmimina</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1612"/>
+        <source>Check git.hush.is for &amp;updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="969"/>
         <location filename="../src/mainwindow.ui" line="983"/>
         <location filename="../src/mainwindow.ui" line="997"/>
@@ -266,22 +271,22 @@
         <location filename="../src/mainwindow.ui" line="1126"/>
         <location filename="../src/mainwindow.ui" line="1147"/>
         <location filename="../src/mainwindow.ui" line="1168"/>
-        <location filename="../src/mainwindow.ui" line="1189"/>
-        <location filename="../src/mainwindow.ui" line="1210"/>
-        <location filename="../src/mainwindow.ui" line="1231"/>
-        <location filename="../src/mainwindow.ui" line="1252"/>
-        <location filename="../src/mainwindow.ui" line="1273"/>
-        <location filename="../src/mainwindow.ui" line="1294"/>
-        <location filename="../src/mainwindow.ui" line="1315"/>
-        <location filename="../src/mainwindow.ui" line="1336"/>
-        <location filename="../src/mainwindow.ui" line="1357"/>
-        <location filename="../src/mainwindow.ui" line="1378"/>
-        <location filename="../src/mainwindow.ui" line="1400"/>
-        <location filename="../src/mainwindow.ui" line="1422"/>
-        <location filename="../src/mainwindow.ui" line="1437"/>
-        <location filename="../src/mainwindow.ui" line="1458"/>
-        <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
+        <location filename="../src/mainwindow.ui" line="1191"/>
+        <location filename="../src/mainwindow.ui" line="1212"/>
+        <location filename="../src/mainwindow.ui" line="1233"/>
+        <location filename="../src/mainwindow.ui" line="1254"/>
+        <location filename="../src/mainwindow.ui" line="1275"/>
+        <location filename="../src/mainwindow.ui" line="1296"/>
+        <location filename="../src/mainwindow.ui" line="1317"/>
+        <location filename="../src/mainwindow.ui" line="1338"/>
+        <location filename="../src/mainwindow.ui" line="1359"/>
+        <location filename="../src/mainwindow.ui" line="1380"/>
+        <location filename="../src/mainwindow.ui" line="1402"/>
+        <location filename="../src/mainwindow.ui" line="1424"/>
+        <location filename="../src/mainwindow.ui" line="1439"/>
+        <location filename="../src/mainwindow.ui" line="1460"/>
+        <location filename="../src/mainwindow.cpp" line="881"/>
+        <location filename="../src/mainwindow.cpp" line="945"/>
         <source>Loading...</source>
         <translation>unfinished</translation>
     </message>
@@ -319,21 +324,21 @@
         <location filename="../src/mainwindow.ui" line="1133"/>
         <location filename="../src/mainwindow.ui" line="1154"/>
         <location filename="../src/mainwindow.ui" line="1175"/>
-        <location filename="../src/mainwindow.ui" line="1196"/>
-        <location filename="../src/mainwindow.ui" line="1217"/>
-        <location filename="../src/mainwindow.ui" line="1238"/>
-        <location filename="../src/mainwindow.ui" line="1259"/>
-        <location filename="../src/mainwindow.ui" line="1280"/>
-        <location filename="../src/mainwindow.ui" line="1301"/>
-        <location filename="../src/mainwindow.ui" line="1322"/>
-        <location filename="../src/mainwindow.ui" line="1343"/>
-        <location filename="../src/mainwindow.ui" line="1364"/>
-        <location filename="../src/mainwindow.ui" line="1385"/>
-        <location filename="../src/mainwindow.ui" line="1407"/>
-        <location filename="../src/mainwindow.ui" line="1429"/>
-        <location filename="../src/mainwindow.ui" line="1485"/>
-        <location filename="../src/mainwindow.ui" line="1492"/>
-        <location filename="../src/mainwindow.ui" line="1499"/>
+        <location filename="../src/mainwindow.ui" line="1198"/>
+        <location filename="../src/mainwindow.ui" line="1219"/>
+        <location filename="../src/mainwindow.ui" line="1240"/>
+        <location filename="../src/mainwindow.ui" line="1261"/>
+        <location filename="../src/mainwindow.ui" line="1282"/>
+        <location filename="../src/mainwindow.ui" line="1303"/>
+        <location filename="../src/mainwindow.ui" line="1324"/>
+        <location filename="../src/mainwindow.ui" line="1345"/>
+        <location filename="../src/mainwindow.ui" line="1366"/>
+        <location filename="../src/mainwindow.ui" line="1387"/>
+        <location filename="../src/mainwindow.ui" line="1409"/>
+        <location filename="../src/mainwindow.ui" line="1431"/>
+        <location filename="../src/mainwindow.ui" line="1487"/>
+        <location filename="../src/mainwindow.ui" line="1494"/>
+        <location filename="../src/mainwindow.ui" line="1501"/>
         <source>|</source>
         <translation>|</translation>
     </message>
@@ -348,214 +353,212 @@
         <translation>Naka-notaryong Lag</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1182"/>
         <source>KMD Version</source>
-        <translation>Bersyon ng KMD</translation>
+        <translation type="vanished">Bersyon ng KMD</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1203"/>
+        <location filename="../src/mainwindow.ui" line="1205"/>
         <source>Protocol Version</source>
         <translation>Bersyon ng Protokol</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1224"/>
+        <location filename="../src/mainwindow.ui" line="1226"/>
         <source>Version</source>
         <translation>Bersyon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1245"/>
+        <location filename="../src/mainwindow.ui" line="1247"/>
         <source>P2P Port</source>
         <translation>Port ng P2P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1268"/>
         <source>RPC Port</source>
         <translation>Port ng RPC</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1289"/>
         <source>Client Name</source>
         <translation>Pangalan ng Kliyente</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1310"/>
         <source>Next Halving</source>
         <translation>Susunod na Paghahati</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1331"/>
         <source>Local Services</source>
         <translation>Lokal na mga Serbisyo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1352"/>
         <source>Longest Chain</source>
         <translation>Pinakamataas na Chain</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1373"/>
         <source>Wallet Transactions</source>
         <translation>Mga Transaksyon ng Wallet</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1393"/>
+        <location filename="../src/mainwindow.ui" line="1395"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1415"/>
+        <location filename="../src/mainwindow.ui" line="1417"/>
         <source>TLS Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1444"/>
+        <location filename="../src/mainwindow.ui" line="1446"/>
         <source>Network solution rate</source>
         <translation>Bilis ng Solusyon sa Network</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1451"/>
+        <location filename="../src/mainwindow.ui" line="1453"/>
         <source>Connections</source>
         <translation>Mga Koneksyon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1525"/>
+        <location filename="../src/mainwindow.ui" line="1527"/>
         <source>&amp;File</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1540"/>
+        <location filename="../src/mainwindow.ui" line="1542"/>
         <source>&amp;Help</source>
         <translation>Tulong</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1551"/>
+        <location filename="../src/mainwindow.ui" line="1553"/>
         <source>&amp;Apps</source>
         <translation>Mga App</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1559"/>
+        <location filename="../src/mainwindow.ui" line="1561"/>
         <source>&amp;Edit</source>
         <translation>I-edit</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1572"/>
+        <location filename="../src/mainwindow.ui" line="1574"/>
         <source>E&amp;xit</source>
         <translation>Umalis</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1577"/>
+        <location filename="../src/mainwindow.ui" line="1579"/>
         <source>&amp;About</source>
         <translation>About</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1582"/>
+        <location filename="../src/mainwindow.ui" line="1584"/>
         <source>&amp;Report a bug on Github</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1587"/>
+        <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>Mga Settings</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1590"/>
+        <location filename="../src/mainwindow.ui" line="1592"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1595"/>
+        <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>Magpadala ng Katugunan kay Duke
 </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1600"/>
+        <location filename="../src/mainwindow.ui" line="1602"/>
         <source>&amp;Hush Telegram</source>
         <translation>Telegram ng Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1605"/>
+        <location filename="../src/mainwindow.ui" line="1607"/>
         <source>&amp;Hush Website</source>
         <translation>Website ng Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1610"/>
         <source>Check github.com for &amp;updates</source>
-        <translation>I-check ang github.com para sa mga update</translation>
+        <translation type="vanished">I-check ang github.com para sa mga update</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1615"/>
+        <location filename="../src/mainwindow.ui" line="1617"/>
         <source>Sapling &amp;turnstile</source>
         <translation>Sapling turnstile</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1618"/>
+        <location filename="../src/mainwindow.ui" line="1620"/>
         <source>Ctrl+A, Ctrl+T</source>
         <translation>Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1623"/>
+        <location filename="../src/mainwindow.ui" line="1625"/>
         <source>&amp;Import private key</source>
         <translation>I-import ang pribadong susi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1628"/>
+        <location filename="../src/mainwindow.ui" line="1630"/>
         <source>&amp;Export all private keys</source>
         <translation>I-export lahat ng pribadong susi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1633"/>
+        <location filename="../src/mainwindow.ui" line="1635"/>
         <source>&amp;z-board.net</source>
         <translation>&amp;z-board.net</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1636"/>
+        <location filename="../src/mainwindow.ui" line="1638"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1641"/>
+        <location filename="../src/mainwindow.ui" line="1643"/>
         <source>Address &amp;book</source>
         <translation>Libro ng mga Address</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1644"/>
+        <location filename="../src/mainwindow.ui" line="1646"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1649"/>
+        <location filename="../src/mainwindow.ui" line="1651"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>I-backup ang wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1654"/>
-        <location filename="../src/mainwindow.cpp" line="828"/>
+        <location filename="../src/mainwindow.ui" line="1656"/>
+        <location filename="../src/mainwindow.cpp" line="821"/>
         <source>Export transactions</source>
         <translation>I-export ang mga transaksyon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1659"/>
+        <location filename="../src/mainwindow.ui" line="1661"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation>Magbayad ng HUSH URI...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1664"/>
+        <location filename="../src/mainwindow.ui" line="1666"/>
         <source>Connect mobile &amp;app</source>
         <translation>I-connect ang mobile app</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1667"/>
+        <location filename="../src/mainwindow.ui" line="1669"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1672"/>
+        <location filename="../src/mainwindow.ui" line="1674"/>
         <source>Request HUSH...</source>
         <translation>Humingi ng HUSH...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1677"/>
+        <location filename="../src/mainwindow.ui" line="1679"/>
         <source>Validate Address</source>
         <translation>Patunayan ang Address</translation>
     </message>
@@ -568,37 +571,37 @@
         <translation type="vanished">Mangyaring i-restart ang SilentDragon upang mailapat ang tema</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="345"/>
+        <location filename="../src/mainwindow.cpp" line="340"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Ang konpigurasyon ng Tor ay pwede lamang tuwing nagpapatakbo ng isang naka-embed na hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="432"/>
+        <location filename="../src/mainwindow.cpp" line="427"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Gumagamit ka ng eksternal na hushd. Mangyaring i-restart ang hushd gamit ang -rescan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="435"/>
+        <location filename="../src/mainwindow.cpp" line="430"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Gumagamit ka ng eksternal na hushd. Mangyaring i-restart ang hushd gamit ang -reindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="461"/>
+        <location filename="../src/mainwindow.cpp" line="456"/>
         <source>Enable Tor</source>
         <translation>I-enable ang Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="462"/>
+        <location filename="../src/mainwindow.cpp" line="457"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Ang koneksyon gamit ang Tor ay naka-enable na. Para gamitin ang tampok na ito, kailangan mong i-restart ang SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="471"/>
+        <location filename="../src/mainwindow.cpp" line="466"/>
         <source>Disable Tor</source>
         <translation>I-disable ang Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="472"/>
+        <location filename="../src/mainwindow.cpp" line="467"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Ang koneksyon gamit ang Tor ay naka-disable na. Upang ganap na ma-diskonekta sa Tor, kailangan mong i-restart ang SilentDragon</translation>
     </message>
@@ -607,250 +610,250 @@
         <translation type="vanished">Kailangan mag restart ng SilentDragon para mag scan o index muli. Magsasara na muna ang SilentDragon, mangyaring i-restart lang ang SilentDragon upang magpatuloy.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="555"/>
-        <location filename="../src/mainwindow.cpp" line="561"/>
+        <location filename="../src/mainwindow.cpp" line="550"/>
+        <location filename="../src/mainwindow.cpp" line="556"/>
         <source>Restart SilentDragon</source>
         <translation>I-restart ang SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="559"/>
+        <location filename="../src/mainwindow.cpp" line="554"/>
         <source>SilentDragon needs to reindex for zindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="603"/>
+        <location filename="../src/mainwindow.cpp" line="598"/>
         <source>Some feedback about SilentDragon or Hush...</source>
         <translation>Iilang mga puna tungkol sa SilentDragon o Hush...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source>Send Duke some private and shielded feedback about </source>
         <translation>Magpadala kay Duke ng ilang mga pribado o naka-shield na katugunan tungkol</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source> or SilentDragon</source>
         <translation>o SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="621"/>
+        <location filename="../src/mainwindow.cpp" line="614"/>
         <source>Enter Address to validate</source>
         <translation>Ilagay ang Address na dapat i-validate</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="622"/>
+        <location filename="../src/mainwindow.cpp" line="615"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Transparent o Naka-shield na Address</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="670"/>
+        <location filename="../src/mainwindow.cpp" line="663"/>
         <source>Private key import rescan finished</source>
         <translation>Ang scan muli ng pag import ng pribadong susi ay natapos na</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="735"/>
+        <location filename="../src/mainwindow.cpp" line="728"/>
         <source>Paste HUSH URI</source>
         <translation>I-paste ang HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="747"/>
+        <location filename="../src/mainwindow.cpp" line="740"/>
         <source>Error paying Hush URI</source>
         <translation>May mali sa pagbayad sa Hush URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="748"/>
+        <location filename="../src/mainwindow.cpp" line="741"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>Ang URI ay dapat nasa pormang &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="783"/>
+        <location filename="../src/mainwindow.cpp" line="776"/>
         <source>Please paste your private keys here, one per line</source>
         <translation>Mangyaring i-paste ang iyong mga pribadong susi dito, isa lang kada linya</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="784"/>
+        <location filename="../src/mainwindow.cpp" line="777"/>
         <source>The keys will be imported into your connected Hush node</source>
         <translation>Ang mga susi ay mai-import sa iyong konektadong Hush code</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="815"/>
+        <location filename="../src/mainwindow.cpp" line="808"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation>Ang mga susi ay na import na! Maaring tumagal ng ilang minuto ang pag scan muli ng blockchain. Hanggang sa matapos ito, maaaring magiging limitado ang pag-andar.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="834"/>
+        <location filename="../src/mainwindow.cpp" line="827"/>
         <source>Error</source>
         <translation>May Mali</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="835"/>
+        <location filename="../src/mainwindow.cpp" line="828"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>May mali sa pag export ng mga transaksyon, ang file ay hindi na save</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>No wallet.dat</source>
         <translation>Walang wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Hindi mahanap ang wallet.dat sa kompyuter na ito</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="858"/>
+        <location filename="../src/mainwindow.cpp" line="851"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Kailangan mong i-back up galing sa makina kung saan umaandar ang hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="862"/>
+        <location filename="../src/mainwindow.cpp" line="855"/>
         <source>Backup wallet.dat</source>
         <translation>Backup wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup</source>
         <translation>Hindi kayang i-backup</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>Hindi kayang i-backup ang wallet.dat na file</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="868"/>
+        <location filename="../src/mainwindow.cpp" line="861"/>
         <source>You need to back it up manually.</source>
         <translation>Kailangan mong i-backup ng manu-mano</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="957"/>
+        <location filename="../src/mainwindow.cpp" line="950"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Ito ang lahat ng mga pribadong susi para sa lahat ng mga address sa iyong wallet</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="959"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
         <source>Private key for </source>
         <translation>Pribadong susi para sa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="899"/>
-        <location filename="../src/mainwindow.cpp" line="967"/>
+        <location filename="../src/mainwindow.cpp" line="892"/>
+        <location filename="../src/mainwindow.cpp" line="960"/>
         <source>Save File</source>
         <translation>I-save ang File</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
         <source>Theme Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>This change can take a few seconds.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>Currency Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="553"/>
+        <location filename="../src/mainwindow.cpp" line="548"/>
         <source>SilentDragon needs to restart to rescan,reindex,consolidation or deletetx. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="903"/>
-        <location filename="../src/mainwindow.cpp" line="971"/>
+        <location filename="../src/mainwindow.cpp" line="896"/>
+        <location filename="../src/mainwindow.cpp" line="964"/>
         <source>Unable to open file</source>
         <translation>Hindi mabuksan ang file</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1065"/>
-        <location filename="../src/mainwindow.cpp" line="1218"/>
+        <location filename="../src/mainwindow.cpp" line="1058"/>
+        <location filename="../src/mainwindow.cpp" line="1211"/>
         <source>Copy address</source>
         <translation>Kopyahin ang address</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1068"/>
-        <location filename="../src/mainwindow.cpp" line="1214"/>
-        <location filename="../src/mainwindow.cpp" line="1220"/>
+        <location filename="../src/mainwindow.cpp" line="1061"/>
+        <location filename="../src/mainwindow.cpp" line="1207"/>
+        <location filename="../src/mainwindow.cpp" line="1213"/>
         <source>Copied to clipboard</source>
         <translation>Na-kopya na sa clipboard</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1071"/>
+        <location filename="../src/mainwindow.cpp" line="1064"/>
         <source>Get private key</source>
         <translation>Kunin ang pribadong susi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1076"/>
+        <location filename="../src/mainwindow.cpp" line="1069"/>
         <source>Get viewing key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1092"/>
+        <location filename="../src/mainwindow.cpp" line="1085"/>
         <source>Shield balance to Sapling</source>
         <translation>I-shield ang balanse papunta sa Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1097"/>
-        <location filename="../src/mainwindow.cpp" line="1224"/>
+        <location filename="../src/mainwindow.cpp" line="1090"/>
+        <location filename="../src/mainwindow.cpp" line="1217"/>
         <source>View on block explorer</source>
         <translation>Tingnan sa block explorer</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1119"/>
+        <location filename="../src/mainwindow.cpp" line="1112"/>
         <source>Address Asset Viewer</source>
         <translation>Taga-tingin sa Asset ng Address</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1125"/>
+        <location filename="../src/mainwindow.cpp" line="1118"/>
         <source>Convert Address</source>
         <translation>I-convert ang Address</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1212"/>
+        <location filename="../src/mainwindow.cpp" line="1205"/>
         <source>Copy txid</source>
         <translation>Kopyahin ang txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1235"/>
+        <location filename="../src/mainwindow.cpp" line="1228"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1248"/>
+        <location filename="../src/mainwindow.cpp" line="1241"/>
         <source>View Payment Request</source>
         <translation>Tingnan ang kahilingan sa pagbayad</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1255"/>
+        <location filename="../src/mainwindow.cpp" line="1248"/>
         <source>View Memo</source>
         <translation>Tingnan ang Memo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1269"/>
+        <location filename="../src/mainwindow.cpp" line="1262"/>
         <source>Reply to </source>
         <translation>Sumagot kay</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1350"/>
+        <location filename="../src/mainwindow.cpp" line="1343"/>
         <source>Created new t-Addr</source>
         <translation>Lumikha ng bagong t-Addr</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1399"/>
+        <location filename="../src/mainwindow.cpp" line="1392"/>
         <source>Copy Address</source>
         <translation>Kopyahin ang Address</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1465"/>
+        <location filename="../src/mainwindow.cpp" line="1458"/>
         <source>Address has been previously used</source>
         <translation>Ang address ay nagamit na dati</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1467"/>
+        <location filename="../src/mainwindow.cpp" line="1460"/>
         <source>Address is unused</source>
         <translation>Ang address ay hindi pa nagamit</translation>
     </message>
@@ -953,6 +956,16 @@ doesn&apos;t look like a z-address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/sendtab.cpp" line="782"/>
+        <source>Extreme Privacy! </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="782"/>
+        <source> is transparent. You must send to a zaddr.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Computing Tx: </source>
         <translation type="vanished">Kompyuting Tx</translation>
     </message>
@@ -961,17 +974,15 @@ doesn&apos;t look like a z-address</source>
         <translation type="vanished">Ang Address ng Pinanggalingan ay Hindi Wasto</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source>Recipient Address </source>
-        <translation>Address ng Tagatanggap</translation>
+        <translation type="vanished">Address ng Tagatanggap</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source> is Invalid</source>
-        <translation>ay Hindi Wasto</translation>
+        <translation type="vanished">ay Hindi Wasto</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="787"/>
+        <location filename="../src/sendtab.cpp" line="788"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Ang halaga &apos;%1&apos; ay hindi wasto!</translation>
     </message>
@@ -1133,27 +1144,27 @@ doesn&apos;t look like a z-address</source>
         <translation>Burahin ang tatak</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="61"/>
+        <location filename="../src/connection.cpp" line="59"/>
         <source>Attempting autoconnect</source>
         <translation>Tinatangkang mag-autoconnect</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="70"/>
+        <location filename="../src/connection.cpp" line="68"/>
         <source>Starting embedded hushd</source>
         <translation>Sinisimulan ang embedded na hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>hushd is set to run as daemon</source>
         <translation>ang hushd ay nakatakdang tumakbo bilang daemon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>Waiting for hushd</source>
         <translation>Naghihintay sa hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="95"/>
+        <location filename="../src/connection.cpp" line="93"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1164,7 +1175,7 @@ daemon=1</source>
 daemon=1</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="100"/>
+        <location filename="../src/connection.cpp" line="98"/>
         <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
@@ -1181,12 +1192,12 @@ Kung dati mo nang sinimulan ang hushd na may custom na mga argumento, maaaring k
 Kung nabigo ang lahat, mangyaring manu-manong patakbuhin ang hushd.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="103"/>
+        <location filename="../src/connection.cpp" line="101"/>
         <source>The process returned</source>
         <translation>Bumalik ang proseso</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="111"/>
+        <location filename="../src/connection.cpp" line="109"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1195,68 +1206,68 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Hindi magsisimula ang naka-embed na hushd dahil - walang naka-embedd na naipasa</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Hide Advanced Config</source>
         <translation>I-tago ang Advanced na Config</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Show Advanced Config</source>
         <translation>Ipakita ang Advanced na Config</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="177"/>
+        <location filename="../src/connection.cpp" line="175"/>
         <source>Choose data directory</source>
         <translation>Pumili ng data directory</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="198"/>
+        <location filename="../src/connection.cpp" line="196"/>
         <source>Could not create HUSH3.conf.</source>
         <translation>Hindi makalikha ng HUSH3.conf.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="260"/>
+        <location filename="../src/connection.cpp" line="245"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Lahat ng mga Download ay Matagumpay na Natapos!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="283"/>
+        <location filename="../src/connection.cpp" line="268"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Hindi madownload ang params. Mangyaring i-check ang help site para sa karagdagang impormasyon.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="294"/>
+        <location filename="../src/connection.cpp" line="310"/>
         <source>Downloading </source>
         <translation>Nagda-download</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
+        <location filename="../src/connection.cpp" line="294"/>
         <source> more remaining )</source>
         <translation>natitira</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="295"/>
         <source>MB of </source>
         <translation>MB ng</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="295"/>
         <source>MB at </source>
         <translation>MB sa</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="310"/>
         <source> failed. Please check the help site for more info</source>
         <translation>nabigo. Mangyaring i-check ang help site para sa karagdagang impormasyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="349"/>
+        <location filename="../src/connection.cpp" line="334"/>
         <source>hushd error</source>
         <translation>may mali sa hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="429"/>
+        <location filename="../src/connection.cpp" line="414"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1265,7 +1276,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Mangyaring i-set ang host/port at user/password sa Edit-&gt;Settings na menu.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="441"/>
+        <location filename="../src/connection.cpp" line="426"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1274,85 +1285,85 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Mangyaring i-set ang host/port at user/password sa Edit-&gt;Settings na menu.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="489"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>May mali sa Authentication. Ang username / password na iyong nilagay ay hindi tinangap ng hushd. Subukang baguhin ito sa Edit-&gt;Settings na menu</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="504"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Ang iyong hushd ay nagsisimula na. Mangyaring maghintay.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="521"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Maaaring tumagal ito ng ilang oras, kumuha ka nalang ng popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="727"/>
+        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>May Mali sa Koneksyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
+        <location filename="../src/connection.cpp" line="816"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>May Mali sa Transaksyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
+        <location filename="../src/connection.cpp" line="816"/>
         <source>There was an error! : </source>
         <translation>Mayroong Mali! : </translation>
     </message>
     <message>
+        <location filename="../src/rpc.cpp" line="394"/>
         <location filename="../src/rpc.cpp" line="396"/>
-        <location filename="../src/rpc.cpp" line="398"/>
         <source>No Connection</source>
         <translation>Walang Koneksyon</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="675"/>
+        <location filename="../src/rpc.cpp" line="676"/>
         <source>Downloading blocks</source>
         <translation>Nagda-download ng blocks</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="678"/>
+        <location filename="../src/rpc.cpp" line="679"/>
         <source>Block height</source>
         <translation>Block height</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="694"/>
         <source>Syncing</source>
         <translation>Nagsi-sync</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="694"/>
         <source>Connected</source>
         <translation>Konektado</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="695"/>
+        <location filename="../src/rpc.cpp" line="696"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="705"/>
+        <location filename="../src/rpc.cpp" line="706"/>
         <source>Connected to hushd</source>
         <translation>Konektado sa hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="708"/>
+        <location filename="../src/rpc.cpp" line="709"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>Walang peer na koneksyon ang hushd! Baka network issue?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="727"/>
+        <location filename="../src/rpc.cpp" line="728"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>May mali sa pagkonekta sa hushd. Ang pagkakamali ay</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1022"/>
+        <location filename="../src/rpc.cpp" line="1023"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1361,34 +1372,34 @@ Mangyaring i-set ang host/port at user/password sa Edit-&gt;Settings na menu.</t
         <translation type="vanished">Nagco-compute and tx. Maaring tumagal ito ng ilang minuto.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1071"/>
+        <location filename="../src/rpc.cpp" line="1075"/>
         <source>Update Available</source>
         <translation>Mayroong Update</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1072"/>
+        <location filename="../src/rpc.cpp" line="1076"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
         <translation>May bagong release v%1 na makukuha! Ang nasa iyo ay ang v%2. Gusto mo bang bisitahin ang pahina ng mga release?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1084"/>
+        <location filename="../src/rpc.cpp" line="1088"/>
         <source>No updates available</source>
         <translation>Walang available na update</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1085"/>
+        <location filename="../src/rpc.cpp" line="1089"/>
         <source>You already have the latest release v%1</source>
         <translation>Nasa iyo na ang pinakabagong release v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1239"/>
+        <location filename="../src/rpc.cpp" line="1243"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Mangyaring maging mas kalmado at hintayin ang SilentDragon na mag-exit</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1240"/>
+        <location filename="../src/rpc.cpp" line="1244"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Hinihintay ang hush na mag-exit, y&apos;all</translation>
     </message>
@@ -1441,22 +1452,22 @@ Would you like to visit the releases page?</source>
         <translation>Halaga</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="435"/>
+        <location filename="../src/websockets.cpp" line="436"/>
         <source>Connected directly</source>
         <translation>Nakakonekta ng direkta</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="438"/>
+        <location filename="../src/websockets.cpp" line="439"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>Naka-konekta sa internet sa pamamagitan ng SilenDragon wormhole na serbisyo</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="745"/>
+        <location filename="../src/websockets.cpp" line="746"/>
         <source>Node is still syncing.</source>
         <translation>Ang node ay nagsi-sync pa.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="767"/>
+        <location filename="../src/websockets.cpp" line="768"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Walang address na may sapat na balanse upang gastusin! Subukang ilagay ang mga pondo sa iisang address.</translation>
     </message>
@@ -1876,8 +1887,17 @@ Would you like to visit the releases page?</source>
     </message>
     <message>
         <location filename="../src/settings.ui" line="476"/>
+        <source>Check git.hush.is for updates at startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="558"/>
+        <source>Connect to git.hush.is on startup to check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Check github for updates at startup</source>
-        <translation>I-check ang github para sa mga update tuwing pag-bukas</translation>
+        <translation type="vanished">I-check ang github para sa mga update tuwing pag-bukas</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1920,9 +1940,8 @@ Would you like to visit the releases page?</source>
         <translation>Kumonekta sa network ng TOR sa pamamagitan ng SOCKS proxy na tumatakbo sa 127.0.0.1:9050. Paalala lang na dapat mong i-install at patakbuhin ang serbisyo ng Tor sa labas ng app.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="558"/>
         <source>Connect to github on startup to check for updates</source>
-        <translation>Kumonekta sa github simula pagbukas para i-check ang mga update</translation>
+        <translation type="vanished">Kumonekta sa github simula pagbukas para i-check ang mga update</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

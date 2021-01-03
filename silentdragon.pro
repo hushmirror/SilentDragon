@@ -1,8 +1,6 @@
-#-------------------------------------------------
-#
+# Copyright 2018-2021 The Hush Developers
+# Released under the GPLv3
 # Project created by QtCreator 2018-10-05T09:54:45
-#
-#-------------------------------------------------
 
 QT       += core gui network
 

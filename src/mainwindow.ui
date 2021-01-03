@@ -1176,6 +1176,7 @@
                </property>
               </widget>
              </item>
+<!--
              <item row="10" column="0">
               <widget class="QLabel" name="kmdversionlabel">
                <property name="text">
@@ -1183,6 +1184,7 @@
                </property>
               </widget>
              </item>
+-->
              <item row="10" column="2">
               <widget class="QLabel" name="kmdversion">
                <property name="text">

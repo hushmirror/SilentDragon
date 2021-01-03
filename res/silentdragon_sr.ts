@@ -143,8 +143,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1189"/>
-        <location filename="../src/mainwindow.cpp" line="1256"/>
+        <location filename="../src/mainwindow.cpp" line="1182"/>
+        <location filename="../src/mainwindow.cpp" line="1249"/>
         <location filename="../src/sendtab.cpp" line="272"/>
         <source>Memo</source>
         <translation>Poruka (memo)</translation>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1393"/>
+        <location filename="../src/mainwindow.cpp" line="1386"/>
         <source>Export Private Key</source>
         <translation>Izvoz privatnog ključa</translation>
     </message>
@@ -257,6 +257,11 @@
         <translation>Trenutno ne rudarite</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1612"/>
+        <source>Check git.hush.is for &amp;updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="969"/>
         <location filename="../src/mainwindow.ui" line="983"/>
         <location filename="../src/mainwindow.ui" line="997"/>
@@ -266,22 +271,22 @@
         <location filename="../src/mainwindow.ui" line="1126"/>
         <location filename="../src/mainwindow.ui" line="1147"/>
         <location filename="../src/mainwindow.ui" line="1168"/>
-        <location filename="../src/mainwindow.ui" line="1189"/>
-        <location filename="../src/mainwindow.ui" line="1210"/>
-        <location filename="../src/mainwindow.ui" line="1231"/>
-        <location filename="../src/mainwindow.ui" line="1252"/>
-        <location filename="../src/mainwindow.ui" line="1273"/>
-        <location filename="../src/mainwindow.ui" line="1294"/>
-        <location filename="../src/mainwindow.ui" line="1315"/>
-        <location filename="../src/mainwindow.ui" line="1336"/>
-        <location filename="../src/mainwindow.ui" line="1357"/>
-        <location filename="../src/mainwindow.ui" line="1378"/>
-        <location filename="../src/mainwindow.ui" line="1400"/>
-        <location filename="../src/mainwindow.ui" line="1422"/>
-        <location filename="../src/mainwindow.ui" line="1437"/>
-        <location filename="../src/mainwindow.ui" line="1458"/>
-        <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
+        <location filename="../src/mainwindow.ui" line="1191"/>
+        <location filename="../src/mainwindow.ui" line="1212"/>
+        <location filename="../src/mainwindow.ui" line="1233"/>
+        <location filename="../src/mainwindow.ui" line="1254"/>
+        <location filename="../src/mainwindow.ui" line="1275"/>
+        <location filename="../src/mainwindow.ui" line="1296"/>
+        <location filename="../src/mainwindow.ui" line="1317"/>
+        <location filename="../src/mainwindow.ui" line="1338"/>
+        <location filename="../src/mainwindow.ui" line="1359"/>
+        <location filename="../src/mainwindow.ui" line="1380"/>
+        <location filename="../src/mainwindow.ui" line="1402"/>
+        <location filename="../src/mainwindow.ui" line="1424"/>
+        <location filename="../src/mainwindow.ui" line="1439"/>
+        <location filename="../src/mainwindow.ui" line="1460"/>
+        <location filename="../src/mainwindow.cpp" line="881"/>
+        <location filename="../src/mainwindow.cpp" line="945"/>
         <source>Loading...</source>
         <translation>Učitavanje...</translation>
     </message>
@@ -319,21 +324,21 @@
         <location filename="../src/mainwindow.ui" line="1133"/>
         <location filename="../src/mainwindow.ui" line="1154"/>
         <location filename="../src/mainwindow.ui" line="1175"/>
-        <location filename="../src/mainwindow.ui" line="1196"/>
-        <location filename="../src/mainwindow.ui" line="1217"/>
-        <location filename="../src/mainwindow.ui" line="1238"/>
-        <location filename="../src/mainwindow.ui" line="1259"/>
-        <location filename="../src/mainwindow.ui" line="1280"/>
-        <location filename="../src/mainwindow.ui" line="1301"/>
-        <location filename="../src/mainwindow.ui" line="1322"/>
-        <location filename="../src/mainwindow.ui" line="1343"/>
-        <location filename="../src/mainwindow.ui" line="1364"/>
-        <location filename="../src/mainwindow.ui" line="1385"/>
-        <location filename="../src/mainwindow.ui" line="1407"/>
-        <location filename="../src/mainwindow.ui" line="1429"/>
-        <location filename="../src/mainwindow.ui" line="1485"/>
-        <location filename="../src/mainwindow.ui" line="1492"/>
-        <location filename="../src/mainwindow.ui" line="1499"/>
+        <location filename="../src/mainwindow.ui" line="1198"/>
+        <location filename="../src/mainwindow.ui" line="1219"/>
+        <location filename="../src/mainwindow.ui" line="1240"/>
+        <location filename="../src/mainwindow.ui" line="1261"/>
+        <location filename="../src/mainwindow.ui" line="1282"/>
+        <location filename="../src/mainwindow.ui" line="1303"/>
+        <location filename="../src/mainwindow.ui" line="1324"/>
+        <location filename="../src/mainwindow.ui" line="1345"/>
+        <location filename="../src/mainwindow.ui" line="1366"/>
+        <location filename="../src/mainwindow.ui" line="1387"/>
+        <location filename="../src/mainwindow.ui" line="1409"/>
+        <location filename="../src/mainwindow.ui" line="1431"/>
+        <location filename="../src/mainwindow.ui" line="1487"/>
+        <location filename="../src/mainwindow.ui" line="1494"/>
+        <location filename="../src/mainwindow.ui" line="1501"/>
         <source>|</source>
         <translation>|</translation>
     </message>
@@ -348,213 +353,211 @@
         <translation>Potvrđeno zaostajanje</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1182"/>
         <source>KMD Version</source>
-        <translation>KMD verzija</translation>
+        <translation type="vanished">KMD verzija</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1203"/>
+        <location filename="../src/mainwindow.ui" line="1205"/>
         <source>Protocol Version</source>
         <translation>Verzija protokola</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1224"/>
+        <location filename="../src/mainwindow.ui" line="1226"/>
         <source>Version</source>
         <translation>Verzija</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1245"/>
+        <location filename="../src/mainwindow.ui" line="1247"/>
         <source>P2P Port</source>
         <translation>P2P port</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1268"/>
         <source>RPC Port</source>
         <translation>RPC port</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1289"/>
         <source>Client Name</source>
         <translation>Ime klijenta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1310"/>
         <source>Next Halving</source>
         <translation>Sledeći halving</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1331"/>
         <source>Local Services</source>
         <translation>Lokalni servisi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1352"/>
         <source>Longest Chain</source>
         <translation>Najduži niz</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1373"/>
         <source>Wallet Transactions</source>
         <translation>Transakcije u novčaniku</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1393"/>
+        <location filename="../src/mainwindow.ui" line="1395"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1415"/>
+        <location filename="../src/mainwindow.ui" line="1417"/>
         <source>TLS Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1444"/>
+        <location filename="../src/mainwindow.ui" line="1446"/>
         <source>Network solution rate</source>
         <translation>Snaga mreže</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1451"/>
+        <location filename="../src/mainwindow.ui" line="1453"/>
         <source>Connections</source>
         <translation>Povezanost</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1525"/>
+        <location filename="../src/mainwindow.ui" line="1527"/>
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1540"/>
+        <location filename="../src/mainwindow.ui" line="1542"/>
         <source>&amp;Help</source>
         <translation>&amp;Pomoć</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1551"/>
+        <location filename="../src/mainwindow.ui" line="1553"/>
         <source>&amp;Apps</source>
         <translation>&amp;Apps</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1559"/>
+        <location filename="../src/mainwindow.ui" line="1561"/>
         <source>&amp;Edit</source>
         <translation>&amp;Uredi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1572"/>
+        <location filename="../src/mainwindow.ui" line="1574"/>
         <source>E&amp;xit</source>
         <translation>&amp;Izlaz</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1577"/>
+        <location filename="../src/mainwindow.ui" line="1579"/>
         <source>&amp;About</source>
         <translation>&amp;O</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1582"/>
+        <location filename="../src/mainwindow.ui" line="1584"/>
         <source>&amp;Report a bug on Github</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1587"/>
+        <location filename="../src/mainwindow.ui" line="1589"/>
         <source>&amp;Settings</source>
         <translation>&amp;Podešavanja</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1590"/>
+        <location filename="../src/mainwindow.ui" line="1592"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1595"/>
+        <location filename="../src/mainwindow.ui" line="1597"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Pošalji Duke Feedback</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1600"/>
+        <location filename="../src/mainwindow.ui" line="1602"/>
         <source>&amp;Hush Telegram</source>
         <translation>&amp;Hush Telegram</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1605"/>
+        <location filename="../src/mainwindow.ui" line="1607"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Hush Web stranica</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1610"/>
         <source>Check github.com for &amp;updates</source>
-        <translation>Proveri na github.com &amp;dopune</translation>
+        <translation type="vanished">Proveri na github.com &amp;dopune</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1615"/>
+        <location filename="../src/mainwindow.ui" line="1617"/>
         <source>Sapling &amp;turnstile</source>
         <translation>Sapling &amp;čvorište</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1618"/>
+        <location filename="../src/mainwindow.ui" line="1620"/>
         <source>Ctrl+A, Ctrl+T</source>
         <translation>Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1623"/>
+        <location filename="../src/mainwindow.ui" line="1625"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Uvoz privatnog ključa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1628"/>
+        <location filename="../src/mainwindow.ui" line="1630"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Izvoz svih privatnih ključeva</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1633"/>
+        <location filename="../src/mainwindow.ui" line="1635"/>
         <source>&amp;z-board.net</source>
         <translation>&amp;z-board.net</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1636"/>
+        <location filename="../src/mainwindow.ui" line="1638"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1641"/>
+        <location filename="../src/mainwindow.ui" line="1643"/>
         <source>Address &amp;book</source>
         <translation>Adresna &amp;knjiga</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1644"/>
+        <location filename="../src/mainwindow.ui" line="1646"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1649"/>
+        <location filename="../src/mainwindow.ui" line="1651"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Rezervna kopija wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1654"/>
-        <location filename="../src/mainwindow.cpp" line="828"/>
+        <location filename="../src/mainwindow.ui" line="1656"/>
+        <location filename="../src/mainwindow.cpp" line="821"/>
         <source>Export transactions</source>
         <translation>Izvoz transakcija</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1659"/>
+        <location filename="../src/mainwindow.ui" line="1661"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation>Hush plaćanje &amp;URI...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1664"/>
+        <location filename="../src/mainwindow.ui" line="1666"/>
         <source>Connect mobile &amp;app</source>
         <translation>Spoji mobilnu &amp;app</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1667"/>
+        <location filename="../src/mainwindow.ui" line="1669"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1672"/>
+        <location filename="../src/mainwindow.ui" line="1674"/>
         <source>Request HUSH...</source>
         <translation>Zatraži HUSH...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1677"/>
+        <location filename="../src/mainwindow.ui" line="1679"/>
         <source>Validate Address</source>
         <translation>Potvrdi adresu</translation>
     </message>
@@ -567,53 +570,53 @@
         <translation type="vanished">Molim ponovo pokrenite SilentDragon kako bi primenili temu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
         <source>Theme Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>This change can take a few seconds.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>Currency Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="345"/>
+        <location filename="../src/mainwindow.cpp" line="340"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Tor postavke su dostupne samo ako je pokrenut integrirani hushd.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="432"/>
+        <location filename="../src/mainwindow.cpp" line="427"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Koristite vanjski hushd. Molim ponovo pokrenite hushd sa -rescan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="435"/>
+        <location filename="../src/mainwindow.cpp" line="430"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Koristite vanjski hushd. Molim ponovo pokrenite hushd sa -reindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="461"/>
+        <location filename="../src/mainwindow.cpp" line="456"/>
         <source>Enable Tor</source>
         <translation>Omogući Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="462"/>
+        <location filename="../src/mainwindow.cpp" line="457"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Veza putem Tora je omogućena. Ako želite koristiti ovo svojstvo, morate ponovo pokrenuti SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="471"/>
+        <location filename="../src/mainwindow.cpp" line="466"/>
         <source>Disable Tor</source>
         <translation>Onemogući Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="472"/>
+        <location filename="../src/mainwindow.cpp" line="467"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Veza putem Tora je onemogućena. Ako se želite potpuno maknuti sa Tora, morate ponovo pokrenuti SilentDragon.</translation>
     </message>
@@ -622,234 +625,234 @@
         <translation type="vanished">SilentDragon se mora ponovo pokrenuti za rescan/reindex. SilentDragon će se sada zatvoriti, molim ponovn pokrenite SilentDragon za nastavak</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="555"/>
-        <location filename="../src/mainwindow.cpp" line="561"/>
+        <location filename="../src/mainwindow.cpp" line="550"/>
+        <location filename="../src/mainwindow.cpp" line="556"/>
         <source>Restart SilentDragon</source>
         <translation>Ponovo pokrenite SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="559"/>
+        <location filename="../src/mainwindow.cpp" line="554"/>
         <source>SilentDragon needs to reindex for zindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="603"/>
+        <location filename="../src/mainwindow.cpp" line="598"/>
         <source>Some feedback about SilentDragon or Hush...</source>
         <translation>Neke povratne informacije o SilentDragonu ili Hushu...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source>Send Duke some private and shielded feedback about </source>
         <translation>Pošaljite Duke privatnu i zaštićenu povratnu informaciju o </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source> or SilentDragon</source>
         <translation> ili SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="621"/>
+        <location filename="../src/mainwindow.cpp" line="614"/>
         <source>Enter Address to validate</source>
         <translation>Unesite adresu za potvrdu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="622"/>
+        <location filename="../src/mainwindow.cpp" line="615"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Transparentna ili Zaštićena adresa:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="670"/>
+        <location filename="../src/mainwindow.cpp" line="663"/>
         <source>Private key import rescan finished</source>
         <translation>Dovršen rescan uvoza privatnog ključa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="735"/>
+        <location filename="../src/mainwindow.cpp" line="728"/>
         <source>Paste HUSH URI</source>
         <translation>Zalepi HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="747"/>
+        <location filename="../src/mainwindow.cpp" line="740"/>
         <source>Error paying Hush URI</source>
         <translation>Greška prilikom plaćanja Hush URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="748"/>
+        <location filename="../src/mainwindow.cpp" line="741"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI treba biti formata &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="783"/>
+        <location filename="../src/mainwindow.cpp" line="776"/>
         <source>Please paste your private keys here, one per line</source>
         <translation>Molim vas zalepite vaše privatne ključeve ovdje, jedan ključ po redu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="784"/>
+        <location filename="../src/mainwindow.cpp" line="777"/>
         <source>The keys will be imported into your connected Hush node</source>
         <translation>Ključevi će biti unešeni u vaš povezani Hush čvor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="815"/>
+        <location filename="../src/mainwindow.cpp" line="808"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation>Ključevi su unešeni. Rescan blockchaina može potrajati i do nekoliko minuta. Do tada su limitirane funkcionalnosti</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="834"/>
+        <location filename="../src/mainwindow.cpp" line="827"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="835"/>
+        <location filename="../src/mainwindow.cpp" line="828"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>Greška prilikom izvoza transakcija, datoteka nije spremljena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>No wallet.dat</source>
         <translation>Nema wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Ne mogu pronaći wallet.dat na ovom računaru</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="858"/>
+        <location filename="../src/mainwindow.cpp" line="851"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Morate napraviti rezervnu kopiju na računaru na kojem je aktivan hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="862"/>
+        <location filename="../src/mainwindow.cpp" line="855"/>
         <source>Backup wallet.dat</source>
         <translation>Rezervna kopija wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup</source>
         <translation>Nije moguće napraviti rezervnu kopiju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>Nije moguće napraviti rezervnu kopiju wallet.dat datoteke.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="868"/>
+        <location filename="../src/mainwindow.cpp" line="861"/>
         <source>You need to back it up manually.</source>
         <translation>Morate ručno napraviti rezervnu kopiju.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="957"/>
+        <location filename="../src/mainwindow.cpp" line="950"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Ovo su svi privatni ključevi svih adresa u vašem novčaniku</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="959"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
         <source>Private key for </source>
         <translation>Privatni ključ za </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="899"/>
-        <location filename="../src/mainwindow.cpp" line="967"/>
+        <location filename="../src/mainwindow.cpp" line="892"/>
+        <location filename="../src/mainwindow.cpp" line="960"/>
         <source>Save File</source>
         <translation>Spremi datoteku</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="553"/>
+        <location filename="../src/mainwindow.cpp" line="548"/>
         <source>SilentDragon needs to restart to rescan,reindex,consolidation or deletetx. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="903"/>
-        <location filename="../src/mainwindow.cpp" line="971"/>
+        <location filename="../src/mainwindow.cpp" line="896"/>
+        <location filename="../src/mainwindow.cpp" line="964"/>
         <source>Unable to open file</source>
         <translation>Nije moguće otvoriti datoteku</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1065"/>
-        <location filename="../src/mainwindow.cpp" line="1218"/>
+        <location filename="../src/mainwindow.cpp" line="1058"/>
+        <location filename="../src/mainwindow.cpp" line="1211"/>
         <source>Copy address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1068"/>
-        <location filename="../src/mainwindow.cpp" line="1214"/>
-        <location filename="../src/mainwindow.cpp" line="1220"/>
+        <location filename="../src/mainwindow.cpp" line="1061"/>
+        <location filename="../src/mainwindow.cpp" line="1207"/>
+        <location filename="../src/mainwindow.cpp" line="1213"/>
         <source>Copied to clipboard</source>
         <translation>Kopirano u međuspremnik</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1071"/>
+        <location filename="../src/mainwindow.cpp" line="1064"/>
         <source>Get private key</source>
         <translation>Dobavi privatni ključ</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1076"/>
+        <location filename="../src/mainwindow.cpp" line="1069"/>
         <source>Get viewing key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1092"/>
+        <location filename="../src/mainwindow.cpp" line="1085"/>
         <source>Shield balance to Sapling</source>
         <translation>Zaštiti saldo u Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1097"/>
-        <location filename="../src/mainwindow.cpp" line="1224"/>
+        <location filename="../src/mainwindow.cpp" line="1090"/>
+        <location filename="../src/mainwindow.cpp" line="1217"/>
         <source>View on block explorer</source>
         <translation>Pogledaj na blok exploreru</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1119"/>
+        <location filename="../src/mainwindow.cpp" line="1112"/>
         <source>Address Asset Viewer</source>
         <translation>Preglednik adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1125"/>
+        <location filename="../src/mainwindow.cpp" line="1118"/>
         <source>Convert Address</source>
         <translation>Pretvorite adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1212"/>
+        <location filename="../src/mainwindow.cpp" line="1205"/>
         <source>Copy txid</source>
         <translation>Kopitajte txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1235"/>
+        <location filename="../src/mainwindow.cpp" line="1228"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1248"/>
+        <location filename="../src/mainwindow.cpp" line="1241"/>
         <source>View Payment Request</source>
         <translation>Pogledajte zahtjev o plaćanju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1255"/>
+        <location filename="../src/mainwindow.cpp" line="1248"/>
         <source>View Memo</source>
         <translation>Pogledajte poruku (memo)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1269"/>
+        <location filename="../src/mainwindow.cpp" line="1262"/>
         <source>Reply to </source>
         <translation>Odgovorite </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1350"/>
+        <location filename="../src/mainwindow.cpp" line="1343"/>
         <source>Created new t-Addr</source>
         <translation>Napravljena je nova transparentna adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1399"/>
+        <location filename="../src/mainwindow.cpp" line="1392"/>
         <source>Copy Address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1465"/>
+        <location filename="../src/mainwindow.cpp" line="1458"/>
         <source>Address has been previously used</source>
         <translation>Adresa je već korištena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1467"/>
+        <location filename="../src/mainwindow.cpp" line="1460"/>
         <source>Address is unused</source>
         <translation>Adresa nije korištena</translation>
     </message>
@@ -954,6 +957,16 @@ ne izgleda kao z-adresa</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../src/sendtab.cpp" line="782"/>
+        <source>Extreme Privacy! </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="782"/>
+        <source> is transparent. You must send to a zaddr.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Computing Tx: </source>
         <translation type="vanished">Računska Tx: </translation>
     </message>
@@ -962,17 +975,15 @@ ne izgleda kao z-adresa</translation>
         <translation type="vanished">Neispravna adresa pošaljitelja</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source>Recipient Address </source>
-        <translation>Adresa primaoca </translation>
+        <translation type="vanished">Adresa primaoca </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source> is Invalid</source>
-        <translation> je neispravna</translation>
+        <translation type="vanished"> je neispravna</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="787"/>
+        <location filename="../src/sendtab.cpp" line="788"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Iznos &apos;%1&apos; je neispravan!</translation>
     </message>
@@ -1134,27 +1145,27 @@ ne izgleda kao z-adresa</translation>
         <translation>Izbrišite oznaku</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="61"/>
+        <location filename="../src/connection.cpp" line="59"/>
         <source>Attempting autoconnect</source>
         <translation>Pokušaj automatskog spajanja</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="70"/>
+        <location filename="../src/connection.cpp" line="68"/>
         <source>Starting embedded hushd</source>
         <translation>Pokrećem integrirani hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>hushd is set to run as daemon</source>
         <translation>hushd je pokrenut u pozadini</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>Waiting for hushd</source>
         <translation>Čekam hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="95"/>
+        <location filename="../src/connection.cpp" line="93"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1165,7 +1176,7 @@ daemon=1</source>
 deamon=1</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="100"/>
+        <location filename="../src/connection.cpp" line="98"/>
         <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
@@ -1182,12 +1193,12 @@ Ako ste već pokrenuli hushd sa prilagođenim argumentima, možda je potrebno po
 Ako ništa drugo ne radi, molimo pokrenite hushd ručno.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="103"/>
+        <location filename="../src/connection.cpp" line="101"/>
         <source>The process returned</source>
         <translation>Proces je odgovorio</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="111"/>
+        <location filename="../src/connection.cpp" line="109"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1196,68 +1207,68 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Ne pokrećem integrirani hushd jer --no-embedded nije prilagođen</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Hide Advanced Config</source>
         <translation>Sakrij naprednu konfiguraciju</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Show Advanced Config</source>
         <translation>Prikaži naprednu konfiguraciju</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="177"/>
+        <location filename="../src/connection.cpp" line="175"/>
         <source>Choose data directory</source>
         <translation>Izaberi popis datoteka</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="198"/>
+        <location filename="../src/connection.cpp" line="196"/>
         <source>Could not create HUSH3.conf.</source>
         <translation>Nije moguće napraviti HUSH3.conf.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="260"/>
+        <location filename="../src/connection.cpp" line="245"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Sva preuzimanja su uspešno završena!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="283"/>
+        <location filename="../src/connection.cpp" line="268"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Nije moguće preuzeti parametre. Za više informacija proverite na stranici Pomoć.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="294"/>
+        <location filename="../src/connection.cpp" line="310"/>
         <source>Downloading </source>
         <translation>Preuzimanje </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
+        <location filename="../src/connection.cpp" line="294"/>
         <source> more remaining )</source>
         <translation> još preostaje )</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="295"/>
         <source>MB of </source>
         <translation>Mb od </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="295"/>
         <source>MB at </source>
         <translation>MB uz </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="310"/>
         <source> failed. Please check the help site for more info</source>
         <translation> neuspešno. Za više informacija proverite na stranici Pomoć</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="349"/>
+        <location filename="../src/connection.cpp" line="334"/>
         <source>hushd error</source>
         <translation>hushd greška</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="429"/>
+        <location filename="../src/connection.cpp" line="414"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1266,7 +1277,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="441"/>
+        <location filename="../src/connection.cpp" line="426"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1275,85 +1286,85 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="489"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Autorizacija neuspešna. Hushd nije prihvatio korisničko ime / lozinku koju ste uneli. Pokušajte to promeniti u Uredi-&gt;Podešavanja meniju</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="504"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd se pokreće. Molimo pričekajte.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="521"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Ovo može potrajati nekoliko sati, donesite si kokice</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="727"/>
+        <location filename="../src/connection.cpp" line="538"/>
+        <location filename="../src/rpc.cpp" line="728"/>
         <source>Connection Error</source>
         <translation>Greška sa vezom</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
+        <location filename="../src/connection.cpp" line="816"/>
         <location filename="../src/sendtab.cpp" line="765"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
+        <location filename="../src/connection.cpp" line="816"/>
         <source>There was an error! : </source>
         <translation>Dogodila se greška! : </translation>
     </message>
     <message>
+        <location filename="../src/rpc.cpp" line="394"/>
         <location filename="../src/rpc.cpp" line="396"/>
-        <location filename="../src/rpc.cpp" line="398"/>
         <source>No Connection</source>
         <translation>Nema veze</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="675"/>
+        <location filename="../src/rpc.cpp" line="676"/>
         <source>Downloading blocks</source>
         <translation>Preuzimam blokove</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="678"/>
+        <location filename="../src/rpc.cpp" line="679"/>
         <source>Block height</source>
         <translation>Visina bloka</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="694"/>
         <source>Syncing</source>
         <translation>Sinhronizacija</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="694"/>
         <source>Connected</source>
         <translation>Spojeno</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="695"/>
+        <location filename="../src/rpc.cpp" line="696"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="705"/>
+        <location filename="../src/rpc.cpp" line="706"/>
         <source>Connected to hushd</source>
         <translation>Spojeno na hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="708"/>
+        <location filename="../src/rpc.cpp" line="709"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>hushd nema vezu sa točkama na istoj razini! Možda imate problem sa mrežom?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="727"/>
+        <location filename="../src/rpc.cpp" line="728"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>Pojavila se greška prilikom spajanja na hushd. Greška je</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1022"/>
+        <location filename="../src/rpc.cpp" line="1023"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1362,12 +1373,12 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Podešavanja men
         <translation type="vanished"> tx proračun. Ovo može potrajati nekoliko minuta.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1071"/>
+        <location filename="../src/rpc.cpp" line="1075"/>
         <source>Update Available</source>
         <translation>Dostupno ažuriranje</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1072"/>
+        <location filename="../src/rpc.cpp" line="1076"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1376,22 +1387,22 @@ Would you like to visit the releases page?</source>
 Želite li posetiti stranicu sa izadnjima?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1084"/>
+        <location filename="../src/rpc.cpp" line="1088"/>
         <source>No updates available</source>
         <translation>Nema dostupnih ažuriranja</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1085"/>
+        <location filename="../src/rpc.cpp" line="1089"/>
         <source>You already have the latest release v%1</source>
         <translation>Već imate najnovije izdanje v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1239"/>
+        <location filename="../src/rpc.cpp" line="1243"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Molimo pokušajte se strpiti i pričekajte da se SilentDragon zatvori</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1240"/>
+        <location filename="../src/rpc.cpp" line="1244"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Pričekajte da hushd završi</translation>
     </message>
@@ -1444,22 +1455,22 @@ Would you like to visit the releases page?</source>
         <translation>Količina</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="435"/>
+        <location filename="../src/websockets.cpp" line="436"/>
         <source>Connected directly</source>
         <translation>Direktno spojeno</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="438"/>
+        <location filename="../src/websockets.cpp" line="439"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>Spojeno preko Interneta putem SilentDragon usluge crvotočine</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="745"/>
+        <location filename="../src/websockets.cpp" line="746"/>
         <source>Node is still syncing.</source>
         <translation>Čvor se još uvek sinhronizuje.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="767"/>
+        <location filename="../src/websockets.cpp" line="768"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Ne možete trošiti jer nema adrese sa dovoljnim saldom. Pokušajte prebaciti sva sredstva na jednu adresu</translation>
     </message>
@@ -1879,8 +1890,17 @@ Would you like to visit the releases page?</source>
     </message>
     <message>
         <location filename="../src/settings.ui" line="476"/>
+        <source>Check git.hush.is for updates at startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="558"/>
+        <source>Connect to git.hush.is on startup to check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Check github for updates at startup</source>
-        <translation>Prilikom pokretanja provetite ažuriranja na githubu</translation>
+        <translation type="vanished">Prilikom pokretanja provetite ažuriranja na githubu</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1923,9 +1943,8 @@ Would you like to visit the releases page?</source>
         <translation>Spojite se na Tor mrežu putem SOCKS proxy na 127.0.0.1:9050. Molim vas uzmite u obzir da ćete morati izvana instalirati Tor uslugu.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="558"/>
         <source>Connect to github on startup to check for updates</source>
-        <translation>Prilikom pokretanja provetite ažuriranja na githubu</translation>
+        <translation type="vanished">Prilikom pokretanja provetite ažuriranja na githubu</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>

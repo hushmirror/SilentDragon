@@ -570,12 +570,14 @@ void RPC::getInfoThenRefresh(bool force) {
         int notarized           = reply["notarized"].toInt();
         int protocolversion     = reply["protocolversion"].toInt();
         int lag                 = curBlock - notarized;
-        int blocks_until_halving= 340000 - curBlock;
+        // TODO: store all future halvings
+        int blocks_until_halving= 2020000 - curBlock;
         char halving_days[8];
         sprintf(halving_days, "%.2f", (double) (blocks_until_halving * 150) / (60*60*24) );
         QString ntzhash         = reply["notarizedhash"].toString();
         QString ntztxid         = reply["notarizedtxid"].toString();
-        QString kmdver          = reply["KMDversion"].toString();
+        // Fuck The KYC Traitor named jl777
+        //QString kmdver          = reply["KMDversion"].toString();
 
         Settings::getInstance()->setZcashdVersion(version);
 
@@ -584,7 +586,7 @@ void RPC::getInfoThenRefresh(bool force) {
         ui->notarizedtxidvalue->setText( ntztxid );
         ui->lagvalue->setText( QString::number(lag) );
         ui->version->setText( QString::number(version) );
-        ui->kmdversion->setText( kmdver );
+        //ui->kmdversion->setText( kmdver );
         ui->protocolversion->setText( QString::number(protocolversion) );
         ui->p2pport->setText( QString::number(p2pport) );
         ui->rpcport->setText( QString::number(rpcport) );
@@ -619,6 +621,7 @@ void RPC::getInfoThenRefresh(bool force) {
         conn->doRPCIgnoreError(makePayload(method), [=](const QJsonValue& reply) {
             qint64 solrate = reply.toInt();
 
+            // TODO: megasol
             ui->solrate->setText(QString::number(solrate) % " Sol/s");
         });
 
