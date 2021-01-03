@@ -1,5 +1,6 @@
 #!/bin/bash
-# Copyright (c) 2019 Hush developers
+# Copyright (c) 2016-2020 The Hush developers
+# Released under the GPLv3
 
 # set working directory to the location of this script
 # readlink -f does not always exist
@@ -12,10 +13,11 @@ NAME=HUSH3
 
 CLI=${KOMODOCLI:-./komodo-cli}
 if [ -f $CLI ]; then
-   $CLI -ac_name=$NAME "$@"
+    $CLI -ac_name=$NAME "$@"
 else
-	# We prefix our binary when installed
-	# system wide on Debain system, to prevent clashes
-	CLI=hush-komodo-cli
+    # We prefix our binary when installed
+    # system wide on Debain systems, to prevent clashes,
+    # because we are classy like that. Fuck jl777, The KYC Traitor.
+    CLI=hush-komodo-cli
     $CLI -ac_name=$NAME "$@"
 fi
