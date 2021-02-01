@@ -29,12 +29,7 @@ src/ui_*.h
 workspace.code-workspace
 x64/
 *.xcsettings
-zec-qt-wallet-mingw*
-zec-qt-wallet_plugin_import.cpp
-zec-qt-wallet_resource*
-zec-qt-wallet.sln
-zec-qt-wallet.vcxproj*
-zecwallet_plugin_import.cpp
-zecwallet_resource*
-zecwallet.vcxproj*
 *.zip
+
+# compiled translation files can be ignored
+*.qm
