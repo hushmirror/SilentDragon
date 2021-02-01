@@ -159,7 +159,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="485"/>
         <source>Upload File</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить файл</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
@@ -223,12 +223,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1584"/>
         <source>&amp;Report a bug</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сообщить об ошибке</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1612"/>
         <source>Check git.hush.is for &amp;updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить git.hush.is на наличие &amp;обновлений</translation>
     </message>
     <message>
         <source>&amp;SafeNodes</source>
@@ -376,92 +376,92 @@
     <message>
         <location filename="../src/mainwindow.ui" line="937"/>
         <source>Market</source>
-        <translation type="unfinished"></translation>
+        <translation>Рынок</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="948"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Информация о Рынке Hush&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="962"/>
         <source>Market Cap</source>
-        <translation type="unfinished"></translation>
+        <translation>Рыночная капитализация</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="990"/>
         <source>24H Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Объем за 24 часа</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1119"/>
         <source>Notarized Hash</source>
-        <translation type="unfinished"></translation>
+        <translation>Заверенные Hash</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1140"/>
         <source>Notarized txid</source>
-        <translation type="unfinished"></translation>
+        <translation>Заверенная txid</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1161"/>
         <source>Notarized Lag</source>
-        <translation type="unfinished"></translation>
+        <translation>Заверенный Lag</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1205"/>
         <source>Protocol Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия Протокола</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1226"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1247"/>
         <source>P2P Port</source>
-        <translation type="unfinished"></translation>
+        <translation>P2P Порт</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1268"/>
         <source>RPC Port</source>
-        <translation type="unfinished"></translation>
+        <translation>RPC Порт</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1289"/>
         <source>Client Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя Клиента</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1310"/>
         <source>Next Halving</source>
-        <translation type="unfinished"></translation>
+        <translation>Следующий Халвинг</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1331"/>
         <source>Local Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Местные Сервисы</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1352"/>
         <source>Longest Chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Longest Chain</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1373"/>
         <source>Wallet Transactions</source>
-        <translation type="unfinished"></translation>
+        <translation>Транзакции Кошелька</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1395"/>
         <source>Chain Transactions</source>
-        <translation type="unfinished"></translation>
+        <translation>Chain Транзакции</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1417"/>
         <source>TLS Support</source>
-        <translation type="unfinished"></translation>
+        <translation>TLS Поддержка</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1527"/>
@@ -525,12 +525,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1617"/>
         <source>Sapling &amp;turnstile</source>
-        <translation type="unfinished"></translation>
+        <translation>Sapling &amp;turnstile</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1620"/>
         <source>Ctrl+A, Ctrl+T</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1625"/>
@@ -545,12 +545,12 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1635"/>
         <source>&amp;z-board.net</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;z-board.net</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1638"/>
         <source>Ctrl+A, Ctrl+Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1643"/>
@@ -576,22 +576,22 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1661"/>
         <source>Pay HUSH &amp;URI...</source>
-        <translation type="unfinished"></translation>
+        <translation>Оплатить HUSH &amp;URI...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1666"/>
         <source>Connect mobile &amp;app</source>
-        <translation type="unfinished"></translation>
+        <translation>Подключить мобильное &amp;приложение</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1669"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1674"/>
         <source>Request HUSH...</source>
-        <translation type="unfinished"></translation>
+        <translation>Запросить HUSH...</translation>
     </message>
     <message>
         <source>&amp;Recurring Payments</source>
@@ -624,12 +624,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="598"/>
         <source>Some feedback about SilentDragon or Hush...</source>
-        <translation type="unfinished"></translation>
+        <translation>Фидбек о SilentDragon или Hush...</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="600"/>
         <source>Send Duke some private and shielded feedback about </source>
-        <translation type="unfinished"></translation>
+        <translation>Отправить Duke приватный и защищенный отзыв о </translation>
     </message>
     <message>
         <source>Computing Tx: </source>
@@ -669,58 +669,58 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="303"/>
         <source>Theme Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменить Тему</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="303"/>
         <location filename="../src/mainwindow.cpp" line="313"/>
         <source>This change can take a few seconds.</source>
-        <translation type="unfinished"></translation>
+        <translation>Это изменение может занять несколько секунд.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="313"/>
         <source>Currency Change</source>
-        <translation type="unfinished"></translation>
+        <translation>Обмен Валюты</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="548"/>
         <source>SilentDragon needs to restart to rescan,reindex,consolidation or deletetx. SilentDragon will now close, please restart SilentDragon to continue</source>
-        <translation type="unfinished"></translation>
+        <translation>Необходимо перезапустить приложение для повторного сканирования, переиндексации, объединения или удаления. SilentDragon закроется, перезапустите SilentDragon, чтобы продолжить</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="554"/>
         <source>SilentDragon needs to reindex for zindex. SilentDragon will now close, please restart SilentDragon to continue</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragon необходимо переиндексировать для zindex. SilentDragon закроется, перезапустите SilentDragon, чтобы продолжить</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="728"/>
         <source>Paste HUSH URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Вставить HUSH URI</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="740"/>
         <source>Error paying Hush URI</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка при оплате Hush URI</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="741"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished"></translation>
+        <translation>URI должен иметь форму &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="776"/>
         <source>Please paste your private keys here, one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожалуйста, вставьте сюда свои приватные ключи, по одному в каждой строке</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="777"/>
         <source>The keys will be imported into your connected Hush node</source>
-        <translation type="unfinished"></translation>
+        <translation>Ключи будут импортированы в вашу подключенную Hush ноду</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="808"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
-        <translation type="unfinished"></translation>
+        <translation>Ключи импортированы! Повторное сканирование блокчейна может занять несколько минут. До тех пор функциональность может быть ограничена</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="827"/>
@@ -760,7 +760,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
-        <translation>Не удалось сохранить файл wallet.dat</translation>
+        <translation>Не удалось сохранить файл wallet.dat.</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="861"/>
@@ -810,7 +810,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1069"/>
         <source>Get viewing key</source>
-        <translation type="unfinished"></translation>
+        <translation>Получите ключ просмотра</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1085"/>
@@ -826,17 +826,17 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1112"/>
         <source>Address Asset Viewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Просмотрщик Адресов</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1118"/>
         <source>Convert Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Конвертировать Адрес</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1228"/>
         <source>Copy block explorer link</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопировать ссылку на обозреватель блоков</translation>
     </message>
     <message>
         <source>Migrate to Sapling</source>
@@ -1029,7 +1029,7 @@
         <location filename="../src/sendtab.cpp" line="283"/>
         <location filename="../src/sendtab.cpp" line="335"/>
         <source>File Upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить Файл</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="326"/>
@@ -1039,22 +1039,22 @@
     <message>
         <location filename="../src/sendtab.cpp" line="346"/>
         <source>File size too large</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер файла слишком велик</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="347"/>
         <source>The file size </source>
-        <translation type="unfinished"></translation>
+        <translation>Размер файла </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="347"/>
         <source> bytes is greater than </source>
-        <translation type="unfinished"></translation>
+        <translation> байтов больше чем </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="347"/>
         <source>bytes</source>
-        <translation type="unfinished"></translation>
+        <translation>байтов</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="362"/>
@@ -1098,37 +1098,37 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/sendtab.cpp" line="730"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожалуйста, подождите...</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="731"/>
         <source>Computing your transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Идет вычисление вашей транзакции</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="738"/>
         <source>Computing transaction: </source>
-        <translation type="unfinished"></translation>
+        <translation>Вычисление транзакции: </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="745"/>
         <source>Done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Готово!</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="776"/>
         <source>From Address is Invalid!</source>
-        <translation type="unfinished"></translation>
+        <translation>Адрес Отправителя недействителен!</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="783"/>
         <source>Extreme Privacy! </source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальная Конфиденциальность! </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="783"/>
         <source> is transparent. You must send to a zaddr.</source>
-        <translation type="unfinished"></translation>
+        <translation> прозрачен. Вы должны отправить на zaddr адрес.</translation>
     </message>
     <message>
         <source>From Address is Invalid</source>
@@ -1203,12 +1203,12 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode in SilentDragonAndroid to connect your device</source>
-        <translation type="unfinished"></translation>
+        <translation>Отсканируйте этот QR-код в SilentDragonAndroid, чтобы подключить ваше устройство</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="94"/>
         <source>SilentDragonAndroid</source>
-        <translation type="unfinished"></translation>
+        <translation>SilentDragonAndroid</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="106"/>
@@ -1332,7 +1332,7 @@ Not starting embedded hushd because --no-embedded was passed</source>
     <message>
         <location filename="../src/connection.cpp" line="196"/>
         <source>Could not create HUSH3.conf.</source>
-        <translation type="unfinished"></translation>
+        <translation>Проблема с созданием HUSH3.conf.</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="294"/>
@@ -1382,12 +1382,12 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     <message>
         <location filename="../src/connection.cpp" line="520"/>
         <source>This may take several hours, grab some popcorn</source>
-        <translation type="unfinished"></translation>
+        <translation>Это может занять несколько часов, возьмите немного попкорна</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="815"/>
         <source>There was an error! : </source>
-        <translation type="unfinished"></translation>
+        <translation>Была ошибка! : </translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="676"/>
@@ -1426,27 +1426,27 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     <message>
         <location filename="../src/rpc.cpp" line="709"/>
         <source>hushd has no peer connections! Network issues?</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет соединения с hushd! Проблемы с сетью?</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="728"/>
         <source>There was an error connecting to hushd. The error was</source>
-        <translation>При подключении к hushd произошла ошибка. Ошибка </translation>
+        <translation>При подключении к hushd произошла ошибка. Ошибка была</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1023"/>
         <source> transaction computing.</source>
-        <translation type="unfinished"></translation>
+        <translation> вычисление транзакции.</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1243"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Пожалуйста, дождитесь выхода SilentDragon</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1244"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
-        <translation type="unfinished"></translation>
+        <translation>Ожидаем выхода hushd</translation>
     </message>
     <message>
         <source>addressindex not enabled</source>
@@ -1463,7 +1463,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     <message>
         <location filename="../src/sendtab.cpp" line="761"/>
         <source> Transaction </source>
-        <translation type="unfinished"></translation>
+        <translation> Транзакция </translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="764"/>
@@ -1473,7 +1473,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     <message>
         <location filename="../src/sendtab.cpp" line="764"/>
         <source> failed. The error was</source>
-        <translation>не удалось. Ошибка </translation>
+        <translation> не удалось. Ошибка была</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="761"/>
@@ -1527,7 +1527,7 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/connection.cpp" line="310"/>
         <source> failed. Please check the help site for more info</source>
-        <translation>не удалось. Пожалуйста, проверьте сайт справки для получения дополнительной информации</translation>
+        <translation> не удалось. Пожалуйста, проверьте сайт для получения дополнительной информации</translation>
     </message>
     <message>
         <location filename="../src/connection.cpp" line="413"/>
@@ -1694,7 +1694,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/websockets.cpp" line="769"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет адресов с достаточным балансом для трат! Попробуйте перевести средства на один адрес</translation>
     </message>
     <message>
         <source>No sapling or transparent addresses with enough balance to spend.</source>
@@ -1731,7 +1731,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.cpp" line="313"/>
         <source>Transaction submitted (right click to copy) txid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Транзакция отправлена (нажмите правой кнопкой мыши, чтобы скопировать) txid:</translation>
     </message>
 </context>
 <context>
@@ -1744,12 +1744,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/recurringdialog.ui" line="25"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить</translation>
     </message>
     <message>
         <location filename="../src/recurringdialog.ui" line="32"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать</translation>
     </message>
     <message>
         <source>View</source>
@@ -1914,7 +1914,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/requestdialog.ui" line="78"/>
         <source>Amount in </source>
-        <translation>Сумма в &quot;</translation>
+        <translation>Сумма в </translation>
     </message>
     <message>
         <location filename="../src/requestdialog.ui" line="118"/>
@@ -1963,7 +1963,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/requestdialog.cpp" line="53"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
-        <translation type="unfinished"></translation>
+        <translation>URI должен иметь форму &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="67"/>
@@ -2035,7 +2035,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.ui" line="558"/>
         <source>Connect to git.hush.is on startup to check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Подключиться к git.hush.is при запуске, чтобы проверять наличие обновлений</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>
@@ -2124,252 +2124,252 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.ui" line="157"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="173"/>
         <source>Local Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Местная Валюта</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="190"/>
         <source>AED</source>
-        <translation type="unfinished"></translation>
+        <translation>AED</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="195"/>
         <source>ARS</source>
-        <translation type="unfinished"></translation>
+        <translation>ARS</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="200"/>
         <source>AUD</source>
-        <translation type="unfinished"></translation>
+        <translation>AUD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="205"/>
         <source>BDT</source>
-        <translation type="unfinished"></translation>
+        <translation>BDT</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="210"/>
         <source>BHD</source>
-        <translation type="unfinished"></translation>
+        <translation>BHD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="215"/>
         <source>BMD</source>
-        <translation type="unfinished"></translation>
+        <translation>BMD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="220"/>
         <source>BRL</source>
-        <translation type="unfinished"></translation>
+        <translation>BRL</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="225"/>
         <source>BTC</source>
-        <translation type="unfinished"></translation>
+        <translation>BTC</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="230"/>
         <source>CAD</source>
-        <translation type="unfinished"></translation>
+        <translation>CAD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="235"/>
         <source>CHF</source>
-        <translation type="unfinished"></translation>
+        <translation>CHF</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="240"/>
         <source>CLP</source>
-        <translation type="unfinished"></translation>
+        <translation>CLP</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="245"/>
         <source>CNY</source>
-        <translation type="unfinished"></translation>
+        <translation>CNY</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="250"/>
         <source>CZK</source>
-        <translation type="unfinished"></translation>
+        <translation>CZK</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="255"/>
         <source>DKK</source>
-        <translation type="unfinished"></translation>
+        <translation>DKK</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="260"/>
         <source>EUR</source>
-        <translation type="unfinished"></translation>
+        <translation>EUR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="265"/>
         <source>GBP</source>
-        <translation type="unfinished"></translation>
+        <translation>GBP</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="270"/>
         <source>HKD</source>
-        <translation type="unfinished"></translation>
+        <translation>HKD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="275"/>
         <source>HUF</source>
-        <translation type="unfinished"></translation>
+        <translation>HUF</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="280"/>
         <source>IDR</source>
-        <translation type="unfinished"></translation>
+        <translation>IDR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="285"/>
         <source>ILS</source>
-        <translation type="unfinished"></translation>
+        <translation>ILS</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="290"/>
         <source>INR</source>
-        <translation type="unfinished"></translation>
+        <translation>INR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="295"/>
         <source>JPY</source>
-        <translation type="unfinished"></translation>
+        <translation>JPY</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="300"/>
         <source>KRW</source>
-        <translation type="unfinished"></translation>
+        <translation>KRW</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="305"/>
         <source>KWD</source>
-        <translation type="unfinished"></translation>
+        <translation>KWD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="310"/>
         <source>LKR</source>
-        <translation type="unfinished"></translation>
+        <translation>LKR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="315"/>
         <source>PKR</source>
-        <translation type="unfinished"></translation>
+        <translation>PKR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="320"/>
         <source>MXN</source>
-        <translation type="unfinished"></translation>
+        <translation>MXN</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="325"/>
         <source>NOK</source>
-        <translation type="unfinished"></translation>
+        <translation>NOK</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="330"/>
         <source>NZD</source>
-        <translation type="unfinished"></translation>
+        <translation>NZD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="335"/>
         <source>RUB</source>
-        <translation type="unfinished"></translation>
+        <translation>RUB</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="340"/>
         <source>SAR</source>
-        <translation type="unfinished"></translation>
+        <translation>SAR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="345"/>
         <source>SEK</source>
-        <translation type="unfinished"></translation>
+        <translation>SEK</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="350"/>
         <source>SGD</source>
-        <translation type="unfinished"></translation>
+        <translation>SGD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="355"/>
         <source>THB</source>
-        <translation type="unfinished"></translation>
+        <translation>THB</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="360"/>
         <source>TRY</source>
-        <translation type="unfinished"></translation>
+        <translation>TRY</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="365"/>
         <source>TWD</source>
-        <translation type="unfinished"></translation>
+        <translation>TWD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="370"/>
         <source>UAH</source>
-        <translation type="unfinished"></translation>
+        <translation>UAH</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="375"/>
         <source>USD</source>
-        <translation type="unfinished"></translation>
+        <translation>USD</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="380"/>
         <source>VEF</source>
-        <translation type="unfinished"></translation>
+        <translation>VEF</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="385"/>
         <source>VND</source>
-        <translation type="unfinished"></translation>
+        <translation>VND</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="390"/>
         <source>XAG</source>
-        <translation type="unfinished"></translation>
+        <translation>XAG</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="395"/>
         <source>XAU</source>
-        <translation type="unfinished"></translation>
+        <translation>XAU</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="400"/>
         <source>ZAR</source>
-        <translation type="unfinished"></translation>
+        <translation>ZAR</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>по умолчанию</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation type="unfinished"></translation>
+        <translation>синяя</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation type="unfinished"></translation>
+        <translation>светлая</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation type="unfinished"></translation>
+        <translation>тёмная</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>
         <source>midnight</source>
-        <translation type="unfinished"></translation>
+        <translation>полночь</translation>
     </message>
     <message>
         <source>Connect to git on startup to check for updates</source>
@@ -2378,27 +2378,27 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.ui" line="580"/>
         <source>Explorer</source>
-        <translation type="unfinished"></translation>
+        <translation>Explorer</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="592"/>
         <source>Tx Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Tx Explorer URL</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="631"/>
         <source>Address Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Explorer Адреса URL</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="657"/>
         <source>Testnet Tx Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Testnet Tx Explorer URL</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="683"/>
         <source>Testnet Address Explorer URL</source>
-        <translation type="unfinished"></translation>
+        <translation>Testnet Адрес Explorer URL</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="702"/>
@@ -2428,47 +2428,48 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.ui" line="824"/>
         <source>This code can greatly reduce the size of wallets and increase performance for service providers. It&apos;s designed mostly for exchanges and mining pools but anybody with a large wallet will benefit.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>но выиграет тот, у кого большой кошелек. перевел напрямую с переводчика, не совсем понял значение предложения</translatorcomment>
+        <translation>Этот код может значительно уменьшить размер кошельков и повысить производительность поставщиков услуг. Он предназначен в основном для бирж и майнинговых пулов, но выиграет тот, у кого большой кошелек.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="840"/>
         <source>Enable Old Transaction Deletion</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить Удаление Старой Транзакции</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="869"/>
         <source>Consolidation</source>
-        <translation type="unfinished"></translation>
+        <translation>Укрепление</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="882"/>
         <source>Deletetx</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалитьtx</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="908"/>
         <source>The new experimental Shielded Index (-zindex) which keeps track of many stats that can be seen via the new getchaintxstats RPC. These include shielded payments, anonymity set size and many other things.</source>
-        <translation type="unfinished"></translation>
+        <translation>Новый экспериментальный Shielded индекс (-zindex), который отслеживает многие статистические данные, которые можно увидеть с помощью нового RPC getchaintxstats. К ним относятся экранированные платежи, анонимность и многое другое.</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="924"/>
         <source>Zindex </source>
-        <translation type="unfinished"></translation>
+        <translation>Zindex </translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="937"/>
         <source>100</source>
-        <translation type="unfinished">100</translation>
+        <translation>100</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="950"/>
         <source>Wallet.dat Size :</source>
-        <translation type="unfinished"></translation>
+        <translation>Wallet.dat Размер :</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="963"/>
         <source>MB</source>
-        <translation type="unfinished"></translation>
+        <translation>MB</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="517"/>
@@ -2478,7 +2479,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/settings.ui" line="476"/>
         <source>Check git.hush.is for updates at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверять git.hush.is для обновлений при запуске</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -2606,7 +2607,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/viewkey.ui" line="14"/>
         <source>Viewing Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Просмотра Ключа</translation>
     </message>
 </context>
 <context>
@@ -2670,7 +2671,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/confirm.ui" line="155"/>
         <source>hushd doesn&apos;t seem to have any peers. You might not be connected to the internet, so this Transaction might not work.</source>
-        <translation type="unfinished"></translation>
+        <translation>Похоже, что нет соединения с hushd. Возможно, у вас нет подключения к Интернету, поэтому эта транзакция может не работать.</translation>
     </message>
     <message>
         <source>Recurring Payment</source>
@@ -2736,7 +2737,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="86"/>
         <source>Your Hush node will be configured for you automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Ваша Hush нода будет настроена для вас автоматически</translation>
     </message>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="118"/>
@@ -2774,7 +2775,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/newrecurring.ui" line="64"/>
         <source>TextLabel</source>
-        <translation type="unfinished">TextLabel</translation>
+        <translation>TextМетка</translation>
     </message>
     <message>
         <location filename="../src/newrecurring.ui" line="111"/>
