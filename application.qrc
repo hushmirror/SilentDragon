@@ -17,6 +17,7 @@
         <file>res/silentdragon-animated-startup-dark.gif</file>
     </qresource>
     <qresource prefix="/translations">
+        <file>res/silentdragon_be.qm</file>
         <file>res/silentdragon_bg.qm</file>
         <file>res/silentdragon_de.qm</file>
         <file>res/silentdragon_es.qm</file>

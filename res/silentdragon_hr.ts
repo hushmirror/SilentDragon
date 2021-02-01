@@ -4,12 +4,12 @@
 <context>
     <name>AddressBookModel</name>
     <message>
-        <location filename="../src/addressbook.cpp" line="11"/>
+        <location filename="../src/addressbook.cpp" line="13"/>
         <source>Label</source>
         <translation>Oznaka</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="11"/>
+        <location filename="../src/addressbook.cpp" line="13"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>BalancesTableModel</name>
     <message>
-        <location filename="../src/balancestablemodel.cpp" line="122"/>
+        <location filename="../src/balancestablemodel.cpp" line="124"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../src/balancestablemodel.cpp" line="123"/>
+        <location filename="../src/balancestablemodel.cpp" line="125"/>
         <source>Amount</source>
         <translation>Količina</translation>
     </message>
@@ -112,22 +112,22 @@
         <location filename="../src/mainwindow.ui" line="404"/>
         <location filename="../src/mainwindow.ui" line="411"/>
         <location filename="../src/mainwindow.ui" line="872"/>
-        <location filename="../src/sendtab.cpp" line="218"/>
-        <location filename="../src/sendtab.cpp" line="223"/>
+        <location filename="../src/sendtab.cpp" line="219"/>
+        <location filename="../src/sendtab.cpp" line="224"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="418"/>
-        <location filename="../src/sendtab.cpp" line="233"/>
+        <location filename="../src/sendtab.cpp" line="234"/>
         <source>Address Book</source>
         <translation>Adresar</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="429"/>
         <location filename="../src/mainwindow.ui" line="445"/>
-        <location filename="../src/sendtab.cpp" line="246"/>
-        <location filename="../src/sendtab.cpp" line="250"/>
+        <location filename="../src/sendtab.cpp" line="247"/>
+        <location filename="../src/sendtab.cpp" line="251"/>
         <source>Amount</source>
         <translation>Količina</translation>
     </message>
@@ -145,7 +145,7 @@
         <location filename="../src/mainwindow.ui" line="498"/>
         <location filename="../src/mainwindow.cpp" line="1182"/>
         <location filename="../src/mainwindow.cpp" line="1249"/>
-        <location filename="../src/sendtab.cpp" line="272"/>
+        <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Poruka (memo)</translation>
     </message>
@@ -171,7 +171,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="634"/>
-        <location filename="../src/sendtab.cpp" line="639"/>
+        <location filename="../src/sendtab.cpp" line="640"/>
         <source>Miner Fee</source>
         <translation>Naknada za rudarenje</translation>
     </message>
@@ -857,112 +857,112 @@
         <translation>Adresa nije korištena</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="209"/>
+        <location filename="../src/sendtab.cpp" line="210"/>
         <source>Recipient </source>
         <translation>Primatelj </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="282"/>
-        <location filename="../src/sendtab.cpp" line="334"/>
+        <location filename="../src/sendtab.cpp" line="283"/>
+        <location filename="../src/sendtab.cpp" line="335"/>
         <source>File Upload</source>
         <translation>Upload datoteke</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="325"/>
+        <location filename="../src/sendtab.cpp" line="326"/>
         <source>Only z-addresses can have memos</source>
         <translation>Samo z-adrese mogu imati poruke</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="345"/>
+        <location filename="../src/sendtab.cpp" line="346"/>
         <source>File size too large</source>
         <translation>Datoteka je prevelika</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>The file size </source>
         <translation>Veličina datoteke </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source> bytes is greater than </source>
         <translation> bajti su veći od </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>bytes</source>
         <translation>bajti</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="361"/>
+        <location filename="../src/sendtab.cpp" line="362"/>
         <source>Memos can only be used with z-addresses</source>
         <translation>Poruke se mogu koristiti samo sa z-adresama</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>The memo field can only be used with a z-address.
 </source>
         <translation>Prostor za poruku se može koristiti samo sa z-adresom.
 </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>
 doesn&apos;t look like a z-address</source>
         <translation>
 ne izgleda kao z-adresa</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="533"/>
+        <location filename="../src/sendtab.cpp" line="534"/>
         <source>Change from </source>
         <translation>Promijeniti iz </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="674"/>
+        <location filename="../src/sendtab.cpp" line="675"/>
         <source>Current balance      : </source>
         <translation>Trenutni saldo      : </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="676"/>
+        <location filename="../src/sendtab.cpp" line="677"/>
         <source>Balance after this Tx: </source>
         <translation>Saldo nakon ove Tx: </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="697"/>
+        <location filename="../src/sendtab.cpp" line="698"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="729"/>
+        <location filename="../src/sendtab.cpp" line="730"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="730"/>
+        <location filename="../src/sendtab.cpp" line="731"/>
         <source>Computing your transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="737"/>
+        <location filename="../src/sendtab.cpp" line="738"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="744"/>
+        <location filename="../src/sendtab.cpp" line="745"/>
         <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="775"/>
+        <location filename="../src/sendtab.cpp" line="776"/>
         <source>From Address is Invalid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="782"/>
+        <location filename="../src/sendtab.cpp" line="783"/>
         <source>Extreme Privacy! </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="782"/>
+        <location filename="../src/sendtab.cpp" line="783"/>
         <source> is transparent. You must send to a zaddr.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -983,7 +983,7 @@ ne izgleda kao z-adresa</translation>
         <translation type="vanished"> je neispravna</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="788"/>
+        <location filename="../src/sendtab.cpp" line="789"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Iznos &apos;%1&apos; je neispravan!</translation>
     </message>
@@ -1005,7 +1005,7 @@ ne izgleda kao z-adresa</translation>
 <context>
     <name>MemoEdit</name>
     <message>
-        <location filename="../src/memoedit.cpp" line="51"/>
+        <location filename="../src/memoedit.cpp" line="53"/>
         <source>Reply to</source>
         <translation>Odgovorite</translation>
     </message>
@@ -1075,72 +1075,72 @@ ne izgleda kao z-adresa</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/addressbook.cpp" line="110"/>
+        <location filename="../src/addressbook.cpp" line="112"/>
         <source>Pick</source>
         <translation>Odaberite</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="128"/>
+        <location filename="../src/addressbook.cpp" line="130"/>
         <source>Address or Label Error</source>
         <translation>Greška u adresi ili oznaci</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="129"/>
+        <location filename="../src/addressbook.cpp" line="131"/>
         <source>Address or Label cannot be empty</source>
         <translation>Adresa ili oznaka ne može biti prazno</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="134"/>
+        <location filename="../src/addressbook.cpp" line="136"/>
         <source>Address Format Error</source>
         <translation>Greška u formatu adrese</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="135"/>
+        <location filename="../src/addressbook.cpp" line="137"/>
         <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation>%1 čini se da nije ispravna Hush adresa.</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="143"/>
+        <location filename="../src/addressbook.cpp" line="145"/>
         <source>Label Error</source>
         <translation>Greška oznake</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="144"/>
+        <location filename="../src/addressbook.cpp" line="146"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
         <translation>Oznaka %1 već postoji.Molimo uklonite postojeću adresu.</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="156"/>
+        <location filename="../src/addressbook.cpp" line="158"/>
         <source>Import Address Book</source>
         <translation>Uvezite adresar</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="163"/>
+        <location filename="../src/addressbook.cpp" line="165"/>
         <source>Unable to open file</source>
         <translation>Nije moguće otvoriti datoteku</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="183"/>
+        <location filename="../src/addressbook.cpp" line="185"/>
         <source>Address Book Import Done</source>
         <translation>Završen unos adresara</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="184"/>
+        <location filename="../src/addressbook.cpp" line="186"/>
         <source>Imported %1 new Address book entries</source>
         <translation>Uvezeno %1 novih adresa</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="224"/>
+        <location filename="../src/addressbook.cpp" line="226"/>
         <source>Copy address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="226"/>
+        <location filename="../src/addressbook.cpp" line="228"/>
         <source>Copied to clipboard</source>
         <translation>Kopirano u mađuspremnik</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="229"/>
+        <location filename="../src/addressbook.cpp" line="231"/>
         <source>Delete label</source>
         <translation>Izbrišite oznaku</translation>
     </message>
@@ -1308,7 +1308,7 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.
     </message>
     <message>
         <location filename="../src/connection.cpp" line="815"/>
-        <location filename="../src/sendtab.cpp" line="765"/>
+        <location filename="../src/sendtab.cpp" line="766"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
@@ -1411,22 +1411,22 @@ Would you like to visit the releases page?</source>
         <translation type="vanished"> Tx </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="760"/>
+        <location filename="../src/sendtab.cpp" line="761"/>
         <source> failed</source>
         <translation> neuspjelo</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="760"/>
+        <location filename="../src/sendtab.cpp" line="761"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="764"/>
         <source>The transaction with id </source>
         <translation>Transakcija sa ID </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="764"/>
         <source> failed. The error was</source>
         <translation> nesupjela. Greška je</translation>
     </message>
@@ -1435,42 +1435,42 @@ Would you like to visit the releases page?</source>
         <translation type="vanished">Tx poslan (desni klik za kopiranje) txid:</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Type</source>
         <translation>Vrsta</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Date/Time</source>
         <translation>Datum/Vrijeme</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Amount</source>
         <translation>Količina</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="436"/>
+        <location filename="../src/websockets.cpp" line="437"/>
         <source>Connected directly</source>
         <translation>Direktno spojeno</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="439"/>
+        <location filename="../src/websockets.cpp" line="440"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>Spojeno preko Interneta putem SilentDragon usluge crvotočine</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="746"/>
+        <location filename="../src/websockets.cpp" line="747"/>
         <source>Node is still syncing.</source>
         <translation>Čvor se još uvijek sinkronizira.</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="768"/>
+        <location filename="../src/websockets.cpp" line="769"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Ne možete trošiti jer nema adrese sa dovoljnim saldom. Pokušajte prebaciti sva sredstva na jednu adresu</translation>
     </message>
@@ -1566,32 +1566,32 @@ Would you like to visit the releases page?</source>
         <translation>Zatraži plaćanje sa Sapling adrese. Poslat ćete 0.0001 HUSH transakciju na adresu sa URI HUSH plaćanjem. Poruka (memo) će biti sadržana u transakciji kada dobijete plaćanje.</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="50"/>
+        <location filename="../src/requestdialog.cpp" line="52"/>
         <source>Error paying HUSH URI</source>
         <translation>Greška prilikom plaćanja HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="51"/>
+        <location filename="../src/requestdialog.cpp" line="53"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI treba biti formata &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="65"/>
+        <location filename="../src/requestdialog.cpp" line="67"/>
         <source>Pay To</source>
         <translation>Platiti</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="78"/>
+        <location filename="../src/requestdialog.cpp" line="80"/>
         <source>Pay</source>
         <translation>Plati</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="80"/>
+        <location filename="../src/requestdialog.cpp" line="82"/>
         <source>You are paying a payment request. Your address will not be visible to the person requesting this payment.</source>
         <translation>Plaćate zahtjev za nalogom. Vaša adresa neće biti vidljiva osobi koja je zatražila ovaj nalog.</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="99"/>
+        <location filename="../src/requestdialog.cpp" line="101"/>
         <source>Can only request from Sapling addresses</source>
         <translation>Može se jedino zatražiti sa Sapling adresama</translation>
     </message>
@@ -2073,12 +2073,12 @@ Would you like to visit the releases page?</source>
 <context>
     <name>ValidateAddressesModel</name>
     <message>
-        <location filename="../src/validateaddress.cpp" line="6"/>
+        <location filename="../src/validateaddress.cpp" line="8"/>
         <source>Property</source>
         <translation>Vlasništvo</translation>
     </message>
     <message>
-        <location filename="../src/validateaddress.cpp" line="6"/>
+        <location filename="../src/validateaddress.cpp" line="8"/>
         <source>Value</source>
         <translation>Vrijednost</translation>
     </message>
@@ -2099,12 +2099,12 @@ Would you like to visit the releases page?</source>
 <context>
     <name>ViewAllAddressesModel</name>
     <message>
-        <location filename="../src/viewalladdresses.cpp" line="6"/>
+        <location filename="../src/viewalladdresses.cpp" line="8"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../src/viewalladdresses.cpp" line="6"/>
+        <location filename="../src/viewalladdresses.cpp" line="8"/>
         <source>Balance (%1)</source>
         <translation>Saldo (%1)</translation>
     </message>
