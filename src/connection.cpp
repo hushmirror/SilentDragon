@@ -215,6 +215,10 @@ void ConnectionLoader::createHushConf() {
     // Consolidation is now defaulted to ON for new wallets
     out << "consolidation=1\n";
 
+    // This is default behavior for hushd 3.6.1 and newer,
+    // this helps if older hushd's are being used
+    out << "tls=only\n";
+
     if (!datadir.isEmpty()) {
         out << "datadir=" % datadir % "\n";
     }
