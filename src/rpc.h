@@ -38,7 +38,7 @@ public:
     ~RPC();
 
     void setConnection(Connection* c);
-    void setEZcashd(std::shared_ptr<QProcess> p);
+    void setEHushd(std::shared_ptr<QProcess> p);
     const QProcess* getEHushD() { return ehushd.get(); }
 
     void refresh(bool force = false);
@@ -78,7 +78,7 @@ public:
     void importTPrivKey(QString addr, bool rescan, const std::function<void(QJsonValue)>& cb);
     void validateAddress(QString address, const std::function<void(QJsonValue)>& cb);
 
-    void shutdownZcashd();
+    void shutdownHushd();
     void noConnection();
     bool isEmbedded() { return ehushd != nullptr; }
 

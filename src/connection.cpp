@@ -55,23 +55,23 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
     }
 
     // Priority 2: Try to connect to detect HUSH3.conf and connect to it.
-    auto config = autoDetectZcashConf();
+    auto config = autoDetectHushConf();
     main->logger->write(QObject::tr("Attempting autoconnect"));
 
     if (config.get() != nullptr) {
         auto connection = makeConnection(config);
 
-        refreshZcashdState(connection, [=] () {
+        refreshHushdState(connection, [=] () {
             // Refused connection. So try and start embedded zcashd
             if (Settings::getInstance()->useEmbedded()) {
                 if (tryEzcashdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
-                    if (this->startEmbeddedZcashd()) {
+                    if (this->startEmbeddedHushd()) {
                         // Embedded hushd started up. Wait a second and then refresh the connection
                         main->logger->write("Embedded hushd started up, trying autoconnect in 1 sec");
                         QTimer::singleShot(1000, [=]() { doAutoConnect(); } );
                     } else {
-                        if (config->zcashDaemon) {
+                        if (config->hushDaemon) {
                             // hushd is configured to run as a daemon, so we must wait for a few seconds
                             // to let it start up. 
                             main->logger->write("hushd is daemon=1. Waiting for it to start up");
@@ -89,7 +89,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                     // We tried to start ehushd previously, and it didn't work. So, show the error. 
                     main->logger->write("Couldn't start embedded hushd for unknown reason");
                     QString explanation;
-                    if (config->zcashDaemon) {
+                    if (config->hushDaemon) {
                         explanation = QString() % QObject::tr("You have hushd set to start as a daemon, which can cause problems "
                             "with SilentDragon\n\n."
                             "Please remove the following line from your HUSH3.conf and restart SilentDragon\n"
@@ -319,7 +319,7 @@ void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
     });    
 }
 
-bool ConnectionLoader::startEmbeddedZcashd() {
+bool ConnectionLoader::startEmbeddedHushd() {
     if (!Settings::getInstance()->useEmbedded()) 
         return false;
     
@@ -429,7 +429,7 @@ void ConnectionLoader::doManualConnect() {
     }
 
     auto connection = makeConnection(config);
-    refreshZcashdState(connection, [=] () {
+    refreshHushdState(connection, [=] () {
         QString explanation = QString()
                 % QObject::tr("Could not connect to hushd configured in settings.\n\n" 
                 "Please set the host/port and user/password in the Edit->Settings menu.");
@@ -442,7 +442,7 @@ void ConnectionLoader::doManualConnect() {
 }
 
 void ConnectionLoader::doRPCSetConnection(Connection* conn) {
-    rpc->setEZcashd(ehushd);
+    rpc->setEHushd(ehushd);
     rpc->setConnection(conn);
     
     d->accept();
@@ -469,7 +469,7 @@ Connection* ConnectionLoader::makeConnection(std::shared_ptr<ConnectionConfig> c
     return new Connection(main, client, request, config);
 }
 
-void ConnectionLoader::refreshZcashdState(Connection* connection, std::function<void(void)> refused) {
+void ConnectionLoader::refreshHushdState(Connection* connection, std::function<void(void)> refused) {
     main->logger->write("refreshing state");
 
     QJsonObject payload = {
@@ -512,7 +512,7 @@ void ConnectionLoader::refreshZcashdState(Connection* connection, std::function<
                 this->showInformation(QObject::tr("Your hushd is starting up. Please wait."), status);
                 main->logger->write("Waiting for hushd to come online.");
                 // Refresh after one second
-                QTimer::singleShot(1000, [=]() { this->refreshZcashdState(connection, refused); });
+                QTimer::singleShot(1000, [=]() { this->refreshHushdState(connection, refused); });
             }
         }
     );
@@ -540,14 +540,14 @@ void ConnectionLoader::showInformation(QString info, QString detail) {
  * Show error will close the loading dialog and show an error. 
 */
 void ConnectionLoader::showError(QString explanation) {    
-    rpc->setEZcashd(nullptr);
+    rpc->setEHushd(nullptr);
     rpc->noConnection();
 
     QMessageBox::critical(main, QObject::tr("Connection Error"), explanation, QMessageBox::Ok);
     d->close();
 }
 
-QString ConnectionLoader::locateZcashConfFile() {
+QString ConnectionLoader::locateHushConfFile() {
 #ifdef Q_OS_LINUX
     auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".komodo/HUSH3/HUSH3.conf");
 #elif defined(Q_OS_DARWIN)
@@ -643,11 +643,11 @@ bool ConnectionLoader::verifyParams() {
 /**
  * Try to automatically detect a HUSH3/HUSH3.conf file in the correct location and load parameters
  */ 
-std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {    
-    auto confLocation = locateZcashConfFile();
+std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectHushConf() {    
+    auto confLocation = locateHushConfFile();
 
     if (confLocation.isNull()) {
-        // No Zcash file, just return with nothing
+        // No file, just return with nothing
         return nullptr;
     }
 
@@ -662,11 +662,11 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
     auto zcashconf = new ConnectionConfig();
     zcashconf->host     = "127.0.0.1";
     zcashconf->connType = ConnectionType::DetectedConfExternalHushD;
-    zcashconf->usingZcashConf = true;
+    zcashconf->usingHushConf = true;
     zcashconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
-    zcashconf->zcashDaemon = false;
+    zcashconf->hushDaemon = false;
    
-    Settings::getInstance()->setUsingZcashConf(confLocation);
+    Settings::getInstance()->setUsingHushConf(confLocation);
 
     while (!in.atEnd()) {
         QString line = in.readLine();
@@ -684,7 +684,7 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
             zcashconf->port = value;
         }
         if (name == "daemon" && value == "1") {
-            zcashconf->zcashDaemon = true;
+            zcashconf->hushDaemon = true;
         }
         if (name == "proxy") {
             zcashconf->proxy = value;

@@ -20,8 +20,8 @@ struct ConnectionConfig {
     QString port;
     QString rpcuser;
     QString rpcpassword;
-    bool    usingZcashConf;
-    bool    zcashDaemon;
+    bool    usingHushConf;
+    bool    hushDaemon;
     QString zcashDir;
     QString proxy;
     QString consolidation;
@@ -42,7 +42,7 @@ public:
     void loadConnection();
 
 private:
-    std::shared_ptr<ConnectionConfig> autoDetectZcashConf();
+    std::shared_ptr<ConnectionConfig> autoDetectHushConf();
     std::shared_ptr<ConnectionConfig> loadFromSettings();
 
     Connection* makeConnection(std::shared_ptr<ConnectionConfig> config);
@@ -51,16 +51,16 @@ private:
     void doManualConnect();
 
     void createHushConf();
-    QString locateZcashConfFile();
+    QString locateHushConfFile();
     QString zcashConfWritableLocation();
     QString zcashParamsDir();
 
     bool verifyParams();
     void downloadParams(std::function<void(void)> cb);
     void doNextDownload(std::function<void(void)> cb);
-    bool startEmbeddedZcashd();
+    bool startEmbeddedHushd();
 
-    void refreshZcashdState(Connection* connection, std::function<void(void)> refused);
+    void refreshHushdState(Connection* connection, std::function<void(void)> refused);
 
     void showError(QString explanation);
     void showInformation(QString info, QString detail = "");

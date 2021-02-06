@@ -55,7 +55,7 @@ public:
     void stopWebsocket();
 
     void balancesReady();
-    void payZcashURI(QString uri = "", QString myAddr = "");
+    void payHushURI(QString uri = "", QString myAddr = "");
 
     void validateAddress();
 

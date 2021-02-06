@@ -82,7 +82,7 @@ void RequestDialog::showPaymentConfirmation(MainWindow* main, QString paymentURI
     req.lblHeader->setText(tr("You are paying a payment request. Your address will not be visible to the person requesting this payment."));
 
     if (d.exec() == QDialog::Accepted) {
-        main->payZcashURI(paymentURI, req.cmbMyAddress->currentText());
+        main->payHushURI(paymentURI, req.cmbMyAddress->currentText());
     }
 }
 
@@ -136,6 +136,6 @@ void RequestDialog::showRequestZcash(MainWindow* main) {
 
         // If the disclosed address in the memo doesn't have a balance, it will automatically fallback to the default
         // sapling address
-        main->payZcashURI(sendURI, req.cmbMyAddress->currentText());
+        main->payHushURI(sendURI, req.cmbMyAddress->currentText());
     }
 }

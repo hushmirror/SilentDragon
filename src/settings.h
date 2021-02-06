@@ -54,8 +54,8 @@ public:
     bool    isSyncing();
     void    setSyncing(bool syncing);
 
-    int     getZcashdVersion();
-    void    setZcashdVersion(int version);
+    int     getHushdVersion();
+    void    setHushdVersion(int version);
 
     void    setUseEmbedded(bool r) { _useEmbedded = r; }
     bool    useEmbedded() { return _useEmbedded; }
@@ -89,8 +89,8 @@ public:
     QString get_currency_name();
     void set_currency_name(QString currency_name);
 
-    void    setUsingZcashConf(QString confLocation);
-    const   QString& getZcashdConfLocation() { return _confLocation; }
+    void    setUsingHushConf(QString confLocation);
+    const   QString& getHushdConfLocation() { return _confLocation; }
 
     void    setHUSHPrice(double p)       { hushPrice = p;   }
     void    set_fiat_price(double p)    { fiat_price = p; }
@@ -136,8 +136,8 @@ public:
 
     static bool    isValidAddress(QString addr);
 
-    static bool    addToZcashConf(QString confLocation, QString line);
-    static bool    removeFromZcashConf(QString confLocation, QString option);
+    static bool    addToHushConf(QString confLocation, QString line);
+    static bool    removeFromHushConf(QString confLocation, QString option);
 
     static const QString labelRegExp;
 

@@ -2385,7 +2385,7 @@ Vous avez soit des fonds non confirmés soit le solde est trop petit pour une mi
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>

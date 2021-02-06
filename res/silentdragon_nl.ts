@@ -2418,7 +2418,7 @@ Je hebt nog onbevestigde transacties of je saldo is te laag voor een automatisch
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>
