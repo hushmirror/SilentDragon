@@ -384,7 +384,8 @@ bool ConnectionLoader::startEmbeddedZcashd() {
 
     // Binaries come with this file
     if(QFile( QDir(".").filePath("asmap.dat") ).exists()) {
-        params += " -asmap=asmap.dat";
+        auto asmap = appPath.absoluteFilePath("asmap.dat");
+        params += " -asmap=" + asmap;
     } else {
         qDebug() << "No ASN map file found";
     }
