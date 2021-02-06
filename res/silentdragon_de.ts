@@ -672,7 +672,7 @@
         <translation type="vanished">Die URI sollte folgendes Format haben: &apos;hush:&lt;Adresse&gt;?Betrag=x&amp;Nachricht=y</translation>
     </message>
     <message>
-        <source>Paste Zcash URI</source>
+        <source>Paste Hush URI</source>
         <translation type="vanished">Füge HUSH URI ein</translation>
     </message>
     <message>
@@ -2412,7 +2412,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>

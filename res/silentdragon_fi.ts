@@ -1461,7 +1461,7 @@ Aseta isäntä/portti ja käyttäjänimi/salasana Muokkaa-&gt; Asetukset-valikos
         <translation>Osoitteen Formaatti Virhe</translation>
     </message>
     <message>
-        <source> doesn&apos;t seem to be a valid Zcash address.</source>
+        <source> doesn&apos;t seem to be a valid Hush address.</source>
         <translation type="obsolete">YOUR_TRANSLATION_HERE</translation>
     </message>
     <message>
@@ -2367,7 +2367,7 @@ Sinulla on joko vahvistamattomia varoja tai saldo on liian pieni automaattiseen 
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>

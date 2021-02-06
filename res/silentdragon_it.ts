@@ -2357,7 +2357,7 @@ Avete fondi non confermati o il saldo è troppo basso per una migrazione automat
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>

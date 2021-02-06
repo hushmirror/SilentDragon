@@ -68,7 +68,7 @@ RPC::~RPC() {
     delete conn;
 }
 
-void RPC::setEZcashd(std::shared_ptr<QProcess> p) {
+void RPC::setEHushd(std::shared_ptr<QProcess> p) {
     ehushd = p;
 
     if (ehushd && ui->tabWidget->widget(4) == nullptr) {
@@ -86,9 +86,9 @@ void RPC::setConnection(Connection* c) {
     ui->statusBar->showMessage("Ready! Thank you for helping secure the Hush network by running a full node.");
 
     // See if we need to remove the reindex/rescan flags from the zcash.conf file
-    auto zcashConfLocation = Settings::getInstance()->getZcashdConfLocation();
-    Settings::removeFromZcashConf(zcashConfLocation, "rescan");
-    Settings::removeFromZcashConf(zcashConfLocation, "reindex");
+    auto hushConfLocation = Settings::getInstance()->getHushdConfLocation();
+    Settings::removeFromHushConf(hushConfLocation, "rescan");
+    Settings::removeFromHushConf(hushConfLocation, "reindex");
 
     // Refresh the UI
     refreshPrice();
@@ -579,7 +579,7 @@ void RPC::getInfoThenRefresh(bool force) {
         // Fuck The KYC Traitor named jl777
         //QString kmdver          = reply["KMDversion"].toString();
 
-        Settings::getInstance()->setZcashdVersion(version);
+        Settings::getInstance()->setHushdVersion(version);
 
         ui->longestchain->setText(QString::number(longestchain));
         ui->notarizedhashvalue->setText( ntzhash );
@@ -708,7 +708,7 @@ void RPC::getInfoThenRefresh(bool force) {
             else {
                 tooltip = QObject::tr("hushd has no peer connections! Network issues?");
             }
-            tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
+            tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getHushdVersion()) % ")";
 
             if (!hushPrice.isEmpty()) {
                 tooltip = "1 HUSH = " % hushPrice % "\n" % tooltip;
@@ -1210,7 +1210,7 @@ void RPC::refreshPrice() {
     });
 }
 
-void RPC::shutdownZcashd() {
+void RPC::shutdownHushd() {
     // Shutdown embedded hushd if it was started
     if (ehushd == nullptr || ehushd->processId() == 0 || conn == nullptr) {
         // No hushd running internally, just return

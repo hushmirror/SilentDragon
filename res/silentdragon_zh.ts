@@ -2604,7 +2604,7 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <source>Configure hush.conf</source>
         <translation type="vanished">配置 hush.conf</translation>
