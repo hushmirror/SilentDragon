@@ -71,7 +71,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                         main->logger->write("Embedded hushd started up, trying autoconnect in 1 sec");
                         QTimer::singleShot(1000, [=]() { doAutoConnect(); } );
                     } else {
-                        if (config->zcashDaemon) {
+                        if (config->hushDaemon) {
                             // hushd is configured to run as a daemon, so we must wait for a few seconds
                             // to let it start up. 
                             main->logger->write("hushd is daemon=1. Waiting for it to start up");
@@ -89,7 +89,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                     // We tried to start ehushd previously, and it didn't work. So, show the error. 
                     main->logger->write("Couldn't start embedded hushd for unknown reason");
                     QString explanation;
-                    if (config->zcashDaemon) {
+                    if (config->hushDaemon) {
                         explanation = QString() % QObject::tr("You have hushd set to start as a daemon, which can cause problems "
                             "with SilentDragon\n\n."
                             "Please remove the following line from your HUSH3.conf and restart SilentDragon\n"
@@ -655,7 +655,7 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
     zcashconf->connType = ConnectionType::DetectedConfExternalHushD;
     zcashconf->usingZcashConf = true;
     zcashconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
-    zcashconf->zcashDaemon = false;
+    zcashconf->hushDaemon = false;
    
     Settings::getInstance()->setUsingZcashConf(confLocation);
 
@@ -675,7 +675,7 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
             zcashconf->port = value;
         }
         if (name == "daemon" && value == "1") {
-            zcashconf->zcashDaemon = true;
+            zcashconf->hushDaemon = true;
         }
         if (name == "proxy") {
             zcashconf->proxy = value;

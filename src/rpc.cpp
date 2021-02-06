@@ -1254,7 +1254,7 @@ void RPC::shutdownZcashd() {
         if ((ehushd->atEnd() && ehushd->processId() == 0) ||
             ehushd->state() == QProcess::NotRunning ||
             waitCount > 30 ||
-            conn->config->zcashDaemon)  {   // If hushd is daemon, then we don't have to do anything else
+            conn->config->hushDaemon)  {   // If hushd is daemon, then we don't have to do anything else
             qDebug() << "Ended";
             waiter.stop();
             QTimer::singleShot(1000, [&]() { d.accept(); });
