@@ -114,7 +114,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
     } else {
         if (Settings::getInstance()->useEmbedded()) {
             // HUSH3.conf was not found, so create one
-            createZcashConf();
+            createHushConf();
         } else {
             // Fall back to manual connect
             doManualConnect();
@@ -142,14 +142,14 @@ QString randomPassword() {
 /**
  * This will create a new HUSH3.conf and download params if they cannot be found
  */ 
-void ConnectionLoader::createZcashConf() {
-    main->logger->write("createZcashConf");
+void ConnectionLoader::createHushConf() {
+    main->logger->write(__func__);
 
     auto confLocation = zcashConfWritableLocation();
     QFileInfo fi(confLocation);
 
     QDialog d(main);
-    Ui_createZcashConf ui;
+    Ui_createHushConf ui;
     ui.setupUi(&d);
 
     QPixmap logo(":/img/res/zcashdlogo.gif");
@@ -381,6 +381,14 @@ bool ConnectionLoader::startEmbeddedZcashd() {
 
     // This string should be the exact arg list seperated by single spaces
     QString params = "-ac_name=HUSH3 -ac_sapling=1 -ac_reward=0,1125000000,562500000 -ac_halving=129,340000,840000 -ac_end=128,340000,5422111 -ac_eras=3 -ac_blocktime=150 -ac_cc=2 -ac_ccenable=228,234,235,236,241 -ac_founders=1 -ac_supply=6178674 -ac_perc=11111111 -clientname=GoldenSandtrout -addnode=node1.hush.is -addnode=node2.hush.is -addnode=node3.hush.is -addnode=node4.hush.is -addnode=node5.hush.is -addnode=node6.hush.is -addnode=node7.hush.is -addnode=node8.hush.is -ac_cclib=hush3 -tls=only -ac_script=76a9145eb10cf64f2bab1b457f1f25e658526155928fac88ac";
+
+    // Binaries come with this file
+    if(QFile( QDir(".").filePath("asmap.dat") ).exists()) {
+        params += " -asmap=asmap.dat";
+    } else {
+        qDebug() << "No ASN map file found";
+    }
+
     QStringList arguments = params.split(" ");
 
     // Finally, actually start the full node

@@ -50,7 +50,7 @@ private:
     void doAutoConnect(bool tryEzcashdStart = true);
     void doManualConnect();
 
-    void createZcashConf();
+    void createHushConf();
     QString locateZcashConfFile();
     QString zcashConfWritableLocation();
     QString zcashParamsDir();
