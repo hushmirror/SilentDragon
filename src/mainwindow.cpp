@@ -1129,6 +1129,62 @@ void MainWindow::setupBalancesTab() {
 
 void MainWindow::setupPeersTab() {
     qDebug() << __FUNCTION__;
+    // Set up context menu on transactions tab
+    ui->peersTable->setContextMenuPolicy(Qt::CustomContextMenu);
+
+    // Table right click
+    QObject::connect(ui->peersTable, &QTableView::customContextMenuRequested, [=] (QPoint pos) {
+        QModelIndex index = ui->peersTable->indexAt(pos);
+        if (index.row() < 0) return;
+
+        QMenu menu(this);
+
+        auto peerModel = dynamic_cast<PeersTableModel *>(ui->peersTable->model());
+        QString addr   = peerModel->getAddress(index.row());
+        QString cipher = peerModel->getTLSCipher(index.row());
+        qint64 asn     = peerModel->getASN(index.row());
+        QString ip     = addr.split(":")[0];
+        QString as     = QString::number(asn);
+
+        menu.addAction(tr("Copy peer address+port"), [=] () {
+            QGuiApplication::clipboard()->setText(addr);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        //TODO: support Tor correctly
+        menu.addAction(tr("Copy peer address"), [=] () {
+            QGuiApplication::clipboard()->setText(ip);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        menu.addAction(tr("Copy TLS ciphersuite"), [=] () {
+            QGuiApplication::clipboard()->setText(cipher);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        menu.addAction(tr("Copy ASN"), [=] () {
+            QGuiApplication::clipboard()->setText(as);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        if(!ip.isEmpty()) {
+            menu.addAction(tr("View host on shodan.io (3rd party service)"), [=] () {
+                QString url = "https://www.shodan.io/host/" + ip;
+                qDebug() << "opening " << url;
+                QDesktopServices::openUrl(QUrl(url));
+            });
+        }
+
+        if(!as.isEmpty()) {
+            menu.addAction(tr("View ASN on bgpview.io (3rd party service)"), [=] () {
+                QString url = "https://bgpview.io/asn/" + as;
+                qDebug() << "opening " << url;
+                QDesktopServices::openUrl(QUrl(url));
+            });
+        }
+
+        menu.exec(ui->peersTable->viewport()->mapToGlobal(pos));
+    });
 }
 
 void MainWindow::setupHushTab() {

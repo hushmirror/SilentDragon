@@ -118,10 +118,22 @@ int PeersTableModel::columnCount(const QModelIndex&) const
 
     if (role == Qt::ToolTipRole) {
         switch (index.column()) {
-        case 0: return "";
+        case  0: return "Unique Peer ID";
+        case  1: return "Network Address";
+        case  2: return "Autonomous System Number";
+        case  3: return "TLS Ciphersuite";
+        case  4: return "TLS Certificate verified";
+        case  5: return "Full Node Version";
+        case  6: return "P2P Protocol Version";
+        case  7: return "Ping Time (seconds)";
+        case  8: return "Banscore";
+        case  9: return "Bytes received";
+        case 10: return "Bytes sent";
         }    
     }
 
+
+    //TODO: show different icons for IP vs Tor vs other kinds of connections
    /*
     if (role == Qt::DecorationRole && index.column() == 0) {
         if (!dat.memo.isEmpty()) {
@@ -149,7 +161,8 @@ int PeersTableModel::columnCount(const QModelIndex&) const
 
 QVariant PeersTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
-    if (role == Qt::TextAlignmentRole && section == 3) return QVariant(Qt::AlignRight | Qt::AlignVCenter);
+    //if (role == Qt::TextAlignmentRole && section == 3) return QVariant(Qt::AlignRight | Qt::AlignVCenter);
+    if (role == Qt::TextAlignmentRole) return QVariant(Qt::AlignRight | Qt::AlignVCenter);
 
     if (role == Qt::FontRole) {
         QFont f;
@@ -170,6 +183,14 @@ QString PeersTableModel::getPeerId(int row) const {
 
 QString PeersTableModel::getAddress(int row) const {
     return modeldata->at(row).address.trimmed();
+}
+
+QString PeersTableModel::getTLSCipher(int row) const {
+    return modeldata->at(row).tls_cipher;
+}
+
+qint64 PeersTableModel::getASN(int row) const {
+    return modeldata->at(row).asn;
 }
 
 qint64 PeersTableModel::getConntime(int row) const {

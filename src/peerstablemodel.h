@@ -17,7 +17,7 @@ public:
     QString  getAddress(int row) const;
     QString  getType(int row) const;
     qint64   getConntime(int row) const;
-    QString  getASN(int row) const;
+    qint64   getASN(int row) const;
     QString  getSubver(int row) const;
     QString  getTLSCipher(int row) const;
     bool     getTLSVerified(int row) const;
