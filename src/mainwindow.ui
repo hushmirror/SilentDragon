@@ -951,6 +951,26 @@
           </property>
          </widget>
         </item>
+
+        <item>
+         <widget class="QLabel" name="recentlyBannedPeers">
+          <property name="text">
+           <string>
+            Looking For Recently Banned Peers ...
+            </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="recentlyDisconnectedPeers">
+          <property name="text">
+           <string>
+            Looking For Recently Disconnected Peers ...
+            </string>
+          </property>
+         </widget>
+        </item>
+
        </layout>
 
       </widget>
