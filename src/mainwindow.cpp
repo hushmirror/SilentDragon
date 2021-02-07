@@ -1116,6 +1116,7 @@ void MainWindow::setupBalancesTab() {
                 QDesktopServices::openUrl(QUrl(url));
             });
 
+            //TODO: should this be kept?
             menu.addAction(tr("Convert Address"), [=] () {
                 QString url;
                 url = "https://dexstats.info/addressconverter.php?fromcoin=HUSH3&address=" + addr;
@@ -1135,6 +1136,8 @@ void MainWindow::setupPeersTab() {
     // Table right click
     QObject::connect(ui->peersTable, &QTableView::customContextMenuRequested, [=] (QPoint pos) {
         QModelIndex index = ui->peersTable->indexAt(pos);
+        // we auto-sort by conntime 
+        //ui->peersTable->setSortingEnabled(true);
         if (index.row() < 0) return;
 
         QMenu menu(this);
@@ -1145,6 +1148,14 @@ void MainWindow::setupPeersTab() {
         qint64 asn     = peerModel->getASN(index.row());
         QString ip     = addr.split(":")[0];
         QString as     = QString::number(asn);
+
+        if(ip.contains("[")) {
+            // this is actually ipv6, grab it all except the port
+            auto parts = addr.split(":");
+            parts[8]=""; // remove  port
+            ip = parts.join(":");
+            ip.chop(1); // remove trailing :
+        }
 
         menu.addAction(tr("Copy peer address+port"), [=] () {
             QGuiApplication::clipboard()->setText(addr);
@@ -1167,7 +1178,8 @@ void MainWindow::setupPeersTab() {
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
         });
 
-        if(!ip.isEmpty()) {
+        // shodan only supports ipv4 addresses
+        if(!ip.isEmpty() && !ip.contains("[")) {
             menu.addAction(tr("View host on shodan.io (3rd party service)"), [=] () {
                 QString url = "https://www.shodan.io/host/" + ip;
                 qDebug() << "opening " << url;

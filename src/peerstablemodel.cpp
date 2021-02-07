@@ -162,7 +162,7 @@ int PeersTableModel::columnCount(const QModelIndex&) const
 QVariant PeersTableModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     //if (role == Qt::TextAlignmentRole && section == 3) return QVariant(Qt::AlignRight | Qt::AlignVCenter);
-    if (role == Qt::TextAlignmentRole) return QVariant(Qt::AlignRight | Qt::AlignVCenter);
+    if (role == Qt::TextAlignmentRole) return QVariant(Qt::AlignCenter | Qt::AlignVCenter);
 
     if (role == Qt::FontRole) {
         QFont f;
