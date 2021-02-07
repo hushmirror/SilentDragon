@@ -120,6 +120,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMarketTab();
     //setupChatTab();
     setupHushTab();
+    setupPeersTab();
 
     rpc = new RPC(this);
     qDebug() << "Created RPC";
@@ -1124,6 +1125,10 @@ void MainWindow::setupBalancesTab() {
 
         menu.exec(ui->balancesTable->viewport()->mapToGlobal(pos));
     });
+}
+
+void MainWindow::setupPeersTab() {
+    qDebug() << __FUNCTION__;
 }
 
 void MainWindow::setupHushTab() {

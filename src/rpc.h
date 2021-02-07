@@ -4,18 +4,16 @@
 #define RPCCLIENT_H
 
 #include "precompiled.h"
-
 #include "balancestablemodel.h"
 #include "txtablemodel.h"
+#include "peerstablemodel.h"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 #include "connection.h"
 
-class Turnstile;
-
 struct TransactionItem {
     QString         type;
-    qint64            datetime;
+    qint64          datetime;
     QString         address;
     QString         txid;
     double          amount;
@@ -23,6 +21,23 @@ struct TransactionItem {
     QString         fromAddr;
     QString         memo;
 };
+
+struct PeerItem {
+    qint64          peerid;
+    QString         type;
+    qint64          conntime;
+    QString         address;
+    qint64          asn;
+    QString         tls_cipher;
+    bool            tls_verified;
+    qint64          banscore;
+    qint64          protocolversion;
+    QString         subver;
+    qint64          bytes_received;
+    qint64          bytes_sent;
+    double          pingtime;
+};
+
 
 struct WatchedTx {
     QString opid;
@@ -44,6 +59,7 @@ public:
     void refresh(bool force = false);
 
     void refreshAddresses();    
+    void refreshPeers();    
     
     void checkForUpdate(bool silent = true);
     void refreshPrice();
@@ -62,6 +78,7 @@ public:
     void addNewTxToWatch(const QString& newOpid, WatchedTx wtx); 
 
     const TxTableModel*               getTransactionsModel() { return transactionsTableModel; }
+    const PeersTableModel*            getPeersModel()        { return peersTableModel; }
     const QList<QString>*             getAllZAddresses()     { return zaddresses; }
     const QList<QString>*             getAllTAddresses()     { return taddresses; }
     const QList<UnspentOutput>*       getUTXOs()             { return utxos; }
@@ -87,7 +104,6 @@ public:
 
     void getAllPrivKeys(const std::function<void(QList<QPair<QString, QString>>)>);
 
-    Turnstile*  getTurnstile()  { return turnstile; }
     Connection* getConnection() { return conn; }
 
 private:
@@ -109,12 +125,12 @@ private:
     void getTransparentUnspent  (const std::function<void(QJsonValue)>& cb);
     void getZUnspent            (const std::function<void(QJsonValue)>& cb);
     void getTransactions        (const std::function<void(QJsonValue)>& cb);
+    void getPeerInfo            (const std::function<void(QJsonValue)>& cb);
     void getZAddresses          (const std::function<void(QJsonValue)>& cb);
     void getTAddresses          (const std::function<void(QJsonValue)>& cb);
 
     Connection*                 conn                        = nullptr;
-    std::shared_ptr<QProcess>   ehushd                     = nullptr;
-
+    std::shared_ptr<QProcess>   ehushd                      = nullptr;
     QList<UnspentOutput>*       utxos                       = nullptr;
     QMap<QString, double>*      allBalances                 = nullptr;
     QMap<QString, bool>*        usedAddresses               = nullptr;
@@ -124,6 +140,7 @@ private:
     QMap<QString, WatchedTx>    watchingOps;
 
     TxTableModel*               transactionsTableModel      = nullptr;
+    PeersTableModel*            peersTableModel             = nullptr;
     BalancesTableModel*         balancesTableModel          = nullptr;
 
     QTimer*                     timer;
@@ -132,7 +149,6 @@ private:
 
     Ui::MainWindow*             ui;
     MainWindow*                 main;
-    Turnstile*                  turnstile;
 
     // Current balance in the UI. If this number updates, then refresh the UI
     QString                     currentBalance;

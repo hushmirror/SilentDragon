@@ -49,6 +49,7 @@ SOURCES += \
     src/sendtab.cpp \
     src/senttxstore.cpp \
     src/txtablemodel.cpp \
+    src/peerstablemodel.cpp \
     src/qrcodelabel.cpp \
     src/connection.cpp \
     src/fillediconlabel.cpp \
@@ -73,6 +74,7 @@ HEADERS += \
     src/3rdparty/qrcode/QrSegment.hpp \
     src/settings.h \
     src/txtablemodel.h \
+    src/peerstablemodel.h \
     src/senttxstore.h \
     src/qrcodelabel.h \
     src/connection.h \

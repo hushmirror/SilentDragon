@@ -14,7 +14,7 @@ RPC::RPC(MainWindow* main) {
     QTimer::singleShot(1, [=]() { cl->loadConnection(); });
 
     this->main = main;
-    this->ui = main->ui;
+    this->ui   = main->ui;
 
     // Setup balances table model
     balancesTableModel = new BalancesTableModel(main->ui->balancesTable);
@@ -25,12 +25,17 @@ RPC::RPC(MainWindow* main) {
     main->ui->transactionsTable->setModel(transactionsTableModel);
     main->ui->transactionsTable->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
 
+    peersTableModel = new PeersTableModel(ui->peersTable);
+    main->ui->peersTable->setModel(peersTableModel);
+    // tls cipher is wide
+    main->ui->peersTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+
     // Set up timer to refresh Price
     priceTimer = new QTimer(main);
     QObject::connect(priceTimer, &QTimer::timeout, [=]() {
         refreshPrice();
     });
-    priceTimer->start(Settings::priceRefreshSpeed);  // Every hour
+    priceTimer->start(Settings::priceRefreshSpeed);
 
     // Set up a timer to refresh the UI every few seconds
     timer = new QTimer(main);
@@ -46,7 +51,7 @@ RPC::RPC(MainWindow* main) {
         //qDebug() << "Watching tx status";
         watchTxStatus();
     });
-    // Start at every 10s. When an operation is pending, this will change to every second
+
     txTimer->start(Settings::updateSpeed);  
 
     usedAddresses = new QMap<QString, bool>();
@@ -58,6 +63,7 @@ RPC::~RPC() {
 
     delete transactionsTableModel;
     delete balancesTableModel;
+    delete peersTableModel;
 
     delete utxos;
     delete allBalances;
@@ -70,10 +76,6 @@ RPC::~RPC() {
 
 void RPC::setEHushd(std::shared_ptr<QProcess> p) {
     ehushd = p;
-
-    if (ehushd && ui->tabWidget->widget(4) == nullptr) {
-        ui->tabWidget->addTab(main->zcashdtab, "zcashd");
-    }
 }
 
 // Called when a connection to hushd is available. 
@@ -85,7 +87,7 @@ void RPC::setConnection(Connection* c) {
 
     ui->statusBar->showMessage("Ready! Thank you for helping secure the Hush network by running a full node.");
 
-    // See if we need to remove the reindex/rescan flags from the zcash.conf file
+    // See if we need to remove the reindex/rescan flags from the conf file
     auto hushConfLocation = Settings::getInstance()->getHushdConfLocation();
     Settings::removeFromHushConf(hushConfLocation, "rescan");
     Settings::removeFromHushConf(hushConfLocation, "reindex");
@@ -237,6 +239,11 @@ void RPC::getBalance(const std::function<void(QJsonValue)>& cb) {
     };
 
     conn->doRPCWithDefaultErrorHandling(payload, cb);
+}
+
+void RPC::getPeerInfo(const std::function<void(QJsonValue)>& cb) {
+    QString method = "getpeerinfo";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
 }
 
 void RPC::getTransactions(const std::function<void(QJsonValue)>& cb) {
@@ -573,11 +580,10 @@ void RPC::getInfoThenRefresh(bool force) {
         // TODO: store all future halvings
         int blocks_until_halving= 2020000 - curBlock;
         char halving_days[8];
-        sprintf(halving_days, "%.2f", (double) (blocks_until_halving * 150) / (60*60*24) );
+        int blocktime = 75; // seconds
+        sprintf(halving_days, "%.2f", (double) (blocks_until_halving * blocktime) / (60*60*24) );
         QString ntzhash         = reply["notarizedhash"].toString();
         QString ntztxid         = reply["notarizedtxid"].toString();
-        // Fuck The KYC Traitor named jl777
-        //QString kmdver          = reply["KMDversion"].toString();
 
         Settings::getInstance()->setHushdVersion(version);
 
@@ -586,7 +592,6 @@ void RPC::getInfoThenRefresh(bool force) {
         ui->notarizedtxidvalue->setText( ntztxid );
         ui->lagvalue->setText( QString::number(lag) );
         ui->version->setText( QString::number(version) );
-        //ui->kmdversion->setText( kmdver );
         ui->protocolversion->setText( QString::number(protocolversion) );
         ui->p2pport->setText( QString::number(p2pport) );
         ui->rpcport->setText( QString::number(rpcport) );
@@ -597,6 +602,7 @@ void RPC::getInfoThenRefresh(bool force) {
             lastBlock = curBlock;
 
             refreshBalances();        
+            refreshPeers();
             refreshAddresses(); // This calls refreshZSentTransactions() and refreshReceivedZTrans()
             refreshTransactions();
         }
@@ -621,8 +627,8 @@ void RPC::getInfoThenRefresh(bool force) {
         conn->doRPCIgnoreError(makePayload(method), [=](const QJsonValue& reply) {
             qint64 solrate = reply.toInt();
 
-            // TODO: megasol
-            ui->solrate->setText(QString::number(solrate) % " Sol/s");
+            //TODO: format decimal
+            ui->solrate->setText(QString::number(solrate / 1000000) % " MegaSol/s");
         });
 
         // Get network info
@@ -847,6 +853,49 @@ void RPC::refreshBalances() {
 
             main->balancesReady();
         });        
+    });
+}
+
+void RPC::refreshPeers() {    
+    qDebug() << __func__;
+    if  (conn == nullptr) 
+        return noConnection();
+
+    getPeerInfo([=] (QJsonValue reply) {
+        QList<PeerItem> peerdata;
+
+        for (const auto& it : reply.toArray()) {
+            auto addr = it.toObject()["addr"].toString();
+            auto asn  = (qint64)it.toObject()["mapped_as"].toInt();
+            auto recv = (qint64)it.toObject()["bytesrecv"].toInt();
+            auto sent = (qint64)it.toObject()["bytessent"].toInt();
+
+            PeerItem peer {
+                it.toObject()["id"].toInt(), // peerid
+                "",  // type
+                (qint64)it.toObject()["conntime"].toInt(),
+                addr,
+                asn,
+                it.toObject()["tls_cipher"].toString(),
+                // don't convert the JS string "false" to a bool, which is true, lulz
+                it.toObject()["tls_verified"].toString() == 'true' ? true : false,
+                (qint64)(it.toObject()["banscore"].toInt()),
+                (qint64)(it.toObject()["version"].toInt()), // protocolversion
+                it.toObject()["subver"].toString(),
+                recv,
+                sent,
+                it.toObject()["pingtime"].toDouble(),
+                };
+
+            qDebug() << "Adding peer with address=" <<  addr << " and AS=" << asn
+             << " bytesrecv=" << recv << " bytessent=" << sent;
+            peerdata.push_back(peer);
+        }
+
+        //qDebug() << peerdata;
+
+        // Update model data, which updates the table view
+        peersTableModel->addData(peerdata);        
     });
 }
 

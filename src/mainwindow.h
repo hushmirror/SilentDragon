@@ -68,7 +68,6 @@ public:
     QLabel*             statusLabel;
     QLabel*             statusIcon;
     QLabel*             loadingLabel;
-    QWidget*            zcashdtab;
 
     Logger*      logger;
 
@@ -78,6 +77,7 @@ private:
     void closeEvent(QCloseEvent* event);
 
     void setupSendTab();
+    void setupPeersTab();
     void setupTransactionsTab();
     void setupReceiveTab();
     void setupBalancesTab();
@@ -95,9 +95,6 @@ private:
 
     Tx   createTxFromSendPage();
     bool confirmTx(Tx tx);
-
-    void turnstileDoMigration(QString fromAddr = "");
-    void turnstileProgress();
 
     void cancelButton();
     void sendButton();

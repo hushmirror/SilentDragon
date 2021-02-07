@@ -915,6 +915,7 @@
         </item>
        </layout>
       </widget>
+
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
         <string>Transactions</string>
@@ -932,6 +933,28 @@
         </item>
        </layout>
       </widget>
+
+
+      <widget class="QWidget" name="peer_tab">
+       <attribute name="title">
+        <string>Peers</string>
+       </attribute>
+
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTableView" name="peersTable">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+
+      </widget>
+
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
         <string>Market</string>
@@ -1610,14 +1633,6 @@
   <action name="actionCheck_for_Updates">
    <property name="text">
     <string>Check git.hush.is for &amp;updates</string>
-   </property>
-  </action>
-  <action name="actionTurnstile_Migration">
-   <property name="text">
-    <string>Sapling &amp;turnstile</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+A, Ctrl+T</string>
    </property>
   </action>
   <action name="actionImport_Private_Key">
