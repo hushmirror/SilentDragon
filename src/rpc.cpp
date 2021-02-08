@@ -27,8 +27,14 @@ RPC::RPC(MainWindow* main) {
 
     peersTableModel = new PeersTableModel(ui->peersTable);
     main->ui->peersTable->setModel(peersTableModel);
-    // tls cipher is wide
-    main->ui->peersTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+    // tls ciphersuite is wide
+    main->ui->peersTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+
+    bannedPeersTableModel = new BannedPeersTableModel(ui->bannedPeersTable);
+    main->ui->bannedPeersTable->setModel(bannedPeersTableModel);
+    main->ui->bannedPeersTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+
+    qDebug() << __func__ << "Done settings up TableModels";
 
     // Set up timer to refresh Price
     priceTimer = new QTimer(main);
@@ -36,6 +42,7 @@ RPC::RPC(MainWindow* main) {
         refreshPrice();
     });
     priceTimer->start(Settings::priceRefreshSpeed);
+    qDebug() << __func__ << ": started price refresh at speed=" << Settings::priceRefreshSpeed;
 
     // Set up a timer to refresh the UI every few seconds
     timer = new QTimer(main);
@@ -53,6 +60,7 @@ RPC::RPC(MainWindow* main) {
     });
 
     txTimer->start(Settings::updateSpeed);  
+    qDebug() << __func__ << "Done settings up all timers";
 
     usedAddresses = new QMap<QString, bool>();
 }
@@ -64,6 +72,7 @@ RPC::~RPC() {
     delete transactionsTableModel;
     delete balancesTableModel;
     delete peersTableModel;
+    delete bannedPeersTableModel;
 
     delete utxos;
     delete allBalances;
@@ -243,6 +252,11 @@ void RPC::getBalance(const std::function<void(QJsonValue)>& cb) {
 
 void RPC::getPeerInfo(const std::function<void(QJsonValue)>& cb) {
     QString method = "getpeerinfo";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
+}
+
+void RPC::listBanned(const std::function<void(QJsonValue)>& cb) {
+    QString method = "listbanned";
     conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
 }
 
@@ -628,7 +642,7 @@ void RPC::getInfoThenRefresh(bool force) {
             qint64 solrate = reply.toInt();
 
             //TODO: format decimal
-            ui->solrate->setText(QString::number(solrate / 1000000) % " MegaSol/s");
+            ui->solrate->setText(QString::number((double)solrate / 1000000) % " MegaSol/s");
         });
 
         // Get network info
@@ -861,6 +875,34 @@ void RPC::refreshPeers() {
     if  (conn == nullptr) 
         return noConnection();
 
+/*
+[
+  {
+    "address": "199.247.28.148/255.255.255.255",
+    "banned_until": 1612869516
+  },
+  {
+    "address": "2001:19f0:5001:d26:5400:3ff:fe18:f6c2/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+    "banned_until": 1612870431
+  }
+]
+*/
+
+    listBanned([=] (QJsonValue reply) {
+        QList<BannedPeerItem> peerdata;
+        for (const auto& it : reply.toArray()) {
+            auto addr     = it.toObject()["address"].toString();
+            auto bantime  = (qint64)it.toObject()["banned_until"].toInt();
+            auto parts    = addr.split("/");
+            auto ip       = parts[0];
+            auto subnet   = parts[1];
+            BannedPeerItem peer { ip, subnet, bantime };
+            qDebug() << "Adding banned peer with address=" <<  addr;
+            peerdata.push_back(peer);
+        }
+        bannedPeersTableModel->addData(peerdata);
+    });
+
     getPeerInfo([=] (QJsonValue reply) {
         QList<PeerItem> peerdata;
 
@@ -893,7 +935,6 @@ void RPC::refreshPeers() {
         }
 
         //qDebug() << peerdata;
-
         // Update model data, which updates the table view
         peersTableModel->addData(peerdata);        
     });

@@ -7,6 +7,7 @@
 #include "balancestablemodel.h"
 #include "txtablemodel.h"
 #include "peerstablemodel.h"
+#include "bannedpeerstablemodel.h"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 #include "connection.h"
@@ -20,6 +21,12 @@ struct TransactionItem {
     unsigned long   confirmations;
     QString         fromAddr;
     QString         memo;
+};
+
+struct BannedPeerItem {
+    QString     address;
+    QString     subnet;
+    qint64      banned_until;
 };
 
 struct PeerItem {
@@ -125,6 +132,7 @@ private:
     void getTransparentUnspent  (const std::function<void(QJsonValue)>& cb);
     void getZUnspent            (const std::function<void(QJsonValue)>& cb);
     void getTransactions        (const std::function<void(QJsonValue)>& cb);
+    void listBanned             (const std::function<void(QJsonValue)>& cb);
     void getPeerInfo            (const std::function<void(QJsonValue)>& cb);
     void getZAddresses          (const std::function<void(QJsonValue)>& cb);
     void getTAddresses          (const std::function<void(QJsonValue)>& cb);
@@ -141,6 +149,7 @@ private:
 
     TxTableModel*               transactionsTableModel      = nullptr;
     PeersTableModel*            peersTableModel             = nullptr;
+    BannedPeersTableModel*      bannedPeersTableModel       = nullptr;
     BalancesTableModel*         balancesTableModel          = nullptr;
 
     QTimer*                     timer;

@@ -22,7 +22,6 @@
 #include "requestdialog.h"
 #include "websockets.h"
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -1128,16 +1127,62 @@ void MainWindow::setupBalancesTab() {
     });
 }
 
+QString peer2ip(QString peer) {
+    QString ip = "";
+    if(peer.contains("[")) {
+        // this is actually ipv6, grab it all except the port
+        auto parts = peer.split(":");
+        parts[8]=""; // remove  port
+        peer = parts.join(":");
+        peer.chop(1); // remove trailing :
+    } else {
+        ip     = peer.split(":")[0];
+    }
+    return ip;
+}
+
 void MainWindow::setupPeersTab() {
     qDebug() << __FUNCTION__;
     // Set up context menu on transactions tab
     ui->peersTable->setContextMenuPolicy(Qt::CustomContextMenu);
+    ui->bannedPeersTable->setContextMenuPolicy(Qt::CustomContextMenu);
+
+    // Table right click
+    QObject::connect(ui->bannedPeersTable, &QTableView::customContextMenuRequested, [=] (QPoint pos) {
+        QModelIndex index = ui->peersTable->indexAt(pos);
+        if (index.row() < 0) return;
+
+        QMenu menu(this);
+
+        auto bannedPeerModel = dynamic_cast<BannedPeersTableModel *>(ui->bannedPeersTable->model());
+        QString addr         = bannedPeerModel->getAddress(index.row());
+        QString ip           = peer2ip(addr);
+        QString subnet       = bannedPeerModel->getSubnet(index.row());
+        qint64 banned_until  = bannedPeerModel->getBannedUntil(index.row());
+
+        if(!ip.isEmpty()) {
+            menu.addAction(tr("Copy banned peer IP"), [=] () {
+                QGuiApplication::clipboard()->setText(ip);
+                ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+            });
+        }
+
+        // shodan only supports ipv4 addresses *and* we get ipv6 addresses
+        // in a different format, yay
+        if(!ip.isEmpty() && !ip.contains(":")) {
+            menu.addAction(tr("View banned host IP on shodan.io (3rd party service)"), [=] () {
+                QString url = "https://www.shodan.io/host/" + ip;
+                qDebug() << "opening " << url;
+                QDesktopServices::openUrl(QUrl(url));
+            });
+        }
+
+        menu.exec(ui->bannedPeersTable->viewport()->mapToGlobal(pos));
+    });
 
     // Table right click
     QObject::connect(ui->peersTable, &QTableView::customContextMenuRequested, [=] (QPoint pos) {
         QModelIndex index = ui->peersTable->indexAt(pos);
-        // we auto-sort by conntime 
-        //ui->peersTable->setSortingEnabled(true);
         if (index.row() < 0) return;
 
         QMenu menu(this);
@@ -1146,23 +1191,15 @@ void MainWindow::setupPeersTab() {
         QString addr   = peerModel->getAddress(index.row());
         QString cipher = peerModel->getTLSCipher(index.row());
         qint64 asn     = peerModel->getASN(index.row());
-        QString ip     = addr.split(":")[0];
+        QString ip     = peer2ip(addr);
         QString as     = QString::number(asn);
-
-        if(ip.contains("[")) {
-            // this is actually ipv6, grab it all except the port
-            auto parts = addr.split(":");
-            parts[8]=""; // remove  port
-            ip = parts.join(":");
-            ip.chop(1); // remove trailing :
-        }
 
         menu.addAction(tr("Copy peer address+port"), [=] () {
             QGuiApplication::clipboard()->setText(addr);
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
         });
 
-        //TODO: support Tor correctly
+        //TODO: support Tor correctly when v3 lands
         menu.addAction(tr("Copy peer address"), [=] () {
             QGuiApplication::clipboard()->setText(ip);
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
@@ -1197,6 +1234,36 @@ void MainWindow::setupPeersTab() {
 
         menu.exec(ui->peersTable->viewport()->mapToGlobal(pos));
     });
+
+    /*
+    //grep 'BAN THRESHOLD EXCEEDED' ~/.komodo/HUSH3/debug.log
+    //grep Disconnected ...
+    QFile debuglog = "";
+
+#ifdef Q_OS_LINUX
+    debuglog = "~/.komodo/HUSH3/debug.log";
+#elif defined(Q_OS_DARWIN)
+    debuglog = "~/Library/Application Support/Komodo/HUSH3/debug.log";
+#elif defined(Q_OS_WIN64)
+    // "C:/Users/<USER>/AppData/Roaming/<APPNAME>", 
+    // TODO: get current username
+    debuglog = "C:/Users/<USER>/AppData/Roaming/Komodo/HUSH3/debug.log";
+#else
+    // Bless Your Heart, You Like Danger!
+    // There are open bounties to port HUSH softtware to OpenBSD and friends:
+    // git.hush.is/hush/tasks
+    debuglog = "~/.komodo/HUSH3/debug.log";
+#endif // Q_OS_LINUX
+
+    if(debuglog.exists()) {
+        qDebug() << __func__ << ": Found debuglog at " << debuglog;
+    } else {
+        qDebug() << __func__ << ": No debug.log found";
+    }
+    */
+
+    //ui->recentlyBannedPeers = "Could not open " + debuglog;
+
 }
 
 void MainWindow::setupHushTab() {

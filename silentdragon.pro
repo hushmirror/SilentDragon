@@ -50,6 +50,7 @@ SOURCES += \
     src/senttxstore.cpp \
     src/txtablemodel.cpp \
     src/peerstablemodel.cpp \
+    src/bannedpeerstablemodel.cpp \
     src/qrcodelabel.cpp \
     src/connection.cpp \
     src/fillediconlabel.cpp \
@@ -75,6 +76,7 @@ HEADERS += \
     src/settings.h \
     src/txtablemodel.h \
     src/peerstablemodel.h \
+    src/bannedpeerstablemodel.h \
     src/senttxstore.h \
     src/qrcodelabel.h \
     src/connection.h \
