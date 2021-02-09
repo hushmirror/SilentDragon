@@ -143,8 +143,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1182"/>
-        <location filename="../src/mainwindow.cpp" line="1249"/>
+        <location filename="../src/mainwindow.cpp" line="1322"/>
+        <location filename="../src/mainwindow.cpp" line="1389"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Poruka (memo)</translation>
@@ -237,123 +237,142 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1386"/>
+        <location filename="../src/mainwindow.cpp" line="1526"/>
         <source>Export Private Key</source>
         <translation>Izvoz privatnog ključa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="920"/>
+        <location filename="../src/mainwindow.ui" line="921"/>
         <source>Transactions</source>
         <translation>Transakcije</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1055"/>
-        <source>hushd</source>
-        <translation>hushd</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1085"/>
-        <source>You are currently not mining</source>
-        <translation>Trenutno ne rudarite</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1584"/>
-        <source>&amp;Report a bug</source>
+        <location filename="../src/mainwindow.ui" line="940"/>
+        <source>Peers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1612"/>
-        <source>Check git.hush.is for &amp;updates</source>
+        <location filename="../src/mainwindow.ui" line="948"/>
+        <source>
+            Current Peers
+            </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="969"/>
-        <location filename="../src/mainwindow.ui" line="983"/>
-        <location filename="../src/mainwindow.ui" line="997"/>
-        <location filename="../src/mainwindow.ui" line="1004"/>
-        <location filename="../src/mainwindow.ui" line="1011"/>
-        <location filename="../src/mainwindow.ui" line="1105"/>
-        <location filename="../src/mainwindow.ui" line="1126"/>
-        <location filename="../src/mainwindow.ui" line="1147"/>
-        <location filename="../src/mainwindow.ui" line="1168"/>
-        <location filename="../src/mainwindow.ui" line="1191"/>
-        <location filename="../src/mainwindow.ui" line="1212"/>
-        <location filename="../src/mainwindow.ui" line="1233"/>
-        <location filename="../src/mainwindow.ui" line="1254"/>
-        <location filename="../src/mainwindow.ui" line="1275"/>
-        <location filename="../src/mainwindow.ui" line="1296"/>
-        <location filename="../src/mainwindow.ui" line="1317"/>
-        <location filename="../src/mainwindow.ui" line="1338"/>
-        <location filename="../src/mainwindow.ui" line="1359"/>
-        <location filename="../src/mainwindow.ui" line="1380"/>
-        <location filename="../src/mainwindow.ui" line="1402"/>
-        <location filename="../src/mainwindow.ui" line="1424"/>
-        <location filename="../src/mainwindow.ui" line="1439"/>
-        <location filename="../src/mainwindow.ui" line="1460"/>
+        <source>
+            Banned Peers
+            </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1123"/>
+        <source>hushd</source>
+        <translation>hushd</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1153"/>
+        <source>You are currently not mining</source>
+        <translation>Trenutno ne rudarite</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1652"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1680"/>
+        <source>Check git.hush.is for &amp;updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1037"/>
+        <location filename="../src/mainwindow.ui" line="1051"/>
+        <location filename="../src/mainwindow.ui" line="1065"/>
+        <location filename="../src/mainwindow.ui" line="1072"/>
+        <location filename="../src/mainwindow.ui" line="1079"/>
+        <location filename="../src/mainwindow.ui" line="1173"/>
+        <location filename="../src/mainwindow.ui" line="1194"/>
+        <location filename="../src/mainwindow.ui" line="1215"/>
+        <location filename="../src/mainwindow.ui" line="1236"/>
+        <location filename="../src/mainwindow.ui" line="1259"/>
+        <location filename="../src/mainwindow.ui" line="1280"/>
+        <location filename="../src/mainwindow.ui" line="1301"/>
+        <location filename="../src/mainwindow.ui" line="1322"/>
+        <location filename="../src/mainwindow.ui" line="1343"/>
+        <location filename="../src/mainwindow.ui" line="1364"/>
+        <location filename="../src/mainwindow.ui" line="1385"/>
+        <location filename="../src/mainwindow.ui" line="1406"/>
+        <location filename="../src/mainwindow.ui" line="1427"/>
+        <location filename="../src/mainwindow.ui" line="1448"/>
+        <location filename="../src/mainwindow.ui" line="1470"/>
+        <location filename="../src/mainwindow.ui" line="1492"/>
+        <location filename="../src/mainwindow.ui" line="1507"/>
+        <location filename="../src/mainwindow.ui" line="1528"/>
         <location filename="../src/mainwindow.cpp" line="881"/>
         <location filename="../src/mainwindow.cpp" line="945"/>
         <source>Loading...</source>
         <translation>Učitavanje...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="937"/>
+        <location filename="../src/mainwindow.ui" line="1005"/>
         <source>Market</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="948"/>
+        <location filename="../src/mainwindow.ui" line="1016"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="962"/>
+        <location filename="../src/mainwindow.ui" line="1030"/>
         <source>Market Cap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="990"/>
+        <location filename="../src/mainwindow.ui" line="1058"/>
         <source>24H Volume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1112"/>
+        <location filename="../src/mainwindow.ui" line="1180"/>
         <source>Block height</source>
         <translation>Visina bloka</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1119"/>
+        <location filename="../src/mainwindow.ui" line="1187"/>
         <source>Notarized Hash</source>
         <translation>Potvrđen hash</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1133"/>
-        <location filename="../src/mainwindow.ui" line="1154"/>
-        <location filename="../src/mainwindow.ui" line="1175"/>
-        <location filename="../src/mainwindow.ui" line="1198"/>
-        <location filename="../src/mainwindow.ui" line="1219"/>
-        <location filename="../src/mainwindow.ui" line="1240"/>
-        <location filename="../src/mainwindow.ui" line="1261"/>
-        <location filename="../src/mainwindow.ui" line="1282"/>
-        <location filename="../src/mainwindow.ui" line="1303"/>
-        <location filename="../src/mainwindow.ui" line="1324"/>
-        <location filename="../src/mainwindow.ui" line="1345"/>
-        <location filename="../src/mainwindow.ui" line="1366"/>
-        <location filename="../src/mainwindow.ui" line="1387"/>
-        <location filename="../src/mainwindow.ui" line="1409"/>
-        <location filename="../src/mainwindow.ui" line="1431"/>
-        <location filename="../src/mainwindow.ui" line="1487"/>
-        <location filename="../src/mainwindow.ui" line="1494"/>
-        <location filename="../src/mainwindow.ui" line="1501"/>
+        <location filename="../src/mainwindow.ui" line="1201"/>
+        <location filename="../src/mainwindow.ui" line="1222"/>
+        <location filename="../src/mainwindow.ui" line="1243"/>
+        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1392"/>
+        <location filename="../src/mainwindow.ui" line="1413"/>
+        <location filename="../src/mainwindow.ui" line="1434"/>
+        <location filename="../src/mainwindow.ui" line="1455"/>
+        <location filename="../src/mainwindow.ui" line="1477"/>
+        <location filename="../src/mainwindow.ui" line="1499"/>
+        <location filename="../src/mainwindow.ui" line="1555"/>
+        <location filename="../src/mainwindow.ui" line="1562"/>
+        <location filename="../src/mainwindow.ui" line="1569"/>
         <source>|</source>
         <translation>|</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1140"/>
+        <location filename="../src/mainwindow.ui" line="1208"/>
         <source>Notarized txid</source>
         <translation>Potvrđen txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1161"/>
+        <location filename="../src/mainwindow.ui" line="1229"/>
         <source>Notarized Lag</source>
         <translation>Potvrđeno kašnjenje</translation>
     </message>
@@ -362,122 +381,122 @@
         <translation type="vanished">KMD verzija</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1205"/>
+        <location filename="../src/mainwindow.ui" line="1273"/>
         <source>Protocol Version</source>
         <translation>Verzija protokola</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1226"/>
+        <location filename="../src/mainwindow.ui" line="1294"/>
         <source>Version</source>
         <translation>Verzija</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1247"/>
+        <location filename="../src/mainwindow.ui" line="1315"/>
         <source>P2P Port</source>
         <translation>P2P port</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1268"/>
+        <location filename="../src/mainwindow.ui" line="1336"/>
         <source>RPC Port</source>
         <translation>RPC port</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1289"/>
+        <location filename="../src/mainwindow.ui" line="1357"/>
         <source>Client Name</source>
         <translation>Ime klijenta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1310"/>
+        <location filename="../src/mainwindow.ui" line="1378"/>
         <source>Next Halving</source>
         <translation>Slijedeći halving</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1331"/>
+        <location filename="../src/mainwindow.ui" line="1399"/>
         <source>Local Services</source>
         <translation>Lokalni servisi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1352"/>
+        <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Longest Chain</source>
         <translation>Najduži niz</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1373"/>
+        <location filename="../src/mainwindow.ui" line="1441"/>
         <source>Wallet Transactions</source>
         <translation>Transakcije u novčaniku</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1395"/>
+        <location filename="../src/mainwindow.ui" line="1463"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1417"/>
+        <location filename="../src/mainwindow.ui" line="1485"/>
         <source>TLS Support</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1446"/>
+        <location filename="../src/mainwindow.ui" line="1514"/>
         <source>Network solution rate</source>
         <translation>Snaga mreže</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1453"/>
+        <location filename="../src/mainwindow.ui" line="1521"/>
         <source>Connections</source>
         <translation>Povezanost</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1527"/>
+        <location filename="../src/mainwindow.ui" line="1595"/>
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1542"/>
+        <location filename="../src/mainwindow.ui" line="1610"/>
         <source>&amp;Help</source>
         <translation>&amp;Pomoć</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1553"/>
+        <location filename="../src/mainwindow.ui" line="1621"/>
         <source>&amp;Apps</source>
         <translation>&amp;Apps</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1561"/>
+        <location filename="../src/mainwindow.ui" line="1629"/>
         <source>&amp;Edit</source>
         <translation>&amp;Uredi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1574"/>
+        <location filename="../src/mainwindow.ui" line="1642"/>
         <source>E&amp;xit</source>
         <translation>&amp;Izlaz</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1579"/>
+        <location filename="../src/mainwindow.ui" line="1647"/>
         <source>&amp;About</source>
         <translation>&amp;O</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1589"/>
+        <location filename="../src/mainwindow.ui" line="1657"/>
         <source>&amp;Settings</source>
         <translation>&amp;Postavke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1592"/>
+        <location filename="../src/mainwindow.ui" line="1660"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1597"/>
+        <location filename="../src/mainwindow.ui" line="1665"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Pošalji Duke Feedback</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1602"/>
+        <location filename="../src/mainwindow.ui" line="1670"/>
         <source>&amp;Hush Telegram</source>
         <translation>&amp;Hush Telegram</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1607"/>
+        <location filename="../src/mainwindow.ui" line="1675"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Hush Web stranica</translation>
     </message>
@@ -486,78 +505,76 @@
         <translation type="vanished">Provjeri na git &amp;dopune</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1617"/>
         <source>Sapling &amp;turnstile</source>
-        <translation>Sapling &amp;čvorište</translation>
+        <translation type="vanished">Sapling &amp;čvorište</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1620"/>
         <source>Ctrl+A, Ctrl+T</source>
-        <translation>Ctrl+A, Ctrl+T</translation>
+        <translation type="vanished">Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1625"/>
+        <location filename="../src/mainwindow.ui" line="1685"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Uvoz privatnog ključa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1630"/>
+        <location filename="../src/mainwindow.ui" line="1690"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Izvoz svih privatnih ključeva</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1635"/>
+        <location filename="../src/mainwindow.ui" line="1695"/>
         <source>&amp;z-board.net</source>
         <translation>&amp;z-board.net</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1638"/>
+        <location filename="../src/mainwindow.ui" line="1698"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1643"/>
+        <location filename="../src/mainwindow.ui" line="1703"/>
         <source>Address &amp;book</source>
         <translation>Adresna &amp;knjiga</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1646"/>
+        <location filename="../src/mainwindow.ui" line="1706"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1651"/>
+        <location filename="../src/mainwindow.ui" line="1711"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Sigurnosna kopija wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1656"/>
+        <location filename="../src/mainwindow.ui" line="1716"/>
         <location filename="../src/mainwindow.cpp" line="821"/>
         <source>Export transactions</source>
         <translation>Izvoz transakcija</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1661"/>
+        <location filename="../src/mainwindow.ui" line="1721"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation>Hush plaćanje &amp;URI...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1666"/>
+        <location filename="../src/mainwindow.ui" line="1726"/>
         <source>Connect mobile &amp;app</source>
         <translation>Spoji mobilnu &amp;app</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1669"/>
+        <location filename="../src/mainwindow.ui" line="1729"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1674"/>
+        <location filename="../src/mainwindow.ui" line="1734"/>
         <source>Request HUSH...</source>
         <translation>Zatraži HUSH...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1679"/>
+        <location filename="../src/mainwindow.ui" line="1739"/>
         <source>Validate Address</source>
         <translation>Potvrdi adresu</translation>
     </message>
@@ -769,14 +786,19 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1058"/>
-        <location filename="../src/mainwindow.cpp" line="1211"/>
+        <location filename="../src/mainwindow.cpp" line="1351"/>
         <source>Copy address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1061"/>
-        <location filename="../src/mainwindow.cpp" line="1207"/>
-        <location filename="../src/mainwindow.cpp" line="1213"/>
+        <location filename="../src/mainwindow.cpp" line="1166"/>
+        <location filename="../src/mainwindow.cpp" line="1199"/>
+        <location filename="../src/mainwindow.cpp" line="1205"/>
+        <location filename="../src/mainwindow.cpp" line="1210"/>
+        <location filename="../src/mainwindow.cpp" line="1215"/>
+        <location filename="../src/mainwindow.cpp" line="1347"/>
+        <location filename="../src/mainwindow.cpp" line="1353"/>
         <source>Copied to clipboard</source>
         <translation>Kopirano u mađuspremnik</translation>
     </message>
@@ -797,7 +819,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1090"/>
-        <location filename="../src/mainwindow.cpp" line="1217"/>
+        <location filename="../src/mainwindow.cpp" line="1357"/>
         <source>View on block explorer</source>
         <translation>Pogledaj na blok exploreru</translation>
     </message>
@@ -807,52 +829,92 @@
         <translation>Preglednik adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1118"/>
+        <location filename="../src/mainwindow.cpp" line="1119"/>
         <source>Convert Address</source>
         <translation>Pretvorite adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1205"/>
+        <location filename="../src/mainwindow.cpp" line="1164"/>
+        <source>Copy banned peer IP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1173"/>
+        <source>View banned host IP on shodan.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1197"/>
+        <source>Copy peer address+port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1203"/>
+        <source>Copy peer address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1208"/>
+        <source>Copy TLS ciphersuite</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1213"/>
+        <source>Copy ASN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1220"/>
+        <source>View host on shodan.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1228"/>
+        <source>View ASN on bgpview.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1345"/>
         <source>Copy txid</source>
         <translation>Kopitajte txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1228"/>
+        <location filename="../src/mainwindow.cpp" line="1368"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1241"/>
+        <location filename="../src/mainwindow.cpp" line="1381"/>
         <source>View Payment Request</source>
         <translation>Pogledajte zahtjev o plaćanju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1248"/>
+        <location filename="../src/mainwindow.cpp" line="1388"/>
         <source>View Memo</source>
         <translation>Pogledajte poruku (memo)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1262"/>
+        <location filename="../src/mainwindow.cpp" line="1402"/>
         <source>Reply to </source>
         <translation>Odgovorite </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1343"/>
+        <location filename="../src/mainwindow.cpp" line="1483"/>
         <source>Created new t-Addr</source>
         <translation>Napravljena je nova transparentna adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1392"/>
+        <location filename="../src/mainwindow.cpp" line="1532"/>
         <source>Copy Address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1458"/>
+        <location filename="../src/mainwindow.cpp" line="1598"/>
         <source>Address has been previously used</source>
         <translation>Adresa je već korištena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1460"/>
+        <location filename="../src/mainwindow.cpp" line="1600"/>
         <source>Address is unused</source>
         <translation>Adresa nije korištena</translation>
     </message>
@@ -1227,48 +1289,48 @@ Ne pokrećem integrirani hushd jer --no-embedded nije prilagođen</translation>
         <translation>Nije moguće napraviti HUSH3.conf.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="245"/>
+        <location filename="../src/connection.cpp" line="249"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Sva preuzimanja su uspješno završena!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="268"/>
+        <location filename="../src/connection.cpp" line="272"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Nije moguće preuzeti parametre. Za više informacija provjerite na stranici Pomoć.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="294"/>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="298"/>
+        <location filename="../src/connection.cpp" line="314"/>
         <source>Downloading </source>
         <translation>Preuzimanje </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="294"/>
+        <location filename="../src/connection.cpp" line="298"/>
         <source> more remaining )</source>
         <translation> još preostaje )</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="295"/>
+        <location filename="../src/connection.cpp" line="299"/>
         <source>MB of </source>
         <translation>Mb od </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="295"/>
+        <location filename="../src/connection.cpp" line="299"/>
         <source>MB at </source>
         <translation>MB uz </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="314"/>
         <source> failed. Please check the help site for more info</source>
         <translation> neuspješno. Za više informacija provjerite na stranici Pomoć</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="334"/>
+        <location filename="../src/connection.cpp" line="338"/>
         <source>hushd error</source>
         <translation>hushd greška</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="413"/>
+        <location filename="../src/connection.cpp" line="426"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1277,7 +1339,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="425"/>
+        <location filename="../src/connection.cpp" line="438"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
@@ -1286,85 +1348,85 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
 Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="488"/>
+        <location filename="../src/connection.cpp" line="501"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Autorizacija neuspješna. Hushd nije prihvatio korisničko ime / lozinku koju ste unijeli. Pokušajte to promijeniti u Uredi-&gt;Postavke meniju</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="503"/>
+        <location filename="../src/connection.cpp" line="516"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd se pokreće. Molimo pričekajte.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="520"/>
+        <location filename="../src/connection.cpp" line="533"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Ovo može potrajati nekoliko sati, donesite si kokice</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="537"/>
-        <location filename="../src/rpc.cpp" line="728"/>
+        <location filename="../src/connection.cpp" line="550"/>
+        <location filename="../src/rpc.cpp" line="748"/>
         <source>Connection Error</source>
         <translation>Greška sa vezom</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="815"/>
+        <location filename="../src/connection.cpp" line="828"/>
         <location filename="../src/sendtab.cpp" line="766"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="815"/>
+        <location filename="../src/connection.cpp" line="828"/>
         <source>There was an error! : </source>
         <translation>Dogodila se greška! : </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="394"/>
-        <location filename="../src/rpc.cpp" line="396"/>
+        <location filename="../src/rpc.cpp" line="415"/>
+        <location filename="../src/rpc.cpp" line="417"/>
         <source>No Connection</source>
         <translation>Nema veze</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="676"/>
+        <location filename="../src/rpc.cpp" line="696"/>
         <source>Downloading blocks</source>
         <translation>Preuzimam blokove</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="679"/>
+        <location filename="../src/rpc.cpp" line="699"/>
         <source>Block height</source>
         <translation>Visina bloka</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="694"/>
+        <location filename="../src/rpc.cpp" line="714"/>
         <source>Syncing</source>
         <translation>Sinkroniziranje</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="694"/>
+        <location filename="../src/rpc.cpp" line="714"/>
         <source>Connected</source>
         <translation>Spojeno</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="696"/>
+        <location filename="../src/rpc.cpp" line="716"/>
         <source>testnet:</source>
         <translation>testnet:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="706"/>
+        <location filename="../src/rpc.cpp" line="726"/>
         <source>Connected to hushd</source>
         <translation>Spojeno na hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="709"/>
+        <location filename="../src/rpc.cpp" line="729"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>hushd nema vezu sa točkama na istoj razini! Možda imate problem sa mrežom?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="728"/>
+        <location filename="../src/rpc.cpp" line="748"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>Pojavila se greška prilikom spajanja na hushd. Greška je</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1023"/>
+        <location filename="../src/rpc.cpp" line="1113"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1373,12 +1435,12 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.
         <translation type="vanished"> tx proračun. Ovo može potrajati nekoliko minuta.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1075"/>
+        <location filename="../src/rpc.cpp" line="1165"/>
         <source>Update Available</source>
         <translation>Dostupno ažuriranje</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1076"/>
+        <location filename="../src/rpc.cpp" line="1166"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1387,22 +1449,22 @@ Would you like to visit the releases page?</source>
 Želite li posjetiti stranicu sa izadnjima?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1088"/>
+        <location filename="../src/rpc.cpp" line="1178"/>
         <source>No updates available</source>
         <translation>Nema dostupnih ažuriranja</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1089"/>
+        <location filename="../src/rpc.cpp" line="1179"/>
         <source>You already have the latest release v%1</source>
         <translation>Već imate najnovije izdanje v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1243"/>
+        <location filename="../src/rpc.cpp" line="1333"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Molimo pokušajte se strpiti i pričekajte da se SilentDragon zatvori</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1244"/>
+        <location filename="../src/rpc.cpp" line="1334"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Pričekajte da hushd završi</translation>
     </message>
@@ -1440,9 +1502,21 @@ Would you like to visit the releases page?</source>
         <translation>Vrsta</translation>
     </message>
     <message>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
         <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Address</source>
         <translation>Adresa</translation>
+    </message>
+    <message>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <source>Subnet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <source>Banned Until</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/txtablemodel.cpp" line="9"/>
@@ -1477,6 +1551,56 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.cpp" line="313"/>
         <source>Transaction submitted (right click to copy) txid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>PeerID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>ASN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>TLS Cipher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>TLS Verfied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Version</source>
+        <translation type="unfinished">Verzija</translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Protocol Version</source>
+        <translation type="unfinished">Verzija protokola</translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Ping Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Banscore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Bytes received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Bytes sent</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
