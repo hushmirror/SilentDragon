@@ -225,14 +225,18 @@
         <source>
             Current Peers
             </source>
-        <translation type="unfinished"></translation>
+        <translation>
+            Текущие Узлы
+            </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="969"/>
         <source>
             Banned Peers
             </source>
-        <translation type="unfinished"></translation>
+        <translation>
+            Заблокированные Узлы
+            </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1123"/>
@@ -858,12 +862,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1164"/>
         <source>Copy banned peer IP</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопировать заблокированный IP узла</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1173"/>
         <source>View banned host IP on shodan.io (3rd party service)</source>
-        <translation type="unfinished"></translation>
+        <translation>Просмотреть заблокированные IP-адреса хоста на shodan.io (сторонний сервис)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1197"/>
@@ -1729,12 +1733,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
         <source>Subnet</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсеть</translation>
     </message>
     <message>
         <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
         <source>Banned Until</source>
-        <translation type="unfinished"></translation>
+        <translation>Заблокировано До</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
