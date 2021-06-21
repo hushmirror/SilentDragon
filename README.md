@@ -18,7 +18,15 @@
 SilentDragon desktop wallet for HUSH runs on Linux, Windows and macOS.
 This is experimental software under active development!
 
-![Screenshots](silentdragon.png?raw=true)
+![Screenshots](images/sd-receive-tab.png?raw=true)
+
+The following are screenshots for each SilentDragon tab:
+* [Main Window](images/sd-main-window.png)
+* [Send Tab](images/sd-send-tab.png)
+* [Transactions Tab](images/sd-transactions-tab.png)
+* [Peers Tab](images/sd-peers-tab.png)
+* [Market Tab](images/sd-market-tab.png)
+* [Hushd Tab](images/sd-hushd-tab.png)
 
 ## PRIVACY NOTICE
 
@@ -35,8 +43,8 @@ in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.or
 
 # Installation
 
-Go to the [releases page](https://git.hush.is/hush/SilentDragon/releases) and grab the latest installers or binary. 
-
+Go to the [releases page](https://git.hush.is/hush/SilentDragon/releases) and grab the latest installers or binary.
+For Arch Linux users, this is available from the AUR.
 
 ## hushd
 
@@ -51,16 +59,18 @@ Pass `--no-embedded` to disable the embedded hushd and force SilentDragon to con
 ## Compiling from source
 
 SilentDragon is written in C++ 14, and can be compiled with g++/clang++/visual
-c++. It also depends on Qt5, which you can get from
-[here](https://www.qt.io/download). Note that if you are compiling from source,
-you won't get the embedded hushd by default. You can either run an external
+c++. It also depends on Qt5, which you can get from [here](https://www.qt.io/download)
+or within your operating system package manager. Note that if you are compiling
+from source, you won't get the embedded hushd by default. You can either run an external
 hushd, or compile hushd as well.
 
 ### Building on Linux
 
-#### Ubuntu 18.04 and 20.04:
+#### Ubuntu 18.04 and 20.04
 
-```
+You can install the pre-reqs and build on Ubuntu 18.04 & 20.04 with:
+
+```shell script
 sudo apt-get -y install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
 git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
@@ -69,9 +79,11 @@ cd SilentDragon
 ./silentdragon
 ```
 
-#### Arch Linux:
+#### Arch Linux
 
-```
+You can install the pre-reqs and build on Arch Linux with:
+
+```shell script
 sudo pacman -S qt5-base qt5-tools qtcreator qt5-websockets rust
 git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
@@ -81,10 +93,10 @@ cd SilentDragon
 ```
 
 ### Building on Windows
-You need Visual Studio 2017 (The free C++ Community Edition works just fine). 
+You need Visual Studio 2017 (The free C++ Community Edition works just fine).
 
 From the VS Tools command prompt
-```
+```shell script
 git clone  https://git.hush.is/hush/SilentDragon
 cd SilentDragon
 c:\Qt5\bin\qmake.exe silentdragon.pro -spec win32-msvc CONFIG+=debug
@@ -94,7 +106,7 @@ debug\SilentDragon.exe
 ```
 
 To create the Visual Studio project files so you can compile and run from Visual Studio:
-```
+```shell script
 c:\Qt5\bin\qmake.exe silentdragon.pro -tp vc CONFIG+=debug
 ```
 
@@ -102,7 +114,7 @@ c:\Qt5\bin\qmake.exe silentdragon.pro -tp vc CONFIG+=debug
 
 You need to install the Xcode app or the Xcode command line tools first, and then install Qt. 
 
-```
+```shell script
 git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
 qmake silentdragon.pro CONFIG+=debug
@@ -117,10 +129,10 @@ In binary releases, SilentDragon will use node binaries in the current directory
 It does not attempt to download them, it bundles them. To simulate this from a developer setup, you can symlink
 these four files in your Git repo:
 
-```
-    ln -s ../hush3/src/hushd
-    ln -s ../hush3/src/komodod
-    ln -s ../hush3/src/komodo-cli
+```shell script
+ln -s ../hush3/src/hushd
+ln -s ../hush3/src/komodod
+ln -s ../hush3/src/komodo-cli
 ```
 
 The above assumes silentdragon and hush3 git repos are in the same directory. File names on Windows will need to be tweaked.
