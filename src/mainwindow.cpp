@@ -1158,7 +1158,7 @@ void MainWindow::setupPeersTab() {
         QString addr         = bannedPeerModel->getAddress(index.row());
         QString ip           = peer2ip(addr);
         QString subnet       = bannedPeerModel->getSubnet(index.row());
-        qint64 banned_until  = bannedPeerModel->getBannedUntil(index.row());
+        //qint64 banned_until  = bannedPeerModel->getBannedUntil(index.row());
 
         if(!ip.isEmpty()) {
             menu.addAction(tr("Copy banned peer IP"), [=] () {
@@ -1267,7 +1267,9 @@ void MainWindow::setupPeersTab() {
 }
 
 void MainWindow::setupHushTab() {
-    ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+   // ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+    QPixmap image(":/img/res/tropical-hush-square.png");
+    ui->hushlogo->setBasePixmap( image ); // image.scaled(600,600,  Qt::KeepAspectRatioByExpanding, Qt::FastTransformation ) );
 }
 /*
 void MainWindow::setupChatTab() {

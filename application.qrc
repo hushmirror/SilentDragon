@@ -10,6 +10,8 @@
     </qresource>
     <qresource prefix="/img">
         <file>res/zcashdlogo.gif</file>
+        <file>res/tropical-hush.png</file>
+        <file>res/tropical-hush-square.png</file>
         <file>res/logobig.gif</file>
         <file>res/silentdragon-animated.gif</file>
         <file>res/silentdragon-animated-dark.gif</file>
