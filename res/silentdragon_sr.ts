@@ -143,8 +143,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1322"/>
-        <location filename="../src/mainwindow.cpp" line="1389"/>
+        <location filename="../src/mainwindow.cpp" line="1323"/>
+        <location filename="../src/mainwindow.cpp" line="1390"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Poruka (memo)</translation>
@@ -237,7 +237,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1526"/>
+        <location filename="../src/mainwindow.cpp" line="1527"/>
         <source>Export Private Key</source>
         <translation>Izvoz privatnog ključa</translation>
     </message>
@@ -786,7 +786,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1058"/>
-        <location filename="../src/mainwindow.cpp" line="1351"/>
+        <location filename="../src/mainwindow.cpp" line="1352"/>
         <source>Copy address</source>
         <translation>Kopirajte adresu</translation>
     </message>
@@ -797,8 +797,8 @@
         <location filename="../src/mainwindow.cpp" line="1205"/>
         <location filename="../src/mainwindow.cpp" line="1210"/>
         <location filename="../src/mainwindow.cpp" line="1215"/>
-        <location filename="../src/mainwindow.cpp" line="1347"/>
-        <location filename="../src/mainwindow.cpp" line="1353"/>
+        <location filename="../src/mainwindow.cpp" line="1348"/>
+        <location filename="../src/mainwindow.cpp" line="1354"/>
         <source>Copied to clipboard</source>
         <translation>Kopirano u međuspremnik</translation>
     </message>
@@ -819,7 +819,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1090"/>
-        <location filename="../src/mainwindow.cpp" line="1357"/>
+        <location filename="../src/mainwindow.cpp" line="1358"/>
         <source>View on block explorer</source>
         <translation>Pogledaj na blok exploreru</translation>
     </message>
@@ -874,47 +874,47 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1345"/>
+        <location filename="../src/mainwindow.cpp" line="1346"/>
         <source>Copy txid</source>
         <translation>Kopitajte txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1368"/>
+        <location filename="../src/mainwindow.cpp" line="1369"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1381"/>
+        <location filename="../src/mainwindow.cpp" line="1382"/>
         <source>View Payment Request</source>
         <translation>Pogledajte zahtjev o plaćanju</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1388"/>
+        <location filename="../src/mainwindow.cpp" line="1389"/>
         <source>View Memo</source>
         <translation>Pogledajte poruku (memo)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1402"/>
+        <location filename="../src/mainwindow.cpp" line="1403"/>
         <source>Reply to </source>
         <translation>Odgovorite </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1483"/>
+        <location filename="../src/mainwindow.cpp" line="1484"/>
         <source>Created new t-Addr</source>
         <translation>Napravljena je nova transparentna adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1532"/>
+        <location filename="../src/mainwindow.cpp" line="1533"/>
         <source>Copy Address</source>
         <translation>Kopirajte adresu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1598"/>
+        <location filename="../src/mainwindow.cpp" line="1599"/>
         <source>Address has been previously used</source>
         <translation>Adresa je već korištena</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1600"/>
+        <location filename="../src/mainwindow.cpp" line="1601"/>
         <source>Address is unused</source>
         <translation>Adresa nije korištena</translation>
     </message>
