@@ -114,10 +114,14 @@ c:\Qt5\bin\qmake.exe silentdragon.pro -tp vc CONFIG+=debug
 
 You need to install the Xcode app or the Xcode command line tools first, and then install Qt. 
 
+TODO: Suggestions on installing qt5 deps on a Mac
+
 ```shell script
 git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
-qmake silentdragon.pro CONFIG+=debug
+# These commands require qmake to be installed
+./build.sh linguist
+./build.sh
 make
 
 ./SilentDragon.app/Contents/MacOS/SilentDragon
