@@ -66,6 +66,19 @@ hushd, or compile hushd as well.
 
 ### Building on Linux
 
+#### Linux Troubleshooting
+If you run into an error with OpenGL, you may need to install extra deps. More details [here](https://gist.github.com/shamiul94/a632f7ab94cf389e08efd7174335df1c)
+
+**Error**
+```
+/usr/bin/ld: cannot find -lGL
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+**Solution**
+```
+sudo apt-get -y install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+```
+
 #### Ubuntu 18.04 and 20.04
 
 You can install the pre-reqs and build on Ubuntu 18.04 & 20.04 with:
