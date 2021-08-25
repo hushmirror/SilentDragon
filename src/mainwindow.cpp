@@ -1072,11 +1072,29 @@ void MainWindow::setupBalancesTab() {
 */
 
         if(addr.startsWith("zs1")) {
+            menu.addAction(tr("Shield all non-mining taddr funds to this zaddr"), [=] () {
+                QJsonArray params = QJsonArray { QJsonArray { "ANY_TADDR" } , addr };
+                qDebug() << "Calling mergeToAddress with params=" << params;
+                // TODO: call mergeToAddress and parse reply
+                rpc->mergeToAddress(params, [=](const QJsonValue& reply) {
+                    qDebug() << "mergeToAddress reply=" << reply;
+                }, [=](QString errStr) {
+                    qDebug() << "z_mergetoaddress pooped:" << errStr;
+                    if(errStr == "Could not find any funds to merge.") {
+                        ui->statusBar->showMessage("No funds found to shield!");
+                    }
+                });
+
+            });
+        }
+
+        if(addr.startsWith("zs1")) {
         menu.addAction(tr("Shield all mining funds to this zaddr"), [=] () {
             //QJsonArray params = QJsonArray {addr, zaddresses->first() };
             // We shield all coinbase funds to the selected zaddr
             QJsonArray params = QJsonArray {"*", addr };
 
+            qDebug() << "Calling shieldCoinbase with params=" << params;
             rpc->shieldCoinbase(params, [=](const QJsonValue& reply) {
                 QString shieldingValue = reply.toObject()["shieldingValue"].toString();
                 QString opid           = reply.toObject()["opid"].toString();
