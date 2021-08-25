@@ -1061,6 +1061,43 @@ void MainWindow::setupBalancesTab() {
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
         });
 
+/*  Example reply from z_shieldcoinbase:
+{
+  "remainingUTXOs": 0,
+  "remainingValue": 0.00000000,
+  "shieldingUTXOs": 6,
+  "shieldingValue": 16.87530000,
+  "opid": "opid-0245ddfa-5f60-4e00-8ace-e782d814132b"
+}
+*/
+
+        if(addr.startsWith("zs1")) {
+        menu.addAction(tr("Shield all mining funds to this zaddr"), [=] () {
+            //QJsonArray params = QJsonArray {addr, zaddresses->first() };
+            // We shield all coinbase funds to the selected zaddr
+            QJsonArray params = QJsonArray {"*", addr };
+
+            rpc->shieldCoinbase(params, [=](const QJsonValue& reply) {
+                QString shieldingValue = reply.toObject()["shieldingValue"].toString();
+                QString opid           = reply.toObject()["opid"].toString();
+                auto    remainingUTXOs = reply.toObject()["remainingUTXOs"].toInt();
+                qDebug() << "ShieldCoinbase reply=" << reply;
+                // By default we shield 50 blocks at a time
+                if(remainingUTXOs > 0) {
+                   //TODO: more utxos to shield 
+                }
+                ui->statusBar->showMessage(tr("Shielded") + shieldingValue + " HUSH in Mining funds to " + addr + " in opid " + opid, 3 * 1000);
+            }, [=](QString errStr) {
+                //error("", errStr); 
+                qDebug() << "z_shieldcoinbase pooped:" << errStr;
+                if(errStr == "Could not find any coinbase funds to shield.") {
+                    ui->statusBar->showMessage("No mining funds found to shield!");
+                }
+            });
+
+        });
+        }
+
         menu.addAction(tr("Get private key"), [=] () {
             this->exportKeys(addr);
         });
@@ -1158,7 +1195,7 @@ void MainWindow::setupPeersTab() {
         QString addr         = bannedPeerModel->getAddress(index.row());
         QString ip           = peer2ip(addr);
         QString subnet       = bannedPeerModel->getSubnet(index.row());
-        qint64 banned_until  = bannedPeerModel->getBannedUntil(index.row());
+        //qint64 banned_until  = bannedPeerModel->getBannedUntil(index.row());
 
         if(!ip.isEmpty()) {
             menu.addAction(tr("Copy banned peer IP"), [=] () {
