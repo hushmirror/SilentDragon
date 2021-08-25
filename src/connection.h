@@ -52,7 +52,7 @@ private:
 
     void createHushConf();
     QString locateHushConfFile();
-    QString zcashConfWritableLocation();
+    QString hushConfWritableLocation();
     QString zcashParamsDir();
 
     bool verifyParams();

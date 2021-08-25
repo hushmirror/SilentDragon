@@ -62,7 +62,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
         auto connection = makeConnection(config);
 
         refreshHushdState(connection, [=] () {
-            // Refused connection. So try and start embedded zcashd
+            // Refused connection. So try and start embedded hushd
             if (Settings::getInstance()->useEmbedded()) {
                 if (tryEzcashdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
@@ -145,7 +145,7 @@ QString randomPassword() {
 void ConnectionLoader::createHushConf() {
     main->logger->write(__func__);
 
-    auto confLocation = zcashConfWritableLocation();
+    auto confLocation = hushConfWritableLocation();
     QFileInfo fi(confLocation);
 
     QDialog d(main);
@@ -553,27 +553,40 @@ void ConnectionLoader::showError(QString explanation) {
 
 QString ConnectionLoader::locateHushConfFile() {
 #ifdef Q_OS_LINUX
-    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".hush/HUSH3/HUSH3.conf");
+    if(!QFile(confLocation).exists()) {
+        // legacy location
+        confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".komodo/HUSH3/HUSH3.conf");
+    }
 #elif defined(Q_OS_DARWIN)
-    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, "Library/Application Support/Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, "Library/Application Support/Hush/HUSH3/HUSH3.conf");
+    if(!QFile(confLocation).exists()) {
+        // legacy location
+        confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, "Library/Application Support/Komodo/HUSH3/HUSH3.conf");
+    }
 #else
-    auto confLocation = QStandardPaths::locate(QStandardPaths::AppDataLocation, "../../Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QStandardPaths::locate(QStandardPaths::AppDataLocation, "../../Hush/HUSH3/HUSH3.conf");
+    if(!QFile(confLocation).exists()) {
+        // legacy location
+        confLocation = QStandardPaths::locate(QStandardPaths::AppDataLocation, "../../Komodo/HUSH3/HUSH3.conf");
+    }
 #endif
 
     main->logger->write("Found HUSH3.conf at " + QDir::cleanPath(confLocation));
     return QDir::cleanPath(confLocation);
 }
 
-QString ConnectionLoader::zcashConfWritableLocation() {
+//  this function is only used for new config files and does not need to know about legacy locations
+QString ConnectionLoader::hushConfWritableLocation() {
 #ifdef Q_OS_LINUX
-    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".hush/HUSH3/HUSH3.conf");
 #elif defined(Q_OS_DARWIN)
-    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath("Library/Application Support/Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath("Library/Application Support/Hush/HUSH3/HUSH3.conf");
 #else
-    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("../../Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("../../Hush/HUSH3/HUSH3.conf");
 #endif
 
-    main->logger->write("Found HUSH3.conf at " + QDir::cleanPath(confLocation));
+    main->logger->write("HUSH3.conf writeable location at " + QDir::cleanPath(confLocation));
     return QDir::cleanPath(confLocation);
 }
 
