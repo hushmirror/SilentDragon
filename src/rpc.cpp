@@ -265,6 +265,24 @@ void RPC::getTransactions(const std::function<void(QJsonValue)>& cb) {
     conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
 }
 
+void RPC::shieldCoinbase(QJsonArray &params, const std::function<void(QJsonValue)>& cb,
+    const std::function<void(QString)>& err) {
+    QJsonObject payload = {
+        {"jsonrpc", "1.0"},
+        {"id", "42"},
+        {"method", "z_shieldcoinbase"},
+        {"params", params}
+    };
+
+    conn->doRPC(payload, cb,  [=] (QNetworkReply *reply, const QJsonValue &parsed) {
+        if (!parsed.isUndefined() && !parsed["error"].toObject()["message"].isNull()) {
+            err(parsed["error"].toObject()["message"].toString());
+        } else {
+            err(reply->errorString());
+        }
+    });
+}
+
 void RPC::sendZTransaction(QJsonValue params, const std::function<void(QJsonValue)>& cb,
     const std::function<void(QString)>& err) {
     QJsonObject payload = {

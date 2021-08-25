@@ -79,6 +79,7 @@ public:
 
     void fillTxJsonParams(QJsonArray& params, Tx tx);
     void sendZTransaction(QJsonValue params, const std::function<void(QJsonValue)>& cb, const std::function<void(QString)>& err);
+    void shieldCoinbase(QJsonArray& params, const std::function<void(QJsonValue)>& cb, const std::function<void(QString)>& err);
     void watchTxStatus();
 
     const QMap<QString, WatchedTx> getWatchingTxns() { return watchingOps; }
