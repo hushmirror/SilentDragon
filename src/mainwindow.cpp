@@ -1061,7 +1061,7 @@ void MainWindow::setupBalancesTab() {
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
         });
 
-/*  Example reply from z_shieldcoinbase:
+/*  Example reply from z_shieldcoinbase and z_mergetoaddress
 {
   "remainingUTXOs": 0,
   "remainingValue": 0.00000000,
@@ -1073,11 +1073,19 @@ void MainWindow::setupBalancesTab() {
 
         if(addr.startsWith("zs1")) {
             menu.addAction(tr("Shield all non-mining taddr funds to this zaddr"), [=] () {
-                QJsonArray params = QJsonArray { QJsonArray { "ANY_TADDR" } , addr };
+                QJsonArray params = QJsonArray { "ANY_TADDR" , addr };
                 qDebug() << "Calling mergeToAddress with params=" << params;
-                // TODO: call mergeToAddress and parse reply
+
                 rpc->mergeToAddress(params, [=](const QJsonValue& reply) {
                     qDebug() << "mergeToAddress reply=" << reply;
+                    QString shieldingValue = reply.toObject()["shieldingValue"].toString();
+                    QString opid           = reply.toObject()["opid"].toString();
+                    auto    remainingUTXOs = reply.toObject()["remainingUTXOs"].toInt();
+                    if(remainingUTXOs > 0) {
+                       //TODO: more utxos to shield
+                    }
+
+                    ui->statusBar->showMessage(tr("Shielded") + shieldingValue + " HUSH in transparent funds to " + addr + " in opid " + opid, 3 * 1000);
                 }, [=](QString errStr) {
                     qDebug() << "z_mergetoaddress pooped:" << errStr;
                     if(errStr == "Could not find any funds to merge.") {
