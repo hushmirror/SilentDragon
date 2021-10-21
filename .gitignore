@@ -8,6 +8,8 @@ hushd
 IDEWorkspaceChecks.plist
 komodo-cli
 komodod
+hush-cli
+hushd
 *.mak
 Makefile
 Makefile.*
