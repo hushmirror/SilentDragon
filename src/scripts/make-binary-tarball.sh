@@ -18,14 +18,11 @@ if [ -e $DIR ]; then
 fi
 mkdir -p $DIR
 strip silentdragon
-strip komodod
-strip komodo-tx
-strip komodo-cli
+strip hushd
+strip hush-tx
+strip hush-cli
 
 cp silentdragon   $DIR
-cp komodod        $DIR
-cp komodo-cli     $DIR
-cp komodo-tx      $DIR
 cp hushd          $DIR
 cp hush-cli       $DIR
 cp hush-tx        $DIR
