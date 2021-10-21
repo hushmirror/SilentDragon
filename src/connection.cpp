@@ -152,7 +152,7 @@ void ConnectionLoader::createHushConf() {
     Ui_createHushConf ui;
     ui.setupUi(&d);
 
-    QPixmap logo(":/img/res/zcashdlogo.gif");
+    QPixmap logo(":/img/res/tropical-hush-square.png");
     ui.lblTopIcon->setBasePixmap(logo.scaled(512,512, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui.btnPickDir->setEnabled(false);
 

@@ -163,8 +163,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1322"/>
-        <location filename="../src/mainwindow.cpp" line="1389"/>
+        <location filename="../src/mainwindow.cpp" line="1323"/>
+        <location filename="../src/mainwindow.cpp" line="1390"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Метка</translation>
@@ -307,7 +307,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1526"/>
+        <location filename="../src/mainwindow.cpp" line="1527"/>
         <source>Export Private Key</source>
         <translation>Экспорт приватного ключа</translation>
     </message>
@@ -812,7 +812,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1058"/>
-        <location filename="../src/mainwindow.cpp" line="1351"/>
+        <location filename="../src/mainwindow.cpp" line="1352"/>
         <source>Copy address</source>
         <translation>Скопировать адрес</translation>
     </message>
@@ -823,8 +823,8 @@
         <location filename="../src/mainwindow.cpp" line="1205"/>
         <location filename="../src/mainwindow.cpp" line="1210"/>
         <location filename="../src/mainwindow.cpp" line="1215"/>
-        <location filename="../src/mainwindow.cpp" line="1347"/>
-        <location filename="../src/mainwindow.cpp" line="1353"/>
+        <location filename="../src/mainwindow.cpp" line="1348"/>
+        <location filename="../src/mainwindow.cpp" line="1354"/>
         <source>Copied to clipboard</source>
         <translation>Скопировано в буфер обмена</translation>
     </message>
@@ -845,7 +845,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1090"/>
-        <location filename="../src/mainwindow.cpp" line="1357"/>
+        <location filename="../src/mainwindow.cpp" line="1358"/>
         <source>View on block explorer</source>
         <translation>Посмотреть в проводнике блоков</translation>
     </message>
@@ -900,7 +900,7 @@
         <translation>Просмотр ASN в bgpview.io (сторонний сервис)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1368"/>
+        <location filename="../src/mainwindow.cpp" line="1369"/>
         <source>Copy block explorer link</source>
         <translation>Скопировать ссылку на обозреватель блоков</translation>
     </message>
@@ -909,7 +909,7 @@
         <translation type="vanished">Migrate to Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1345"/>
+        <location filename="../src/mainwindow.cpp" line="1346"/>
         <source>Copy txid</source>
         <translation>Скопировать txid</translation>
     </message>
@@ -1044,37 +1044,37 @@
         <translation type="vanished">Это может занять несколько минут. Загрузка...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1381"/>
+        <location filename="../src/mainwindow.cpp" line="1382"/>
         <source>View Payment Request</source>
         <translation>Посмотреть запрос на оплату</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1388"/>
+        <location filename="../src/mainwindow.cpp" line="1389"/>
         <source>View Memo</source>
         <translation>Посмотреть метку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1402"/>
+        <location filename="../src/mainwindow.cpp" line="1403"/>
         <source>Reply to </source>
         <translation>Ответить на </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1483"/>
+        <location filename="../src/mainwindow.cpp" line="1484"/>
         <source>Created new t-Addr</source>
         <translation>Создать новый  t-Addr (R)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1532"/>
+        <location filename="../src/mainwindow.cpp" line="1533"/>
         <source>Copy Address</source>
         <translation>Копировать адрес</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1598"/>
+        <location filename="../src/mainwindow.cpp" line="1599"/>
         <source>Address has been previously used</source>
         <translation>Адрес был ранее использован</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1600"/>
+        <location filename="../src/mainwindow.cpp" line="1601"/>
         <source>Address is unused</source>
         <translation>Адрес не используется</translation>
     </message>

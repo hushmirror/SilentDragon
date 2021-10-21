@@ -1330,7 +1330,9 @@ void MainWindow::setupPeersTab() {
 }
 
 void MainWindow::setupHushTab() {
-    ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+   // ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+    QPixmap image(":/img/res/tropical-hush-square.png");
+    ui->hushlogo->setBasePixmap( image ); // image.scaled(600,600,  Qt::KeepAspectRatioByExpanding, Qt::FastTransformation ) );
 }
 /*
 void MainWindow::setupChatTab() {

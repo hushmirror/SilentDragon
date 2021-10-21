@@ -147,8 +147,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1322"/>
-        <location filename="../src/mainwindow.cpp" line="1389"/>
+        <location filename="../src/mainwindow.cpp" line="1323"/>
+        <location filename="../src/mainwindow.cpp" line="1390"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Memo</translation>
@@ -288,7 +288,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1526"/>
+        <location filename="../src/mainwindow.cpp" line="1527"/>
         <source>Export Private Key</source>
         <translation>Exporteer privé  Sleutel</translation>
     </message>
@@ -878,7 +878,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1058"/>
-        <location filename="../src/mainwindow.cpp" line="1351"/>
+        <location filename="../src/mainwindow.cpp" line="1352"/>
         <source>Copy address</source>
         <translation>Kopieer Adres</translation>
     </message>
@@ -889,8 +889,8 @@
         <location filename="../src/mainwindow.cpp" line="1205"/>
         <location filename="../src/mainwindow.cpp" line="1210"/>
         <location filename="../src/mainwindow.cpp" line="1215"/>
-        <location filename="../src/mainwindow.cpp" line="1347"/>
-        <location filename="../src/mainwindow.cpp" line="1353"/>
+        <location filename="../src/mainwindow.cpp" line="1348"/>
+        <location filename="../src/mainwindow.cpp" line="1354"/>
         <source>Copied to clipboard</source>
         <translation>Gekopieerd naar klemblok</translation>
     </message>
@@ -911,7 +911,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1090"/>
-        <location filename="../src/mainwindow.cpp" line="1357"/>
+        <location filename="../src/mainwindow.cpp" line="1358"/>
         <source>View on block explorer</source>
         <translation>Geef block weer in de block explorer</translation>
     </message>
@@ -930,47 +930,47 @@
         <translation type="vanished">Migratie naar Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1345"/>
+        <location filename="../src/mainwindow.cpp" line="1346"/>
         <source>Copy txid</source>
         <translation>Kopieer txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1368"/>
+        <location filename="../src/mainwindow.cpp" line="1369"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1381"/>
+        <location filename="../src/mainwindow.cpp" line="1382"/>
         <source>View Payment Request</source>
         <translation>Bekijk Betalingsverzoek</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1388"/>
+        <location filename="../src/mainwindow.cpp" line="1389"/>
         <source>View Memo</source>
         <translation>Memo Weergeven</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1402"/>
+        <location filename="../src/mainwindow.cpp" line="1403"/>
         <source>Reply to </source>
         <translation>Antwoorden naar </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1483"/>
+        <location filename="../src/mainwindow.cpp" line="1484"/>
         <source>Created new t-Addr</source>
         <translation>Creëer nieuw t-Adres</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1532"/>
+        <location filename="../src/mainwindow.cpp" line="1533"/>
         <source>Copy Address</source>
         <translation>Kopieer Adres</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1598"/>
+        <location filename="../src/mainwindow.cpp" line="1599"/>
         <source>Address has been previously used</source>
         <translation>Adres is vorige keer gebruikt</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1600"/>
+        <location filename="../src/mainwindow.cpp" line="1601"/>
         <source>Address is unused</source>
         <translation>Adres is ongebruikt</translation>
     </message>
