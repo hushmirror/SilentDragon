@@ -103,7 +103,7 @@ MainWindow::MainWindow(QWidget *parent) :
         about.setupUi(&aboutDialog);
         Settings::saveRestore(&aboutDialog);
 
-        QString version    = QString("Version ") % QString(APP_VERSION) % " (" % QString(__DATE__) % ")";
+        QString version    = QString("Version ") % QString(APP_VERSION) % " (" % QString(__DATE__) % ") using QT " % qVersion();
         about.versionLabel->setText(version);
 
         aboutDialog.exec();
