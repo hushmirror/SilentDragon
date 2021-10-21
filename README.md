@@ -131,8 +131,7 @@ these four files in your Git repo:
 
 ```shell script
 ln -s ../hush3/src/hushd
-ln -s ../hush3/src/komodod
-ln -s ../hush3/src/komodo-cli
+ln -s ../hush3/src/hush-cli
 ```
 
 The above assumes silentdragon and hush3 git repos are in the same directory. File names on Windows will need to be tweaked.
