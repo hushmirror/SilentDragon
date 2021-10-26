@@ -165,8 +165,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1387"/>
-        <location filename="../src/mainwindow.cpp" line="1454"/>
+        <location filename="../src/mainwindow.cpp" line="1386"/>
+        <location filename="../src/mainwindow.cpp" line="1453"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Мітка</translation>
@@ -193,7 +193,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="634"/>
-        <location filename="../src/sendtab.cpp" line="640"/>
+        <location filename="../src/sendtab.cpp" line="630"/>
         <source>Miner Fee</source>
         <translation>Комісія майнерам</translation>
     </message>
@@ -305,7 +305,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1591"/>
+        <location filename="../src/mainwindow.cpp" line="1590"/>
         <source>Export Private Key</source>
         <translation>Експорт приватного ключа</translation>
     </message>
@@ -802,7 +802,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1058"/>
-        <location filename="../src/mainwindow.cpp" line="1416"/>
+        <location filename="../src/mainwindow.cpp" line="1415"/>
         <source>Copy address</source>
         <translation>Копіювати адресу</translation>
     </message>
@@ -813,8 +813,8 @@
         <location filename="../src/mainwindow.cpp" line="1268"/>
         <location filename="../src/mainwindow.cpp" line="1273"/>
         <location filename="../src/mainwindow.cpp" line="1278"/>
-        <location filename="../src/mainwindow.cpp" line="1412"/>
-        <location filename="../src/mainwindow.cpp" line="1418"/>
+        <location filename="../src/mainwindow.cpp" line="1411"/>
+        <location filename="../src/mainwindow.cpp" line="1417"/>
         <source>Copied to clipboard</source>
         <translation>Скопійовано в буфер обміну</translation>
     </message>
@@ -845,7 +845,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1153"/>
-        <location filename="../src/mainwindow.cpp" line="1422"/>
+        <location filename="../src/mainwindow.cpp" line="1421"/>
         <source>View on block explorer</source>
         <translation>Подивитися в провіднику блоків</translation>
     </message>
@@ -900,7 +900,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1433"/>
+        <location filename="../src/mainwindow.cpp" line="1432"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
@@ -909,7 +909,7 @@
         <translation type="vanished">Migrate to Sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1410"/>
+        <location filename="../src/mainwindow.cpp" line="1409"/>
         <source>Copy txid</source>
         <translation>Скопіювати txid</translation>
     </message>
@@ -1044,37 +1044,37 @@
         <translation type="vanished">Це може зайняти кілька хвилин. Завантаження ...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1446"/>
+        <location filename="../src/mainwindow.cpp" line="1445"/>
         <source>View Payment Request</source>
         <translation>Подивитися запит на оплату</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1453"/>
+        <location filename="../src/mainwindow.cpp" line="1452"/>
         <source>View Memo</source>
         <translation>Подивитися мітку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1467"/>
+        <location filename="../src/mainwindow.cpp" line="1466"/>
         <source>Reply to </source>
         <translation>Відповісти на </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1548"/>
+        <location filename="../src/mainwindow.cpp" line="1547"/>
         <source>Created new t-Addr</source>
         <translation>Створити новий t-Addr (R)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1597"/>
+        <location filename="../src/mainwindow.cpp" line="1596"/>
         <source>Copy Address</source>
         <translation>Копіювати адресу</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1663"/>
+        <location filename="../src/mainwindow.cpp" line="1662"/>
         <source>Address has been previously used</source>
         <translation>Адреса була раніше використана</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1665"/>
+        <location filename="../src/mainwindow.cpp" line="1664"/>
         <source>Address is unused</source>
         <translation>Адреса не використовується</translation>
     </message>
@@ -1142,57 +1142,57 @@ doesn&apos;t look like a z-address</source>
 не схоже на z-адресу</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="534"/>
+        <location filename="../src/sendtab.cpp" line="524"/>
         <source>Change from </source>
         <translation>Змінити з </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="675"/>
+        <location filename="../src/sendtab.cpp" line="665"/>
         <source>Current balance      : </source>
         <translation>Поточний баланс      : </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="677"/>
+        <location filename="../src/sendtab.cpp" line="667"/>
         <source>Balance after this Tx: </source>
         <translation>Баланс після цієї Tx: </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="698"/>
+        <location filename="../src/sendtab.cpp" line="688"/>
         <source>Transaction Error</source>
         <translation>Помилка транзакції</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="730"/>
+        <location filename="../src/sendtab.cpp" line="720"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="731"/>
+        <location filename="../src/sendtab.cpp" line="721"/>
         <source>Computing your transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="738"/>
+        <location filename="../src/sendtab.cpp" line="728"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="745"/>
+        <location filename="../src/sendtab.cpp" line="735"/>
         <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="776"/>
+        <location filename="../src/sendtab.cpp" line="766"/>
         <source>From Address is Invalid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="783"/>
+        <location filename="../src/sendtab.cpp" line="773"/>
         <source>Extreme Privacy! </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="783"/>
+        <location filename="../src/sendtab.cpp" line="773"/>
         <source> is transparent. You must send to a zaddr.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1209,7 +1209,7 @@ doesn&apos;t look like a z-address</source>
         <translation type="vanished"> є недійсним</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="789"/>
+        <location filename="../src/sendtab.cpp" line="779"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Кількість &apos;%1&apos; є недійсним!</translation>
     </message>
@@ -1527,22 +1527,22 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">не підтверджено</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="761"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="764"/>
+        <location filename="../src/sendtab.cpp" line="754"/>
         <source>The transaction with id </source>
         <translation>Транзакція з id </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="764"/>
+        <location filename="../src/sendtab.cpp" line="754"/>
         <source> failed. The error was</source>
         <translation> не вдалося. Помилка</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="761"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> failed</source>
         <translation> помилка</translation>
     </message>
@@ -1616,7 +1616,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
     </message>
     <message>
         <location filename="../src/connection.cpp" line="844"/>
-        <location filename="../src/sendtab.cpp" line="766"/>
+        <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Помилка транзакції</translation>
     </message>

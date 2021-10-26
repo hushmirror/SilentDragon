@@ -145,8 +145,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1387"/>
-        <location filename="../src/mainwindow.cpp" line="1454"/>
+        <location filename="../src/mainwindow.cpp" line="1386"/>
+        <location filename="../src/mainwindow.cpp" line="1453"/>
         <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Mesaj</translation>
@@ -173,7 +173,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="634"/>
-        <location filename="../src/sendtab.cpp" line="640"/>
+        <location filename="../src/sendtab.cpp" line="630"/>
         <source>Miner Fee</source>
         <translation>Taxa Minerului</translation>
     </message>
@@ -267,7 +267,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1591"/>
+        <location filename="../src/mainwindow.cpp" line="1590"/>
         <source>Export Private Key</source>
         <translation>Exporta Cheia Privata</translation>
     </message>
@@ -792,7 +792,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1058"/>
-        <location filename="../src/mainwindow.cpp" line="1416"/>
+        <location filename="../src/mainwindow.cpp" line="1415"/>
         <source>Copy address</source>
         <translation>Copiaza adresa </translation>
     </message>
@@ -803,8 +803,8 @@
         <location filename="../src/mainwindow.cpp" line="1268"/>
         <location filename="../src/mainwindow.cpp" line="1273"/>
         <location filename="../src/mainwindow.cpp" line="1278"/>
-        <location filename="../src/mainwindow.cpp" line="1412"/>
-        <location filename="../src/mainwindow.cpp" line="1418"/>
+        <location filename="../src/mainwindow.cpp" line="1411"/>
+        <location filename="../src/mainwindow.cpp" line="1417"/>
         <source>Copied to clipboard</source>
         <translation>Copiata în clipboard</translation>
     </message>
@@ -835,7 +835,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1153"/>
-        <location filename="../src/mainwindow.cpp" line="1422"/>
+        <location filename="../src/mainwindow.cpp" line="1421"/>
         <source>View on block explorer</source>
         <translation>Vizualizare pe expoator de bloc</translation>
     </message>
@@ -890,47 +890,47 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1410"/>
+        <location filename="../src/mainwindow.cpp" line="1409"/>
         <source>Copy txid</source>
         <translation>Copiati tranzactiaID</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1433"/>
+        <location filename="../src/mainwindow.cpp" line="1432"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1446"/>
+        <location filename="../src/mainwindow.cpp" line="1445"/>
         <source>View Payment Request</source>
         <translation>Vizualizati Plata Solicitata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1453"/>
+        <location filename="../src/mainwindow.cpp" line="1452"/>
         <source>View Memo</source>
         <translation>Vizualizati Memo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1467"/>
+        <location filename="../src/mainwindow.cpp" line="1466"/>
         <source>Reply to </source>
         <translation>Raspunde</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1548"/>
+        <location filename="../src/mainwindow.cpp" line="1547"/>
         <source>Created new t-Addr</source>
         <translation>O noua t-Addr a fost creata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1597"/>
+        <location filename="../src/mainwindow.cpp" line="1596"/>
         <source>Copy Address</source>
         <translation>Copiati Adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1663"/>
+        <location filename="../src/mainwindow.cpp" line="1662"/>
         <source>Address has been previously used</source>
         <translation>Adresa data a fost folosita anterior</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1665"/>
+        <location filename="../src/mainwindow.cpp" line="1664"/>
         <source>Address is unused</source>
         <translation>Adresa nu poate fi utilizata</translation>
     </message>
@@ -988,57 +988,57 @@ doesn&apos;t look like a z-address</source>
         <translation>nu arata ca z-adresa</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="534"/>
+        <location filename="../src/sendtab.cpp" line="524"/>
         <source>Change from </source>
         <translation>Schimba</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="675"/>
+        <location filename="../src/sendtab.cpp" line="665"/>
         <source>Current balance      : </source>
         <translation>Soldul curent</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="677"/>
+        <location filename="../src/sendtab.cpp" line="667"/>
         <source>Balance after this Tx: </source>
         <translation>Soldul dupa aceasta Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="698"/>
+        <location filename="../src/sendtab.cpp" line="688"/>
         <source>Transaction Error</source>
         <translation>Eroarea de Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="730"/>
+        <location filename="../src/sendtab.cpp" line="720"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="731"/>
+        <location filename="../src/sendtab.cpp" line="721"/>
         <source>Computing your transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="738"/>
+        <location filename="../src/sendtab.cpp" line="728"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="745"/>
+        <location filename="../src/sendtab.cpp" line="735"/>
         <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="776"/>
+        <location filename="../src/sendtab.cpp" line="766"/>
         <source>From Address is Invalid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="783"/>
+        <location filename="../src/sendtab.cpp" line="773"/>
         <source>Extreme Privacy! </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="783"/>
+        <location filename="../src/sendtab.cpp" line="773"/>
         <source> is transparent. You must send to a zaddr.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1059,7 +1059,7 @@ doesn&apos;t look like a z-address</source>
         <translation type="vanished">este Nevalida</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="789"/>
+        <location filename="../src/sendtab.cpp" line="779"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Valoare &apos;%1&apos; nevalida</translation>
     </message>
@@ -1377,7 +1377,7 @@ Rugam sa setati host/port si utilizator/parola in Editare-&gt; Meniu setari</tra
     </message>
     <message>
         <location filename="../src/connection.cpp" line="844"/>
-        <location filename="../src/sendtab.cpp" line="766"/>
+        <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Eroarea de Tranzactie</translation>
     </message>
@@ -1479,22 +1479,22 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation type="vanished">Tranzactia</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="761"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> failed</source>
         <translation>a esuat</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="761"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="764"/>
+        <location filename="../src/sendtab.cpp" line="754"/>
         <source>The transaction with id </source>
         <translation>Tranzactia cu id </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="764"/>
+        <location filename="../src/sendtab.cpp" line="754"/>
         <source> failed. The error was</source>
         <translation>a esuat. Eroarea a fost</translation>
     </message>
