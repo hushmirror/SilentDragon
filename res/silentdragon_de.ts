@@ -209,21 +209,21 @@
     <message>
         <location filename="../src/mainwindow.ui" line="940"/>
         <source>Peers</source>
-        <translation type="unfinished"></translation>
+        <translation>Gleichaltrigen</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="948"/>
         <source>
             Current Peers
             </source>
-        <translation type="unfinished"></translation>
+        <translation>Actuelle Gleichaltrigen</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="969"/>
         <source>
             Banned Peers
             </source>
-        <translation type="unfinished"></translation>
+        <translation>Gesperrte Gleichaltrigen</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1005"/>
@@ -268,7 +268,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1485"/>
         <source>TLS Support</source>
-        <translation type="unfinished"></translation>
+        <translation>TLS-Unterstützung</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1642"/>
@@ -856,17 +856,17 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1075"/>
         <source>Shield all non-mining taddr funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Schützen Sie alle transparenten Nicht-Mining-Fonds vor diesem Zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1100"/>
         <source>Shield all mining funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Schützen Sie alle Mining-Fonds vor diesem Zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1227"/>
         <source>Copy banned peer IP</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesperrte Peer-IP kopieren</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1236"/>
@@ -876,7 +876,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1260"/>
         <source>Copy peer address+port</source>
-        <translation type="unfinished"></translation>
+        <translation>Peer-Adresse und Port kopieren</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1266"/>
@@ -891,7 +891,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1276"/>
         <source>Copy ASN</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopieren ASN</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1283"/>
