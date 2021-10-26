@@ -683,7 +683,7 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectHushConf() {
     hushconf->host     = "127.0.0.1";
     hushconf->connType = ConnectionType::DetectedConfExternalHushD;
     hushconf->usingHushConf = true;
-    hushconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
+    hushconf->hushDir = QFileInfo(confLocation).absoluteDir().absolutePath();
     hushconf->hushDaemon = false;
    
     Settings::getInstance()->setUsingHushConf(confLocation);

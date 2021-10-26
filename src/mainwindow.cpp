@@ -346,7 +346,7 @@ void MainWindow::setupSettingsModal() {
 
         bool isUsingConsolidation = false;
         int size = 0;
-        QDir hushdir(rpc->getConnection()->config->zcashDir);
+        QDir hushdir(rpc->getConnection()->config->hushDir);
         QFile WalletSize(hushdir.filePath("wallet.dat"));
         if (WalletSize.open(QIODevice::ReadOnly)){
         size = WalletSize.size() / 1000000;  //when file does open.
@@ -837,7 +837,7 @@ void MainWindow::backupWalletDat() {
     if (!rpc->getConnection())
         return;
 
-    QDir hushdir(rpc->getConnection()->config->zcashDir);
+    QDir hushdir(rpc->getConnection()->config->hushDir);
     QString backupDefaultName = "hush-wallet-backup-" + QDateTime::currentDateTime().toString("yyyyMMdd") + ".dat";
 
     if (Settings::getInstance()->isTestnet()) {
