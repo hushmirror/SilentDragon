@@ -204,21 +204,15 @@
     <message>
         <location filename="../src/mainwindow.ui" line="940"/>
         <source>Peers</source>
-        <translation type="unfinished"></translation>
+        <translation>Compañeras</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="948"/>
-        <source>
-            Current Peers
-            </source>
-        <translation type="unfinished"></translation>
+        <source>Current Peers</source>
+        <translation type="vanished">Compañeros actuales</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="969"/>
-        <source>
-            Banned Peers
-            </source>
-        <translation type="unfinished"></translation>
+        <source>Banned Peers</source>
+        <translation type="vanished">Compañeras prohibidas</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1005"/>
@@ -243,17 +237,17 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1399"/>
         <source>Local Services</source>
-        <translation type="unfinished"></translation>
+        <translation>Servicios locales</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Longest Chain</source>
-        <translation type="unfinished"></translation>
+        <translation>Cadena más larga</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1441"/>
         <source>Wallet Transactions</source>
-        <translation type="unfinished"></translation>
+        <translation> Transacciones de billetera </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1463"/>
@@ -343,6 +337,20 @@
         <location filename="../src/mainwindow.ui" line="921"/>
         <source>Transactions</source>
         <translation>Transacciones</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="948"/>
+        <source>
+            Current Peers
+            </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="969"/>
+        <source>
+            Banned Peers
+            </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1123"/>
@@ -821,17 +829,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1075"/>
         <source>Shield all non-mining taddr funds to this zaddr</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.cpp" line="1100"/>
-        <source>Shield all mining funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Proteja todos los fondos no mineros a este zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1227"/>
         <source>Copy banned peer IP</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar IP de compañeras prohibidas</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1236"/>
@@ -851,22 +854,22 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1271"/>
         <source>Copy TLS ciphersuite</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar TLS ciphersuite</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1276"/>
         <source>Copy ASN</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar ASN</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1283"/>
         <source>View host on shodan.io (3rd party service)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver host en shodan.io (servicio de terceros)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1291"/>
         <source>View ASN on bgpview.io (3rd party service)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver host en bgpview.io (servicio de terceros)</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="892"/>
@@ -899,6 +902,11 @@
         <translation>Copiado al portapapeles</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.cpp" line="1100"/>
+        <source>Shield all mining funds to this zaddr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.cpp" line="1127"/>
         <source>Get private key</source>
         <translation>Obtener clave privada</translation>
@@ -906,7 +914,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1132"/>
         <source>Get viewing key</source>
-        <translation type="unfinished"></translation>
+        <translation>Obtener lave de visualización</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1148"/>
@@ -941,7 +949,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1433"/>
         <source>Copy block explorer link</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar el enlace del Explorador de bloques</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1446"/>
@@ -1054,7 +1062,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/sendtab.cpp" line="730"/>
         <source>Please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Espere por favor</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="731"/>
@@ -1069,12 +1077,12 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/sendtab.cpp" line="745"/>
         <source>Done!</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Hecho!</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="776"/>
         <source>From Address is Invalid!</source>
-        <translation type="unfinished"></translation>
+        <translation>La dirección de remitente no es válida</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="783"/>
@@ -1136,7 +1144,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/mobileappconnector.ui" line="36"/>
         <source>Scan this QRCode in SilentDragonAndroid to connect your device</source>
-        <translation type="unfinished"></translation>
+        <translation>Escanee este QRCode en SilentDragonAndroid para conectar su dispositivo</translation>
     </message>
     <message>
         <location filename="../src/mobileappconnector.ui" line="43"/>
@@ -1251,7 +1259,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/rpc.cpp" line="1149"/>
         <source> transaction computing.</source>
-        <translation type="unfinished"></translation>
+        <translation>transacción es computación</translation>
     </message>
     <message>
         <location filename="../src/rpc.cpp" line="1369"/>
@@ -1266,7 +1274,7 @@ doesn&apos;t look like a z-address</source>
     <message>
         <location filename="../src/sendtab.cpp" line="761"/>
         <source> Transaction </source>
-        <translation type="unfinished"></translation>
+        <translation>Transacción</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="764"/>
@@ -1550,7 +1558,7 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
         <source>Subnet</source>
-        <translation type="unfinished"></translation>
+        <translation>Subred</translation>
     </message>
     <message>
         <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
@@ -1659,7 +1667,7 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/websockets.cpp" line="769"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
-        <translation type="unfinished"></translation>
+        <translation>¡Sin dirección con saldo suficiente para gastar! Intente barrer los fondos en una sola dirección.</translation>
     </message>
     <message>
         <source>No sapling or transparent addresses with enough balance to spend.</source>
@@ -1668,7 +1676,7 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/settings.cpp" line="313"/>
         <source>Transaction submitted (right click to copy) txid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Transacción enviada (clic derecho para copiar) txid:</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
@@ -1693,12 +1701,12 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Version</source>
-        <translation type="unfinished">Versión</translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Protocol Version</source>
-        <translation type="unfinished">Versión de protocolo</translation>
+        <translation>Versión de protocolo</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
@@ -1713,12 +1721,12 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Bytes received</source>
-        <translation type="unfinished"></translation>
+        <translation>Bytes recibidos</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Bytes sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Bytes enviados</translation>
     </message>
 </context>
 <context>
@@ -1824,7 +1832,7 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/requestdialog.cpp" line="80"/>
         <source>Pay</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagar</translation>
     </message>
     <message>
         <location filename="../src/requestdialog.cpp" line="82"/>
@@ -1892,7 +1900,7 @@ El saldo es insuficiente para una migración automática.
     <message>
         <location filename="../src/settings.ui" line="173"/>
         <source>Local Currency</source>
-        <translation type="unfinished"></translation>
+        <translation>Moneda local</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="190"/>
