@@ -679,12 +679,12 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectHushConf() {
 
     QTextStream in(&file);
 
-    auto zcashconf = new ConnectionConfig();
-    zcashconf->host     = "127.0.0.1";
-    zcashconf->connType = ConnectionType::DetectedConfExternalHushD;
-    zcashconf->usingHushConf = true;
-    zcashconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
-    zcashconf->hushDaemon = false;
+    auto hushconf = new ConnectionConfig();
+    hushconf->host     = "127.0.0.1";
+    hushconf->connType = ConnectionType::DetectedConfExternalHushD;
+    hushconf->usingHushConf = true;
+    hushconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
+    hushconf->hushDaemon = false;
    
     Settings::getInstance()->setUsingHushConf(confLocation);
 
@@ -695,43 +695,43 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectHushConf() {
         QString value = line.right(line.length() - s - 1).trimmed();
 
         if (name == "rpcuser") {
-            zcashconf->rpcuser = value;
+            hushconf->rpcuser = value;
         }
         if (name == "rpcpassword") {
-            zcashconf->rpcpassword = value;
+            hushconf->rpcpassword = value;
         }
         if (name == "rpcport") {
-            zcashconf->port = value;
+            hushconf->port = value;
         }
         if (name == "daemon" && value == "1") {
-            zcashconf->hushDaemon = true;
+            hushconf->hushDaemon = true;
         }
         if (name == "proxy") {
-            zcashconf->proxy = value;
+            hushconf->proxy = value;
         }
          if (name == "consolidation") {
-            zcashconf->consolidation = value;
+            hushconf->consolidation = value;
         }
           if (name == "deletetx") {
-            zcashconf->deletetx = value;
+            hushconf->deletetx = value;
         }
           if (name == "zindex") {
-            zcashconf->zindex = value;
+            hushconf->zindex = value;
         }
         if (name == "testnet" &&
             value == "1"  &&
-            zcashconf->port.isEmpty()) {
-                zcashconf->port = "18232";
+            hushconf->port.isEmpty()) {
+                hushconf->port = "18232";
         }
     }
 
     // If rpcport is not in the file, and it was not set by the testnet=1 flag, then go to default
-    if (zcashconf->port.isEmpty()) zcashconf->port = "18031";
+    if (hushconf->port.isEmpty()) hushconf->port = "18031";
     file.close();
 
     // In addition to the HUSH3/HUSH3.conf file, also double check the params. 
 
-    return std::shared_ptr<ConnectionConfig>(zcashconf);
+    return std::shared_ptr<ConnectionConfig>(hushconf);
 }
 
 /**
