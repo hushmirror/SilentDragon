@@ -422,10 +422,6 @@
         <translation>Beglaubigungs Verzögerung</translation>
     </message>
     <message>
-        <source>KMD Version</source>
-        <translation type="vanished">KMD Version</translation>
-    </message>
-    <message>
         <location filename="../src/mainwindow.ui" line="1273"/>
         <source>Protocol Version</source>
         <translation>Protokoll Version</translation>
@@ -1746,17 +1742,17 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Version</source>
-        <translation type="unfinished">Version</translation>
+        <translation>Version</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Protocol Version</source>
-        <translation type="unfinished">Protokoll Version</translation>
+        <translation>Protokollversion</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Ping Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Ping-Zeit</translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
@@ -1766,12 +1762,12 @@ You either have unconfirmed funds or the balance is too low for an automatic mig
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Bytes received</source>
-        <translation type="unfinished"></translation>
+        <translation>Empfangene Bytes </translation>
     </message>
     <message>
         <location filename="../src/peerstablemodel.cpp" line="9"/>
         <source>Bytes sent</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesendete Bytes</translation>
     </message>
 </context>
 <context>
