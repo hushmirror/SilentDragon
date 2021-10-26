@@ -506,24 +506,14 @@ Tx MainWindow::createTxFromSendPage() {
 
     if (Settings::getInstance()->getAllowCustomFees()) {
         tx.fee = ui->minerFeeAmt->text().toDouble();
-    }
-    else {
+    } else {
         tx.fee = Settings::getMinerFee();
     }
 
     if (Settings::getInstance()->getAutoShield() && sendChangeToSapling) {
         auto saplingAddr = std::find_if(rpc->getAllZAddresses()->begin(), rpc->getAllZAddresses()->end(), [=](auto i) -> bool { 
-            // We're finding a sapling address that is not one of the To addresses, because zcash doesn't allow duplicated addresses
-	    // TODO: Should we disable this in Hush? What are the privacy and chain analysis considerations?
             bool isSapling = Settings::getInstance()->isSaplingAddress(i); 
             if (!isSapling) return false;
-
-            // Also check all the To addresses
-            for (auto t : tx.toAddrs) {
-                if (t.addr == i)
-                    return false;
-            }
-
             return true;
         });
 
