@@ -37,7 +37,7 @@
     <message>
         <location filename="../src/connection.ui" line="58"/>
         <source>The Dragon Awakens...</source>
-        <translation>Dragon Запускается...</translation>
+        <translation>Дракон Запускается...</translation>
     </message>
 </context>
 <context>
@@ -52,15 +52,15 @@
     </message>
     <message>
         <source>Removed Label </source>
-        <translation type="vanished">Удалена метка </translation>
+        <translation type="vanished">Удаленная Метка </translation>
     </message>
     <message>
         <source>Updated Label </source>
-        <translation type="vanished">Обновлена метка </translation>
+        <translation type="vanished">Обновленная Метка </translation>
     </message>
     <message>
         <source>Added Label </source>
-        <translation type="vanished">Добавлена метка </translation>
+        <translation type="vanished">Добавленная Метка </translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="14"/>
@@ -486,7 +486,7 @@
     <message>
         <location filename="../src/mainwindow.ui" line="1485"/>
         <source>TLS Support</source>
-        <translation>TLS Поддержка</translation>
+        <translation>Поддержка TLS</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1595"/>
@@ -833,12 +833,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1075"/>
         <source>Shield all non-mining taddr funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевести все немайнинговые средства на этот zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1100"/>
         <source>Shield all mining funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевести все майнинговые средства на этот zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1127"/>
