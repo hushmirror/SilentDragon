@@ -833,12 +833,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1075"/>
         <source>Shield all non-mining taddr funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Адправіць усе немайнинговые сродкі на гэты zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1100"/>
         <source>Shield all mining funds to this zaddr</source>
-        <translation type="unfinished"></translation>
+        <translation>Адправіць усе майнинговые сродкі на гэты zaddr</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1127"/>
