@@ -945,12 +945,12 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="427"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
-        <translation>Вы карыстаецеся знешнім hushd. Калі ласка, перазапусціце hushd з -перасканаваць</translation>
+        <translation>Вы карыстаецеся знешнім hushd. Калі ласка, перазапусціце hushd з -rescan</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="430"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
-        <translation>Вы карыстаецеся знешнім hushd. Калі ласка, перазапусціце hushd з -пераіндэксаваць</translation>
+        <translation>Вы карыстаецеся знешнім hushd. Калі ласка, перазапусціце hushd з -reindex</translation>
     </message>
     <message>
         <source>Enable Addressindex</source>
