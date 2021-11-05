@@ -226,6 +226,11 @@
         <translation>hushd</translation>
     </message>
     <message>
+        <location filename="../src/mainwindow.ui" line="1294"/>
+        <source>Version</source>
+        <translation type="unfinished">Wersja</translation>
+    </message>
+    <message>
         <location filename="../src/mainwindow.ui" line="1652"/>
         <source>&amp;Report a bug</source>
         <translation>&amp;Zgłosić błąd</translation>
@@ -403,9 +408,8 @@
         <translation>Wersja Protokółu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1294"/>
         <source>Wersja</source>
-        <translation>Версія</translation>
+        <translation type="vanished">Версія</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="1315"/>
@@ -773,7 +777,7 @@
     <message>
         <location filename="../src/mainwindow.cpp" line="1148"/>
         <source>Shield balance to Sapling</source>
-        <translation>Shield balance to Sapling/translation>
+        <translation>Shield balance to Sapling</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.cpp" line="1153"/>
@@ -948,9 +952,8 @@
         <translation>Notatek można używać tylko z z-adresami</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="363"/>
         <source>The memo field can only be used with a z-address.</source>
-        <translation>Pole notatki może być używane tylko z z-adresami.</translation>
+        <translation type="vanished">Pole notatki może być używane tylko z z-adresami.</translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="363"/>
@@ -958,6 +961,12 @@
 doesn&apos;t look like a z-address</source>
         <translation>
 nie wygląda jak z-adres</translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="363"/>
+        <source>The memo field can only be used with a z-address.
+</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/sendtab.cpp" line="524"/>
