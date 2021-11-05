@@ -915,6 +915,7 @@
         </item>
        </layout>
       </widget>
+
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
         <string>Transactions</string>
@@ -932,6 +933,73 @@
         </item>
        </layout>
       </widget>
+
+
+      <widget class="QWidget" name="peer_tab">
+       <attribute name="title">
+        <string>Peers</string>
+       </attribute>
+
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+
+        <item>
+         <widget class="QLabel" name="currentPeersLabel">
+          <property name="text">
+           <string>
+            Current Peers
+            </string>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QTableView" name="peersTable">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+         </item>
+
+        <item>
+         <widget class="QLabel" name="bannedPeersLabel">
+          <property name="text">
+           <string>
+            Banned Peers
+            </string>
+          </property>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QTableView" name="bannedPeersTable">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+         </item>
+
+
+<!--
+         <widget class="QLabel" name="recentlyDisconnectedPeers">
+          <property name="text">
+           <string>
+            Looking For Recently Disconnected Peers ...
+            </string>
+          </property>
+         </widget>
+        </item>
+-->
+
+       </layout>
+
+      </widget>
+
       <widget class="QWidget" name="tab_6">
        <attribute name="title">
         <string>Market</string>
@@ -1078,7 +1146,7 @@
             <property name="title">
              <string/>
             </property>
-            <layout class="QGridLayout" name="gridLayout_5">
+            <layout class="QGridLayout" name="gridLayout_51">
              <item row="5" column="0" colspan="3">
               <widget class="QLabel" name="label_14">
                <property name="text">
@@ -1176,6 +1244,7 @@
                </property>
               </widget>
              </item>
+<!--
              <item row="10" column="0">
               <widget class="QLabel" name="kmdversionlabel">
                <property name="text">
@@ -1183,6 +1252,7 @@
                </property>
               </widget>
              </item>
+-->
              <item row="10" column="2">
               <widget class="QLabel" name="kmdversion">
                <property name="text">
@@ -1540,7 +1610,7 @@
      <string>&amp;Help</string>
     </property>
     <addaction name="actionDonate"/>
-    <addaction name="actionDiscord"/>
+    <addaction name="actionTelegram"/>
     <addaction name="actionWebsite"/>
     <addaction name="actionCheck_for_Updates"/>
     <addaction name="actionReportBug"/>
@@ -1563,8 +1633,8 @@
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menu_Edit"/>
-   <addaction name="menuHelp"/>
    <addaction name="menuApps"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExit">
@@ -1579,7 +1649,7 @@
   </action>
   <action name="actionReportBug">
    <property name="text">
-    <string>&amp;Report a bug on Github</string>
+    <string>&amp;Report a bug</string>
    </property>
   </action>
   <action name="actionSettings">
@@ -1595,9 +1665,9 @@
     <string>&amp;Send Duke Feedback</string>
    </property>
   </action>
-  <action name="actionDiscord">
+  <action name="actionTelegram">
    <property name="text">
-    <string>&amp;Hush Discord</string>
+    <string>&amp;Hush Telegram</string>
    </property>
   </action>
   <action name="actionWebsite">
@@ -1607,15 +1677,7 @@
   </action>
   <action name="actionCheck_for_Updates">
    <property name="text">
-    <string>Check github.com for &amp;updates</string>
-   </property>
-  </action>
-  <action name="actionTurnstile_Migration">
-   <property name="text">
-    <string>Sapling &amp;turnstile</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+A, Ctrl+T</string>
+    <string>Check git.hush.is for &amp;updates</string>
    </property>
   </action>
   <action name="actionImport_Private_Key">

@@ -1,6 +1,6 @@
-// Copyright 2019-2020 Hush developers
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #include "websockets.h"
-
 #include "rpc.h"
 #include "settings.h"
 #include "ui_mobileappconnector.h"
@@ -28,7 +28,7 @@ WSServer::WSServer(quint16 port, bool debug, QObject *parent) :
     m_mainWindow = (MainWindow *) parent;
     if (m_pWebSocketServer->listen(QHostAddress::AnyIPv4, port)) {
         if (m_debug)
-            qDebug() << "Echoserver listening on port" << port;
+            qDebug() << "SD WebSocketServer listening on port" << port;
         connect(m_pWebSocketServer, &QWebSocketServer::newConnection,
                 this, &WSServer::onNewConnection);
         connect(m_pWebSocketServer, &QWebSocketServer::closed, this, &WSServer::closed);
@@ -37,7 +37,7 @@ WSServer::WSServer(quint16 port, bool debug, QObject *parent) :
 
 WSServer::~WSServer()
 {
-    qDebug() << "Closing websocket server";
+    qDebug() << "Closing WebsocketServer";
     m_pWebSocketServer->close();
     qDeleteAll(m_clients.begin(), m_clients.end());
     qDebug() << "Deleted all websocket clients";
@@ -45,7 +45,7 @@ WSServer::~WSServer()
 
 void WSServer::onNewConnection()
 {
-    qDebug() << "Websocket server: new connection";
+    qDebug() << "WebsocketServer: new connection";
     QWebSocket *pSocket = m_pWebSocketServer->nextPendingConnection();
 
     connect(pSocket, &QWebSocket::textMessageReceived, this, &WSServer::processTextMessage);
@@ -121,7 +121,9 @@ void ws_error() {
 
 void WormholeClient::sslerrors(const QList<QSslError> &)
 {
-    qDebug() << "SSL errors occurred!";
+    //TODO: give more details. We only get semi-useful data and some errors
+    // should be ignored
+    qDebug() << "SSL errors occurred, lulz!";
     //TODO: don't do this in prod
     //m_webSocket->ignoreSslErrors();
 
@@ -131,7 +133,7 @@ void WormholeClient::connect() {
     qDebug() << "Wormhole::connect";
     delete m_webSocket;
     m_webSocket = new QWebSocket();
-    QUrl wormhole = QUrl("wss://wormhole.myhush.org:443");
+    QUrl wormhole = QUrl("wss://wormhole.hush.is:443");
 
     if (m_webSocket) {
         QObject::connect(m_webSocket, &QWebSocket::connected, this, &WormholeClient::onConnected);

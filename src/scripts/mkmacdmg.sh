@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2019-2021 The Hush developers
+# Released under the GPLv3
 
 # Accept the variables as command line arguments as well
 POSITIONAL=()

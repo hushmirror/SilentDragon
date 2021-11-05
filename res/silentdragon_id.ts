@@ -4,12 +4,12 @@
 <context>
     <name>AddressBookModel</name>
     <message>
-        <location filename="../src/addressbook.cpp" line="11"/>
+        <location filename="../src/addressbook.cpp" line="13"/>
         <source>Label</source>
         <translation>Label</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="11"/>
+        <location filename="../src/addressbook.cpp" line="13"/>
         <source>Address</source>
         <translation>Alamat</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>BalancesTableModel</name>
     <message>
-        <location filename="../src/balancestablemodel.cpp" line="122"/>
+        <location filename="../src/balancestablemodel.cpp" line="124"/>
         <source>Address</source>
         <translation>Alamat</translation>
     </message>
     <message>
-        <location filename="../src/balancestablemodel.cpp" line="123"/>
+        <location filename="../src/balancestablemodel.cpp" line="125"/>
         <source>Amount</source>
         <translation>Jumlah</translation>
     </message>
@@ -112,22 +112,22 @@
         <location filename="../src/mainwindow.ui" line="404"/>
         <location filename="../src/mainwindow.ui" line="411"/>
         <location filename="../src/mainwindow.ui" line="872"/>
-        <location filename="../src/sendtab.cpp" line="218"/>
-        <location filename="../src/sendtab.cpp" line="223"/>
+        <location filename="../src/sendtab.cpp" line="219"/>
+        <location filename="../src/sendtab.cpp" line="224"/>
         <source>Address</source>
         <translation>Alamat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="418"/>
-        <location filename="../src/sendtab.cpp" line="233"/>
+        <location filename="../src/sendtab.cpp" line="234"/>
         <source>Address Book</source>
         <translation>Buku Alamat</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="429"/>
         <location filename="../src/mainwindow.ui" line="445"/>
-        <location filename="../src/sendtab.cpp" line="246"/>
-        <location filename="../src/sendtab.cpp" line="250"/>
+        <location filename="../src/sendtab.cpp" line="247"/>
+        <location filename="../src/sendtab.cpp" line="251"/>
         <source>Amount</source>
         <translation>Jumlah</translation>
     </message>
@@ -143,9 +143,9 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1189"/>
-        <location filename="../src/mainwindow.cpp" line="1256"/>
-        <location filename="../src/sendtab.cpp" line="272"/>
+        <location filename="../src/mainwindow.cpp" line="1322"/>
+        <location filename="../src/mainwindow.cpp" line="1389"/>
+        <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Memo</translation>
     </message>
@@ -171,7 +171,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="634"/>
-        <location filename="../src/sendtab.cpp" line="639"/>
+        <location filename="../src/sendtab.cpp" line="640"/>
         <source>Miner Fee</source>
         <translation>Biaya Penambang</translation>
     </message>
@@ -237,95 +237,94 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1393"/>
+        <location filename="../src/mainwindow.cpp" line="1526"/>
         <source>Export Private Key</source>
         <translation>Ekspor Kunci Privat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="920"/>
+        <location filename="../src/mainwindow.ui" line="921"/>
         <source>Transactions</source>
         <translation>Transaksi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="937"/>
-        <source>Market</source>
+        <location filename="../src/mainwindow.ui" line="940"/>
+        <source>Peers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="948"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="962"/>
-        <source>Market Cap</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="990"/>
-        <source>24H Volume</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1055"/>
-        <source>hushd</source>
-        <translation>hushd</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1085"/>
-        <source>You are currently not mining</source>
-        <translation>Anda saat ini tidak sedang menambang</translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1548"/>
-        <source>E&amp;xit</source>
+        <source>
+            Current Peers
+            </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="969"/>
-        <location filename="../src/mainwindow.ui" line="983"/>
-        <location filename="../src/mainwindow.ui" line="997"/>
-        <location filename="../src/mainwindow.ui" line="1004"/>
-        <location filename="../src/mainwindow.ui" line="1011"/>
-        <location filename="../src/mainwindow.ui" line="1105"/>
-        <location filename="../src/mainwindow.ui" line="1126"/>
-        <location filename="../src/mainwindow.ui" line="1147"/>
-        <location filename="../src/mainwindow.ui" line="1168"/>
-        <location filename="../src/mainwindow.ui" line="1189"/>
-        <location filename="../src/mainwindow.ui" line="1210"/>
-        <location filename="../src/mainwindow.ui" line="1231"/>
-        <location filename="../src/mainwindow.ui" line="1252"/>
-        <location filename="../src/mainwindow.ui" line="1273"/>
-        <location filename="../src/mainwindow.ui" line="1294"/>
-        <location filename="../src/mainwindow.ui" line="1315"/>
-        <location filename="../src/mainwindow.ui" line="1336"/>
-        <location filename="../src/mainwindow.ui" line="1357"/>
-        <location filename="../src/mainwindow.ui" line="1378"/>
-        <location filename="../src/mainwindow.ui" line="1399"/>
-        <location filename="../src/mainwindow.ui" line="1413"/>
-        <location filename="../src/mainwindow.ui" line="1434"/>
-        <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
-        <source>Loading...</source>
-        <translation>Memuat...</translation>
+        <source>
+            Banned Peers
+            </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1112"/>
-        <source>Block height</source>
-        <translation>Tinggi blok</translation>
+        <location filename="../src/mainwindow.ui" line="1005"/>
+        <source>Market</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1119"/>
-        <source>Notarized Hash</source>
-        <translation>Hash Yang Disahkan</translation>
+        <location filename="../src/mainwindow.ui" line="1016"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1133"/>
-        <location filename="../src/mainwindow.ui" line="1154"/>
-        <location filename="../src/mainwindow.ui" line="1175"/>
-        <location filename="../src/mainwindow.ui" line="1196"/>
-        <location filename="../src/mainwindow.ui" line="1217"/>
-        <location filename="../src/mainwindow.ui" line="1238"/>
+        <location filename="../src/mainwindow.ui" line="1030"/>
+        <source>Market Cap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1058"/>
+        <source>24H Volume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1123"/>
+        <source>hushd</source>
+        <translation>hushd</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1153"/>
+        <source>You are currently not mining</source>
+        <translation>Anda saat ini tidak sedang menambang</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1485"/>
+        <source>TLS Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1642"/>
+        <source>E&amp;xit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1652"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1680"/>
+        <source>Check git.hush.is for &amp;updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1037"/>
+        <location filename="../src/mainwindow.ui" line="1051"/>
+        <location filename="../src/mainwindow.ui" line="1065"/>
+        <location filename="../src/mainwindow.ui" line="1072"/>
+        <location filename="../src/mainwindow.ui" line="1079"/>
+        <location filename="../src/mainwindow.ui" line="1173"/>
+        <location filename="../src/mainwindow.ui" line="1194"/>
+        <location filename="../src/mainwindow.ui" line="1215"/>
+        <location filename="../src/mainwindow.ui" line="1236"/>
         <location filename="../src/mainwindow.ui" line="1259"/>
         <location filename="../src/mainwindow.ui" line="1280"/>
         <location filename="../src/mainwindow.ui" line="1301"/>
@@ -334,104 +333,140 @@
         <location filename="../src/mainwindow.ui" line="1364"/>
         <location filename="../src/mainwindow.ui" line="1385"/>
         <location filename="../src/mainwindow.ui" line="1406"/>
-        <location filename="../src/mainwindow.ui" line="1461"/>
-        <location filename="../src/mainwindow.ui" line="1468"/>
-        <location filename="../src/mainwindow.ui" line="1475"/>
+        <location filename="../src/mainwindow.ui" line="1427"/>
+        <location filename="../src/mainwindow.ui" line="1448"/>
+        <location filename="../src/mainwindow.ui" line="1470"/>
+        <location filename="../src/mainwindow.ui" line="1492"/>
+        <location filename="../src/mainwindow.ui" line="1507"/>
+        <location filename="../src/mainwindow.ui" line="1528"/>
+        <location filename="../src/mainwindow.cpp" line="881"/>
+        <location filename="../src/mainwindow.cpp" line="945"/>
+        <source>Loading...</source>
+        <translation>Memuat...</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1180"/>
+        <source>Block height</source>
+        <translation>Tinggi blok</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1187"/>
+        <source>Notarized Hash</source>
+        <translation>Hash Yang Disahkan</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1201"/>
+        <location filename="../src/mainwindow.ui" line="1222"/>
+        <location filename="../src/mainwindow.ui" line="1243"/>
+        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1392"/>
+        <location filename="../src/mainwindow.ui" line="1413"/>
+        <location filename="../src/mainwindow.ui" line="1434"/>
+        <location filename="../src/mainwindow.ui" line="1455"/>
+        <location filename="../src/mainwindow.ui" line="1477"/>
+        <location filename="../src/mainwindow.ui" line="1499"/>
+        <location filename="../src/mainwindow.ui" line="1555"/>
+        <location filename="../src/mainwindow.ui" line="1562"/>
+        <location filename="../src/mainwindow.ui" line="1569"/>
         <source>|</source>
         <translation>|</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1140"/>
+        <location filename="../src/mainwindow.ui" line="1208"/>
         <source>Notarized txid</source>
         <translation>Txid yang disahkan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1161"/>
+        <location filename="../src/mainwindow.ui" line="1229"/>
         <source>Notarized Lag</source>
         <translation>Lag yang disahkan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1182"/>
         <source>KMD Version</source>
-        <translation>Versi KMD</translation>
+        <translation type="vanished">Versi KMD</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1203"/>
+        <location filename="../src/mainwindow.ui" line="1273"/>
         <source>Protocol Version</source>
         <translation>Versi Protokol</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1224"/>
+        <location filename="../src/mainwindow.ui" line="1294"/>
         <source>Version</source>
         <translation>Versi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1245"/>
+        <location filename="../src/mainwindow.ui" line="1315"/>
         <source>P2P Port</source>
         <translation>Port P2P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1336"/>
         <source>RPC Port</source>
         <translation>Port RPC</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1357"/>
         <source>Client Name</source>
         <translation>Nama Klien</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1378"/>
         <source>Next Halving</source>
         <translation>Berikutnya Separuh</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1399"/>
         <source>Local Services</source>
         <translation>Servis Lokal</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Longest Chain</source>
         <translation>Rantai Terpanjang</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1441"/>
         <source>Wallet Transactions</source>
         <translation>Transaksi Dompet</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1392"/>
+        <location filename="../src/mainwindow.ui" line="1463"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1420"/>
+        <location filename="../src/mainwindow.ui" line="1514"/>
         <source>Network solution rate</source>
         <translation>Tingkat Solusi Jaringan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1427"/>
+        <location filename="../src/mainwindow.ui" line="1521"/>
         <source>Connections</source>
         <translation>Koneksi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1501"/>
+        <location filename="../src/mainwindow.ui" line="1595"/>
         <source>&amp;File</source>
         <translation>&amp;Berkas</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1516"/>
+        <location filename="../src/mainwindow.ui" line="1610"/>
         <source>&amp;Help</source>
         <translation>&amp;Bantuan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1527"/>
+        <location filename="../src/mainwindow.ui" line="1621"/>
         <source>&amp;Apps</source>
         <translation>&amp;Aplikasi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1535"/>
+        <location filename="../src/mainwindow.ui" line="1629"/>
         <source>&amp;Edit</source>
         <translation>&amp;Edit</translation>
     </message>
@@ -440,118 +475,110 @@
         <translation type="vanished">Keluar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1553"/>
+        <location filename="../src/mainwindow.ui" line="1647"/>
         <source>&amp;About</source>
         <translation>&amp;Tentang</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1558"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1563"/>
+        <location filename="../src/mainwindow.ui" line="1657"/>
         <source>&amp;Settings</source>
         <translation>&amp;Pengaturan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1566"/>
+        <location filename="../src/mainwindow.ui" line="1660"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1571"/>
+        <location filename="../src/mainwindow.ui" line="1665"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>&amp;Kirim Umpan Balik Duke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1576"/>
-        <source>&amp;Hush Discord</source>
-        <translation>&amp;Discord hush</translation>
+        <location filename="../src/mainwindow.ui" line="1670"/>
+        <source>&amp;Hush Telegram</source>
+        <translation>&amp;Telegram hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1581"/>
+        <location filename="../src/mainwindow.ui" line="1675"/>
         <source>&amp;Hush Website</source>
         <translation>&amp;Website Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1586"/>
-        <source>Check github.com for &amp;updates</source>
-        <translation>Cek github.com untuk &amp;Perbarui</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Cek git untuk &amp;Perbarui</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1591"/>
         <source>Sapling &amp;turnstile</source>
-        <translation>Sapling &amp;Pagar Putar</translation>
+        <translation type="vanished">Sapling &amp;Pagar Putar</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1594"/>
         <source>Ctrl+A, Ctrl+T</source>
-        <translation>Ctrl+A, Ctrl+T</translation>
+        <translation type="vanished">Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1599"/>
+        <location filename="../src/mainwindow.ui" line="1685"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Impor Kunci Privat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1604"/>
+        <location filename="../src/mainwindow.ui" line="1690"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Ekspor Semua Kunci Privat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1609"/>
+        <location filename="../src/mainwindow.ui" line="1695"/>
         <source>&amp;z-board.net</source>
         <translation>&amp;z-board.net</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1612"/>
+        <location filename="../src/mainwindow.ui" line="1698"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1617"/>
+        <location filename="../src/mainwindow.ui" line="1703"/>
         <source>Address &amp;book</source>
         <translation>&amp;Buku Alamat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1620"/>
+        <location filename="../src/mainwindow.ui" line="1706"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1625"/>
+        <location filename="../src/mainwindow.ui" line="1711"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>&amp;Dompet Cadangan.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1630"/>
-        <location filename="../src/mainwindow.cpp" line="828"/>
+        <location filename="../src/mainwindow.ui" line="1716"/>
+        <location filename="../src/mainwindow.cpp" line="821"/>
         <source>Export transactions</source>
         <translation>Ekspor Transaksi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1635"/>
+        <location filename="../src/mainwindow.ui" line="1721"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation>Bayar HUSH &amp;URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1640"/>
+        <location filename="../src/mainwindow.ui" line="1726"/>
         <source>Connect mobile &amp;app</source>
         <translation>Sambungkan Ponsel &amp;aplikasi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1643"/>
+        <location filename="../src/mainwindow.ui" line="1729"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1648"/>
+        <location filename="../src/mainwindow.ui" line="1734"/>
         <source>Request HUSH...</source>
         <translation>Meminta HUSH</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1653"/>
+        <location filename="../src/mainwindow.ui" line="1739"/>
         <source>Validate Address</source>
         <translation>Validasi Alamat</translation>
     </message>
@@ -564,37 +591,37 @@
         <translation type="vanished">Tolong mulai ulang SilentDragon untuk mengaplikasikan tema</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="345"/>
+        <location filename="../src/mainwindow.cpp" line="340"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Konfigurasi Tor hanya tersedia saat menjalankan hushd tertanam</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="432"/>
+        <location filename="../src/mainwindow.cpp" line="427"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Anda sedang menggunakan hush eksternal. Tolong mulai ulang hushd dengan -rescan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="435"/>
+        <location filename="../src/mainwindow.cpp" line="430"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Anda sedang menggunakan hushd eksternal. tolong mulai ulang hushd dengan -reindex</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="461"/>
+        <location filename="../src/mainwindow.cpp" line="456"/>
         <source>Enable Tor</source>
         <translation>Gunakan Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="462"/>
+        <location filename="../src/mainwindow.cpp" line="457"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Koneksi melalui Tor telah diaktifkan. Untuk menggunakan fitur ini, Anda harus memulai ulang SilentDragon.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="471"/>
+        <location filename="../src/mainwindow.cpp" line="466"/>
         <source>Disable Tor</source>
         <translation>Nonaktifkan Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="472"/>
+        <location filename="../src/mainwindow.cpp" line="467"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Koneksi melalui Tor telah dinonaktifkan. Untuk memutuskan sambungan sepenuhnya dari Tor, Anda harus memulai ulang SilentDragon.</translation>
     </message>
@@ -603,349 +630,404 @@
         <translation type="vanished">SilentDragon perlu memulai ulang untuk Pindai ulang/Indeks ulang. SilentDragon sekarang akan ditutup, silakan mulai kembali SilentDragon untuk melanjutkan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="555"/>
-        <location filename="../src/mainwindow.cpp" line="561"/>
+        <location filename="../src/mainwindow.cpp" line="550"/>
+        <location filename="../src/mainwindow.cpp" line="556"/>
         <source>Restart SilentDragon</source>
         <translation>Mulai Ulang SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="559"/>
+        <location filename="../src/mainwindow.cpp" line="554"/>
         <source>SilentDragon needs to reindex for zindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="603"/>
+        <location filename="../src/mainwindow.cpp" line="598"/>
         <source>Some feedback about SilentDragon or Hush...</source>
         <translation>Beberapa umpan balik tentang SilentDragon atau Hush</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source>Send Duke some private and shielded feedback about </source>
         <translation>Kirim Duke beberapa umpan balik tantanv privasi dan terlindungi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source> or SilentDragon</source>
         <translation>Atau SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="621"/>
+        <location filename="../src/mainwindow.cpp" line="614"/>
         <source>Enter Address to validate</source>
         <translation>Masukan Alamat untuk validasi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="622"/>
+        <location filename="../src/mainwindow.cpp" line="615"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Transparan atau Alamat yang terlindungi</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="670"/>
+        <location filename="../src/mainwindow.cpp" line="663"/>
         <source>Private key import rescan finished</source>
         <translation>Memindai ulang Kunci Privat telah selesai</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="735"/>
+        <location filename="../src/mainwindow.cpp" line="728"/>
         <source>Paste HUSH URI</source>
         <translation>Tempel HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="747"/>
+        <location filename="../src/mainwindow.cpp" line="740"/>
         <source>Error paying Hush URI</source>
         <translation>Kesalahan Pembayaran HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="748"/>
+        <location filename="../src/mainwindow.cpp" line="741"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI harus dalam bentuk &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="783"/>
+        <location filename="../src/mainwindow.cpp" line="776"/>
         <source>Please paste your private keys here, one per line</source>
         <translation>Tolong tempel kunci privat disini, Perbaris satu</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="784"/>
+        <location filename="../src/mainwindow.cpp" line="777"/>
         <source>The keys will be imported into your connected Hush node</source>
         <translation>Kunci akan di impor ke Hush node anda yang terhubung</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="815"/>
+        <location filename="../src/mainwindow.cpp" line="808"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation>Kunci kunci telah diimpor! Mungkin diperlukan beberapa menit untuk memindai ulang blockchain. Sampai saat itu, fungsionalitas mungkin terbatas</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="834"/>
+        <location filename="../src/mainwindow.cpp" line="827"/>
         <source>Error</source>
         <translation>Kesalahan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="835"/>
+        <location filename="../src/mainwindow.cpp" line="828"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>Kesalahan Mengeskpor transaksi, file tidak disimpan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>No wallet.dat</source>
         <translation>Tidak ada dompet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Tidak dapat mencari dompet.dat di komputer ini</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="858"/>
+        <location filename="../src/mainwindow.cpp" line="851"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Anda harus mencadangkan ulang dari mesin hushd yang sedang berjalan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="862"/>
+        <location filename="../src/mainwindow.cpp" line="855"/>
         <source>Backup wallet.dat</source>
         <translation>Cadangkan dompet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup</source>
         <translation>Tidak bisa mencadangkan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>Tidak dapat mencadangkan berkas dompet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="868"/>
+        <location filename="../src/mainwindow.cpp" line="861"/>
         <source>You need to back it up manually.</source>
         <translation>Anda harus mencadangkan secara manual</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="957"/>
+        <location filename="../src/mainwindow.cpp" line="950"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Semua ini adalah kunci privat untuk semua alamat di dompet anda</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="959"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
         <source>Private key for </source>
         <translation>Kunci privat untuk</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="899"/>
-        <location filename="../src/mainwindow.cpp" line="967"/>
+        <location filename="../src/mainwindow.cpp" line="892"/>
+        <location filename="../src/mainwindow.cpp" line="960"/>
         <source>Save File</source>
         <translation>Simpan Berkas</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
         <source>Theme Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>This change can take a few seconds.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>Currency Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="553"/>
+        <location filename="../src/mainwindow.cpp" line="548"/>
         <source>SilentDragon needs to restart to rescan,reindex,consolidation or deletetx. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="903"/>
-        <location filename="../src/mainwindow.cpp" line="971"/>
+        <location filename="../src/mainwindow.cpp" line="896"/>
+        <location filename="../src/mainwindow.cpp" line="964"/>
         <source>Unable to open file</source>
         <translation>Tidak dapat membuka berkas</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1065"/>
-        <location filename="../src/mainwindow.cpp" line="1218"/>
+        <location filename="../src/mainwindow.cpp" line="1058"/>
+        <location filename="../src/mainwindow.cpp" line="1351"/>
         <source>Copy address</source>
         <translation>Salin alamat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1068"/>
-        <location filename="../src/mainwindow.cpp" line="1214"/>
-        <location filename="../src/mainwindow.cpp" line="1220"/>
+        <location filename="../src/mainwindow.cpp" line="1061"/>
+        <location filename="../src/mainwindow.cpp" line="1166"/>
+        <location filename="../src/mainwindow.cpp" line="1199"/>
+        <location filename="../src/mainwindow.cpp" line="1205"/>
+        <location filename="../src/mainwindow.cpp" line="1210"/>
+        <location filename="../src/mainwindow.cpp" line="1215"/>
+        <location filename="../src/mainwindow.cpp" line="1347"/>
+        <location filename="../src/mainwindow.cpp" line="1353"/>
         <source>Copied to clipboard</source>
         <translation>Disalin ke papan klip</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1071"/>
+        <location filename="../src/mainwindow.cpp" line="1064"/>
         <source>Get private key</source>
         <translation>Dapatkan Kunci Privat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1076"/>
+        <location filename="../src/mainwindow.cpp" line="1069"/>
         <source>Get viewing key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1092"/>
+        <location filename="../src/mainwindow.cpp" line="1085"/>
         <source>Shield balance to Sapling</source>
         <translation>Alamat terlindung ke sapling</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1097"/>
-        <location filename="../src/mainwindow.cpp" line="1224"/>
+        <location filename="../src/mainwindow.cpp" line="1090"/>
+        <location filename="../src/mainwindow.cpp" line="1357"/>
         <source>View on block explorer</source>
         <translation>Lihat di blok eksplorer</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1119"/>
+        <location filename="../src/mainwindow.cpp" line="1112"/>
         <source>Address Asset Viewer</source>
         <translation>Alamat Penampil Aset</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1125"/>
+        <location filename="../src/mainwindow.cpp" line="1119"/>
         <source>Convert Address</source>
         <translation>Konversikan Alamat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1212"/>
+        <location filename="../src/mainwindow.cpp" line="1164"/>
+        <source>Copy banned peer IP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1173"/>
+        <source>View banned host IP on shodan.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1197"/>
+        <source>Copy peer address+port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1203"/>
+        <source>Copy peer address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1208"/>
+        <source>Copy TLS ciphersuite</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1213"/>
+        <source>Copy ASN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1220"/>
+        <source>View host on shodan.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1228"/>
+        <source>View ASN on bgpview.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1345"/>
         <source>Copy txid</source>
         <translation>Salin Txid</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1235"/>
+        <location filename="../src/mainwindow.cpp" line="1368"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1248"/>
+        <location filename="../src/mainwindow.cpp" line="1381"/>
         <source>View Payment Request</source>
         <translation>Tampilkan Permintaan Pembayaran</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1255"/>
+        <location filename="../src/mainwindow.cpp" line="1388"/>
         <source>View Memo</source>
         <translation>Tampilkan Memo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1269"/>
+        <location filename="../src/mainwindow.cpp" line="1402"/>
         <source>Reply to </source>
         <translation>Balas ke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1350"/>
+        <location filename="../src/mainwindow.cpp" line="1483"/>
         <source>Created new t-Addr</source>
         <translation>Buat baru t-Addr</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1399"/>
+        <location filename="../src/mainwindow.cpp" line="1532"/>
         <source>Copy Address</source>
         <translation>Salin Alamat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1465"/>
+        <location filename="../src/mainwindow.cpp" line="1598"/>
         <source>Address has been previously used</source>
         <translation>Alamat sebelumnya telah digunakan</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1467"/>
+        <location filename="../src/mainwindow.cpp" line="1600"/>
         <source>Address is unused</source>
         <translation>Alamat belum digunakan</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="209"/>
+        <location filename="../src/sendtab.cpp" line="210"/>
         <source>Recipient </source>
         <translation>Penerima</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="282"/>
-        <location filename="../src/sendtab.cpp" line="334"/>
+        <location filename="../src/sendtab.cpp" line="283"/>
+        <location filename="../src/sendtab.cpp" line="335"/>
         <source>File Upload</source>
         <translation>Upload Berkas</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="325"/>
+        <location filename="../src/sendtab.cpp" line="326"/>
         <source>Only z-addresses can have memos</source>
         <translation>Hanya z-addreses yang memiliki memo</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="345"/>
+        <location filename="../src/sendtab.cpp" line="346"/>
         <source>File size too large</source>
         <translation>Ukuran berkas terlalu besar</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>The file size </source>
         <translation>Ukuran berkas</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source> bytes is greater than </source>
         <translation>Bytes lebih besar dari</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="361"/>
+        <location filename="../src/sendtab.cpp" line="362"/>
         <source>Memos can only be used with z-addresses</source>
         <translation>Memo hanya bisa digunakan oleh z-addreses</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>The memo field can only be used with a z-address.
 </source>
         <translation>Bidang memo hanya bisa digunakan dengan z-address</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>
 doesn&apos;t look like a z-address</source>
         <translation>Tidak terlihat seperi z-address</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="533"/>
+        <location filename="../src/sendtab.cpp" line="534"/>
         <source>Change from </source>
         <translation>Ubah dari</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="674"/>
+        <location filename="../src/sendtab.cpp" line="675"/>
         <source>Current balance      : </source>
         <translation>Saldo sekarang      :</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="676"/>
+        <location filename="../src/sendtab.cpp" line="677"/>
         <source>Balance after this Tx: </source>
         <translation>Saldl setelah Tx ini</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="697"/>
+        <location filename="../src/sendtab.cpp" line="698"/>
         <source>Transaction Error</source>
         <translation>Kesalahan Transaksi</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="729"/>
+        <location filename="../src/sendtab.cpp" line="730"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="730"/>
+        <location filename="../src/sendtab.cpp" line="731"/>
         <source>Computing your transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="737"/>
+        <location filename="../src/sendtab.cpp" line="738"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="744"/>
+        <location filename="../src/sendtab.cpp" line="745"/>
         <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="775"/>
+        <location filename="../src/sendtab.cpp" line="776"/>
         <source>From Address is Invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="783"/>
+        <source>Extreme Privacy! </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="783"/>
+        <source> is transparent. You must send to a zaddr.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -957,17 +1039,15 @@ doesn&apos;t look like a z-address</source>
         <translation type="vanished">Dari alamat tidak valid</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source>Recipient Address </source>
-        <translation>Alamat Penerima</translation>
+        <translation type="vanished">Alamat Penerima</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source> is Invalid</source>
-        <translation>Tidak Valid</translation>
+        <translation type="vanished">Tidak Valid</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="787"/>
+        <location filename="../src/sendtab.cpp" line="789"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Jumlah tidak valid!</translation>
     </message>
@@ -989,7 +1069,7 @@ doesn&apos;t look like a z-address</source>
 <context>
     <name>MemoEdit</name>
     <message>
-        <location filename="../src/memoedit.cpp" line="51"/>
+        <location filename="../src/memoedit.cpp" line="53"/>
         <source>Reply to</source>
         <translation>Balas Ke</translation>
     </message>
@@ -1059,97 +1139,97 @@ doesn&apos;t look like a z-address</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/addressbook.cpp" line="110"/>
+        <location filename="../src/addressbook.cpp" line="112"/>
         <source>Pick</source>
         <translation>Memilih</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="128"/>
+        <location filename="../src/addressbook.cpp" line="130"/>
         <source>Address or Label Error</source>
         <translation>Kesalahan Label atau Alamat</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="129"/>
+        <location filename="../src/addressbook.cpp" line="131"/>
         <source>Address or Label cannot be empty</source>
         <translation>Label atau Alamay tidak boleh kosong</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="134"/>
+        <location filename="../src/addressbook.cpp" line="136"/>
         <source>Address Format Error</source>
         <translation>Kesalahan Format Alamat</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="135"/>
+        <location filename="../src/addressbook.cpp" line="137"/>
         <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation>Tidak terlihat seperti Alamat Hush yang benar</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="143"/>
+        <location filename="../src/addressbook.cpp" line="145"/>
         <source>Label Error</source>
         <translation>Kesalahan Label</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="144"/>
+        <location filename="../src/addressbook.cpp" line="146"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
         <translation>Label sudah ada. harap hapus label yang sudah ada</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="156"/>
+        <location filename="../src/addressbook.cpp" line="158"/>
         <source>Import Address Book</source>
         <translation>Impor Buku Alamat</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="163"/>
+        <location filename="../src/addressbook.cpp" line="165"/>
         <source>Unable to open file</source>
         <translation>Tidak dapat membuka berkas</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="183"/>
+        <location filename="../src/addressbook.cpp" line="185"/>
         <source>Address Book Import Done</source>
         <translation>Impor Alamat Buku Sudah Selesai</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="184"/>
+        <location filename="../src/addressbook.cpp" line="186"/>
         <source>Imported %1 new Address book entries</source>
         <translation>Entri Alamat Buku yang baru</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="224"/>
+        <location filename="../src/addressbook.cpp" line="226"/>
         <source>Copy address</source>
         <translation>Salin Alamat</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="226"/>
+        <location filename="../src/addressbook.cpp" line="228"/>
         <source>Copied to clipboard</source>
         <translation>Disalin ke papan klip</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="229"/>
+        <location filename="../src/addressbook.cpp" line="231"/>
         <source>Delete label</source>
         <translation>Hapus label</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="61"/>
+        <location filename="../src/connection.cpp" line="59"/>
         <source>Attempting autoconnect</source>
         <translation>Mencoba sambungan otomatis</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="70"/>
+        <location filename="../src/connection.cpp" line="68"/>
         <source>Starting embedded hushd</source>
         <translation>Hush memulai tertanam</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>hushd is set to run as daemon</source>
         <translation>Hushd diatur untuk dijalankan sebagai Daemon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>Waiting for hushd</source>
         <translation>Menunggu Hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="95"/>
+        <location filename="../src/connection.cpp" line="93"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1158,7 +1238,7 @@ daemon=1</source>
 </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="100"/>
+        <location filename="../src/connection.cpp" line="98"/>
         <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
@@ -1169,12 +1249,12 @@ If all else fails, please run hushd manually.</source>
         <translation>Tidak dapat memulai hushd yang disematkan. Silakan coba memulai kembali. Jika sebelumnya Anda mulai dengan argumen khusus, Anda mungkin perlu mengatur ulang HUSH3.conf. Jika semuanya gagal, jalankan hushd secara manual.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="103"/>
+        <location filename="../src/connection.cpp" line="101"/>
         <source>The process returned</source>
         <translation>Proses kembali</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="111"/>
+        <location filename="../src/connection.cpp" line="109"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1183,43 +1263,43 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Tidak dapat memulai menanam hushd karena tidak ada penanaman yang diteruskan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Hide Advanced Config</source>
         <translation>Sembunyikan Konfigurasi Lanjutan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Show Advanced Config</source>
         <translation>Tampilkan Konfigurasi Lanjutan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="177"/>
+        <location filename="../src/connection.cpp" line="175"/>
         <source>Choose data directory</source>
         <translation>Pilih direktori data</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="198"/>
+        <location filename="../src/connection.cpp" line="196"/>
         <source>Could not create HUSH3.conf.</source>
         <translation>Tidak Dapat membuat HUSH3.conf</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="260"/>
+        <location filename="../src/connection.cpp" line="249"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Semua Unduhan Telah Selesai</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="283"/>
+        <location filename="../src/connection.cpp" line="272"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Tidak dapat mengunduh params. Harap cek bantuan di website untuk info lebih lanjut</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="298"/>
+        <location filename="../src/connection.cpp" line="314"/>
         <source>Downloading </source>
         <translation>Mengundug</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
+        <location filename="../src/connection.cpp" line="298"/>
         <source> more remaining )</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1228,119 +1308,119 @@ Tidak dapat memulai menanam hushd karena tidak ada penanaman yang diteruskan</tr
         <translation type="vanished">Lebih banyak tersisa</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="299"/>
         <source>MB of </source>
         <translation>MB dari</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="299"/>
         <source>MB at </source>
         <translation>MB di</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="314"/>
         <source> failed. Please check the help site for more info</source>
         <translation>Gagal. Tolong cek bantuan di website untuk info lebih lanjut</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="349"/>
+        <location filename="../src/connection.cpp" line="338"/>
         <source>hushd error</source>
         <translation>Kesalahan Hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="429"/>
+        <location filename="../src/connection.cpp" line="426"/>
         <source>A manual connection was requested, but the settings are not configured.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Koneksi manual diminta, tetapi pengaturan tidak dikonfigurasi. Harap setel host / port dan pengguna / kata sandi di menu Edit- &gt; Pengaturan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="441"/>
+        <location filename="../src/connection.cpp" line="438"/>
         <source>Could not connect to hushd configured in settings.
 
 Please set the host/port and user/password in the Edit-&gt;Settings menu.</source>
         <translation>Tidak dapat terhubung ke pengaturan yang diatur dalam Hushd. Harap setel host / port dan pengguna / kata sandi di menu Edit- &gt; Pengaturan.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="504"/>
+        <location filename="../src/connection.cpp" line="501"/>
         <source>Authentication failed. The username / password you specified was not accepted by hushd. Try changing it in the Edit-&gt;Settings menu</source>
         <translation>Otentikasi gagal. Nama pengguna / kata sandi yang Anda tentukan tidak diterima oleh hushd. Coba ubah di menu Edit- &gt; Pengaturan</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="519"/>
+        <location filename="../src/connection.cpp" line="516"/>
         <source>Your hushd is starting up. Please wait.</source>
         <translation>Hushd telah memulai. Harap tunggu</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="536"/>
+        <location filename="../src/connection.cpp" line="533"/>
         <source>This may take several hours, grab some popcorn</source>
         <translation>Inibmungkin memakan beberapa jam, ambil beberapa popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="725"/>
+        <location filename="../src/connection.cpp" line="550"/>
+        <location filename="../src/rpc.cpp" line="748"/>
         <source>Connection Error</source>
         <translation>Kesalahan Koneksi</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
-        <location filename="../src/sendtab.cpp" line="765"/>
+        <location filename="../src/connection.cpp" line="828"/>
+        <location filename="../src/sendtab.cpp" line="766"/>
         <source>Transaction Error</source>
         <translation>Kesalahan Transaksi</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
+        <location filename="../src/connection.cpp" line="828"/>
         <source>There was an error! : </source>
         <translation>Terjadi kesalahan!</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="396"/>
-        <location filename="../src/rpc.cpp" line="398"/>
+        <location filename="../src/rpc.cpp" line="415"/>
+        <location filename="../src/rpc.cpp" line="417"/>
         <source>No Connection</source>
         <translation>Tidak ada sambungan</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="673"/>
+        <location filename="../src/rpc.cpp" line="696"/>
         <source>Downloading blocks</source>
         <translation>Mengunduh Blok</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="676"/>
+        <location filename="../src/rpc.cpp" line="699"/>
         <source>Block height</source>
         <translation>Tinggi blok</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="691"/>
+        <location filename="../src/rpc.cpp" line="714"/>
         <source>Syncing</source>
         <translation>Sinkronisasi</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="691"/>
+        <location filename="../src/rpc.cpp" line="714"/>
         <source>Connected</source>
         <translation>Tersambung</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="716"/>
         <source>testnet:</source>
         <translation>Jaringan uji coba:</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="703"/>
+        <location filename="../src/rpc.cpp" line="726"/>
         <source>Connected to hushd</source>
         <translation>Tersambung ke hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="706"/>
+        <location filename="../src/rpc.cpp" line="729"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>Tidak ada jaring peer hushd! Masalah jaringan?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="725"/>
+        <location filename="../src/rpc.cpp" line="748"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>Ada kesalahan sambungan hushd. Kesalahannya adalah</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1020"/>
+        <location filename="../src/rpc.cpp" line="1113"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1349,34 +1429,34 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation type="vanished">Komputasi Tx. Dapat memakan beberapa menit</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1069"/>
+        <location filename="../src/rpc.cpp" line="1165"/>
         <source>Update Available</source>
         <translation>Pembaruan Tersedia</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1070"/>
+        <location filename="../src/rpc.cpp" line="1166"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
         <translation>Rilis baru v% 1 tersedia! Anda memiliki v% 2. Apakah Anda ingin mengunjungi halaman rilis?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1082"/>
+        <location filename="../src/rpc.cpp" line="1178"/>
         <source>No updates available</source>
         <translation>Tidak ada pembaruan tersedia</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1083"/>
+        <location filename="../src/rpc.cpp" line="1179"/>
         <source>You already have the latest release v%1</source>
         <translation>Anda telah menggunakan pembaruan terbaru v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1237"/>
+        <location filename="../src/rpc.cpp" line="1333"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Harap tingkatkan kesabaran dan tunggu SilentDragon keluar</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1238"/>
+        <location filename="../src/rpc.cpp" line="1334"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Menunggu Hushd Keluar</translation>
     </message>
@@ -1385,22 +1465,22 @@ Would you like to visit the releases page?</source>
         <translation type="vanished">Tx</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="760"/>
+        <location filename="../src/sendtab.cpp" line="761"/>
         <source> failed</source>
         <translation>Gagal</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="760"/>
+        <location filename="../src/sendtab.cpp" line="761"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="764"/>
         <source>The transaction with id </source>
         <translation>Transaksi dengan id</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="764"/>
         <source> failed. The error was</source>
         <translation>Gagal. Terjadi kesalahan</translation>
     </message>
@@ -1409,48 +1489,110 @@ Would you like to visit the releases page?</source>
         <translation type="vanished">Tx dikirimkan (klik kanan untuk menyalin) txid:</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Type</source>
         <translation>Tipe</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Address</source>
         <translation>Alamat</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <source>Subnet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <source>Banned Until</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Date/Time</source>
         <translation>Tanggal/Waktu</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Amount</source>
         <translation>Jumlah</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="435"/>
+        <location filename="../src/websockets.cpp" line="437"/>
         <source>Connected directly</source>
         <translation>Terhubung Langsung</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="438"/>
+        <location filename="../src/websockets.cpp" line="440"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>terhubung melalui internet melalui layanan SilentDragon Wormhole</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="745"/>
+        <location filename="../src/websockets.cpp" line="747"/>
         <source>Node is still syncing.</source>
         <translation>Masih menyikronkan node</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="767"/>
+        <location filename="../src/websockets.cpp" line="769"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Tidak ada alamat dengan saldo yang cukup untuk dibelanjakan! Cobalah menyapu dana ke satu alamat</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="313"/>
         <source>Transaction submitted (right click to copy) txid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>PeerID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>ASN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>TLS Cipher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>TLS Verfied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Version</source>
+        <translation type="unfinished">Versi</translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Protocol Version</source>
+        <translation type="unfinished">Versi Protokol</translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Ping Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Banscore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Bytes received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Bytes sent</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1540,32 +1682,32 @@ Would you like to visit the releases page?</source>
         <translation>Minta pembayaran dari alamat Sapling. Anda akan mengirim transaksi HUSH 0,0001 ke alamat dengan URI pembayaran HUSH. Memo itu akan dimasukkan dalam alamat transaksi ketika Anda membayar</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="50"/>
+        <location filename="../src/requestdialog.cpp" line="52"/>
         <source>Error paying HUSH URI</source>
         <translation>Kesalahan Membayar HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="51"/>
+        <location filename="../src/requestdialog.cpp" line="53"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI harus dalam bentuk &apos; hush: &lt; addr &gt;? Amt = x &amp; memo</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="65"/>
+        <location filename="../src/requestdialog.cpp" line="67"/>
         <source>Pay To</source>
         <translation>Bayar Ke</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="78"/>
+        <location filename="../src/requestdialog.cpp" line="80"/>
         <source>Pay</source>
         <translation>Bayar</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="80"/>
+        <location filename="../src/requestdialog.cpp" line="82"/>
         <source>You are paying a payment request. Your address will not be visible to the person requesting this payment.</source>
         <translation>Anda membayar permintaan pembayaran. Alamat Anda tidak akan terlihat oleh orang yang meminta pembayaran ini.</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="99"/>
+        <location filename="../src/requestdialog.cpp" line="101"/>
         <source>Can only request from Sapling addresses</source>
         <translation>Hanya dapat meminta dari alamat apling</translation>
     </message>
@@ -1835,22 +1977,22 @@ Would you like to visit the releases page?</source>
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation>Standar</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation>Biru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation>Cerah</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation>Gelap</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>
@@ -1864,8 +2006,17 @@ Would you like to visit the releases page?</source>
     </message>
     <message>
         <location filename="../src/settings.ui" line="476"/>
-        <source>Check github for updates at startup</source>
-        <translation>Cek pembaruan github di memulai</translation>
+        <source>Check git.hush.is for updates at startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="558"/>
+        <source>Connect to git.hush.is on startup to check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Cek pembaruan git di memulai</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1906,11 +2057,6 @@ Would you like to visit the releases page?</source>
         <location filename="../src/settings.ui" line="548"/>
         <source>Connect to the Tor network via SOCKS proxy running on 127.0.0.1:9050. Please note that you&apos;ll have to install and run the Tor service externally.</source>
         <translation>Sambungkan ke jaringan Tor melalui proxy SOCKS yang berjalan pada 127.0.0.1:9050. Harap perhatikan bahwa Anda harus menginstal dan menjalankan layanan Tor secara eksternal.</translation>
-    </message>
-    <message>
-        <location filename="../src/settings.ui" line="558"/>
-        <source>Connect to github on startup to check for updates</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>
@@ -2039,12 +2185,12 @@ Would you like to visit the releases page?</source>
 <context>
     <name>ValidateAddressesModel</name>
     <message>
-        <location filename="../src/validateaddress.cpp" line="6"/>
+        <location filename="../src/validateaddress.cpp" line="8"/>
         <source>Property</source>
         <translation>Properti</translation>
     </message>
     <message>
-        <location filename="../src/validateaddress.cpp" line="6"/>
+        <location filename="../src/validateaddress.cpp" line="8"/>
         <source>Value</source>
         <translation>Nilai</translation>
     </message>
@@ -2065,12 +2211,12 @@ Would you like to visit the releases page?</source>
 <context>
     <name>ViewAllAddressesModel</name>
     <message>
-        <location filename="../src/viewalladdresses.cpp" line="6"/>
+        <location filename="../src/viewalladdresses.cpp" line="8"/>
         <source>Address</source>
         <translation>Alamat</translation>
     </message>
     <message>
-        <location filename="../src/viewalladdresses.cpp" line="6"/>
+        <location filename="../src/viewalladdresses.cpp" line="8"/>
         <source>Balance (%1)</source>
         <translation>Jumlah (%1)</translation>
     </message>
@@ -2158,7 +2304,7 @@ Would you like to visit the releases page?</source>
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>

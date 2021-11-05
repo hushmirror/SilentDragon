@@ -1,4 +1,5 @@
-// Copyright 2019 The Hush developers
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
@@ -53,8 +54,8 @@ public:
     bool    isSyncing();
     void    setSyncing(bool syncing);
 
-    int     getZcashdVersion();
-    void    setZcashdVersion(int version);
+    int     getHushdVersion();
+    void    setHushdVersion(int version);
 
     void    setUseEmbedded(bool r) { _useEmbedded = r; }
     bool    useEmbedded() { return _useEmbedded; }
@@ -88,8 +89,8 @@ public:
     QString get_currency_name();
     void set_currency_name(QString currency_name);
 
-    void    setUsingZcashConf(QString confLocation);
-    const   QString& getZcashdConfLocation() { return _confLocation; }
+    void    setUsingHushConf(QString confLocation);
+    const   QString& getHushdConfLocation() { return _confLocation; }
 
     void    setHUSHPrice(double p)       { hushPrice = p;   }
     void    set_fiat_price(double p)    { fiat_price = p; }
@@ -135,8 +136,8 @@ public:
 
     static bool    isValidAddress(QString addr);
 
-    static bool    addToZcashConf(QString confLocation, QString line);
-    static bool    removeFromZcashConf(QString confLocation, QString option);
+    static bool    addToHushConf(QString confLocation, QString line);
+    static bool    removeFromHushConf(QString confLocation, QString option);
 
     static const QString labelRegExp;
 
@@ -157,7 +158,7 @@ private:
     bool    _isTestnet        = false;
     bool    _isSyncing        = false;
     int     _blockNumber      = 0;
-    int     _zcashdVersion    = 0;
+    int     _hushdVersion    = 0;
     bool    _useEmbedded      = false;
     bool    _headless         = false;
     int     _peerConnections  = 0;

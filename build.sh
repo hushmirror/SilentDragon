@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright 2019-2020 The Hush Developers
+# Copyright 2018-2021 The Hush Developers
 # Released under the GPLv3
 
 set -e
@@ -13,6 +13,12 @@ elif [ "$UNAME" == "Darwin" ] ; then
     JOBS=$(sysctl -n hw.ncpu)
 else
     JOBS=1
+fi
+
+# Check if qmake is installed on system and exits if it is not
+if ! [ -x "$(command -v qmake)" ]; then
+  echo 'Error: qmake is not installed. Install qmake and try again.' >&2
+  exit 1
 fi
 
 VERSION=$(cat src/version.h |cut -d\" -f2)

@@ -1,14 +1,12 @@
-// Copyright 2019-2020 The Hush developers
-// GPLv3
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #include "connection.h"
 #include "mainwindow.h"
 #include "settings.h"
 #include "ui_connection.h"
 #include "ui_createzcashconfdialog.h"
 #include "rpc.h"
-
 #include "precompiled.h"
-
 
 ConnectionLoader::ConnectionLoader(MainWindow* main, RPC* rpc) {
     this->main = main;
@@ -52,28 +50,28 @@ void ConnectionLoader::loadConnection() {
 void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
     // Priority 1: Ensure all params are present.
     if (!verifyParams()) {
-        downloadParams([=]() { this->doAutoConnect(); });
+        qDebug() << "Cannot find sapling params!";
         return;
     }
 
     // Priority 2: Try to connect to detect HUSH3.conf and connect to it.
-    auto config = autoDetectZcashConf();
+    auto config = autoDetectHushConf();
     main->logger->write(QObject::tr("Attempting autoconnect"));
 
     if (config.get() != nullptr) {
         auto connection = makeConnection(config);
 
-        refreshZcashdState(connection, [=] () {
-            // Refused connection. So try and start embedded zcashd
+        refreshHushdState(connection, [=] () {
+            // Refused connection. So try and start embedded hushd
             if (Settings::getInstance()->useEmbedded()) {
                 if (tryEzcashdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
-                    if (this->startEmbeddedZcashd()) {
+                    if (this->startEmbeddedHushd()) {
                         // Embedded hushd started up. Wait a second and then refresh the connection
                         main->logger->write("Embedded hushd started up, trying autoconnect in 1 sec");
                         QTimer::singleShot(1000, [=]() { doAutoConnect(); } );
                     } else {
-                        if (config->zcashDaemon) {
+                        if (config->hushDaemon) {
                             // hushd is configured to run as a daemon, so we must wait for a few seconds
                             // to let it start up. 
                             main->logger->write("hushd is daemon=1. Waiting for it to start up");
@@ -84,14 +82,14 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                             // We're going to attempt to connect to the one in the background one last time
                             // and see if that works, else throw an error
                             main->logger->write("Unknown problem while trying to start hushd!");
-                            QTimer::singleShot(2000, [=]() { doAutoConnect(/* don't attempt to start ezcashd */ false); });
+                            QTimer::singleShot(2000, [=]() { doAutoConnect(/* don't attempt to start ehushd */ false); });
                         }
                     }
                 } else {
-                    // We tried to start ezcashd previously, and it didn't work. So, show the error. 
+                    // We tried to start ehushd previously, and it didn't work. So, show the error. 
                     main->logger->write("Couldn't start embedded hushd for unknown reason");
                     QString explanation;
-                    if (config->zcashDaemon) {
+                    if (config->hushDaemon) {
                         explanation = QString() % QObject::tr("You have hushd set to start as a daemon, which can cause problems "
                             "with SilentDragon\n\n."
                             "Please remove the following line from your HUSH3.conf and restart SilentDragon\n"
@@ -100,7 +98,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
                         explanation = QString() % QObject::tr("Couldn't start the embedded hushd.\n\n" 
                             "Please try restarting.\n\nIf you previously started hushd with custom arguments, you might need to  reset HUSH3.conf.\n\n" 
                             "If all else fails, please run hushd manually.") %  
-                            (ezcashd ? QObject::tr("The process returned") + ":\n\n" % ezcashd->errorString() : QString(""));
+                            (ehushd ? QObject::tr("The process returned") + ":\n\n" % ehushd->errorString() : QString(""));
                     }
                     
                     this->showError(explanation);
@@ -116,7 +114,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
     } else {
         if (Settings::getInstance()->useEmbedded()) {
             // HUSH3.conf was not found, so create one
-            createZcashConf();
+            createHushConf();
         } else {
             // Fall back to manual connect
             doManualConnect();
@@ -144,17 +142,17 @@ QString randomPassword() {
 /**
  * This will create a new HUSH3.conf and download params if they cannot be found
  */ 
-void ConnectionLoader::createZcashConf() {
-    main->logger->write("createZcashConf");
+void ConnectionLoader::createHushConf() {
+    main->logger->write(__func__);
 
-    auto confLocation = zcashConfWritableLocation();
+    auto confLocation = hushConfWritableLocation();
     QFileInfo fi(confLocation);
 
     QDialog d(main);
-    Ui_createZcashConf ui;
+    Ui_createHushConf ui;
     ui.setupUi(&d);
 
-    QPixmap logo(":/img/res/zcashdlogo.gif");
+    QPixmap logo(":/img/res/tropical-hush-square.png");
     ui.lblTopIcon->setBasePixmap(logo.scaled(512,512, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui.btnPickDir->setEnabled(false);
 
@@ -202,7 +200,7 @@ void ConnectionLoader::createZcashConf() {
 
     QTextStream out(&file);
 
-    out << "# Autogenerated by Hush SilentDragon https://myhush.org\n";
+    out << "# Autogenerated by Hush SilentDragon https://hush.is\n";
     out << "server=1\n";
     out << "rpcuser=hush\n";
     out << "rpcpassword=" % randomPassword() << "\n";
@@ -217,6 +215,10 @@ void ConnectionLoader::createZcashConf() {
     // Consolidation is now defaulted to ON for new wallets
     out << "consolidation=1\n";
 
+    // This is default behavior for hushd 3.6.1 and newer,
+    // this helps if older hushd's are being used
+    out << "tls=only\n";
+
     if (!datadir.isEmpty()) {
         out << "datadir=" % datadir % "\n";
     }
@@ -230,19 +232,6 @@ void ConnectionLoader::createZcashConf() {
     this->doAutoConnect();
 }
 
-
-void ConnectionLoader::downloadParams(std::function<void(void)> cb) {
-    main->logger->write("Adding params to download queue");
-    // Add all the files to the download queue
-    downloadQueue = new QQueue<QUrl>();
-    client = new QNetworkAccessManager(main);
-
-    //Currently we fallback to this in rare edgecases, it's not normally executed
-    downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-output.params"));
-    downloadQueue->enqueue(QUrl("https://z.cash/downloads/sapling-spend.params"));
-
-    doNextDownload(cb);
-}
 
 void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
     auto fnSaveFileName = [&] (QUrl url) {
@@ -334,7 +323,7 @@ void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
     });    
 }
 
-bool ConnectionLoader::startEmbeddedZcashd() {
+bool ConnectionLoader::startEmbeddedHushd() {
     if (!Settings::getInstance()->useEmbedded()) 
         return false;
     
@@ -343,8 +332,8 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     // Static because it needs to survive even after this method returns.
     static QString processStdErrOutput;
 
-    if (ezcashd != nullptr) {
-        if (ezcashd->state() == QProcess::NotRunning) {
+    if (ehushd != nullptr) {
+        if (ehushd->state() == QProcess::NotRunning) {
             if (!processStdErrOutput.isEmpty()) {
                 QMessageBox::critical(main, QObject::tr("hushd error"), "hushd said: " + processStdErrOutput, 
                                       QMessageBox::Ok);
@@ -358,9 +347,9 @@ bool ConnectionLoader::startEmbeddedZcashd() {
     QDir appPath(QCoreApplication::applicationDirPath());
 
 #ifdef Q_OS_WIN64
-    auto hushdProgram = appPath.absoluteFilePath("komodod.exe");
+    auto hushdProgram = appPath.absoluteFilePath("hushd.exe");
 #else
-    auto hushdProgram = appPath.absoluteFilePath("komodod");
+    auto hushdProgram = appPath.absoluteFilePath("hushd");
 #endif
     
     //if (!QFile(hushdProgram).exists()) {
@@ -372,48 +361,59 @@ bool ConnectionLoader::startEmbeddedZcashd() {
         main->logger->write("Found hushd at " + hushdProgram);
     }
 
-    ezcashd = std::shared_ptr<QProcess>(new QProcess(main));
-    QObject::connect(ezcashd.get(), &QProcess::started, [=] () {
+    ehushd = std::shared_ptr<QProcess>(new QProcess(main));
+    QObject::connect(ehushd.get(), &QProcess::started, [=] () {
         qDebug() << "Embedded hushd started via " << hushdProgram;
     });
 
-    QObject::connect(ezcashd.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+    QObject::connect(ehushd.get(), QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                         [=](int exitCode, QProcess::ExitStatus exitStatus) {
         qDebug() << "hushd finished with code " << exitCode << "," << exitStatus;
     });
 
-    QObject::connect(ezcashd.get(), &QProcess::errorOccurred, [&] (QProcess::ProcessError error) {
+    QObject::connect(ehushd.get(), &QProcess::errorOccurred, [&] (QProcess::ProcessError error) {
         qDebug() << "Couldn't start hushd at " << hushdProgram << ":" << error;
     });
 
-    std::weak_ptr<QProcess> weak_obj(ezcashd);
+    std::weak_ptr<QProcess> weak_obj(ehushd);
     auto ptr_main(main);
-    QObject::connect(ezcashd.get(), &QProcess::readyReadStandardError, [weak_obj, ptr_main]() {
+    QObject::connect(ehushd.get(), &QProcess::readyReadStandardError, [weak_obj, ptr_main]() {
         auto output = weak_obj.lock()->readAllStandardError();
         ptr_main->logger->write("hushd stderr:" + output);
         processStdErrOutput.append(output);
     });
 
-
     // This string should be the exact arg list seperated by single spaces
-    QString params = "-ac_name=HUSH3 -ac_sapling=1 -ac_reward=0,1125000000,562500000 -ac_halving=129,340000,840000 -ac_end=128,340000,5422111 -ac_eras=3 -ac_blocktime=150 -ac_cc=2 -ac_ccenable=228,234,235,236,241 -ac_founders=1 -ac_supply=6178674 -ac_perc=11111111 -clientname=GoldenSandtrout -addnode=188.165.212.101 -addnode=64.120.113.130 -addnode=209.58.144.205 -addnode=94.130.35.94 -ac_cclib=hush3 -ac_script=76a9145eb10cf64f2bab1b457f1f25e658526155928fac88ac";
-    QStringList arguments = params.split(" ");
-    // Finally, actually start the full node
+    // Could be modified to start different Hush Smart Chains
+    QString params = ""; // "-ac_name=TUSH";
 
+    /* This is now enabled by default in hushd
+    // Binaries come with this file
+    if(QFile( QDir(".").filePath("asmap.dat") ).exists()) {
+        auto asmap = appPath.absoluteFilePath("asmap.dat");
+        params += " -asmap=" + asmap;
+    } else {
+        qDebug() << "No ASN map file found";
+    }
+    */
+
+    QStringList arguments = params.split(" ");
+
+    // Finally, actually start the full node
 #ifdef Q_OS_LINUX
     qDebug() << "Starting on Linux: " + hushdProgram + " " + params;
-    ezcashd->start(hushdProgram, arguments);
+    ehushd->start(hushdProgram, arguments);
 #elif defined(Q_OS_DARWIN)
     qDebug() << "Starting on Darwin: " + hushdProgram + " " + params;
-    ezcashd->start(hushdProgram, arguments);
+    ehushd->start(hushdProgram, arguments);
 #elif defined(Q_OS_WIN64)
     qDebug() << "Starting on Win64: " + hushdProgram + " " + params;
-    ezcashd->setWorkingDirectory(appPath.absolutePath());
-    ezcashd->start(hushdProgram, arguments);
+    ehushd->setWorkingDirectory(appPath.absolutePath());
+    ehushd->start(hushdProgram, arguments);
 #else
     qDebug() << "Starting on Unknown OS(!): " + hushdProgram + " " + params;
-    ezcashd->setWorkingDirectory(appPath.absolutePath());
-    ezcashd->start(hushdProgram, arguments);
+    ehushd->setWorkingDirectory(appPath.absolutePath());
+    ehushd->start(hushdProgram, arguments);
 #endif // Q_OS_LINUX
 
     main->logger->write("Started via " + hushdProgram + " " + params);
@@ -436,7 +436,7 @@ void ConnectionLoader::doManualConnect() {
     }
 
     auto connection = makeConnection(config);
-    refreshZcashdState(connection, [=] () {
+    refreshHushdState(connection, [=] () {
         QString explanation = QString()
                 % QObject::tr("Could not connect to hushd configured in settings.\n\n" 
                 "Please set the host/port and user/password in the Edit->Settings menu.");
@@ -449,7 +449,7 @@ void ConnectionLoader::doManualConnect() {
 }
 
 void ConnectionLoader::doRPCSetConnection(Connection* conn) {
-    rpc->setEZcashd(ezcashd);
+    rpc->setEHushd(ehushd);
     rpc->setConnection(conn);
     
     d->accept();
@@ -476,7 +476,7 @@ Connection* ConnectionLoader::makeConnection(std::shared_ptr<ConnectionConfig> c
     return new Connection(main, client, request, config);
 }
 
-void ConnectionLoader::refreshZcashdState(Connection* connection, std::function<void(void)> refused) {
+void ConnectionLoader::refreshHushdState(Connection* connection, std::function<void(void)> refused) {
     main->logger->write("refreshing state");
 
     QJsonObject payload = {
@@ -519,7 +519,7 @@ void ConnectionLoader::refreshZcashdState(Connection* connection, std::function<
                 this->showInformation(QObject::tr("Your hushd is starting up. Please wait."), status);
                 main->logger->write("Waiting for hushd to come online.");
                 // Refresh after one second
-                QTimer::singleShot(1000, [=]() { this->refreshZcashdState(connection, refused); });
+                QTimer::singleShot(1000, [=]() { this->refreshHushdState(connection, refused); });
             }
         }
     );
@@ -547,36 +547,49 @@ void ConnectionLoader::showInformation(QString info, QString detail) {
  * Show error will close the loading dialog and show an error. 
 */
 void ConnectionLoader::showError(QString explanation) {    
-    rpc->setEZcashd(nullptr);
+    rpc->setEHushd(nullptr);
     rpc->noConnection();
 
     QMessageBox::critical(main, QObject::tr("Connection Error"), explanation, QMessageBox::Ok);
     d->close();
 }
 
-QString ConnectionLoader::locateZcashConfFile() {
+QString ConnectionLoader::locateHushConfFile() {
 #ifdef Q_OS_LINUX
-    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".hush/HUSH3/HUSH3.conf");
+    if(!QFile(confLocation).exists()) {
+        // legacy location
+        confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, ".komodo/HUSH3/HUSH3.conf");
+    }
 #elif defined(Q_OS_DARWIN)
-    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, "Library/Application Support/Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, "Library/Application Support/Hush/HUSH3/HUSH3.conf");
+    if(!QFile(confLocation).exists()) {
+        // legacy location
+        confLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, "Library/Application Support/Komodo/HUSH3/HUSH3.conf");
+    }
 #else
-    auto confLocation = QStandardPaths::locate(QStandardPaths::AppDataLocation, "../../Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QStandardPaths::locate(QStandardPaths::AppDataLocation, "../../Hush/HUSH3/HUSH3.conf");
+    if(!QFile(confLocation).exists()) {
+        // legacy location
+        confLocation = QStandardPaths::locate(QStandardPaths::AppDataLocation, "../../Komodo/HUSH3/HUSH3.conf");
+    }
 #endif
 
     main->logger->write("Found HUSH3.conf at " + QDir::cleanPath(confLocation));
     return QDir::cleanPath(confLocation);
 }
 
-QString ConnectionLoader::zcashConfWritableLocation() {
+//  this function is only used for new config files and does not need to know about legacy locations
+QString ConnectionLoader::hushConfWritableLocation() {
 #ifdef Q_OS_LINUX
-    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".hush/HUSH3/HUSH3.conf");
 #elif defined(Q_OS_DARWIN)
-    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath("Library/Application Support/Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath("Library/Application Support/Hush/HUSH3/HUSH3.conf");
 #else
-    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("../../Komodo/HUSH3/HUSH3.conf");
+    auto confLocation = QDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)).filePath("../../Hush/HUSH3/HUSH3.conf");
 #endif
 
-    main->logger->write("Found HUSH3.conf at " + QDir::cleanPath(confLocation));
+    main->logger->write("HUSH3.conf writeable location at " + QDir::cleanPath(confLocation));
     return QDir::cleanPath(confLocation);
 }
 
@@ -650,11 +663,11 @@ bool ConnectionLoader::verifyParams() {
 /**
  * Try to automatically detect a HUSH3/HUSH3.conf file in the correct location and load parameters
  */ 
-std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {    
-    auto confLocation = locateZcashConfFile();
+std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectHushConf() {    
+    auto confLocation = locateHushConfFile();
 
     if (confLocation.isNull()) {
-        // No Zcash file, just return with nothing
+        // No file, just return with nothing
         return nullptr;
     }
 
@@ -666,14 +679,14 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
 
     QTextStream in(&file);
 
-    auto zcashconf = new ConnectionConfig();
-    zcashconf->host     = "127.0.0.1";
-    zcashconf->connType = ConnectionType::DetectedConfExternalZcashD;
-    zcashconf->usingZcashConf = true;
-    zcashconf->zcashDir = QFileInfo(confLocation).absoluteDir().absolutePath();
-    zcashconf->zcashDaemon = false;
+    auto hushconf = new ConnectionConfig();
+    hushconf->host     = "127.0.0.1";
+    hushconf->connType = ConnectionType::DetectedConfExternalHushD;
+    hushconf->usingHushConf = true;
+    hushconf->hushDir = QFileInfo(confLocation).absoluteDir().absolutePath();
+    hushconf->hushDaemon = false;
    
-    Settings::getInstance()->setUsingZcashConf(confLocation);
+    Settings::getInstance()->setUsingHushConf(confLocation);
 
     while (!in.atEnd()) {
         QString line = in.readLine();
@@ -682,43 +695,43 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectZcashConf() {
         QString value = line.right(line.length() - s - 1).trimmed();
 
         if (name == "rpcuser") {
-            zcashconf->rpcuser = value;
+            hushconf->rpcuser = value;
         }
         if (name == "rpcpassword") {
-            zcashconf->rpcpassword = value;
+            hushconf->rpcpassword = value;
         }
         if (name == "rpcport") {
-            zcashconf->port = value;
+            hushconf->port = value;
         }
         if (name == "daemon" && value == "1") {
-            zcashconf->zcashDaemon = true;
+            hushconf->hushDaemon = true;
         }
         if (name == "proxy") {
-            zcashconf->proxy = value;
+            hushconf->proxy = value;
         }
          if (name == "consolidation") {
-            zcashconf->consolidation = value;
+            hushconf->consolidation = value;
         }
           if (name == "deletetx") {
-            zcashconf->deletetx = value;
+            hushconf->deletetx = value;
         }
           if (name == "zindex") {
-            zcashconf->zindex = value;
+            hushconf->zindex = value;
         }
         if (name == "testnet" &&
             value == "1"  &&
-            zcashconf->port.isEmpty()) {
-                zcashconf->port = "18232";
+            hushconf->port.isEmpty()) {
+                hushconf->port = "18232";
         }
     }
 
     // If rpcport is not in the file, and it was not set by the testnet=1 flag, then go to default
-    if (zcashconf->port.isEmpty()) zcashconf->port = "18031";
+    if (hushconf->port.isEmpty()) hushconf->port = "18031";
     file.close();
 
     // In addition to the HUSH3/HUSH3.conf file, also double check the params. 
 
-    return std::shared_ptr<ConnectionConfig>(zcashconf);
+    return std::shared_ptr<ConnectionConfig>(hushconf);
 }
 
 /**

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright 2019-2020 The Hush Developers
+# Copyright 2019-2021 The Hush Developers
 # Released under the GPLv3
 # This script will cross-compile windoze binaries, hopefully!
 

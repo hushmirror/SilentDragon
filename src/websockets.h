@@ -1,11 +1,11 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef WEBSOCKETS_H
 #define WEBSOCKETS_H
 
 #include "precompiled.h"
-
 #include "mainwindow.h"
 #include "ui_mobileappconnector.h"
-
 
 QT_FORWARD_DECLARE_CLASS(QWebSocketServer)
 QT_FORWARD_DECLARE_CLASS(QWebSocket)
@@ -171,7 +171,5 @@ private:
 
     static AppDataModel* instance;
 };
-
-
 
 #endif // WEBSOCKETS_H

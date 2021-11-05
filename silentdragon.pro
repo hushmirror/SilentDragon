@@ -1,8 +1,6 @@
-#-------------------------------------------------
-#
+# Copyright 2018-2021 The Hush Developers
+# Released under the GPLv3
 # Project created by QtCreator 2018-10-05T09:54:45
-#
-#-------------------------------------------------
 
 QT       += core gui network
 
@@ -51,6 +49,8 @@ SOURCES += \
     src/sendtab.cpp \
     src/senttxstore.cpp \
     src/txtablemodel.cpp \
+    src/peerstablemodel.cpp \
+    src/bannedpeerstablemodel.cpp \
     src/qrcodelabel.cpp \
     src/connection.cpp \
     src/fillediconlabel.cpp \
@@ -75,6 +75,8 @@ HEADERS += \
     src/3rdparty/qrcode/QrSegment.hpp \
     src/settings.h \
     src/txtablemodel.h \
+    src/peerstablemodel.h \
+    src/bannedpeerstablemodel.h \
     src/senttxstore.h \
     src/qrcodelabel.h \
     src/connection.h \
@@ -111,7 +113,8 @@ FORMS += \
     src/requestdialog.ui
 
 
-TRANSLATIONS = res/silentdragon_bg.ts \
+TRANSLATIONS = res/silentdragon_be.ts \
+               res/silentdragon_bg.ts \
                res/silentdragon_de.ts \
                res/silentdragon_es.ts \
                res/silentdragon_fi.ts \
@@ -121,6 +124,7 @@ TRANSLATIONS = res/silentdragon_bg.ts \
                res/silentdragon_id.ts \
                res/silentdragon_it.ts \
                res/silentdragon_nl.ts \
+               res/silentdragon_pl.ts \
                res/silentdragon_pt.ts \
                res/silentdragon_ro.ts \
                res/silentdragon_ru.ts \

@@ -4,12 +4,12 @@
 <context>
     <name>AddressBookModel</name>
     <message>
-        <location filename="../src/addressbook.cpp" line="11"/>
+        <location filename="../src/addressbook.cpp" line="13"/>
         <source>Label</source>
         <translation>Eticheta</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="11"/>
+        <location filename="../src/addressbook.cpp" line="13"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
@@ -17,12 +17,12 @@
 <context>
     <name>BalancesTableModel</name>
     <message>
-        <location filename="../src/balancestablemodel.cpp" line="122"/>
+        <location filename="../src/balancestablemodel.cpp" line="124"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../src/balancestablemodel.cpp" line="123"/>
+        <location filename="../src/balancestablemodel.cpp" line="125"/>
         <source>Amount</source>
         <translation>Valoare</translation>
     </message>
@@ -59,6 +59,8 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="62"/>
+        <location filename="../src/mainwindow.cpp" line="1088"/>
+        <location filename="../src/mainwindow.cpp" line="1115"/>
         <source>Shielded</source>
         <translation>Ecranat</translation>
     </message>
@@ -112,22 +114,22 @@
         <location filename="../src/mainwindow.ui" line="404"/>
         <location filename="../src/mainwindow.ui" line="411"/>
         <location filename="../src/mainwindow.ui" line="872"/>
-        <location filename="../src/sendtab.cpp" line="218"/>
-        <location filename="../src/sendtab.cpp" line="223"/>
+        <location filename="../src/sendtab.cpp" line="219"/>
+        <location filename="../src/sendtab.cpp" line="224"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="418"/>
-        <location filename="../src/sendtab.cpp" line="233"/>
+        <location filename="../src/sendtab.cpp" line="234"/>
         <source>Address Book</source>
         <translation>Carte de Adrese</translation>
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="429"/>
         <location filename="../src/mainwindow.ui" line="445"/>
-        <location filename="../src/sendtab.cpp" line="246"/>
-        <location filename="../src/sendtab.cpp" line="250"/>
+        <location filename="../src/sendtab.cpp" line="247"/>
+        <location filename="../src/sendtab.cpp" line="251"/>
         <source>Amount</source>
         <translation>Valoare</translation>
     </message>
@@ -143,9 +145,9 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="498"/>
-        <location filename="../src/mainwindow.cpp" line="1189"/>
-        <location filename="../src/mainwindow.cpp" line="1256"/>
-        <location filename="../src/sendtab.cpp" line="272"/>
+        <location filename="../src/mainwindow.cpp" line="1386"/>
+        <location filename="../src/mainwindow.cpp" line="1453"/>
+        <location filename="../src/sendtab.cpp" line="273"/>
         <source>Memo</source>
         <translation>Mesaj</translation>
     </message>
@@ -171,7 +173,7 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="634"/>
-        <location filename="../src/sendtab.cpp" line="639"/>
+        <location filename="../src/sendtab.cpp" line="630"/>
         <source>Miner Fee</source>
         <translation>Taxa Minerului</translation>
     </message>
@@ -199,6 +201,35 @@
         <location filename="../src/mainwindow.ui" line="735"/>
         <source>Shielded Address (Private, Anonymous)</source>
         <translation>Adresa Ecranata (Privata, Anonima)</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="940"/>
+        <source>Peers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="948"/>
+        <source>
+            Current Peers
+            </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="969"/>
+        <source>
+            Banned Peers
+            </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1652"/>
+        <source>&amp;Report a bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1680"/>
+        <source>Check git.hush.is for &amp;updates</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Transparent Address (Publica, Scurgeri de Metadate)</source>
@@ -236,50 +267,51 @@
     </message>
     <message>
         <location filename="../src/mainwindow.ui" line="850"/>
-        <location filename="../src/mainwindow.cpp" line="1393"/>
+        <location filename="../src/mainwindow.cpp" line="1590"/>
         <source>Export Private Key</source>
         <translation>Exporta Cheia Privata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="920"/>
+        <location filename="../src/mainwindow.ui" line="921"/>
         <source>Transactions</source>
         <translation>Tranzactii</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1055"/>
+        <location filename="../src/mainwindow.ui" line="1123"/>
         <source>hushd</source>
         <translation>hushd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1085"/>
+        <location filename="../src/mainwindow.ui" line="1153"/>
         <source>You are currently not mining</source>
         <translation>La moment nu faci mining</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="969"/>
-        <location filename="../src/mainwindow.ui" line="983"/>
-        <location filename="../src/mainwindow.ui" line="997"/>
-        <location filename="../src/mainwindow.ui" line="1004"/>
-        <location filename="../src/mainwindow.ui" line="1011"/>
-        <location filename="../src/mainwindow.ui" line="1105"/>
-        <location filename="../src/mainwindow.ui" line="1126"/>
-        <location filename="../src/mainwindow.ui" line="1147"/>
-        <location filename="../src/mainwindow.ui" line="1168"/>
-        <location filename="../src/mainwindow.ui" line="1189"/>
-        <location filename="../src/mainwindow.ui" line="1210"/>
-        <location filename="../src/mainwindow.ui" line="1231"/>
-        <location filename="../src/mainwindow.ui" line="1252"/>
-        <location filename="../src/mainwindow.ui" line="1273"/>
-        <location filename="../src/mainwindow.ui" line="1294"/>
-        <location filename="../src/mainwindow.ui" line="1315"/>
-        <location filename="../src/mainwindow.ui" line="1336"/>
-        <location filename="../src/mainwindow.ui" line="1357"/>
-        <location filename="../src/mainwindow.ui" line="1378"/>
-        <location filename="../src/mainwindow.ui" line="1399"/>
-        <location filename="../src/mainwindow.ui" line="1413"/>
-        <location filename="../src/mainwindow.ui" line="1434"/>
-        <location filename="../src/mainwindow.cpp" line="888"/>
-        <location filename="../src/mainwindow.cpp" line="952"/>
+        <location filename="../src/mainwindow.ui" line="1037"/>
+        <location filename="../src/mainwindow.ui" line="1051"/>
+        <location filename="../src/mainwindow.ui" line="1065"/>
+        <location filename="../src/mainwindow.ui" line="1072"/>
+        <location filename="../src/mainwindow.ui" line="1079"/>
+        <location filename="../src/mainwindow.ui" line="1173"/>
+        <location filename="../src/mainwindow.ui" line="1194"/>
+        <location filename="../src/mainwindow.ui" line="1215"/>
+        <location filename="../src/mainwindow.ui" line="1236"/>
+        <location filename="../src/mainwindow.ui" line="1259"/>
+        <location filename="../src/mainwindow.ui" line="1280"/>
+        <location filename="../src/mainwindow.ui" line="1301"/>
+        <location filename="../src/mainwindow.ui" line="1322"/>
+        <location filename="../src/mainwindow.ui" line="1343"/>
+        <location filename="../src/mainwindow.ui" line="1364"/>
+        <location filename="../src/mainwindow.ui" line="1385"/>
+        <location filename="../src/mainwindow.ui" line="1406"/>
+        <location filename="../src/mainwindow.ui" line="1427"/>
+        <location filename="../src/mainwindow.ui" line="1448"/>
+        <location filename="../src/mainwindow.ui" line="1470"/>
+        <location filename="../src/mainwindow.ui" line="1492"/>
+        <location filename="../src/mainwindow.ui" line="1507"/>
+        <location filename="../src/mainwindow.ui" line="1528"/>
+        <location filename="../src/mainwindow.cpp" line="881"/>
+        <location filename="../src/mainwindow.cpp" line="945"/>
         <source>Loading...</source>
         <translation>Se Incarca...</translation>
     </message>
@@ -289,269 +321,266 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="937"/>
+        <location filename="../src/mainwindow.ui" line="1005"/>
         <source>Market</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="948"/>
+        <location filename="../src/mainwindow.ui" line="1016"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Hush Market Information&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="962"/>
+        <location filename="../src/mainwindow.ui" line="1030"/>
         <source>Market Cap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="990"/>
+        <location filename="../src/mainwindow.ui" line="1058"/>
         <source>24H Volume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1112"/>
+        <location filename="../src/mainwindow.ui" line="1180"/>
         <source>Block height</source>
         <translation>Inaltimea Blocului</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1119"/>
+        <location filename="../src/mainwindow.ui" line="1187"/>
         <source>Notarized Hash</source>
         <translation>Hash Notarizat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1133"/>
-        <location filename="../src/mainwindow.ui" line="1154"/>
-        <location filename="../src/mainwindow.ui" line="1175"/>
-        <location filename="../src/mainwindow.ui" line="1196"/>
-        <location filename="../src/mainwindow.ui" line="1217"/>
-        <location filename="../src/mainwindow.ui" line="1238"/>
-        <location filename="../src/mainwindow.ui" line="1259"/>
-        <location filename="../src/mainwindow.ui" line="1280"/>
-        <location filename="../src/mainwindow.ui" line="1301"/>
-        <location filename="../src/mainwindow.ui" line="1322"/>
-        <location filename="../src/mainwindow.ui" line="1343"/>
-        <location filename="../src/mainwindow.ui" line="1364"/>
-        <location filename="../src/mainwindow.ui" line="1385"/>
-        <location filename="../src/mainwindow.ui" line="1406"/>
-        <location filename="../src/mainwindow.ui" line="1461"/>
-        <location filename="../src/mainwindow.ui" line="1468"/>
-        <location filename="../src/mainwindow.ui" line="1475"/>
+        <location filename="../src/mainwindow.ui" line="1201"/>
+        <location filename="../src/mainwindow.ui" line="1222"/>
+        <location filename="../src/mainwindow.ui" line="1243"/>
+        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1392"/>
+        <location filename="../src/mainwindow.ui" line="1413"/>
+        <location filename="../src/mainwindow.ui" line="1434"/>
+        <location filename="../src/mainwindow.ui" line="1455"/>
+        <location filename="../src/mainwindow.ui" line="1477"/>
+        <location filename="../src/mainwindow.ui" line="1499"/>
+        <location filename="../src/mainwindow.ui" line="1555"/>
+        <location filename="../src/mainwindow.ui" line="1562"/>
+        <location filename="../src/mainwindow.ui" line="1569"/>
         <source>|</source>
         <translation>|</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1140"/>
+        <location filename="../src/mainwindow.ui" line="1208"/>
         <source>Notarized txid</source>
         <translation> Tranzactia Notarizata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1161"/>
+        <location filename="../src/mainwindow.ui" line="1229"/>
         <source>Notarized Lag</source>
         <translation>Intirziere Notarizata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1182"/>
         <source>KMD Version</source>
-        <translation>Versiunea KMD</translation>
+        <translation type="vanished">Versiunea KMD</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1203"/>
+        <location filename="../src/mainwindow.ui" line="1273"/>
         <source>Protocol Version</source>
         <translation>Versiunea de Protocol</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1224"/>
+        <location filename="../src/mainwindow.ui" line="1294"/>
         <source>Version</source>
         <translation>Versiune</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1245"/>
+        <location filename="../src/mainwindow.ui" line="1315"/>
         <source>P2P Port</source>
         <translation>Port P2P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1266"/>
+        <location filename="../src/mainwindow.ui" line="1336"/>
         <source>RPC Port</source>
         <translation>Port RPC</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1287"/>
+        <location filename="../src/mainwindow.ui" line="1357"/>
         <source>Client Name</source>
         <translation>Numele Clientului</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1308"/>
+        <location filename="../src/mainwindow.ui" line="1378"/>
         <source>Next Halving</source>
         <translation>Halving Urmator</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1329"/>
+        <location filename="../src/mainwindow.ui" line="1399"/>
         <source>Local Services</source>
         <translation>Servicii Locale</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1350"/>
+        <location filename="../src/mainwindow.ui" line="1420"/>
         <source>Longest Chain</source>
         <translation>Cel Mai Lung Lant</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1371"/>
+        <location filename="../src/mainwindow.ui" line="1441"/>
         <source>Wallet Transactions</source>
         <translation>Tranzactia Portofelului</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1392"/>
+        <location filename="../src/mainwindow.ui" line="1463"/>
         <source>Chain Transactions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1420"/>
+        <location filename="../src/mainwindow.ui" line="1485"/>
+        <source>TLS Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.ui" line="1514"/>
         <source>Network solution rate</source>
         <translation>Rata solutiei retelei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1427"/>
+        <location filename="../src/mainwindow.ui" line="1521"/>
         <source>Connections</source>
         <translation>Conexiuni</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1501"/>
+        <location filename="../src/mainwindow.ui" line="1595"/>
         <source>&amp;File</source>
         <translation>&amp;Fisier</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1516"/>
+        <location filename="../src/mainwindow.ui" line="1610"/>
         <source>&amp;Help</source>
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1527"/>
+        <location filename="../src/mainwindow.ui" line="1621"/>
         <source>&amp;Apps</source>
         <translation>&amp;Aplicatii</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1535"/>
+        <location filename="../src/mainwindow.ui" line="1629"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editati</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1548"/>
+        <location filename="../src/mainwindow.ui" line="1642"/>
         <source>E&amp;xit</source>
         <translation>I&amp;esire</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1553"/>
+        <location filename="../src/mainwindow.ui" line="1647"/>
         <source>&amp;About</source>
         <translation>&amp;Despre</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1558"/>
-        <source>&amp;Report a bug on Github</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/mainwindow.ui" line="1563"/>
+        <location filename="../src/mainwindow.ui" line="1657"/>
         <source>&amp;Settings</source>
         <translation>&amp;Setari</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1566"/>
+        <location filename="../src/mainwindow.ui" line="1660"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1571"/>
+        <location filename="../src/mainwindow.ui" line="1665"/>
         <source>&amp;Send Duke Feedback</source>
         <translation>Trimite Feedback lui Duke</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1576"/>
-        <source>&amp;Hush Discord</source>
-        <translation>Hush Discord</translation>
+        <location filename="../src/mainwindow.ui" line="1670"/>
+        <source>&amp;Hush Telegram</source>
+        <translation>Hush Telegram</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1581"/>
+        <location filename="../src/mainwindow.ui" line="1675"/>
         <source>&amp;Hush Website</source>
         <translation>Hush Website</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1586"/>
-        <source>Check github.com for &amp;updates</source>
-        <translation>Verifica github.com pentru &amp;actualizari</translation>
+        <source>Check git for &amp;updates</source>
+        <translation type="vanished">Verifica git pentru &amp;actualizari</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1591"/>
         <source>Sapling &amp;turnstile</source>
-        <translation>Sapling &amp;turnstile</translation>
+        <translation type="vanished">Sapling &amp;turnstile</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1594"/>
         <source>Ctrl+A, Ctrl+T</source>
-        <translation>Ctrl+A, Ctrl+T</translation>
+        <translation type="vanished">Ctrl+A, Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1599"/>
+        <location filename="../src/mainwindow.ui" line="1685"/>
         <source>&amp;Import private key</source>
         <translation>&amp;Importa cheia Privata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1604"/>
+        <location filename="../src/mainwindow.ui" line="1690"/>
         <source>&amp;Export all private keys</source>
         <translation>&amp;Exporta toate cheile private</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1609"/>
+        <location filename="../src/mainwindow.ui" line="1695"/>
         <source>&amp;z-board.net</source>
         <translation>&amp;z-board.net</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1612"/>
+        <location filename="../src/mainwindow.ui" line="1698"/>
         <source>Ctrl+A, Ctrl+Z</source>
         <translation>Ctrl+A, Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1617"/>
+        <location filename="../src/mainwindow.ui" line="1703"/>
         <source>Address &amp;book</source>
         <translation>&amp;Carte de Adrese</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1620"/>
+        <location filename="../src/mainwindow.ui" line="1706"/>
         <source>Ctrl+B</source>
         <translation>Ctrl+B</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1625"/>
+        <location filename="../src/mainwindow.ui" line="1711"/>
         <source>&amp;Backup wallet.dat</source>
         <translation>Copia Portofelului</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1630"/>
-        <location filename="../src/mainwindow.cpp" line="828"/>
+        <location filename="../src/mainwindow.ui" line="1716"/>
+        <location filename="../src/mainwindow.cpp" line="821"/>
         <source>Export transactions</source>
         <translation>Exporta tranzactiile</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1635"/>
+        <location filename="../src/mainwindow.ui" line="1721"/>
         <source>Pay HUSH &amp;URI...</source>
         <translation>Plateste HUSH &amp;URI...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1640"/>
+        <location filename="../src/mainwindow.ui" line="1726"/>
         <source>Connect mobile &amp;app</source>
         <translation>Conecteaza aplicatia &amp;mobila</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1643"/>
+        <location filename="../src/mainwindow.ui" line="1729"/>
         <source>Ctrl+M</source>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1648"/>
+        <location filename="../src/mainwindow.ui" line="1734"/>
         <source>Request HUSH...</source>
         <translation>Solicita HUSH...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.ui" line="1653"/>
+        <location filename="../src/mainwindow.ui" line="1739"/>
         <source>Validate Address</source>
         <translation>Valideaza Adresa</translation>
     </message>
@@ -564,37 +593,37 @@
         <translation type="vanished">Va rugam sa reporniti Silent Dragon pentru aplicarea temei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="345"/>
+        <location filename="../src/mainwindow.cpp" line="340"/>
         <source>Tor configuration is available only when running an embedded hushd.</source>
         <translation>Configuratia Tor este valabila doar cind incorporarea hushd este pornita</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="432"/>
+        <location filename="../src/mainwindow.cpp" line="427"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -rescan</source>
         <translation>Voi volositi hushd extern.Va rugam sa reporniti hushd prin -rescanare  </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="435"/>
+        <location filename="../src/mainwindow.cpp" line="430"/>
         <source>You&apos;re using an external hushd. Please restart hushd with -reindex</source>
         <translation>Voi volositi hushd extern.Va rugam sa reporniti hushd prin -reindexare</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="461"/>
+        <location filename="../src/mainwindow.cpp" line="456"/>
         <source>Enable Tor</source>
         <translation>Activati Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="462"/>
+        <location filename="../src/mainwindow.cpp" line="457"/>
         <source>Connection over Tor has been enabled. To use this feature, you need to restart SilentDragon.</source>
         <translation>Conexiunea prin Tor a fost activata.Pentru a utiliza aceasta caracteristica, trebuie sa reporniti SilentDragon  </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="471"/>
+        <location filename="../src/mainwindow.cpp" line="466"/>
         <source>Disable Tor</source>
         <translation>Dezactivati Tor</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="472"/>
+        <location filename="../src/mainwindow.cpp" line="467"/>
         <source>Connection over Tor has been disabled. To fully disconnect from Tor, you need to restart SilentDragon.</source>
         <translation>Conexiunea prin Tor a fost dezactivata.Pentru a utiliza aceasta caracteristica, trebuie sa reporniti SilentDragon</translation>
     </message>
@@ -603,349 +632,414 @@
         <translation type="vanished">Repornirea SilentDragon este obligatorie pentru rescanare/reindexare. Silent Dragon se va inchide acum, pentru repornire si continuare. </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="555"/>
-        <location filename="../src/mainwindow.cpp" line="561"/>
+        <location filename="../src/mainwindow.cpp" line="550"/>
+        <location filename="../src/mainwindow.cpp" line="556"/>
         <source>Restart SilentDragon</source>
         <translation>Reporniti Silent Dragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="559"/>
+        <location filename="../src/mainwindow.cpp" line="554"/>
         <source>SilentDragon needs to reindex for zindex. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="603"/>
+        <location filename="../src/mainwindow.cpp" line="598"/>
         <source>Some feedback about SilentDragon or Hush...</source>
         <translation>Feedback-ul SilentDragon sau Hush...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source>Send Duke some private and shielded feedback about </source>
         <translation>Trimite lui Duke feedback-ul privat si ecranat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="605"/>
+        <location filename="../src/mainwindow.cpp" line="600"/>
         <source> or SilentDragon</source>
         <translation>sau Silent Dragon</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="621"/>
+        <location filename="../src/mainwindow.cpp" line="614"/>
         <source>Enter Address to validate</source>
         <translation>Introduceti adresa pentru validare</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="622"/>
+        <location filename="../src/mainwindow.cpp" line="615"/>
         <source>Transparent or Shielded Address:</source>
         <translation>Adresa Transparenta sau Ecranata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="670"/>
+        <location filename="../src/mainwindow.cpp" line="663"/>
         <source>Private key import rescan finished</source>
         <translation>Rescanarea Importul cheiei Private s-a terminta </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="735"/>
+        <location filename="../src/mainwindow.cpp" line="728"/>
         <source>Paste HUSH URI</source>
         <translation>Lipeste HUSH</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="747"/>
+        <location filename="../src/mainwindow.cpp" line="740"/>
         <source>Error paying Hush URI</source>
         <translation>Eroarea de plata Hush URI</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="748"/>
+        <location filename="../src/mainwindow.cpp" line="741"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI trebuie sa fie in forma &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="783"/>
+        <location filename="../src/mainwindow.cpp" line="776"/>
         <source>Please paste your private keys here, one per line</source>
         <translation>Rugam sa lipiti cheie privata aici, una pe linie</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="784"/>
+        <location filename="../src/mainwindow.cpp" line="777"/>
         <source>The keys will be imported into your connected Hush node</source>
         <translation>Cheile vor fi importate in nodul conectat Hush </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="815"/>
+        <location filename="../src/mainwindow.cpp" line="808"/>
         <source>The keys were imported! It may take several minutes to rescan the blockchain. Until then, functionality may be limited</source>
         <translation>Cheili au fost importate! Rescanarea lantului de blocuri. </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="834"/>
+        <location filename="../src/mainwindow.cpp" line="827"/>
         <source>Error</source>
         <translation>Eroare</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="835"/>
+        <location filename="../src/mainwindow.cpp" line="828"/>
         <source>Error exporting transactions, file was not saved</source>
         <translation>Eroare in timpul exportului tranzactiei, fisierul nu a fost salvat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>No wallet.dat</source>
         <translation>wallet.dat inexistent</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="857"/>
+        <location filename="../src/mainwindow.cpp" line="850"/>
         <source>Couldn&apos;t find the wallet.dat on this computer</source>
         <translation>Wallet.dat nu poate fi gasit, in acest calculator</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="858"/>
+        <location filename="../src/mainwindow.cpp" line="851"/>
         <source>You need to back it up from the machine hushd is running on</source>
         <translation>Backup-ul este obligatoriu de pe masina unde are loc procesarea hushd </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="862"/>
+        <location filename="../src/mainwindow.cpp" line="855"/>
         <source>Backup wallet.dat</source>
         <translation>Face-ti backup la wallet.dat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup</source>
         <translation>Backup-ul nu este posibil</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="867"/>
+        <location filename="../src/mainwindow.cpp" line="860"/>
         <source>Couldn&apos;t backup the wallet.dat file.</source>
         <translation>Backup-ul fisierului wallet.dat nu este posibil </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="868"/>
+        <location filename="../src/mainwindow.cpp" line="861"/>
         <source>You need to back it up manually.</source>
         <translation>Trebuie sa faceti backup manual</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="957"/>
+        <location filename="../src/mainwindow.cpp" line="950"/>
         <source>These are all the private keys for all the addresses in your wallet</source>
         <translation>Acestea sint toate cheile private adreselor din portofel</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="959"/>
+        <location filename="../src/mainwindow.cpp" line="952"/>
         <source>Private key for </source>
         <translation>Cheia privata privata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="899"/>
-        <location filename="../src/mainwindow.cpp" line="967"/>
+        <location filename="../src/mainwindow.cpp" line="892"/>
+        <location filename="../src/mainwindow.cpp" line="960"/>
         <source>Save File</source>
         <translation>Salveaza Fisierul</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
         <source>Theme Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="308"/>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="303"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>This change can take a few seconds.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="318"/>
+        <location filename="../src/mainwindow.cpp" line="313"/>
         <source>Currency Change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="553"/>
+        <location filename="../src/mainwindow.cpp" line="548"/>
         <source>SilentDragon needs to restart to rescan,reindex,consolidation or deletetx. SilentDragon will now close, please restart SilentDragon to continue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="903"/>
-        <location filename="../src/mainwindow.cpp" line="971"/>
+        <location filename="../src/mainwindow.cpp" line="896"/>
+        <location filename="../src/mainwindow.cpp" line="964"/>
         <source>Unable to open file</source>
         <translation>Deschiderea fisierului nu este posibila</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1065"/>
-        <location filename="../src/mainwindow.cpp" line="1218"/>
+        <location filename="../src/mainwindow.cpp" line="1058"/>
+        <location filename="../src/mainwindow.cpp" line="1415"/>
         <source>Copy address</source>
         <translation>Copiaza adresa </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1068"/>
-        <location filename="../src/mainwindow.cpp" line="1214"/>
-        <location filename="../src/mainwindow.cpp" line="1220"/>
+        <location filename="../src/mainwindow.cpp" line="1061"/>
+        <location filename="../src/mainwindow.cpp" line="1229"/>
+        <location filename="../src/mainwindow.cpp" line="1262"/>
+        <location filename="../src/mainwindow.cpp" line="1268"/>
+        <location filename="../src/mainwindow.cpp" line="1273"/>
+        <location filename="../src/mainwindow.cpp" line="1278"/>
+        <location filename="../src/mainwindow.cpp" line="1411"/>
+        <location filename="../src/mainwindow.cpp" line="1417"/>
         <source>Copied to clipboard</source>
         <translation>Copiata în clipboard</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1071"/>
+        <location filename="../src/mainwindow.cpp" line="1075"/>
+        <source>Shield all non-mining taddr funds to this zaddr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1100"/>
+        <source>Shield all mining funds to this zaddr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1127"/>
         <source>Get private key</source>
         <translation>Obtine cheia privata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1076"/>
+        <location filename="../src/mainwindow.cpp" line="1132"/>
         <source>Get viewing key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1092"/>
+        <location filename="../src/mainwindow.cpp" line="1148"/>
         <source>Shield balance to Sapling</source>
         <translation>Ecraneaza soldul in Sapling </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1097"/>
-        <location filename="../src/mainwindow.cpp" line="1224"/>
+        <location filename="../src/mainwindow.cpp" line="1153"/>
+        <location filename="../src/mainwindow.cpp" line="1421"/>
         <source>View on block explorer</source>
         <translation>Vizualizare pe expoator de bloc</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1119"/>
+        <location filename="../src/mainwindow.cpp" line="1175"/>
         <source>Address Asset Viewer</source>
         <translation>Vizualizator Bunurilor Adreselor </translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1125"/>
+        <location filename="../src/mainwindow.cpp" line="1182"/>
         <source>Convert Address</source>
         <translation>Convertati Adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1212"/>
+        <location filename="../src/mainwindow.cpp" line="1227"/>
+        <source>Copy banned peer IP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1236"/>
+        <source>View banned host IP on shodan.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1260"/>
+        <source>Copy peer address+port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1266"/>
+        <source>Copy peer address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1271"/>
+        <source>Copy TLS ciphersuite</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1276"/>
+        <source>Copy ASN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1283"/>
+        <source>View host on shodan.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1291"/>
+        <source>View ASN on bgpview.io (3rd party service)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindow.cpp" line="1409"/>
         <source>Copy txid</source>
         <translation>Copiati tranzactiaID</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1235"/>
+        <location filename="../src/mainwindow.cpp" line="1432"/>
         <source>Copy block explorer link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1248"/>
+        <location filename="../src/mainwindow.cpp" line="1445"/>
         <source>View Payment Request</source>
         <translation>Vizualizati Plata Solicitata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1255"/>
+        <location filename="../src/mainwindow.cpp" line="1452"/>
         <source>View Memo</source>
         <translation>Vizualizati Memo</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1269"/>
+        <location filename="../src/mainwindow.cpp" line="1466"/>
         <source>Reply to </source>
         <translation>Raspunde</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1350"/>
+        <location filename="../src/mainwindow.cpp" line="1547"/>
         <source>Created new t-Addr</source>
         <translation>O noua t-Addr a fost creata</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1399"/>
+        <location filename="../src/mainwindow.cpp" line="1596"/>
         <source>Copy Address</source>
         <translation>Copiati Adresa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1465"/>
+        <location filename="../src/mainwindow.cpp" line="1662"/>
         <source>Address has been previously used</source>
         <translation>Adresa data a fost folosita anterior</translation>
     </message>
     <message>
-        <location filename="../src/mainwindow.cpp" line="1467"/>
+        <location filename="../src/mainwindow.cpp" line="1664"/>
         <source>Address is unused</source>
         <translation>Adresa nu poate fi utilizata</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="209"/>
+        <location filename="../src/sendtab.cpp" line="210"/>
         <source>Recipient </source>
         <translation>Destinatar</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="282"/>
-        <location filename="../src/sendtab.cpp" line="334"/>
+        <location filename="../src/sendtab.cpp" line="283"/>
+        <location filename="../src/sendtab.cpp" line="335"/>
         <source>File Upload</source>
         <translation>Fisier Incarcat</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="325"/>
+        <location filename="../src/sendtab.cpp" line="326"/>
         <source>Only z-addresses can have memos</source>
         <translation>Doar z-adrese pot avea memo</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="345"/>
+        <location filename="../src/sendtab.cpp" line="346"/>
         <source>File size too large</source>
         <translation>Dimensiunea fisierului este prea mare</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>The file size </source>
         <translation>DImeansiunea fisierului</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source> bytes is greater than </source>
         <translation>bytes sint mai mari decit</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="346"/>
+        <location filename="../src/sendtab.cpp" line="347"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="361"/>
+        <location filename="../src/sendtab.cpp" line="362"/>
         <source>Memos can only be used with z-addresses</source>
         <translation>Memo poate fi folosit doar  cu z-adrese</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>The memo field can only be used with a z-address.
 </source>
         <translation>Cimpul memo poate fi folosit doar cu z-adrese</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="362"/>
+        <location filename="../src/sendtab.cpp" line="363"/>
         <source>
 doesn&apos;t look like a z-address</source>
         <translation>nu arata ca z-adresa</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="533"/>
+        <location filename="../src/sendtab.cpp" line="524"/>
         <source>Change from </source>
         <translation>Schimba</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="674"/>
+        <location filename="../src/sendtab.cpp" line="665"/>
         <source>Current balance      : </source>
         <translation>Soldul curent</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="676"/>
+        <location filename="../src/sendtab.cpp" line="667"/>
         <source>Balance after this Tx: </source>
         <translation>Soldul dupa aceasta Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="697"/>
+        <location filename="../src/sendtab.cpp" line="688"/>
         <source>Transaction Error</source>
         <translation>Eroarea de Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="729"/>
+        <location filename="../src/sendtab.cpp" line="720"/>
         <source>Please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="730"/>
+        <location filename="../src/sendtab.cpp" line="721"/>
         <source>Computing your transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="737"/>
+        <location filename="../src/sendtab.cpp" line="728"/>
         <source>Computing transaction: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="744"/>
+        <location filename="../src/sendtab.cpp" line="735"/>
         <source>Done!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="775"/>
+        <location filename="../src/sendtab.cpp" line="766"/>
         <source>From Address is Invalid!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="773"/>
+        <source>Extreme Privacy! </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/sendtab.cpp" line="773"/>
+        <source> is transparent. You must send to a zaddr.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -957,17 +1051,15 @@ doesn&apos;t look like a z-address</source>
         <translation type="vanished">De la Adresa este nevalid</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source>Recipient Address </source>
-        <translation>Adresa destinatarului</translation>
+        <translation type="vanished">Adresa destinatarului</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="781"/>
         <source> is Invalid</source>
-        <translation>este Nevalida</translation>
+        <translation type="vanished">este Nevalida</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="787"/>
+        <location filename="../src/sendtab.cpp" line="779"/>
         <source>Amount &apos;%1&apos; is invalid!</source>
         <translation>Valoare &apos;%1&apos; nevalida</translation>
     </message>
@@ -989,7 +1081,7 @@ doesn&apos;t look like a z-address</source>
 <context>
     <name>MemoEdit</name>
     <message>
-        <location filename="../src/memoedit.cpp" line="51"/>
+        <location filename="../src/memoedit.cpp" line="53"/>
         <source>Reply to</source>
         <translation>Raspunde </translation>
     </message>
@@ -1059,97 +1151,97 @@ doesn&apos;t look like a z-address</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/addressbook.cpp" line="110"/>
+        <location filename="../src/addressbook.cpp" line="112"/>
         <source>Pick</source>
         <translation>Alege</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="128"/>
+        <location filename="../src/addressbook.cpp" line="130"/>
         <source>Address or Label Error</source>
         <translation>Adresa sau Marca</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="129"/>
+        <location filename="../src/addressbook.cpp" line="131"/>
         <source>Address or Label cannot be empty</source>
         <translation>Adresa sau Marca nu pot fi gol </translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="134"/>
+        <location filename="../src/addressbook.cpp" line="136"/>
         <source>Address Format Error</source>
         <translation>Eroarea in Formatul Adesei</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="135"/>
+        <location filename="../src/addressbook.cpp" line="137"/>
         <source>%1 doesn&apos;t seem to be a valid Hush address.</source>
         <translation>nu este o adresa HUSH valida</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="143"/>
+        <location filename="../src/addressbook.cpp" line="145"/>
         <source>Label Error</source>
         <translation>Eroare de Marca</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="144"/>
+        <location filename="../src/addressbook.cpp" line="146"/>
         <source>The label &apos;%1&apos; already exists. Please remove the existing label.</source>
         <translation>Marca &apos;%1&apos; deja exista. Rugam sa eliminati marca existenta</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="156"/>
+        <location filename="../src/addressbook.cpp" line="158"/>
         <source>Import Address Book</source>
         <translation>Importa Cartea de Adrese</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="163"/>
+        <location filename="../src/addressbook.cpp" line="165"/>
         <source>Unable to open file</source>
         <translation>Accesarea fisierului nu este posibila</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="183"/>
+        <location filename="../src/addressbook.cpp" line="185"/>
         <source>Address Book Import Done</source>
         <translation>Importul Cartii de Adrese este Terminat </translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="184"/>
+        <location filename="../src/addressbook.cpp" line="186"/>
         <source>Imported %1 new Address book entries</source>
         <translation>Importul %1 adresei noi a fost efectuat  </translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="224"/>
+        <location filename="../src/addressbook.cpp" line="226"/>
         <source>Copy address</source>
         <translation>Copiati adresa</translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="226"/>
+        <location filename="../src/addressbook.cpp" line="228"/>
         <source>Copied to clipboard</source>
         <translation>Copiat in clipboard </translation>
     </message>
     <message>
-        <location filename="../src/addressbook.cpp" line="229"/>
+        <location filename="../src/addressbook.cpp" line="231"/>
         <source>Delete label</source>
         <translation>Sterge marca</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="61"/>
+        <location filename="../src/connection.cpp" line="59"/>
         <source>Attempting autoconnect</source>
         <translation>Incercare de autoconectare</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="70"/>
+        <location filename="../src/connection.cpp" line="68"/>
         <source>Starting embedded hushd</source>
         <translation>Hushd incorporat se porneste</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>hushd is set to run as daemon</source>
         <translation>hushd este setat sa functioneze ca daemon </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="80"/>
+        <location filename="../src/connection.cpp" line="78"/>
         <source>Waiting for hushd</source>
         <translation>Asteptind hushd</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="95"/>
+        <location filename="../src/connection.cpp" line="93"/>
         <source>You have hushd set to start as a daemon, which can cause problems with SilentDragon
 
 .Please remove the following line from your HUSH3.conf and restart SilentDragon
@@ -1158,7 +1250,7 @@ daemon=1</source>
 .Rugam sa eliminati linia urmatoare din HUSH3.conf si sa reporniti SilentDragon </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="100"/>
+        <location filename="../src/connection.cpp" line="98"/>
         <source>Couldn&apos;t start the embedded hushd.
 
 Please try restarting.
@@ -1173,12 +1265,12 @@ Daca nu reusiti, rugam sa porniti hushd manual
  </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="103"/>
+        <location filename="../src/connection.cpp" line="101"/>
         <source>The process returned</source>
         <translation>Procesul a fost intors</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="111"/>
+        <location filename="../src/connection.cpp" line="109"/>
         <source>Couldn&apos;t connect to hushd configured in HUSH3.conf.
 
 Not starting embedded hushd because --no-embedded was passed</source>
@@ -1186,63 +1278,63 @@ Not starting embedded hushd because --no-embedded was passed</source>
 Hushd incorporat nu se porneste deoarece incorporarea nu a fost efectuata  </translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Hide Advanced Config</source>
         <translation>Ascunde Configuratia Avansata</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="164"/>
+        <location filename="../src/connection.cpp" line="162"/>
         <source>Show Advanced Config</source>
         <translation>Arata Configuratia Avansata</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="177"/>
+        <location filename="../src/connection.cpp" line="175"/>
         <source>Choose data directory</source>
         <translation>Alege locatia datei</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="198"/>
+        <location filename="../src/connection.cpp" line="196"/>
         <source>Could not create HUSH3.conf.</source>
         <translation>HUSH3.conf nu poate fi creat</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="260"/>
+        <location filename="../src/connection.cpp" line="249"/>
         <source>All Downloads Finished Successfully!</source>
         <translation>Toate descarcarile au fost finisate cu succes!</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="283"/>
+        <location filename="../src/connection.cpp" line="272"/>
         <source>Couldn&apos;t download params. Please check the help site for more info.</source>
         <translation>Parametrii nu s-au descarcat. Rugam sa accesati pagina de ajutor.</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="298"/>
+        <location filename="../src/connection.cpp" line="314"/>
         <source>Downloading </source>
         <translation>Se descarca</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="309"/>
+        <location filename="../src/connection.cpp" line="298"/>
         <source> more remaining )</source>
         <translation>mai ramase</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="299"/>
         <source>MB of </source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="310"/>
+        <location filename="../src/connection.cpp" line="299"/>
         <source>MB at </source>
         <translation>MB la</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="325"/>
+        <location filename="../src/connection.cpp" line="314"/>
         <source> failed. Please check the help site for more info</source>
         <translation>A esuat. Rugam sa accesati pagina de ajutor</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="349"/>
+        <location filename="../src/connection.cpp" line="338"/>
         <source>hushd error</source>
         <translation>eroarea hushd</translation>
     </message>
@@ -1279,69 +1371,69 @@ Rugam sa setati host/port si utilizator/parola in Editare-&gt; Meniu setari</tra
     </message>
     <message>
         <location filename="../src/connection.cpp" line="553"/>
-        <location filename="../src/rpc.cpp" line="725"/>
+        <location filename="../src/rpc.cpp" line="784"/>
         <source>Connection Error</source>
         <translation>Eroare la Conexiune</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
-        <location filename="../src/sendtab.cpp" line="765"/>
+        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Eroarea de Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="831"/>
+        <location filename="../src/connection.cpp" line="844"/>
         <source>There was an error! : </source>
         <translation>A avut loc eroarea</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="396"/>
-        <location filename="../src/rpc.cpp" line="398"/>
+        <location filename="../src/rpc.cpp" line="451"/>
+        <location filename="../src/rpc.cpp" line="453"/>
         <source>No Connection</source>
         <translation>Conexiunea nu exista</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="673"/>
+        <location filename="../src/rpc.cpp" line="732"/>
         <source>Downloading blocks</source>
         <translation>Descarcarea blocurilor</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="676"/>
+        <location filename="../src/rpc.cpp" line="735"/>
         <source>Block height</source>
         <translation>Inaltimea Blocului</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="691"/>
+        <location filename="../src/rpc.cpp" line="750"/>
         <source>Syncing</source>
         <translation>Sincronizare</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="691"/>
+        <location filename="../src/rpc.cpp" line="750"/>
         <source>Connected</source>
         <translation>Conectat</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="693"/>
+        <location filename="../src/rpc.cpp" line="752"/>
         <source>testnet:</source>
         <translation>testnet</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="703"/>
+        <location filename="../src/rpc.cpp" line="762"/>
         <source>Connected to hushd</source>
         <translation>Conectat la hushd</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="706"/>
+        <location filename="../src/rpc.cpp" line="765"/>
         <source>hushd has no peer connections! Network issues?</source>
         <translation>hushd nu are nicio conexiune! Probleme de retea?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="725"/>
+        <location filename="../src/rpc.cpp" line="784"/>
         <source>There was an error connecting to hushd. The error was</source>
         <translation>A fost eroarea conexiunii la hushd. Eroarea a fost</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1020"/>
+        <location filename="../src/rpc.cpp" line="1149"/>
         <source> transaction computing.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1350,12 +1442,12 @@ Rugam sa setati host/port si utilizator/parola in Editare-&gt; Meniu setari</tra
         <translation type="vanished">Calculul transactiei. Aceasta poate dura citeva minute.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1069"/>
+        <location filename="../src/rpc.cpp" line="1201"/>
         <source>Update Available</source>
         <translation>Update Valabil </translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1070"/>
+        <location filename="../src/rpc.cpp" line="1202"/>
         <source>A new release v%1 is available! You have v%2.
 
 Would you like to visit the releases page?</source>
@@ -1363,22 +1455,22 @@ Would you like to visit the releases page?</source>
 Doriti sa vizitati pagina veriunii?</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1082"/>
+        <location filename="../src/rpc.cpp" line="1214"/>
         <source>No updates available</source>
         <translation>Update nu este valabil</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1083"/>
+        <location filename="../src/rpc.cpp" line="1215"/>
         <source>You already have the latest release v%1</source>
         <translation>Deja aveti cea mai recenta versiune</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1237"/>
+        <location filename="../src/rpc.cpp" line="1369"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Rugam sa sporiti calmul si sa astepati pina ce SilentDragon sa iese</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1238"/>
+        <location filename="../src/rpc.cpp" line="1370"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Asteptam hushd sa iese.</translation>
     </message>
@@ -1387,22 +1479,22 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation type="vanished">Tranzactia</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="760"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> failed</source>
         <translation>a esuat</translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="760"/>
+        <location filename="../src/sendtab.cpp" line="751"/>
         <source> Transaction </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="754"/>
         <source>The transaction with id </source>
         <translation>Tranzactia cu id </translation>
     </message>
     <message>
-        <location filename="../src/sendtab.cpp" line="763"/>
+        <location filename="../src/sendtab.cpp" line="754"/>
         <source> failed. The error was</source>
         <translation>a esuat. Eroarea a fost</translation>
     </message>
@@ -1411,48 +1503,110 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation type="vanished">Tranzactia a fost trimisa (clic drept pentru a copia) txid</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Type</source>
         <translation>Tipul</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <source>Subnet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/bannedpeerstablemodel.cpp" line="8"/>
+        <source>Banned Until</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Date/Time</source>
         <translation>Data/Timpul</translation>
     </message>
     <message>
-        <location filename="../src/txtablemodel.cpp" line="7"/>
+        <location filename="../src/txtablemodel.cpp" line="9"/>
         <source>Amount</source>
         <translation>Valoare</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="435"/>
+        <location filename="../src/websockets.cpp" line="437"/>
         <source>Connected directly</source>
         <translation>Conectat direct</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="438"/>
+        <location filename="../src/websockets.cpp" line="440"/>
         <source>Connected over the internet via SilentDragon wormhole service</source>
         <translation>Conectat la internet prin serviciu SilentDragon wormhole</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="745"/>
+        <location filename="../src/websockets.cpp" line="747"/>
         <source>Node is still syncing.</source>
         <translation>Nodul inca se sincronizeaza</translation>
     </message>
     <message>
-        <location filename="../src/websockets.cpp" line="767"/>
+        <location filename="../src/websockets.cpp" line="769"/>
         <source>No addresses with enough balance to spend! Try sweeping funds into one address</source>
         <translation>Nici o adresa cu sold suficient! Incercati sa transferati fonduri intr-o adresa</translation>
     </message>
     <message>
         <location filename="../src/settings.cpp" line="313"/>
         <source>Transaction submitted (right click to copy) txid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>PeerID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>ASN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>TLS Cipher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>TLS Verfied</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Version</source>
+        <translation type="unfinished">Versiune</translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Protocol Version</source>
+        <translation type="unfinished">Versiunea de Protocol</translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Ping Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Banscore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Bytes received</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/peerstablemodel.cpp" line="9"/>
+        <source>Bytes sent</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1542,32 +1696,32 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation>Solicita plata de pe Sapling adresa. HUSH 0.0001 tranzactia va fi transmisa la adresa cu plata HUSH URI. Memo va fi inclus in tranzactie cind adresa va plati.</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="50"/>
+        <location filename="../src/requestdialog.cpp" line="52"/>
         <source>Error paying HUSH URI</source>
         <translation>Eroare platii HUSH URI</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="51"/>
+        <location filename="../src/requestdialog.cpp" line="53"/>
         <source>URI should be of the form &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</source>
         <translation>URI trebuie sa fie de forma &apos;hush:&lt;addr&gt;?amt=x&amp;memo=y</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="65"/>
+        <location filename="../src/requestdialog.cpp" line="67"/>
         <source>Pay To</source>
         <translation>Plateste lui</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="78"/>
+        <location filename="../src/requestdialog.cpp" line="80"/>
         <source>Pay</source>
         <translation>Plateste</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="80"/>
+        <location filename="../src/requestdialog.cpp" line="82"/>
         <source>You are paying a payment request. Your address will not be visible to the person requesting this payment.</source>
         <translation>Platiti plata solicitata. Adresa voastra nu va fi vizibila persoanei care solicita aceasta plata.</translation>
     </message>
     <message>
-        <location filename="../src/requestdialog.cpp" line="99"/>
+        <location filename="../src/requestdialog.cpp" line="101"/>
         <source>Can only request from Sapling addresses</source>
         <translation>Puteti doar solicita de la adresa Sapling</translation>
     </message>
@@ -1837,22 +1991,22 @@ Doriti sa vizitati pagina veriunii?</translation>
     <message>
         <location filename="../src/settings.ui" line="415"/>
         <source>default</source>
-        <translation>mod implicit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="420"/>
         <source>blue</source>
-        <translation>albastru</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="425"/>
         <source>light</source>
-        <translation>deschis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="430"/>
         <source>dark</source>
-        <translation>inchis</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="435"/>
@@ -1866,8 +2020,17 @@ Doriti sa vizitati pagina veriunii?</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="476"/>
-        <source>Check github for updates at startup</source>
-        <translation>Verificati actualizarile la pornire pe github</translation>
+        <source>Check git.hush.is for updates at startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/settings.ui" line="558"/>
+        <source>Connect to git.hush.is on startup to check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check git for updates at startup</source>
+        <translation type="vanished">Verificati actualizarile la pornire pe git</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="490"/>
@@ -1910,9 +2073,8 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation>Conectati la retea Tor prin SOCKS proxy functionind pe 127.0.0.1:9050. Rugam sa retineti ca va fi nevoie instalarea si executarea serviciului extern Tor.</translation>
     </message>
     <message>
-        <location filename="../src/settings.ui" line="558"/>
-        <source>Connect to github on startup to check for updates</source>
-        <translation>Conectati github la pornire pentru verificarea actualizarilor</translation>
+        <source>Connect to git on startup to check for updates</source>
+        <translation type="vanished">Conectati git la pornire pentru verificarea actualizarilor</translation>
     </message>
     <message>
         <location filename="../src/settings.ui" line="565"/>
@@ -2041,12 +2203,12 @@ Doriti sa vizitati pagina veriunii?</translation>
 <context>
     <name>ValidateAddressesModel</name>
     <message>
-        <location filename="../src/validateaddress.cpp" line="6"/>
+        <location filename="../src/validateaddress.cpp" line="8"/>
         <source>Property</source>
         <translation>Proprietate</translation>
     </message>
     <message>
-        <location filename="../src/validateaddress.cpp" line="6"/>
+        <location filename="../src/validateaddress.cpp" line="8"/>
         <source>Value</source>
         <translation>Valoare</translation>
     </message>
@@ -2067,12 +2229,12 @@ Doriti sa vizitati pagina veriunii?</translation>
 <context>
     <name>ViewAllAddressesModel</name>
     <message>
-        <location filename="../src/viewalladdresses.cpp" line="6"/>
+        <location filename="../src/viewalladdresses.cpp" line="8"/>
         <source>Address</source>
         <translation>Adresa</translation>
     </message>
     <message>
-        <location filename="../src/viewalladdresses.cpp" line="6"/>
+        <location filename="../src/viewalladdresses.cpp" line="8"/>
         <source>Balance (%1)</source>
         <translation>Soldul (1%)</translation>
     </message>
@@ -2164,7 +2326,7 @@ Doriti sa vizitati pagina veriunii?</translation>
     </message>
 </context>
 <context>
-    <name>createZcashConf</name>
+    <name>createHushConf</name>
     <message>
         <location filename="../src/createzcashconfdialog.ui" line="14"/>
         <source>Configure HUSH3.conf</source>

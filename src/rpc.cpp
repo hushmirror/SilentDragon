@@ -1,13 +1,11 @@
-// Copyright 2019-2020 The Hush Developers
+// Copyright 2019-2021 The Hush Developers
 // Released under the GPLv3
 #include "rpc.h"
-
 #include "addressbook.h"
 #include "settings.h"
 #include "senttxstore.h"
 #include "version.h"
 #include "websockets.h"
-
 
 RPC::RPC(MainWindow* main) {
     auto cl = new ConnectionLoader(main, this);
@@ -16,7 +14,7 @@ RPC::RPC(MainWindow* main) {
     QTimer::singleShot(1, [=]() { cl->loadConnection(); });
 
     this->main = main;
-    this->ui = main->ui;
+    this->ui   = main->ui;
 
     // Setup balances table model
     balancesTableModel = new BalancesTableModel(main->ui->balancesTable);
@@ -27,12 +25,24 @@ RPC::RPC(MainWindow* main) {
     main->ui->transactionsTable->setModel(transactionsTableModel);
     main->ui->transactionsTable->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
 
+    peersTableModel = new PeersTableModel(ui->peersTable);
+    main->ui->peersTable->setModel(peersTableModel);
+    // tls ciphersuite is wide
+    main->ui->peersTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+
+    bannedPeersTableModel = new BannedPeersTableModel(ui->bannedPeersTable);
+    main->ui->bannedPeersTable->setModel(bannedPeersTableModel);
+    main->ui->bannedPeersTable->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+
+    qDebug() << __func__ << "Done settings up TableModels";
+
     // Set up timer to refresh Price
     priceTimer = new QTimer(main);
     QObject::connect(priceTimer, &QTimer::timeout, [=]() {
         refreshPrice();
     });
-    priceTimer->start(Settings::priceRefreshSpeed);  // Every hour
+    priceTimer->start(Settings::priceRefreshSpeed);
+    qDebug() << __func__ << ": started price refresh at speed=" << Settings::priceRefreshSpeed;
 
     // Set up a timer to refresh the UI every few seconds
     timer = new QTimer(main);
@@ -48,8 +58,9 @@ RPC::RPC(MainWindow* main) {
         //qDebug() << "Watching tx status";
         watchTxStatus();
     });
-    // Start at every 10s. When an operation is pending, this will change to every second
+
     txTimer->start(Settings::updateSpeed);  
+    qDebug() << __func__ << "Done settings up all timers";
 
     usedAddresses = new QMap<QString, bool>();
 }
@@ -60,6 +71,8 @@ RPC::~RPC() {
 
     delete transactionsTableModel;
     delete balancesTableModel;
+    delete peersTableModel;
+    delete bannedPeersTableModel;
 
     delete utxos;
     delete allBalances;
@@ -70,12 +83,8 @@ RPC::~RPC() {
     delete conn;
 }
 
-void RPC::setEZcashd(std::shared_ptr<QProcess> p) {
-    ezcashd = p;
-
-    if (ezcashd && ui->tabWidget->widget(4) == nullptr) {
-        ui->tabWidget->addTab(main->zcashdtab, "zcashd");
-    }
+void RPC::setEHushd(std::shared_ptr<QProcess> p) {
+    ehushd = p;
 }
 
 // Called when a connection to hushd is available. 
@@ -87,14 +96,14 @@ void RPC::setConnection(Connection* c) {
 
     ui->statusBar->showMessage("Ready! Thank you for helping secure the Hush network by running a full node.");
 
-    // See if we need to remove the reindex/rescan flags from the zcash.conf file
-    auto zcashConfLocation = Settings::getInstance()->getZcashdConfLocation();
-    Settings::removeFromZcashConf(zcashConfLocation, "rescan");
-    Settings::removeFromZcashConf(zcashConfLocation, "reindex");
+    // See if we need to remove the reindex/rescan flags from the conf file
+    auto hushConfLocation = Settings::getInstance()->getHushdConfLocation();
+    Settings::removeFromHushConf(hushConfLocation, "rescan");
+    Settings::removeFromHushConf(hushConfLocation, "reindex");
 
     // Refresh the UI
     refreshPrice();
-    checkForUpdate();
+    //checkForUpdate();
 
     // Force update, because this might be coming from a settings update
     // where we need to immediately refresh
@@ -241,9 +250,55 @@ void RPC::getBalance(const std::function<void(QJsonValue)>& cb) {
     conn->doRPCWithDefaultErrorHandling(payload, cb);
 }
 
+void RPC::getPeerInfo(const std::function<void(QJsonValue)>& cb) {
+    QString method = "getpeerinfo";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
+}
+
+void RPC::listBanned(const std::function<void(QJsonValue)>& cb) {
+    QString method = "listbanned";
+    conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
+}
+
 void RPC::getTransactions(const std::function<void(QJsonValue)>& cb) {
     QString method = "listtransactions";
     conn->doRPCWithDefaultErrorHandling(makePayload(method), cb);
+}
+
+void RPC::mergeToAddress(QJsonArray &params, const std::function<void(QJsonValue)>& cb,
+    const std::function<void(QString)>& err) {
+    QJsonObject payload = {
+        {"jsonrpc", "1.0"},
+        {"id", "42"},
+        {"method", "z_mergetoaddress"},
+        {"params", params}
+    };
+
+    conn->doRPC(payload, cb,  [=] (QNetworkReply *reply, const QJsonValue &parsed) {
+        if (!parsed.isUndefined() && !parsed["error"].toObject()["message"].isNull()) {
+            err(parsed["error"].toObject()["message"].toString());
+        } else {
+            err(reply->errorString());
+        }
+    });
+}
+
+void RPC::shieldCoinbase(QJsonArray &params, const std::function<void(QJsonValue)>& cb,
+    const std::function<void(QString)>& err) {
+    QJsonObject payload = {
+        {"jsonrpc", "1.0"},
+        {"id", "42"},
+        {"method", "z_shieldcoinbase"},
+        {"params", params}
+    };
+
+    conn->doRPC(payload, cb,  [=] (QNetworkReply *reply, const QJsonValue &parsed) {
+        if (!parsed.isUndefined() && !parsed["error"].toObject()["message"].isNull()) {
+            err(parsed["error"].toObject()["message"].toString());
+        } else {
+            err(reply->errorString());
+        }
+    });
 }
 
 void RPC::sendZTransaction(QJsonValue params, const std::function<void(QJsonValue)>& cb,
@@ -572,21 +627,21 @@ void RPC::getInfoThenRefresh(bool force) {
         int notarized           = reply["notarized"].toInt();
         int protocolversion     = reply["protocolversion"].toInt();
         int lag                 = curBlock - notarized;
-        int blocks_until_halving= 340000 - curBlock;
+        // TODO: store all future halvings
+        int blocks_until_halving= 2020000 - curBlock;
         char halving_days[8];
-        sprintf(halving_days, "%.2f", (double) (blocks_until_halving * 150) / (60*60*24) );
+        int blocktime = 75; // seconds
+        sprintf(halving_days, "%.2f", (double) (blocks_until_halving * blocktime) / (60*60*24) );
         QString ntzhash         = reply["notarizedhash"].toString();
         QString ntztxid         = reply["notarizedtxid"].toString();
-        QString kmdver          = reply["KMDversion"].toString();
 
-        Settings::getInstance()->setZcashdVersion(version);
+        Settings::getInstance()->setHushdVersion(version);
 
         ui->longestchain->setText(QString::number(longestchain));
         ui->notarizedhashvalue->setText( ntzhash );
         ui->notarizedtxidvalue->setText( ntztxid );
         ui->lagvalue->setText( QString::number(lag) );
         ui->version->setText( QString::number(version) );
-        ui->kmdversion->setText( kmdver );
         ui->protocolversion->setText( QString::number(protocolversion) );
         ui->p2pport->setText( QString::number(p2pport) );
         ui->rpcport->setText( QString::number(rpcport) );
@@ -597,6 +652,7 @@ void RPC::getInfoThenRefresh(bool force) {
             lastBlock = curBlock;
 
             refreshBalances();        
+            refreshPeers();
             refreshAddresses(); // This calls refreshZSentTransactions() and refreshReceivedZTrans()
             refreshTransactions();
         }
@@ -621,7 +677,8 @@ void RPC::getInfoThenRefresh(bool force) {
         conn->doRPCIgnoreError(makePayload(method), [=](const QJsonValue& reply) {
             qint64 solrate = reply.toInt();
 
-            ui->solrate->setText(QString::number(solrate) % " Sol/s");
+            //TODO: format decimal
+            ui->solrate->setText(QString::number((double)solrate / 1000000) % " MegaSol/s");
         });
 
         // Get network info
@@ -707,7 +764,7 @@ void RPC::getInfoThenRefresh(bool force) {
             else {
                 tooltip = QObject::tr("hushd has no peer connections! Network issues?");
             }
-            tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getZcashdVersion()) % ")";
+            tooltip = tooltip % "(v" % QString::number(Settings::getInstance()->getHushdVersion()) % ")";
 
             if (!hushPrice.isEmpty()) {
                 tooltip = "1 HUSH = " % hushPrice % "\n" % tooltip;
@@ -846,6 +903,76 @@ void RPC::refreshBalances() {
 
             main->balancesReady();
         });        
+    });
+}
+
+void RPC::refreshPeers() {    
+    qDebug() << __func__;
+    if  (conn == nullptr) 
+        return noConnection();
+
+/*
+[
+  {
+    "address": "199.247.28.148/255.255.255.255",
+    "banned_until": 1612869516
+  },
+  {
+    "address": "2001:19f0:5001:d26:5400:3ff:fe18:f6c2/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+    "banned_until": 1612870431
+  }
+]
+*/
+
+    listBanned([=] (QJsonValue reply) {
+        QList<BannedPeerItem> peerdata;
+        for (const auto& it : reply.toArray()) {
+            auto addr     = it.toObject()["address"].toString();
+            auto bantime  = (qint64)it.toObject()["banned_until"].toInt();
+            auto parts    = addr.split("/");
+            auto ip       = parts[0];
+            auto subnet   = parts[1];
+            BannedPeerItem peer { ip, subnet, bantime };
+            qDebug() << "Adding banned peer with address=" <<  addr;
+            peerdata.push_back(peer);
+        }
+        bannedPeersTableModel->addData(peerdata);
+    });
+
+    getPeerInfo([=] (QJsonValue reply) {
+        QList<PeerItem> peerdata;
+
+        for (const auto& it : reply.toArray()) {
+            auto addr = it.toObject()["addr"].toString();
+            auto asn  = (qint64)it.toObject()["mapped_as"].toInt();
+            auto recv = (qint64)it.toObject()["bytesrecv"].toInt();
+            auto sent = (qint64)it.toObject()["bytessent"].toInt();
+
+            PeerItem peer {
+                it.toObject()["id"].toInt(), // peerid
+                "",  // type
+                (qint64)it.toObject()["conntime"].toInt(),
+                addr,
+                asn,
+                it.toObject()["tls_cipher"].toString(),
+                // don't convert the JS string "false" to a bool, which is true, lulz
+                it.toObject()["tls_verified"].toString() == 'true' ? true : false,
+                (qint64)(it.toObject()["banscore"].toInt()),
+                (qint64)(it.toObject()["version"].toInt()), // protocolversion
+                it.toObject()["subver"].toString(),
+                recv,
+                sent,
+                it.toObject()["pingtime"].toDouble(),
+                };
+
+            qDebug() << "Adding peer with address=" <<  addr << " and AS=" << asn
+             << " bytesrecv=" << recv << " bytessent=" << sent;
+            peerdata.push_back(peer);
+        }
+
+        //qDebug() << peerdata;
+        // Update model data, which updates the table view
+        peersTableModel->addData(peerdata);        
     });
 }
 
@@ -1025,12 +1152,15 @@ void RPC::watchTxStatus() {
 }
 
 void RPC::checkForUpdate(bool silent) {
+    // Disable update checks for now
+    // TODO: Use Gitea API
+    return;
     qDebug() << "checking for updates";
 
     if  (conn == nullptr) 
         return noConnection();
 
-    QUrl cmcURL("https://api.github.com/repos/MyHush/SilentDragon/releases");
+    QUrl cmcURL("https://git.hush.is/hush/SilentDragon/releases");
 
     QNetworkRequest req;
     req.setUrl(cmcURL);
@@ -1074,7 +1204,7 @@ void RPC::checkForUpdate(bool silent) {
                             .arg(currentVersion.toString()),
                         QMessageBox::Yes, QMessageBox::Cancel);
                     if (ans == QMessageBox::Yes) {
-                        QDesktopServices::openUrl(QUrl("https://github.com/MyHush/SilentDragon/releases"));
+                        QDesktopServices::openUrl(QUrl("https://git.hush.is/hush/SilentDragon/releases"));
                     } else {
                         // If the user selects cancel, don't bother them again for this version
                         s.setValue("update/lastversion", maxVersion.toString());
@@ -1206,9 +1336,9 @@ void RPC::refreshPrice() {
     });
 }
 
-void RPC::shutdownZcashd() {
+void RPC::shutdownHushd() {
     // Shutdown embedded hushd if it was started
-    if (ezcashd == nullptr || ezcashd->processId() == 0 || conn == nullptr) {
+    if (ehushd == nullptr || ehushd->processId() == 0 || conn == nullptr) {
         // No hushd running internally, just return
         return;
     }
@@ -1247,10 +1377,10 @@ void RPC::shutdownZcashd() {
     QObject::connect(&waiter, &QTimer::timeout, [&] () {
         waitCount++;
 
-        if ((ezcashd->atEnd() && ezcashd->processId() == 0) ||
-            ezcashd->state() == QProcess::NotRunning ||
+        if ((ehushd->atEnd() && ehushd->processId() == 0) ||
+            ehushd->state() == QProcess::NotRunning ||
             waitCount > 30 ||
-            conn->config->zcashDaemon)  {   // If hushd is daemon, then we don't have to do anything else
+            conn->config->hushDaemon)  {   // If hushd is daemon, then we don't have to do anything else
             qDebug() << "Ended";
             waiter.stop();
             QTimer::singleShot(1000, [&]() { d.accept(); });

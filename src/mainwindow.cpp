@@ -1,4 +1,4 @@
-// Copyright 2019-2020 The Hush Developers
+// Copyright 2019-2021 The Hush Developers
 // Released under the GPLv3
 #include "mainwindow.h"
 #include "addressbook.h"
@@ -21,7 +21,6 @@
 #include "connection.h"
 #include "requestdialog.h"
 #include "websockets.h"
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -48,16 +47,11 @@ MainWindow::MainWindow(QWidget *parent) :
     // Settings editor
     setupSettingsModal();
 
-    // Set up exit action
+    // Set up actions
     QObject::connect(ui->actionExit, &QAction::triggered, this, &MainWindow::close);
-
-    // Set up feedback action
     QObject::connect(ui->actionDonate, &QAction::triggered, this, &MainWindow::donate);
-
-    QObject::connect(ui->actionDiscord, &QAction::triggered, this, &MainWindow::discord);
-
+    QObject::connect(ui->actionTelegram, &QAction::triggered, this, &MainWindow::telegram);
     QObject::connect(ui->actionReportBug, &QAction::triggered, this, &MainWindow::reportbug);
-
     QObject::connect(ui->actionWebsite, &QAction::triggered, this, &MainWindow::website);
 
     // Set up check for updates action
@@ -73,7 +67,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Pay Hush URI
     QObject::connect(ui->actionPay_URI, &QAction::triggered, [=] () {
-        payZcashURI();
+        payHushURI();
     });
 
     // Import Private Key
@@ -109,7 +103,7 @@ MainWindow::MainWindow(QWidget *parent) :
         about.setupUi(&aboutDialog);
         Settings::saveRestore(&aboutDialog);
 
-        QString version    = QString("Version ") % QString(APP_VERSION) % " (" % QString(__DATE__) % ")";
+        QString version    = QString("Version ") % QString(APP_VERSION) % " (" % QString(__DATE__) % ") using QT " % qVersion();
         about.versionLabel->setText(version);
 
         aboutDialog.exec();
@@ -125,6 +119,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMarketTab();
     //setupChatTab();
     setupHushTab();
+    setupPeersTab();
 
     rpc = new RPC(this);
     qDebug() << "Created RPC";
@@ -200,7 +195,7 @@ void MainWindow::closeEvent(QCloseEvent* event) {
     s.sync();
 
     // Let the RPC know to shut down any running service.
-    rpc->shutdownZcashd();
+    rpc->shutdownHushd();
 
     // Bubble up
     if (event)
@@ -339,7 +334,7 @@ void MainWindow::setupSettingsModal() {
             isUsingTor = !rpc->getConnection()->config->proxy.isEmpty();
         }
         settings.chkTor->setChecked(isUsingTor);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkTor->setEnabled(false);
             settings.lblTor->setEnabled(false);
             QString tooltip = tr("Tor configuration is available only when running an embedded hushd.");
@@ -351,8 +346,8 @@ void MainWindow::setupSettingsModal() {
 
         bool isUsingConsolidation = false;
         int size = 0;
-        QDir zcashdir(rpc->getConnection()->config->zcashDir);
-        QFile WalletSize(zcashdir.filePath("wallet.dat"));
+        QDir hushdir(rpc->getConnection()->config->hushDir);
+        QFile WalletSize(hushdir.filePath("wallet.dat"));
         if (WalletSize.open(QIODevice::ReadOnly)){
         size = WalletSize.size() / 1000000;  //when file does open.
         //QString size1 = QString::number(size) ;
@@ -363,7 +358,7 @@ void MainWindow::setupSettingsModal() {
             isUsingConsolidation = !rpc->getConnection()->config->consolidation.isEmpty() == true;
         }
         settings.chkConso->setChecked(isUsingConsolidation);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkConso->setEnabled(false);
         }
 
@@ -374,7 +369,7 @@ void MainWindow::setupSettingsModal() {
             isUsingDeletetx = !rpc->getConnection()->config->deletetx.isEmpty() == true;
         }
         settings.chkDeletetx->setChecked(isUsingDeletetx);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkDeletetx->setEnabled(false);
         }
 
@@ -385,7 +380,7 @@ void MainWindow::setupSettingsModal() {
             isUsingZindex = !rpc->getConnection()->config->zindex.isEmpty() == true;
         }
         settings.chkzindex->setChecked(isUsingZindex);
-        if (rpc->getEZcashD() == nullptr) {
+        if (rpc->getEHushD() == nullptr) {
             settings.chkzindex->setEnabled(false);      
         }
 
@@ -394,9 +389,9 @@ void MainWindow::setupSettingsModal() {
         settings.port->setValidator(&validator);
 
         // If values are coming from HUSH3.conf, then disable all the fields
-        auto zcashConfLocation = Settings::getInstance()->getZcashdConfLocation();
-        if (!zcashConfLocation.isEmpty()) {
-            settings.confMsg->setText("Settings are being read from \n" + zcashConfLocation);
+        auto hushConfLocation = Settings::getInstance()->getHushdConfLocation();
+        if (!hushConfLocation.isEmpty()) {
+            settings.confMsg->setText("Settings are being read from \n" + hushConfLocation);
             settings.hostname->setEnabled(false);
             settings.port->setEnabled(false);
             settings.rpcuser->setEnabled(false);
@@ -455,7 +450,7 @@ void MainWindow::setupSettingsModal() {
 
             if (!isUsingTor && settings.chkTor->isChecked()) {
                 // If "use tor" was previously unchecked and now checked
-                Settings::addToZcashConf(zcashConfLocation, "proxy=127.0.0.1:9050");
+                Settings::addToHushConf(hushConfLocation, "proxy=127.0.0.1:9050");
                 rpc->getConnection()->config->proxy = "proxy=127.0.0.1:9050";
 
                 QMessageBox::information(this, tr("Enable Tor"),
@@ -465,7 +460,7 @@ void MainWindow::setupSettingsModal() {
 
             if (isUsingTor && !settings.chkTor->isChecked()) {
                 // If "use tor" was previously checked and now is unchecked
-                Settings::removeFromZcashConf(zcashConfLocation, "proxy");
+                Settings::removeFromHushConf(hushConfLocation, "proxy");
                 rpc->getConnection()->config->proxy.clear();
 
                 QMessageBox::information(this, tr("Disable Tor"),
@@ -473,7 +468,7 @@ void MainWindow::setupSettingsModal() {
                     QMessageBox::Ok);
             }
 
-            if (zcashConfLocation.isEmpty()) {
+            if (hushConfLocation.isEmpty()) {
                 // Save settings
                 Settings::getInstance()->saveSettings(
                     settings.hostname->text(),
@@ -496,55 +491,55 @@ void MainWindow::setupSettingsModal() {
             bool showRestartInfo = false;
             bool showReindexInfo = false;
             if (settings.chkRescan->isChecked()) {
-                Settings::addToZcashConf(zcashConfLocation, "rescan=1");
+                Settings::addToHushConf(hushConfLocation, "rescan=1");
                 showRestartInfo = true;
             }
 
             if (settings.chkReindex->isChecked()) {
-                Settings::addToZcashConf(zcashConfLocation, "reindex=1");
+                Settings::addToHushConf(hushConfLocation, "reindex=1");
                 showRestartInfo = true;
             }
 
              if (!rpc->getConnection()->config->consolidation.isEmpty()==false) {
                  if (settings.chkConso->isChecked()) {
-                 Settings::addToZcashConf(zcashConfLocation, "consolidation=1");
+                 Settings::addToHushConf(hushConfLocation, "consolidation=1");
                 showRestartInfo = true;       
                 }
             }
 
             if (!rpc->getConnection()->config->consolidation.isEmpty()) {
                  if (settings.chkConso->isChecked() == false) {
-                 Settings::removeFromZcashConf(zcashConfLocation, "consolidation");
+                 Settings::removeFromHushConf(hushConfLocation, "consolidation");
                 showRestartInfo = true;       
                  }
             }
                   
              if (!rpc->getConnection()->config->deletetx.isEmpty() == false) {
                  if (settings.chkDeletetx->isChecked()) {
-                 Settings::addToZcashConf(zcashConfLocation, "deletetx=1");
+                 Settings::addToHushConf(hushConfLocation, "deletetx=1");
                 showRestartInfo = true;       
                 }
             }
 
              if (!rpc->getConnection()->config->deletetx.isEmpty()) {
                  if (settings.chkDeletetx->isChecked() == false) {
-                 Settings::removeFromZcashConf(zcashConfLocation, "deletetx");
+                 Settings::removeFromHushConf(hushConfLocation, "deletetx");
                 showRestartInfo = true;
                  }
             }
     
              if (!rpc->getConnection()->config->zindex.isEmpty() == false) {
                  if (settings.chkzindex->isChecked()) {
-                 Settings::addToZcashConf(zcashConfLocation, "zindex=1");
-                 Settings::addToZcashConf(zcashConfLocation, "reindex=1");
+                 Settings::addToHushConf(hushConfLocation, "zindex=1");
+                 Settings::addToHushConf(hushConfLocation, "reindex=1");
                 showReindexInfo = true;       
                 }
             }
 
              if (!rpc->getConnection()->config->zindex.isEmpty()) {
                  if (settings.chkzindex->isChecked() == false) {
-                 Settings::removeFromZcashConf(zcashConfLocation, "zindex");
-                 Settings::addToZcashConf(zcashConfLocation, "reindex=1");
+                 Settings::removeFromHushConf(hushConfLocation, "zindex");
+                 Settings::addToHushConf(hushConfLocation, "reindex=1");
                 showReindexInfo = true;       
                  }
             }
@@ -579,18 +574,18 @@ void MainWindow::addressBook() {
     AddressBook::open(this);
 }
 
-void MainWindow::discord() {
-    QString url = "https://myhush.org/discord/";
+void MainWindow::telegram() {
+    QString url = "https://hush.is/tg";
     QDesktopServices::openUrl(QUrl(url));
 }
 
 void MainWindow::reportbug() {
-    QString url = "https://github.com/MyHush/SilentDragon/issues/new";
+    QString url = "https://git.hush.is/hush/SilentDragon/issues/new";
     QDesktopServices::openUrl(QUrl(url));
 }
 
 void MainWindow::website() {
-    QString url = "https://myhush.org";
+    QString url = "https://hush.is";
     QDesktopServices::openUrl(QUrl(url));
 }
 
@@ -608,9 +603,7 @@ void MainWindow::donate() {
     ui->tabWidget->setCurrentIndex(1);
 }
 
-/**
- * Validate an address
- */
+// Validate an address
 void MainWindow::validateAddress() {
     // Make sure everything is up and running
     if (!getRPC() || !getRPC()->getConnection())
@@ -699,7 +692,7 @@ void MainWindow::balancesReady() {
     // process it.
     if (!pendingURIPayment.isEmpty()) {
         qDebug() << "Paying hush URI";
-        payZcashURI(pendingURIPayment);
+        payHushURI(pendingURIPayment);
         pendingURIPayment = "";
     }
 
@@ -710,7 +703,7 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event) {
     if (event->type() == QEvent::FileOpen) {
         QFileOpenEvent *fileEvent = static_cast<QFileOpenEvent*>(event);
         if (!fileEvent->url().isEmpty())
-            payZcashURI(fileEvent->url().toString());
+            payHushURI(fileEvent->url().toString());
 
         return true;
     }
@@ -722,7 +715,7 @@ bool MainWindow::eventFilter(QObject *object, QEvent *event) {
 // Pay the Hush URI by showing a confirmation window. If the URI parameter is empty, the UI
 // will prompt for one. If the myAddr is empty, then the default from address is used to send
 // the transaction.
-void MainWindow::payZcashURI(QString uri, QString myAddr) {
+void MainWindow::payHushURI(QString uri, QString myAddr) {
     // If the Payments UI is not ready (i.e, all balances have not loaded), defer the payment URI
     if (!uiPaymentsReady) {
         qDebug() << "Payment UI not ready, waiting for UI to pay URI";
@@ -844,15 +837,15 @@ void MainWindow::backupWalletDat() {
     if (!rpc->getConnection())
         return;
 
-    QDir zcashdir(rpc->getConnection()->config->zcashDir);
+    QDir hushdir(rpc->getConnection()->config->hushDir);
     QString backupDefaultName = "hush-wallet-backup-" + QDateTime::currentDateTime().toString("yyyyMMdd") + ".dat";
 
     if (Settings::getInstance()->isTestnet()) {
-        zcashdir.cd("testnet3");
+        hushdir.cd("testnet3");
         backupDefaultName = "testnet-" + backupDefaultName;
     }
 
-    QFile wallet(zcashdir.filePath("wallet.dat"));
+    QFile wallet(hushdir.filePath("wallet.dat"));
     if (!wallet.exists()) {
         QMessageBox::critical(this, tr("No wallet.dat"), tr("Couldn't find the wallet.dat on this computer") + "\n" +
             tr("You need to back it up from the machine hushd is running on"), QMessageBox::Ok);
@@ -1068,6 +1061,69 @@ void MainWindow::setupBalancesTab() {
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
         });
 
+/*  Example reply from z_shieldcoinbase and z_mergetoaddress
+{
+  "remainingUTXOs": 0,
+  "remainingValue": 0.00000000,
+  "shieldingUTXOs": 6,
+  "shieldingValue": 16.87530000,
+  "opid": "opid-0245ddfa-5f60-4e00-8ace-e782d814132b"
+}
+*/
+
+        if(addr.startsWith("zs1")) {
+            menu.addAction(tr("Shield all non-mining taddr funds to this zaddr"), [=] () {
+                QJsonArray params = QJsonArray { "ANY_TADDR" , addr };
+                qDebug() << "Calling mergeToAddress with params=" << params;
+
+                rpc->mergeToAddress(params, [=](const QJsonValue& reply) {
+                    qDebug() << "mergeToAddress reply=" << reply;
+                    QString shieldingValue = reply.toObject()["shieldingValue"].toString();
+                    QString opid           = reply.toObject()["opid"].toString();
+                    auto    remainingUTXOs = reply.toObject()["remainingUTXOs"].toInt();
+                    if(remainingUTXOs > 0) {
+                       //TODO: more utxos to shield
+                    }
+
+                    ui->statusBar->showMessage(tr("Shielded") + shieldingValue + " HUSH in transparent funds to " + addr + " in opid " + opid, 3 * 1000);
+                }, [=](QString errStr) {
+                    qDebug() << "z_mergetoaddress pooped:" << errStr;
+                    if(errStr == "Could not find any funds to merge.") {
+                        ui->statusBar->showMessage("No funds found to shield!");
+                    }
+                });
+
+            });
+        }
+
+        if(addr.startsWith("zs1")) {
+        menu.addAction(tr("Shield all mining funds to this zaddr"), [=] () {
+            //QJsonArray params = QJsonArray {addr, zaddresses->first() };
+            // We shield all coinbase funds to the selected zaddr
+            QJsonArray params = QJsonArray {"*", addr };
+
+            qDebug() << "Calling shieldCoinbase with params=" << params;
+            rpc->shieldCoinbase(params, [=](const QJsonValue& reply) {
+                QString shieldingValue = reply.toObject()["shieldingValue"].toString();
+                QString opid           = reply.toObject()["opid"].toString();
+                auto    remainingUTXOs = reply.toObject()["remainingUTXOs"].toInt();
+                qDebug() << "ShieldCoinbase reply=" << reply;
+                // By default we shield 50 blocks at a time
+                if(remainingUTXOs > 0) {
+                   //TODO: more utxos to shield 
+                }
+                ui->statusBar->showMessage(tr("Shielded") + shieldingValue + " HUSH in Mining funds to " + addr + " in opid " + opid, 3 * 1000);
+            }, [=](QString errStr) {
+                //error("", errStr); 
+                qDebug() << "z_shieldcoinbase pooped:" << errStr;
+                if(errStr == "Could not find any coinbase funds to shield.") {
+                    ui->statusBar->showMessage("No mining funds found to shield!");
+                }
+            });
+
+        });
+        }
+
         menu.addAction(tr("Get private key"), [=] () {
             this->exportKeys(addr);
         });
@@ -1122,6 +1178,7 @@ void MainWindow::setupBalancesTab() {
                 QDesktopServices::openUrl(QUrl(url));
             });
 
+            //TODO: should this be kept?
             menu.addAction(tr("Convert Address"), [=] () {
                 QString url;
                 url = "https://dexstats.info/addressconverter.php?fromcoin=HUSH3&address=" + addr;
@@ -1133,8 +1190,148 @@ void MainWindow::setupBalancesTab() {
     });
 }
 
+QString peer2ip(QString peer) {
+    QString ip = "";
+    if(peer.contains("[")) {
+        // this is actually ipv6, grab it all except the port
+        auto parts = peer.split(":");
+        parts[8]=""; // remove  port
+        peer = parts.join(":");
+        peer.chop(1); // remove trailing :
+    } else {
+        ip     = peer.split(":")[0];
+    }
+    return ip;
+}
+
+void MainWindow::setupPeersTab() {
+    qDebug() << __FUNCTION__;
+    // Set up context menu on transactions tab
+    ui->peersTable->setContextMenuPolicy(Qt::CustomContextMenu);
+    ui->bannedPeersTable->setContextMenuPolicy(Qt::CustomContextMenu);
+
+    // Table right click
+    QObject::connect(ui->bannedPeersTable, &QTableView::customContextMenuRequested, [=] (QPoint pos) {
+        QModelIndex index = ui->peersTable->indexAt(pos);
+        if (index.row() < 0) return;
+
+        QMenu menu(this);
+
+        auto bannedPeerModel = dynamic_cast<BannedPeersTableModel *>(ui->bannedPeersTable->model());
+        QString addr         = bannedPeerModel->getAddress(index.row());
+        QString ip           = peer2ip(addr);
+        QString subnet       = bannedPeerModel->getSubnet(index.row());
+        //qint64 banned_until  = bannedPeerModel->getBannedUntil(index.row());
+
+        if(!ip.isEmpty()) {
+            menu.addAction(tr("Copy banned peer IP"), [=] () {
+                QGuiApplication::clipboard()->setText(ip);
+                ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+            });
+        }
+
+        // shodan only supports ipv4 addresses *and* we get ipv6 addresses
+        // in a different format, yay
+        if(!ip.isEmpty() && !ip.contains(":")) {
+            menu.addAction(tr("View banned host IP on shodan.io (3rd party service)"), [=] () {
+                QString url = "https://www.shodan.io/host/" + ip;
+                qDebug() << "opening " << url;
+                QDesktopServices::openUrl(QUrl(url));
+            });
+        }
+
+        menu.exec(ui->bannedPeersTable->viewport()->mapToGlobal(pos));
+    });
+
+    // Table right click
+    QObject::connect(ui->peersTable, &QTableView::customContextMenuRequested, [=] (QPoint pos) {
+        QModelIndex index = ui->peersTable->indexAt(pos);
+        if (index.row() < 0) return;
+
+        QMenu menu(this);
+
+        auto peerModel = dynamic_cast<PeersTableModel *>(ui->peersTable->model());
+        QString addr   = peerModel->getAddress(index.row());
+        QString cipher = peerModel->getTLSCipher(index.row());
+        qint64 asn     = peerModel->getASN(index.row());
+        QString ip     = peer2ip(addr);
+        QString as     = QString::number(asn);
+
+        menu.addAction(tr("Copy peer address+port"), [=] () {
+            QGuiApplication::clipboard()->setText(addr);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        //TODO: support Tor correctly when v3 lands
+        menu.addAction(tr("Copy peer address"), [=] () {
+            QGuiApplication::clipboard()->setText(ip);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        menu.addAction(tr("Copy TLS ciphersuite"), [=] () {
+            QGuiApplication::clipboard()->setText(cipher);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        menu.addAction(tr("Copy ASN"), [=] () {
+            QGuiApplication::clipboard()->setText(as);
+            ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
+        });
+
+        // shodan only supports ipv4 addresses
+        if(!ip.isEmpty() && !ip.contains("[")) {
+            menu.addAction(tr("View host on shodan.io (3rd party service)"), [=] () {
+                QString url = "https://www.shodan.io/host/" + ip;
+                qDebug() << "opening " << url;
+                QDesktopServices::openUrl(QUrl(url));
+            });
+        }
+
+        if(!as.isEmpty()) {
+            menu.addAction(tr("View ASN on bgpview.io (3rd party service)"), [=] () {
+                QString url = "https://bgpview.io/asn/" + as;
+                qDebug() << "opening " << url;
+                QDesktopServices::openUrl(QUrl(url));
+            });
+        }
+
+        menu.exec(ui->peersTable->viewport()->mapToGlobal(pos));
+    });
+
+    /*
+    //grep 'BAN THRESHOLD EXCEEDED' ~/.komodo/HUSH3/debug.log
+    //grep Disconnected ...
+    QFile debuglog = "";
+
+#ifdef Q_OS_LINUX
+    debuglog = "~/.komodo/HUSH3/debug.log";
+#elif defined(Q_OS_DARWIN)
+    debuglog = "~/Library/Application Support/Komodo/HUSH3/debug.log";
+#elif defined(Q_OS_WIN64)
+    // "C:/Users/<USER>/AppData/Roaming/<APPNAME>", 
+    // TODO: get current username
+    debuglog = "C:/Users/<USER>/AppData/Roaming/Komodo/HUSH3/debug.log";
+#else
+    // Bless Your Heart, You Like Danger!
+    // There are open bounties to port HUSH softtware to OpenBSD and friends:
+    // git.hush.is/hush/tasks
+    debuglog = "~/.komodo/HUSH3/debug.log";
+#endif // Q_OS_LINUX
+
+    if(debuglog.exists()) {
+        qDebug() << __func__ << ": Found debuglog at " << debuglog;
+    } else {
+        qDebug() << __func__ << ": No debug.log found";
+    }
+    */
+
+    //ui->recentlyBannedPeers = "Could not open " + debuglog;
+
+}
+
 void MainWindow::setupHushTab() {
-    ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
+    QPixmap image(":/img/res/tropical-hush-square.png");
+    ui->hushlogo->setBasePixmap( image ); // image.scaled(600,600,  Qt::KeepAspectRatioByExpanding, Qt::FastTransformation ) );
 }
 /*
 void MainWindow::setupChatTab() {

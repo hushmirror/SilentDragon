@@ -1,8 +1,11 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include "precompiled.h"
 #include "logger.h"
+#include <memory>
 
 // Forward declare to break circular dependency.
 class RPC;
@@ -52,7 +55,7 @@ public:
     void stopWebsocket();
 
     void balancesReady();
-    void payZcashURI(QString uri = "", QString myAddr = "");
+    void payHushURI(QString uri = "", QString myAddr = "");
 
     void validateAddress();
 
@@ -65,7 +68,6 @@ public:
     QLabel*             statusLabel;
     QLabel*             statusIcon;
     QLabel*             loadingLabel;
-    QWidget*            zcashdtab;
 
     Logger*      logger;
 
@@ -75,6 +77,7 @@ private:
     void closeEvent(QCloseEvent* event);
 
     void setupSendTab();
+    void setupPeersTab();
     void setupTransactionsTab();
     void setupReceiveTab();
     void setupBalancesTab();
@@ -92,9 +95,6 @@ private:
 
     Tx   createTxFromSendPage();
     bool confirmTx(Tx tx);
-
-    void turnstileDoMigration(QString fromAddr = "");
-    void turnstileProgress();
 
     void cancelButton();
     void sendButton();
@@ -116,7 +116,7 @@ private:
     
     void donate();
     void website();
-    void discord();
+    void telegram();
     void reportbug();
     void addressBook();
     void postToZBoard();

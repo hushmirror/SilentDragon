@@ -9,7 +9,7 @@ Website: https://www.csharpe.me
 License: https://opensource.org/licenses/MIT
 */
 
-QWidget, QMainWindow, QMenuBar, QMenu, QDialog, QTabWidget, QTableView, QTableView::item, QScrollArea, QGroupBox, QPlainTextEdit, QLineEdit, QLabel, MainWindow
+QWidget, QMainWindow, QMenuBar, QMenu, QDialog, QTabWidget, QTableView, QTableView::item, QScrollArea, QGroupBox, QPlainTextEdit, QLineEdit, QLabel, MainWindow, QPixmap, QHBoxLayout, QVBoxLayout, QGridLayout, QAbstractItemView, QFrame
 {
 background-color: #111;
 color: #fff;

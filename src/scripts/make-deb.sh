@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2019-2020 The Hush developers
+# Copyright (c) 2019-2021 The Hush developers
 # Thanks to Zecwallet for the original code
 # Released under the GPLv3
 
@@ -19,18 +19,18 @@ if [ -z $HUSH_DIR ]; then
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/komodod ]; then
-    echo "Couldn't find komodod in $HUSH_DIR . Please build komodod."
+if [ ! -f $HUSH_DIR/hushd ]; then
+    echo "Couldn't find hushd in $HUSH_DIR . Please build hushd."
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/komodo-cli ]; then
-    echo "Couldn't find komodo-cli in $HUSH_DIR . Please build komodo-cli."
+if [ ! -f $HUSH_DIR/hush-cli ]; then
+    echo "Couldn't find hush-cli in $HUSH_DIR . Please build hush-cli."
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/komodo-tx ]; then
-    echo "Couldn't find komodo-tx in $HUSH_DIR . Please build komodo-tx."
+if [ ! -f $HUSH_DIR/hush-tx ]; then
+    echo "Couldn't find hush-tx in $HUSH_DIR . Please build hush-tx."
     exit 1;
 fi
 
@@ -73,9 +73,6 @@ mkdir $DIR > /dev/null
 strip silentdragon
 
 cp silentdragon                  $DIR > /dev/null
-cp $HUSH_DIR/artifacts/komodod    $DIR > /dev/null
-cp $HUSH_DIR/artifacts/komodo-cli $DIR > /dev/null
-cp $HUSH_DIR/artifacts/komodo-tx $DIR > /dev/null
 cp $HUSH_DIR/artifacts/hushd    $DIR > /dev/null
 cp $HUSH_DIR/artifacts/hush-cli $DIR > /dev/null
 cp $HUSH_DIR/artifacts/hush-tx $DIR > /dev/null
@@ -113,8 +110,7 @@ mkdir -p $debdir/usr/local/bin
 cat src/scripts/control | sed "s/RELEASE_VERSION/$APP_VERSION/g" > $debdir/DEBIAN/control
 
 cp silentdragon                   $debdir/usr/local/bin/
-# TODO: how does this interact with hushd deb ?
-cp $HUSH_DIR/artifacts/komodod $debdir/usr/local/bin/hush-komodod
+cp $HUSH_DIR/artifacts/hushd $debdir/usr/local/bin/hushd
 
 mkdir -p $debdir/usr/share/pixmaps/
 cp res/silentdragon.xpm           $debdir/usr/share/pixmaps/

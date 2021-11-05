@@ -1,19 +1,20 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef RPCCLIENT_H
 #define RPCCLIENT_H
 
 #include "precompiled.h"
-
 #include "balancestablemodel.h"
 #include "txtablemodel.h"
+#include "peerstablemodel.h"
+#include "bannedpeerstablemodel.h"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 #include "connection.h"
 
-class Turnstile;
-
 struct TransactionItem {
     QString         type;
-    qint64            datetime;
+    qint64          datetime;
     QString         address;
     QString         txid;
     double          amount;
@@ -21,6 +22,29 @@ struct TransactionItem {
     QString         fromAddr;
     QString         memo;
 };
+
+struct BannedPeerItem {
+    QString     address;
+    QString     subnet;
+    qint64      banned_until;
+};
+
+struct PeerItem {
+    qint64          peerid;
+    QString         type;
+    qint64          conntime;
+    QString         address;
+    qint64          asn;
+    QString         tls_cipher;
+    bool            tls_verified;
+    qint64          banscore;
+    qint64          protocolversion;
+    QString         subver;
+    qint64          bytes_received;
+    qint64          bytes_sent;
+    double          pingtime;
+};
+
 
 struct WatchedTx {
     QString opid;
@@ -36,12 +60,13 @@ public:
     ~RPC();
 
     void setConnection(Connection* c);
-    void setEZcashd(std::shared_ptr<QProcess> p);
-    const QProcess* getEZcashD() { return ezcashd.get(); }
+    void setEHushd(std::shared_ptr<QProcess> p);
+    const QProcess* getEHushD() { return ehushd.get(); }
 
     void refresh(bool force = false);
 
     void refreshAddresses();    
+    void refreshPeers();    
     
     void checkForUpdate(bool silent = true);
     void refreshPrice();
@@ -54,12 +79,15 @@ public:
 
     void fillTxJsonParams(QJsonArray& params, Tx tx);
     void sendZTransaction(QJsonValue params, const std::function<void(QJsonValue)>& cb, const std::function<void(QString)>& err);
+    void shieldCoinbase(QJsonArray& params, const std::function<void(QJsonValue)>& cb, const std::function<void(QString)>& err);
+    void mergeToAddress(QJsonArray& params, const std::function<void(QJsonValue)>& cb, const std::function<void(QString)>& err);
     void watchTxStatus();
 
     const QMap<QString, WatchedTx> getWatchingTxns() { return watchingOps; }
     void addNewTxToWatch(const QString& newOpid, WatchedTx wtx); 
 
     const TxTableModel*               getTransactionsModel() { return transactionsTableModel; }
+    const PeersTableModel*            getPeersModel()        { return peersTableModel; }
     const QList<QString>*             getAllZAddresses()     { return zaddresses; }
     const QList<QString>*             getAllTAddresses()     { return taddresses; }
     const QList<UnspentOutput>*       getUTXOs()             { return utxos; }
@@ -76,16 +104,15 @@ public:
     void importTPrivKey(QString addr, bool rescan, const std::function<void(QJsonValue)>& cb);
     void validateAddress(QString address, const std::function<void(QJsonValue)>& cb);
 
-    void shutdownZcashd();
+    void shutdownHushd();
     void noConnection();
-    bool isEmbedded() { return ezcashd != nullptr; }
+    bool isEmbedded() { return ehushd != nullptr; }
 
     QString getDefaultSaplingAddress();
     QString getDefaultTAddress();
 
     void getAllPrivKeys(const std::function<void(QList<QPair<QString, QString>>)>);
 
-    Turnstile*  getTurnstile()  { return turnstile; }
     Connection* getConnection() { return conn; }
 
 private:
@@ -107,12 +134,13 @@ private:
     void getTransparentUnspent  (const std::function<void(QJsonValue)>& cb);
     void getZUnspent            (const std::function<void(QJsonValue)>& cb);
     void getTransactions        (const std::function<void(QJsonValue)>& cb);
+    void listBanned             (const std::function<void(QJsonValue)>& cb);
+    void getPeerInfo            (const std::function<void(QJsonValue)>& cb);
     void getZAddresses          (const std::function<void(QJsonValue)>& cb);
     void getTAddresses          (const std::function<void(QJsonValue)>& cb);
 
     Connection*                 conn                        = nullptr;
-    std::shared_ptr<QProcess>   ezcashd                     = nullptr;
-
+    std::shared_ptr<QProcess>   ehushd                      = nullptr;
     QList<UnspentOutput>*       utxos                       = nullptr;
     QMap<QString, double>*      allBalances                 = nullptr;
     QMap<QString, bool>*        usedAddresses               = nullptr;
@@ -122,6 +150,8 @@ private:
     QMap<QString, WatchedTx>    watchingOps;
 
     TxTableModel*               transactionsTableModel      = nullptr;
+    PeersTableModel*            peersTableModel             = nullptr;
+    BannedPeersTableModel*      bannedPeersTableModel       = nullptr;
     BalancesTableModel*         balancesTableModel          = nullptr;
 
     QTimer*                     timer;
@@ -130,7 +160,6 @@ private:
 
     Ui::MainWindow*             ui;
     MainWindow*                 main;
-    Turnstile*                  turnstile;
 
     // Current balance in the UI. If this number updates, then refresh the UI
     QString                     currentBalance;

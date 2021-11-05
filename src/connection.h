@@ -1,3 +1,5 @@
+// Copyright 2019-2021 The Hush developers
+// Released under the GPLv3
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
@@ -8,9 +10,9 @@
 class RPC;
 
 enum ConnectionType {
-    DetectedConfExternalZcashD = 1,
+    DetectedConfExternalHushD = 1,
     UISettingsZCashD,
-    InternalZcashD
+    InternalHushD
 };
 
 struct ConnectionConfig {
@@ -18,9 +20,9 @@ struct ConnectionConfig {
     QString port;
     QString rpcuser;
     QString rpcpassword;
-    bool    usingZcashConf;
-    bool    zcashDaemon;
-    QString zcashDir;
+    bool    usingHushConf;
+    bool    hushDaemon;
+    QString hushDir;
     QString proxy;
     QString consolidation;
     QString deletetx;
@@ -40,7 +42,7 @@ public:
     void loadConnection();
 
 private:
-    std::shared_ptr<ConnectionConfig> autoDetectZcashConf();
+    std::shared_ptr<ConnectionConfig> autoDetectHushConf();
     std::shared_ptr<ConnectionConfig> loadFromSettings();
 
     Connection* makeConnection(std::shared_ptr<ConnectionConfig> config);
@@ -48,24 +50,24 @@ private:
     void doAutoConnect(bool tryEzcashdStart = true);
     void doManualConnect();
 
-    void createZcashConf();
-    QString locateZcashConfFile();
-    QString zcashConfWritableLocation();
+    void createHushConf();
+    QString locateHushConfFile();
+    QString hushConfWritableLocation();
     QString zcashParamsDir();
 
     bool verifyParams();
     void downloadParams(std::function<void(void)> cb);
     void doNextDownload(std::function<void(void)> cb);
-    bool startEmbeddedZcashd();
+    bool startEmbeddedHushd();
 
-    void refreshZcashdState(Connection* connection, std::function<void(void)> refused);
+    void refreshHushdState(Connection* connection, std::function<void(void)> refused);
 
     void showError(QString explanation);
     void showInformation(QString info, QString detail = "");
 
     void doRPCSetConnection(Connection* conn);
 
-    std::shared_ptr<QProcess> ezcashd;
+    std::shared_ptr<QProcess> ehushd;
 
     QDialog*                d;
     Ui_ConnectionDialog*    connD;

@@ -1,4 +1,4 @@
-// Copyright 2019-2020 Hush developers
+// Copyright 2019-2021 Hush developers
 // Released under the GPLv3
 #include "mainwindow.h"
 #include "settings.h"
@@ -35,8 +35,8 @@ void Settings::setAllowFetchPrices(bool allow) {
 Explorer Settings::getExplorer() {
     // Load from the QT Settings.
     QSettings s;
-    //TODO: make it easy for people to use other explorers like komodod.com
-    QString explorer = "https://explorer.myhush.org";
+    //TODO: make it easy for people to use other explorers
+    QString explorer = "https://explorer.hush.is";
 
     auto txExplorerUrl                = s.value("explorer/txExplorerUrl", explorer + "/tx/").toString();
     auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl", explorer + "/address/").toString();
@@ -89,7 +89,7 @@ void Settings::saveRestoreTableHeader(QTableView* table, QDialog* d, QString tab
     });
 }
 
-void Settings::setUsingZcashConf(QString confLocation) {
+void Settings::setUsingHushConf(QString confLocation) {
     if (!confLocation.isEmpty())
         _confLocation = confLocation;
 }
@@ -131,12 +131,12 @@ bool Settings::isTAddress(QString addr) {
     return addr.startsWith("R");
 }
 
-int Settings::getZcashdVersion() {
-    return _zcashdVersion;
+int Settings::getHushdVersion() {
+    return _hushdVersion;
 }
 
-void Settings::setZcashdVersion(int version) {
-    _zcashdVersion = version;
+void Settings::setHushdVersion(int version) {
+    _hushdVersion = version;
 }
 
 bool Settings::isSyncing() {
@@ -329,7 +329,7 @@ QString Settings::getDonationAddr() {
     return "zs1aq4xnrkjlnxx0zesqye7jz3dfrf3rjh7q5z6u8l6mwyqqaam3gx3j2fkqakp33v93yavq46j83q";
 }
 
-bool Settings::addToZcashConf(QString confLocation, QString line) {
+bool Settings::addToHushConf(QString confLocation, QString line) {
     QFile file(confLocation);
     if (!file.open(QIODevice::ReadWrite | QIODevice::Append))
         return false;
@@ -352,7 +352,7 @@ void Settings::set_currency_name(QString currency_name) {
 }
 
 
-bool Settings::removeFromZcashConf(QString confLocation, QString option) {
+bool Settings::removeFromHushConf(QString confLocation, QString option) {
     if (confLocation.isEmpty())
         return false;
 
