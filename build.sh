@@ -19,6 +19,19 @@ VERSION=$(cat src/version.h |cut -d\" -f2)
 echo "Compiling SilentDragon $VERSION with $JOBS threads..."
 CONF=silentdragon.pro
 
+if ! command -v qmake &> /dev/null
+then
+    echo "qmake could not be found. Please install QT and try again."
+    exit 1
+fi
+
+if ! command -v make &> /dev/null
+then
+    echo "make could not be found. Please install it and try again."
+    exit 1
+fi
+
+
 qbuild () {
    qmake $CONF -spec linux-clang CONFIG+=debug
    make -j$JOBS
