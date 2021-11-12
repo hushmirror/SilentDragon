@@ -1655,7 +1655,7 @@ void MainWindow::setupReceiveTab() {
         }
 
         ui->rcvLabel->setText(label);
-        ui->rcvBal->setText(Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(addr)));
+        ui->rcvBal->setText(Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(addr)));
         ui->txtReceive->setPlainText(addr);
         ui->qrcodeDisplay->setQrcodeString(addr);
         if (rpc->getUsedAddresses()->value(addr, false)) {

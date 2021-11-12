@@ -663,9 +663,9 @@ bool MainWindow::confirmTx(Tx tx) {
     // And FromAddress in the confirm dialog 
     confirm.sendFrom->setText(fnSplitAddressForWrap(tx.fromAddr));
     QString tooltip = tr("Current balance      : ") +
-        Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr));
+        Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr));
     tooltip += "\n" + tr("Balance after this Tx: ") +
-        Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr) - totalSpending);
+        Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr) - totalSpending);
     confirm.sendFrom->setToolTip(tooltip);
 
     // Show the dialog and submit it if the user confirms
