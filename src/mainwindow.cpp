@@ -279,7 +279,7 @@ void MainWindow::setupSettingsModal() {
             currency_name = Settings::getInstance()->get_currency_name();
         } catch (const std::exception& e) {
             qDebug() << QString("Currency name exception! : ");
-            currency_name = "USD";
+            currency_name = "BTC";
         }
 
         this->slot_change_currency(currency_name);
@@ -1758,7 +1758,7 @@ void MainWindow::slot_change_currency(const QString& currency_name)
        saved_currency_name = Settings::getInstance()->get_currency_name();
     } catch (const std::exception& e) {
         qDebug() << QString("Ignoring currency change Exception! : ");
-        saved_currency_name = "USD";
+        saved_currency_name = "BTC";
     }
 }
 
