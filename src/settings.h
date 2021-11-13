@@ -123,7 +123,7 @@ public:
     static QString getDecimalString(double amt);
     static QString getUSDFormat(double bal);
     static QString getDisplayFormat(double bal);
-    static QString getZECUSDDisplayFormat(double bal);
+    static QString getHUSHUSDDisplayFormat(double bal);
 
     static QString getTokenName();
     static QString getDonationAddr();
@@ -158,7 +158,7 @@ private:
     bool    _isTestnet        = false;
     bool    _isSyncing        = false;
     int     _blockNumber      = 0;
-    int     _zcashdVersion    = 0;
+    int     _hushdVersion    = 0;
     bool    _useEmbedded      = false;
     bool    _headless         = false;
     int     _peerConnections  = 0;

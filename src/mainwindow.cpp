@@ -61,7 +61,7 @@ MainWindow::MainWindow(QWidget *parent) :
     });
 
     // Request hush
-    QObject::connect(ui->actionRequest_zcash, &QAction::triggered, [=]() {
+    QObject::connect(ui->actionRequest_hush, &QAction::triggered, [=]() {
         RequestDialog::showRequestZcash(this);
     });
 
@@ -103,7 +103,7 @@ MainWindow::MainWindow(QWidget *parent) :
         about.setupUi(&aboutDialog);
         Settings::saveRestore(&aboutDialog);
 
-        QString version    = QString("Version ") % QString(APP_VERSION) % " (" % QString(__DATE__) % ")";
+        QString version    = QString("Version ") % QString(APP_VERSION) % " (" % QString(__DATE__) % ") using QT " % qVersion();
         about.versionLabel->setText(version);
 
         aboutDialog.exec();
@@ -279,7 +279,7 @@ void MainWindow::setupSettingsModal() {
             currency_name = Settings::getInstance()->get_currency_name();
         } catch (const std::exception& e) {
             qDebug() << QString("Currency name exception! : ");
-            currency_name = "USD";
+            currency_name = "BTC";
         }
 
         this->slot_change_currency(currency_name);
@@ -346,8 +346,8 @@ void MainWindow::setupSettingsModal() {
 
         bool isUsingConsolidation = false;
         int size = 0;
-        QDir zcashdir(rpc->getConnection()->config->zcashDir);
-        QFile WalletSize(zcashdir.filePath("wallet.dat"));
+        QDir hushdir(rpc->getConnection()->config->hushDir);
+        QFile WalletSize(hushdir.filePath("wallet.dat"));
         if (WalletSize.open(QIODevice::ReadOnly)){
         size = WalletSize.size() / 1000000;  //when file does open.
         //QString size1 = QString::number(size) ;
@@ -837,15 +837,15 @@ void MainWindow::backupWalletDat() {
     if (!rpc->getConnection())
         return;
 
-    QDir zcashdir(rpc->getConnection()->config->zcashDir);
+    QDir hushdir(rpc->getConnection()->config->hushDir);
     QString backupDefaultName = "hush-wallet-backup-" + QDateTime::currentDateTime().toString("yyyyMMdd") + ".dat";
 
     if (Settings::getInstance()->isTestnet()) {
-        zcashdir.cd("testnet3");
+        hushdir.cd("testnet3");
         backupDefaultName = "testnet-" + backupDefaultName;
     }
 
-    QFile wallet(zcashdir.filePath("wallet.dat"));
+    QFile wallet(hushdir.filePath("wallet.dat"));
     if (!wallet.exists()) {
         QMessageBox::critical(this, tr("No wallet.dat"), tr("Couldn't find the wallet.dat on this computer") + "\n" +
             tr("You need to back it up from the machine hushd is running on"), QMessageBox::Ok);
@@ -1061,6 +1061,69 @@ void MainWindow::setupBalancesTab() {
             ui->statusBar->showMessage(tr("Copied to clipboard"), 3 * 1000);
         });
 
+/*  Example reply from z_shieldcoinbase and z_mergetoaddress
+{
+  "remainingUTXOs": 0,
+  "remainingValue": 0.00000000,
+  "shieldingUTXOs": 6,
+  "shieldingValue": 16.87530000,
+  "opid": "opid-0245ddfa-5f60-4e00-8ace-e782d814132b"
+}
+*/
+
+        if(addr.startsWith("zs1")) {
+            menu.addAction(tr("Shield all non-mining taddr funds to this zaddr"), [=] () {
+                QJsonArray params = QJsonArray { "ANY_TADDR" , addr };
+                qDebug() << "Calling mergeToAddress with params=" << params;
+
+                rpc->mergeToAddress(params, [=](const QJsonValue& reply) {
+                    qDebug() << "mergeToAddress reply=" << reply;
+                    QString shieldingValue = reply.toObject()["shieldingValue"].toString();
+                    QString opid           = reply.toObject()["opid"].toString();
+                    auto    remainingUTXOs = reply.toObject()["remainingUTXOs"].toInt();
+                    if(remainingUTXOs > 0) {
+                       //TODO: more utxos to shield
+                    }
+
+                    ui->statusBar->showMessage(tr("Shielded") + shieldingValue + " HUSH in transparent funds to " + addr + " in opid " + opid, 3 * 1000);
+                }, [=](QString errStr) {
+                    qDebug() << "z_mergetoaddress pooped:" << errStr;
+                    if(errStr == "Could not find any funds to merge.") {
+                        ui->statusBar->showMessage("No funds found to shield!");
+                    }
+                });
+
+            });
+        }
+
+        if(addr.startsWith("zs1")) {
+        menu.addAction(tr("Shield all mining funds to this zaddr"), [=] () {
+            //QJsonArray params = QJsonArray {addr, zaddresses->first() };
+            // We shield all coinbase funds to the selected zaddr
+            QJsonArray params = QJsonArray {"*", addr };
+
+            qDebug() << "Calling shieldCoinbase with params=" << params;
+            rpc->shieldCoinbase(params, [=](const QJsonValue& reply) {
+                QString shieldingValue = reply.toObject()["shieldingValue"].toString();
+                QString opid           = reply.toObject()["opid"].toString();
+                auto    remainingUTXOs = reply.toObject()["remainingUTXOs"].toInt();
+                qDebug() << "ShieldCoinbase reply=" << reply;
+                // By default we shield 50 blocks at a time
+                if(remainingUTXOs > 0) {
+                   //TODO: more utxos to shield 
+                }
+                ui->statusBar->showMessage(tr("Shielded") + shieldingValue + " HUSH in Mining funds to " + addr + " in opid " + opid, 3 * 1000);
+            }, [=](QString errStr) {
+                //error("", errStr); 
+                qDebug() << "z_shieldcoinbase pooped:" << errStr;
+                if(errStr == "Could not find any coinbase funds to shield.") {
+                    ui->statusBar->showMessage("No mining funds found to shield!");
+                }
+            });
+
+        });
+        }
+
         menu.addAction(tr("Get private key"), [=] () {
             this->exportKeys(addr);
         });
@@ -1267,7 +1330,6 @@ void MainWindow::setupPeersTab() {
 }
 
 void MainWindow::setupHushTab() {
-   // ui->hushlogo->setBasePixmap(QPixmap(":/img/res/zcashdlogo.gif"));
     QPixmap image(":/img/res/tropical-hush-square.png");
     ui->hushlogo->setBasePixmap( image ); // image.scaled(600,600,  Qt::KeepAspectRatioByExpanding, Qt::FastTransformation ) );
 }
@@ -1593,7 +1655,7 @@ void MainWindow::setupReceiveTab() {
         }
 
         ui->rcvLabel->setText(label);
-        ui->rcvBal->setText(Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(addr)));
+        ui->rcvBal->setText(Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(addr)));
         ui->txtReceive->setPlainText(addr);
         ui->qrcodeDisplay->setQrcodeString(addr);
         if (rpc->getUsedAddresses()->value(addr, false)) {
@@ -1696,7 +1758,7 @@ void MainWindow::slot_change_currency(const QString& currency_name)
        saved_currency_name = Settings::getInstance()->get_currency_name();
     } catch (const std::exception& e) {
         qDebug() << QString("Ignoring currency change Exception! : ");
-        saved_currency_name = "USD";
+        saved_currency_name = "BTC";
     }
 }
 

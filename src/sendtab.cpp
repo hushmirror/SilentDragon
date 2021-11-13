@@ -506,24 +506,14 @@ Tx MainWindow::createTxFromSendPage() {
 
     if (Settings::getInstance()->getAllowCustomFees()) {
         tx.fee = ui->minerFeeAmt->text().toDouble();
-    }
-    else {
+    } else {
         tx.fee = Settings::getMinerFee();
     }
 
     if (Settings::getInstance()->getAutoShield() && sendChangeToSapling) {
         auto saplingAddr = std::find_if(rpc->getAllZAddresses()->begin(), rpc->getAllZAddresses()->end(), [=](auto i) -> bool { 
-            // We're finding a sapling address that is not one of the To addresses, because zcash doesn't allow duplicated addresses
-	    // TODO: Should we disable this in Hush? What are the privacy and chain analysis considerations?
             bool isSapling = Settings::getInstance()->isSaplingAddress(i); 
             if (!isSapling) return false;
-
-            // Also check all the To addresses
-            for (auto t : tx.toAddrs) {
-                if (t.addr == i)
-                    return false;
-            }
-
             return true;
         });
 
@@ -673,9 +663,9 @@ bool MainWindow::confirmTx(Tx tx) {
     // And FromAddress in the confirm dialog 
     confirm.sendFrom->setText(fnSplitAddressForWrap(tx.fromAddr));
     QString tooltip = tr("Current balance      : ") +
-        Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr));
+        Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr));
     tooltip += "\n" + tr("Balance after this Tx: ") +
-        Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr) - totalSpending);
+        Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(tx.fromAddr) - totalSpending);
     confirm.sendFrom->setToolTip(tooltip);
 
     // Show the dialog and submit it if the user confirms

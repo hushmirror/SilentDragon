@@ -87,7 +87,7 @@ You can install the pre-reqs and build on Ubuntu 18.04 & 20.04 with:
 sudo apt-get -y install qt5-default qt5-qmake libqt5websockets5-dev qtcreator
 git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
-./build.sh linguist # compile translations
+./build.sh linguist
 ./build.sh
 ./silentdragon
 ```
@@ -100,7 +100,7 @@ You can install the pre-reqs and build on Arch Linux with:
 sudo pacman -S qt5-base qt5-tools qtcreator qt5-websockets rust
 git clone https://git.hush.is/hush/SilentDragon
 cd SilentDragon
-./build.sh linguist # compile translations
+./build.sh linguist
 ./build.sh release
 ./silentdragon
 ```
@@ -148,8 +148,7 @@ these four files in your Git repo:
 
 ```shell script
 ln -s ../hush3/src/hushd
-ln -s ../hush3/src/komodod
-ln -s ../hush3/src/komodo-cli
+ln -s ../hush3/src/hush-cli
 ```
 
 The above assumes silentdragon and hush3 git repos are in the same directory. File names on Windows will need to be tweaked.

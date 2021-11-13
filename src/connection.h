@@ -22,7 +22,7 @@ struct ConnectionConfig {
     QString rpcpassword;
     bool    usingHushConf;
     bool    hushDaemon;
-    QString zcashDir;
+    QString hushDir;
     QString proxy;
     QString consolidation;
     QString deletetx;
@@ -47,13 +47,13 @@ private:
 
     Connection* makeConnection(std::shared_ptr<ConnectionConfig> config);
 
-    void doAutoConnect(bool tryEzcashdStart = true);
+    void doAutoConnect(bool tryEhushdStart = true);
     void doManualConnect();
 
     void createHushConf();
     QString locateHushConfFile();
-    QString zcashConfWritableLocation();
-    QString zcashParamsDir();
+    QString hushConfWritableLocation();
+    QString zkParamsDir();
 
     bool verifyParams();
     void downloadParams(std::function<void(void)> cb);
@@ -84,7 +84,7 @@ private:
 };
 
 /**
- * Represents a connection to a zcashd. It may even start a new zcashd if needed.
+ * Represents a connection to a hushd. It may even start a new hushd if needed.
  * This is also a UI class, so it may show a dialog waiting for the connection.
 */
 class Connection {
