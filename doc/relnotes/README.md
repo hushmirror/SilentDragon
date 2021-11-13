@@ -18,7 +18,7 @@ evil organizations.
 
     * This release of SD is only compatible with hushd 3.9.0 or later, which is a mandatory update
         * Older Hush full nodes will not be compatible with the Hush network going forward
-    * New shinier startup animation ( https://t.me/DanS\_MGDesign )
+    * New shinier startup animation by Dan S ( https://twitter.com/Dan\_MGDesign )
     * SD now looks for Hush full node data in `~/.hush/HUSH3` but still supports the legacy location
     * New Polish translation ( @onryo )
     * When right-clicking on a zaddr, there are now two new menu options
