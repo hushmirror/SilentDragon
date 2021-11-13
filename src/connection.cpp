@@ -359,6 +359,7 @@ bool ConnectionLoader::startEmbeddedHushd() {
         main->logger->write("Can't find hushd at " + hushdProgram);
         return false;
     } else {
+        qDebug() << "Found hushd at " << hushdProgram;
         main->logger->write("Found hushd at " + hushdProgram);
     }
 
@@ -373,7 +374,8 @@ bool ConnectionLoader::startEmbeddedHushd() {
     });
 
     QObject::connect(ehushd.get(), &QProcess::errorOccurred, [&] (QProcess::ProcessError error) {
-        qDebug() << "Couldn't start hushd at " << hushdProgram << ":" << error;
+        qDebug() << "Couldn't start hushd!";
+        qDebug() << "hushd at " << hushdProgram << ":" << error;
     });
 
     std::weak_ptr<QProcess> weak_obj(ehushd);
@@ -386,7 +388,7 @@ bool ConnectionLoader::startEmbeddedHushd() {
 
     // This string should be the exact arg list seperated by single spaces
     // Could be modified to start different Hush Smart Chains
-    QString params = ""; // "-ac_name=TUSH";
+    QString params = "-tls=only -clientname=GoldenSandtrout"; // "-ac_name=TUSH";
 
     /* This is now enabled by default in hushd
     // Binaries come with this file
