@@ -18,9 +18,9 @@ evil organizations.
 
     * This release of SD is only compatible with hushd 3.9.0 or later, which is a mandatory update
         * Older Hush full nodes will not be compatible with the Hush network going forward
-    * New shinier startup animation
+    * New shinier startup animation ( https://t.me/DanS\_MGDesign )
     * SD now looks for Hush full node data in `~/.hush/HUSH3` but still supports the legacy location
-    * New Polish translation (@onryo)
+    * New Polish translation ( @onryo )
     * When right-clicking on a zaddr, there are now two new menu options
         * Shield all mining funds to this zaddr (z_shieldcoinbase)
             * Use this if you are a solo miner who mined full blocks to a taddr
