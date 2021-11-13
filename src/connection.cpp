@@ -47,7 +47,7 @@ void ConnectionLoader::loadConnection() {
         d->exec();
 }
 
-void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
+void ConnectionLoader::doAutoConnect(bool tryEhushdStart) {
     // Priority 1: Ensure all params are present.
     if (!verifyParams()) {
         qDebug() << "Cannot find sapling params!";
@@ -64,7 +64,7 @@ void ConnectionLoader::doAutoConnect(bool tryEzcashdStart) {
         refreshHushdState(connection, [=] () {
             // Refused connection. So try and start embedded hushd
             if (Settings::getInstance()->useEmbedded()) {
-                if (tryEzcashdStart) {
+                if (tryEhushdStart) {
                     this->showInformation(QObject::tr("Starting embedded hushd"));
                     if (this->startEmbeddedHushd()) {
                         // Embedded hushd started up. Wait a second and then refresh the connection
@@ -255,7 +255,7 @@ void ConnectionLoader::doNextDownload(std::function<void(void)> cb) {
     int filesRemaining = downloadQueue->size();
 
     QString filename = fnSaveFileName(url);
-    QString paramsDir = zcashParamsDir();
+    QString paramsDir = zkParamsDir();
 
     if (QFile(QDir(paramsDir).filePath(filename)).exists()) {
         main->logger->write(filename + " already exists, skipping");
@@ -593,7 +593,7 @@ QString ConnectionLoader::hushConfWritableLocation() {
     return QDir::cleanPath(confLocation);
 }
 
-QString ConnectionLoader::zcashParamsDir() {
+QString ConnectionLoader::zkParamsDir() {
 #ifdef Q_OS_LINUX
     //TODO: If /usr/share/hush exists, use that. It should not be assumed writeable
     auto paramsLocation = QDir(QDir(QStandardPaths::writableLocation(QStandardPaths::HomeLocation)).filePath(".zcash-params"));
@@ -617,7 +617,7 @@ QString ConnectionLoader::zcashParamsDir() {
 }
 
 bool ConnectionLoader::verifyParams() {
-    QDir paramsDir(zcashParamsDir());
+    QDir paramsDir(zkParamsDir());
 
     // TODO: better error reporting if only 1 file exists or is missing
     qDebug() << "Verifying sapling param files exist";
@@ -734,9 +734,7 @@ std::shared_ptr<ConnectionConfig> ConnectionLoader::autoDetectHushConf() {
     return std::shared_ptr<ConnectionConfig>(hushconf);
 }
 
-/**
- * Load connection settings from the UI, which indicates an unknown, external zcashd
- */ 
+// Load connection settings from the UI, which indicates an unknown, external hushd
 std::shared_ptr<ConnectionConfig> ConnectionLoader::loadFromSettings() {
     // Load from the QT Settings. 
     QSettings s;

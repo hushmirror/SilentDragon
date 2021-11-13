@@ -61,7 +61,7 @@ MainWindow::MainWindow(QWidget *parent) :
     });
 
     // Request hush
-    QObject::connect(ui->actionRequest_zcash, &QAction::triggered, [=]() {
+    QObject::connect(ui->actionRequest_hush, &QAction::triggered, [=]() {
         RequestDialog::showRequestZcash(this);
     });
 

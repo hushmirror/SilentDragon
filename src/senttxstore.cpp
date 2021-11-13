@@ -57,7 +57,7 @@ void SentTxStore::addToSentTx(Tx tx, QString txid) {
     if (!Settings::getInstance()->getSaveZtxs())
         return;
 
-    // Also, only store outgoing txs where the from address is a z-Addr. Else, regular zcashd 
+    // Also, only store outgoing txs where the from address is a z-Addr. Else, regular hushd 
     // stores it just fine
     if (!tx.fromAddr.startsWith("z")) 
         return;
