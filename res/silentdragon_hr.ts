@@ -1381,13 +1381,13 @@ Molimo postavite host/port i korisnčko ime/lozinku u Uredi-&gt;Postavke meniju.
         <translation>Greška sa vezom</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Greška u transakciji</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>Dogodila se greška! : </translation>
     </message>
@@ -1471,12 +1471,12 @@ Would you like to visit the releases page?</source>
         <translation>Već imate najnovije izdanje v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Molimo pokušajte se strpiti i pričekajte da se SilentDragon zatvori</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Pričekajte da hushd završi</translation>
     </message>

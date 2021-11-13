@@ -1376,13 +1376,13 @@ Rugam sa setati host/port si utilizator/parola in Editare-&gt; Meniu setari</tra
         <translation>Eroare la Conexiune</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Eroarea de Tranzactie</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>A avut loc eroarea</translation>
     </message>
@@ -1465,12 +1465,12 @@ Doriti sa vizitati pagina veriunii?</translation>
         <translation>Deja aveti cea mai recenta versiune</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Rugam sa sporiti calmul si sa astepati pina ce SilentDragon sa iese</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Asteptam hushd sa iese.</translation>
     </message>
