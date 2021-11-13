@@ -1,12 +1,6 @@
 # SilentDragon
 
 <p align="left">
-    <a href="https://twitter.com/MyHushTeam">
-        <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fmyhushteam"
-            alt="MyHushTeam's Twitter"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=MyHushTeam">
-        <img src="https://img.shields.io/twitter/follow/MyHushTeam?style=social&logo=twitter"
-            alt="follow on Twitter"></a>
     <a href="https://fosstodon.org/@myhushteam">
         <img src="https://img.shields.io/badge/Mastodon-MyHushTeam-blue"
             alt="follow on Mastodon"></a>
@@ -16,7 +10,9 @@
 </p>
 
 SilentDragon desktop wallet for HUSH runs on Linux, Windows and macOS.
-This is experimental software under active development!
+This is experimental software under active development! Get real-time
+support on [our Telegram support group](https://hush.is/tg_support) and
+feel free to join the [main Telegram group](https://hush.is/tg) as well.
 
 ![Screenshots](images/sd-receive-tab.png?raw=true)
 
@@ -33,13 +29,16 @@ The following are screenshots for each SilentDragon tab:
 SilentDragon contacts a few different external websites to get various
 bits of data.
 
-    * coingecko.com for price data API
-    * explorer.hush.is for explorer links
+    * coingecko.com for price data API (defaults to on, optional)
+    * explorer.hush.is for explorer links (optional)
     * dexstats.info for address utilities
-    * wormhole.hush.is for Wormhole services
+        * Address Asset Viewer menu action (optional)
+        * Convert Address menu action (optional)
+    * wormhole.hush.is for Wormhole services (optional)
 
 This means your IP address is known to these servers. Enable Tor setting
 in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.org/
+NOTE: Tor v3 is not yet supported.
 
 # Installation
 
@@ -55,6 +54,9 @@ If you don't have one, SilentDragon will start its embedded hushd node.
 Additionally, if this is the first time you're running SilentDragon or a hushd daemon, SilentDragon will find Sapling params (~50 MB) and configure `HUSH3.conf` for you. 
 
 Pass `--no-embedded` to disable the embedded hushd and force SilentDragon to connect to an external node.
+
+If SD crashes when autostarting hushd, you may have run out of memory. This could happen with very large wallets. Try closing unnecessary applications and/or browser tabs and retry.
+Another method is to start hushd first, then start SD, which will connect to the existing hushd.
 
 ## Compiling from source
 
