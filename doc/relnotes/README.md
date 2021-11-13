@@ -10,8 +10,14 @@ and no longer on Github, since they banned Duke Leto and
 also because they censor many people around the world and work with
 evil organizations.
 
-# SilentDragon 1.3.0 "XXX"
+# SilentDragon 1.3.0 "Berserk Bonnacon"
 
+```
+ 60 files changed, 4328 insertions(+), 1568 deletions(-)
+```
+
+    * This release of SD is only compatible with hushd 3.9.0 or later, which is a mandatory update
+        * Older Hush full nodes will not be compatible with the Hush network going forward
     * New shinier startup animation
     * SD now looks for Hush full node data in `~/.hush/HUSH3` but still supports the legacy location
     * New Polish translation (@onryo)
