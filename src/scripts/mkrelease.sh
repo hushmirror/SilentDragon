@@ -80,8 +80,8 @@ RELEASEFILE2=$RELEASEDIR-$OS-$ARCH.tar.gz
 
 # this is equal to the number of files we package plus 1, for the directory
 # that is created
-NUM_FILES1=10
-NUM_FILES2=12 # 2 additional param files
+NUM_FILES1=6
+NUM_FILES2=8 # 2 additional param files
 
 echo "Packaging.............."
 mkdir bin/$RELEASEDIR
@@ -92,15 +92,18 @@ strip silentdragon
 ls -la silentdragon
 
 cp silentdragon                  bin/$RELEASEDIR > /dev/null
+strip $HUSH_DIR/hushd
 cp $HUSH_DIR/hushd               bin/$RELEASEDIR > /dev/null
+strip $HUSH_DIR/hush-cli
 cp $HUSH_DIR/hush-cli            bin/$RELEASEDIR > /dev/null
-cp $HUSH_DIR/hush-tx             bin/$RELEASEDIR > /dev/null
+# I have yet to hear of somebody using this binary, it just bloats our archives
+#cp $HUSH_DIR/hush-tx             bin/$RELEASEDIR > /dev/null
 cp README.md                     bin/$RELEASEDIR > /dev/null
 cp LICENSE                       bin/$RELEASEDIR > /dev/null
 
 
 cd bin && tar czf $RELEASEFILE1 $RELEASEDIR/ #> /dev/null
-#ls -la $RELEASEDIR/
+ls -la $RELEASEDIR/
 echo "Created $RELEASEFILE1   [OK]"
 cd ..
 
@@ -118,7 +121,7 @@ else
 fi
 
 cd bin && tar czf $RELEASEFILE2 $RELEASEDIR/
-#ls -la $RELEASEDIR/
+ls -la $RELEASEDIR/
 echo "Created $RELEASEFILE2   [OK]"
 cd .. 
 
@@ -154,6 +157,8 @@ else
 fi
 
 cd bin
+du -sh $RELEASEFILE1
+du -sh $RELEASEFILE2
 echo "DONE! Checksums:"
 sha256sum $RELEASEFILE1
 sha256sum $RELEASEFILE2
