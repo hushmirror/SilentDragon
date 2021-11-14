@@ -6,8 +6,6 @@ docs/website/public
 .DS_Store
 hushd
 IDEWorkspaceChecks.plist
-komodo-cli
-komodod
 hush-cli
 hushd
 *.mak
