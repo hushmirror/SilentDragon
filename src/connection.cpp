@@ -17,20 +17,14 @@ ConnectionLoader::ConnectionLoader(MainWindow* main, RPC* rpc) {
     d->setWindowFlags(d->windowFlags() & ~(Qt::WindowCloseButtonHint | Qt::WindowContextHelpButtonHint));
     connD = new Ui_ConnectionDialog();
     connD->setupUi(d);
-    QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated-startup.gif");;
-    QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-startup-dark.gif");;
+    QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated-startup-dark.gif");;
     auto theme = Settings::getInstance()->get_theme_name();
     auto size  = QSize(512,512);
 
-    if (theme == "dark" || theme == "midnight") {
-        movie2->setScaledSize(size);
-        connD->topIcon->setMovie(movie2);
-        movie2->start();
-    } else {
-        movie1->setScaledSize(size);
-        connD->topIcon->setMovie(movie1);
-        movie1->start();
-    }
+    movie1->setScaledSize(size);
+    connD->topIcon->setMovie(movie1);
+    movie1->start();
+
     main->logger->write("set animation");
     qDebug() << "set animation";
 }
