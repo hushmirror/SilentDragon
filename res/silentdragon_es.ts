@@ -1262,12 +1262,12 @@ doesn&apos;t look like a z-address</source>
         <translation>transacción es computación</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1459,12 +1459,12 @@ Por favor, especificar el host/puerta y usario/contraseña en el menú Editar-&g
 	</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>¡Hubo un error! :</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation> Error De Transacción</translation>

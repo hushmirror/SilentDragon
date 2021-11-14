@@ -1,12 +1,6 @@
 # SilentDragon
 
 <p align="left">
-    <a href="https://twitter.com/MyHushTeam">
-        <img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fmyhushteam"
-            alt="MyHushTeam's Twitter"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=MyHushTeam">
-        <img src="https://img.shields.io/twitter/follow/MyHushTeam?style=social&logo=twitter"
-            alt="follow on Twitter"></a>
     <a href="https://fosstodon.org/@myhushteam">
         <img src="https://img.shields.io/badge/Mastodon-MyHushTeam-blue"
             alt="follow on Mastodon"></a>
@@ -16,7 +10,9 @@
 </p>
 
 SilentDragon desktop wallet for HUSH runs on Linux, Windows and macOS.
-This is experimental software under active development!
+This is experimental software under active development! Get real-time
+support on [our Telegram support group](https://hush.is/tg_support) and
+feel free to join the [main Telegram group](https://hush.is/tg) as well.
 
 ![Screenshots](images/sd-receive-tab.png?raw=true)
 
@@ -33,13 +29,16 @@ The following are screenshots for each SilentDragon tab:
 SilentDragon contacts a few different external websites to get various
 bits of data.
 
-    * coingecko.com for price data API
-    * explorer.hush.is for explorer links
+    * coingecko.com for price data API (defaults to on, optional)
+    * explorer.hush.is for explorer links (optional)
     * dexstats.info for address utilities
-    * wormhole.hush.is for Wormhole services
+        * Address Asset Viewer menu action (optional)
+        * Convert Address menu action (optional)
+    * wormhole.hush.is for Wormhole services (optional)
 
 This means your IP address is known to these servers. Enable Tor setting
 in SilentDragon to prevent this, or better yet, use TAILS: https://tails.boum.org/
+NOTE: Tor v3 is not yet supported.
 
 # Installation
 
@@ -56,6 +55,9 @@ Additionally, if this is the first time you're running SilentDragon or a hushd d
 
 Pass `--no-embedded` to disable the embedded hushd and force SilentDragon to connect to an external node.
 
+If SD crashes when autostarting hushd, you may have run out of memory. This could happen with very large wallets. Try closing unnecessary applications and/or browser tabs and retry.
+Another method is to start hushd first, then start SD, which will connect to the existing hushd.
+
 ## Compiling from source
 
 SilentDragon is written in C++ 14, and can be compiled with g++/clang++/visual
@@ -65,6 +67,19 @@ from source, you won't get the embedded hushd by default. You can either run an 
 hushd, or compile hushd as well.
 
 ### Building on Linux
+
+#### Linux Troubleshooting
+If you run into an error with OpenGL, you may need to install extra deps. More details [here](https://gist.github.com/shamiul94/a632f7ab94cf389e08efd7174335df1c)
+
+**Error**
+```
+/usr/bin/ld: cannot find -lGL
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+**Solution**
+```
+sudo apt-get -y install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+```
 
 #### Ubuntu 18.04 and 20.04
 

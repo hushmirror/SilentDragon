@@ -1229,14 +1229,20 @@ void RPC::refreshPrice() {
     if  (conn == nullptr)
         return noConnection();
 
+
     QString price_feed = "https://api.coingecko.com/api/v3/simple/price?ids=hush&vs_currencies=btc%2Cusd%2Ceur%2Ceth%2Cgbp%2Ccny%2Cjpy%2Cidr%2Crub%2Ccad%2Csgd%2Cchf%2Cinr%2Caud%2Cinr%2Ckrw%2Cthb%2Cnzd%2Czar%2Cvef%2Cxau%2Cxag%2Cvnd%2Csar%2Ctwd%2Caed%2Cars%2Cbdt%2Cbhd%2Cbmd%2Cbrl%2Cclp%2Cczk%2Cdkk%2Chuf%2Cils%2Ckwd%2Clkr%2Cpkr%2Cnok%2Ctry%2Csek%2Cmxn%2Cuah%2Chkd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true";
+    qDebug() << "Requesting price feed data via " << price_feed;
+
     QUrl cmcURL(price_feed);
     QNetworkRequest req;
     req.setUrl(cmcURL);
-    QNetworkReply *reply = conn->restclient->get(req);
-    auto s = Settings::getInstance();
 
-    qDebug() << "Requesting price feed data via " << price_feed;
+    qDebug() << "Created price request object";
+
+    QNetworkReply *reply = conn->restclient->get(req);
+    qDebug() << "Created QNetworkReply";
+
+    auto s = Settings::getInstance();
 
     QObject::connect(reply, &QNetworkReply::finished, [=] {
         reply->deleteLater();

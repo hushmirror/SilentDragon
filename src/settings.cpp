@@ -302,7 +302,7 @@ QString Settings::getDisplayFormat(double bal) {
     return getDecimalString(bal) % " " % Settings::getTokenName();
 }
 
-QString Settings::getZECUSDDisplayFormat(double bal) {
+QString Settings::getHUSHUSDDisplayFormat(double bal) {
     auto usdFormat = getUSDFormat(bal);
     if (!usdFormat.isEmpty())
         return getDisplayFormat(bal) % " (" % getUSDFormat(bal) % ")";

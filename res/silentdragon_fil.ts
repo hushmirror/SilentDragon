@@ -1380,13 +1380,13 @@ Mangyaring i-set ang host/port at user/password sa Edit-&gt;Settings na menu.</t
         <translation>May Mali sa Koneksyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>May Mali sa Transaksyon</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>Mayroong Mali! : </translation>
     </message>
@@ -1468,12 +1468,12 @@ Would you like to visit the releases page?</source>
         <translation>Nasa iyo na ang pinakabagong release v%1</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Mangyaring maging mas kalmado at hintayin ang SilentDragon na mag-exit</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Hinihintay ang hush na mag-exit, y&apos;all</translation>
     </message>

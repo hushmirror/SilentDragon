@@ -123,7 +123,7 @@ public:
     static QString getDecimalString(double amt);
     static QString getUSDFormat(double bal);
     static QString getDisplayFormat(double bal);
-    static QString getZECUSDDisplayFormat(double bal);
+    static QString getHUSHUSDDisplayFormat(double bal);
 
     static QString getTokenName();
     static QString getDonationAddr();

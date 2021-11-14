@@ -1463,7 +1463,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation>Гэта можа заняць некалькі гадзін, вазьміце трохі папкорна</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>Памылка! : </translation>
     </message>
@@ -1517,12 +1517,12 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation> вылічэнне транзакцый.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Калі ласка, пачакайце выхаду з SilentDragon</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Чакаем выхаду hushd</translation>
     </message>
@@ -1627,7 +1627,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation>Памылка Злучэння</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Памылка Транзакцыі</translation>

@@ -1345,7 +1345,7 @@ If all else fails, please run hushd manually.</source>
         <translation>Potrebbero essere necessarie alcune ore, prendi dei popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>C&apos;era un errore! :</translation>
     </message>
@@ -1390,12 +1390,12 @@ If all else fails, please run hushd manually.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1510,7 +1510,7 @@ Impostare host/porta e utente/password nel menu Modifica-&gt; Impostazioni.</tra
         <translation>Errore di Connessione</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Errore di transazione</translation>

@@ -61,7 +61,7 @@ MainWindow::MainWindow(QWidget *parent) :
     });
 
     // Request hush
-    QObject::connect(ui->actionRequest_zcash, &QAction::triggered, [=]() {
+    QObject::connect(ui->actionRequest_hush, &QAction::triggered, [=]() {
         RequestDialog::showRequestZcash(this);
     });
 
@@ -279,7 +279,7 @@ void MainWindow::setupSettingsModal() {
             currency_name = Settings::getInstance()->get_currency_name();
         } catch (const std::exception& e) {
             qDebug() << QString("Currency name exception! : ");
-            currency_name = "USD";
+            currency_name = "BTC";
         }
 
         this->slot_change_currency(currency_name);
@@ -1655,7 +1655,7 @@ void MainWindow::setupReceiveTab() {
         }
 
         ui->rcvLabel->setText(label);
-        ui->rcvBal->setText(Settings::getZECUSDDisplayFormat(rpc->getAllBalances()->value(addr)));
+        ui->rcvBal->setText(Settings::getHUSHUSDDisplayFormat(rpc->getAllBalances()->value(addr)));
         ui->txtReceive->setPlainText(addr);
         ui->qrcodeDisplay->setQrcodeString(addr);
         if (rpc->getUsedAddresses()->value(addr, false)) {
@@ -1758,7 +1758,7 @@ void MainWindow::slot_change_currency(const QString& currency_name)
        saved_currency_name = Settings::getInstance()->get_currency_name();
     } catch (const std::exception& e) {
         qDebug() << QString("Ignoring currency change Exception! : ");
-        saved_currency_name = "USD";
+        saved_currency_name = "BTC";
     }
 }
 

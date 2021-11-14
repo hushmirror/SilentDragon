@@ -1385,7 +1385,7 @@ If all else fails, please run hushd manually.</source>
         <translation>Dies kann einige Stunden dauern, machen Sie sich einen Kaffee</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>Es gab einen Fehler! : </translation>
     </message>
@@ -1425,12 +1425,12 @@ If all else fails, please run hushd manually.</source>
         <translation>erzeuge Transaktion</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Bitte warten Sie, bis Silentdragon beendet ist</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Bitte warten Sie, bis Hushd beendet ist</translation>
     </message>
@@ -1551,7 +1551,7 @@ Please set the host/port and user/password in the Edit-&gt;Settings menu.</sourc
         <translation>Verbindungsfehler</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Transaktionsfehler</translation>

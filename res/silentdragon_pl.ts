@@ -1258,7 +1258,7 @@ Ustaw host/port i użytkownik/hasło w Edytuj-&gt;Ustawienia menu.</translation>
         <translation>Może to zająć do kilku godzin, tymczasem chwyćcie za popcorn</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <source>There was an error! : </source>
         <translation>Wystąpił błąd! : </translation>
     </message>
@@ -1308,12 +1308,12 @@ Ustaw host/port i użytkownik/hasło w Edytuj-&gt;Ustawienia menu.</translation>
         <translation> przetwarzanie transakcji.</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1369"/>
+        <location filename="../src/rpc.cpp" line="1375"/>
         <source>Please enhance your calm and wait for SilentDragon to exit</source>
         <translation>Proszę poczekać SilentDragon do wyjścia</translation>
     </message>
     <message>
-        <location filename="../src/rpc.cpp" line="1370"/>
+        <location filename="../src/rpc.cpp" line="1376"/>
         <source>Waiting for hushd to exit, y&apos;all</source>
         <translation>Czekam na wyjście hushd</translation>
     </message>
@@ -1382,7 +1382,7 @@ Ustaw host/port i użytkownik/hasło w Edytuj-&gt;Ustawienia menu.</translation>
         <translation>Błąd Połączenia</translation>
     </message>
     <message>
-        <location filename="../src/connection.cpp" line="844"/>
+        <location filename="../src/connection.cpp" line="842"/>
         <location filename="../src/sendtab.cpp" line="756"/>
         <source>Transaction Error</source>
         <translation>Błąd Transakcji</translation>
