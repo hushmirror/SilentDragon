@@ -114,8 +114,6 @@ rm -f artifcats/silentdragon.dmg >/dev/null 2>&1
 rm -f artifacts/rw* >/dev/null 2>&1
 cp $HUSH_DIR/src/hushd silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/src/hush-cli silentdragon.app/Contents/MacOS/
-cp $HUSH_DIR/src/komodod silentdragon.app/Contents/MacOS/
-cp $HUSH_DIR/src/komodo-cli silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/sapling-output.params silentdragon.app/Contents/MacOS/
 cp $HUSH_DIR/sapling-spend.params silentdragon.app/Contents/MacOS/
 $QT_PATH/bin/macdeployqt silentdragon.app 

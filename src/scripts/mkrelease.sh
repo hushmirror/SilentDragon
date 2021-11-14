@@ -21,18 +21,18 @@ if [ -z $HUSH_DIR ]; then
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/komodod ]; then
-    echo "Couldn't find komodod in $HUSH_DIR . Please build komodod."
+if [ ! -f $HUSH_DIR/hushd ]; then
+    echo "Couldn't find hushd in $HUSH_DIR . Please build hushd."
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/komodo-cli ]; then
-    echo "Couldn't find komodo-cli in $HUSH_DIR . Please build komodo-cli."
+if [ ! -f $HUSH_DIR/hush-cli ]; then
+    echo "Couldn't find hush-cli in $HUSH_DIR . Please build hush-cli."
     exit 1;
 fi
 
-if [ ! -f $HUSH_DIR/komodo-tx ]; then
-    echo "Couldn't find komodo-tx in $HUSH_DIR . Please build komodo-tx."
+if [ ! -f $HUSH_DIR/hush-tx ]; then
+    echo "Couldn't find hush-tx in $HUSH_DIR . Please build hush-tx."
     exit 1;
 fi
 
@@ -92,9 +92,6 @@ strip silentdragon
 ls -la silentdragon
 
 cp silentdragon                  bin/$RELEASEDIR > /dev/null
-cp $HUSH_DIR/komodod    	 bin/$RELEASEDIR > /dev/null
-cp $HUSH_DIR/komodo-cli          bin/$RELEASEDIR > /dev/null
-cp $HUSH_DIR/komodo-tx           bin/$RELEASEDIR > /dev/null
 cp $HUSH_DIR/hushd               bin/$RELEASEDIR > /dev/null
 cp $HUSH_DIR/hush-cli            bin/$RELEASEDIR > /dev/null
 cp $HUSH_DIR/hush-tx             bin/$RELEASEDIR > /dev/null
@@ -177,7 +174,7 @@ cat src/scripts/control | sed "s/RELEASE_VERSION/$APP_VERSION/g" > $debdir/DEBIA
 
 cp silentdragon                   $debdir/usr/local/bin/
 # TODO: how does this interact with hushd deb ?
-cp $HUSH_DIR/artifacts/komodod $debdir/usr/local/bin/hush-komodod
+cp $HUSH_DIR/artifacts/hushd $debdir/usr/local/bin/hushd
 
 mkdir -p $debdir/usr/share/pixmaps/
 cp res/silentdragon.xpm           $debdir/usr/share/pixmaps/
@@ -202,14 +199,14 @@ if [ -z $MXE_PATH ]; then
     exit 0; 
 fi
 
-if [ ! -f $HUSH_DIR/artifacts/komodod.exe ]; then
-    echo "Couldn't find komodod.exe in $HUSH_DIR/artifacts/. Please build komodod.exe"
+if [ ! -f $HUSH_DIR/artifacts/hushd.exe ]; then
+    echo "Couldn't find hushd.exe in $HUSH_DIR/artifacts/. Please build hushd.exe"
     exit 1;
 fi
 
 
-if [ ! -f $HUSH_DIR/artifacts/komodo-cli.exe ]; then
-    echo "Couldn't find komodo-cli.exe in $HUSH_DIR/artifacts/. Please build komodod-cli.exe"
+if [ ! -f $HUSH_DIR/artifacts/hush-cli.exe ]; then
+    echo "Couldn't find hush-cli.exe in $HUSH_DIR/artifacts/. Please build hushd-cli.exe"
     exit 1;
 fi
 
@@ -234,10 +231,8 @@ echo "[OK]"
 echo -n "Packaging.............."
 mkdir release/silentdragon-v$APP_VERSION  
 cp release/silentdragon.exe          release/silentdragon-v$APP_VERSION 
-cp $HUSH_DIR/artifacts/komodod.exe    release/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/komodo-cli.exe   release/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/hushd.bat    release/silentdragon-v$APP_VERSION > /dev/null
-cp $HUSH_DIR/artifacts/hush-cli.bat   release/silentdragon-v$APP_VERSION > /dev/null
+cp $HUSH_DIR/artifacts/hushd.exe    release/silentdragon-v$APP_VERSION > /dev/null
+cp $HUSH_DIR/artifacts/hush-cli.exe   release/silentdragon-v$APP_VERSION > /dev/null
 cp README.md                          release/silentdragon-v$APP_VERSION 
 cp LICENSE                            release/silentdragon-v$APP_VERSION 
 cd release && zip -r Windows-binaries-silentdragon-v$APP_VERSION.zip silentdragon-v$APP_VERSION/ > /dev/null
