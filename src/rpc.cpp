@@ -1359,18 +1359,11 @@ void RPC::shutdownHushd() {
     connD.setupUi(&d);
     //connD.topIcon->setBasePixmap(QIcon(":/icons/res/icon.ico").pixmap(256, 256));
 
-    QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated.gif");;
-    QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
+    QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
     auto theme = Settings::getInstance()->get_theme_name();
-    if (theme == "dark" || theme == "midnight") {
-        movie2->setScaledSize(QSize(512,512));
-        connD.topIcon->setMovie(movie2);
-        movie2->start();
-    } else {
-        movie1->setScaledSize(QSize(512,512));
-        connD.topIcon->setMovie(movie1);
-        movie1->start();
-    }
+    movie1->setScaledSize(QSize(512,512));
+    connD.topIcon->setMovie(movie1);
+    movie1->start();
 
     connD.status->setText(QObject::tr("Please enhance your calm and wait for SilentDragon to exit"));
     connD.statusDetail->setText(QObject::tr("Waiting for hushd to exit, y'all"));

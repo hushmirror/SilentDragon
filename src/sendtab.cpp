@@ -702,18 +702,11 @@ void MainWindow::sendButton() {
         auto connD = new Ui_ConnectionDialog();
         connD->setupUi(d);
 
-        QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated.gif");;
-        QMovie *movie2 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
+        QMovie *movie1 = new QMovie(":/img/res/silentdragon-animated-dark.gif");;
         auto theme = Settings::getInstance()->get_theme_name();
-        if (theme == "dark" || theme == "midnight") {
-            movie2->setScaledSize(QSize(512,512));
-            connD->topIcon->setMovie(movie2);
-            movie2->start();
-        } else {
-            movie1->setScaledSize(QSize(512,512));
-            connD->topIcon->setMovie(movie1);
-            movie1->start();
-        }
+        movie1->setScaledSize(QSize(512,512));
+        connD->topIcon->setMovie(movie1);
+        movie1->start();
 
         //connD->topIcon->setBasePixmap(logo.scaled(256, 256, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
