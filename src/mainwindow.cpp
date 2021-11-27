@@ -1916,7 +1916,13 @@ void MainWindow::slot_change_theme(QString& theme_name)
 {
     qDebug() << __func__ << ": theme_name=" << theme_name;
 
-    Settings::getInstance()->set_theme_name(theme_name);
+    if (theme_name == "dark" || theme_name == "default" || theme_name == "light" ||
+        theme_name == "midnight" || theme_name == "blue") {
+        Settings::getInstance()->set_theme_name(theme_name);
+    } else {
+        qDebug() << __func__ << ": ignoring invalid theme_name=" << theme_name;
+        Settings::getInstance()->set_theme_name("dark");
+    }
 
     // Include css
     QString saved_theme_name;
