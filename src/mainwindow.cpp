@@ -219,6 +219,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
     lang = lang.remove(0, lang.indexOf("(") + 1);
 
     // NOTE: language codes can be 2 or 3 letters
+    // https://www.loc.gov/standards/iso639-2/php/code_list.php
 
     if(m_currLang != lang) {
         qDebug() << __func__ << ": changing language to " << lang;
@@ -380,10 +381,6 @@ void MainWindow::setupSettingsModal() {
             QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
-        QObject::connect(settings.comboBoxLanguage, &QComboBox::currentTextChanged, [=] (QString lang) {
-            this->slotLanguageChanged(lang);
-            //QMessageBox::information(this, tr("Language Changed"), tr("This change can take a few seconds."), QMessageBox::Ok);
-        });
 
         // Set local currency
         QString ticker = Settings::getInstance()->get_currency_name();
@@ -508,7 +505,8 @@ void MainWindow::setupSettingsModal() {
 
         // Set the current language to the default system language
         // TODO: this will need to change when we read/write selected language to config on disk
-        m_currLang = defaultLocale;
+        //m_currLang = defaultLocale;
+        //qDebug() << __func__ << ": changed m_currLang to " << defaultLocale;
 
         //QString defaultLang = QLocale::languageToString(QLocale("en").language());
         settings.comboBoxLanguage->addItem("English (en)");
@@ -536,14 +534,28 @@ void MainWindow::setupSettingsModal() {
 
             //settings.comboBoxLanguage->addItem(action);
             settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
-            qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale;
+            qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale << " defaultLocale=" << defaultLocale << " m_currLang=" << m_currLang;
+            qDebug() << __func__ << ": " << m_currLang << " ?= " << locale;
 
-            // set default translators and language checked
-            if (defaultLocale == locale) {
+            //if (defaultLocale == locale) {
+            if (m_currLang == locale) {
                 settings.comboBoxLanguage->setCurrentIndex(i+1);
-                qDebug() << " set defaultLocale=" << locale << " to checked";
+                qDebug() << " set defaultLocale=" << locale << " to checked!!!";
             }
         }
+
+        QString lang = QLocale::languageToString(QLocale(m_currLang).language());
+        qDebug() << __func__ << ": looking for " << lang + " (" + m_currLang + ")";
+        int lang_index = settings.comboBoxLanguage->findText(lang + " (" + m_currLang + ")", Qt::MatchExactly);
+
+        qDebug() << __func__ << ": setting comboBoxLanguage index to " << lang_index;
+        settings.comboBoxLanguage->setCurrentIndex(lang_index);
+
+        QObject::connect(settings.comboBoxLanguage, &QComboBox::currentTextChanged, [=] (QString lang) {
+            qDebug() << "comboBoxLanguage.currentTextChanged lang=" << lang;
+            this->slotLanguageChanged(lang);
+            //QMessageBox::information(this, tr("Language Changed"), tr("This change can take a few seconds."), QMessageBox::Ok);
+        });
 
         // Options tab by default
         settings.tabWidget->setCurrentIndex(1);

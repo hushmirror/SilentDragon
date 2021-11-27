@@ -146,6 +146,10 @@ public:
     static const int     quickUpdateSpeed    = 3  * 1000;        // 3 sec
     static const int     priceRefreshSpeed   = 15 * 60 * 1000;   // 15 mins
 
+protected:
+    // this event is called, when a new translator is loaded or the system language is changed
+    // void changeEvent(QEvent* event);
+
 private:
     // This class can only be accessed through Settings::getInstance()
     Settings() = default;
