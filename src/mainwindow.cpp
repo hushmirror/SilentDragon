@@ -206,10 +206,12 @@ void switchTranslator(QTranslator& translator, const QString& filename) {
 
     // load the new translator
     QString path = QApplication::applicationDirPath();
-	path.append("/res/");
+    path.append("/res/");
     qDebug() << __func__ << ": attempting to load " << path + filename;
     if(translator.load(path + filename)) {
         qApp->installTranslator(&translator);
+    } else {
+        qDebug() << __func__ << ": translation path does not exist! " << path + filename;
     }
 }
 
@@ -219,7 +221,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
     QString lang = rLanguage;
     lang.chop(1); // remove trailing )
 
-    // remove everything up to the first (
+    // remove everything up to and including the first (
     lang = lang.remove(0, lang.indexOf("(") + 1);
 
     // NOTE: language codes can be 2 or 3 letters
@@ -231,6 +233,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
         QLocale locale = QLocale(m_currLang);
         qDebug() << __func__ << ": locale=" << locale;
         QLocale::setDefault(locale);
+        qDebug() << __func__ << ": setDefault locale=" << locale;
         QString languageName = QLocale::languageToString(locale.language());
         qDebug() << __func__ << ": languageName=" << languageName;
 
@@ -524,6 +527,7 @@ void MainWindow::setupSettingsModal() {
 
         qDebug() << __func__ <<": found " << fileNames.size() << " translations";
 
+
         // create language drop down dynamically
         for (int i = 0; i < fileNames.size(); ++i) {
             // get locale extracted by filename
@@ -538,7 +542,7 @@ void MainWindow::setupSettingsModal() {
             //settings.comboBoxLanguage->addItem(action);
             settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
             qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale << " defaultLocale=" << defaultLocale << " m_currLang=" << m_currLang;
-            qDebug() << __func__ << ": " << m_currLang << " ?= " << locale;
+            //qDebug() << __func__ << ": " << m_currLang << " ?= " << locale;
 
             //if (defaultLocale == locale) {
             if (m_currLang == locale) {
@@ -546,6 +550,9 @@ void MainWindow::setupSettingsModal() {
                 qDebug() << " set defaultLocale=" << locale << " to checked!!!";
             }
         }
+
+        settings.comboBoxLanguage->model()->sort(0,Qt::AscendingOrder);
+        qDebug() << __func__ <<": sorted translations";
 
         QString lang = QLocale::languageToString(QLocale(m_currLang).language());
         qDebug() << __func__ << ": looking for " << lang + " (" + m_currLang + ")";
