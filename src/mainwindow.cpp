@@ -537,8 +537,11 @@ void MainWindow::setupSettingsModal() {
             locale.truncate(locale.lastIndexOf('.')); // "silentdragon_de"
             locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
 
-            //QString lang = QLocale::languageToString(QLocale(locale).language());
             QString lang = QLocale(locale).nativeLanguageName(); //locale.language());
+
+            // uppercase the first letter of all languages
+            auto first = QString(lang.at(0)).toUpper();
+            lang = first + lang.right(lang.size()-1);
 
             //settings.comboBoxLanguage->addItem(action);
             settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
