@@ -192,7 +192,6 @@ void MainWindow::slotLanguageChanged(QString lang)
     if(lang != "") {
         // load the language
         loadLanguage(lang);
-        //setWindowIcon(action->icon());
     }
 }
 
@@ -229,7 +228,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
         switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(lang));
         switchTranslator(m_translatorQt, QString("qt_%1.qm").arg(lang));
 
-        ui->statusBar->showMessage(tr("Current Language changed to %1").arg(languageName));
+        ui->statusBar->showMessage(tr("Language changed to") + " " + languageName + " (" + lang + ")");
     }
 }
 
@@ -499,59 +498,56 @@ void MainWindow::setupSettingsModal() {
         settings.testnetTxExplorerUrl->setText(explorer.testnetTxExplorerUrl);
         settings.testnetAddressExplorerUrl->setText(explorer.testnetAddressExplorerUrl);
 
-        /// create language drop down dynamically
-    QActionGroup* langGroup = new QActionGroup(settings.comboBoxLanguage);
-    langGroup->setExclusive(true);
+        // format systems language
+        QString defaultLocale = QLocale::system().name(); // e.g. "de_DE"
+        defaultLocale.truncate(defaultLocale.lastIndexOf('_')); // e.g. "de"
 
-    //qDebug() << __func__ << ": connecting langGroup to slotLanguageChanged";
-    //connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
+        // Set the current language to the default system language
+        // TODO: this will need to change when we read/write selected language to config on disk
+        m_currLang = defaultLocale;
 
-    // format systems language
-    QString defaultLocale = QLocale::system().name(); // e.g. "de_DE"
-    defaultLocale.truncate(defaultLocale.lastIndexOf('_')); // e.g. "de"
+        //QString defaultLang = QLocale::languageToString(QLocale("en").language());
+        settings.comboBoxLanguage->addItem("English (en)");
 
-    //QString defaultLang = QLocale::languageToString(QLocale("en").language());
-    settings.comboBoxLanguage->addItem("English (en)");
+        m_langPath = QApplication::applicationDirPath();
+        m_langPath.append("/res");
 
-    m_langPath = QApplication::applicationDirPath();
-    m_langPath.append("/res");
+        qDebug() << __func__ <<": defaultLocale=" << defaultLocale << " m_langPath=" << m_langPath;;
 
-    qDebug() << __func__ <<": defaultLocale=" << defaultLocale << " m_langPath=" << m_langPath;;
+        QDir dir(m_langPath);
+        QStringList fileNames = dir.entryList(QStringList("silentdragon_*.qm"));
 
-    QDir dir(m_langPath);
-    QStringList fileNames = dir.entryList(QStringList("silentdragon_*.qm"));
+        qDebug() << __func__ <<": found " << fileNames.size() << " translations";
 
-    qDebug() << __func__ <<": found " << fileNames.size() << " translations";
+        // create language drop down dynamically
+        for (int i = 0; i < fileNames.size(); ++i) {
+            // get locale extracted by filename
+            QString locale;
+            locale = fileNames[i]; // "silentdragon_de.qm"
+            locale.truncate(locale.lastIndexOf('.')); // "silentdragon_de"
+            locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
 
-    for (int i = 0; i < fileNames.size(); ++i) {
-        // get locale extracted by filename
-        QString locale;
-        locale = fileNames[i]; // "silentdragon_de.qm"
-        locale.truncate(locale.lastIndexOf('.')); // "silentdragon_de"
-        locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
+            QString lang = QLocale::languageToString(QLocale(locale).language());
+            //QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
+            QIcon ico;
 
-        QString lang = QLocale::languageToString(QLocale(locale).language());
-        //QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
-        QIcon ico;
+            QAction *action = new QAction(ico, lang, this); // ico, lang, this);
+            action->setCheckable(true);
+            action->setData(locale);
 
-        QAction *action = new QAction(ico, lang, this); // ico, lang, this);
-        action->setCheckable(true);
-        action->setData(locale);
+            //settings.comboBoxLanguage->addItem(action);
+            settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
+            qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale;
 
-        //settings.comboBoxLanguage->addItem(action);
-        settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
-        langGroup->addAction(action);
-        qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale;
-
-        // set default translators and language checked
-        if (defaultLocale == locale) {
-            action->setChecked(true);
-            qDebug() << " set defaultLocale=" << locale << " to checked";
+            // set default translators and language checked
+            if (defaultLocale == locale) {
+                action->setChecked(true);
+                qDebug() << " set defaultLocale=" << locale << " to checked";
+            }
         }
-    }
 
-        // Connection tab by default
-        settings.tabWidget->setCurrentIndex(0);
+        // Options tab by default
+        settings.tabWidget->setCurrentIndex(1);
 
         // Enable the troubleshooting options only if using embedded hushd
         if (!rpc->isEmbedded()) {
