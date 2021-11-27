@@ -6,6 +6,7 @@
 #include "precompiled.h"
 #include "logger.h"
 #include <memory>
+#include "ui_settings.h"
 
 // Forward declare to break circular dependency.
 class RPC;
@@ -31,15 +32,6 @@ struct Tx {
 namespace Ui {
     class MainWindow;
 }
-
-class SettingsDialog : public QDialog
-{
-    Q_OBJECT
-public:
-    explicit SettingsDialog(QWidget *parent = nullptr);
-    // this event is called, when a new translator is loaded or the system language is changed
-    void changeEvent(QEvent* event);
-};
 
 class MainWindow : public QMainWindow
 {
@@ -73,6 +65,7 @@ public:
     void updateFromCombo();
 
     Ui::MainWindow*     ui;
+    Ui_Settings         settings;
 
     QLabel*             statusLabel;
     QLabel*             statusIcon;
@@ -81,11 +74,11 @@ public:
     Logger*      logger;
 
     void doClose();
+
 protected:
     // this event is called, when a new translator is loaded or the system language is changed
     void changeEvent(QEvent* event);
 
-    //void slotLanguageChanged(QAction* action);
 protected slots:
     // this slot is called by the language menu actions
     void slotLanguageChanged(QString lang);

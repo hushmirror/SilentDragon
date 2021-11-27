@@ -22,9 +22,6 @@
 #include "requestdialog.h"
 #include "websockets.h"
 
-SettingsDialog::SettingsDialog(QWidget* parent) : QDialog(parent) {
-}
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -195,6 +192,10 @@ void MainWindow::slotLanguageChanged(QString lang)
     if(lang != "") {
         // load the language
         loadLanguage(lang);
+
+        QDialog settingsDialog(this);
+        qDebug() << __func__ << ": retranslating settingsDialog";
+        settings.retranslateUi(&settingsDialog);
     }
 }
 
@@ -342,27 +343,11 @@ void MainWindow::setupStatusBar() {
     ui->statusBar->addPermanentWidget(statusIcon);
 }
 
-// something like this is needed for QDialogs to listen to changeEvent
-// so the Settings modal gets retranslated
-// https://stackoverflow.com/questions/68665394/how-to-use-retranslateui-recursively-on-all-ui-in-qmainwindow
-void SettingsDialog::changeEvent(QEvent* event) {
-    Ui_Settings settings;
-    qDebug() << __func__ << ":changeEvent type=" << event->type();
-    if (event->type() == QEvent::LanguageChange) {
-        SettingsDialog settingsDialog(this);
-        settings.retranslateUi(&settingsDialog);
-    }
-
-    QWidget::changeEvent(event);
-}
-
 void MainWindow::setupSettingsModal() {
     // Set up File -> Settings action
     QObject::connect(ui->actionSettings, &QAction::triggered, [=]() {
-        // this coredumps at run-time
-        //SettingsDialog settingsDialog(this);
         QDialog settingsDialog(this);
-        Ui_Settings settings;
+        //Ui_Settings settings;
         settings.setupUi(&settingsDialog);
         Settings::saveRestore(&settingsDialog);
 
@@ -397,7 +382,7 @@ void MainWindow::setupSettingsModal() {
 
         QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
             this->slot_change_theme(theme_name);
-            QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+            // QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
 
@@ -408,7 +393,7 @@ void MainWindow::setupSettingsModal() {
         QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString ticker) {
             this->slot_change_currency(ticker);
             rpc->refresh(true);
-            QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+            // QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
         // Save sent transactions
@@ -441,7 +426,6 @@ void MainWindow::setupSettingsModal() {
         }
 
         //Use Consolidation
-
         bool isUsingConsolidation = false;
         int size = 0;
         qDebug() << __func__ << ": hushDir=" << rpc->getConnection()->config->hushDir;
