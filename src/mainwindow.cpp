@@ -235,7 +235,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
         qDebug() << __func__ << ": locale=" << locale;
         QLocale::setDefault(locale);
         qDebug() << __func__ << ": setDefault locale=" << locale;
-        QString languageName = QLocale::languageToString(locale.language());
+        QString languageName = locale.nativeLanguageName(); //locale.language());
         qDebug() << __func__ << ": languageName=" << languageName;
 
         switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(lang));
@@ -537,8 +537,8 @@ void MainWindow::setupSettingsModal() {
             locale.truncate(locale.lastIndexOf('.')); // "silentdragon_de"
             locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
 
-            QString lang = QLocale::languageToString(QLocale(locale).language());
-            QIcon ico;
+            //QString lang = QLocale::languageToString(QLocale(locale).language());
+            QString lang = QLocale(locale).nativeLanguageName(); //locale.language());
 
             //settings.comboBoxLanguage->addItem(action);
             settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
@@ -1912,9 +1912,10 @@ void MainWindow::slot_change_currency(const QString& currency_name)
     }
 }
 
-void MainWindow::slot_change_theme(const QString& theme_name)
+void MainWindow::slot_change_theme(QString& theme_name)
 {
     qDebug() << __func__ << ": theme_name=" << theme_name;
+
     Settings::getInstance()->set_theme_name(theme_name);
 
     // Include css

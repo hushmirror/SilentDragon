@@ -98,7 +98,7 @@ private:
     void setupChatTab();
     void setupMarketTab();
 
-    void slot_change_theme(const QString& themeName);
+    void slot_change_theme(QString& themeName);
     void slot_change_currency(const QString& currencyName);
 
     void setupTurnstileDialog();
