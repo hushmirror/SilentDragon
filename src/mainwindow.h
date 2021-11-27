@@ -72,9 +72,20 @@ public:
     Logger*      logger;
 
     void doClose();
+protected:
+    // this event is called, when a new translator is loaded or the system language is changed
+    void changeEvent(QEvent* event);
+
+    //void slotLanguageChanged(QAction* action);
+protected slots:
+    // this slot is called by the language menu actions
+    void slotLanguageChanged(QAction *action);
 
 private:    
     void closeEvent(QCloseEvent* event);
+
+    // loads a language by the given language shortcode (e.g. de, en)
+    void loadLanguage(const QString& rLanguage);
 
     void setupSendTab();
     void setupPeersTab();
@@ -87,6 +98,7 @@ private:
 
     void slot_change_theme(const QString& themeName);
     void slot_change_currency(const QString& currencyName);
+
     void setupTurnstileDialog();
     void setupSettingsModal();
     void setupStatusBar();
@@ -144,6 +156,13 @@ private:
     QRegExpValidator*   feesValidator   = nullptr;
 
     QMovie*      loadingMovie;
+    // creates the language menu dynamically from the content of m_langPath
+    void createLanguageMenu(void);
+
+    QTranslator m_translator; // contains the translations for this application
+    QTranslator m_translatorQt; // contains the translations for qt
+    QString m_currLang; // contains the currently loaded language
+    QString m_langPath; // Path of language files
 };
 
 #endif // MAINWINDOW_H

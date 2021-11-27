@@ -185,6 +185,70 @@ void MainWindow::doClose() {
     closeEvent(nullptr);
 }
 
+// Called every time, when a menu entry of the language menu is called
+void MainWindow::slotLanguageChanged(QAction* action)
+{
+    qDebug() << __func__ << ": action=" << action->data().toString();
+    if(0 != action) {
+        // load the language dependant on the action content
+        loadLanguage(action->data().toString());
+        setWindowIcon(action->icon());
+    }
+}
+
+void switchTranslator(QTranslator& translator, const QString& filename) {
+    qDebug() << __func__ << ": filename=" << filename;
+    // remove the old translator
+    qApp->removeTranslator(&translator);
+
+    // load the new translator
+    QString path = QApplication::applicationDirPath();
+	path.append("/res/");
+    qDebug() << __func__ << ": attempting to load " << path + filename;
+    if(translator.load(path + filename)) {
+        qApp->installTranslator(&translator);
+    }
+}
+
+void MainWindow::loadLanguage(const QString& rLanguage) {
+    qDebug() << "loadLanguage " << rLanguage;
+    if(m_currLang != rLanguage) {
+        m_currLang = rLanguage;
+        QLocale locale = QLocale(m_currLang);
+        QLocale::setDefault(locale);
+        QString languageName = QLocale::languageToString(locale.language());
+        switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(rLanguage));
+        switchTranslator(m_translatorQt, QString("qt_%1.qm").arg(rLanguage));
+        ui->statusBar->showMessage(tr("Current Language changed to %1").arg(languageName));
+    }
+}
+
+void MainWindow::changeEvent(QEvent* event) {
+ if(0 != event) {
+  switch(event->type()) {
+   // this event is sent if a translator is loaded
+   case QEvent::LanguageChange:
+    qDebug() << "QEvent::LanguageChange changeEvent";
+    ui->retranslateUi(this);
+    break;
+
+   // this event is sent, if the system, language changes
+   case QEvent::LocaleChange:
+   {
+    QString locale = QLocale::system().name();
+    locale.truncate(locale.lastIndexOf('_'));
+    qDebug() << "QEvent::LocaleChange changeEvent locale=" << locale;
+    loadLanguage(locale);
+   }
+   break;
+   default:
+    qDebug() << __func__ << ": " << event->type();
+  }
+ }
+ QMainWindow::changeEvent(event);
+}
+
+
 void MainWindow::closeEvent(QCloseEvent* event) {
     QSettings s;
 
@@ -346,6 +410,8 @@ void MainWindow::setupSettingsModal() {
 
         bool isUsingConsolidation = false;
         int size = 0;
+        qDebug() << __func__ << ": hushDir=" << rpc->getConnection()->config->hushDir;
+
         QDir hushdir(rpc->getConnection()->config->hushDir);
         QFile WalletSize(hushdir.filePath("wallet.dat"));
         if (WalletSize.open(QIODevice::ReadOnly)){
@@ -417,6 +483,55 @@ void MainWindow::setupSettingsModal() {
         settings.addressExplorerUrl->setText(explorer.addressExplorerUrl);
         settings.testnetTxExplorerUrl->setText(explorer.testnetTxExplorerUrl);
         settings.testnetAddressExplorerUrl->setText(explorer.testnetAddressExplorerUrl);
+
+        /// create language drop down dynamically
+    QActionGroup* langGroup = new QActionGroup(settings.menuLanguage);
+    langGroup->setExclusive(true);
+
+    qDebug() << __func__ << ": connecting langGroup to slotLanguageChanged";
+    connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
+
+    // format systems language
+    QString defaultLocale = QLocale::system().name(); // e.g. "de_DE"
+    defaultLocale.truncate(defaultLocale.lastIndexOf('_')); // e.g. "de"
+
+    m_langPath = QApplication::applicationDirPath();
+    m_langPath.append("/res");
+
+    qDebug() << __func__ <<": defaultLocale=" << defaultLocale << " m_langPath=" << m_langPath;;
+
+    QDir dir(m_langPath);
+    QStringList fileNames = dir.entryList(QStringList("silentdragon_*.qm"));
+
+    qDebug() << __func__ <<": found " << fileNames.size() << " translations";
+
+    for (int i = 0; i < fileNames.size(); ++i) {
+        // get locale extracted by filename
+        QString locale;
+        locale = fileNames[i]; // "silentdragon_de.qm"
+        locale.truncate(locale.lastIndexOf('.')); // "silentdragon_de"
+        locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
+
+        QString lang = QLocale::languageToString(QLocale(locale).language());
+        //QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
+        QIcon ico;
+
+        QAction *action = new QAction(ico, lang, this); // ico, lang, this);
+        action->setCheckable(true);
+        action->setData(locale);
+
+        settings.menuLanguage->addAction(action);
+        langGroup->addAction(action);
+        qDebug() << __func__ << ": added language=" << locale;
+
+        // set default translators and language checked
+        if (defaultLocale == locale) {
+            action->setChecked(true);
+        }
+    }
+
+
+        /// 
 
         // Connection tab by default
         settings.tabWidget->setCurrentIndex(0);
