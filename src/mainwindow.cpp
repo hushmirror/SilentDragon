@@ -214,7 +214,11 @@ void MainWindow::loadLanguage(QString& rLanguage) {
 
     QString lang = rLanguage;
     lang.chop(1); // remove trailing )
-    lang = lang.right(2); // last 2 chars are the language code
+
+    // remove everything up to the first (
+    lang = lang.remove(0, lang.indexOf("(") + 1);
+
+    // NOTE: language codes can be 2 or 3 letters
 
     if(m_currLang != lang) {
         qDebug() << __func__ << ": changing language to " << lang;
@@ -528,12 +532,7 @@ void MainWindow::setupSettingsModal() {
             locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
 
             QString lang = QLocale::languageToString(QLocale(locale).language());
-            //QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
             QIcon ico;
-
-            QAction *action = new QAction(ico, lang, this); // ico, lang, this);
-            action->setCheckable(true);
-            action->setData(locale);
 
             //settings.comboBoxLanguage->addItem(action);
             settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
@@ -541,7 +540,7 @@ void MainWindow::setupSettingsModal() {
 
             // set default translators and language checked
             if (defaultLocale == locale) {
-                action->setChecked(true);
+                settings.comboBoxLanguage->setCurrentIndex(i+1);
                 qDebug() << " set defaultLocale=" << locale << " to checked";
             }
         }
