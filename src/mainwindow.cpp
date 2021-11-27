@@ -212,17 +212,23 @@ void switchTranslator(QTranslator& translator, const QString& filename) {
 
 void MainWindow::loadLanguage(QString& rLanguage) {
     qDebug() << __func__ << ": currLang=" << m_currLang << "  rLanguage=" << rLanguage;
-    if(m_currLang != rLanguage) {
-        qDebug() << __func__ << ": changing language";
-        if(rLanguage == "Russian") {
-            rLanguage = "ru";
-        }
-        m_currLang = rLanguage;
+
+    QString lang = rLanguage;
+    lang.chop(1); // remove trailing )
+    lang = lang.right(2); // last 2 chars are the language code
+
+    if(m_currLang != lang) {
+        qDebug() << __func__ << ": changing language to " << lang;
+        m_currLang = lang;
         QLocale locale = QLocale(m_currLang);
+        qDebug() << __func__ << ": locale=" << locale;
         QLocale::setDefault(locale);
         QString languageName = QLocale::languageToString(locale.language());
-        switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(rLanguage));
-        switchTranslator(m_translatorQt, QString("qt_%1.qm").arg(rLanguage));
+        qDebug() << __func__ << ": languageName=" << languageName;
+
+        switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(lang));
+        switchTranslator(m_translatorQt, QString("qt_%1.qm").arg(lang));
+
         ui->statusBar->showMessage(tr("Current Language changed to %1").arg(languageName));
     }
 }
@@ -232,7 +238,7 @@ void MainWindow::changeEvent(QEvent* event) {
   switch(event->type()) {
    // this event is sent if a translator is loaded
    case QEvent::LanguageChange:
-    qDebug() << "QEvent::LanguageChange changeEvent";
+    qDebug() << __func__ << ": QEvent::LanguageChange changeEvent";
     ui->retranslateUi(this);
     break;
 
@@ -241,7 +247,7 @@ void MainWindow::changeEvent(QEvent* event) {
    {
     QString locale = QLocale::system().name();
     locale.truncate(locale.lastIndexOf('_'));
-    qDebug() << "QEvent::LocaleChange changeEvent locale=" << locale;
+    qDebug() << __func__ << ": QEvent::LocaleChange changeEvent locale=" << locale;
     loadLanguage(locale);
    }
    break;
@@ -505,7 +511,7 @@ void MainWindow::setupSettingsModal() {
     defaultLocale.truncate(defaultLocale.lastIndexOf('_')); // e.g. "de"
 
     //QString defaultLang = QLocale::languageToString(QLocale("en").language());
-    settings.comboBoxLanguage->addItem("English");
+    settings.comboBoxLanguage->addItem("English (en)");
 
     m_langPath = QApplication::applicationDirPath();
     m_langPath.append("/res");
@@ -533,9 +539,9 @@ void MainWindow::setupSettingsModal() {
         action->setData(locale);
 
         //settings.comboBoxLanguage->addItem(action);
-        settings.comboBoxLanguage->addItem(lang);
+        settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
         langGroup->addAction(action);
-        qDebug() << __func__ << ": added language=" << locale;
+        qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale;
 
         // set default translators and language checked
         if (defaultLocale == locale) {
