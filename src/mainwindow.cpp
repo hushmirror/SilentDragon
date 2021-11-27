@@ -186,13 +186,13 @@ void MainWindow::doClose() {
 }
 
 // Called every time, when a menu entry of the language menu is called
-void MainWindow::slotLanguageChanged(QAction* action)
+void MainWindow::slotLanguageChanged(QString lang)
 {
-    qDebug() << __func__ << ": action=" << action->data().toString();
-    if(0 != action) {
-        // load the language dependant on the action content
-        loadLanguage(action->data().toString());
-        setWindowIcon(action->icon());
+    qDebug() << __func__ << ": lang=" << lang;
+    if(lang != "") {
+        // load the language
+        loadLanguage(lang);
+        //setWindowIcon(action->icon());
     }
 }
 
@@ -210,9 +210,13 @@ void switchTranslator(QTranslator& translator, const QString& filename) {
     }
 }
 
-void MainWindow::loadLanguage(const QString& rLanguage) {
-    qDebug() << "loadLanguage " << rLanguage;
+void MainWindow::loadLanguage(QString& rLanguage) {
+    qDebug() << __func__ << ": currLang=" << m_currLang << "  rLanguage=" << rLanguage;
     if(m_currLang != rLanguage) {
+        qDebug() << __func__ << ": changing language";
+        if(rLanguage == "Russian") {
+            rLanguage = "ru";
+        }
         m_currLang = rLanguage;
         QLocale locale = QLocale(m_currLang);
         QLocale::setDefault(locale);
@@ -367,6 +371,11 @@ void MainWindow::setupSettingsModal() {
             QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
+        QObject::connect(settings.comboBoxLanguage, &QComboBox::currentTextChanged, [=] (QString lang) {
+            this->slotLanguageChanged(lang);
+            //QMessageBox::information(this, tr("Language Changed"), tr("This change can take a few seconds."), QMessageBox::Ok);
+        });
+
         // Set local currency
         QString ticker = Settings::getInstance()->get_currency_name();
         int currency_index = settings.comboBoxCurrency->findText(ticker, Qt::MatchExactly);
@@ -485,15 +494,18 @@ void MainWindow::setupSettingsModal() {
         settings.testnetAddressExplorerUrl->setText(explorer.testnetAddressExplorerUrl);
 
         /// create language drop down dynamically
-    QActionGroup* langGroup = new QActionGroup(settings.menuLanguage);
+    QActionGroup* langGroup = new QActionGroup(settings.comboBoxLanguage);
     langGroup->setExclusive(true);
 
-    qDebug() << __func__ << ": connecting langGroup to slotLanguageChanged";
-    connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
+    //qDebug() << __func__ << ": connecting langGroup to slotLanguageChanged";
+    //connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
 
     // format systems language
     QString defaultLocale = QLocale::system().name(); // e.g. "de_DE"
     defaultLocale.truncate(defaultLocale.lastIndexOf('_')); // e.g. "de"
+
+    //QString defaultLang = QLocale::languageToString(QLocale("en").language());
+    settings.comboBoxLanguage->addItem("English");
 
     m_langPath = QApplication::applicationDirPath();
     m_langPath.append("/res");
@@ -520,18 +532,17 @@ void MainWindow::setupSettingsModal() {
         action->setCheckable(true);
         action->setData(locale);
 
-        settings.menuLanguage->addAction(action);
+        //settings.comboBoxLanguage->addItem(action);
+        settings.comboBoxLanguage->addItem(lang);
         langGroup->addAction(action);
         qDebug() << __func__ << ": added language=" << locale;
 
         // set default translators and language checked
         if (defaultLocale == locale) {
             action->setChecked(true);
+            qDebug() << " set defaultLocale=" << locale << " to checked";
         }
     }
-
-
-        /// 
 
         // Connection tab by default
         settings.tabWidget->setCurrentIndex(0);

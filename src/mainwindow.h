@@ -79,13 +79,13 @@ protected:
     //void slotLanguageChanged(QAction* action);
 protected slots:
     // this slot is called by the language menu actions
-    void slotLanguageChanged(QAction *action);
+    void slotLanguageChanged(QString lang);
 
 private:    
     void closeEvent(QCloseEvent* event);
 
     // loads a language by the given language shortcode (e.g. de, en)
-    void loadLanguage(const QString& rLanguage);
+    void loadLanguage(QString& rLanguage);
 
     void setupSendTab();
     void setupPeersTab();
