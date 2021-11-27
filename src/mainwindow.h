@@ -32,6 +32,15 @@ namespace Ui {
     class MainWindow;
 }
 
+class SettingsDialog : public QDialog
+{
+    Q_OBJECT
+public:
+    explicit SettingsDialog(QWidget *parent = nullptr);
+    // this event is called, when a new translator is loaded or the system language is changed
+    void changeEvent(QEvent* event);
+};
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

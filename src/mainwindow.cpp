@@ -22,6 +22,9 @@
 #include "requestdialog.h"
 #include "websockets.h"
 
+SettingsDialog::SettingsDialog(QWidget* parent) : QDialog(parent) {
+}
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -339,9 +342,25 @@ void MainWindow::setupStatusBar() {
     ui->statusBar->addPermanentWidget(statusIcon);
 }
 
+// something like this is needed for QDialogs to listen to changeEvent
+// so the Settings modal gets retranslated
+// https://stackoverflow.com/questions/68665394/how-to-use-retranslateui-recursively-on-all-ui-in-qmainwindow
+void SettingsDialog::changeEvent(QEvent* event) {
+    Ui_Settings settings;
+    qDebug() << __func__ << ":changeEvent type=" << event->type();
+    if (event->type() == QEvent::LanguageChange) {
+        SettingsDialog settingsDialog(this);
+        settings.retranslateUi(&settingsDialog);
+    }
+
+    QWidget::changeEvent(event);
+}
+
 void MainWindow::setupSettingsModal() {
     // Set up File -> Settings action
     QObject::connect(ui->actionSettings, &QAction::triggered, [=]() {
+        // this coredumps at run-time
+        //SettingsDialog settingsDialog(this);
         QDialog settingsDialog(this);
         Ui_Settings settings;
         settings.setupUi(&settingsDialog);
