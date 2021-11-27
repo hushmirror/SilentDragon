@@ -33,7 +33,8 @@ MainWindow::MainWindow(QWidget *parent) :
        theme_name = Settings::getInstance()->get_theme_name();
     } catch (...)
     {
-        theme_name = "default";
+        qDebug() << __func__ << ": exception!";
+        theme_name = "dark";
     }
 
     this->slot_change_theme(theme_name);
@@ -1896,7 +1897,7 @@ void MainWindow::updateLabels() {
 
 void MainWindow::slot_change_currency(const QString& currency_name)
 {
-    qDebug() << "slot_change_currency"; //<< ": " << currency_name;
+    qDebug() << __func__ << ": " << currency_name;
     Settings::getInstance()->set_currency_name(currency_name);
     qDebug() << "Refreshing price stats after currency change";
     rpc->refreshPrice();
@@ -1913,6 +1914,7 @@ void MainWindow::slot_change_currency(const QString& currency_name)
 
 void MainWindow::slot_change_theme(const QString& theme_name)
 {
+    qDebug() << __func__ << ": theme_name=" << theme_name;
     Settings::getInstance()->set_theme_name(theme_name);
 
     // Include css
@@ -1921,10 +1923,12 @@ void MainWindow::slot_change_theme(const QString& theme_name)
        saved_theme_name = Settings::getInstance()->get_theme_name();
     } catch (const std::exception& e) {
         qDebug() << QString("Ignoring theme change Exception! : ");
-        saved_theme_name = "default";
+        saved_theme_name = "dark";
     }
 
-    QFile qFile(":/css/res/css/" + saved_theme_name +".css");
+    QString filename = ":/css/res/css/" + saved_theme_name +".css";
+    QFile qFile(filename);
+    qDebug() << __func__ << ": attempting to open filename=" << filename;
     if (qFile.open(QFile::ReadOnly))
     {
       QString styleSheet = QLatin1String(qFile.readAll());

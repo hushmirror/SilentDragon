@@ -246,10 +246,13 @@ void Settings::setAllowCustomFees(bool allow) {
 
 QString Settings::get_theme_name() {
     // Load from the QT Settings.
-    return QSettings().value("options/theme_name", false).toString();
+    QString theme_name = QSettings().value("options/theme_name", false).toString();
+    qDebug() << __func__ << ": theme_name=" << theme_name;
+    return theme_name;
 }
 
 void Settings::set_theme_name(QString theme_name) {
+    qDebug() << __func__ << ": settings theme_name=" << theme_name;
     QSettings().setValue("options/theme_name", theme_name);
 }
 
