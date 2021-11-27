@@ -229,7 +229,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
     // https://www.loc.gov/standards/iso639-2/php/code_list.php
 
     if(m_currLang != lang) {
-        qDebug() << __func__ << ": changing language to " << lang;
+        qDebug() << __func__ << ": changing language to lang=" << lang;
         m_currLang = lang;
         QLocale locale = QLocale(m_currLang);
         qDebug() << __func__ << ": locale=" << locale;
@@ -241,6 +241,9 @@ void MainWindow::loadLanguage(QString& rLanguage) {
         switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(lang));
         switchTranslator(m_translatorQt, QString("qt_%1.qm").arg(lang));
 
+        // TODO: this likely wont work for RTL languages like Arabic
+        auto first = QString(languageName.at(0)).toUpper();
+        languageName = first + languageName.right(languageName.size()-1);
         ui->statusBar->showMessage(tr("Language changed to") + " " + languageName + " (" + lang + ")");
     }
 }
@@ -539,6 +542,7 @@ void MainWindow::setupSettingsModal() {
 
             QString lang = QLocale(locale).nativeLanguageName(); //locale.language());
 
+            // TODO: this likely wont work for RTL languages like Arabic
             // uppercase the first letter of all languages
             auto first = QString(lang.at(0)).toUpper();
             lang = first + lang.right(lang.size()-1);
