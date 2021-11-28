@@ -40,8 +40,19 @@ Explorer Settings::getExplorer() {
 
     auto txExplorerUrl                = s.value("explorer/txExplorerUrl", explorer + "/tx/").toString();
     auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl", explorer + "/address/").toString();
+
     auto testnetTxExplorerUrl         = s.value("explorer/testnetTxExplorerUrl").toString();
     auto testnetAddressExplorerUrl    = s.value("explorer/testnetAddressExplorerUrl").toString();
+
+    // Some users have the old malicious explorer URL saved in their config file, help them out
+    if (txExplorerUrl == "https://explorer.myhush.org/tx/") {
+        txExplorerUrl = explorer + "/tx/";
+        saveExplorer(txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl);
+    }
+    if (addressExplorerUrl == "https://explorer.myhush.org/address/") {
+        addressExplorerUrl = explorer + "/address/";
+        saveExplorer(txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl);
+    }
 
     return Explorer{txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl};
 }

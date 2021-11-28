@@ -132,6 +132,7 @@ public:
     static double  getZboardAmount();
     static QString getZboardAddr();
 
+    //TODO: this could be an advanced setting too
     static int     getMaxMobileAppTxns() { return 30; }
 
     static bool    isValidAddress(QString addr);
@@ -162,12 +163,11 @@ private:
     bool    _isTestnet        = false;
     bool    _isSyncing        = false;
     int     _blockNumber      = 0;
-    int     _hushdVersion    = 0;
+    int     _hushdVersion     = 0;
     bool    _useEmbedded      = false;
     bool    _headless         = false;
     int     _peerConnections  = 0;
-
-    double  hushPrice          = 0.0;
+    double  hushPrice         = 0.0;
     double  fiat_price        = 0.0;
     unsigned int  btcPrice    = 0;
     std::map<QString, double> prices;
