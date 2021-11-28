@@ -74,6 +74,8 @@ public:
     Logger*      logger;
 
     void doClose();
+    // loads a language by the given language shortcode (e.g. de, en)
+    void loadLanguage(QString& rLanguage);
 
 protected:
     // this event is called, when a new translator is loaded or the system language is changed
@@ -86,8 +88,6 @@ protected slots:
 private:    
     void closeEvent(QCloseEvent* event);
 
-    // loads a language by the given language shortcode (e.g. de, en)
-    void loadLanguage(QString& rLanguage);
 
     void setupSendTab();
     void setupPeersTab();

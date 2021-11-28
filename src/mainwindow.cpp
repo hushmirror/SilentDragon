@@ -220,10 +220,17 @@ void MainWindow::loadLanguage(QString& rLanguage) {
     qDebug() << __func__ << ": currLang=" << m_currLang << "  rLanguage=" << rLanguage;
 
     QString lang = rLanguage;
-    lang.chop(1); // remove trailing )
+
+    // this allows us to call this function with just a locale such as "zh"
+    if(lang.size() > 3) {
+        lang.chop(1); // remove trailing )
+    }
 
     // remove everything up to and including the first (
     lang = lang.remove(0, lang.indexOf("(") + 1);
+
+    // write this language (the locale shortcode) out to config file
+    Settings::getInstance()->set_language(lang);
 
     // NOTE: language codes can be 2 or 3 letters
     // https://www.loc.gov/standards/iso639-2/php/code_list.php
@@ -518,6 +525,9 @@ void MainWindow::setupSettingsModal() {
         //m_currLang = defaultLocale;
         //qDebug() << __func__ << ": changed m_currLang to " << defaultLocale;
 
+        m_currLang = Settings::getInstance()->get_language();
+        qDebug() << __func__ << ": got a currLang=" << m_currLang << " from config file";
+
         //QString defaultLang = QLocale::languageToString(QLocale("en").language());
         settings.comboBoxLanguage->addItem("English (en)");
 
@@ -550,7 +560,7 @@ void MainWindow::setupSettingsModal() {
             //settings.comboBoxLanguage->addItem(action);
             settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
             qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale << " defaultLocale=" << defaultLocale << " m_currLang=" << m_currLang;
-            //qDebug() << __func__ << ": " << m_currLang << " ?= " << locale;
+            qDebug() << __func__ << ": m_currLang=" << m_currLang << " ?= locale=" << locale;
 
             //if (defaultLocale == locale) {
             if (m_currLang == locale) {
@@ -562,8 +572,13 @@ void MainWindow::setupSettingsModal() {
         settings.comboBoxLanguage->model()->sort(0,Qt::AscendingOrder);
         qDebug() << __func__ <<": sorted translations";
 
-        QString lang = QLocale::languageToString(QLocale(m_currLang).language());
+        //QString lang = QLocale::languageToString(QLocale(m_currLang).language());
+        QString lang = QLocale(m_currLang).nativeLanguageName(); //locale.language());
+
+        auto first = QString(lang.at(0)).toUpper();
+        lang = first + lang.right(lang.size()-1);
         qDebug() << __func__ << ": looking for " << lang + " (" + m_currLang + ")";
+        //qDebug() << __func__ << ": looking for " << m_currLang;
         int lang_index = settings.comboBoxLanguage->findText(lang + " (" + m_currLang + ")", Qt::MatchExactly);
 
         qDebug() << __func__ << ": setting comboBoxLanguage index to " << lang_index;

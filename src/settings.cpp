@@ -365,6 +365,18 @@ void Settings::set_currency_name(QString currency_name) {
     QSettings().setValue("options/currency_name", currency_name);
 }
 
+QString Settings::get_language() {
+    // TODO: use the default system language if none is set
+    auto lang = QSettings().value("options/language", "en").toString();
+    qDebug() << __func__ << ": found lang=" << lang << " in config file";
+    return lang;
+}
+
+void Settings::set_language(QString lang) {
+    qDebug() << __func__ << ": setting lang=" << lang << " in config file";
+    QSettings().setValue("options/language", lang);
+}
+
 
 bool Settings::removeFromHushConf(QString confLocation, QString option) {
     if (confLocation.isEmpty())

@@ -89,6 +89,9 @@ public:
     QString get_currency_name();
     void set_currency_name(QString currency_name);
 
+    QString get_language();
+    void set_language(QString lang);
+
     void    setUsingHushConf(QString confLocation);
     const   QString& getHushdConfLocation() { return _confLocation; }
 

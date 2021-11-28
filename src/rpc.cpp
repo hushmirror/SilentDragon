@@ -63,6 +63,12 @@ RPC::RPC(MainWindow* main) {
     qDebug() << __func__ << "Done settings up all timers";
 
     usedAddresses = new QMap<QString, bool>();
+
+    auto lang = Settings::getInstance()->get_language();
+    qDebug() << __func__ << ": found lang="<< lang << " in config file";
+
+    main->loadLanguage(lang);
+    qDebug() << __func__ << ": setting UI to lang="<< lang << " found in config file";
 }
 
 RPC::~RPC() {
