@@ -366,8 +366,11 @@ void Settings::set_currency_name(QString currency_name) {
 }
 
 QString Settings::get_language() {
-    // TODO: use the default system language if none is set
-    auto lang = QSettings().value("options/language", "en").toString();
+    // use the default system language if none is set
+    QString locale = QLocale::system().name();
+    // remove country data, i.e. en_US => en
+    locale.truncate( locale.lastIndexOf("_"));
+    auto lang = QSettings().value("options/language", locale).toString();
     qDebug() << __func__ << ": found lang=" << lang << " in config file";
     return lang;
 }

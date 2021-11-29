@@ -222,7 +222,7 @@ void MainWindow::loadLanguage(QString& rLanguage) {
     QString lang = rLanguage;
 
     // this allows us to call this function with just a locale such as "zh"
-    if(lang.size() > 3) {
+    if(lang.right(1) == ")") {
         lang.chop(1); // remove trailing )
     }
 
@@ -251,6 +251,9 @@ void MainWindow::loadLanguage(QString& rLanguage) {
         // TODO: this likely wont work for RTL languages like Arabic
         auto first = QString(languageName.at(0)).toUpper();
         languageName = first + languageName.right(languageName.size()-1);
+        if( lang == "en" ) {
+            languageName.replace("American ","");
+        }
         ui->statusBar->showMessage(tr("Language changed to") + " " + languageName + " (" + lang + ")");
     }
 }
@@ -577,6 +580,13 @@ void MainWindow::setupSettingsModal() {
 
         auto first = QString(lang.at(0)).toUpper();
         lang = first + lang.right(lang.size()-1);
+
+        if (m_currLang == "en") {
+            // we have just 1 English translation
+            // en_US will render as "American English", so fix that
+            lang.replace("American ","");
+        }
+
         qDebug() << __func__ << ": looking for " << lang + " (" + m_currLang + ")";
         //qDebug() << __func__ << ": looking for " << m_currLang;
         int lang_index = settings.comboBoxLanguage->findText(lang + " (" + m_currLang + ")", Qt::MatchExactly);
