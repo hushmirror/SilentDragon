@@ -229,20 +229,29 @@ void MainWindow::loadLanguage(QString& rLanguage) {
     // remove everything up to and including the first (
     lang = lang.remove(0, lang.indexOf("(") + 1);
 
-    // write this language (the locale shortcode) out to config file
-    Settings::getInstance()->set_language(lang);
-
     // NOTE: language codes can be 2 or 3 letters
     // https://www.loc.gov/standards/iso639-2/php/code_list.php
 
+    QString languageName;
     if(m_currLang != lang) {
         qDebug() << __func__ << ": changing language to lang=" << lang;
         m_currLang = lang;
         QLocale locale = QLocale(m_currLang);
+
+        qDebug() << __func__ << ": locale nativeLanguage=" << locale.nativeLanguageName();
+
+        // an invalid locale such as "zz" will give the C locale which has no native language name
+        if (locale.nativeLanguageName() == "") {
+            qDebug() << __func__ << ": detected invalid language in config file, defaulting to en";
+            locale = QLocale("en");
+            Settings::getInstance()->set_language("en");
+            m_currLang = "en";
+            lang = "en";
+        }
         qDebug() << __func__ << ": locale=" << locale;
         QLocale::setDefault(locale);
         qDebug() << __func__ << ": setDefault locale=" << locale;
-        QString languageName = locale.nativeLanguageName(); //locale.language());
+        languageName = locale.nativeLanguageName(); //locale.language());
         qDebug() << __func__ << ": languageName=" << languageName;
 
         switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(lang));
@@ -255,6 +264,12 @@ void MainWindow::loadLanguage(QString& rLanguage) {
             languageName.replace("American ","");
         }
         ui->statusBar->showMessage(tr("Language changed to") + " " + languageName + " (" + lang + ")");
+    }
+
+    // write this language (the locale shortcode) out to config file
+    if (lang != "") {
+        // only write valid languages to config file
+        Settings::getInstance()->set_language(lang);
     }
 }
 
