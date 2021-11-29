@@ -415,6 +415,8 @@ void MainWindow::setupSettingsModal() {
         QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
             this->slot_change_theme(theme_name);
             // QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+            // For some reason, changing language also triggers this
+            //ui->statusBar->showMessage(tr("Theme changed to ") + theme_name);
         });
 
 
@@ -425,6 +427,7 @@ void MainWindow::setupSettingsModal() {
         QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString ticker) {
             this->slot_change_currency(ticker);
             rpc->refresh(true);
+            ui->statusBar->showMessage(tr("Currency changed to") + " " + ticker);
             // QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
