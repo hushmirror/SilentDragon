@@ -26,7 +26,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -177,24 +177,22 @@
          </property>
         </widget>
        </item>
-
        <item row="17" column="0">
         <widget class="QLabel" name="langlabel">
-    <property name="text">
-     <string>Language</string>
-    </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="text">
+          <string>Language</string>
+         </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
-
        <item row="17" column="1">
         <widget class="QComboBox" name="comboBoxLanguage">
          <property name="sizePolicy">
@@ -205,7 +203,6 @@
          </property>
         </widget>
        </item>
-
        <item row="16" column="1">
         <widget class="QComboBox" name="comboBoxCurrency">
          <property name="sizePolicy">
@@ -431,7 +428,6 @@
          </item>
         </widget>
        </item>
-
        <item row="15" column="1">
         <widget class="QComboBox" name="comboBoxTheme">
          <property name="sizePolicy">
@@ -442,27 +438,27 @@
          </property>
          <item>
           <property name="text">
-           <string>default</string>
+           <string notr="true">default</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>blue</string>
+           <string notr="true">blue</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>light</string>
+           <string notr="true">light</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>dark</string>
+           <string notr="true">dark</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>midnight</string>
+           <string notr="true">midnight</string>
           </property>
          </item>
         </widget>
