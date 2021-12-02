@@ -210,9 +210,9 @@ void WormholeClient::onConnected()
         // On connected, we'll also create a timer to ping it every 4 minutes, since the websocket 
         // will timeout after 5 minutes
         timer = new QTimer(parent);
-        qDebug() << "Created QTimer";
+        qDebug() << __func__ << ": Created QTimer";
         QObject::connect(timer, &QTimer::timeout, [=]() {
-            qDebug() << "Timer timeout!";
+            qDebug() << __func__ << ": Timer timeout! shuttingDown=" << shuttingDown << " m_webSocket=" << m_webSocket;
             try {
                 if (!shuttingDown && m_webSocket && m_webSocket->isValid()) {
                     auto payload = QJsonDocument(QJsonObject { {"ping", "ping"} }).toJson();
