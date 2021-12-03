@@ -79,23 +79,11 @@ mkdir $DIR > /dev/null
 #Organizing all bins & essentials to centralized folder for tar.gz
 echo "Organizing binaries & essentials.............."
 cp silentdragon $DIR > /dev/null
-cp $HUSH_DIR/hushd $DIR > /dev/null
-cp $HUSH_DIR/hush-cli $DIR > /dev/null
-cp $HUSH_DIR/hush-tx $DIR > /dev/null
-# cp $HUSH_DIR/hush-smart-chain $DIR > /dev/null
-
-cp $HUSH_DIR/../asmap.dat $DIR > /dev/null
-cp $HUSH_DIR/../sapling-spend.params $DIR > /dev/null
-cp $HUSH_DIR/../sapling-output.params $DIR > /dev/null
 cp README.md $DIR > /dev/null
 cp LICENSE $DIR > /dev/null
 
-echo "Stripping hush.............."
+echo "Stripping silentdragon.............."
 cd $DIR
-strip hushd
-strip hush-cli
-strip hush-tx
-# strip hush-smart-chain
 strip silentdragon
 cd ../..
 
@@ -112,7 +100,7 @@ echo "Verify Compressed File.............."
 if [ -f artifacts/$APP-linux.tar.gz ] ; then
     echo -n "Package contents......."
     # Test if the package is built OK
-    if tar -tf "artifacts/$APP-linux.tar.gz" | wc -l | grep -q "10"; then
+    if tar -tf "artifacts/$APP-linux.tar.gz" | wc -l | grep -q "4"; then
         echo "[OK]"
     else
         echo "[ERROR] Wrong number of files does not match 11"
@@ -123,23 +111,19 @@ else
     exit 1
 fi
 
-echo "Building deb..........."
+echo "Building package..........."
 debdir=deb/silentdragon-v$APP_VERSION
 mkdir -p $debdir > /dev/null
 mkdir    $debdir/DEBIAN
 mkdir -p $debdir/usr/local/bin
-mkdir -p $debdir/usr/share/hush
+
 mkdir -p $debdir/usr/lib
 mkdir -p $debdir/usr/share/pixmaps/
 
 cat ../src/scripts/control | sed "s/RELEASE_VERSION/$APP_VERSION/g" > $debdir/DEBIAN/control
 
-echo "Copying bins..........."
+echo "Copying silentdragon bin..........."
 cp ../silentdragon $debdir/usr/local/bin/
-cp $HUSH_DIR/hushd $debdir/usr/local/bin/
-cp $HUSH_DIR/hush-cli $debdir/usr/local/bin/
-# cp $HUSH_DIR/hush-cli $debdir/usr/local/bin/
-# cp $HUSH_DIR/hush-smart-chain $debdir/usr/local/bin/
 
 echo "Copying core libraries from silentdragon binary..........."
 # copy the required shared libs to the target folder
@@ -149,12 +133,6 @@ for lib in `ldd $debdir/usr/local/bin/silentdragon | cut -d'>' -f2 | awk '{print
         cp -v "$lib" $debdir/usr/lib/
    fi  
 done
-
-echo "Copying asmap..........."
-cp $HUSH_DIR/../asmap.dat $debdir/usr/share/hush/
-echo "Copying sapling params..........."
-cp $HUSH_DIR/../sapling-spend.params $debdir/usr/share/hush/
-cp $HUSH_DIR/../sapling-output.params $debdir/usr/share/hush/
 
 echo "Copying SilentDragon icon..........."
 cp ../res/silentdragon.xpm $debdir/usr/share/pixmaps/
