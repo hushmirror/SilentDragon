@@ -153,6 +153,7 @@ void WormholeClient::connect() {
 
 void WormholeClient::retryConnect() {
     QTimer::singleShot(5 * 1000 * pow(2, retryCount), [=]() {
+        qDebug() << __func__ << ": retryCount=" << retryCount;
         if (retryCount < 10) {
             qDebug() << "Retrying websocket connection, count=" << this->retryCount;
             this->retryCount++;
@@ -210,10 +211,10 @@ void WormholeClient::onConnected()
         // On connected, we'll also create a timer to ping it every 4 minutes, since the websocket 
         // will timeout after 5 minutes
         timer = new QTimer(parent);
-        qDebug() << "Created QTimer";
+        qDebug() << __func__ << ": Created QTimer";
         QObject::connect(timer, &QTimer::timeout, [=]() {
-            qDebug() << "Timer timeout!";
             try {
+                qDebug() << __func__ << ": Timer timeout! shuttingDown=" << shuttingDown << " m_webSocket=" << m_webSocket << " isValid=" << m_webSocket->isValid();
                 if (!shuttingDown && m_webSocket && m_webSocket->isValid()) {
                     auto payload = QJsonDocument(QJsonObject { {"ping", "ping"} }).toJson();
                     qint64 bytes = m_webSocket->sendTextMessage(payload);
@@ -276,6 +277,7 @@ QString AppDataServer::getSecretHex() {
 }
 
 void AppDataServer::saveNewSecret(QString secretHex) {
+    qDebug() << __func__ << ": saving secretHex to config file";
     QSettings().setValue("mobileapp/secret", secretHex);
 
     if (secretHex.isEmpty())

@@ -40,8 +40,19 @@ Explorer Settings::getExplorer() {
 
     auto txExplorerUrl                = s.value("explorer/txExplorerUrl", explorer + "/tx/").toString();
     auto addressExplorerUrl           = s.value("explorer/addressExplorerUrl", explorer + "/address/").toString();
+
     auto testnetTxExplorerUrl         = s.value("explorer/testnetTxExplorerUrl").toString();
     auto testnetAddressExplorerUrl    = s.value("explorer/testnetAddressExplorerUrl").toString();
+
+    // Some users have the old malicious explorer URL saved in their config file, help them out
+    if (txExplorerUrl == "https://explorer.myhush.org/tx/") {
+        txExplorerUrl = explorer + "/tx/";
+        saveExplorer(txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl);
+    }
+    if (addressExplorerUrl == "https://explorer.myhush.org/address/") {
+        addressExplorerUrl = explorer + "/address/";
+        saveExplorer(txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl);
+    }
 
     return Explorer{txExplorerUrl, addressExplorerUrl, testnetTxExplorerUrl, testnetAddressExplorerUrl};
 }
@@ -246,10 +257,13 @@ void Settings::setAllowCustomFees(bool allow) {
 
 QString Settings::get_theme_name() {
     // Load from the QT Settings.
-    return QSettings().value("options/theme_name", false).toString();
+    QString theme_name = QSettings().value("options/theme_name", false).toString();
+    qDebug() << __func__ << ": theme_name=" << theme_name;
+    return theme_name;
 }
 
 void Settings::set_theme_name(QString theme_name) {
+    qDebug() << __func__ << ": settings theme_name=" << theme_name;
     QSettings().setValue("options/theme_name", theme_name);
 }
 
@@ -349,6 +363,21 @@ QString Settings::get_currency_name() {
 
 void Settings::set_currency_name(QString currency_name) {
     QSettings().setValue("options/currency_name", currency_name);
+}
+
+QString Settings::get_language() {
+    // use the default system language if none is set
+    QString locale = QLocale::system().name();
+    // remove country data, i.e. en_US => en
+    locale.truncate( locale.lastIndexOf("_"));
+    auto lang = QSettings().value("options/language", locale).toString();
+    qDebug() << __func__ << ": found lang=" << lang << " in config file";
+    return lang;
+}
+
+void Settings::set_language(QString lang) {
+    qDebug() << __func__ << ": setting lang=" << lang << " in config file";
+    QSettings().setValue("options/language", lang);
 }
 
 

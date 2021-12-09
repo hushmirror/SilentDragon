@@ -89,6 +89,9 @@ public:
     QString get_currency_name();
     void set_currency_name(QString currency_name);
 
+    QString get_language();
+    void set_language(QString lang);
+
     void    setUsingHushConf(QString confLocation);
     const   QString& getHushdConfLocation() { return _confLocation; }
 
@@ -132,6 +135,7 @@ public:
     static double  getZboardAmount();
     static QString getZboardAddr();
 
+    //TODO: this could be an advanced setting too
     static int     getMaxMobileAppTxns() { return 30; }
 
     static bool    isValidAddress(QString addr);
@@ -146,6 +150,10 @@ public:
     static const int     quickUpdateSpeed    = 3  * 1000;        // 3 sec
     static const int     priceRefreshSpeed   = 15 * 60 * 1000;   // 15 mins
 
+protected:
+    // this event is called, when a new translator is loaded or the system language is changed
+    // void changeEvent(QEvent* event);
+
 private:
     // This class can only be accessed through Settings::getInstance()
     Settings() = default;
@@ -158,12 +166,11 @@ private:
     bool    _isTestnet        = false;
     bool    _isSyncing        = false;
     int     _blockNumber      = 0;
-    int     _hushdVersion    = 0;
+    int     _hushdVersion     = 0;
     bool    _useEmbedded      = false;
     bool    _headless         = false;
     int     _peerConnections  = 0;
-
-    double  hushPrice          = 0.0;
+    double  hushPrice         = 0.0;
     double  fiat_price        = 0.0;
     unsigned int  btcPrice    = 0;
     std::map<QString, double> prices;

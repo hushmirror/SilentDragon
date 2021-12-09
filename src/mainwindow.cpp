@@ -33,7 +33,8 @@ MainWindow::MainWindow(QWidget *parent) :
        theme_name = Settings::getInstance()->get_theme_name();
     } catch (...)
     {
-        theme_name = "default";
+        qDebug() << __func__ << ": exception!";
+        theme_name = "dark";
     }
 
     this->slot_change_theme(theme_name);
@@ -185,6 +186,119 @@ void MainWindow::doClose() {
     closeEvent(nullptr);
 }
 
+// Called every time, when a menu entry of the language menu is called
+void MainWindow::slotLanguageChanged(QString lang)
+{
+    qDebug() << __func__ << ": lang=" << lang;
+    if(lang != "") {
+        // load the language
+        loadLanguage(lang);
+
+        QDialog settingsDialog(this);
+        qDebug() << __func__ << ": retranslating settingsDialog";
+        settings.retranslateUi(&settingsDialog);
+    }
+}
+
+void switchTranslator(QTranslator& translator, const QString& filename) {
+    qDebug() << __func__ << ": filename=" << filename;
+    // remove the old translator
+    qApp->removeTranslator(&translator);
+
+    // load the new translator
+    QString path = QApplication::applicationDirPath();
+    path.append("/res/");
+    qDebug() << __func__ << ": attempting to load " << path + filename;
+    if(translator.load(path + filename)) {
+        qApp->installTranslator(&translator);
+    } else {
+        qDebug() << __func__ << ": translation path does not exist! " << path + filename;
+    }
+}
+
+void MainWindow::loadLanguage(QString& rLanguage) {
+    qDebug() << __func__ << ": currLang=" << m_currLang << "  rLanguage=" << rLanguage;
+
+    QString lang = rLanguage;
+
+    // this allows us to call this function with just a locale such as "zh"
+    if(lang.right(1) == ")") {
+        lang.chop(1); // remove trailing )
+    }
+
+    // remove everything up to and including the first (
+    lang = lang.remove(0, lang.indexOf("(") + 1);
+
+    // NOTE: language codes can be 2 or 3 letters
+    // https://www.loc.gov/standards/iso639-2/php/code_list.php
+
+    QString languageName;
+    if(m_currLang != lang) {
+        qDebug() << __func__ << ": changing language to lang=" << lang;
+        m_currLang = lang;
+        QLocale locale = QLocale(m_currLang);
+
+        qDebug() << __func__ << ": locale nativeLanguage=" << locale.nativeLanguageName();
+
+        // an invalid locale such as "zz" will give the C locale which has no native language name
+        if (locale.nativeLanguageName() == "") {
+            qDebug() << __func__ << ": detected invalid language in config file, defaulting to en";
+            locale = QLocale("en");
+            Settings::getInstance()->set_language("en");
+            m_currLang = "en";
+            lang = "en";
+        }
+        qDebug() << __func__ << ": locale=" << locale;
+        QLocale::setDefault(locale);
+        qDebug() << __func__ << ": setDefault locale=" << locale;
+        languageName = locale.nativeLanguageName(); //locale.language());
+        qDebug() << __func__ << ": languageName=" << languageName;
+
+        switchTranslator(m_translator, QString("silentdragon_%1.qm").arg(lang));
+        switchTranslator(m_translatorQt, QString("qt_%1.qm").arg(lang));
+
+        // TODO: this likely wont work for RTL languages like Arabic
+        auto first = QString(languageName.at(0)).toUpper();
+        languageName = first + languageName.right(languageName.size()-1);
+        if( lang == "en" ) {
+            languageName.replace("American ","");
+        }
+        ui->statusBar->showMessage(tr("Language changed to") + " " + languageName + " (" + lang + ")");
+    }
+
+    // write this language (the locale shortcode) out to config file
+    if (lang != "") {
+        // only write valid languages to config file
+        Settings::getInstance()->set_language(lang);
+    }
+}
+
+void MainWindow::changeEvent(QEvent* event) {
+ if(0 != event) {
+  switch(event->type()) {
+   // this event is sent if a translator is loaded
+   case QEvent::LanguageChange:
+    qDebug() << __func__ << ": QEvent::LanguageChange changeEvent";
+    ui->retranslateUi(this);
+    break;
+
+   // this event is sent, if the system, language changes
+   case QEvent::LocaleChange:
+   {
+    QString locale = QLocale::system().name();
+    locale.truncate(locale.lastIndexOf('_'));
+    qDebug() << __func__ << ": QEvent::LocaleChange changeEvent locale=" << locale;
+    loadLanguage(locale);
+   }
+   break;
+   default:
+    qDebug() << __func__ << ": " << event->type();
+  }
+ }
+ QMainWindow::changeEvent(event);
+}
+
+
 void MainWindow::closeEvent(QCloseEvent* event) {
     QSettings s;
 
@@ -265,7 +379,7 @@ void MainWindow::setupSettingsModal() {
     // Set up File -> Settings action
     QObject::connect(ui->actionSettings, &QAction::triggered, [=]() {
         QDialog settingsDialog(this);
-        Ui_Settings settings;
+        //Ui_Settings settings;
         settings.setupUi(&settingsDialog);
         Settings::saveRestore(&settingsDialog);
 
@@ -300,8 +414,11 @@ void MainWindow::setupSettingsModal() {
 
         QObject::connect(settings.comboBoxTheme, &QComboBox::currentTextChanged, [=] (QString theme_name) {
             this->slot_change_theme(theme_name);
-            QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+            // QMessageBox::information(this, tr("Theme Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+            // For some reason, changing language also triggers this
+            //ui->statusBar->showMessage(tr("Theme changed to ") + theme_name);
         });
+
 
         // Set local currency
         QString ticker = Settings::getInstance()->get_currency_name();
@@ -310,7 +427,8 @@ void MainWindow::setupSettingsModal() {
         QObject::connect(settings.comboBoxCurrency, &QComboBox::currentTextChanged, [=] (QString ticker) {
             this->slot_change_currency(ticker);
             rpc->refresh(true);
-            QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
+            ui->statusBar->showMessage(tr("Currency changed to") + " " + ticker);
+            // QMessageBox::information(this, tr("Currency Change"), tr("This change can take a few seconds."), QMessageBox::Ok);
         });
 
         // Save sent transactions
@@ -343,9 +461,10 @@ void MainWindow::setupSettingsModal() {
         }
 
         //Use Consolidation
-
         bool isUsingConsolidation = false;
         int size = 0;
+        qDebug() << __func__ << ": hushDir=" << rpc->getConnection()->config->hushDir;
+
         QDir hushdir(rpc->getConnection()->config->hushDir);
         QFile WalletSize(hushdir.filePath("wallet.dat"));
         if (WalletSize.open(QIODevice::ReadOnly)){
@@ -418,8 +537,89 @@ void MainWindow::setupSettingsModal() {
         settings.testnetTxExplorerUrl->setText(explorer.testnetTxExplorerUrl);
         settings.testnetAddressExplorerUrl->setText(explorer.testnetAddressExplorerUrl);
 
-        // Connection tab by default
-        settings.tabWidget->setCurrentIndex(0);
+        // format systems language
+        QString defaultLocale = QLocale::system().name(); // e.g. "de_DE"
+        defaultLocale.truncate(defaultLocale.lastIndexOf('_')); // e.g. "de"
+
+        // Set the current language to the default system language
+        // TODO: this will need to change when we read/write selected language to config on disk
+        //m_currLang = defaultLocale;
+        //qDebug() << __func__ << ": changed m_currLang to " << defaultLocale;
+
+        m_currLang = Settings::getInstance()->get_language();
+        qDebug() << __func__ << ": got a currLang=" << m_currLang << " from config file";
+
+        //QString defaultLang = QLocale::languageToString(QLocale("en").language());
+        settings.comboBoxLanguage->addItem("English (en)");
+
+        m_langPath = QApplication::applicationDirPath();
+        m_langPath.append("/res");
+
+        qDebug() << __func__ <<": defaultLocale=" << defaultLocale << " m_langPath=" << m_langPath;;
+
+        QDir dir(m_langPath);
+        QStringList fileNames = dir.entryList(QStringList("silentdragon_*.qm"));
+
+        qDebug() << __func__ <<": found " << fileNames.size() << " translations";
+
+
+        // create language drop down dynamically
+        for (int i = 0; i < fileNames.size(); ++i) {
+            // get locale extracted by filename
+            QString locale;
+            locale = fileNames[i]; // "silentdragon_de.qm"
+            locale.truncate(locale.lastIndexOf('.')); // "silentdragon_de"
+            locale.remove(0, locale.lastIndexOf('_') + 1); // "de"
+
+            QString lang = QLocale(locale).nativeLanguageName(); //locale.language());
+
+            // TODO: this likely wont work for RTL languages like Arabic
+            // uppercase the first letter of all languages
+            auto first = QString(lang.at(0)).toUpper();
+            lang = first + lang.right(lang.size()-1);
+
+            //settings.comboBoxLanguage->addItem(action);
+            settings.comboBoxLanguage->addItem(lang + " (" + locale + ")");
+            qDebug() << __func__ << ": added lang=" << lang << " locale=" << locale << " defaultLocale=" << defaultLocale << " m_currLang=" << m_currLang;
+            qDebug() << __func__ << ": m_currLang=" << m_currLang << " ?= locale=" << locale;
+
+            //if (defaultLocale == locale) {
+            if (m_currLang == locale) {
+                settings.comboBoxLanguage->setCurrentIndex(i+1);
+                qDebug() << " set defaultLocale=" << locale << " to checked!!!";
+            }
+        }
+
+        settings.comboBoxLanguage->model()->sort(0,Qt::AscendingOrder);
+        qDebug() << __func__ <<": sorted translations";
+
+        //QString lang = QLocale::languageToString(QLocale(m_currLang).language());
+        QString lang = QLocale(m_currLang).nativeLanguageName(); //locale.language());
+
+        auto first = QString(lang.at(0)).toUpper();
+        lang = first + lang.right(lang.size()-1);
+
+        if (m_currLang == "en") {
+            // we have just 1 English translation
+            // en_US will render as "American English", so fix that
+            lang.replace("American ","");
+        }
+
+        qDebug() << __func__ << ": looking for " << lang + " (" + m_currLang + ")";
+        //qDebug() << __func__ << ": looking for " << m_currLang;
+        int lang_index = settings.comboBoxLanguage->findText(lang + " (" + m_currLang + ")", Qt::MatchExactly);
+
+        qDebug() << __func__ << ": setting comboBoxLanguage index to " << lang_index;
+        settings.comboBoxLanguage->setCurrentIndex(lang_index);
+
+        QObject::connect(settings.comboBoxLanguage, &QComboBox::currentTextChanged, [=] (QString lang) {
+            qDebug() << "comboBoxLanguage.currentTextChanged lang=" << lang;
+            this->slotLanguageChanged(lang);
+            //QMessageBox::information(this, tr("Language Changed"), tr("This change can take a few seconds."), QMessageBox::Ok);
+        });
+
+        // Options tab by default
+        settings.tabWidget->setCurrentIndex(1);
 
         // Enable the troubleshooting options only if using embedded hushd
         if (!rpc->isEmbedded()) {
@@ -1747,7 +1947,7 @@ void MainWindow::updateLabels() {
 
 void MainWindow::slot_change_currency(const QString& currency_name)
 {
-    qDebug() << "slot_change_currency"; //<< ": " << currency_name;
+    qDebug() << __func__ << ": " << currency_name;
     Settings::getInstance()->set_currency_name(currency_name);
     qDebug() << "Refreshing price stats after currency change";
     rpc->refreshPrice();
@@ -1762,9 +1962,17 @@ void MainWindow::slot_change_currency(const QString& currency_name)
     }
 }
 
-void MainWindow::slot_change_theme(const QString& theme_name)
+void MainWindow::slot_change_theme(QString& theme_name)
 {
-    Settings::getInstance()->set_theme_name(theme_name);
+    qDebug() << __func__ << ": theme_name=" << theme_name;
+
+    if (theme_name == "dark" || theme_name == "default" || theme_name == "light" ||
+        theme_name == "midnight" || theme_name == "blue") {
+        Settings::getInstance()->set_theme_name(theme_name);
+    } else {
+        qDebug() << __func__ << ": ignoring invalid theme_name=" << theme_name;
+        Settings::getInstance()->set_theme_name("dark");
+    }
 
     // Include css
     QString saved_theme_name;
@@ -1772,10 +1980,12 @@ void MainWindow::slot_change_theme(const QString& theme_name)
        saved_theme_name = Settings::getInstance()->get_theme_name();
     } catch (const std::exception& e) {
         qDebug() << QString("Ignoring theme change Exception! : ");
-        saved_theme_name = "default";
+        saved_theme_name = "dark";
     }
 
-    QFile qFile(":/css/res/css/" + saved_theme_name +".css");
+    QString filename = ":/css/res/css/" + saved_theme_name +".css";
+    QFile qFile(filename);
+    qDebug() << __func__ << ": attempting to open filename=" << filename;
     if (qFile.open(QFile::ReadOnly))
     {
       QString styleSheet = QLatin1String(qFile.readAll());
